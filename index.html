@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diforza — L1 Institucional v2 (borrador en construcción)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Base compartida con la v1 (preview_html/index.html): variables, reset,
+   header/nav, botones, footer y sistema de animaciones (scroll-reveal).
+   Google Fonts es solo para esta revisión rápida; en el proyecto final
+   se usa Montserrat autoalojada (carpeta /fonts, ya copiada acá). */
+
+:root{
+  --navy:#003568;
+  --orange:#ff7e34;
+  --gray:#727272;
+  --pad: 24px;
+  --h1-size: 34px;
+  --h1-lh: 38px;
+  --lead-size: 16px;
+  --lead-lh: 26px;
+}
+@media(min-width:768px){
+  :root{ --pad:48px; --h1-size:46px; --h1-lh:50px; --lead-size:17px; --lead-lh:28px; }
+}
+@media(min-width:1280px){
+  :root{ --pad:320px; --h1-size:70px; --h1-lh:74px; --lead-size:18px; --lead-lh:31px; }
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{overflow-x:hidden;}
+body{margin:0;font-family:"Montserrat",Arial,sans-serif;color:var(--navy);overflow-x:hidden;width:100%;}
+img{max-width:100%;display:block;}
+
+.header{
+  background:var(--navy);
+  padding:16px var(--pad);
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky; top:0; z-index:10;
+}
+.header img{height:34px;}
+@media(min-width:768px){ .header img{height:44px;} }
+@media(min-width:1280px){ .header img{height:56px;} }
+
+.nav{display:none;flex-direction:column;align-items:flex-start;gap:20px;}
+.nav.is-open{
+  display:flex;position:absolute;top:100%;left:0;right:0;
+  background:var(--navy);padding:20px var(--pad) 28px;
+  box-shadow:0 12px 20px rgba(0,0,0,.15);z-index:20;
+}
+@media(min-width:1024px){ .nav{display:flex;flex-direction:row;align-items:center;gap:32px;position:static;background:none;padding:0;box-shadow:none;} }
+.nav a{color:#fff;font-weight:500;font-size:13px;letter-spacing:.03em;text-transform:uppercase;text-decoration:none;}
+.nav .btn-white{background:#fff;color:var(--navy);border-radius:999px;padding:12px 24px;font-weight:700;font-size:13px;letter-spacing:.02em;text-transform:uppercase;}
+
+.nav-toggle{
+  display:inline-flex; background:none; border:none; color:#fff; font-size:26px; line-height:1; padding:0; cursor:pointer;
+}
+@media(min-width:1024px){ .nav-toggle{display:none;} }
+
+.ctas{display:flex;flex-wrap:wrap;gap:16px;}
+@media(min-width:1280px){ .ctas{gap:20px;} }
+.btn{border-radius:999px;padding:15px 28px;font-weight:700;font-size:13px;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;display:inline-block;white-space:nowrap;}
+.btn{transition:transform .2s ease,box-shadow .2s ease;}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(0,53,104,.18);}
+.btn:active{transform:translateY(0);box-shadow:none;}
+@media(min-width:1280px){ .btn{padding:18px 36px;font-size:15px;} }
+.btn--solid{background:var(--orange);color:#fff;}
+.btn--outline{border:2px solid var(--orange);color:var(--orange);}
+
+.accordion{display:flex;flex-direction:column;}
+.accordion details{border-top:1px solid #d7e0e8;padding:18px 0;}
+.accordion details:first-child{border-top:none;padding-top:0;}
+.accordion summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:17px;line-height:24px;color:var(--navy);}
+@media(min-width:1280px){ .accordion summary{font-size:20px;line-height:27px;} }
+.accordion summary::-webkit-details-marker{display:none;}
+.accordion summary .chev{flex:none;width:18px;height:18px;color:var(--navy);transition:transform .2s ease;}
+.accordion details[open] summary .chev{transform:rotate(180deg);}
+.accordion__panel{margin:12px 0 0;font-weight:300;font-size:15px;line-height:24px;color:var(--gray);}
+@media(min-width:1280px){ .accordion__panel{font-size:16px;line-height:26px;margin-top:16px;} }
+
+/* ---- Footer (igual a v1) ---- */
+.site-footer{background:#011c37;color:#fff;padding:40px var(--pad) 32px;}
+@media(min-width:900px){ .site-footer{padding:56px var(--pad) 40px;} }
+@media(min-width:1280px){ .site-footer{padding:72px var(--pad) 56px;} }
+.footer__grid{display:flex;flex-direction:column;gap:36px;}
+@media(min-width:768px){ .footer__grid{flex-direction:row;justify-content:space-between;gap:24px;flex-wrap:wrap;} }
+.footer__brand img{height:52px;}
+@media(min-width:1280px){ .footer__brand img{height:68px;} }
+.footer__col h4{margin:0 0 16px;font-weight:700;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+.footer__col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+.footer__col a{color:#fff;font-weight:400;font-size:13px;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;}
+.footer__links{display:flex;flex-direction:column;gap:14px;align-items:flex-start;}
+.footer__links a{color:#fff;font-weight:400;font-size:13px;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;}
+.footer__links a.btn{font-weight:700;}
+.footer__links .btn{margin-top:4px;}
+.footer__social{display:flex;gap:10px;margin-top:20px;}
+.footer__social a{width:34px;height:34px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;}
+.footer__social svg{width:18px;height:18px;color:var(--navy);}
+
+/* ---- Animaciones (scroll-reveal + entrada del hero) ---- */
+@media (prefers-reduced-motion: no-preference){
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease;}
+  .reveal.is-visible{opacity:1;transform:translateY(0);}
+  .reveal--1{transition-delay:.08s;}
+  .reveal--2{transition-delay:.16s;}
+
+  @keyframes hero-fade-up{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+  .hero-anim{opacity:0;animation:hero-fade-up .6s ease forwards;}
+  .hero-anim--1{animation-delay:.05s;}
+  .hero-anim--2{animation-delay:.15s;}
+  .hero-anim--3{animation-delay:.25s;}
+  .hero-anim--4{animation-delay:.35s;}
+  .hero-anim--5{animation-delay:.45s;}
+}
+
+/* ---- Sector 1: Hero ----
+   Altura acotada a propósito (NO 100vh): el h1 usa un tamaño propio
+   (no el --h1-size global) y los márgenes se ajustaron para que el
+   sector de marcas se asome debajo, incluso en pantallas bajas. */
+.hero-v2{background:#fff;}
+.hero-v2__inner{display:flex;flex-direction:column;}
+@media(min-width:1024px){ .hero-v2__inner{flex-direction:row;align-items:stretch;max-height:616px;} }
+@media(min-width:1280px){ .hero-v2__inner{max-height:660px;} }
+
+.hero-v2__copy{order:1;padding:32px var(--pad) 28px;display:flex;flex-direction:column;justify-content:center;}
+@media(min-width:1024px){ .hero-v2__copy{width:50%;flex:none;padding:36px 56px 36px var(--pad);} }
+@media(min-width:1280px){ .hero-v2__copy{padding:32px 80px 32px var(--pad);} }
+
+.hero-v2__eyebrow{font-weight:600;font-size:13px;color:var(--navy);letter-spacing:.05em;text-transform:uppercase;margin:0 0 10px;}
+@media(min-width:1280px){ .hero-v2__eyebrow{font-size:14px;margin-bottom:12px;} }
+
+.hero-v2__copy h1{font-weight:700;font-size:30px;line-height:34px;margin:0 0 16px;letter-spacing:-.01em;color:var(--navy);}
+@media(min-width:768px){ .hero-v2__copy h1{font-size:38px;line-height:42px;margin-bottom:18px;} }
+@media(min-width:1280px){ .hero-v2__copy h1{font-size:48px;line-height:52px;margin-bottom:20px;} }
+
+.hero-v2__list{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-direction:column;gap:8px;}
+.hero-v2__list li{display:flex;align-items:center;gap:10px;font-weight:400;font-size:14px;line-height:20px;color:var(--navy);}
+@media(min-width:1280px){ .hero-v2__list li{font-size:15px;} }
+.hero-v2__list svg{flex:none;width:16px;height:16px;color:#29a8e0;}
+
+.hero-v2__media{order:2;}
+.hero-v2__media img{width:100%;display:block;aspect-ratio:894/785;object-fit:cover;object-position:center 20%;max-height:51vh;}
+@media(min-width:1024px){
+  .hero-v2__media{width:50%;flex:none;}
+  .hero-v2__media img{width:100%;height:100%;aspect-ratio:auto;object-position:center 15%;max-height:none;}
+}
+
+/* ---- Sector 2: Marcas (carrusel) ---- */
+.brands-v2{background:#f2f2f2;overflow:hidden;padding:28px 0;}
+@media(min-width:900px){ .brands-v2{padding:36px 0;} }
+@media(min-width:1280px){ .brands-v2{padding:44px 0;} }
+
+.brands-v2__track{display:flex;width:max-content;gap:56px;animation:brands-v2-loop 30s linear infinite;padding:0 var(--pad);}
+.brands-v2:hover .brands-v2__track{animation-play-state:paused;}
+@media(min-width:1280px){ .brands-v2__track{gap:140px;} }
+@keyframes brands-v2-loop{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+.brands-v2__group{flex:none;display:flex;flex-direction:column;align-items:center;gap:14px;}
+.brands-v2__logos{display:flex;align-items:center;gap:22px;flex-wrap:nowrap;}
+.brands-v2__logos img{height:24px;width:auto;flex:none;display:block;}
+@media(min-width:768px){ .brands-v2__logos{gap:28px;} .brands-v2__logos img{height:28px;} }
+@media(min-width:1280px){ .brands-v2__logos{gap:34px;} .brands-v2__logos img{height:34px;} }
+
+.brands-v2__caption{margin:0;font-weight:500;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--gray);text-align:center;white-space:nowrap;}
+@media(min-width:1280px){ .brands-v2__caption{font-size:12px;} }
+
+/* ---- Sector 3: Un solo interlocutor + carrusel de categorías + features ---- */
+.solve-v2{background:#fff;padding-bottom:48px;}
+@media(min-width:900px){ .solve-v2{padding-bottom:64px;} }
+@media(min-width:1280px){ .solve-v2{padding-bottom:58px;} }
+
+.solve-v2__top{display:flex;flex-direction:column;gap:20px;padding:48px var(--pad) 0;}
+@media(min-width:900px){ .solve-v2__top{flex-direction:row;align-items:flex-start;justify-content:space-between;gap:24px;padding-top:64px;} }
+@media(min-width:1280px){ .solve-v2__top{padding-top:88px;} }
+.solve-v2__top h2{font-weight:700;font-size:24px;line-height:30px;margin:0;max-width:26ch;color:var(--navy);}
+@media(min-width:768px){ .solve-v2__top h2{font-size:30px;line-height:36px;} }
+@media(min-width:1280px){ .solve-v2__top h2{font-size:36px;line-height:44px;} }
+.solve-v2__top .btn{flex:none;align-self:flex-start;}
+
+.solve-v2__carousel{
+  margin-top:28px;overflow-x:auto;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;cursor:grab;user-select:none;
+  -webkit-mask-image:linear-gradient(to right, transparent 0, #000 var(--pad), #000 calc(100% - var(--pad)), transparent 100%);
+  mask-image:linear-gradient(to right, transparent 0, #000 var(--pad), #000 calc(100% - var(--pad)), transparent 100%);
+}
+.solve-v2__carousel::-webkit-scrollbar{display:none;}
+.solve-v2__carousel.is-dragging{cursor:grabbing;scroll-behavior:auto;}
+@media(min-width:1280px){ .solve-v2__carousel{margin-top:40px;} }
+
+.solve-v2__track{display:flex;gap:16px;padding:0 var(--pad);width:max-content;}
+@media(min-width:1280px){ .solve-v2__track{gap:20px;} }
+
+.solve-v2__card{flex:none;width:220px;text-decoration:none;display:block;-webkit-user-drag:none;user-select:none;}
+@media(min-width:768px){ .solve-v2__card{width:250px;} }
+@media(min-width:1280px){ .solve-v2__card{width:280px;} }
+.solve-v2__card img{width:100%;aspect-ratio:280/100;object-fit:cover;border-radius:8px;display:block;pointer-events:none;-webkit-user-drag:none;}
+.solve-v2__card span{display:block;margin-top:12px;font-weight:700;font-size:15px;line-height:20px;color:var(--navy);}
+@media(min-width:1280px){ .solve-v2__card span{font-size:16px;line-height:22px;margin-top:14px;} }
+
+.solve-v2__features{margin:32px var(--pad) 0;background:#f2f2f2;border-radius:12px;padding:24px 20px;display:flex;flex-direction:column;gap:20px;}
+@media(min-width:900px){ .solve-v2__features{flex-direction:row;align-items:center;justify-content:space-between;padding:24px 32px;} }
+@media(min-width:1280px){ .solve-v2__features{margin-top:78px;padding:32px 48px;} }
+.solve-v2__feature{display:flex;align-items:center;gap:14px;}
+.solve-v2__feature img{width:44px;height:44px;flex:none;}
+@media(min-width:1280px){ .solve-v2__feature img{width:52px;height:52px;} }
+.solve-v2__feature strong{display:block;font-weight:700;font-size:13px;letter-spacing:.02em;text-transform:uppercase;color:#333;margin-bottom:4px;}
+@media(min-width:1280px){ .solve-v2__feature strong{font-size:14px;} }
+.solve-v2__feature span{display:block;font-weight:300;font-size:14px;color:var(--gray);}
+.solve-v2__divider{display:none;}
+@media(min-width:900px){ .solve-v2__divider{display:block;width:1px;align-self:stretch;background:#d7d7d7;} }
+
+/* ---- Sector 4: Productos destacados (carrusel difuminado en los bordes) ---- */
+.products-v2{background:#fff;padding-bottom:48px;}
+@media(min-width:900px){ .products-v2{padding-bottom:64px;} }
+@media(min-width:1280px){ .products-v2{padding-bottom:88px;} }
+
+.products-v2__top{display:flex;flex-direction:column;gap:16px;padding:40px var(--pad) 0;}
+@media(min-width:900px){ .products-v2__top{flex-direction:row;align-items:flex-start;justify-content:space-between;gap:24px;padding-top:56px;} }
+@media(min-width:1280px){ .products-v2__top{padding-top:50px;} }
+.products-v2__heading{max-width:46ch;}
+.products-v2__heading h2{font-weight:700;font-size:24px;line-height:30px;margin:0 0 8px;color:var(--navy);}
+@media(min-width:768px){ .products-v2__heading h2{font-size:30px;line-height:36px;} }
+@media(min-width:1280px){ .products-v2__heading h2{font-size:36px;line-height:44px;margin-bottom:10px;} }
+.products-v2__heading p{margin:0;font-weight:300;font-size:14px;line-height:22px;color:var(--gray);}
+@media(min-width:1280px){ .products-v2__heading p{font-size:16px;line-height:24px;} }
+.products-v2__top .btn{flex:none;align-self:flex-start;}
+
+.products-v2__carousel{
+  margin-top:28px;overflow-x:auto;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;cursor:grab;user-select:none;
+  -webkit-mask-image:linear-gradient(to right, transparent 0, #000 var(--pad), #000 calc(100% - var(--pad)), transparent 100%);
+  mask-image:linear-gradient(to right, transparent 0, #000 var(--pad), #000 calc(100% - var(--pad)), transparent 100%);
+}
+.products-v2__carousel::-webkit-scrollbar{display:none;}
+.products-v2__carousel.is-dragging{cursor:grabbing;scroll-behavior:auto;}
+@media(min-width:1280px){ .products-v2__carousel{margin-top:40px;} }
+
+.products-v2__track{display:flex;gap:16px;padding:4px var(--pad);width:max-content;}
+@media(min-width:1280px){ .products-v2__track{gap:20px;} }
+
+.products-v2__card{flex:none;width:190px;background:#fff;border:1px solid #efefef;border-radius:12px;padding:24px 18px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;box-shadow:0 2px 10px rgba(0,53,104,.04);-webkit-user-drag:none;}
+@media(min-width:768px){ .products-v2__card{width:220px;padding:28px 20px;} }
+@media(min-width:1280px){ .products-v2__card{width:248px;padding:32px 24px;} }
+.products-v2__card img{width:100%;height:130px;object-fit:contain;display:block;-webkit-user-drag:none;pointer-events:none;}
+@media(min-width:768px){ .products-v2__card img{height:150px;} }
+@media(min-width:1280px){ .products-v2__card img{height:170px;} }
+.products-v2__card span{font-weight:600;font-size:12px;letter-spacing:.02em;text-transform:uppercase;color:#666;}
+@media(min-width:1280px){ .products-v2__card span{font-size:13px;} }
+.products-v2__more{display:inline-block;background:#66c1ec;color:#fff;border-radius:999px;padding:10px 22px;font-weight:700;font-size:12px;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;}
+@media(min-width:1280px){ .products-v2__more{font-size:13px;padding:11px 26px;} }
+
+/* ---- Sector 5: Destacado con imagen de fondo ---- */
+.destacado-v2{position:relative;min-height:240px;display:flex;align-items:center;overflow:hidden;background:var(--navy);}
+@media(min-width:768px){ .destacado-v2{min-height:280px;} }
+@media(min-width:1024px){ .destacado-v2{min-height:0;aspect-ratio:1629/380;} }
+
+.destacado-v2__bg{position:absolute;top:-10%;left:0;width:100%;height:144%;object-fit:cover;z-index:0;will-change:transform;}
+.destacado-v2__overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(90deg, rgba(0,17,34,.82) 0%, rgba(0,17,34,.62) 42%, rgba(0,17,34,.2) 68%, rgba(0,17,34,0) 92%);
+}
+
+.destacado-v2__content{position:relative;z-index:2;padding:0 var(--pad);width:100%;box-sizing:border-box;}
+.destacado-v2__text{max-width:560px;}
+.destacado-v2__eyebrow{display:block;color:var(--orange);font-weight:800;font-style:italic;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 4px;}
+@media(min-width:1280px){ .destacado-v2__eyebrow{font-size:16px;} }
+.destacado-v2__content h2{color:#fff;font-weight:800;font-style:italic;font-size:32px;line-height:36px;letter-spacing:-.01em;margin:0 0 16px;text-transform:uppercase;}
+@media(min-width:768px){ .destacado-v2__content h2{font-size:42px;line-height:46px;} }
+@media(min-width:1280px){ .destacado-v2__content h2{font-size:54px;line-height:58px;margin-bottom:20px;} }
+.destacado-v2__content p{color:rgba(255,255,255,.9);font-weight:400;font-size:14px;line-height:22px;margin:0 0 28px;max-width:42ch;}
+@media(min-width:1280px){ .destacado-v2__content p{font-size:16px;line-height:26px;margin-bottom:32px;} }
+
+/* ---- Sector 6: Diferenciales ---- */
+.dif-v2{background:#fff;padding:56px var(--pad);}
+@media(min-width:900px){ .dif-v2{padding:72px var(--pad);} }
+@media(min-width:1280px){ .dif-v2{padding:96px var(--pad);} }
+
+.dif-v2__head{display:flex;flex-direction:column;gap:24px;margin-bottom:40px;}
+@media(min-width:900px){ .dif-v2__head{flex-direction:row;align-items:center;justify-content:space-between;gap:32px;margin-bottom:56px;} }
+@media(min-width:1280px){ .dif-v2__head{margin-bottom:72px;} }
+
+.dif-v2__title{font-weight:800;font-size:28px;line-height:34px;color:var(--navy);margin:0;max-width:16ch;}
+@media(min-width:768px){ .dif-v2__title{font-size:34px;line-height:40px;} }
+@media(min-width:1280px){ .dif-v2__title{font-size:42px;line-height:48px;} }
+
+.dif-v2__badge{display:flex;align-items:center;gap:16px;background:#f2f2f2;border-radius:16px;padding:16px 20px;max-width:420px;flex:none;}
+.dif-v2__badge-icon{width:44px;height:44px;flex:none;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.1);}
+.dif-v2__badge-icon svg{width:24px;height:24px;}
+.dif-v2__badge p{margin:0;font-weight:400;font-size:13px;line-height:19px;color:#555;}
+.dif-v2__badge strong{color:var(--navy);font-weight:700;}
+@media(min-width:1280px){ .dif-v2__badge{padding:18px 24px;max-width:440px;} .dif-v2__badge p{font-size:14px;line-height:20px;} }
+
+.dif-v2__grid{display:grid;grid-template-columns:1fr;gap:32px;}
+@media(min-width:768px){ .dif-v2__grid{grid-template-columns:1fr 1fr;column-gap:60px;row-gap:40px;} }
+@media(min-width:1280px){ .dif-v2__grid{column-gap:96px;row-gap:52px;} }
+
+.dif-v2__item{display:flex;gap:16px;}
+@media(min-width:1280px){ .dif-v2__item{gap:20px;} }
+.dif-v2__icon{flex:none;width:40px;height:40px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;}
+@media(min-width:1280px){ .dif-v2__icon{width:48px;height:48px;} }
+.dif-v2__icon svg{width:20px;height:20px;color:#fff;}
+@media(min-width:1280px){ .dif-v2__icon svg{width:24px;height:24px;} }
+.dif-v2__item h3{margin:0 0 8px;font-weight:700;font-size:17px;line-height:22px;color:var(--navy);}
+@media(min-width:1280px){ .dif-v2__item h3{font-size:19px;line-height:25px;} }
+.dif-v2__item p{margin:0;font-weight:300;font-size:14px;line-height:22px;color:var(--gray);max-width:40ch;}
+@media(min-width:1280px){ .dif-v2__item p{font-size:15px;line-height:24px;} }
+
+.dif-v2__problem{display:flex;flex-direction:column;gap:0;margin-top:56px;}
+@media(min-width:900px){ .dif-v2__problem{flex-direction:row;align-items:flex-start;gap:48px;margin-top:80px;} }
+@media(min-width:1280px){ .dif-v2__problem{gap:72px;margin-top:104px;} }
+
+.dif-v2__problem-box{background:var(--orange);color:#fff;padding:32px 28px;flex:none;width:100%;box-sizing:border-box;}
+@media(min-width:900px){ .dif-v2__problem-box{width:300px;padding:40px 32px;} }
+@media(min-width:1280px){ .dif-v2__problem-box{width:380px;padding:56px 44px;} }
+.dif-v2__problem-box p{margin:0;font-weight:400;font-size:20px;line-height:27px;}
+@media(min-width:1280px){ .dif-v2__problem-box p{font-size:24px;line-height:31px;} }
+.dif-v2__problem-box strong{display:block;margin-top:8px;font-weight:700;}
+
+.dif-v2__problem-list{flex:1;width:100%;}
+.dif-v2__problem-list .accordion summary{font-size:16px;line-height:22px;}
+@media(min-width:1280px){ .dif-v2__problem-list .accordion summary{font-size:19px;line-height:25px;} }
+.dif-v2__problem-list .accordion__panel{max-width:56ch;}
+
+.dif-v2__reviews{margin-top:56px;}
+@media(min-width:900px){ .dif-v2__reviews{margin-top:80px;} }
+@media(min-width:1280px){ .dif-v2__reviews{margin-top:104px;} }
+
+.greviews__summary{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:20px;}
+@media(min-width:1280px){ .greviews__summary{margin-bottom:28px;} }
+.greviews__summary .g-icon{width:22px;height:22px;flex:none;}
+.greviews__score{font-weight:700;font-size:20px;color:var(--navy);}
+.greviews__stars{display:inline-flex;gap:2px;flex:none;}
+.greviews__stars svg{width:16px;height:16px;}
+@media(min-width:1280px){ .greviews__stars svg{width:18px;height:18px;} }
+.greviews__count{font-weight:400;font-size:14px;color:var(--gray);}
+
+.greviews{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin:0 calc(var(--pad) * -1);padding:4px var(--pad) 8px;scrollbar-width:none;}
+.greviews::-webkit-scrollbar{display:none;}
+@media(min-width:900px){ .greviews{overflow-x:visible;scroll-snap-type:none;margin:0;padding:4px 0 8px;flex-wrap:wrap;} }
+.gcard{flex:none;scroll-snap-align:start;width:82vw;max-width:340px;background:#fff;border:1px solid #e4e8ec;border-radius:12px;padding:20px;box-shadow:0 2px 10px rgba(0,53,104,.05);}
+.gcard{transition:transform .25s ease,box-shadow .25s ease;}
+.gcard:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,53,104,.12);}
+@media(min-width:900px){ .gcard{width:calc((100% - 32px)/3);max-width:none;} }
+@media(min-width:1280px){ .gcard{padding:24px;} }
+.gcard__top{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.gcard__avatar{width:40px;height:40px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;}
+.gcard__id{flex:1 1 auto;min-width:0;}
+.gcard__name{font-weight:700;font-size:14px;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.gcard__date{font-weight:400;font-size:12px;color:var(--gray);}
+.gcard__g{flex:none;width:18px;height:18px;}
+.gcard__stars{display:inline-flex;gap:2px;margin-bottom:10px;}
+.gcard__stars svg{width:15px;height:15px;}
+.gcard__text{margin:0;font-weight:300;font-size:14px;line-height:22px;color:var(--gray);
+  display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden;}
+@media(min-width:1280px){ .gcard__text{font-size:15px;line-height:24px;} }
+
+/* ---- Sector 7: Tu planta protegida y en regla ante cualquier inspección ---- */
+.protect-v2{background:var(--navy);color:#fff;}
+.protect-v2__inner{padding:40px var(--pad);display:flex;flex-direction:column;gap:32px;}
+@media(min-width:900px){ .protect-v2__inner{flex-direction:row;gap:60px;padding:64px var(--pad);align-items:flex-start;} }
+@media(min-width:1280px){ .protect-v2__inner{padding:96px var(--pad);gap:80px;} }
+.protect-v2__copy{flex:1 1 50%;min-width:0;}
+.protect-v2__cards{flex:1 1 50%;min-width:0;display:flex;flex-direction:column;gap:16px;}
+
+.protect-v2__copy h2{margin:0 0 18px;font-weight:700;font-size:24px;line-height:30px;color:#fff;}
+@media(min-width:768px){ .protect-v2__copy h2{font-size:30px;line-height:36px;} }
+@media(min-width:1280px){ .protect-v2__copy h2{font-size:38px;line-height:46px;margin-bottom:24px;} }
+.protect-v2__copy p{margin:0 0 28px;font-weight:300;font-size:15px;line-height:24px;color:rgba(255,255,255,.85);max-width:46ch;}
+@media(min-width:1280px){ .protect-v2__copy p{font-size:17px;line-height:28px;margin-bottom:32px;} }
+.protect-v2__copy .ctas{margin:0;}
+
+.pcard-v2{background:#fff;border-radius:4px;padding:24px;display:flex;gap:18px;align-items:center;}
+.pcard-v2{transition:transform .25s ease,box-shadow .25s ease;}
+.pcard-v2:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.16);}
+@media(min-width:1280px){ .pcard-v2{padding:36px 40px;gap:24px;} }
+.pcard-v2__icon{flex:none;width:52px;height:52px;border-radius:50%;border:2px solid var(--navy);display:flex;align-items:center;justify-content:center;}
+@media(min-width:1280px){ .pcard-v2__icon{width:60px;height:60px;} }
+.pcard-v2__icon svg{width:24px;height:24px;color:var(--navy);}
+@media(min-width:1280px){ .pcard-v2__icon svg{width:28px;height:28px;} }
+.pcard-v2 h3{margin:0 0 10px;font-weight:700;font-size:20px;line-height:26px;color:var(--navy);}
+@media(min-width:1280px){ .pcard-v2 h3{font-size:24px;line-height:30px;} }
+.pcard-v2 p{margin:0;font-weight:300;font-size:15px;line-height:24px;color:var(--gray);}
+@media(min-width:1280px){ .pcard-v2 p{font-size:16px;line-height:26px;} }
+
+/* ---- Sector 8: Fábrica / Mataderos ---- */
+.factory-v2{background:#fff;padding:56px var(--pad);}
+@media(min-width:900px){ .factory-v2{padding:80px var(--pad);} }
+@media(min-width:1280px){ .factory-v2{padding:104px var(--pad);} }
+
+.factory-v2__inner{display:flex;flex-direction:column;gap:40px;}
+@media(min-width:900px){ .factory-v2__inner{flex-direction:row;align-items:center;gap:64px;} }
+@media(min-width:1280px){ .factory-v2__inner{gap:96px;} }
+
+.factory-v2__copy{flex:1 1 50%;min-width:0;}
+.factory-v2__copy h2{margin:0 0 20px;font-weight:700;font-size:26px;line-height:32px;color:var(--navy);max-width:14ch;}
+@media(min-width:768px){ .factory-v2__copy h2{font-size:32px;line-height:38px;} }
+@media(min-width:1280px){ .factory-v2__copy h2{font-size:38px;line-height:44px;margin-bottom:24px;} }
+.factory-v2__copy p{margin:0;font-weight:300;font-size:15px;line-height:24px;color:var(--gray);max-width:48ch;}
+@media(min-width:1280px){ .factory-v2__copy p{font-size:16px;line-height:26px;} }
+
+.factory-v2__contact{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-direction:column;gap:16px;}
+@media(min-width:1280px){ .factory-v2__contact{margin-top:32px;gap:18px;} }
+.factory-v2__contact li{display:flex;align-items:center;gap:14px;}
+.factory-v2__contact .dot-icon{width:32px;height:32px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;flex:none;}
+.factory-v2__contact .dot-icon svg{width:16px;height:16px;color:#fff;}
+.factory-v2__contact span{font-weight:400;font-size:15px;color:var(--gray);}
+@media(min-width:1280px){ .factory-v2__contact span{font-size:16px;} }
+
+.factory-v2__media{flex:1 1 50%;min-width:0;}
+.factory-v2__media img{width:100%;border-radius:24px;display:block;aspect-ratio:502/450;object-fit:cover;}
+
+/* ---- FAQ (igual a v1) ---- */
+.faq{background:#fff;padding:40px var(--pad);}
+@media(min-width:900px){ .faq{padding:64px var(--pad);} }
+@media(min-width:1280px){ .faq{padding:36px 36px 100px 36px;} }
+.faq__inner{max-width:900px;margin:0 auto;}
+.faq__inner h2{margin:0 0 28px;text-align:center;font-weight:700;font-size:26px;line-height:32px;color:var(--navy);}
+@media(min-width:768px){ .faq__inner h2{font-size:32px;line-height:38px;} }
+@media(min-width:1280px){ .faq__inner h2{font-size:38px;line-height:46px;margin-bottom:40px;} }
+.faq__inner .accordion summary{font-size:18px;line-height:25px;}
+@media(min-width:1280px){ .faq__inner .accordion summary{font-size:22px;line-height:29px;} }
+
+/* ==========================================================================
+   A partir de acá van los estilos de cada sector nuevo (v2), sector por
+   sector, a medida que se van armando con las imágenes que me pases.
+   ========================================================================== */
+
+</style>
+</head>
+<body>
+
+<header class="header">
+  <img src="img/logo.jpg" alt="Diforza">
+  <nav class="nav" id="mainNav">
+    <a href="#">Tienda online</a>
+    <a href="#">La empresa</a>
+    <a href="#" class="btn-white">Pedir cotización</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">☰</button>
+</header>
+
+<section class="hero-v2">
+  <div class="hero-v2__inner">
+    <div class="hero-v2__copy reveal">
+      <p class="hero-v2__eyebrow">+20 años produciendo en Argentina</p>
+      <h1>Líderes en producción de indumentaria y seguridad industrial</h1>
+      <ul class="hero-v2__list">
+        <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Stock permanente garantizado</li>
+        <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Productos con certificado de fábrica, ensayo o ficha técnica</li>
+        <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Todo lo que necesita tu equipo, en un sólo proveedor</li>
+      </ul>
+      <div class="ctas">
+        <a href="#" class="btn btn--solid">Pedir cotización</a>
+        <a href="#" class="btn btn--outline">Descargar catálogo</a>
+      </div>
+    </div>
+    <div class="hero-v2__media reveal reveal--1">
+      <img src="img/hero-img.webp" alt="Operario con campera de lluvia Diforza en obra">
+    </div>
+  </div>
+</section>
+
+<section class="brands-v2">
+  <div class="brands-v2__track reveal">
+      <div class="brands-v2__group">
+        <div class="brands-v2__logos">
+          <img src="img/brand-diforza.webp" alt="Diforza">
+          <img src="img/brand-ziao.webp" alt="Ziao">
+          <img src="img/brand-agio.webp" alt="Agio">
+        </div>
+        <p class="brands-v2__caption">Fabricantes de nuestras marcas propias</p>
+      </div>
+      <div class="brands-v2__group">
+        <div class="brands-v2__logos">
+          <img src="img/brand-ombu.webp" alt="Ombu">
+          <img src="img/brand-3m.webp" alt="3M">
+          <img src="img/brand-funcional.webp" alt="Funcional Calzado de Seguridad">
+          <img src="img/brand-skiway.webp" alt="Skiway">
+        </div>
+        <p class="brands-v2__caption">Importamos y distribuimos marcas líderes</p>
+      </div>
+      <div class="brands-v2__group">
+        <div class="brands-v2__logos">
+          <img src="img/brand-libus.webp" alt="Libus">
+        </div>
+        <p class="brands-v2__caption">Distribuidor oficial y socio estratégico de Libus</p>
+      </div>
+      <div class="brands-v2__group">
+        <div class="brands-v2__logos">
+          <img src="img/brand-diforza.webp" alt="Diforza">
+          <img src="img/brand-ziao.webp" alt="Ziao">
+          <img src="img/brand-agio.webp" alt="Agio">
+        </div>
+        <p class="brands-v2__caption">Fabricantes de nuestras marcas propias</p>
+      </div>
+      <div class="brands-v2__group">
+        <div class="brands-v2__logos">
+          <img src="img/brand-ombu.webp" alt="Ombu">
+          <img src="img/brand-3m.webp" alt="3M">
+          <img src="img/brand-funcional.webp" alt="Funcional Calzado de Seguridad">
+          <img src="img/brand-skiway.webp" alt="Skiway">
+        </div>
+        <p class="brands-v2__caption">Importamos y distribuimos marcas líderes</p>
+      </div>
+      <div class="brands-v2__group">
+        <div class="brands-v2__logos">
+          <img src="img/brand-libus.webp" alt="Libus">
+        </div>
+        <p class="brands-v2__caption">Distribuidor oficial y socio estratégico de Libus</p>
+      </div>
+  </div>
+</section>
+
+<section class="solve-v2">
+  <div class="solve-v2__top reveal">
+    <h2>Un solo interlocutor, una sola cuenta corriente, un solo remito por recibir</h2>
+    <a href="#" class="btn btn--solid">Pedir cotización</a>
+  </div>
+  <div class="solve-v2__carousel draggable-carousel reveal reveal--1" id="solveCarousel">
+    <div class="solve-v2__track" id="solveTrack">
+      <a href="#" class="solve-v2__card" draggable="false">
+        <img src="img/cat-indumentaria.webp" alt="Indumentaria general de trabajo">
+        <span>Indumentaria general de trabajo</span>
+      </a>
+      <a href="#" class="solve-v2__card" draggable="false">
+        <img src="img/cat-epp.webp" alt="EPP y protección industrial">
+        <span>EPP y protección industrial</span>
+      </a>
+      <a href="#" class="solve-v2__card" draggable="false">
+        <img src="img/cat-mamelucos.webp" alt="Mamelucos, descartables y ropa de lluvia">
+        <span>Mamelucos, descartables y ropa de lluvia</span>
+      </a>
+      <a href="#" class="solve-v2__card" draggable="false">
+        <img src="img/cat-calzado.webp" alt="Calzado de seguridad y protección de manos">
+        <span>Calzado de seguridad y protección de manos</span>
+      </a>
+      <a href="#" class="solve-v2__card" draggable="false">
+        <img src="img/cat-senaletica.webp" alt="Señalética y urbanización">
+        <span>Señalética y urbanización</span>
+      </a>
+      <a href="#" class="solve-v2__card" draggable="false">
+        <img src="img/cat-indumentaria.webp" alt="Indumentaria general de trabajo">
+        <span>Indumentaria general de trabajo</span>
+      </a>
+      <a href="#" class="solve-v2__card" draggable="false">
+        <img src="img/cat-epp.webp" alt="EPP y protección industrial">
+        <span>EPP y protección industrial</span>
+      </a>
+      <a href="#" class="solve-v2__card" draggable="false">
+        <img src="img/cat-mamelucos.webp" alt="Mamelucos, descartables y ropa de lluvia">
+        <span>Mamelucos, descartables y ropa de lluvia</span>
+      </a>
+    </div>
+  </div>
+  <div class="solve-v2__features reveal reveal--2">
+    <div class="solve-v2__feature">
+      <img src="img/bs-cotizacion.svg" alt="">
+      <div>
+        <strong>Solicitá tu cotización</strong>
+        <span>Cuidamos tus datos</span>
+      </div>
+    </div>
+    <div class="solve-v2__divider"></div>
+    <div class="solve-v2__feature">
+      <img src="img/bs-asesor.svg" alt="">
+      <div>
+        <strong>Asignamos un asesor</strong>
+        <span>Contacto directo y personalizado</span>
+      </div>
+    </div>
+    <div class="solve-v2__divider"></div>
+    <div class="solve-v2__feature">
+      <img src="img/bs-delivery.svg" alt="">
+      <div>
+        <strong>Envíos a todo el país</strong>
+        <span>Rápido y seguro</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products-v2">
+  <div class="products-v2__top reveal">
+    <div class="products-v2__heading">
+      <h2>Productos destacados</h2>
+      <p>Los más elegidos con stock disponible y entrega inmediata</p>
+    </div>
+    <a href="#" class="btn btn--outline">Ir a tienda online</a>
+  </div>
+  <div class="products-v2__carousel draggable-carousel reveal reveal--1">
+    <div class="products-v2__track">
+      <div class="products-v2__card">
+        <img src="img/prod-antiparra.webp" alt="Antiparra New Classic">
+        <span>Antiparra New Classic</span>
+        <a href="#" class="products-v2__more">Más info</a>
+      </div>
+      <div class="products-v2__card">
+        <img src="img/prod-anteojo.webp" alt="Anteojo Eco Sport">
+        <span>Anteojo Eco Sport</span>
+        <a href="#" class="products-v2__more">Más info</a>
+      </div>
+      <div class="products-v2__card">
+        <img src="img/prod-protector-auditivo.webp" alt="Protector Auditivo L-340">
+        <span>Protector Auditivo L-340</span>
+        <a href="#" class="products-v2__more">Más info</a>
+      </div>
+      <div class="products-v2__card">
+        <img src="img/prod-respirador.webp" alt="Respirador Desech Zero 30">
+        <span>Respirador Desech Zero 30</span>
+        <a href="#" class="products-v2__more">Más info</a>
+      </div>
+      <div class="products-v2__card">
+        <img src="img/prod-zapatilla.webp" alt="Zapatilla Puntera de Acero">
+        <span>Zapatilla Puntera de Acero</span>
+        <a href="#" class="products-v2__more">Más info</a>
+      </div>
+      <div class="products-v2__card">
+        <img src="img/prod-antiparra.webp" alt="Antiparra New Classic">
+        <span>Antiparra New Classic</span>
+        <a href="#" class="products-v2__more">Más info</a>
+      </div>
+      <div class="products-v2__card">
+        <img src="img/prod-anteojo.webp" alt="Anteojo Eco Sport">
+        <span>Anteojo Eco Sport</span>
+        <a href="#" class="products-v2__more">Más info</a>
+      </div>
+      <div class="products-v2__card">
+        <img src="img/prod-protector-auditivo.webp" alt="Protector Auditivo L-340">
+        <span>Protector Auditivo L-340</span>
+        <a href="#" class="products-v2__more">Más info</a>
+      </div>
+      <div class="products-v2__card">
+        <img src="img/prod-respirador.webp" alt="Respirador Desech Zero 30">
+        <span>Respirador Desech Zero 30</span>
+        <a href="#" class="products-v2__more">Más info</a>
+      </div>
+      <div class="products-v2__card">
+        <img src="img/prod-zapatilla.webp" alt="Zapatilla Puntera de Acero">
+        <span>Zapatilla Puntera de Acero</span>
+        <a href="#" class="products-v2__more">Más info</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="destacado-v2">
+  <img class="destacado-v2__bg" src="img/destacado-img.jpg" alt="Operario Diforza en obra bajo la lluvia">
+  <div class="destacado-v2__overlay"></div>
+  <div class="destacado-v2__content reveal">
+    <div class="destacado-v2__text">
+      <span class="destacado-v2__eyebrow">Nueva línea</span>
+      <h2>Impermeables</h2>
+      <p>Conocé la nueva línea de indumentaria impermeable de fabricación propia, garantizando la mejor calidad del mercado.</p>
+      <a href="#" class="btn btn--solid">Pedir cotización</a>
+    </div>
+  </div>
+</section>
+
+<section class="dif-v2">
+  <div class="dif-v2__head">
+    <h2 class="dif-v2__title reveal">Por qué las empresas eligen trabajar con Diforza</h2>
+    <div class="dif-v2__badge reveal">
+      <span class="dif-v2__badge-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ff7e34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg>
+      </span>
+      <p><strong>Más de 20 años</strong> brindando asesoramiento y soluciones en seguridad industrial</p>
+    </div>
+  </div>
+  <div class="dif-v2__grid">
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
+      </span>
+      <div>
+        <h3>Continuidad garantizada con marcas propias</h3>
+        <p>Desarrollamos dos líneas estratégicas para proteger tu operación: ZIAO en productos técnicos y descartables, y AGIO en indumentaria. Te garantizamos estabilidad de precios y continuidad de stock.</p>
+      </div>
+    </div>
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 12H3v3a2 2 0 0 0 2 2h3"/><path d="M13 12h8v3a2 2 0 0 1-2 2h-3"/><path d="M7 12V9a2 2 0 0 1 2-2h1.5L12 9l1.5-2H15a2 2 0 0 1 2 2v3"/><path d="M9.5 7 8 5m6.5 2L16 5"/></svg>
+      </span>
+      <div>
+        <h3>Respaldo directo como socios oficiales de Libus</h3>
+        <p>Somos partners estratégicos del fabricante de protección craneal y facial más importante de la región: acceso inmediato a todo su catálogo, stock prioritario y respaldo técnico de fábrica.</p>
+      </div>
+    </div>
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+      </span>
+      <div>
+        <h3>Tu cuenta tiene nombre y apellido</h3>
+        <p>Acá no hablás con un bot ni con un operador temporal. Nuestro equipo técnico conoce tu planta, tus riesgos específicos y tu historial de compras. Cuando tenés una urgencia, llamás y resolvemos.</p>
+      </div>
+    </div>
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+      </span>
+      <div>
+        <h3>Stock real en depósito propio</h3>
+        <p>No trabajamos bajo pedido ni prometemos plazos que no podemos cumplir. Sostenemos un inventario real en nuestros depósitos para responder a tus órdenes de compra urgentes sin vueltas.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dif-v2__problem reveal">
+    <div class="dif-v2__problem-box">
+      <p>¿Inconvenientes con los proveedores de EPP?<br><strong>No debería ser parte de tu rutina diaria</strong></p>
+    </div>
+    <div class="dif-v2__problem-list">
+      <div class="accordion">
+        <details open>
+          <summary>Líneas paradas por falta de stock
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <p class="accordion__panel">Si falta el EPP certificado, el operario no entra a la planta. El verdadero costo no es la compra: es la producción frenada por una entrega colgada.</p>
+        </details>
+        <details>
+          <summary>Papeleo eterno con 4 proveedores distintos
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <p class="accordion__panel">Uno para calzado, otro para indumentaria, otro para respiradores. Cuatro cuentas corrientes, cuatro remitos que revisar y cuatro teléfonos a los que reclamar.</p>
+        </details>
+        <details>
+          <summary>Vendedores que no asesoran
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <p class="accordion__panel">Te ofrecen lo que tienen acumulado en su depósito, no lo que tu matriz de riesgo requiere. Al final, la responsabilidad normativa queda de tu lado.</p>
+        </details>
+        <details>
+          <summary>Sos solo un número de pedido
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <p class="accordion__panel">Ante un accidente o una inspección urgente, necesitás respuestas en el acto. En los grandes call centers nadie conoce cómo funciona tu operación.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <div class="dif-v2__reviews reveal">
+    <div class="greviews__summary">
+      <svg class="g-icon" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+      <span class="greviews__score">5.0</span>
+      <span class="greviews__stars"><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
+      <span class="greviews__count">5.0 en Google · Reseñas de clientes</span>
+    </div>
+    <div class="greviews">
+      <div class="gcard">
+        <div class="gcard__top">
+          <div class="gcard__avatar" style="background:#f57c00">AK</div>
+          <div class="gcard__id">
+            <div class="gcard__name">Ariel Kuznicki</div>
+            <div class="gcard__date">Google Reviews</div>
+          </div>
+          <svg class="gcard__g" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+        </div>
+        <span class="gcard__stars"><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
+        <p class="gcard__text">Diforza nos provee indumentaria y elementos de protección personal de altísima calidad. Diego maneja nuestra cuenta con mucho profesionalismo. Recomiendo enormemente su gestión y dedicación.</p>
+      </div>
+      <div class="gcard">
+        <div class="gcard__top">
+          <div class="gcard__avatar" style="background:#1976d2">RH</div>
+          <div class="gcard__id">
+            <div class="gcard__name">Ricardo Honaine</div>
+            <div class="gcard__date">Google Reviews</div>
+          </div>
+          <svg class="gcard__g" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+        </div>
+        <span class="gcard__stars"><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
+        <p class="gcard__text">Excelente atención y asesoramiento. En Diforza encontré todo lo que necesitaba en elementos de seguridad, con productos de primera calidad y entregas rápidas. Se nota el compromiso y la seriedad con la que trabajan.</p>
+      </div>
+      <div class="gcard">
+        <div class="gcard__top">
+          <div class="gcard__avatar" style="background:#388e3c">EC</div>
+          <div class="gcard__id">
+            <div class="gcard__name">Estudio Casa Viva</div>
+            <div class="gcard__date">Google Reviews</div>
+          </div>
+          <svg class="gcard__g" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+        </div>
+        <span class="gcard__stars"><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
+        <p class="gcard__text">Muy buena experiencia. Tienen gran variedad de productos y siempre responden con rapidez y buena predisposición. La atención es personalizada y te ayudan a encontrar justo lo que necesitás.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="protect-v2">
+  <div class="protect-v2__inner">
+    <div class="protect-v2__copy reveal">
+      <h2>Tu planta protegida y en regla ante cualquier inspección</h2>
+      <p>Si falta el EPP certificado, el operario no entra a la planta. El verdadero costo no es la compra: es la producción frenada por una entrega colgada.</p>
+      <div class="ctas">
+        <a href="#" class="btn btn--solid">Pedir cotización</a>
+        <a href="#" class="btn btn--outline">Descargar catálogo</a>
+      </div>
+    </div>
+    <div class="protect-v2__cards reveal reveal--1">
+      <div class="pcard-v2">
+        <span class="pcard-v2__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
+        </span>
+        <div>
+          <h3>Trazabilidad documental</h3>
+          <p>Ficha técnica e informes de ensayo entregados con cada producto.</p>
+        </div>
+      </div>
+      <div class="pcard-v2">
+        <span class="pcard-v2__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg>
+        </span>
+        <div>
+          <h3>Certificaciones oficiales</h3>
+          <p>Productos que cumplen con las normas IRAM específicas para cada nivel de riesgo industrial.</p>
+        </div>
+      </div>
+      <div class="pcard-v2">
+        <span class="pcard-v2__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v2a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V3"/><path d="m9 13 2 2 4-4"/></svg>
+        </span>
+        <div>
+          <h3>Validación en planta</h3>
+          <p>Te ayudamos a cruzar las especificaciones de los EPP con los requerimientos reales de cada puesto de trabajo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="factory-v2">
+  <div class="factory-v2__inner">
+    <div class="factory-v2__copy reveal">
+      <h2>Más de 20 años produciendo en nuestra fábrica en Mataderos, CABA.</h2>
+      <p>Te invitamos a conocer nuestras instalaciones, procesos y equipo de trabajo. Podés revisar los productos en mano y sus documentos. Esperamos tu contacto para coordinar una reunión.</p>
+      <ul class="factory-v2__contact">
+        <li>
+          <span class="dot-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <span>Albariño 2243 2245, C1440</span>
+        </li>
+        <li>
+          <span class="dot-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.9.6 2.8a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2z"/></svg>
+          </span>
+          <span>+54 9 11 5956-9713</span>
+        </li>
+        <li>
+          <span class="dot-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </span>
+          <span>info@diforza.com.ar</span>
+        </li>
+      </ul>
+    </div>
+    <div class="factory-v2__media reveal reveal--1">
+      <img src="img/factory-v2.jpg" alt="Fábrica de Diforza en Mataderos, CABA">
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="faq__inner reveal">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="accordion">
+      <details open>
+        <summary>¿Los productos sirven para mis registros de la SRT?
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p class="accordion__panel">Ficha técnica e informes de ensayo entregados con cada producto.</p>
+      </details>
+      <details>
+        <summary>¿Hacen envíos al interior del país?
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p class="accordion__panel">Sí, despachamos a todo el país con stock propio permanente.</p>
+      </details>
+      <details>
+        <summary>¿Puedo comprar por unidad?
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p class="accordion__panel">Sí, trabajamos tanto pedidos unitarios como por volumen para toda la planta.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTORES v2 — se van agregando acá, uno por uno, a medida que
+     compartas cada imagen de referencia.
+     ========================================================================== -->
+
+<footer class="site-footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <img src="img/logo-blanco.png" alt="Diforza">
+    </div>
+    <div class="footer__col">
+      <h4>Categorías</h4>
+      <ul>
+        <li><a href="#">Indumentaria general de trabajo</a></li>
+        <li><a href="#">EPP y protección industrial</a></li>
+        <li><a href="#">Mamelucos, descartables y ropa de lluvia</a></li>
+        <li><a href="#">Calzado de seguridad y protección de manos</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Secciones</h4>
+      <div class="footer__links">
+        <a href="#">Tienda online</a>
+        <a href="#">Sobre nosotros</a>
+        <a href="#" class="btn btn--solid">Pedir cotización</a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <div class="footer__links">
+        <a href="#">Contacto</a>
+      </div>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  // Scroll-reveal: activa .is-visible la primera vez que el elemento entra en viewport
+  if ('IntersectionObserver' in window){
+    var revealEls = document.querySelectorAll('.reveal');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.15, rootMargin: '0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+(function(){
+  // Hace "draggeable" con mouse (y touch nativo) cualquier carrusel con
+  // la clase .draggable-carousel — se usa en el de categorías y en el de productos.
+  // El scroll no sigue 1 a 1 al cursor: persigue un target con easing (lerp),
+  // y al soltar sigue un poco por inercia (momentum) antes de frenar.
+  document.querySelectorAll('.draggable-carousel').forEach(function(carousel){
+    carousel.style.scrollBehavior = 'auto'; // el easing lo maneja el rAF, no el CSS
+
+    var isDown = false, startX = 0, startScrollLeft = 0, moved = false;
+    var current = carousel.scrollLeft, target = carousel.scrollLeft;
+    var lastX = 0, lastT = 0, velocity = 0, rafId = null;
+    var EASE = 0.18;
+
+    function maxScroll(){ return carousel.scrollWidth - carousel.clientWidth; }
+    function clamp(v){ return Math.max(0, Math.min(maxScroll(), v)); }
+
+    function loop(){
+      current += (target - current) * EASE;
+      if (Math.abs(target - current) < 0.5){ current = target; }
+      carousel.scrollLeft = current;
+      if (current !== target || isDown){
+        rafId = requestAnimationFrame(loop);
+      } else {
+        rafId = null;
+      }
+    }
+    function startLoop(){ if (!rafId) rafId = requestAnimationFrame(loop); }
+
+    function down(x){
+      isDown = true; moved = false;
+      carousel.classList.add('is-dragging');
+      if (rafId){ cancelAnimationFrame(rafId); rafId = null; }
+      current = carousel.scrollLeft;
+      target = current;
+      startX = x;
+      startScrollLeft = current;
+      lastX = x; lastT = Date.now(); velocity = 0;
+    }
+    function move(x){
+      if(!isDown) return;
+      var walk = x - startX;
+      if (Math.abs(walk) > 4) moved = true;
+      target = clamp(startScrollLeft - walk);
+      var now = Date.now();
+      var dt = now - lastT;
+      if (dt > 0){ velocity = (x - lastX) / dt; } // px por ms
+      lastX = x; lastT = now;
+      startLoop();
+    }
+    function up(){
+      if(!isDown) return;
+      isDown = false;
+      carousel.classList.remove('is-dragging');
+      // pequeño impulso de inercia proyectado a partir de la velocidad del gesto
+      var momentum = -velocity * 180;
+      target = clamp(target + momentum);
+      startLoop();
+    }
+
+    carousel.addEventListener('mousedown', function(e){ down(e.pageX); });
+    window.addEventListener('mouseup', up);
+    window.addEventListener('mousemove', function(e){ if(isDown){ e.preventDefault(); move(e.pageX); } });
+    carousel.addEventListener('touchstart', function(e){ down(e.touches[0].pageX); }, {passive:true});
+    carousel.addEventListener('touchmove', function(e){ move(e.touches[0].pageX); }, {passive:true});
+    carousel.addEventListener('touchend', up);
+    // evita que un drag termine disparando el click de un link/tarjeta
+    carousel.addEventListener('click', function(e){ if(moved){ e.preventDefault(); e.stopPropagation(); } }, true);
+  });
+})();
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('mainNav');
+  if(!toggle || !nav) return;
+  toggle.addEventListener('click', function(){
+    var isOpen = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    toggle.textContent = isOpen ? '✕' : '☰';
+  });
+})();
+(function(){
+  // Parallax: el fondo de .destacado-v2 se mueve, el texto queda fijo/normal
+  var section = document.querySelector('.destacado-v2');
+  var bg = section ? section.querySelector('.destacado-v2__bg') : null;
+  if (!section || !bg) return;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) return;
+
+  var ticking = false;
+  function update(){
+    ticking = false;
+    var rect = section.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    // progreso: -1 (sector debajo del viewport) .. 1 (sector arriba del viewport)
+    var progress = (rect.top + rect.height / 2 - vh / 2) / ((vh + rect.height) / 2);
+    progress = Math.max(-1, Math.min(1, progress));
+    var shift = progress * 75; // px de recorrido del fondo, texto no se mueve
+    bg.style.transform = 'translateY(' + shift.toFixed(1) + 'px)';
+  }
+  function onScroll(){
+    if (!ticking){
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  update();
+})();
+</script>
+</body>
+</html>
