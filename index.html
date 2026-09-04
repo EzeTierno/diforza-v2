@@ -171,33 +171,58 @@ img{max-width:100%;display:block;}
 @media(min-width:900px){ .solve-v2{padding-bottom:64px;} }
 @media(min-width:1280px){ .solve-v2{padding-bottom:58px;} }
 
-.solve-v2__top{display:flex;flex-direction:column;gap:20px;padding:48px var(--pad) 0;}
-@media(min-width:900px){ .solve-v2__top{flex-direction:row;align-items:flex-start;justify-content:space-between;gap:24px;padding-top:64px;} }
-@media(min-width:1280px){ .solve-v2__top{padding-top:88px;} }
-.solve-v2__top h2{font-weight:700;font-size:24px;line-height:30px;margin:0;max-width:26ch;color:var(--navy);}
-@media(min-width:768px){ .solve-v2__top h2{font-size:30px;line-height:36px;} }
-@media(min-width:1280px){ .solve-v2__top h2{font-size:36px;line-height:44px;} }
-.solve-v2__top .btn{flex:none;align-self:flex-start;}
+.solve-v2__intro{display:flex;flex-direction:column;gap:20px;padding:48px var(--pad) 0;}
+@media(min-width:900px){ .solve-v2__intro{flex-direction:row;align-items:center;justify-content:space-between;gap:24px;padding-top:64px;} }
+@media(min-width:1280px){ .solve-v2__intro{padding-top:88px;} }
+.solve-v2__intro h2{font-weight:700;font-size:24px;line-height:30px;margin:0;max-width:22ch;color:var(--navy);}
+@media(min-width:768px){ .solve-v2__intro h2{font-size:30px;line-height:36px;} }
+@media(min-width:1280px){ .solve-v2__intro h2{font-size:36px;line-height:44px;} }
+.solve-v2__intro .ctas{flex:none;margin:0;}
 
-.solve-v2__carousel{
-  margin-top:28px;overflow-x:auto;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;
-  scrollbar-width:none;cursor:grab;user-select:none;
-  -webkit-mask-image:linear-gradient(to right, transparent 0, #000 var(--pad), #000 calc(100% - var(--pad)), transparent 100%);
-  mask-image:linear-gradient(to right, transparent 0, #000 var(--pad), #000 calc(100% - var(--pad)), transparent 100%);
+/* Carrusel de categorías: el ítem activo queda al centro, sin opacidad;
+   los vecinos se ven más chicos y difuminados. Cantidad de vecinos visibles
+   crece por breakpoint (1 en mobile, 3 en tablet, 5 desde 1280px). */
+.solve-v2__cats{margin-top:36px;}
+@media(min-width:1280px){ .solve-v2__cats{margin-top:56px;} }
+
+.solve-v2__cats-viewport{overflow-x:hidden;overflow-y:visible;padding:20px 0 60px 0;}
+.solve-v2__cats-track{
+  display:flex;align-items:center;gap:24px;will-change:transform;
+  transition:transform .65s cubic-bezier(.16,1,.3,1);
 }
-.solve-v2__carousel::-webkit-scrollbar{display:none;}
-.solve-v2__carousel.is-dragging{cursor:grabbing;scroll-behavior:auto;}
-@media(min-width:1280px){ .solve-v2__carousel{margin-top:40px;} }
+@media(min-width:768px){ .solve-v2__cats-track{gap:36px;} }
+@media(min-width:1280px){ .solve-v2__cats-track{gap:48px;} }
 
-.solve-v2__track{display:flex;gap:16px;padding:0 var(--pad);width:max-content;}
-@media(min-width:1280px){ .solve-v2__track{gap:20px;} }
+.solve-v2__cats-item{
+  flex:none;width:110px;background:none;border:0;padding:0;margin:0;cursor:pointer;
+  transition:transform .65s cubic-bezier(.16,1,.3,1), opacity .55s ease;
+  transform:scale(.5);opacity:0;pointer-events:none;
+}
+@media(min-width:768px){ .solve-v2__cats-item{width:150px;} }
+@media(min-width:1280px){ .solve-v2__cats-item{width:190px;} }
+.solve-v2__cats-item img{width:100%;aspect-ratio:1/1;object-fit:contain;display:block;pointer-events:none;-webkit-user-drag:none;}
 
-.solve-v2__card{flex:none;width:220px;text-decoration:none;display:block;-webkit-user-drag:none;user-select:none;}
-@media(min-width:768px){ .solve-v2__card{width:250px;} }
-@media(min-width:1280px){ .solve-v2__card{width:280px;} }
-.solve-v2__card img{width:100%;aspect-ratio:280/100;object-fit:cover;border-radius:8px;display:block;pointer-events:none;-webkit-user-drag:none;}
-.solve-v2__card span{display:block;margin-top:12px;font-weight:700;font-size:15px;line-height:20px;color:var(--navy);}
-@media(min-width:1280px){ .solve-v2__card span{font-size:16px;line-height:22px;margin-top:14px;} }
+.solve-v2__cats-item[data-dist="0"]{transform:scale(1.28);opacity:1;pointer-events:auto;z-index:2;}
+.solve-v2__cats-item[data-dist="1"]{opacity:0;transform:scale(.62);}
+@media(min-width:768px){ .solve-v2__cats-item[data-dist="1"]{opacity:.55;pointer-events:auto;} }
+.solve-v2__cats-item[data-dist="2"]{opacity:0;transform:scale(.46);}
+@media(min-width:1280px){ .solve-v2__cats-item[data-dist="2"]{opacity:.22;pointer-events:auto;} }
+
+.solve-v2__cats-nav{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:8px;}
+@media(min-width:1280px){ .solve-v2__cats-nav{gap:32px;margin-top:16px;} }
+.solve-v2__cats-arrow{flex:none;width:36px;height:36px;border:0;background:none;color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:opacity .2s ease;}
+.solve-v2__cats-arrow svg{width:22px;height:22px;}
+.solve-v2__cats-arrow:disabled{opacity:.25;cursor:default;}
+.solve-v2__cats-label{
+  flex:none;width:240px;font-weight:700;font-size:18px;letter-spacing:.02em;text-transform:uppercase;
+  color:var(--navy);text-align:center;transition:opacity .25s ease;
+}
+@media(min-width:768px){ .solve-v2__cats-label{width:280px;font-size:20px;} }
+@media(min-width:1280px){ .solve-v2__cats-label{width:360px;font-size:26px;} }
+
+.solve-v2__cats-dots{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:20px;}
+.solve-v2__cats-dot{width:8px;height:8px;border-radius:999px;background:#d7e0e8;border:0;padding:0;cursor:pointer;transition:background .2s ease,width .2s ease;}
+.solve-v2__cats-dot.is-active{width:26px;background:var(--navy);}
 
 .solve-v2__features{margin:32px var(--pad) 0;background:#f2f2f2;border-radius:12px;padding:24px 20px;display:flex;flex-direction:column;gap:20px;}
 @media(min-width:900px){ .solve-v2__features{flex-direction:row;align-items:center;justify-content:space-between;padding:24px 32px;} }
@@ -228,16 +253,22 @@ img{max-width:100%;display:block;}
 .products-v2__top .btn{flex:none;align-self:flex-start;}
 
 .products-v2__carousel{
-  margin-top:28px;overflow-x:auto;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;
+  margin:28px var(--pad) 0;overflow-x:auto;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;
   scrollbar-width:none;cursor:grab;user-select:none;
-  -webkit-mask-image:linear-gradient(to right, transparent 0, #000 var(--pad), #000 calc(100% - var(--pad)), transparent 100%);
-  mask-image:linear-gradient(to right, transparent 0, #000 var(--pad), #000 calc(100% - var(--pad)), transparent 100%);
+  -webkit-mask-image:linear-gradient(to right, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+  mask-image:linear-gradient(to right, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
 }
 .products-v2__carousel::-webkit-scrollbar{display:none;}
 .products-v2__carousel.is-dragging{cursor:grabbing;scroll-behavior:auto;}
-@media(min-width:1280px){ .products-v2__carousel{margin-top:40px;} }
+@media(min-width:1280px){
+  .products-v2__carousel{
+    margin-top:40px;
+    -webkit-mask-image:linear-gradient(to right, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+    mask-image:linear-gradient(to right, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+  }
+}
 
-.products-v2__track{display:flex;gap:16px;padding:4px var(--pad);width:max-content;}
+.products-v2__track{display:flex;gap:16px;padding:4px 0;width:max-content;}
 @media(min-width:1280px){ .products-v2__track{gap:20px;} }
 
 .products-v2__card{flex:none;width:190px;background:#fff;border:1px solid #efefef;border-radius:12px;padding:24px 18px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;box-shadow:0 2px 10px rgba(0,53,104,.04);-webkit-user-drag:none;}
@@ -514,46 +545,58 @@ img{max-width:100%;display:block;}
 </section>
 
 <section class="solve-v2">
-  <div class="solve-v2__top reveal">
-    <h2>Un solo interlocutor, una sola cuenta corriente, un solo remito por recibir</h2>
-    <a href="#" class="btn btn--solid">Pedir cotización</a>
-  </div>
-  <div class="solve-v2__carousel draggable-carousel reveal reveal--1" id="solveCarousel">
-    <div class="solve-v2__track" id="solveTrack">
-      <a href="#" class="solve-v2__card" draggable="false">
-        <img src="img/cat-indumentaria.webp" alt="Indumentaria general de trabajo">
-        <span>Indumentaria general de trabajo</span>
-      </a>
-      <a href="#" class="solve-v2__card" draggable="false">
-        <img src="img/cat-epp.webp" alt="EPP y protección industrial">
-        <span>EPP y protección industrial</span>
-      </a>
-      <a href="#" class="solve-v2__card" draggable="false">
-        <img src="img/cat-mamelucos.webp" alt="Mamelucos, descartables y ropa de lluvia">
-        <span>Mamelucos, descartables y ropa de lluvia</span>
-      </a>
-      <a href="#" class="solve-v2__card" draggable="false">
-        <img src="img/cat-calzado.webp" alt="Calzado de seguridad y protección de manos">
-        <span>Calzado de seguridad y protección de manos</span>
-      </a>
-      <a href="#" class="solve-v2__card" draggable="false">
-        <img src="img/cat-senaletica.webp" alt="Señalética y urbanización">
-        <span>Señalética y urbanización</span>
-      </a>
-      <a href="#" class="solve-v2__card" draggable="false">
-        <img src="img/cat-indumentaria.webp" alt="Indumentaria general de trabajo">
-        <span>Indumentaria general de trabajo</span>
-      </a>
-      <a href="#" class="solve-v2__card" draggable="false">
-        <img src="img/cat-epp.webp" alt="EPP y protección industrial">
-        <span>EPP y protección industrial</span>
-      </a>
-      <a href="#" class="solve-v2__card" draggable="false">
-        <img src="img/cat-mamelucos.webp" alt="Mamelucos, descartables y ropa de lluvia">
-        <span>Mamelucos, descartables y ropa de lluvia</span>
-      </a>
+  <div class="solve-v2__intro reveal">
+    <h2>Resolvé todo el equipamiento de tu personal en un solo lugar</h2>
+    <div class="ctas">
+      <a href="#" class="btn btn--solid">Pedir cotización</a>
+      <a href="#" class="btn btn--outline">Descargar catálogo</a>
     </div>
   </div>
+
+  <div class="solve-v2__cats reveal reveal--1" id="catsCarousel">
+    <div class="solve-v2__cats-viewport">
+      <div class="solve-v2__cats-track" id="catsTrack">
+        <button type="button" class="solve-v2__cats-item" data-name="Protección craneal">
+          <img src="img/cat-craneana.webp" alt="Protección craneal" draggable="false">
+        </button>
+        <button type="button" class="solve-v2__cats-item" data-name="Protección auditiva">
+          <img src="img/cat-audi.webp" alt="Protección auditiva" draggable="false">
+        </button>
+        <button type="button" class="solve-v2__cats-item" data-name="Protección ocular">
+          <img src="img/cat-ocu.webp" alt="Protección ocular" draggable="false">
+        </button>
+        <button type="button" class="solve-v2__cats-item" data-name="Protección facial">
+          <img src="img/cat-facial.webp" alt="Protección facial" draggable="false">
+        </button>
+        <button type="button" class="solve-v2__cats-item" data-name="Protección respiratoria">
+          <img src="img/cat-resp.webp" alt="Protección respiratoria" draggable="false">
+        </button>
+        <button type="button" class="solve-v2__cats-item" data-name="Protección de manos">
+          <img src="img/cat-guante.webp" alt="Protección de manos" draggable="false">
+        </button>
+        <button type="button" class="solve-v2__cats-item" data-name="Calzado de seguridad">
+          <img src="img/cat-calzado2.webp" alt="Calzado de seguridad" draggable="false">
+        </button>
+        <button type="button" class="solve-v2__cats-item" data-name="Indumentaria de trabajo">
+          <img src="img/cat-indu.webp" alt="Indumentaria de trabajo" draggable="false">
+        </button>
+        <button type="button" class="solve-v2__cats-item" data-name="Señalización y vialidad">
+          <img src="img/cat-sena.webp" alt="Señalización y vialidad" draggable="false">
+        </button>
+      </div>
+    </div>
+    <div class="solve-v2__cats-nav">
+      <button type="button" class="solve-v2__cats-arrow" id="catsPrev" aria-label="Categoría anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <span class="solve-v2__cats-label" id="catsLabel">Protección craneal</span>
+      <button type="button" class="solve-v2__cats-arrow" id="catsNext" aria-label="Categoría siguiente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="solve-v2__cats-dots" id="catsDots"></div>
+  </div>
+
   <div class="solve-v2__features reveal reveal--2">
     <div class="solve-v2__feature">
       <img src="img/bs-cotizacion.svg" alt="">
@@ -1027,6 +1070,125 @@ img{max-width:100%;display:block;}
     toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     toggle.textContent = isOpen ? '✕' : '☰';
   });
+})();
+(function(){
+  // Carrusel "spotlight" de categorías (sector 3), infinito: el ítem activo
+  // queda centrado y más grande, los vecinos más chicos y difuminados.
+  // Para que nunca haya un hueco en los extremos, se clonan un par de ítems
+  // a cada punta (suficiente para cubrir la distancia máxima visible, 2).
+  // Al cruzar hacia una punta clonada se "teletransporta" sin transición al
+  // ítem real equivalente, dando la ilusión de loop infinito.
+  //
+  // La corrección de posición se dispara con el evento nativo
+  // "transitionend" (no con un setTimeout a ciegas): así siempre reacciona
+  // al final REAL de la animación, sin importar si el usuario clickeó una
+  // vez o encadenó varios clicks rápido. Además, antes de aplicar cualquier
+  // click nuevo, la posición se auto-corrige si ya estaba fuera de rango
+  // (por ejemplo si el usuario clickeó más rápido de lo que tarda la
+  // animación en asentarse) — así "pos" nunca puede alejarse más de un paso
+  // de la zona segura, y nunca se sale del array de ítems.
+  var root = document.getElementById('catsCarousel');
+  if (!root) return;
+  var track = document.getElementById('catsTrack');
+  var realItems = Array.prototype.slice.call(track.children);
+  var N = realItems.length;
+  var CLONES = 2; // = distancia máxima visible (data-dist "2")
+  var label = document.getElementById('catsLabel');
+  var dotsWrap = document.getElementById('catsDots');
+  var prevBtn = document.getElementById('catsPrev');
+  var nextBtn = document.getElementById('catsNext');
+
+  // arma [clones de las últimas N] + [ítems reales] + [clones de las primeras N]
+  var headClones = realItems.slice(N - CLONES).map(function(el){ return el.cloneNode(true); });
+  var tailClones = realItems.slice(0, CLONES).map(function(el){ return el.cloneNode(true); });
+  headClones.forEach(function(el){ track.insertBefore(el, track.firstChild); });
+  tailClones.forEach(function(el){ track.appendChild(el); });
+
+  var items = Array.prototype.slice.call(track.children); // longitud N + 2*CLONES
+  var pos = CLONES; // posición extendida; pos-CLONES = índice real activo
+
+  // dots (uno por categoría real)
+  var dots = realItems.map(function(item, i){
+    var dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'solve-v2__cats-dot';
+    dot.setAttribute('aria-label', 'Ir a ' + item.dataset.name);
+    dot.addEventListener('click', function(){ goTo(CLONES + i); });
+    dotsWrap.appendChild(dot);
+    return dot;
+  });
+
+  function step(){
+    // offsetLeft/offsetWidth ignoran el transform:scale() de cada ítem
+    // (getBoundingClientRect no, y eso rompía el centrado según qué ítem
+    // estuviera en juego y su escala actual en ese momento).
+    if (items.length < 2) return items[0] ? items[0].offsetWidth : 0;
+    return items[1].offsetLeft - items[0].offsetLeft;
+  }
+
+  function render(){
+    var s = step();
+    var itemW = items[0].offsetWidth;
+    var containerW = root.querySelector('.solve-v2__cats-viewport').clientWidth;
+    var offset = (containerW / 2 - itemW / 2) - (pos * s);
+    track.style.transform = 'translateX(' + offset + 'px)';
+
+    items.forEach(function(item, i){
+      var dist = Math.abs(i - pos);
+      item.setAttribute('data-dist', dist >= 3 ? 'far' : String(dist));
+    });
+    var realIndex = ((pos - CLONES) % N + N) % N;
+    dots.forEach(function(dot, i){ dot.classList.toggle('is-active', i === realIndex); });
+    label.textContent = items[realIndex + CLONES].dataset.name;
+  }
+
+  function jumpInstant(newPos){
+    // reubica sin animación (usado para "teletransportar" al ítem real
+    // equivalente cuando la posición cae en la zona clonada)
+    track.style.transition = 'none';
+    pos = newPos;
+    render();
+    void track.offsetWidth; // fuerza reflow antes de reactivar la transición
+    track.style.transition = '';
+  }
+
+  function normalize(){
+    if (pos >= N + CLONES){ jumpInstant(pos - N); }
+    else if (pos < CLONES){ jumpInstant(pos + N); }
+  }
+
+  // corrige ANTES de aplicar un nuevo movimiento si "pos" ya había quedado
+  // fuera de rango (típico de clicks encadenados más rápido que la animación)
+  function settleIfNeeded(){
+    if (pos >= N + CLONES || pos < CLONES){
+      var real = ((pos - CLONES) % N + N) % N;
+      pos = CLONES + real;
+    }
+  }
+
+  function step_(delta){
+    settleIfNeeded();
+    pos += delta;
+    render();
+  }
+
+  function goTo(newPos){
+    settleIfNeeded();
+    pos = newPos;
+    render();
+  }
+
+  track.addEventListener('transitionend', function(e){
+    if (e.target !== track || e.propertyName !== 'transform') return;
+    normalize();
+  });
+
+  prevBtn.addEventListener('click', function(){ step_(-1); });
+  nextBtn.addEventListener('click', function(){ step_(1); });
+  items.forEach(function(item, i){ item.addEventListener('click', function(){ goTo(i); }); });
+  window.addEventListener('resize', render);
+
+  render();
 })();
 (function(){
   // Parallax: el fondo de .destacado-v2 se mueve, el texto queda fijo/normal
