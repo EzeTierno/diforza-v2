@@ -61,9 +61,9 @@ img{max-width:100%;display:block;}
 .header.is-stuck{background:var(--navy);box-shadow:0 4px 20px rgba(0,26,52,.25);}
 .header.is-stuck::before{opacity:0;}
 @media(min-width:1280px){ .header.is-stuck{padding-top:12px;padding-bottom:12px;} }
-.header__logo img{height:34px;width:auto;}
-@media(min-width:768px){ .header__logo img{height:42px;} }
-@media(min-width:1280px){ .header__logo img{height:52px;} }
+.header__logo img{height:44px;width:auto;}
+@media(min-width:768px){ .header__logo img{height:54px;} }
+@media(min-width:1280px){ .header__logo img{height:66px;} }
 
 .nav{display:none;flex-direction:column;align-items:flex-start;gap:20px;}
 .nav.is-open{
@@ -257,6 +257,14 @@ img{max-width:100%;display:block;}
   font-size:34px;line-height:1.06;margin:0 0 18px;letter-spacing:-.02em;color:var(--navy);
 }
 .hero-v2__copy h1 .accent{color:var(--orange);display:block;}
+/* Desktop: el H1 queda forzado en 4 lineas y "Indumentaria y seguridad"
+   unos puntos mas grande que el resto. En mobile/tablet fluye solo. */
+.hero-v2__copy h1 .h1-big{font-size:1.15em;line-height:1.04;display:inline-block;}
+.hero-v2__copy h1 .h1-br{display:none;}
+@media(min-width:1024px){
+  .hero-v2__copy h1 .h1-br{display:inline;}
+  .hero-v2__copy h1 .h1-big{display:block;}
+}
 @media(min-width:768px){ .hero-v2__copy h1{font-size:48px;} }
 @media(min-width:1024px){ .hero-v2__copy h1{font-size:44px;} }
 @media(min-width:1280px){ .hero-v2__copy h1{font-size:50px;margin-bottom:20px;} }
@@ -440,6 +448,18 @@ img{max-width:100%;display:block;}
 .brands-v2__item--tall img{height:46px;}
 @media(min-width:768px){ .brands-v2__item--tall img{height:56px;} }
 @media(min-width:1280px){ .brands-v2__item--tall img{height:68px;} }
+
+/* Solo el grupo "Marcas propias": logos mas grandes que el resto. */
+.brands-v2__group--center .brands-v2__item{--logo-row:60px;}
+.brands-v2__group--center .brands-v2__item img{height:34px;}
+@media(min-width:768px){
+  .brands-v2__group--center .brands-v2__item{--logo-row:72px;}
+  .brands-v2__group--center .brands-v2__item img{height:40px;}
+}
+@media(min-width:1280px){
+  .brands-v2__group--center .brands-v2__item{--logo-row:88px;}
+  .brands-v2__group--center .brands-v2__item img{height:50px;}
+}
 
 .brands-v2__sub{margin:0;font-weight:500;font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);text-align:center;white-space:nowrap;}
 @media(min-width:1280px){ .brands-v2__sub{font-size:9px;} }
@@ -800,7 +820,7 @@ img{max-width:100%;display:block;}
 @media(min-width:1024px) and (max-height:820px){
   .hero-v2{min-height:0;height:calc(100vh - 24px);}
   .header{padding-top:12px;padding-bottom:12px;}
-  .header__logo img{height:40px;}
+  .header__logo img{height:66px;}
   .hero-v2 .hero-v2__inner{padding-top:96px;padding-bottom:36px;}
   .hero-v2 .hero-v2__eyebrow{font-size:11px;margin-bottom:14px;}
   .hero-v2 .hero-v2__copy h1{font-size:42px;line-height:1.08;margin-bottom:14px;}
@@ -879,7 +899,7 @@ img{max-width:100%;display:block;}
     <div class="hero-v2__copy">
       <p class="hero-v2__eyebrow hero-anim hero-anim--1">+20 años produciendo en Argentina</p>
 
-      <h1 class="hero-anim hero-anim--2">Indumentaria y seguridad <span class="accent">para los que hacen industria</span></h1>
+      <h1 class="hero-anim hero-anim--2"><span class="h1-big">Indumentaria<br class="h1-br"> y seguridad</span> <span class="accent">para los que<br class="h1-br"> hacen industria</span></h1>
 
       <p class="hero-v2__lead hero-anim hero-anim--3">Soluciones confiables, diseño funcional y producción nacional para equipos que no se detienen.</p>
 
@@ -1065,70 +1085,70 @@ img{max-width:100%;display:block;}
     <div class="products-v2__track">
       <div class="products-v2__card">
         <span class="products-v2__badge products-v2__badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="img/prod-antiparra.webp" alt="Antiparra New Classic">
+        <img src="img/cat-ocu.webp" alt="Antiparra New Classic">
         <span class="products-v2__name">Antiparra New Classic</span>
         <p class="products-v2__cat">Protección visual</p>
         <a href="#" class="products-v2__more">Más info</a>
       </div>
       <div class="products-v2__card">
         <span class="products-v2__badge products-v2__badge--top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4c1.6 2 2.6 3.4 2.6 4.9a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.7 1-2.5.5 1.2 1.6.9 1.6-2.4z"/></svg> Más vendido</span>
-        <img src="img/prod-anteojo.webp" alt="Anteojo Eco Sport">
-        <span class="products-v2__name">Anteojo Eco Sport</span>
-        <p class="products-v2__cat">Protección visual</p>
+        <img src="img/cat-craneana.webp" alt="Casco de seguridad">
+        <span class="products-v2__name">Casco de seguridad</span>
+        <p class="products-v2__cat">Protección craneana</p>
         <a href="#" class="products-v2__more">Más info</a>
       </div>
       <div class="products-v2__card">
         <span class="products-v2__badge products-v2__badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="img/prod-protector-auditivo.webp" alt="Protector Auditivo L-340">
+        <img src="img/cat-audi.webp" alt="Protector Auditivo L-340">
         <span class="products-v2__name">Protector Auditivo L-340</span>
         <p class="products-v2__cat">Protección auditiva</p>
         <a href="#" class="products-v2__more">Más info</a>
       </div>
       <div class="products-v2__card">
         <span class="products-v2__badge products-v2__badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="img/prod-respirador.webp" alt="Respirador Desech Zero 30">
+        <img src="img/cat-resp.webp" alt="Respirador Desech Zero 30">
         <span class="products-v2__name">Respirador Desech Zero 30</span>
         <p class="products-v2__cat">Protección respiratoria</p>
         <a href="#" class="products-v2__more">Más info</a>
       </div>
       <div class="products-v2__card">
         <span class="products-v2__badge products-v2__badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="img/prod-zapatilla.webp" alt="Zapatilla Puntera de Acero">
+        <img src="img/cat-calzado2.webp" alt="Zapatilla Puntera de Acero">
         <span class="products-v2__name">Zapatilla Puntera de Acero</span>
         <p class="products-v2__cat">Calzado de seguridad</p>
         <a href="#" class="products-v2__more">Más info</a>
       </div>
       <div class="products-v2__card">
         <span class="products-v2__badge products-v2__badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="img/prod-antiparra.webp" alt="Antiparra New Classic">
+        <img src="img/cat-ocu.webp" alt="Antiparra New Classic">
         <span class="products-v2__name">Antiparra New Classic</span>
         <p class="products-v2__cat">Protección visual</p>
         <a href="#" class="products-v2__more">Más info</a>
       </div>
       <div class="products-v2__card">
         <span class="products-v2__badge products-v2__badge--top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4c1.6 2 2.6 3.4 2.6 4.9a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.7 1-2.5.5 1.2 1.6.9 1.6-2.4z"/></svg> Más vendido</span>
-        <img src="img/prod-anteojo.webp" alt="Anteojo Eco Sport">
-        <span class="products-v2__name">Anteojo Eco Sport</span>
-        <p class="products-v2__cat">Protección visual</p>
+        <img src="img/cat-craneana.webp" alt="Casco de seguridad">
+        <span class="products-v2__name">Casco de seguridad</span>
+        <p class="products-v2__cat">Protección craneana</p>
         <a href="#" class="products-v2__more">Más info</a>
       </div>
       <div class="products-v2__card">
         <span class="products-v2__badge products-v2__badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="img/prod-protector-auditivo.webp" alt="Protector Auditivo L-340">
+        <img src="img/cat-audi.webp" alt="Protector Auditivo L-340">
         <span class="products-v2__name">Protector Auditivo L-340</span>
         <p class="products-v2__cat">Protección auditiva</p>
         <a href="#" class="products-v2__more">Más info</a>
       </div>
       <div class="products-v2__card">
         <span class="products-v2__badge products-v2__badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="img/prod-respirador.webp" alt="Respirador Desech Zero 30">
+        <img src="img/cat-resp.webp" alt="Respirador Desech Zero 30">
         <span class="products-v2__name">Respirador Desech Zero 30</span>
         <p class="products-v2__cat">Protección respiratoria</p>
         <a href="#" class="products-v2__more">Más info</a>
       </div>
       <div class="products-v2__card">
         <span class="products-v2__badge products-v2__badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="img/prod-zapatilla.webp" alt="Zapatilla Puntera de Acero">
+        <img src="img/cat-calzado2.webp" alt="Zapatilla Puntera de Acero">
         <span class="products-v2__name">Zapatilla Puntera de Acero</span>
         <p class="products-v2__cat">Calzado de seguridad</p>
         <a href="#" class="products-v2__more">Más info</a>
