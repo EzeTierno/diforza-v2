@@ -430,36 +430,18 @@ img{max-width:100%;display:block;}
 @media(min-width:1280px){ .brands-v2__logos{gap:40px;} }
 
 /* Fila de alto fijo para el logo: todos los logos comparten centro vertical
-   y todos los subtitulos arrancan en la misma linea, sin importar la
-   proporcion de cada archivo. */
+   y todos los subtitulos arrancan en la misma linea. Los archivos estan
+   exportados a la misma altura, asi que una sola regla alcanza. */
 .brands-v2__item{
   flex:none;display:grid;grid-template-rows:var(--logo-row) auto;
-  align-items:center;justify-items:center;gap:6px;padding:0 14px;
-  --logo-row:46px;
+  align-items:center;justify-items:center;gap:8px;padding:0 14px;
+  --logo-row:44px;
 }
-@media(min-width:768px){ .brands-v2__item{--logo-row:56px;} }
-@media(min-width:1280px){ .brands-v2__item{padding:0 20px;--logo-row:68px;} }
-.brands-v2__item img{height:24px;width:auto;max-width:100%;display:block;}
-@media(min-width:768px){ .brands-v2__item img{height:28px;} }
-@media(min-width:1280px){ .brands-v2__item img{height:34px;} }
-
-/* Logos con proporcion mas cuadrada necesitan un poco mas de alto
-   para leerse a la par de los apaisados. */
-.brands-v2__item--tall img{height:46px;}
-@media(min-width:768px){ .brands-v2__item--tall img{height:56px;} }
-@media(min-width:1280px){ .brands-v2__item--tall img{height:68px;} }
-
-/* Solo el grupo "Marcas propias": logos mas grandes que el resto. */
-.brands-v2__group--center .brands-v2__item{--logo-row:60px;}
-.brands-v2__group--center .brands-v2__item img{height:34px;}
-@media(min-width:768px){
-  .brands-v2__group--center .brands-v2__item{--logo-row:72px;}
-  .brands-v2__group--center .brands-v2__item img{height:40px;}
-}
-@media(min-width:1280px){
-  .brands-v2__group--center .brands-v2__item{--logo-row:88px;}
-  .brands-v2__group--center .brands-v2__item img{height:50px;}
-}
+@media(min-width:768px){ .brands-v2__item{--logo-row:50px;} }
+@media(min-width:1280px){ .brands-v2__item{padding:0 20px;--logo-row:56px;} }
+.brands-v2__item img{height:44px;width:auto;max-width:100%;display:block;}
+@media(min-width:768px){ .brands-v2__item img{height:50px;} }
+@media(min-width:1280px){ .brands-v2__item img{height:56px;} }
 
 .brands-v2__sub{margin:0;font-weight:500;font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);text-align:center;white-space:nowrap;}
 @media(min-width:1280px){ .brands-v2__sub{font-size:9px;} }
@@ -945,7 +927,7 @@ img{max-width:100%;display:block;}
         <p class="brands-v2__title">Socio estratégico</p>
         <div class="brands-v2__logos">
         <div class="brands-v2__item">
-          <img src="img/brand-libus.webp" alt="Libus">
+          <img src="img/logo-libus.webp" alt="Libus">
           <p class="brands-v2__sub">Seguridad que te acompaña</p>
         </div>
         </div>
@@ -958,11 +940,11 @@ img{max-width:100%;display:block;}
           <p class="brands-v2__sub">Trabajo que protege</p>
         </div>
         <div class="brands-v2__item brands-v2__item--center">
-          <img src="img/brand-ziao.webp" alt="Ziao">
+          <img src="img/logo-ziao.webp" alt="Ziao">
           <p class="brands-v2__sub">Confort en movimiento</p>
         </div>
         <div class="brands-v2__item">
-          <img src="img/brand-agio.webp" alt="Agio">
+          <img src="img/logo-agio.webp" alt="Agio">
           <p class="brands-v2__sub">Protección esencial</p>
         </div>
         </div>
@@ -971,10 +953,10 @@ img{max-width:100%;display:block;}
         <p class="brands-v2__title">Marcas distribuidas</p>
         <div class="brands-v2__logos">
         <div class="brands-v2__item">
-          <img src="img/brand-ombu.webp" alt="Ombu">
+          <img src="img/logo-ombu.webp" alt="Ombu">
           <p class="brands-v2__sub">Industria en movimiento</p>
         </div>
-        <div class="brands-v2__item brands-v2__item--center brands-v2__item--tall">
+        <div class="brands-v2__item brands-v2__item--center">
           <img src="img/logo-worksafe.webp" alt="Work Safe">
         </div>
         <div class="brands-v2__item">
@@ -988,7 +970,7 @@ img{max-width:100%;display:block;}
         <p class="brands-v2__title">Socio estratégico</p>
         <div class="brands-v2__logos">
         <div class="brands-v2__item">
-          <img src="img/brand-libus.webp" alt="Libus">
+          <img src="img/logo-libus.webp" alt="Libus">
           <p class="brands-v2__sub">Seguridad que te acompaña</p>
         </div>
         </div>
@@ -1001,11 +983,11 @@ img{max-width:100%;display:block;}
           <p class="brands-v2__sub">Trabajo que protege</p>
         </div>
         <div class="brands-v2__item brands-v2__item--center">
-          <img src="img/brand-ziao.webp" alt="Ziao">
+          <img src="img/logo-ziao.webp" alt="Ziao">
           <p class="brands-v2__sub">Confort en movimiento</p>
         </div>
         <div class="brands-v2__item">
-          <img src="img/brand-agio.webp" alt="Agio">
+          <img src="img/logo-agio.webp" alt="Agio">
           <p class="brands-v2__sub">Protección esencial</p>
         </div>
         </div>
@@ -1014,10 +996,10 @@ img{max-width:100%;display:block;}
         <p class="brands-v2__title">Marcas distribuidas</p>
         <div class="brands-v2__logos">
         <div class="brands-v2__item">
-          <img src="img/brand-ombu.webp" alt="Ombu">
+          <img src="img/logo-ombu.webp" alt="Ombu">
           <p class="brands-v2__sub">Industria en movimiento</p>
         </div>
-        <div class="brands-v2__item brands-v2__item--center brands-v2__item--tall">
+        <div class="brands-v2__item brands-v2__item--center">
           <img src="img/logo-worksafe.webp" alt="Work Safe">
         </div>
         <div class="brands-v2__item">
