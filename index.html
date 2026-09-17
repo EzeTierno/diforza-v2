@@ -241,7 +241,7 @@ img{max-width:100%;display:block;}
 
 .hero-v2__copy{display:flex;flex-direction:column;width:100%;max-width:600px;}
 @media(min-width:1024px){ .hero-v2__copy{max-width:min(50%,560px);} }
-@media(min-width:1440px){ .hero-v2__copy{max-width:min(48%,620px);} }
+@media(min-width:1440px){ .hero-v2__copy{max-width:min(48%,690px);} }
 
 .hero-v2__eyebrow{
   display:flex;align-items:center;gap:14px;
@@ -256,14 +256,22 @@ img{max-width:100%;display:block;}
   font-family:"Poppins","Montserrat",Arial,sans-serif;font-weight:800;
   font-size:34px;line-height:1.06;margin:0 0 18px;letter-spacing:-.02em;color:var(--navy);
 }
-.hero-v2__copy h1 .accent{color:var(--orange);display:block;}
-/* Desktop: el H1 queda forzado en 4 lineas y "Indumentaria y seguridad"
-   unos puntos mas grande que el resto. En mobile/tablet fluye solo. */
-.hero-v2__copy h1 .h1-big{font-size:1.15em;line-height:1.04;display:inline-block;}
-.hero-v2__copy h1 .h1-br{display:none;}
+/* El H1 tiene dos juegos de saltos forzados:
+   .br-m (mobile/tablet, <1024px) -> 4 lineas, con "Indumentaria y seguridad"
+     un punto mas grande que el resto:
+        Indumentaria / y seguridad / para los que / hacen industria
+   .br-d (desktop, >=1024px) -> 3 lineas, todo del mismo cuerpo y el cambio
+     de color cayendo en el medio del segundo renglon:
+        Indumentaria y / seguridad para los / que hacen industria
+   El .accent va inline siempre: es lo que permite que la mitad naranja
+   arranque a mitad de renglon. */
+.hero-v2__copy h1 .accent{color:var(--orange);}
+.hero-v2__copy h1 .h1-big{font-size:1.15em;line-height:1.04;}
+.hero-v2__copy h1 .br-d{display:none;}
 @media(min-width:1024px){
-  .hero-v2__copy h1 .h1-br{display:inline;}
-  .hero-v2__copy h1 .h1-big{display:block;}
+  .hero-v2__copy h1 .br-m{display:none;}
+  .hero-v2__copy h1 .br-d{display:inline;}
+  .hero-v2__copy h1 .h1-big{font-size:1em;line-height:inherit;}
 }
 @media(min-width:768px){ .hero-v2__copy h1{font-size:48px;} }
 @media(min-width:1024px){ .hero-v2__copy h1{font-size:44px;} }
@@ -485,7 +493,7 @@ img{max-width:100%;display:block;}
 @media(min-width:1280px){ .solve-v2__inner{padding:84px 64px 92px;} }
 @media(min-width:1600px){ .solve-v2__inner{padding:92px 96px 100px;} }
 
-.solve-v2__copy{width:100%;max-width:600px;}
+.solve-v2__copy{width:90%;max-width:510px;}
 @media(min-width:1024px){ .solve-v2__copy{max-width:min(58%,640px);} }
 @media(min-width:1440px){ .solve-v2__copy{max-width:min(55%,760px);} }
 
@@ -860,10 +868,8 @@ img{max-width:100%;display:block;}
   .hero-v2__eyebrow{font-size:10px;letter-spacing:.1em;gap:9px;margin-bottom:14px;}
   .hero-v2__eyebrow::before{width:20px;height:2px;}
 
-  /* 3 — H1 en 4 lineas, igual que en desktop */
+  /* 3 — H1 en 4 lineas (los saltos .br-m ya estan activos por defecto) */
   .hero-v2__copy h1{font-size:37px;line-height:1.04;margin-bottom:16px;}
-  .hero-v2__copy h1 .h1-br{display:inline;}
-  .hero-v2__copy h1 .h1-big{display:block;}
 
   /* 4/5 — La columna de texto ocupa la mitad izquierda para dejar
      respirar al operario; el operario va detras y no toma clicks. */
@@ -889,9 +895,9 @@ img{max-width:100%;display:block;}
 
   /* Sector "Un solo lugar": el H2 fluye sin quiebres forzados y la bajada
      se mantiene sobre la zona clara del fondo. */
-  .solve-v2__copy h2{font-size:min(31px, 7.3vw);line-height:1.1;}
+  .solve-v2__copy h2{font-size:36px;line-height:1.1;}
   .solve-v2__copy h2 br{display:none;}
-  .solve-v2__lead{max-width:65%;font-size:14px;}
+  .solve-v2__lead{max-width:71%;font-size:14px;}
   /* CTAs del mismo tamano que los del hero */
   .solve-v2__inner .ctas{flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:24px;}
   .solve-v2 .btn{padding:11px 20px;font-size:11px;gap:8px;}
@@ -971,7 +977,7 @@ img{max-width:100%;display:block;}
     <div class="hero-v2__copy">
       <p class="hero-v2__eyebrow hero-anim hero-anim--1">+15 años produciendo en Argentina</p>
 
-      <h1 class="hero-anim hero-anim--2"><span class="h1-big">Indumentaria<br class="h1-br"> y seguridad</span> <span class="accent">para los que<br class="h1-br"> hacen industria</span></h1>
+      <h1 class="hero-anim hero-anim--2"><span class="h1-big">Indumentaria<br class="br-m"> y<br class="br-d"> seguridad</span><br class="br-m"> <span class="accent">para los<br class="br-d"> que<br class="br-m"> hacen industria</span></h1>
 
       <p class="hero-v2__lead hero-anim hero-anim--3">Soluciones confiables, diseño funcional y producción nacional para equipos que no se detienen.</p>
 
