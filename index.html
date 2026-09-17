@@ -880,10 +880,11 @@ img{max-width:100%;display:block;}
   .hero-v2__benefits li{font-size:12.5px;line-height:1.35;gap:10px;align-items:center;}
   .hero-v2__benefits svg{width:20px;height:20px;stroke-width:1.5;}
 
-  /* la copia que cruza el navbar no aplica en mobile */
-  .hero-v2__worker--over{display:none;}
   .hero-v2__worker{display:block;bottom:0;right:-22vw;width:84vw;height:auto;z-index:2;pointer-events:none;}
   .hero-v2__worker img{width:100%;height:auto;pointer-events:none;}
+  /* La copia que cruza el navbar es solo de desktop. Va DESPUES de la regla
+     de .hero-v2__worker (misma especificidad) para que gane el display:none. */
+  .hero-v2 .hero-v2__worker--over{display:none;}
 
   /* 6 — CTAs mas chicos, apilados y por delante del operario */
   .hero-v2 .ctas{flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:0;position:relative;z-index:5;}
