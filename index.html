@@ -443,12 +443,24 @@ img{max-width:100%;display:block;}
 @media(min-width:768px){ .brands-v2__item img{height:50px;} }
 @media(min-width:1280px){ .brands-v2__item img{height:56px;} }
 
+/* Ombu y Conwork se leen mas grandes de lo que deberian: -20% */
+.brands-v2__item img.is-sm{height:35px;}
+@media(min-width:768px){ .brands-v2__item img.is-sm{height:40px;} }
+@media(min-width:1280px){ .brands-v2__item img.is-sm{height:45px;} }
+
 .brands-v2__sub{margin:0;font-weight:500;font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);text-align:center;white-space:nowrap;}
 @media(min-width:1280px){ .brands-v2__sub{font-size:9px;} }
 
-/* Bordes laterales: grupo central y logo central de los grupos de 3 */
-.brands-v2__group--center{border-left:1px solid #d9d9d9;border-right:1px solid #d9d9d9;padding:0 clamp(20px,4vw,56px);}
-.brands-v2__item--center{border-left:1px solid #d9d9d9;border-right:1px solid #d9d9d9;}
+/* Separadores: UNA linea por limite de grupo, dibujada en el medio del gap
+   con un pseudo-elemento. Al ir en todos los grupos, el patron se repite
+   igual en el loop (el limite entre el ultimo grupo de un set y el primero
+   del siguiente queda cubierto por el ::before de ese primero). */
+.brands-v2__group{position:relative;}
+.brands-v2__group::before{
+  content:"";position:absolute;top:0;bottom:0;
+  left:calc(-1 * var(--brands-gap) / 2);
+  width:1px;background:#d9d9d9;
+}
 
 /* ---- Sector 3: Banner "Un solo lugar" ---- */
 .solve-v2{
@@ -678,7 +690,7 @@ img{max-width:100%;display:block;}
 .dif-v2__item p{margin:0;font-weight:300;font-size:14px;line-height:22px;color:var(--gray);max-width:40ch;}
 @media(min-width:1280px){ .dif-v2__item p{font-size:15px;line-height:24px;} }
 
-.dif-v2__problem{display:flex;flex-direction:column;gap:0;margin-top:56px;}
+.dif-v2__problem{display:flex;flex-direction:column;gap:2.2em;margin-top:56px;}
 @media(min-width:900px){ .dif-v2__problem{flex-direction:row;align-items:flex-start;gap:48px;margin-top:80px;} }
 @media(min-width:1280px){ .dif-v2__problem{gap:72px;margin-top:104px;} }
 
@@ -735,14 +747,14 @@ img{max-width:100%;display:block;}
 .protect-v2__copy{flex:1 1 50%;min-width:0;}
 .protect-v2__cards{flex:1 1 50%;min-width:0;display:flex;flex-direction:column;gap:16px;}
 
-.protect-v2__copy h2{margin:0 0 18px;font-weight:700;font-size:24px;line-height:30px;color:#fff;}
+.protect-v2__copy h2{margin:18px 0 18px;font-weight:700;font-size:31px;line-height:40px;color:#fff;}
 @media(min-width:768px){ .protect-v2__copy h2{font-size:30px;line-height:36px;} }
 @media(min-width:1280px){ .protect-v2__copy h2{font-size:38px;line-height:46px;margin-bottom:24px;} }
 .protect-v2__copy p{margin:0 0 28px;font-weight:300;font-size:15px;line-height:24px;color:rgba(255,255,255,.85);max-width:46ch;}
 @media(min-width:1280px){ .protect-v2__copy p{font-size:17px;line-height:28px;margin-bottom:32px;} }
 .protect-v2__copy .ctas{margin:0;}
 
-.pcard-v2{background:#fff;border-radius:4px;padding:24px;display:flex;gap:18px;align-items:center;}
+.pcard-v2{background:#fff;border-radius:4px;padding:24px;display:flex;gap:18px;align-items:center;flex-direction:row-reverse;justify-content:space-between;}
 .pcard-v2{transition:transform .25s ease,box-shadow .25s ease;}
 .pcard-v2:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.16);}
 @media(min-width:1280px){ .pcard-v2{padding:36px 40px;gap:24px;} }
@@ -765,7 +777,7 @@ img{max-width:100%;display:block;}
 @media(min-width:1280px){ .factory-v2__inner{gap:96px;} }
 
 .factory-v2__copy{flex:1 1 50%;min-width:0;}
-.factory-v2__copy h2{margin:0 0 20px;font-weight:700;font-size:26px;line-height:32px;color:var(--navy);max-width:14ch;}
+.factory-v2__copy h2{margin:0 0 20px;font-weight:700;font-size:34px;line-height:40px;color:var(--navy);}
 @media(min-width:768px){ .factory-v2__copy h2{font-size:32px;line-height:38px;} }
 @media(min-width:1280px){ .factory-v2__copy h2{font-size:38px;line-height:44px;margin-bottom:24px;} }
 .factory-v2__copy p{margin:0;font-weight:300;font-size:15px;line-height:24px;color:var(--gray);max-width:48ch;}
@@ -783,9 +795,12 @@ img{max-width:100%;display:block;}
 .factory-v2__media img{width:100%;border-radius:24px;display:block;aspect-ratio:502/450;object-fit:cover;}
 
 /* ---- FAQ (igual a v1) ---- */
-.faq{background:#fff;padding:40px var(--pad);}
-@media(min-width:900px){ .faq{padding:64px var(--pad);} }
-@media(min-width:1280px){ .faq{padding:36px 36px 100px 36px;} }
+/* FAQ va pegada al sector fabrica (las dos son blancas): sin padding
+   superior propio, para que el aire de arriba lo ponga solo .factory-v2.
+   El doble espacio queda abajo, antes del footer. */
+.faq{background:#fff;padding:0 var(--pad) 96px;}
+@media(min-width:900px){ .faq{padding:0 var(--pad) 144px;} }
+@media(min-width:1280px){ .faq{padding:0 36px 140px;} }
 .faq__inner{max-width:900px;margin:0 auto;}
 .faq__inner h2{margin:0 0 28px;text-align:center;font-weight:700;font-size:26px;line-height:32px;color:var(--navy);}
 @media(min-width:768px){ .faq__inner h2{font-size:32px;line-height:38px;} }
@@ -826,6 +841,81 @@ img{max-width:100%;display:block;}
 /* Notebooks angostas: evita que la copy se meta sobre el operario */
 @media(min-width:1024px) and (max-width:1400px){
   .hero-v2 .hero-v2__copy{max-width:min(47%,520px);}
+}
+
+/* ==========================================================================
+   MOBILE (<768px) — ajuste fino del hero segun la referencia de Illustrator:
+   navbar mas proporcionado, eyebrow compacta, H1 en 4 lineas, operario
+   visible a la derecha (sin bloquear clicks) y copy/CTAs en la mitad izq.
+   ========================================================================== */
+@media(max-width:767px){
+  /* 1 — Navbar: logo mas grande, CTA mas chico */
+  .header{padding:12px 18px;}
+  .header__logo img{height:46px;}
+  .header .btn--nav{padding:9px 16px;font-size:9.5px;letter-spacing:.05em;gap:0;}
+  .header .btn--nav svg{display:none;}
+  .nav-toggle{font-size:30px;}
+
+  /* 2 — Eyebrow: linea y texto mas compactos */
+  .hero-v2__eyebrow{font-size:10px;letter-spacing:.1em;gap:9px;margin-bottom:14px;}
+  .hero-v2__eyebrow::before{width:20px;height:2px;}
+
+  /* 3 — H1 en 4 lineas, igual que en desktop */
+  .hero-v2__copy h1{font-size:37px;line-height:1.04;margin-bottom:16px;}
+  .hero-v2__copy h1 .h1-br{display:inline;}
+  .hero-v2__copy h1 .h1-big{display:block;}
+
+  /* 4/5 — La columna de texto ocupa la mitad izquierda para dejar
+     respirar al operario; el operario va detras y no toma clicks. */
+  .hero-v2{min-height:0;}
+  .hero-v2__inner{padding:92px 20px 40px;}
+  .hero-v2__lead{font-size:14px;line-height:1.5;margin-bottom:18px;max-width:66%;}
+  .hero-v2__benefits{gap:14px;margin-bottom:22px;max-width:66%;}
+  .hero-v2__benefits li{font-size:12.5px;line-height:1.35;gap:10px;align-items:center;}
+  .hero-v2__benefits svg{width:20px;height:20px;stroke-width:1.5;}
+
+  /* la copia que cruza el navbar no aplica en mobile */
+  .hero-v2__worker--over{display:none;}
+  .hero-v2__worker{display:block;bottom:0;right:-22vw;width:84vw;height:auto;z-index:2;pointer-events:none;}
+  .hero-v2__worker img{width:100%;height:auto;pointer-events:none;}
+
+  /* 6 — CTAs mas chicos, apilados y por delante del operario */
+  .hero-v2 .ctas{flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:0;position:relative;z-index:5;}
+  .hero-v2 .btn{padding:11px 20px;font-size:11px;gap:8px;}
+  .hero-v2 .btn svg{width:13px;height:13px;}
+
+  /* El span de atributos no se muestra en mobile */
+  .hero-v2__tags{display:none;}
+
+  /* Sector "Un solo lugar": el H2 fluye sin quiebres forzados y la bajada
+     se mantiene sobre la zona clara del fondo. */
+  .solve-v2__copy h2{font-size:min(31px, 7.3vw);line-height:1.1;}
+  .solve-v2__copy h2 br{display:none;}
+  .solve-v2__lead{max-width:65%;font-size:14px;}
+  /* CTAs del mismo tamano que los del hero */
+  .solve-v2__inner .ctas{flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:24px;}
+  .solve-v2 .btn{padding:11px 20px;font-size:11px;gap:8px;}
+  .solve-v2 .btn svg{width:13px;height:13px;}
+
+  /* Sector "Productos destacados" */
+  /* ojo: .products-v2__heading p tambien matchea la eyebrow (es un <p>),
+     asi que la eyebrow necesita el selector mas especifico */
+  .products-v2__heading .products-v2__eyebrow{font-size:10px;letter-spacing:.1em;gap:9px;margin-bottom:12px;}
+  .products-v2__eyebrow::before{width:20px;height:2px;}
+  .products-v2__heading h2{font-size:40px;line-height:1.05;margin-bottom:10px;}
+  .products-v2__heading p:not(.products-v2__eyebrow){max-width:75%;font-size:14px;line-height:21px;}
+  .products-v2__card img{height:150px;}
+
+  /* Sector destacado "Impermeables": mas alto, foto justificada a la
+     derecha (para que se vea el personaje) y caja con padding propio. */
+  .destacado-v2{min-height:400px;}
+  .destacado-v2__bg{object-position:77% center;}
+  .destacado-v2__overlay{
+    background:linear-gradient(90deg, rgba(0,17,34,.88) 0%, rgba(0,17,34,.78) 40%, rgba(0,17,34,.45) 72%, rgba(0,17,34,.18) 100%);
+  }
+  .destacado-v2__content{padding:28px var(--pad);}
+  .destacado-v2__content p{max-width:26ch;margin-bottom:22px;}
+  .destacado-v2 .btn{padding:11px 20px;font-size:11px;}
 }
 </style>
 </head>
@@ -879,7 +969,7 @@ img{max-width:100%;display:block;}
 
   <div class="hero-v2__inner">
     <div class="hero-v2__copy">
-      <p class="hero-v2__eyebrow hero-anim hero-anim--1">+20 años produciendo en Argentina</p>
+      <p class="hero-v2__eyebrow hero-anim hero-anim--1">+15 años produciendo en Argentina</p>
 
       <h1 class="hero-anim hero-anim--2"><span class="h1-big">Indumentaria<br class="h1-br"> y seguridad</span> <span class="accent">para los que<br class="h1-br"> hacen industria</span></h1>
 
@@ -888,9 +978,7 @@ img{max-width:100%;display:block;}
       <ul class="hero-v2__benefits hero-anim hero-anim--3">
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.9l8.2 4.3v9.6L12 21.1l-8.2-4.3V7.2z"/><path d="M3.8 7.2L12 11.5l8.2-4.3M12 11.5v9.6"/></svg>
-          Stock</br>
-          permanente</br>
-          garantizado
+          Stock permanente garantizado
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l7.4 2.9v6.1c0 4.3-3.1 7.6-7.4 9.4-4.3-1.8-7.4-5.1-7.4-9.4V5.7z"/><path d="M8.9 11.9l2.2 2.2 4-4.4"/></svg>
@@ -939,7 +1027,7 @@ img{max-width:100%;display:block;}
           <img src="img/brand-diforza.webp" alt="Diforza">
           <p class="brands-v2__sub">Trabajo que protege</p>
         </div>
-        <div class="brands-v2__item brands-v2__item--center">
+        <div class="brands-v2__item">
           <img src="img/logo-ziao.webp" alt="Ziao">
           <p class="brands-v2__sub">Confort en movimiento</p>
         </div>
@@ -953,14 +1041,13 @@ img{max-width:100%;display:block;}
         <p class="brands-v2__title">Marcas distribuidas</p>
         <div class="brands-v2__logos">
         <div class="brands-v2__item">
-          <img src="img/logo-ombu.webp" alt="Ombu">
-          <p class="brands-v2__sub">Industria en movimiento</p>
+          <img src="img/logo-ombu.webp" alt="Ombu" class="is-sm">
         </div>
-        <div class="brands-v2__item brands-v2__item--center">
+        <div class="brands-v2__item">
           <img src="img/logo-worksafe.webp" alt="Work Safe">
         </div>
         <div class="brands-v2__item">
-          <img src="img/logo-conwork.webp" alt="Conwork">
+          <img src="img/logo-conwork.webp" alt="Conwork" class="is-sm">
         </div>
         </div>
       </div>
@@ -982,7 +1069,7 @@ img{max-width:100%;display:block;}
           <img src="img/brand-diforza.webp" alt="Diforza">
           <p class="brands-v2__sub">Trabajo que protege</p>
         </div>
-        <div class="brands-v2__item brands-v2__item--center">
+        <div class="brands-v2__item">
           <img src="img/logo-ziao.webp" alt="Ziao">
           <p class="brands-v2__sub">Confort en movimiento</p>
         </div>
@@ -996,14 +1083,13 @@ img{max-width:100%;display:block;}
         <p class="brands-v2__title">Marcas distribuidas</p>
         <div class="brands-v2__logos">
         <div class="brands-v2__item">
-          <img src="img/logo-ombu.webp" alt="Ombu">
-          <p class="brands-v2__sub">Industria en movimiento</p>
+          <img src="img/logo-ombu.webp" alt="Ombu" class="is-sm">
         </div>
-        <div class="brands-v2__item brands-v2__item--center">
+        <div class="brands-v2__item">
           <img src="img/logo-worksafe.webp" alt="Work Safe">
         </div>
         <div class="brands-v2__item">
-          <img src="img/logo-conwork.webp" alt="Conwork">
+          <img src="img/logo-conwork.webp" alt="Conwork" class="is-sm">
         </div>
         </div>
       </div>
@@ -1016,7 +1102,7 @@ img{max-width:100%;display:block;}
     <div class="solve-v2__copy reveal">
       <p class="solve-v2__eyebrow">Todo lo que tu equipo necesita</p>
 
-      <h2>Resolvé el equipamiento<br>de tu personal en un<br>solo lugar</h2>
+      <h2>Resolvé el equipamiento <br> de tu personal en un <br> solo lugar</h2>
 
       <p class="solve-v2__lead">Indumentaria, calzado y elementos de protección personal. Soluciones confiables para una industria más segura.</p>
 
@@ -1159,7 +1245,7 @@ img{max-width:100%;display:block;}
       <span class="dif-v2__badge-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="#ff7e34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg>
       </span>
-      <p><strong>Más de 20 años</strong> brindando asesoramiento y soluciones en seguridad industrial</p>
+      <p><strong>Más de 15 años</strong> brindando asesoramiento y soluciones en seguridad industrial</p>
     </div>
   </div>
   <div class="dif-v2__grid">
@@ -1328,7 +1414,7 @@ img{max-width:100%;display:block;}
 <section class="factory-v2">
   <div class="factory-v2__inner">
     <div class="factory-v2__copy reveal">
-      <h2>Más de 20 años produciendo en nuestra fábrica en Mataderos, CABA.</h2>
+      <h2>Más de 15 años produciendo en nuestra fábrica en Mataderos, CABA.</h2>
       <p>Te invitamos a conocer nuestras instalaciones, procesos y equipo de trabajo. Podés revisar los productos en mano y sus documentos. Esperamos tu contacto para coordinar una reunión.</p>
       <ul class="factory-v2__contact">
         <li>
