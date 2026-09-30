@@ -1,0 +1,2545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indumentaria de Trabajo para Empresas | Diforza</title>
+<meta name="description" content="Camisas, pantalones, camperas y conjuntos de trabajo. Talles completos, stock permanente y personalización con el logo de tu empresa.">
+<!-- [PENDIENTE] canonical definitivo: https://<dominio>/indumentaria-de-trabajo/ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Base compartida con la v1 (preview_html/index.html): variables, reset,
+   header/nav, botones, footer y sistema de animaciones (scroll-reveal).
+   Google Fonts es solo para esta revisión rápida; en el proyecto final
+   se usa Montserrat autoalojada (carpeta /fonts, ya copiada acá). */
+
+:root{
+  --navy:#003568;
+  --orange:#ff7e34;
+  --gray:#727272;
+
+  /* ---- SISTEMA DE LAYOUT ----------------------------------------------
+     Breakpoints canonicos del proyecto (usar SOLO estos):
+       <768      mobile
+       >=768     tablet
+       >=1024    notebook 13-14"
+       >=1280    notebook 15-16" / desktop chico
+       >=1440    desktop
+       >=1700    desktop grande (solo escala tipografica)
+     --gutter : margen de seguridad lateral (nunca se toca el contenido)
+     --shell  : ancho maximo del contenido (caja, gutters incluidos)
+     --pad    : padding lateral real = gutter + centrado del shell.
+                Cualquier sector a ancho completo usa `padding: X var(--pad)`
+                y queda alineado con todos los demas.
+     --nav-h  : alto real del header, lo mide el JS (fallback abajo).
+     --hero-gap: aire minimo garantizado entre el navbar y el contenido. */
+  --gutter: 20px;
+  --shell: 1440px;
+  --pad: max(var(--gutter), calc((100% - var(--shell)) / 2 + var(--gutter)));
+  --nav-h: 78px;
+  --hero-gap: 24px;
+  --hero-min: 560px;
+
+  --h1-size: 34px;
+  --h1-lh: 38px;
+  --lead-size: 16px;
+  --lead-lh: 26px;
+}
+@media(min-width:480px){
+  :root{ --gutter:24px; }
+}
+@media(min-width:768px){
+  :root{ --gutter:40px; --hero-gap:32px; --hero-min:620px;
+         --h1-size:46px; --h1-lh:50px; --lead-size:17px; --lead-lh:28px; }
+}
+@media(min-width:1024px){
+  :root{ --gutter:48px; --hero-gap:36px; --hero-min:640px; }
+}
+@media(min-width:1280px){
+  :root{ --gutter:56px; --hero-gap:40px; --hero-min:660px;
+         --h1-size:56px; --h1-lh:62px; --lead-size:17px; --lead-lh:29px; }
+}
+@media(min-width:1440px){
+  :root{ --gutter:64px; }
+}
+@media(min-width:1700px){
+  :root{ --h1-size:70px; --h1-lh:74px; --lead-size:18px; --lead-lh:31px; }
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{overflow-x:hidden;}
+body{margin:0;font-family:"Montserrat",Arial,sans-serif;color:var(--navy);overflow-x:hidden;width:100%;}
+h1,h2,h3{font-family:"Poppins","Montserrat",Arial,sans-serif;font-weight:800;}
+img{max-width:100%;display:block;}
+
+/* ---- Header / Nav ----
+   Transparente montado sobre el hero; toma fondo navy solido al scrollear
+   (clase .is-stuck que agrega el JS del final). Un scrim oscuro muy leve
+   sostiene la legibilidad del logo blanco sobre el area clara del fondo. */
+.header{
+  background:transparent;
+  padding:16px var(--pad);
+  display:flex;align-items:center;justify-content:space-between;
+  position:fixed; top:0; left:0; right:0; z-index:30;
+  transition:background-color .3s ease, padding .3s ease, box-shadow .3s ease;
+}
+.header::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(to bottom, rgba(0,20,42,.75), rgba(0,20,42,88));
+  transition:opacity .3s ease;
+}
+@media(min-width:768px){ .header{padding:18px var(--pad);} }
+@media(min-width:1280px){ .header{padding:20px var(--pad);} }
+.header.is-stuck{background:var(--navy);box-shadow:0 4px 20px rgba(0,26,52,.25);}
+.header.is-stuck::before{opacity:0;}
+@media(min-width:1280px){ .header.is-stuck{padding-top:12px;padding-bottom:12px;} }
+.header__logo img{height:44px;width:auto;}
+@media(min-width:768px){ .header__logo img{height:54px;} }
+@media(min-width:1280px){ .header__logo img{height:66px;} }
+
+.nav{display:none;flex-direction:column;align-items:flex-start;gap:20px;}
+.nav.is-open{
+  display:flex;position:absolute;top:100%;left:0;right:0;
+  background:var(--navy);padding:20px 24px 28px;box-shadow:0 12px 24px rgba(0,26,52,.25);
+}
+@media(min-width:1024px){ .nav{display:flex;flex-direction:row;align-items:center;gap:32px;position:static;background:none;padding:0;box-shadow:none;} }
+.nav a{color:#fff;font-weight:500;font-size:13px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;position:relative;padding-bottom:3px;}
+@media(min-width:1280px){ .nav a{font-size:13.5px;} }
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .25s ease;}
+.nav a:hover::after{transform:scaleX(1);}
+
+@media(min-width:1024px){ .header .btn--nav{display:inline-flex;} }
+.header .btn--nav{
+  background:var(--orange);
+  display:none;color:#fff;border-radius:999px;
+  padding:14px 26px;font-weight:700;font-size:12.5px;letter-spacing:.06em;
+  text-transform:uppercase;text-decoration:none;
+  display:inline-flex;align-items:center;gap:10px;white-space:nowrap;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+@media(min-width:1280px){ .header .btn--nav{padding:16px 32px;font-size:13px;} }
+.header .btn--nav:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(255,126,52,.35);}
+.header .btn--nav svg{width:14px;height:14px;flex:none;}
+
+/* El CTA del navbar usa el label largo salvo en <=374px (bloque final) */
+.btn--nav__short{display:none;}
+
+.nav-toggle{
+  display:inline-flex; background:none; border:none; color:#fff; font-size:26px; line-height:1; padding:0; cursor:pointer;
+}
+@media(min-width:1024px){ .nav-toggle{display:none;} }
+
+.ctas{display:flex;flex-wrap:wrap;gap:16px;}
+@media(min-width:1280px){ .ctas{gap:20px;} }
+.btn{border-radius:999px;padding:15px 28px;font-weight:700;font-size:13px;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;display:inline-block;white-space:nowrap;}
+.btn{transition:transform .2s ease,box-shadow .2s ease;}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(0,53,104,.18);}
+.btn:active{transform:translateY(0);box-shadow:none;}
+@media(min-width:1280px){ .btn{padding:18px 36px;font-size:15px;} }
+.btn--solid{background:var(--orange);color:#fff;}
+.btn--outline{border:2px solid var(--orange);color:var(--orange);}
+
+.accordion{display:flex;flex-direction:column;}
+.accordion details{border-top:1px solid #d7e0e8;padding:18px 0;}
+.accordion details:first-child{border-top:none;padding-top:0;}
+.accordion summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:17px;line-height:24px;color:var(--navy);}
+@media(min-width:1280px){ .accordion summary{font-size:20px;line-height:27px;} }
+.accordion summary::-webkit-details-marker{display:none;}
+.accordion summary .chev{flex:none;width:18px;height:18px;color:var(--navy);transition:transform .2s ease;}
+.accordion details[open] summary .chev{transform:rotate(180deg);}
+.accordion__panel{margin:12px 0 0;font-weight:300;font-size:15px;line-height:24px;color:var(--gray);}
+@media(min-width:1280px){ .accordion__panel{font-size:16px;line-height:26px;margin-top:16px;} }
+
+/* ---- Footer (igual a v1) ---- */
+.site-footer{background:#011c37;color:#fff;padding:40px var(--pad) 32px;}
+@media(min-width:1024px){ .site-footer{padding:56px var(--pad) 40px;} }
+@media(min-width:1280px){ .site-footer{padding:72px var(--pad) 56px;} }
+.footer__grid{display:flex;flex-direction:column;gap:36px;}
+@media(min-width:768px){ .footer__grid{flex-direction:row;justify-content:space-between;gap:24px;flex-wrap:wrap;} }
+.footer__brand img{height:52px;}
+@media(min-width:1280px){ .footer__brand img{height:68px;} }
+.footer__col h4{margin:0 0 16px;font-weight:700;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+.footer__col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+.footer__col a{color:#fff;font-weight:400;font-size:13px;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;}
+.footer__links{display:flex;flex-direction:column;gap:14px;align-items:flex-start;}
+.footer__links a{color:#fff;font-weight:400;font-size:13px;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;}
+.footer__links a.btn{font-weight:700;}
+.footer__links .btn{margin-top:4px;}
+.footer__social{display:flex;gap:10px;margin-top:20px;}
+.footer__social a{width:34px;height:34px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;}
+.footer__social svg{width:18px;height:18px;color:var(--navy);}
+
+/* ---- Animaciones (scroll-reveal + entrada del hero) ---- */
+@media (prefers-reduced-motion: no-preference){
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease;}
+  .reveal.is-visible{opacity:1;transform:translateY(0);}
+  .reveal--1{transition-delay:.08s;}
+  .reveal--2{transition-delay:.16s;}
+
+  @keyframes hero-fade-up{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+  .hero-anim{opacity:0;animation:hero-fade-up .6s ease forwards;}
+  .hero-anim--1{animation-delay:.05s;}
+  .hero-anim--2{animation-delay:.15s;}
+  .hero-anim--3{animation-delay:.25s;}
+  .hero-anim--4{animation-delay:.35s;}
+  .hero-anim--5{animation-delay:.45s;}
+}
+
+/* ---- Sector 1: Hero ----
+   Fondo full-bleed (hero-bg-2.webp: mitad clara a la izquierda + obra
+   desenfocada, limpia — los reflejos en diagonal se dibujan y animan
+   por codigo en la capa .hero-v2__shine).
+   El operario (worker-bg.webp, recortado con alpha) va en una capa
+   aparte para poder animarlo con parallax independiente del fondo.
+   El header es fixed y transparente, asi que el hero reserva su alto
+   con padding-top propio. */
+.hero-v2{
+  position:relative;overflow:hidden;background:#eef1f4;
+  display:flex;align-items:stretch;
+  /* Alto minimo fijo: si la pantalla es mas baja, el hero NO se comprime
+     ni se mete bajo el navbar — la pagina scrollea. En pantallas altas
+     acompana el viewport hasta un techo de 900px. */
+  min-height:max(var(--hero-min), min(100svh, 900px));
+}
+
+
+.hero-v2__bg{position:absolute;inset:0;z-index:0;}
+.hero-v2__bg img{width:100%;height:100%;object-fit:cover;object-position:70% center;}
+@media(max-width:1023px){
+  .hero-v2__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom, rgba(255,255,255,.92) 0%, rgba(255,255,255,.86) 45%, rgba(255,255,255,.6) 100%);}
+}
+
+/* --- Capa de reflejos diagonales (antes quemados en hero-bg.webp) ---
+   Geometria medida sobre la diferencia entre hero-bg.webp y hero-bg-2.webp:
+   1) un panel OSCURO (~7% negro) de borde nitido inclinado -28deg, sobre
+      el sector derecho;
+   2) un panel CLARO identico, en blanco y con el mismo angulo, a la
+      izquierda del personaje.
+   Los dos derivan muy lento en alternate (ida y vuelta por la misma
+   curva, asi no hay reinicio que disimular).
+   Los dos van sobre el fondo y debajo del operario. */
+.hero-v2__shine{
+  position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;
+}
+
+/* 1 — Panel oscuro fijo (reemplaza el que estaba quemado en la imagen) */
+.hero-v2__shine .panel{
+  position:absolute;top:-15%;bottom:-15%;left:95%;right:-55%;
+  transform:skewX(-28deg) translateX(0);transform-origin:top left;
+  background:linear-gradient(90deg, rgba(0,18,38,.10) 0%, rgba(0,18,38,.055) 45%, rgba(0,18,38,.085) 100%);
+}
+
+/* 2 — Panel claro: el mismo objeto que el oscuro, en blanco y con el
+   MISMO angulo (-28deg), apoyado a la izquierda del personaje. Los dos
+   bordes quedan paralelos, como en la referencia original. */
+.hero-v2__shine .panel--light{
+  position:absolute;top:-15%;bottom:-15%;left:-55%;right:47%;
+  transform:skewX(-28deg) translateX(0);transform-origin:top left;
+  background:linear-gradient(90deg, rgba(255,255,255,.38) 0%, rgba(255,255,255,.26) 55%, rgba(255,255,255,.42) 100%);
+}
+
+/* Operario recortado: anclado abajo a la derecha, altura relativa al hero. */
+.hero-v2__worker{
+  position:absolute;z-index:2;bottom:0;right:0;height:88%;
+  display:none;pointer-events:none;
+}
+.hero-v2__worker img{height:100%;width:auto;object-fit:contain;object-position:bottom right;}
+@media(min-width:768px){ .hero-v2__worker{display:block;right:-4%;height:74%;} }
+@media(min-width:1024px){ .hero-v2__worker{right:2%;height:86%;} }
+@media(min-width:1280px){ .hero-v2__worker{right:6%;height:90%;} }
+@media(min-width:1440px){ .hero-v2__worker{right:12%;height:100%;} }
+
+/* Copia superior del operario: misma imagen, misma posicion y misma
+   animacion de entrada (comparte la clase .hero-v2__worker), pero por
+   ENCIMA del header. Un clip-path la recorta para que solo se vea la
+   porcion que sobresale sobre la franja del navbar — el resto lo sigue
+   dibujando la copia de abajo, asi no hay doble opacidad en los bordes.
+   La altura del recorte (--over-h) la mide el JS: es la distancia entre
+   el borde superior del operario y el borde inferior del header.
+   Al scrollear se desvanece mientras el navbar toma fondo solido; el ojo
+   lee las dos transiciones como una sola y no percibe el cambio de capa. */
+.hero-v2__worker--over{
+  z-index:40;
+  clip-path:inset(0 0 calc(100% - var(--over-h, 0px)) 0);
+  transition:opacity .2s ease;
+}
+.hero-v2.is-scrolled .hero-v2__worker--over{opacity:0;}
+/* Sin medida util (o header mas alto que el operario) no se dibuja nada */
+.hero-v2__worker--over[data-over="0"]{display:none;}
+
+.hero-v2__inner{
+  position:relative;z-index:3;width:100%;
+  display:flex;align-items:center;
+  /* El header es fixed: el aire de arriba se calcula sobre su alto real
+     (--nav-h, medido por JS) mas --hero-gap. Asi el contenido del hero
+     nunca queda detras del navbar, sea cual sea la altura del dispositivo. */
+  padding:calc(var(--nav-h) + var(--hero-gap)) var(--pad) 40px;
+}
+@media(min-width:768px){ .hero-v2__inner{padding-bottom:48px;} }
+@media(min-width:1280px){ .hero-v2__inner{padding-bottom:56px;} }
+
+.hero-v2__copy{display:flex;flex-direction:column;width:100%;max-width:600px;}
+@media(min-width:1024px){ .hero-v2__copy{max-width:min(50%,560px);} }
+@media(min-width:1440px){ .hero-v2__copy{max-width:min(48%,690px);} }
+
+.hero-v2__eyebrow{
+  display:flex;align-items:center;gap:14px;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-weight:600;font-size:12px;color:var(--navy);letter-spacing:.14em;
+  text-transform:uppercase;margin:0 0 18px;
+}
+.hero-v2__eyebrow::before{content:"";width:36px;height:3px;background:var(--orange);flex:none;border-radius:2px;}
+@media(min-width:1280px){ .hero-v2__eyebrow{font-size:13px;margin-bottom:22px;} }
+
+.hero-v2__copy h1{
+  font-family:"Poppins","Montserrat",Arial,sans-serif;font-weight:800;
+  font-size:34px;line-height:1.06;margin:0 0 18px;letter-spacing:-.02em;color:var(--navy);
+}
+/* El H1 tiene dos juegos de saltos forzados:
+   .br-m (mobile/tablet, <1024px) -> 4 lineas, con "Indumentaria y seguridad"
+     un punto mas grande que el resto:
+        Indumentaria / y seguridad / para los que / hacen industria
+   .br-d (desktop, >=1024px) -> 3 lineas, todo del mismo cuerpo y el cambio
+     de color cayendo en el medio del segundo renglon:
+        Indumentaria y / seguridad para los / que hacen industria
+   El .accent va inline siempre: es lo que permite que la mitad naranja
+   arranque a mitad de renglon. */
+.hero-v2__copy h1 .accent{color:var(--orange);}
+.hero-v2__copy h1 .h1-big{font-size:1.15em;line-height:1.04;}
+.hero-v2__copy h1 .br-d{display:none;}
+@media(min-width:1024px){
+  .hero-v2__copy h1 .br-m{display:none;}
+  .hero-v2__copy h1 .br-d{display:inline;}
+  .hero-v2__copy h1 .h1-big{font-size:1em;line-height:inherit;}
+}
+@media(min-width:768px){ .hero-v2__copy h1{font-size:48px;} }
+@media(min-width:1024px){ .hero-v2__copy h1{font-size:44px;} }
+@media(min-width:1280px){ .hero-v2__copy h1{font-size:50px;margin-bottom:20px;} }
+@media(min-width:1440px){ .hero-v2__copy h1{font-size:62px;} }
+
+.hero-v2__lead{font-weight:400;font-size:15px;line-height:1.55;color:#3c4c5c;margin:0 0 28px;max-width:34em;}
+@media(min-width:1280px){ .hero-v2__lead{font-size:17px;margin-bottom:34px;} }
+
+/* Los 3 beneficios: cada uno con su icono, en fila desde tablet. Las
+   columnas se ajustan al largo real de su texto (flex-basis de contenido);
+   con partes iguales, el primero quedaba con un hueco a la derecha. */
+.hero-v2__benefits{
+  list-style:none;margin:0 0 30px;padding:0;
+  display:flex;flex-direction:column;gap:16px;
+}
+@media(min-width:768px){ .hero-v2__benefits{flex-direction:row;align-items:flex-start;gap:22px;margin-bottom:36px;} }
+@media(min-width:1280px){ .hero-v2__benefits{gap:26px;} }
+.hero-v2__benefits li{
+  display:flex;align-items:flex-start;gap:12px;
+  font-weight:400;font-size:12.5px;line-height:1.4;color:var(--navy);
+}
+@media(min-width:768px){
+  .hero-v2__benefits li{flex:1 1 auto;padding-left:22px;border-left:1px solid rgba(0,53,104,.16);}
+  .hero-v2__benefits li:first-child{padding-left:0;border-left:none;}
+}
+@media(min-width:1280px){ .hero-v2__benefits li{font-size:13.5px;} }
+.hero-v2__benefits svg{flex:none;width:26px;height:26px;color:var(--navy);stroke-width:1.4;}
+
+.hero-v2 .ctas{margin-bottom:34px;}
+@media(min-width:1280px){ .hero-v2 .ctas{margin-bottom:44px;} }
+.hero-v2 .btn{display:inline-flex;align-items:center;gap:10px;}
+.hero-v2 .btn svg{width:15px;height:15px;flex:none;}
+.hero-v2 .btn--outline{border:2px solid rgba(0,53,104,.35);color:var(--navy);background:rgba(255,255,255,.55);}
+.hero-v2 .btn--outline:hover{border-color:var(--navy);background:#fff;}
+
+/* Span de atributos debajo de los botones. La linea es corta (ancho fijo),
+   no del ancho del contenedor. */
+.hero-v2__tags{
+  position:relative;
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  padding-top:22px;
+  font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#5a6b7c;
+}
+.hero-v2__tags::before{
+  content:"";position:absolute;top:0;left:0;
+  width:96px;height:1px;background:rgba(0,53,104,.28);
+}
+@media(min-width:1280px){ .hero-v2__tags{font-size:12px;gap:12px;} .hero-v2__tags::before{width:110px;} }
+.hero-v2__tags .sep{color:rgba(0,53,104,.28);}
+.hero-v2__tags img{height:13px;width:auto;display:inline-block;}
+
+/* Bloques verticales sobre la foto (solo desktop). */
+.hero-v2__claim{
+  position:absolute;z-index:4;right:22px;top:32%;
+  display:none;
+  font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(255,255,255,.9);line-height:1.9;text-align:right;
+}
+@media(min-width:1280px){ .hero-v2__claim{display:block;right:34px;} }
+.hero-v2__claim::before{content:"";display:block;width:30px;height:2px;background:var(--orange);margin:0 0 12px auto;}
+
+.hero-v2__pillars{
+  position:absolute;z-index:4;right:22px;bottom:9%;
+  display:none;flex-direction:column;gap:20px;margin:0;padding:0;
+}
+@media(min-width:1280px){ .hero-v2__pillars{display:flex;right:34px;} }
+.hero-v2__pillars li{display:flex;align-items:center;justify-content:flex-end;gap:12px;list-style:none;}
+.hero-v2__pillars span{
+  font-weight:600;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.92);line-height:1.5;text-align:right;max-width:90px;
+}
+.hero-v2__pillars svg{width:26px;height:26px;flex:none;color:rgba(255,255,255,.92);stroke-width:1.3;}
+
+/* Estado inicial: las capas esperan ocultas antes de .is-ready */
+.hero-v2__bg img{transform:scale(1.08);opacity:0;}
+.hero-v2__shine{opacity:0;}
+.hero-v2__worker{opacity:0;transform:translateY(40px) scale(1.04);}
+.hero-v2 .hero-anim{opacity:0;}
+
+@keyframes hero-bg-in{from{opacity:0;transform:scale(1.08);}to{opacity:1;transform:scale(1.03);}}
+@keyframes hero-kenburns{from{transform:scale(1.03);}to{transform:scale(1.09);}}
+@keyframes hero-worker-in{
+  from{opacity:0;transform:translateY(40px) scale(1.04);}
+  to{opacity:1;transform:translateY(0) scale(1);}
+}
+@keyframes hero-shine-in{from{opacity:0;}to{opacity:1;}}
+@keyframes hero-panel-drift{
+  from{transform:skewX(-28deg) translateX(0);opacity:.85;}
+  to  {transform:skewX(-28deg) translateX(-5%);opacity:1;}
+}
+@keyframes hero-panel-drift-light{
+  from{transform:skewX(-28deg) translateX(0);opacity:.9;}
+  to  {transform:skewX(-28deg) translateX(4%);opacity:1;}
+}
+@keyframes hero-copy-in{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+
+@media (prefers-reduced-motion: no-preference){
+  /* Capa 1 — fondo: entra y encadena el ken burns en loop lento */
+  .hero-v2.is-ready .hero-v2__bg img{
+    animation:hero-bg-in 1.1s cubic-bezier(.22,.61,.36,1) forwards,
+              hero-kenburns 28s ease-in-out 1.1s infinite alternate;
+  }
+  /* Capa 2 — reflejos: aparecen y recorren la diagonal, desfasados entre si */
+  .hero-v2.is-ready .hero-v2__shine{animation:hero-shine-in 1.4s ease .5s forwards;}
+  .hero-v2.is-ready .hero-v2__shine .panel{
+    animation:hero-panel-drift 22s ease-in-out infinite alternate;
+    will-change:transform,opacity;
+  }
+  .hero-v2.is-ready .hero-v2__shine .panel--light{
+    animation:hero-panel-drift-light 27s ease-in-out infinite alternate;
+  }
+  /* Capa 3 — operario */
+  .hero-v2.is-ready .hero-v2__worker{
+    animation:hero-worker-in 1.1s cubic-bezier(.22,.61,.36,1) .35s forwards;
+    will-change:transform,opacity;
+  }
+  /* Capa 4 — copy, linea por linea sobre la entrada del operario */
+  .hero-v2.is-ready .hero-anim{animation:hero-copy-in .7s cubic-bezier(.22,.61,.36,1) forwards;}
+  .hero-v2.is-ready .hero-anim--1{animation-delay:.55s;}
+  .hero-v2.is-ready .hero-anim--2{animation-delay:.68s;}
+  .hero-v2.is-ready .hero-anim--3{animation-delay:.81s;}
+  .hero-v2.is-ready .hero-anim--4{animation-delay:.94s;}
+  .hero-v2.is-ready .hero-anim--5{animation-delay:1.07s;}
+}
+
+/* Sin animaciones: todo visible en su estado final */
+@media (prefers-reduced-motion: reduce){
+  .hero-v2__bg img{opacity:1;transform:scale(1);}
+  .hero-v2__shine{opacity:1;}
+  .hero-v2__worker{opacity:1;transform:none;}
+  .hero-v2 .hero-anim{opacity:1;}
+}
+/* Fallback si el JS no corre: a los 3s el CSS no puede decidir, asi que
+   dejamos el estado final tambien cuando .is-ready nunca llega. */
+.hero-v2.no-js .hero-v2__bg img,
+.hero-v2.no-js .hero-v2__worker,
+.hero-v2.no-js .hero-anim{opacity:1;transform:none;}
+.hero-v2.no-js .hero-v2__shine{opacity:1;}
+
+/* ---- Sector 2: Marcas (carrusel) ---- */
+.brands-v2{background:#f2f2f2;overflow:hidden;padding:28px 0;--brands-gap:48px;}
+@media(min-width:1024px){ .brands-v2{padding:36px 0;--brands-gap:72px;} }
+@media(min-width:1280px){ .brands-v2{padding:44px 0;--brands-gap:110px;} }
+
+/* Marquee: dos sets identicos dentro de un flex con el mismo gap.
+   El desplazamiento exacto es (ancho de un set + gap) -> loop sin corte. */
+.brands-v2__track{display:flex;gap:var(--brands-gap);width:max-content;
+  animation:brands-v2-loop 45s linear infinite;will-change:transform;}
+.brands-v2__set{display:flex;gap:var(--brands-gap);align-items:flex-start;}
+.brands-v2:hover .brands-v2__track{animation-play-state:paused;}
+@keyframes brands-v2-loop{
+  from{transform:translate3d(0,0,0);}
+  to{transform:translate3d(calc(-50% - (var(--brands-gap) / 2)),0,0);}
+}
+@media(prefers-reduced-motion:reduce){ .brands-v2__track{animation:none;} }
+
+.brands-v2__group{flex:none;display:flex;flex-direction:column;align-items:center;gap:14px;}
+.brands-v2__title{margin:0;font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);text-align:center;white-space:nowrap;}
+@media(min-width:1280px){ .brands-v2__title{font-size:11px;} }
+
+.brands-v2__logos{display:flex;align-items:stretch;justify-content:center;gap:22px;flex-wrap:nowrap;}
+@media(min-width:768px){ .brands-v2__logos{gap:30px;} }
+@media(min-width:1280px){ .brands-v2__logos{gap:40px;} }
+
+/* Fila de alto fijo para el logo: todos los logos comparten centro vertical
+   y todos los subtitulos arrancan en la misma linea. Los archivos estan
+   exportados a la misma altura, asi que una sola regla alcanza. */
+.brands-v2__item{
+  flex:none;display:grid;grid-template-rows:var(--logo-row) auto;
+  align-items:center;justify-items:center;gap:8px;padding:0 14px;
+  --logo-row:44px;
+}
+@media(min-width:768px){ .brands-v2__item{--logo-row:50px;} }
+@media(min-width:1280px){ .brands-v2__item{padding:0 20px;--logo-row:56px;} }
+.brands-v2__item img{height:44px;width:auto;max-width:100%;display:block;}
+@media(min-width:768px){ .brands-v2__item img{height:50px;} }
+@media(min-width:1280px){ .brands-v2__item img{height:56px;} }
+
+/* Ombu y Conwork se leen mas grandes de lo que deberian: -20% */
+.brands-v2__item img.is-sm{height:35px;}
+@media(min-width:768px){ .brands-v2__item img.is-sm{height:40px;} }
+@media(min-width:1280px){ .brands-v2__item img.is-sm{height:45px;} }
+
+.brands-v2__sub{margin:0;font-weight:500;font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);text-align:center;white-space:nowrap;}
+@media(min-width:1280px){ .brands-v2__sub{font-size:9px;} }
+
+/* Separadores: UNA linea por limite de grupo, dibujada en el medio del gap
+   con un pseudo-elemento. Al ir en todos los grupos, el patron se repite
+   igual en el loop (el limite entre el ultimo grupo de un set y el primero
+   del siguiente queda cubierto por el ::before de ese primero). */
+.brands-v2__group{position:relative;}
+.brands-v2__group::before{
+  content:"";position:absolute;top:0;bottom:0;
+  left:calc(-1 * var(--brands-gap) / 2);
+  width:1px;background:#d9d9d9;
+}
+
+/* ---- Sector 3: Banner "Un solo lugar" ---- */
+.solve-v2{
+  position:relative;overflow:hidden;background:#eef2f6;
+  background-image:url("img/bg-hero-3.webp");
+  background-size:cover;background-position:74% 62%;background-repeat:no-repeat;
+}
+/* Velo para asegurar legibilidad del copy sobre la foto en pantallas chicas */
+.solve-v2::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(238,242,246,.97) 0%,rgba(238,242,246,.94) 46%,rgba(238,242,246,.55) 64%,rgba(238,242,246,0) 82%);
+  pointer-events:none;
+}
+@media(min-width:1280px){
+  .solve-v2{background-position:right 62%;}
+  .solve-v2::before{background:linear-gradient(100deg,rgba(238,242,246,.96) 0%,rgba(238,242,246,.93) 40%,rgba(238,242,246,.66) 54%,rgba(238,242,246,.14) 67%,rgba(238,242,246,0) 80%);}
+}
+
+.solve-v2__inner{position:relative;z-index:1;padding:52px var(--pad) 56px;}
+@media(min-width:768px){ .solve-v2__inner{padding:62px var(--pad) 66px;} }
+@media(min-width:1024px){ .solve-v2__inner{padding:72px var(--pad) 76px;} }
+@media(min-width:1280px){ .solve-v2__inner{padding:84px var(--pad) 92px;} }
+
+.solve-v2__copy{width:90%;max-width:510px;}
+@media(min-width:1024px){ .solve-v2__copy{max-width:min(58%,640px);} }
+@media(min-width:1440px){ .solve-v2__copy{max-width:min(55%,760px);} }
+
+.solve-v2__eyebrow{
+  display:flex;align-items:center;gap:14px;
+  font-weight:600;font-size:11px;color:var(--navy);letter-spacing:.16em;
+  text-transform:uppercase;margin:0 0 18px;
+}
+.solve-v2__eyebrow::before{content:"";width:36px;height:3px;background:var(--orange);flex:none;border-radius:2px;}
+@media(min-width:1280px){ .solve-v2__eyebrow{font-size:12px;margin-bottom:22px;} }
+
+.solve-v2__copy h2{
+  font-family:"Poppins","Montserrat",Arial,sans-serif;font-weight:800;
+  font-size:32px;line-height:1.08;letter-spacing:-.02em;color:var(--navy);
+  margin:0 0 16px;
+}
+/* Los <br> fijan el quiebre en 3 renglones solo cuando hay ancho para eso */
+.solve-v2__copy h2 br{display:none;}
+@media(min-width:1024px){ .solve-v2__copy h2{font-size:44px;} .solve-v2__copy h2 br{display:inline;} }
+@media(min-width:1280px){ .solve-v2__copy h2{font-size:50px;margin-bottom:18px;} }
+@media(min-width:1440px){ .solve-v2__copy h2{font-size:56px;} }
+
+.solve-v2__lead{
+  margin:0 0 26px;font-weight:300;color:var(--navy);
+  font-size:15px;line-height:1.55;max-width:44ch;
+}
+@media(min-width:1280px){ .solve-v2__lead{font-size:17px;margin-bottom:30px;} }
+
+.solve-v2__inner .ctas{margin:0 0 30px;}
+@media(min-width:1280px){ .solve-v2__inner .ctas{margin-bottom:38px;} }
+.solve-v2 .btn{display:inline-flex;align-items:center;gap:10px;}
+@media(min-width:1280px){ .solve-v2 .btn{padding:16px 30px;font-size:14px;} }
+.solve-v2 .btn svg{width:18px;height:18px;flex:none;}
+.solve-v2 .btn--outline{border-color:var(--navy);color:var(--navy);background:rgba(255,255,255,.55);}
+
+.solve-v2__marks{display:flex;flex-wrap:wrap;gap:20px 40px;}
+@media(min-width:1280px){ .solve-v2__marks{gap:24px 56px;} }
+.solve-v2__mark{display:flex;align-items:center;gap:12px;}
+.solve-v2__mark svg{width:30px;height:30px;flex:none;color:var(--navy);stroke-width:1.5;}
+@media(min-width:1280px){ .solve-v2__mark svg{width:34px;height:34px;} }
+.solve-v2__mark strong{display:block;font-weight:700;font-size:13px;color:var(--navy);margin-bottom:2px;}
+.solve-v2__mark span{display:block;font-weight:300;font-size:12px;line-height:1.35;color:var(--gray);}
+@media(min-width:1280px){ .solve-v2__mark strong{font-size:14px;} .solve-v2__mark span{font-size:13px;} }
+
+.solve-v2__claim{
+  display:none;position:absolute;z-index:1;top:84px;right:34px;
+  margin:0;text-align:right;font-weight:600;font-size:13px;line-height:1.5;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--navy);
+}
+.solve-v2__claim{text-shadow:0 1px 10px rgba(255,255,255,.85),0 0 4px rgba(255,255,255,.9);}
+.solve-v2__claim::before{content:"";display:block;width:30px;height:2px;background:var(--orange);margin:0 0 12px auto;}
+@media(min-width:1280px){ .solve-v2__claim{display:block;} }
+
+/* ---- Sector 4: Productos destacados (carrusel difuminado en los bordes) ---- */
+.products-v2{background:#f2f4f6;padding-bottom:52px;}
+@media(min-width:1024px){ .products-v2{padding-bottom:68px;} }
+@media(min-width:1280px){ .products-v2{padding-bottom:88px;} }
+
+.products-v2__top{display:flex;flex-direction:column;gap:18px;padding:44px var(--pad) 0;}
+@media(min-width:768px){ .products-v2__top{padding:52px var(--pad) 0;} }
+@media(min-width:1024px){ .products-v2__top{flex-direction:row;align-items:flex-start;justify-content:space-between;gap:24px;} }
+@media(min-width:1024px){ .products-v2__top{padding:60px var(--pad) 0;} }
+@media(min-width:1280px){ .products-v2__top{padding:68px var(--pad) 0;} }
+
+.products-v2__eyebrow{
+  display:flex;align-items:center;gap:14px;
+  font-weight:600;font-size:11px;color:var(--navy);letter-spacing:.16em;
+  text-transform:uppercase;margin:0 0 14px;white-space:nowrap;
+}
+.products-v2__eyebrow::before{content:"";width:36px;height:3px;background:var(--orange);flex:none;border-radius:2px;}
+@media(min-width:1280px){ .products-v2__eyebrow{font-size:12px;margin-bottom:16px;} }
+
+.products-v2__heading{max-width:none;}
+.products-v2__heading h2{
+  font-family:"Poppins","Montserrat",Arial,sans-serif;font-weight:800;
+  font-size:28px;line-height:1.1;letter-spacing:-.02em;margin:0 0 8px;color:var(--navy);
+}
+@media(min-width:768px){ .products-v2__heading h2{font-size:36px;} }
+@media(min-width:1280px){ .products-v2__heading h2{font-size:44px;margin-bottom:10px;} }
+.products-v2__heading p{margin:0;font-weight:300;font-size:14px;line-height:22px;color:var(--gray);max-width:46ch;}
+@media(min-width:1280px){ .products-v2__heading p{font-size:16px;line-height:24px;} }
+.products-v2__top .btn{flex:none;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;background:#fff;}
+.products-v2__top .btn svg{width:18px;height:18px;flex:none;}
+@media(min-width:1024px){ .products-v2__top .btn{margin-top:34px;} }
+
+.products-v2__carousel{
+  margin:28px 24px 0;overflow-x:auto;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;cursor:grab;user-select:none;
+  -webkit-mask-image:linear-gradient(to right, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+  mask-image:linear-gradient(to right, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+}
+.products-v2__carousel::-webkit-scrollbar{display:none;}
+.products-v2__carousel.is-dragging{cursor:grabbing;scroll-behavior:auto;}
+@media(min-width:768px){ .products-v2__carousel{margin-left:var(--pad);margin-right:var(--pad);} }
+@media(min-width:1280px){
+  .products-v2__carousel{
+    margin:38px var(--pad) 0;
+    -webkit-mask-image:linear-gradient(to right, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+    mask-image:linear-gradient(to right, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+  }
+}
+
+.products-v2__track{display:flex;gap:16px;padding:6px 0 10px;width:max-content;}
+@media(min-width:1280px){ .products-v2__track{gap:22px;} }
+
+.products-v2__card{
+  position:relative;flex:none;width:210px;background:#fff;border:1px solid #e8ebee;border-radius:14px;
+  padding:44px 18px 22px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;
+  box-shadow:0 4px 18px rgba(0,53,104,.06);-webkit-user-drag:none;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.products-v2__card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,53,104,.12);}
+@media(min-width:768px){ .products-v2__card{width:240px;padding:46px 20px 24px;} }
+@media(min-width:1280px){ .products-v2__card{width:280px;padding:52px 26px 28px;} }
+
+/* Badge de estado, arriba a la izquierda */
+.products-v2__badge{
+  position:absolute;top:14px;left:14px;display:inline-flex;align-items:center;gap:6px;
+  background:#f4f6f8;border-radius:999px;padding:5px 11px 5px 6px;
+  font-weight:600;font-size:10px;letter-spacing:.02em;color:#5c6873;white-space:nowrap;
+}
+@media(min-width:1280px){ .products-v2__badge{top:16px;left:16px;font-size:11px;} }
+.products-v2__badge svg{width:15px;height:15px;flex:none;}
+.products-v2__badge--stock svg{color:#25a55f;}
+.products-v2__badge--top svg{color:var(--orange);}
+
+.products-v2__card img{width:100%;height:120px;object-fit:contain;display:block;-webkit-user-drag:none;pointer-events:none;}
+@media(min-width:768px){ .products-v2__card img{height:140px;} }
+@media(min-width:1280px){ .products-v2__card img{height:160px;} }
+
+.products-v2__name{font-weight:700;font-size:12px;letter-spacing:.03em;text-transform:uppercase;color:var(--navy);line-height:1.35;}
+@media(min-width:1280px){ .products-v2__name{font-size:13px;} }
+.products-v2__cat{margin:-6px 0 0;font-weight:300;font-size:12px;color:var(--gray);}
+@media(min-width:1280px){ .products-v2__cat{font-size:13px;} }
+
+.products-v2__more{
+  display:inline-block;margin-top:4px;background:var(--orange);color:#fff;border-radius:999px;
+  padding:10px 26px;font-weight:700;font-size:11px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.products-v2__more:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(255,126,52,.32);}
+@media(min-width:1280px){ .products-v2__more{font-size:12px;padding:11px 30px;} }
+
+/* ---- Sector 5: Destacado con imagen de fondo ---- */
+.destacado-v2{position:relative;min-height:240px;display:flex;align-items:center;overflow:hidden;background:var(--navy);}
+@media(min-width:768px){ .destacado-v2{min-height:280px;} }
+@media(min-width:1024px){ .destacado-v2{min-height:0;aspect-ratio:1629/380;} }
+
+.destacado-v2__bg{position:absolute;top:-10%;left:0;width:100%;height:144%;object-fit:cover;z-index:0;will-change:transform;}
+.destacado-v2__overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(90deg, rgba(0,17,34,.82) 0%, rgba(0,17,34,.62) 42%, rgba(0,17,34,.2) 68%, rgba(0,17,34,0) 92%);
+}
+
+.destacado-v2__content{position:relative;z-index:2;padding:0 var(--pad);width:100%;box-sizing:border-box;}
+.destacado-v2__text{max-width:560px;}
+.destacado-v2__eyebrow{display:block;color:var(--orange);font-weight:800;font-style:italic;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 4px;}
+@media(min-width:1280px){ .destacado-v2__eyebrow{font-size:16px;} }
+.destacado-v2__content h2{color:#fff;font-weight:800;font-style:italic;font-size:32px;line-height:36px;letter-spacing:-.01em;margin:0 0 16px;text-transform:uppercase;}
+@media(min-width:768px){ .destacado-v2__content h2{font-size:42px;line-height:46px;} }
+@media(min-width:1280px){ .destacado-v2__content h2{font-size:54px;line-height:58px;margin-bottom:20px;} }
+.destacado-v2__content p{color:rgba(255,255,255,.9);font-weight:400;font-size:14px;line-height:22px;margin:0 0 28px;max-width:42ch;}
+@media(min-width:1280px){ .destacado-v2__content p{font-size:16px;line-height:26px;margin-bottom:32px;} }
+
+/* ---- Sector 6: Diferenciales ---- */
+.dif-v2{background:#fff;padding:56px var(--pad);}
+@media(min-width:1024px){ .dif-v2{padding:72px var(--pad);} }
+@media(min-width:1280px){ .dif-v2{padding:96px var(--pad);} }
+
+/* Mismo grid que .dif-v2__grid para que el badge arranque exactamente
+   donde arranca la segunda columna de items. */
+.dif-v2__head{display:grid;grid-template-columns:1fr;gap:24px;margin-bottom:40px;}
+@media(min-width:768px){ .dif-v2__head{grid-template-columns:1fr 1fr;column-gap:60px;align-items:start;margin-bottom:56px;} }
+@media(min-width:1280px){ .dif-v2__head{column-gap:96px;margin-bottom:72px;} }
+
+.dif-v2__title{font-weight:800;font-size:28px;line-height:34px;color:var(--navy);margin:0;max-width:16ch;}
+@media(min-width:768px){ .dif-v2__title{font-size:34px;line-height:40px;} }
+@media(min-width:1280px){ .dif-v2__title{font-size:42px;line-height:48px;} }
+
+.dif-v2__badge{display:flex;align-items:center;gap:16px;background:#f2f2f2;border-radius:16px;padding:16px 20px;max-width:420px;justify-self:start;}
+.dif-v2__badge-icon{width:44px;height:44px;flex:none;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.1);}
+.dif-v2__badge-icon svg{width:24px;height:24px;}
+.dif-v2__badge p{margin:0;font-weight:400;font-size:13px;line-height:19px;color:#555;}
+.dif-v2__badge strong{color:var(--navy);font-weight:700;}
+@media(min-width:1280px){ .dif-v2__badge{padding:18px 24px;max-width:440px;} .dif-v2__badge p{font-size:14px;line-height:20px;} }
+
+.dif-v2__grid{display:grid;grid-template-columns:1fr;gap:32px;}
+@media(min-width:768px){ .dif-v2__grid{grid-template-columns:1fr 1fr;column-gap:60px;row-gap:40px;} }
+@media(min-width:1280px){ .dif-v2__grid{column-gap:96px;row-gap:52px;} }
+
+.dif-v2__item{display:flex;gap:16px;}
+@media(min-width:1280px){ .dif-v2__item{gap:20px;} }
+.dif-v2__icon{flex:none;width:40px;height:40px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;}
+@media(min-width:1280px){ .dif-v2__icon{width:48px;height:48px;} }
+.dif-v2__icon svg{width:20px;height:20px;color:#fff;}
+@media(min-width:1280px){ .dif-v2__icon svg{width:24px;height:24px;} }
+.dif-v2__item h3{margin:0 0 8px;font-weight:700;font-size:17px;line-height:22px;color:var(--navy);}
+@media(min-width:1280px){ .dif-v2__item h3{font-size:19px;line-height:25px;} }
+.dif-v2__item p{margin:0;font-weight:300;font-size:14px;line-height:22px;color:var(--gray);max-width:40ch;}
+@media(min-width:1280px){ .dif-v2__item p{font-size:15px;line-height:24px;} }
+
+.dif-v2__problem{display:flex;flex-direction:column;gap:2.2em;margin-top:56px;}
+@media(min-width:1024px){ .dif-v2__problem{flex-direction:row;align-items:flex-start;gap:48px;margin-top:80px;} }
+@media(min-width:1280px){ .dif-v2__problem{gap:72px;margin-top:104px;} }
+
+.dif-v2__problem-box{background:var(--orange);color:#fff;padding:32px 28px;flex:none;width:100%;box-sizing:border-box;}
+@media(min-width:1024px){ .dif-v2__problem-box{width:300px;padding:40px 32px;} }
+@media(min-width:1280px){ .dif-v2__problem-box{width:380px;padding:56px 44px;} }
+.dif-v2__problem-box p{margin:0;font-weight:400;font-size:20px;line-height:27px;}
+@media(min-width:1280px){ .dif-v2__problem-box p{font-size:24px;line-height:31px;} }
+.dif-v2__problem-box strong{display:block;margin-top:8px;font-weight:700;}
+
+.dif-v2__problem-list{flex:1;width:100%;}
+.dif-v2__problem-list .accordion summary{font-size:16px;line-height:22px;}
+@media(min-width:1280px){ .dif-v2__problem-list .accordion summary{font-size:19px;line-height:25px;} }
+.dif-v2__problem-list .accordion__panel{max-width:56ch;}
+
+.dif-v2__reviews{margin-top:56px;}
+@media(min-width:1024px){ .dif-v2__reviews{margin-top:80px;} }
+@media(min-width:1280px){ .dif-v2__reviews{margin-top:104px;} }
+
+.greviews__summary{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:20px;}
+@media(min-width:1280px){ .greviews__summary{margin-bottom:28px;} }
+.greviews__summary .g-icon{width:22px;height:22px;flex:none;}
+.greviews__score{font-weight:700;font-size:20px;color:var(--navy);}
+.greviews__stars{display:inline-flex;gap:2px;flex:none;}
+.greviews__stars svg{width:16px;height:16px;}
+@media(min-width:1280px){ .greviews__stars svg{width:18px;height:18px;} }
+.greviews__count{font-weight:400;font-size:14px;color:var(--gray);}
+
+.greviews{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin:0 calc(var(--pad) * -1);padding:4px var(--pad) 8px;scrollbar-width:none;}
+.greviews::-webkit-scrollbar{display:none;}
+@media(min-width:1024px){ .greviews{overflow-x:visible;scroll-snap-type:none;margin:0;padding:4px 0 8px;flex-wrap:wrap;} }
+.gcard{flex:none;scroll-snap-align:start;width:82vw;max-width:340px;background:#fff;border:1px solid #e4e8ec;border-radius:12px;padding:20px;box-shadow:0 2px 10px rgba(0,53,104,.05);}
+.gcard{transition:transform .25s ease,box-shadow .25s ease;}
+.gcard:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,53,104,.12);}
+@media(min-width:1024px){ .gcard{width:calc((100% - 32px)/3);max-width:none;} }
+@media(min-width:1280px){ .gcard{padding:24px;} }
+.gcard__top{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.gcard__avatar{width:40px;height:40px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;}
+.gcard__id{flex:1 1 auto;min-width:0;}
+.gcard__name{font-weight:700;font-size:14px;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.gcard__date{font-weight:400;font-size:12px;color:var(--gray);}
+.gcard__g{flex:none;width:18px;height:18px;}
+.gcard__stars{display:inline-flex;gap:2px;margin-bottom:10px;}
+.gcard__stars svg{width:15px;height:15px;}
+.gcard__text{margin:0;font-weight:300;font-size:14px;line-height:22px;color:var(--gray);
+  display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden;}
+@media(min-width:1280px){ .gcard__text{font-size:15px;line-height:24px;} }
+
+/* ---- Sector 7: Tu planta protegida y en regla ante cualquier inspección ---- */
+.protect-v2{background:var(--navy);color:#fff;}
+.protect-v2__inner{padding:40px var(--pad);display:flex;flex-direction:column;gap:32px;}
+@media(min-width:1024px){ .protect-v2__inner{flex-direction:row;gap:60px;padding:64px var(--pad);align-items:flex-start;} }
+@media(min-width:1280px){ .protect-v2__inner{padding:96px var(--pad);gap:80px;} }
+.protect-v2__copy{flex:1 1 50%;min-width:0;}
+.protect-v2__cards{flex:1 1 50%;min-width:0;display:flex;flex-direction:column;gap:16px;}
+
+.protect-v2__copy h2{margin:18px 0 18px;font-weight:700;font-size:31px;line-height:40px;color:#fff;}
+@media(min-width:768px){ .protect-v2__copy h2{font-size:30px;line-height:36px;} }
+@media(min-width:1280px){ .protect-v2__copy h2{font-size:38px;line-height:46px;margin-bottom:24px;} }
+.protect-v2__copy p{margin:0 0 28px;font-weight:300;font-size:15px;line-height:24px;color:rgba(255,255,255,.85);max-width:46ch;}
+@media(min-width:1280px){ .protect-v2__copy p{font-size:17px;line-height:28px;margin-bottom:32px;} }
+.protect-v2__copy .ctas{margin:0;}
+
+.pcard-v2{background:#fff;border-radius:4px;padding:24px;display:flex;gap:18px;align-items:center;flex-direction:row-reverse;justify-content:space-between;}
+.pcard-v2{transition:transform .25s ease,box-shadow .25s ease;}
+.pcard-v2:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.16);}
+@media(min-width:1280px){ .pcard-v2{padding:36px 40px;gap:24px;} }
+.pcard-v2__icon{flex:none;width:52px;height:52px;border-radius:50%;border:2px solid var(--navy);display:flex;align-items:center;justify-content:center;}
+@media(min-width:1280px){ .pcard-v2__icon{width:60px;height:60px;} }
+.pcard-v2__icon svg{width:24px;height:24px;color:var(--navy);}
+@media(min-width:1280px){ .pcard-v2__icon svg{width:28px;height:28px;} }
+.pcard-v2 h3{margin:0 0 10px;font-weight:700;font-size:20px;line-height:26px;color:var(--navy);}
+@media(min-width:1280px){ .pcard-v2 h3{font-size:24px;line-height:30px;} }
+.pcard-v2 p{margin:0;font-weight:300;font-size:15px;line-height:24px;color:var(--gray);}
+@media(min-width:1280px){ .pcard-v2 p{font-size:16px;line-height:26px;} }
+
+/* ---- Sector 8: Fábrica / Mataderos ---- */
+.factory-v2{background:#fff;padding:56px var(--pad);}
+@media(min-width:1024px){ .factory-v2{padding:80px var(--pad);} }
+@media(min-width:1280px){ .factory-v2{padding:104px var(--pad);} }
+
+.factory-v2__inner{display:flex;flex-direction:column;gap:40px;}
+@media(min-width:1024px){ .factory-v2__inner{flex-direction:row;align-items:center;gap:64px;} }
+@media(min-width:1280px){ .factory-v2__inner{gap:96px;} }
+
+.factory-v2__copy{flex:1 1 50%;min-width:0;}
+.factory-v2__copy h2{margin:0 0 20px;font-weight:700;font-size:34px;line-height:40px;color:var(--navy);}
+@media(min-width:768px){ .factory-v2__copy h2{font-size:32px;line-height:38px;} }
+@media(min-width:1280px){ .factory-v2__copy h2{font-size:38px;line-height:44px;margin-bottom:24px;} }
+.factory-v2__copy p{margin:0;font-weight:300;font-size:15px;line-height:24px;color:var(--gray);max-width:48ch;}
+@media(min-width:1280px){ .factory-v2__copy p{font-size:16px;line-height:26px;} }
+
+.factory-v2__contact{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-direction:column;gap:16px;}
+@media(min-width:1280px){ .factory-v2__contact{margin-top:32px;gap:18px;} }
+.factory-v2__contact li{display:flex;align-items:center;gap:14px;}
+.factory-v2__contact .dot-icon{width:32px;height:32px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;flex:none;}
+.factory-v2__contact .dot-icon svg{width:16px;height:16px;color:#fff;}
+.factory-v2__contact span{font-weight:400;font-size:15px;color:var(--gray);}
+@media(min-width:1280px){ .factory-v2__contact span{font-size:16px;} }
+
+.factory-v2__media{flex:1 1 50%;min-width:0;}
+.factory-v2__media img{width:100%;border-radius:24px;display:block;aspect-ratio:502/450;object-fit:cover;}
+
+/* ---- FAQ (igual a v1) ---- */
+/* FAQ va pegada al sector fabrica (las dos son blancas): sin padding
+   superior propio, para que el aire de arriba lo ponga solo .factory-v2.
+   El doble espacio queda abajo, antes del footer. */
+.faq{background:#fff;padding:0 var(--pad) 96px;}
+@media(min-width:1024px){ .faq{padding:0 var(--pad) 144px;} }
+@media(min-width:1280px){ .faq{padding:0 var(--pad) 140px;} }
+.faq__inner{max-width:900px;margin:0 auto;}
+.faq__inner h2{margin:0 0 28px;text-align:center;font-weight:700;font-size:26px;line-height:32px;color:var(--navy);}
+@media(min-width:768px){ .faq__inner h2{font-size:32px;line-height:38px;} }
+@media(min-width:1280px){ .faq__inner h2{font-size:38px;line-height:46px;margin-bottom:40px;} }
+.faq__inner .accordion summary{font-size:18px;line-height:25px;}
+@media(min-width:1280px){ .faq__inner .accordion summary{font-size:22px;line-height:29px;} }
+
+/* ==========================================================================
+   A partir de acá van los estilos de cada sector nuevo (v2), sector por
+   sector, a medida que se van armando con las imágenes que me pases.
+   ========================================================================== */
+
+/* Notebooks 14"/16" y pantallas bajas
+   Ya no hace falta comprimir el hero: el padding superior se deriva de
+   --nav-h y el alto minimo es fijo, asi que en pantallas bajas la pagina
+   simplemente scrollea. Se conserva solo el ajuste del header. */
+@media(min-width:1024px) and (max-height:820px){
+  .header{padding-top:12px;padding-bottom:12px;}
+  .header__logo img{height:66px;}
+}
+
+/* Notebooks angostas: evita que la copy se meta sobre el operario */
+@media(min-width:1024px) and (max-width:1439px){
+  /* La columna de texto no invade al operario; los CTAs se compactan lo
+     justo para seguir en una sola fila dentro de ese ancho. */
+  .hero-v2 .hero-v2__copy{max-width:min(48%,540px);}
+  .hero-v2 .ctas{gap:14px;}
+  .hero-v2 .btn{padding:15px 26px;font-size:13px;}
+  .hero-v2 .btn svg{width:15px;height:15px;}
+}
+
+/* ==========================================================================
+   MOBILE (<768px) — ajuste fino del hero segun la referencia de Illustrator:
+   navbar mas proporcionado, eyebrow compacta, H1 en 4 lineas, operario
+   visible a la derecha (sin bloquear clicks) y copy/CTAs en la mitad izq.
+   ========================================================================== */
+@media(max-width:767px){
+  /* 1 — Navbar: logo mas grande, CTA mas chico */
+  .header{padding:12px var(--pad);}
+  .header__logo img{height:46px;}
+  .header .btn--nav{padding:9px 16px;font-size:9.5px;letter-spacing:.05em;gap:0;}
+  .header .btn--nav svg{display:none;}
+  .nav-toggle{font-size:30px;}
+
+  /* 2 — Eyebrow: linea y texto mas compactos */
+  .hero-v2__eyebrow{font-size:10px;letter-spacing:.1em;gap:9px;margin-bottom:14px;}
+  .hero-v2__eyebrow::before{width:20px;height:2px;}
+
+  /* 3 — H1 en 4 lineas (los saltos .br-m ya estan activos por defecto) */
+  .hero-v2__copy h1{font-size:37px;line-height:1.04;margin-bottom:16px;}
+
+  /* 4/5 — La columna de texto ocupa la mitad izquierda para dejar
+     respirar al operario; el operario va detras y no toma clicks. */
+  .hero-v2{min-height:auto;}
+  .hero-v2__inner{padding-bottom:40px;}
+  .hero-v2__lead{font-size:14px;line-height:1.5;margin-bottom:18px;max-width:66%;}
+  .hero-v2__benefits{gap:14px;margin-bottom:22px;max-width:66%;}
+  .hero-v2__benefits li{font-size:12.5px;line-height:1.35;gap:10px;align-items:center;}
+  .hero-v2__benefits svg{width:20px;height:20px;stroke-width:1.5;}
+
+  .hero-v2__worker{display:block;bottom:0;right:-22vw;width:84vw;height:auto;z-index:2;pointer-events:none;}
+  .hero-v2__worker img{width:100%;height:auto;pointer-events:none;}
+  /* La copia que cruza el navbar es solo de desktop. Va DESPUES de la regla
+     de .hero-v2__worker (misma especificidad) para que gane el display:none. */
+  .hero-v2 .hero-v2__worker--over{display:none;}
+
+  /* 6 — CTAs mas chicos, apilados y por delante del operario */
+  .hero-v2 .ctas{flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:0;position:relative;z-index:5;}
+  .hero-v2 .btn{padding:11px 20px;font-size:11px;gap:8px;}
+  .hero-v2 .btn svg{width:13px;height:13px;}
+
+  /* El span de atributos no se muestra en mobile */
+  .hero-v2__tags{display:none;}
+
+  /* Sector "Un solo lugar": el H2 fluye sin quiebres forzados y la bajada
+     se mantiene sobre la zona clara del fondo. */
+  .solve-v2__copy h2{font-size:36px;line-height:1.1;}
+  .solve-v2__copy h2 br{display:none;}
+  .solve-v2__lead{max-width:71%;font-size:14px;}
+  /* CTAs del mismo tamano que los del hero */
+  .solve-v2__inner .ctas{flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:24px;}
+  .solve-v2 .btn{padding:11px 20px;font-size:11px;gap:8px;}
+  .solve-v2 .btn svg{width:13px;height:13px;}
+
+  /* Sector "Productos destacados" */
+  /* ojo: .products-v2__heading p tambien matchea la eyebrow (es un <p>),
+     asi que la eyebrow necesita el selector mas especifico */
+  .products-v2__heading .products-v2__eyebrow{font-size:10px;letter-spacing:.1em;gap:9px;margin-bottom:12px;}
+  .products-v2__eyebrow::before{width:20px;height:2px;}
+  .products-v2__heading h2{font-size:40px;line-height:1.05;margin-bottom:10px;}
+  .products-v2__heading p:not(.products-v2__eyebrow){max-width:75%;font-size:14px;line-height:21px;}
+  .products-v2__card img{height:150px;}
+
+  /* Sector destacado "Impermeables": mas alto, foto justificada a la
+     derecha (para que se vea el personaje) y caja con padding propio. */
+  .destacado-v2{min-height:400px;}
+  .destacado-v2__bg{object-position:77% center;}
+  .destacado-v2__overlay{
+    background:linear-gradient(90deg, rgba(0,17,34,.88) 0%, rgba(0,17,34,.78) 40%, rgba(0,17,34,.45) 72%, rgba(0,17,34,.18) 100%);
+  }
+  .destacado-v2__content{padding:28px var(--pad);}
+  .destacado-v2__content p{max-width:26ch;margin-bottom:22px;}
+  .destacado-v2 .btn{padding:11px 20px;font-size:11px;}
+}
+
+/* ==========================================================================
+   MOBILE CHICO (<=374px — iPhone SE, Android de 320)
+   Unico ancho donde el CTA del navbar se acorta a "Cotizar".
+   ========================================================================== */
+@media(max-width:374px){
+  .hero-v2__copy h1{font-size:32px;}
+  .hero-v2__lead{max-width:100%;}
+  .btn--nav__long{display:none;}
+  .btn--nav__short{display:inline;}
+}
+
+/* ==========================================================================
+   L2 · INDUMENTARIA DE TRABAJO  (/indumentaria-de-trabajo/)
+   Todo lo de arriba es la base compartida de la home v2 (copiada tal cual,
+   con las rutas de imagen reescritas a img/). Desde acá: solo lo propio
+   de L2. Mobile-first, breakpoints canonicos 768/1024/1280/1440/1700.
+   Prefijo de clases: *-l2.
+   ========================================================================== */
+
+/* ---- Marcas de placeholder ([VALIDAR] / [PENDIENTE]) ----
+   Visibles por defecto en este borrador. El boton flotante de abajo a la
+   izquierda las oculta para ver la pagina "limpia". En produccion se borran. */
+.ph{
+  display:inline-flex;align-items:center;gap:4px;margin-left:6px;vertical-align:middle;
+  padding:2px 7px;border:1px dashed var(--orange);border-radius:4px;
+  background:#fff4ec;color:#c2561a;
+  font:600 9.5px/1.35 "Montserrat",Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;
+  white-space:nowrap;font-style:normal;
+}
+.on-dark .ph{background:rgba(255,126,52,.14);color:#ffb68b;}
+html.ph-off .ph{display:none;}
+.ph-toggle{
+  position:fixed;left:14px;bottom:14px;z-index:60;
+  border:1px dashed var(--orange);background:#fff;color:#c2561a;border-radius:999px;
+  padding:8px 14px;font:600 10.5px/1 "Montserrat",Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;
+  cursor:pointer;box-shadow:0 6px 18px rgba(0,26,52,.14);
+}
+
+/* ---- Encabezados de seccion comunes en L2 ---- */
+.h2-l2{
+  font-family:"Poppins","Montserrat",Arial,sans-serif;font-weight:800;
+  font-size:28px;line-height:1.12;letter-spacing:-.02em;color:var(--navy);margin:0;
+}
+@media(min-width:768px){ .h2-l2{font-size:36px;} }
+@media(min-width:1280px){ .h2-l2{font-size:44px;} }
+.eyebrow-l2{
+  display:flex;align-items:center;gap:14px;
+  font-weight:600;font-size:10px;color:var(--navy);letter-spacing:.12em;
+  text-transform:uppercase;margin:0 0 14px;
+}
+.eyebrow-l2::before{content:"";width:20px;height:2px;background:var(--orange);flex:none;border-radius:2px;}
+@media(min-width:768px){ .eyebrow-l2{font-size:11px;letter-spacing:.16em;} .eyebrow-l2::before{width:36px;height:3px;} }
+@media(min-width:1280px){ .eyebrow-l2{font-size:12px;margin-bottom:16px;} }
+
+/* ---- S1 · Hero (modificador del hero-v2 de la home) ----
+   El H1 de L2 es ~60% mas largo que el de la home: se baja el cuerpo en
+   todos los breakpoints para que quede en 4 renglones en desktop. */
+.hero-v2--l2 .hero-v2__copy h1{font-size:31px;line-height:1.08;}
+@media(min-width:768px){ .hero-v2--l2 .hero-v2__copy h1{font-size:42px;} }
+@media(min-width:1024px){ .hero-v2--l2 .hero-v2__copy h1{font-size:38px;} }
+@media(min-width:1280px){ .hero-v2--l2 .hero-v2__copy h1{font-size:44px;} }
+@media(min-width:1440px){ .hero-v2--l2 .hero-v2__copy h1{font-size:52px;} }
+@media(min-width:1700px){ .hero-v2--l2 .hero-v2__copy h1{font-size:58px;} }
+.hero-v2--l2 .hero-v2__benefits li{align-items:center;}
+/* Fondo propio de L2: la persona (pantalon cargo azul marino) esta en la
+   foto, a ~65% del ancho. Se ancla abajo para no cortarle los botines. */
+.hero-v2--l2 .hero-v2__bg img{object-position:68% bottom;}
+/* <1024: la home usa un velo blanco vertical parejo; aca el velo va de
+   izquierda a derecha para que la copy se lea y la prenda siga visible. */
+/* Notebook 13-14": la foto se recorta menos a los costados; se corre la
+   persona a la derecha para que no quede debajo del H1 */
+@media(min-width:1024px) and (max-width:1279px){
+  .hero-v2--l2 .hero-v2__bg img{object-position:22% bottom;}
+}
+.hero-v2--l2 .hero-v2__bg picture{display:block;width:100%;height:100%;}
+@media(max-width:1023px){
+  .hero-v2--l2 .hero-v2__bg img{object-position:60% bottom;}
+  .hero-v2--l2 .hero-v2__bg::after{
+    background:linear-gradient(90deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.9) 55%, rgba(255,255,255,.62) 100%);
+  }
+}
+
+/* <600px carga bg-hero-indumentaria-m.webp (recorte 640x768 de x=460..1100
+   del original): se centra para mostrar el mismo encuadre que antes */
+@media(max-width:599px){
+  .hero-v2--l2 .hero-v2__bg img{object-position:50% bottom;}
+}
+
+/* ---- S2 · Franja de confianza ---- */
+.trust-l2{background:#f2f2f2;padding:28px var(--pad);}
+@media(min-width:1024px){ .trust-l2{padding:34px var(--pad);} }
+@media(min-width:1280px){ .trust-l2{padding:40px var(--pad);} }
+.trust-l2__inner{display:flex;flex-direction:column;gap:24px;}
+@media(min-width:1024px){ .trust-l2__inner{flex-direction:row;align-items:center;justify-content:space-between;gap:48px;} }
+.trust-l2__text{
+  margin:0;padding-left:16px;border-left:3px solid var(--orange);
+  font-weight:600;font-size:15px;line-height:1.5;color:var(--navy);max-width:44ch;
+}
+@media(min-width:1280px){ .trust-l2__text{font-size:17px;} }
+.trust-l2__brands{display:flex;align-items:stretch;gap:28px;}
+@media(min-width:1280px){ .trust-l2__brands{gap:48px;} }
+.trust-l2__brand{display:grid;grid-template-rows:auto 56px auto;justify-items:center;align-items:center;gap:8px;}
+.trust-l2__brand + .trust-l2__brand{padding-left:28px;border-left:1px solid #d9d9d9;}
+@media(min-width:1280px){ .trust-l2__brand + .trust-l2__brand{padding-left:48px;} .trust-l2__brand{grid-template-rows:auto 64px auto;} }
+.trust-l2__label{margin:0;font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);white-space:nowrap;}
+.trust-l2__brand img{height:48px;width:auto;}
+.trust-l2__brand--main img{height:56px;}
+@media(min-width:1280px){ .trust-l2__brand img{height:52px;} .trust-l2__brand--main img{height:64px;} }
+.trust-l2__brand img.is-sm{height:34px;}
+@media(min-width:1280px){ .trust-l2__brand img.is-sm{height:40px;} }
+.trust-l2__sub{margin:0;font-weight:500;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);white-space:nowrap;}
+
+/* ---- S3 · Problema: integrado dentro de .dif-v2 (bloque naranja de la home) ---- */
+.dif-v2__problem-title{
+  margin:0 0 24px;font-family:"Poppins","Montserrat",Arial,sans-serif;font-weight:800;
+  font-size:26px;line-height:1.15;letter-spacing:-.01em;color:#fff;
+}
+@media(min-width:1280px){ .dif-v2__problem-title{font-size:32px;margin-bottom:32px;} }
+.dif-v2__problem-cta{
+  display:inline-flex;align-items:center;gap:10px;white-space:normal;text-align:left;
+  background:#fff;color:var(--navy);padding:13px 22px;font-size:12px;
+}
+.dif-v2__problem-cta svg{width:14px;height:14px;flex:none;}
+/* La caja naranja se ensancha un poco respecto de la home para que el CTA
+   entre en un solo renglon */
+@media(min-width:1024px){
+  .dif-v2__problem-box{width:350px;}
+  .dif-v2__problem-cta{white-space:nowrap;padding:13px 20px;font-size:11.5px;}
+}
+@media(min-width:1280px){
+  .dif-v2__problem-box{width:420px;}
+  .dif-v2__problem-cta{padding:15px 24px;font-size:12.5px;}
+}
+
+/* ---- S4 · Solucion: linea completa ---- */
+.line-l2{background:var(--navy);color:#fff;padding:56px var(--pad);position:relative;overflow:hidden;}
+@media(min-width:1024px){ .line-l2{padding:80px var(--pad);} }
+@media(min-width:1280px){ .line-l2{padding:104px var(--pad);} }
+/* Reflejo diagonal sutil, mismo lenguaje que los paneles del hero */
+.line-l2::before{
+  content:"";position:absolute;top:-20%;bottom:-20%;left:62%;right:-40%;
+  transform:skewX(-28deg);background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
+  pointer-events:none;
+}
+.line-l2__inner{position:relative;display:flex;flex-direction:column;gap:36px;}
+@media(min-width:1024px){ .line-l2__inner{flex-direction:row;align-items:center;gap:64px;} }
+@media(min-width:1280px){ .line-l2__inner{gap:104px;} }
+.line-l2__copy{flex:1 1 42%;min-width:0;}
+.line-l2__copy .eyebrow-l2{color:rgba(255,255,255,.8);}
+.line-l2__copy .h2-l2{color:#fff;max-width:13ch;margin-bottom:20px;}
+.line-l2__copy p{margin:0 0 28px;font-weight:300;font-size:15px;line-height:1.6;color:rgba(255,255,255,.86);max-width:40ch;}
+@media(min-width:1280px){ .line-l2__copy p{font-size:17px;margin-bottom:34px;} }
+.line-l2__copy .btn{display:inline-flex;align-items:center;gap:10px;}
+.line-l2__copy .btn svg{width:15px;height:15px;flex:none;}
+.line-l2__list{flex:1 1 58%;min-width:0;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;column-gap:32px;}
+@media(min-width:480px){ .line-l2__list{grid-template-columns:1fr 1fr;} }
+@media(min-width:1280px){ .line-l2__list{column-gap:48px;} }
+.line-l2__list li{
+  display:flex;align-items:center;gap:14px;padding:15px 0;
+  border-bottom:1px solid rgba(255,255,255,.14);
+  font-weight:600;font-size:14px;line-height:1.35;color:#fff;
+}
+@media(min-width:1280px){ .line-l2__list li{font-size:16px;padding:19px 0;gap:18px;} }
+.line-l2__ic{
+  flex:none;width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);
+  display:flex;align-items:center;justify-content:center;transition:background-color .2s ease,border-color .2s ease;
+}
+.line-l2__ic svg{width:21px;height:21px;color:#fff;stroke-width:1.5;}
+@media(min-width:1280px){ .line-l2__ic{width:46px;height:46px;} .line-l2__ic svg{width:23px;height:23px;} }
+.line-l2__list li:hover .line-l2__ic{background:var(--orange);border-color:var(--orange);}
+
+/* ---- S5 · Productos destacados ----
+   Mobile/tablet: carrusel horizontal draggeable (mismo JS que la home).
+   >=1024: grilla 4x2 — son 8 fichas con datos, conviene verlas todas. */
+.prod-l2{background:#f2f4f6;padding-bottom:52px;}
+@media(min-width:1024px){ .prod-l2{padding-bottom:72px;} }
+@media(min-width:1280px){ .prod-l2{padding-bottom:96px;} }
+.prod-l2__list{
+  margin-top:28px;padding:6px var(--pad) 12px;overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;cursor:grab;user-select:none;
+}
+.prod-l2__list::-webkit-scrollbar{display:none;}
+.prod-l2__list.is-dragging{cursor:grabbing;}
+.prod-l2__track{display:flex;gap:16px;width:max-content;}
+@media(min-width:1024px){
+  .prod-l2__list{overflow:visible;cursor:auto;user-select:auto;margin-top:40px;}
+  .prod-l2__track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;width:auto;}
+}
+@media(min-width:1280px){ .prod-l2__track{gap:24px;} }
+
+.pcard-l2{
+  position:relative;flex:none;width:250px;background:#fff;border:1px solid #e6eaee;border-radius:14px;
+  overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:0 4px 18px rgba(0,53,104,.06);transition:transform .2s ease,box-shadow .2s ease;
+}
+.pcard-l2:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,53,104,.12);}
+@media(min-width:768px){ .pcard-l2{width:270px;} }
+@media(min-width:1024px){ .pcard-l2{width:auto;} }
+.pcard-l2__media{
+  position:relative;height:190px;background:#f6f8fa;display:flex;align-items:center;justify-content:center;
+  border-bottom:1px solid #eef1f4;
+}
+@media(min-width:1280px){ .pcard-l2__media{height:220px;} }
+.pcard-l2__media img{height:86%;width:auto;max-width:86%;object-fit:contain;-webkit-user-drag:none;pointer-events:none;}
+/* Placeholder de foto: silueta de la prenda + etiqueta, hasta tener la foto real en azul marino */
+.pcard-l2__media.is-ph{background:repeating-linear-gradient(135deg,#f6f8fa 0 12px,#f1f4f7 12px 24px);}
+.pcard-l2__media.is-ph svg{width:92px;height:92px;color:#9fb2c5;stroke-width:1;}
+@media(min-width:1280px){ .pcard-l2__media.is-ph svg{width:108px;height:108px;} }
+.pcard-l2__phlabel{
+  position:absolute;bottom:10px;left:50%;transform:translateX(-50%);
+  font-weight:600;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#8a9bab;white-space:nowrap;
+}
+html.ph-off .pcard-l2__phlabel{display:none;}
+.pcard-l2 .products-v2__badge{z-index:2;background:#fff;box-shadow:0 2px 8px rgba(0,53,104,.08);}
+.pcard-l2__body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:12px;flex:1;}
+@media(min-width:1280px){ .pcard-l2__body{padding:20px 22px 24px;} }
+.pcard-l2__name{margin:0;font-family:"Montserrat",Arial,sans-serif;font-weight:700;font-size:13px;line-height:1.35;letter-spacing:.03em;text-transform:uppercase;color:var(--navy);}
+@media(min-width:1280px){ .pcard-l2__name{font-size:14px;} }
+.pcard-l2__code{margin:-6px 0 0;font-weight:400;font-size:12px;color:var(--gray);}
+.pcard-l2__specs{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;padding-top:12px;border-top:1px solid #eef1f4;}
+.pcard-l2__specs dt{font-weight:600;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#8a96a3;padding-top:2px;}
+.pcard-l2__specs dd{margin:0;font-weight:500;font-size:12.5px;line-height:1.4;color:var(--navy);}
+.pcard-l2__cta{
+  margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--orange);color:#fff;border:none;border-radius:999px;cursor:pointer;
+  padding:12px 20px;font:700 11.5px/1 "Montserrat",Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.pcard-l2__cta:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(255,126,52,.32);}
+.pcard-l2__cta svg{width:13px;height:13px;}
+
+/* ---- S7 · Prueba social (dentro del sector diferenciales) ---- */
+/* Va dentro de .dif-v2 (.dif-v2__reviews), fondo blanco como en la home */
+.reviews-l2__grid{display:grid;grid-template-columns:1fr;gap:20px;}
+@media(min-width:1024px){ .reviews-l2__grid{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:24px;align-items:stretch;} }
+.quote-l2{
+  position:relative;margin:0;background:var(--navy);color:#fff;border-radius:16px;
+  padding:34px 26px 28px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:26px;
+}
+@media(min-width:1280px){ .quote-l2{padding:52px 48px 44px;} }
+.quote-l2::before{
+  content:"\201C";position:absolute;top:-28px;right:18px;
+  font-family:"Poppins",Arial,sans-serif;font-weight:800;font-size:180px;line-height:1;color:var(--orange);opacity:.9;
+}
+.quote-l2 p{position:relative;margin:0;font-family:"Poppins","Montserrat",Arial,sans-serif;font-weight:600;font-size:20px;line-height:1.4;max-width:30ch;}
+@media(min-width:1280px){ .quote-l2 p{font-size:27px;} }
+.quote-l2 footer{display:flex;align-items:center;gap:14px;}
+.quote-l2 .gcard__avatar{width:46px;height:46px;}
+.quote-l2 cite{font-style:normal;display:block;font-weight:700;font-size:15px;}
+.quote-l2 small{display:flex;align-items:center;gap:8px;margin-top:3px;font-size:12px;color:rgba(255,255,255,.7);}
+.quote-l2 .greviews__stars svg{width:14px;height:14px;}
+.reviews-l2__side{display:flex;flex-direction:column;gap:16px;}
+.reviews-l2__side .gcard{width:auto;max-width:none;flex:1;}
+@media(max-width:1023px){
+  .reviews-l2__side{flex-direction:row;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--pad) * -1);padding:4px var(--pad) 8px;scrollbar-width:none;}
+  .reviews-l2__side::-webkit-scrollbar{display:none;}
+  .reviews-l2__side .gcard{flex:none;width:82vw;max-width:340px;}
+}
+
+/* ---- S8 · Normativa (reusa el banner .solve-v2 de la home) ---- */
+.solve-v2--l2 .solve-v2__marks strong{margin-bottom:0;}
+
+/* ---- S9 · Como trabajamos ---- */
+.steps-l2{background:#fff;padding:56px var(--pad);}
+@media(min-width:1024px){ .steps-l2{padding:80px var(--pad);} }
+@media(min-width:1280px){ .steps-l2{padding:104px var(--pad);} }
+.steps-l2 .h2-l2{margin-bottom:36px;}
+@media(min-width:1280px){ .steps-l2 .h2-l2{margin-bottom:56px;} }
+.steps-l2__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:28px;counter-reset:step;}
+@media(min-width:768px){ .steps-l2__list{grid-template-columns:1fr 1fr;gap:36px 40px;} }
+@media(min-width:1280px){ .steps-l2__list{grid-template-columns:repeat(4,1fr);gap:40px;} }
+.steps-l2__item{position:relative;display:flex;gap:18px;align-items:flex-start;}
+@media(min-width:1280px){ .steps-l2__item{flex-direction:column;gap:22px;} }
+.steps-l2__n{
+  flex:none;position:relative;z-index:1;width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Poppins",Arial,sans-serif;font-weight:800;font-size:17px;
+  box-shadow:0 0 0 6px #fff;
+}
+.steps-l2__item:last-child .steps-l2__n{background:var(--orange);}
+@media(min-width:1280px){
+  .steps-l2__n{width:56px;height:56px;font-size:19px;}
+  /* linea que une los pasos */
+  .steps-l2__item:not(:last-child)::after{content:"";position:absolute;top:28px;left:56px;right:-40px;height:2px;background:repeating-linear-gradient(90deg,#c9d4df 0 8px,transparent 8px 14px);}
+}
+.steps-l2__item p{margin:0;padding-top:4px;font-weight:500;font-size:15px;line-height:1.5;color:var(--navy);max-width:34ch;}
+@media(min-width:1280px){ .steps-l2__item p{font-size:17px;padding-top:0;} }
+
+/* ---- S10 · Garantia (borrador: no se publica hasta que Diforza valide) ---- */
+.guarantee-l2{background:#f2f4f6;padding:40px var(--pad);}
+@media(min-width:1280px){ .guarantee-l2{padding:56px var(--pad);} }
+.guarantee-l2__inner{display:flex;flex-direction:column;gap:22px;}
+@media(min-width:1024px){ .guarantee-l2__inner{flex-direction:row;align-items:center;gap:48px;} }
+.guarantee-l2__title{margin:0;flex:none;font-family:"Poppins",Arial,sans-serif;font-weight:800;font-size:22px;color:var(--navy);}
+@media(min-width:1280px){ .guarantee-l2__title{font-size:26px;} }
+.guarantee-l2__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:16px;flex:1;}
+@media(min-width:768px){ .guarantee-l2__list{grid-template-columns:repeat(3,1fr);gap:24px;} }
+.guarantee-l2__list li{display:flex;gap:12px;align-items:flex-start;font-weight:400;font-size:14px;line-height:1.5;color:var(--navy);}
+@media(min-width:1280px){ .guarantee-l2__list li{font-size:15px;} }
+.guarantee-l2__list svg{flex:none;width:26px;height:26px;color:var(--orange);stroke-width:1.6;}
+
+/* ---- S11 · FAQ (reusa .faq; en L2 no va pegada a otro sector blanco) ---- */
+.faq--l2{padding-top:56px;}
+@media(min-width:1024px){ .faq--l2{padding-top:88px;padding-bottom:104px;} }
+@media(min-width:1280px){ .faq--l2{padding-top:104px;padding-bottom:120px;} }
+
+/* ---- S12 · CTA final + formulario ---- */
+.cta-l2{background:var(--navy);color:#fff;padding:56px var(--pad);position:relative;overflow:hidden;scroll-margin-top:70px;}
+@media(min-width:1024px){ .cta-l2{padding:88px var(--pad);} }
+@media(min-width:1280px){ .cta-l2{padding:112px var(--pad);} }
+.cta-l2::before{
+  content:"";position:absolute;top:-20%;bottom:-20%;left:-30%;right:70%;
+  transform:skewX(-28deg);background:linear-gradient(90deg,rgba(255,255,255,.015),rgba(255,255,255,.05));pointer-events:none;
+}
+.cta-l2__inner{position:relative;display:grid;grid-template-columns:1fr;gap:36px;}
+@media(min-width:1024px){ .cta-l2__inner{grid-template-columns:minmax(0,.9fr) minmax(0,1.15fr);gap:56px;align-items:start;} }
+@media(min-width:1280px){ .cta-l2__inner{gap:96px;} }
+.cta-l2__copy .h2-l2{color:#fff;margin-bottom:18px;max-width:14ch;}
+@media(min-width:1440px){ .cta-l2__copy .h2-l2{font-size:52px;} }
+.cta-l2__reply{display:flex;align-items:center;gap:10px;margin:0 0 28px;font-weight:500;font-size:15px;color:rgba(255,255,255,.88);}
+.cta-l2__reply::before{content:"";width:9px;height:9px;border-radius:50%;background:#35c46f;box-shadow:0 0 0 4px rgba(53,196,111,.2);flex:none;}
+.cta-l2__mini{
+  margin:0 0 28px;padding:20px 22px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+}
+.cta-l2__mini p{margin:0 0 12px;font-weight:300;font-size:14px;line-height:1.6;color:rgba(255,255,255,.9);}
+.cta-l2__mini cite{font-style:normal;font-weight:700;font-size:13px;color:#fff;}
+.cta-l2__mini cite span{font-weight:400;color:rgba(255,255,255,.6);}
+.btn--wa{display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(255,255,255,.4);color:#fff;}
+.btn--wa:hover{border-color:#25d366;}
+.btn--wa svg{width:18px;height:18px;color:#25d366;}
+
+/* Catalogo: formulario corto e independiente, colapsable (doc 05 §6) */
+.catalog-l2{margin-top:32px;border-top:1px solid rgba(255,255,255,.14);padding-top:24px;scroll-margin-top:90px;}
+.catalog-l2__toggle{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;
+  background:none;border:none;padding:0;cursor:pointer;text-align:left;color:#fff;
+  font:700 14px/1.4 "Montserrat",Arial,sans-serif;letter-spacing:.02em;
+}
+.catalog-l2__toggle small{display:block;font-weight:300;font-size:13px;color:rgba(255,255,255,.7);letter-spacing:0;margin-top:2px;}
+.catalog-l2__toggle .chev{flex:none;width:18px;height:18px;transition:transform .2s ease;}
+.catalog-l2__toggle[aria-expanded="true"] .chev{transform:rotate(180deg);}
+.catalog-l2__panel{margin-top:20px;}
+.catalog-l2__panel[hidden]{display:none;}
+
+/* Tarjeta del formulario de cotizacion */
+.form-l2{background:#fff;color:var(--navy);border-radius:18px;padding:26px 20px;box-shadow:0 24px 60px rgba(0,10,25,.35);scroll-margin-top:90px;}
+@media(min-width:768px){ .form-l2{padding:34px 32px;} }
+@media(min-width:1280px){ .form-l2{padding:42px 40px;} }
+.form-l2__title{margin:0 0 4px;font-family:"Poppins",Arial,sans-serif;font-weight:700;font-size:19px;}
+.form-l2__note{margin:0 0 22px;font-weight:300;font-size:13px;color:var(--gray);}
+.form-l2__grid{display:grid;grid-template-columns:1fr;gap:16px;}
+@media(min-width:768px){ .form-l2__grid{grid-template-columns:1fr 1fr;gap:18px 18px;} }
+.field{display:flex;flex-direction:column;gap:6px;min-width:0;}
+.field--full{grid-column:1 / -1;}
+.field label{font-weight:600;font-size:12px;letter-spacing:.03em;color:var(--navy);}
+.field label .req{color:var(--orange);}
+.field input,.field select,.field textarea{
+  width:100%;font:400 15px/1.4 "Montserrat",Arial,sans-serif;color:var(--navy);
+  background:#fff;border:1px solid #cfd8e1;border-radius:10px;padding:12px 14px;min-height:48px;
+  transition:border-color .15s ease,box-shadow .15s ease;
+}
+.field select{appearance:none;-webkit-appearance:none;padding-right:40px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%23003568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;background-size:16px;}
+.field textarea{min-height:96px;resize:vertical;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(255,126,52,.28);}
+.field.is-invalid input,.field.is-invalid select,.field.is-invalid textarea{border-color:#c62828;}
+.field__error{display:none;align-items:center;gap:6px;font-weight:500;font-size:12px;color:#c62828;}
+.field__error::before{content:"!";display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;background:#c62828;color:#fff;font-weight:700;font-size:10px;flex:none;}
+.field.is-invalid .field__error{display:flex;}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:12.5px;line-height:1.5;color:#4a5a6a;}
+.check input{flex:none;width:18px;height:18px;margin:1px 0 0;accent-color:var(--navy);}
+.check a{color:var(--navy);}
+.hp-field{position:absolute !important;left:-9999px !important;width:1px;height:1px;overflow:hidden;}
+.form-l2__submit{width:100%;justify-content:center;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;margin-top:4px;}
+.form-l2__submit[disabled]{opacity:.7;cursor:progress;transform:none;box-shadow:none;}
+.form-l2__submit svg{width:15px;height:15px;}
+.form-l2__status{margin:12px 0 0;font-size:13px;font-weight:500;}
+.form-l2__status.is-error{color:#c62828;}
+.form-l2__ok{text-align:center;padding:24px 8px;}
+.form-l2__ok svg{width:56px;height:56px;color:#25a55f;margin:0 auto 14px;}
+.form-l2__ok h3{margin:0 0 8px;font-family:"Poppins",Arial,sans-serif;font-weight:700;font-size:22px;color:var(--navy);}
+.form-l2__ok p{margin:0;font-weight:300;font-size:15px;color:var(--gray);}
+
+/* Bloque "Estas cotizando: {producto}" (precarga desde S5, doc 17 §17) */
+.quoting-l2{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 18px;padding:12px 14px;border-radius:10px;background:#fff4ec;border:1px solid #ffd3b8;font-size:13.5px;color:var(--navy);}
+.quoting-l2[hidden]{display:none;}
+.quoting-l2 strong{font-weight:700;}
+.quoting-l2 button{flex:none;background:none;border:none;cursor:pointer;color:#c2561a;font:600 12px/1 "Montserrat",Arial,sans-serif;text-decoration:underline;}
+
+/* Formulario de catalogo sobre fondo navy */
+.catalog-l2 .field label{color:#fff;}
+.catalog-l2 .check{color:rgba(255,255,255,.75);}
+.catalog-l2 .check a{color:#fff;}
+.catalog-l2 .form-l2__grid{gap:14px;}
+.catalog-l2 .form-l2__ok{background:#fff;border-radius:14px;}
+
+/* ---- WhatsApp flotante (mobile/tablet, permanente — doc 02 regla 2) ---- */
+.wa-float{
+  position:fixed;right:16px;bottom:16px;z-index:55;width:56px;height:56px;border-radius:50%;
+  background:#25d366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 24px rgba(0,0,0,.25);
+}
+.wa-float svg{width:30px;height:30px;color:#fff;}
+@media(min-width:1024px){ .wa-float{display:none;} }
+
+/* ---- Mobile (<768): CTAs del mismo tamano que los de la home ---- */
+@media(max-width:767px){
+  .line-l2__copy .btn,.cta-l2 .btn--wa{padding:11px 20px;font-size:11px;}
+  .solve-v2--l2 .solve-v2__copy h2{font-size:32px;}
+  .form-l2__submit{padding:15px 20px;font-size:12px;}
+}
+
+/* ---- Ajustes post-verificacion ---- */
+/* El checkbox no hereda el estilo de input de texto de .field */
+.field .check input{width:18px;height:18px;min-height:0;padding:0;border-radius:4px;box-shadow:none;}
+.field label.check{font-weight:400;font-size:12.5px;letter-spacing:0;color:#4a5a6a;}
+.catalog-l2 .field label.check{color:rgba(255,255,255,.75);}
+/* Foto real sobre fondo blanco (los JPG de producto vienen con fondo blanco) */
+.pcard-l2__media:not(.is-ph){background:#fff;}
+/* Notebook 13-14": la columna del hero es angosta; los 3 beneficios van apilados */
+@media(min-width:1024px) and (max-width:1279px){
+  .hero-v2--l2 .hero-v2__benefits{flex-direction:column;gap:10px;margin-bottom:28px;}
+  .hero-v2--l2 .hero-v2__benefits li{padding-left:0;border-left:none;}
+}
+@media(max-width:767px){
+  .ph-toggle{padding:6px 10px;font-size:9px;opacity:.92;}
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="siteHeader">
+  <a href="../" class="header__logo"><img src="img/logo-blanco.webp" alt="Diforza"></a>
+  <nav class="nav" id="mainNav">
+    <a href="#productos">Productos</a>
+    <a href="../#industrias">Industrias</a>
+    <a href="../#empresa">La empresa</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <a href="#contacto" class="btn--nav header__cta"><span class="btn--nav__long">Pedir cotización</span><span class="btn--nav__short">Cotizar</span>
+    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">&#9776;</button>
+</header>
+
+<main>
+
+<!-- ======================================================================
+     S1 · HERO  (reusa .hero-v2 de la home + modificador --l2)
+     Fondo propio: img/bg-hero-indumentaria.webp, la
+     persona ya viene en la foto, así que no se usa la capa del operario.
+     ====================================================================== -->
+<section class="hero-v2 hero-v2--l2">
+  <div class="hero-v2__bg">
+    <!-- <600px: recorte vertical centrado en la persona (19 KB); resto: foto completa (26 KB) -->
+    <picture>
+      <source media="(max-width:599px)" srcset="img/bg-hero-indumentaria-m.webp" width="640" height="768">
+      <img src="img/bg-hero-indumentaria.webp" width="1376" height="768" fetchpriority="high" alt="Operario caminando con pantalón cargo Diforza azul marino y botines de seguridad">
+    </picture>
+  </div>
+  <div class="hero-v2__shine" aria-hidden="true">
+    <div class="panel"></div>
+    <div class="panel panel--light"></div>
+  </div>
+  <!-- En L2 no hay operario recortado aparte: la persona ya viene en el fondo -->
+
+  <p class="hero-v2__claim hero-anim hero-anim--4">Equipamos<br>el trabajo<br>real</p>
+
+  <div class="hero-v2__inner">
+    <div class="hero-v2__copy">
+      <p class="hero-v2__eyebrow hero-anim hero-anim--1">Indumentaria de trabajo para empresas</p>
+
+      <h1 class="hero-anim hero-anim--2">Indumentaria de trabajo para toda tu planta, <span class="accent">con talles y reposición asegurada</span></h1>
+
+      <p class="hero-v2__lead hero-anim hero-anim--3">Camisas, pantalones, camperas y conjuntos de trabajo. Stock permanente, talles completos y la posibilidad de personalizar con el logo de tu empresa.<span class="ph">Validar personalización</span></p>
+
+      <ul class="hero-v2__benefits hero-anim hero-anim--3">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16.5 16.5 3 21 7.5 7.5 21z"/><path d="M7 12.5l1.8 1.8M9.8 9.7l1.8 1.8M12.6 6.9l1.8 1.8"/></svg>
+          <span>Talles del XS al XXXL<span class="ph">Validar</span></span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.9l8.2 4.3v9.6L12 21.1l-8.2-4.3V7.2z"/><path d="M3.8 7.2L12 11.5l8.2-4.3M12 11.5v9.6"/></svg>
+          Stock permanente
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 6.4h10.2v9.1H2.6z"/><path d="M12.8 9.4h3.6l2.9 2.9v3.2h-6.5z"/><circle cx="6.6" cy="17.6" r="1.9"/><circle cx="16.2" cy="17.6" r="1.9"/><path d="M8.5 17.6h5.8"/></svg>
+          Envíos a todo el país
+        </li>
+      </ul>
+
+      <div class="ctas hero-anim hero-anim--4">
+        <a href="#contacto" class="btn btn--solid">Pedir cotización por volumen
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#catalogo" class="btn btn--outline" data-js="catalogo">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v9m0 0l-3.5-3.5M10 12l3.5-3.5M4 15.5h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Descargar catálogo de indumentaria
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S2 · FRANJA DE CONFIANZA — Diforza destacado (línea propia) + Ombú
+     ====================================================================== -->
+<section class="trust-l2">
+  <div class="trust-l2__inner reveal">
+    <p class="trust-l2__text">Indumentaria de trabajo con las especificaciones técnicas que tu actividad requiere.<span class="ph">Validar normas aplicables</span></p>
+    <div class="trust-l2__brands">
+      <div class="trust-l2__brand trust-l2__brand--main">
+        <p class="trust-l2__label">Marca propia</p>
+        <img src="img/brand-diforza.webp" alt="Diforza">
+        <p class="trust-l2__sub">Trabajo que protege</p>
+      </div>
+      <div class="trust-l2__brand">
+        <p class="trust-l2__label">Marca distribuida</p>
+        <img src="img/logo-ombu.webp" alt="Ombú" class="is-sm">
+        <p class="trust-l2__sub">&nbsp;</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S4 · SOLUCIÓN — línea completa (+ CTA de mitad de página)
+     ====================================================================== -->
+<section class="line-l2 on-dark">
+  <div class="line-l2__inner">
+    <div class="line-l2__copy reveal">
+      <h2 class="h2-l2">Línea completa de indumentaria de trabajo</h2>
+      <p>Con continuidad de línea: la prenda que estandarizás hoy la vas a poder reponer el año que viene.</p>
+      <a href="#contacto" class="btn btn--solid">Pedir cotización por volumen <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <ul class="line-l2__list reveal reveal--1">
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3 4 5.5 5.5 10 8 9v12h8V9l2.5 1L20 5.5 15 3l-3 3z"/><path d="M12 6v15M9 3l3 3 3-3"/></svg></span><span>Camisas de trabajo</span></li>
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10l1.2 18h-4.4L12 10.5 10.2 21H5.8z"/><path d="M7 6h10"/></svg></span><span>Pantalones y cargos</span></li>
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8v5l2.5 1.5V21h-4.5v-7h-4v7H5.5V9.5L8 8z"/><path d="M10 3v4h4V3M8 8h8"/></svg></span><span>Conjuntos y ambos</span></li>
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3 5 5.2V21h5V11M15 3l4 2.2V21h-5V11"/><path d="M9 3l3 3 3-3M12 6v15M7 14h2.5M14.5 14H17"/></svg></span><span>Camperas y abrigo</span></li>
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 4 3 7l2 4 3-1v10h8V10l3 1 2-4-5.5-3c-.6 1.4-1.9 2.2-3.5 2.2S9.1 5.4 8.5 4z"/></svg></span><span>Remeras y chombas</span></li>
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v4l3.5 2.2V21h-13V9.2L9 7z"/><path d="M5.5 10.5H3M18.5 10.5H21M9 14h6v3.5H9z"/></svg></span><span>Delantales y guardapolvos</span></li>
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 5 6v15h5v-8h4v8h5V6l-3-3-2 4h-4z"/><path d="M5 14h5M14 14h5M5 17h5M14 17h5"/></svg></span><span>Indumentaria de alta visibilidad</span></li>
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 2 1.4 3 2.5 3-.5-3 0-5.5 0-8z"/></svg></span><span>Indumentaria ignífuga / especial<span class="ph">Validar disponibilidad</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S5 · PRODUCTOS DESTACADOS — los 8 por ventas reales ene–jun 2026 (doc 14)
+     Sin precios (son de lista, con IVA aparte y se desactualizan).
+     [ASSET] fotos sobre fondo neutro, línea en azul marino:
+     prod-<nombre-kebab>.webp (doc 17 §18).
+     ====================================================================== -->
+<section class="prod-l2" id="productos">
+  <div class="products-v2__top reveal">
+    <div class="products-v2__heading">
+      <p class="products-v2__eyebrow">Línea propia Diforza</p>
+      <h2>Productos destacados</h2>
+    </div>
+    <a href="#" class="btn btn--outline">Ir a tienda online
+      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+  <div class="prod-l2__list draggable-carousel reveal reveal--1">
+    <div class="prod-l2__track">
+      <article class="pcard-l2">
+        <span class="products-v2__badge products-v2__badge--top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4c1.6 2 2.6 3.4 2.6 4.9a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.7 1-2.5.5 1.2 1.6.9 1.6-2.4z"/></svg> Más vendido</span>
+        <div class="pcard-l2__media"><img src="img/prod-campera-trucker-diforza.webp" alt="Campera trucker Diforza azul marino" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Campera trucker Diforza</h3>
+          <p class="pcard-l2__code">Azul marino · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Campera trucker Diforza azul marino" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l2">
+        
+        <div class="pcard-l2__media"><img src="img/prod-buzo-polar-medio-cierre-diforza.webp" alt="Buzo polar 1/2 cierre Diforza" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Buzo polar 1/2 cierre Diforza</h3>
+          <p class="pcard-l2__code">Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Buzo polar 1/2 cierre Diforza" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l2">
+        
+        <div class="pcard-l2__media"><img src="img/prod-camisa-clasica-diforza.webp" alt="Camisa clásica Diforza beige" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Camisa clásica Diforza</h3>
+          <p class="pcard-l2__code">Beige · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Camisa clásica Diforza beige" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l2">
+        
+        <div class="pcard-l2__media"><img src="img/prod-camisa-trabajo-diforza.webp" alt="Camisa de trabajo Diforza" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Camisa de trabajo Diforza</h3>
+          <p class="pcard-l2__code">Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Camisa de trabajo Diforza" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l2">
+        
+        <div class="pcard-l2__media"><img src="img/prod-chomba-pique-diforza.webp" alt="Chomba piqué Diforza azul marino" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Chomba piqué Diforza</h3>
+          <p class="pcard-l2__code">Azul marino · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Chomba piqué Diforza azul marino" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l2">
+        
+        <div class="pcard-l2__media"><img src="img/prod-pantalon-refl-diforza.webp" alt="Mameluco con reflectivos Diforza azul marino" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Mameluco con reflectivos Diforza<span class="ph">Validar nombre</span></h3>
+          <p class="pcard-l2__code">Azul marino · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Mameluco con reflectivos Diforza azul marino" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l2">
+        
+        <div class="pcard-l2__media"><img src="img/prod-traje-lluvia-diforza.webp" alt="Traje de lluvia Diforza amarillo" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Traje de lluvia Diforza</h3>
+          <p class="pcard-l2__code">Amarillo · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Traje de lluvia Diforza amarillo" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l2">
+        
+        <div class="pcard-l2__media"><img src="img/prod-traje-bombero-diforza.webp" alt="Traje de bombero Diforza" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Traje de bombero Diforza<span class="ph">Validar norma</span></h3>
+          <p class="pcard-l2__code">Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Traje de bombero Diforza" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S6 · DIFERENCIALES + S3 PROBLEMA + S7 PRUEBA SOCIAL en un solo sector
+     (reusa .dif-v2 de la home; el problema usa el bloque naranja + acordeón)
+     No decir "fabricamos" hasta que Diforza confirme origen. No mencionar AGIO.
+     ====================================================================== -->
+<section class="dif-v2">
+  <div class="dif-v2__head">
+    <h2 class="dif-v2__title reveal">Por qué las empresas eligen trabajar con Diforza</h2>
+    <div class="dif-v2__badge reveal">
+      <span class="dif-v2__badge-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ff7e34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg>
+      </span>
+      <p><strong>Más de 15 años</strong> brindando asesoramiento y soluciones en seguridad industrial</p>
+    </div>
+  </div>
+  <div class="dif-v2__grid">
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
+      </span>
+      <div>
+        <h3>Línea propia Diforza</h3>
+        <p>Camisas, pantalones, camperas, buzos y remeras de línea propia. Eso significa continuidad: no dependemos de que un tercero decida discontinuar el modelo que tu empresa ya estandarizó.</p>
+      </div>
+    </div>
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16.5 16.5 3 21 7.5 7.5 21z"/><path d="M7 12.5l1.8 1.8M9.8 9.7l1.8 1.8M12.6 6.9l1.8 1.8"/></svg>
+      </span>
+      <div>
+        <h3>Talles reales y completos</h3>
+        <p>El talle grande no es un problema a resolver, es parte del stock.<span class="ph">Validar rango</span></p>
+      </div>
+    </div>
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.3 6.8 19l1-5.8-4.2-4.1 5.8-.8z"/></svg>
+      </span>
+      <div>
+        <h3>Personalización con tu logo</h3>
+        <p>Bordado o estampado con la identidad de tu empresa.<span class="ph">Validar proceso, mínimos, plazos</span></p>
+      </div>
+    </div>
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+      </span>
+      <div>
+        <h3>Un responsable de cuenta</h3>
+        <p>Alguien que ya sabe qué prenda usa tu personal y en qué talles. Reponer es un mensaje, no una licitación.</p>
+      </div>
+    </div>
+  </div>
+  <!-- S3 · PROBLEMA (integrado): bloque naranja + acordeón, como en la home -->
+  <div class="dif-v2__problem reveal">
+    <div class="dif-v2__problem-box">
+      <h2 class="dif-v2__problem-title">Equipar a 80 personas no es comprar 80 camisas</h2>
+      <a href="#contacto" class="btn dif-v2__problem-cta">Pedir cotización por volumen <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="dif-v2__problem-list">
+      <div class="accordion">
+          <details open>
+            <summary>Falta el talle justo
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="accordion__panel">Siempre hay alguien que queda sin uniforme porque el proveedor no tiene su talle.</p>
+          </details>
+          <details>
+            <summary>El modelo se discontinúa
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="accordion__panel">Comprás una vez, y a los seis meses ya no existe. Tu personal queda vestido de tres formas distintas.</p>
+          </details>
+          <details>
+            <summary>Dura tres lavados
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="accordion__panel">La prenda barata se decolora, se descose y termina costando más.</p>
+          </details>
+          <details>
+            <summary>Reposiciones que tardan
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="accordion__panel">Entra gente nueva y esperás semanas para vestirla.</p>
+          </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- S7 · PRUEBA SOCIAL — dentro del mismo sector que los diferenciales
+       (testimonio destacado que menciona indumentaria + 2) -->
+  <div class="dif-v2__reviews">
+    <div class="greviews__summary reveal">
+      <svg class="g-icon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+      <span class="greviews__score">5.0</span>
+      <span class="greviews__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
+      <span class="greviews__count">5.0 en Google · Reseñas de clientes</span>
+    </div>
+    <div class="reviews-l2__grid">
+      <blockquote class="quote-l2 reveal">
+        <p>Diforza nos provee indumentaria y elementos de protección personal de altísima calidad. Diego maneja nuestra cuenta con mucho profesionalismo.</p>
+        <footer>
+          <span class="gcard__avatar" style="background:#f57c00">AK</span>
+          <div>
+            <cite>Ariel Kuznicki</cite>
+            <small><span class="greviews__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span> Google Reviews</small>
+          </div>
+        </footer>
+      </blockquote>
+      <div class="reviews-l2__side reveal reveal--1">
+        <div class="gcard">
+          <div class="gcard__top">
+            <div class="gcard__avatar" style="background:#1976d2">RH</div>
+            <div class="gcard__id">
+              <div class="gcard__name">Ricardo Honaine</div>
+              <div class="gcard__date">Google Reviews</div>
+            </div>
+            <svg class="gcard__g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+          </div>
+          <span class="gcard__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
+          <p class="gcard__text">Excelente atención y asesoramiento. En Diforza encontré todo lo que necesitaba en elementos de seguridad, con productos de primera calidad y entregas rápidas. Se nota el compromiso y la seriedad con la que trabajan.</p>
+        </div>
+        <div class="gcard">
+          <div class="gcard__top">
+            <div class="gcard__avatar" style="background:#388e3c">EC</div>
+            <div class="gcard__id">
+              <div class="gcard__name">Estudio Casa Viva</div>
+              <div class="gcard__date">Google Reviews</div>
+            </div>
+            <svg class="gcard__g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+          </div>
+          <span class="gcard__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
+          <p class="gcard__text">Muy buena experiencia. Tienen gran variedad de productos y siempre responden con rapidez y buena predisposición. La atención es personalizada y te ayudan a encontrar justo lo que necesitás.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S8 · NORMATIVA  (reusa el banner .solve-v2 de la home)
+     [PENDIENTE] normas IRAM aplicables a indumentaria — sin verificar.
+     ====================================================================== -->
+<section class="solve-v2 solve-v2--l2">
+  <div class="solve-v2__inner">
+    <div class="solve-v2__copy reveal">
+      <h2>La ropa de trabajo <br> también es un elemento <br> de protección</h2>
+
+      <p class="solve-v2__lead">Según la actividad, la indumentaria tiene requisitos específicos: alta visibilidad, resistencia al fuego, protección contra salpicaduras. No es lo mismo vestir una planta de alimentos que una obra en ruta.<span class="ph">Pendiente normas IRAM</span></p>
+
+      <div class="ctas">
+        <a href="#contacto" class="btn btn--solid">Consultar qué corresponde a mi actividad
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="solve-v2__marks">
+        <div class="solve-v2__mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 5 6v15h5v-8h4v8h5V6l-3-3-2 4h-4z"/><path d="M5 14h5M14 14h5M5 17h5M14 17h5"/></svg>
+          <div><strong>Alta visibilidad</strong></div>
+        </div>
+        <div class="solve-v2__mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 2 1.4 3 2.5 3-.5-3 0-5.5 0-8z"/></svg>
+          <div><strong>Resistencia al fuego</strong></div>
+        </div>
+        <div class="solve-v2__mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5s6 6.4 6 10.5a6 6 0 0 1-12 0c0-4.1 6-10.5 6-10.5z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg>
+          <div><strong>Protección contra salpicaduras</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="solve-v2__claim reveal reveal--1">Equipamos<br>el trabajo real</p>
+</section>
+
+<!-- ======================================================================
+     S9 · CÓMO TRABAJAMOS
+     ====================================================================== -->
+<section class="steps-l2">
+  <h2 class="h2-l2 reveal">Cómo trabajamos</h2>
+  <ol class="steps-l2__list">
+    <li class="steps-l2__item reveal"><span class="steps-l2__n">1</span><p>Nos contás cuánta gente equipás y en qué actividad.</p></li>
+    <li class="steps-l2__item reveal reveal--1"><span class="steps-l2__n">2</span><p>Te proponemos prenda, tela y talles; si querés, con muestra previa.<span class="ph">Validar</span></p></li>
+    <li class="steps-l2__item reveal reveal--2"><span class="steps-l2__n">3</span><p>Coordinamos la entrega y, si aplica, la personalización.</p></li>
+    <li class="steps-l2__item reveal reveal--2"><span class="steps-l2__n">4</span><p>Quedás con la línea estandarizada y reposición ágil.</p></li>
+  </ol>
+</section>
+
+<!-- ======================================================================
+     S10 · GARANTÍA — BORRADOR. Textos placeholder del doc 16 §5.
+     No publicar hasta que Diego valide condiciones (doc 01 S10).
+     ====================================================================== -->
+<section class="guarantee-l2" data-draft="true">
+  <div class="guarantee-l2__inner reveal">
+    <h2 class="guarantee-l2__title">Garantía<span class="ph">Borrador · Validar</span></h2>
+    <ul class="guarantee-l2__list">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l7.4 2.9v6.1c0 4.3-3.1 7.6-7.4 9.4-4.3-1.8-7.4-5.1-7.4-9.4V5.7z"/><path d="M8.9 11.9l2.2 2.2 4-4.4"/></svg>
+        <span>Garantía por defectos de fabricación en todos nuestros productos.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg>
+        <span>Cambios sin cargo por talle o defecto dentro de [X] días con el producto sin uso.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.9l8.2 4.3v9.6L12 21.1l-8.2-4.3V7.2z"/><path d="M3.8 7.2L12 11.5l8.2-4.3M12 11.5v9.6"/></svg>
+        <span>Stock permanente para reposición inmediata.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S11 · FAQ  (reusa .faq de la home). Schema FAQPage: se agrega cuando
+     las respuestas estén validadas (doc 07).
+     ====================================================================== -->
+<section class="faq faq--l2">
+  <div class="faq__inner reveal">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="accordion">
+      <details open>
+        <summary>¿Hacen talles especiales? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Pendiente</span></p>
+      </details>
+      <details>
+        <summary>¿Personalizan con el logo de la empresa? ¿Cuál es el mínimo? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Pendiente</span></p>
+      </details>
+      <details>
+        <summary>¿Puedo ver una muestra antes de comprar volumen? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Pendiente</span></p>
+      </details>
+      <details>
+        <summary>¿Aseguran continuidad del modelo para reponer? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Sí. Con continuidad de línea: la prenda que estandarizás hoy la vas a poder reponer el año que viene.<span class="ph">Validar</span></p>
+      </details>
+      <details>
+        <summary>¿Cuánto tardan en entregar un pedido de volumen? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Pendiente</span></p>
+      </details>
+      <details>
+        <summary>¿Hacen envíos al interior del país? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Sí, despachamos y distribuimos indumentaria y EPP a empresas e industrias en todo el territorio nacional.</p>
+      </details>
+      <details>
+        <summary>¿Puedo comprar por unidad? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Sí, en la tienda online.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S12 · CTA FINAL + FORMULARIO (doc 05) — campo variable L2:
+     "Cantidad de personas a equipar".
+     [PENDIENTE] endpoint del formulario / CRM y número definitivo de WhatsApp.
+     ====================================================================== -->
+<section class="cta-l2 on-dark" id="contacto">
+  <div class="cta-l2__inner">
+    <div class="cta-l2__copy reveal">
+      <h2 class="h2-l2">Decinos cuánta gente tenés que vestir</h2>
+      <p class="cta-l2__reply">Te respondemos en el día<span class="ph">Validar</span></p>
+
+      <figure class="cta-l2__mini">
+        <p>“Diforza nos provee indumentaria y elementos de protección personal de altísima calidad.”</p>
+        <cite>Ariel Kuznicki <span>· Google Reviews</span></cite>
+      </figure>
+
+      <a href="https://wa.me/5491159569713?text=Hola%2C%20necesito%20cotizar%20indumentaria%20de%20trabajo%20para%20mi%20empresa." class="btn btn--wa js-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg> Escribinos por WhatsApp</a>
+
+      <!-- Catálogo: formulario corto independiente (doc 05 §6) -->
+      <div class="catalog-l2" id="catalogo">
+        <button type="button" class="catalog-l2__toggle" aria-expanded="false" aria-controls="catalogPanel">
+          <span>Descargar catálogo de indumentaria<small>Te lo mandamos también por email.</small></span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="catalog-l2__panel" id="catalogPanel" hidden>
+          <form id="form-catalogo" class="js-lead-form" novalidate>
+            <input type="hidden" name="tipo_lead" value="catalogo">
+            <input type="hidden" name="landing" value="l2-indumentaria">
+            <div class="hp-field" aria-hidden="true"><label>No completar<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+            <div class="form-l2__grid">
+              <div class="field">
+                <label for="c-nombre">Nombre y apellido <span class="req">*</span></label>
+                <input id="c-nombre" name="nombre" type="text" autocomplete="name" required>
+                <span class="field__error">Ingresá tu nombre.</span>
+              </div>
+              <div class="field">
+                <label for="c-empresa">Empresa <span class="req">*</span></label>
+                <input id="c-empresa" name="empresa" type="text" autocomplete="organization" required>
+                <span class="field__error">Ingresá el nombre de tu empresa.</span>
+              </div>
+              <div class="field">
+                <label for="c-email">Email <span class="req">*</span></label>
+                <input id="c-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+                <span class="field__error">Ingresá un email válido.</span>
+              </div>
+              <div class="field">
+                <label for="c-tel">Teléfono / WhatsApp <span class="req">*</span></label>
+                <input id="c-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required>
+                <span class="field__error">Ingresá un teléfono de contacto.</span>
+              </div>
+              <div class="field field--full">
+                <label class="check"><input type="checkbox" name="consentimiento" required> <span>Acepto que Diforza me contacte y la <a href="#">política de privacidad</a>.</span></label>
+                <span class="field__error">Necesitamos tu consentimiento para enviarte el catálogo.</span>
+              </div>
+              <div class="field--full">
+                <button type="submit" class="btn btn--solid form-l2__submit"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v9m0 0l-3.5-3.5M10 12l3.5-3.5M4 15.5h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Descargar catálogo</button>
+                <p class="form-l2__status" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-l2 reveal reveal--1" id="form-cotizacion-wrap">
+      <form id="form-cotizacion" class="js-lead-form" novalidate>
+        <p class="form-l2__title">Pedí tu cotización por volumen</p>
+        <p class="form-l2__note">Los campos con <span style="color:var(--orange)">*</span> son obligatorios.</p>
+
+        <div class="quoting-l2" id="quoting" hidden>
+          <span>Estás cotizando: <strong id="quotingName"></strong></span>
+          <button type="button" id="quotingClear">Quitar</button>
+        </div>
+
+        <input type="hidden" name="producto_interes" id="productoInteres" value="">
+        <input type="hidden" name="tipo_lead" value="cotizacion">
+        <input type="hidden" name="landing" value="l2-indumentaria">
+        <div class="hp-field" aria-hidden="true"><label>No completar<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="form-l2__grid">
+          <div class="field">
+            <label for="f-nombre">Nombre y apellido <span class="req">*</span></label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+            <span class="field__error">Ingresá tu nombre.</span>
+          </div>
+          <div class="field">
+            <label for="f-empresa">Empresa <span class="req">*</span></label>
+            <input id="f-empresa" name="empresa" type="text" autocomplete="organization" required>
+            <span class="field__error">Ingresá el nombre de tu empresa.</span>
+          </div>
+          <div class="field">
+            <label for="f-email">Email corporativo <span class="req">*</span></label>
+            <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+            <span class="field__error">Ingresá un email válido.</span>
+          </div>
+          <div class="field">
+            <label for="f-tel">Teléfono / WhatsApp <span class="req">*</span></label>
+            <input id="f-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required>
+            <span class="field__error">Ingresá un teléfono de contacto.</span>
+          </div>
+          <div class="field">
+            <label for="f-rubro">Rubro / industria <span class="req">*</span></label>
+            <select id="f-rubro" name="rubro" required>
+              <option value="">Elegí una opción</option>
+              <option>Industria / Manufactura</option>
+              <option>Construcción y obra</option>
+              <option>Logística y transporte</option>
+              <option>Alimentos y bebidas</option>
+              <option>Laboratorio y farmacéutica</option>
+              <option>Química y petroquímica</option>
+              <option>Agro</option>
+              <option>Minería y energía</option>
+              <option>Servicios y mantenimiento</option>
+              <option>Sector público</option>
+              <option>Otro</option>
+            </select>
+            <span class="field__error">Elegí el rubro de tu empresa.</span>
+          </div>
+          <div class="field">
+            <label for="f-tamano">Tamaño de la empresa <span class="req">*</span></label>
+            <select id="f-tamano" name="tamano_empresa" required>
+              <option value="">Elegí una opción</option>
+              <option>1–10</option>
+              <option>11–50</option>
+              <option>51–200</option>
+              <option>+200</option>
+            </select>
+            <span class="field__error">Elegí el tamaño de tu empresa.</span>
+          </div>
+          <div class="field field--full">
+            <label for="f-personas">Cantidad de personas a equipar <span class="req">*</span></label>
+            <select id="f-personas" name="personas_a_equipar" required>
+              <option value="">Elegí una opción</option>
+              <option>1–10</option>
+              <option>11–50</option>
+              <option>51–200</option>
+              <option>+200</option>
+            </select>
+            <span class="field__error">Contanos cuánta gente tenés que vestir.</span>
+          </div>
+          <div class="field field--full">
+            <label for="f-mensaje">Contanos qué necesitás</label>
+            <textarea id="f-mensaje" name="mensaje" rows="3"></textarea>
+          </div>
+          <div class="field field--full">
+            <label class="check"><input type="checkbox" name="consentimiento" required> <span>Acepto que Diforza me contacte y la <a href="#">política de privacidad</a>.</span></label>
+            <span class="field__error">Necesitamos tu consentimiento para contactarte.</span>
+          </div>
+          <div class="field--full">
+            <button type="submit" class="btn btn--solid form-l2__submit">Pedir cotización por volumen <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <p class="form-l2__status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <img src="img/logo-blanco.webp" alt="Diforza">
+    </div>
+    <div class="footer__col">
+      <h4>Categorías</h4>
+      <ul>
+        <li><a href="./" aria-current="page">Indumentaria general de trabajo</a></li>
+        <li><a href="#">EPP y protección industrial</a></li>
+        <li><a href="#">Mamelucos, descartables y ropa de lluvia</a></li>
+        <li><a href="#">Calzado de seguridad y protección de manos</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Secciones</h4>
+      <div class="footer__links">
+        <a href="#">Tienda online</a>
+        <a href="../">Sobre nosotros</a>
+        <a href="#contacto" class="btn btn--solid">Pedir cotización</a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <div class="footer__links">
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5491159569713?text=Hola%2C%20necesito%20cotizar%20indumentaria%20de%20trabajo%20para%20mi%20empresa." class="wa-float js-wa" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<button type="button" class="ph-toggle" id="phToggle" aria-pressed="false">Ocultar marcas</button>
+
+<script>
+(function(){
+  // Header: transparente sobre el hero, navy solido al scrollear.
+  var header = document.getElementById('siteHeader');
+  if (header){
+    var hero = document.querySelector('.hero-v2');
+    var onScroll = function(){
+      if (window.scrollY > 40) header.classList.add('is-stuck');
+      else header.classList.remove('is-stuck');
+      // La copia del operario que va sobre el navbar se desvanece apenas
+      // arranca el scroll, sincronizada con el navbar tomando fondo solido.
+      if (hero) hero.classList.toggle('is-scrolled', window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
+
+    // Mide cuanto del operario queda por encima del borde inferior del
+    // header y se lo pasa al clip-path. Se recalcula en resize porque
+    // header y operario cambian de alto por breakpoint.
+    // --nav-h: alto real del header publicado como variable CSS. De ahi
+    // sale el padding superior del hero, asi el contenido nunca queda
+    // detras del navbar en ninguna altura de pantalla.
+    var setNavH = function(){
+      document.documentElement.style.setProperty('--nav-h', Math.round(header.offsetHeight) + 'px');
+    };
+    setNavH();
+    window.addEventListener('resize', setNavH, {passive:true});
+    window.addEventListener('load', setNavH);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(setNavH);
+
+    var over = hero && hero.querySelector('.hero-v2__worker--over');
+    var measure = function(){
+      setNavH();
+      if (!over) return;
+      // offsetTop/offsetHeight en vez de getBoundingClientRect: no los afecta
+      // el transform de la animacion de entrada, asi la medida es correcta
+      // aunque se tome antes de que el operario termine de entrar.
+      var cut = header.offsetHeight - over.offsetTop;
+      if (!(cut > 4)){ over.setAttribute('data-over','0'); return; }
+      over.removeAttribute('data-over');
+      over.style.setProperty('--over-h', Math.round(cut) + 'px');
+    };
+    measure();
+    window.addEventListener('resize', measure, {passive:true});
+    window.addEventListener('load', measure);
+  }
+})();
+(function(){
+  // Dispara la secuencia de entrada del hero recien cuando la imagen del
+  // operario esta decodificada, para que ninguna capa aparezca a destiempo.
+  // Si algo falla, un timeout de seguridad muestra todo igual.
+  var hero = document.querySelector('.hero-v2');
+  if (!hero) return;
+  var img = hero.querySelector('.hero-v2__worker img');
+  var done = false;
+  function start(){
+    if (done) return;
+    done = true;
+    requestAnimationFrame(function(){ hero.classList.add('is-ready'); });
+  }
+  if (img && img.decode){ img.decode().then(start).catch(start); }
+  else if (img && !img.complete){ img.addEventListener('load', start); img.addEventListener('error', start); }
+  else { start(); }
+  setTimeout(function(){ if (!done){ hero.classList.add('no-js'); start(); } }, 2500);
+})();
+(function(){
+  // Scroll-reveal: activa .is-visible la primera vez que el elemento entra en viewport
+  if ('IntersectionObserver' in window){
+    var revealEls = document.querySelectorAll('.reveal');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.15, rootMargin: '0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+(function(){
+  // Hace "draggeable" con mouse (y touch nativo) cualquier carrusel con
+  // la clase .draggable-carousel — se usa en el de categorías y en el de productos.
+  // El scroll no sigue 1 a 1 al cursor: persigue un target con easing (lerp),
+  // y al soltar sigue un poco por inercia (momentum) antes de frenar.
+  document.querySelectorAll('.draggable-carousel').forEach(function(carousel){
+    carousel.style.scrollBehavior = 'auto'; // el easing lo maneja el rAF, no el CSS
+
+    var isDown = false, startX = 0, startScrollLeft = 0, moved = false;
+    var current = carousel.scrollLeft, target = carousel.scrollLeft;
+    var lastX = 0, lastT = 0, velocity = 0, rafId = null;
+    var EASE = 0.18;
+
+    function maxScroll(){ return carousel.scrollWidth - carousel.clientWidth; }
+    function clamp(v){ return Math.max(0, Math.min(maxScroll(), v)); }
+
+    function loop(){
+      current += (target - current) * EASE;
+      if (Math.abs(target - current) < 0.5){ current = target; }
+      carousel.scrollLeft = current;
+      if (current !== target || isDown){
+        rafId = requestAnimationFrame(loop);
+      } else {
+        rafId = null;
+      }
+    }
+    function startLoop(){ if (!rafId) rafId = requestAnimationFrame(loop); }
+
+    function down(x){
+      isDown = true; moved = false;
+      carousel.classList.add('is-dragging');
+      if (rafId){ cancelAnimationFrame(rafId); rafId = null; }
+      current = carousel.scrollLeft;
+      target = current;
+      startX = x;
+      startScrollLeft = current;
+      lastX = x; lastT = Date.now(); velocity = 0;
+    }
+    function move(x){
+      if(!isDown) return;
+      var walk = x - startX;
+      if (Math.abs(walk) > 4) moved = true;
+      target = clamp(startScrollLeft - walk);
+      var now = Date.now();
+      var dt = now - lastT;
+      if (dt > 0){ velocity = (x - lastX) / dt; } // px por ms
+      lastX = x; lastT = now;
+      startLoop();
+    }
+    function up(){
+      if(!isDown) return;
+      isDown = false;
+      carousel.classList.remove('is-dragging');
+      // pequeño impulso de inercia proyectado a partir de la velocidad del gesto
+      var momentum = -velocity * 180;
+      target = clamp(target + momentum);
+      startLoop();
+    }
+
+    carousel.addEventListener('mousedown', function(e){ down(e.pageX); });
+    window.addEventListener('mouseup', up);
+    window.addEventListener('mousemove', function(e){ if(isDown){ e.preventDefault(); move(e.pageX); } });
+    carousel.addEventListener('touchstart', function(e){ down(e.touches[0].pageX); }, {passive:true});
+    carousel.addEventListener('touchmove', function(e){ move(e.touches[0].pageX); }, {passive:true});
+    carousel.addEventListener('touchend', up);
+    // evita que un drag termine disparando el click de un link/tarjeta
+    carousel.addEventListener('click', function(e){ if(moved){ e.preventDefault(); e.stopPropagation(); } }, true);
+  });
+})();
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('mainNav');
+  if(!toggle || !nav) return;
+  toggle.addEventListener('click', function(){
+    var isOpen = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    toggle.textContent = isOpen ? '✕' : '☰';
+  });
+})();
+(function(){
+  // Carrusel "spotlight" de categorías (sector 3), infinito: el ítem activo
+  // queda centrado y más grande, los vecinos más chicos y difuminados.
+  // Para que nunca haya un hueco en los extremos, se clonan un par de ítems
+  // a cada punta (suficiente para cubrir la distancia máxima visible, 2).
+  // Al cruzar hacia una punta clonada se "teletransporta" sin transición al
+  // ítem real equivalente, dando la ilusión de loop infinito.
+  //
+  // La corrección de posición se dispara con el evento nativo
+  // "transitionend" (no con un setTimeout a ciegas): así siempre reacciona
+  // al final REAL de la animación, sin importar si el usuario clickeó una
+  // vez o encadenó varios clicks rápido. Además, antes de aplicar cualquier
+  // click nuevo, la posición se auto-corrige si ya estaba fuera de rango
+  // (por ejemplo si el usuario clickeó más rápido de lo que tarda la
+  // animación en asentarse) — así "pos" nunca puede alejarse más de un paso
+  // de la zona segura, y nunca se sale del array de ítems.
+  var root = document.getElementById('catsCarousel');
+  if (!root) return;
+  var track = document.getElementById('catsTrack');
+  var realItems = Array.prototype.slice.call(track.children);
+  var N = realItems.length;
+  var CLONES = 2; // = distancia máxima visible (data-dist "2")
+  var label = document.getElementById('catsLabel');
+  var dotsWrap = document.getElementById('catsDots');
+  var prevBtn = document.getElementById('catsPrev');
+  var nextBtn = document.getElementById('catsNext');
+
+  // arma [clones de las últimas N] + [ítems reales] + [clones de las primeras N]
+  var headClones = realItems.slice(N - CLONES).map(function(el){ return el.cloneNode(true); });
+  var tailClones = realItems.slice(0, CLONES).map(function(el){ return el.cloneNode(true); });
+  headClones.forEach(function(el){ track.insertBefore(el, track.firstChild); });
+  tailClones.forEach(function(el){ track.appendChild(el); });
+
+  var items = Array.prototype.slice.call(track.children); // longitud N + 2*CLONES
+  var pos = CLONES; // posición extendida; pos-CLONES = índice real activo
+
+  // dots (uno por categoría real)
+  var dots = realItems.map(function(item, i){
+    var dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'solve-v2__cats-dot';
+    dot.setAttribute('aria-label', 'Ir a ' + item.dataset.name);
+    dot.addEventListener('click', function(){ goTo(CLONES + i); });
+    dotsWrap.appendChild(dot);
+    return dot;
+  });
+
+  function step(){
+    // offsetLeft/offsetWidth ignoran el transform:scale() de cada ítem
+    // (getBoundingClientRect no, y eso rompía el centrado según qué ítem
+    // estuviera en juego y su escala actual en ese momento).
+    if (items.length < 2) return items[0] ? items[0].offsetWidth : 0;
+    return items[1].offsetLeft - items[0].offsetLeft;
+  }
+
+  function render(){
+    var s = step();
+    var itemW = items[0].offsetWidth;
+    var containerW = root.querySelector('.solve-v2__cats-viewport').clientWidth;
+    var offset = (containerW / 2 - itemW / 2) - (pos * s);
+    track.style.transform = 'translateX(' + offset + 'px)';
+
+    items.forEach(function(item, i){
+      var dist = Math.abs(i - pos);
+      item.setAttribute('data-dist', dist >= 3 ? 'far' : String(dist));
+    });
+    var realIndex = ((pos - CLONES) % N + N) % N;
+    dots.forEach(function(dot, i){ dot.classList.toggle('is-active', i === realIndex); });
+    label.textContent = items[realIndex + CLONES].dataset.name;
+  }
+
+  function jumpInstant(newPos){
+    // reubica sin animación (usado para "teletransportar" al ítem real
+    // equivalente cuando la posición cae en la zona clonada)
+    track.style.transition = 'none';
+    pos = newPos;
+    render();
+    void track.offsetWidth; // fuerza reflow antes de reactivar la transición
+    track.style.transition = '';
+  }
+
+  function normalize(){
+    if (pos >= N + CLONES){ jumpInstant(pos - N); }
+    else if (pos < CLONES){ jumpInstant(pos + N); }
+  }
+
+  // corrige ANTES de aplicar un nuevo movimiento si "pos" ya había quedado
+  // fuera de rango (típico de clicks encadenados más rápido que la animación)
+  function settleIfNeeded(){
+    if (pos >= N + CLONES || pos < CLONES){
+      var real = ((pos - CLONES) % N + N) % N;
+      pos = CLONES + real;
+    }
+  }
+
+  function step_(delta){
+    settleIfNeeded();
+    pos += delta;
+    render();
+  }
+
+  function goTo(newPos){
+    settleIfNeeded();
+    pos = newPos;
+    render();
+  }
+
+  track.addEventListener('transitionend', function(e){
+    if (e.target !== track || e.propertyName !== 'transform') return;
+    normalize();
+  });
+
+  prevBtn.addEventListener('click', function(){ step_(-1); });
+  nextBtn.addEventListener('click', function(){ step_(1); });
+  items.forEach(function(item, i){ item.addEventListener('click', function(){ goTo(i); }); });
+  window.addEventListener('resize', render);
+
+  render();
+})();
+(function(){
+  // Parallax: el fondo de .destacado-v2 se mueve, el texto queda fijo/normal
+  var section = document.querySelector('.destacado-v2');
+  var bg = section ? section.querySelector('.destacado-v2__bg') : null;
+  if (!section || !bg) return;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) return;
+
+  var ticking = false;
+  function update(){
+    ticking = false;
+    var rect = section.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    // progreso: -1 (sector debajo del viewport) .. 1 (sector arriba del viewport)
+    var progress = (rect.top + rect.height / 2 - vh / 2) / ((vh + rect.height) / 2);
+    progress = Math.max(-1, Math.min(1, progress));
+    var shift = progress * 75; // px de recorrido del fondo, texto no se mueve
+    bg.style.transform = 'translateY(' + shift.toFixed(1) + 'px)';
+  }
+  function onScroll(){
+    if (!ticking){
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  update();
+})();
+
+/* ==========================================================================
+   L2 · JS propio (el de arriba es el de la home, sin cambios)
+   ========================================================================== */
+(function(){
+  // Marcas [VALIDAR]/[PENDIENTE]: mostrar/ocultar (preferencia por visitante)
+  var btn = document.getElementById('phToggle');
+  if (!btn) return;
+  var root = document.documentElement;
+  function apply(off){
+    root.classList.toggle('ph-off', off);
+    btn.textContent = off ? 'Mostrar marcas' : 'Ocultar marcas';
+    btn.setAttribute('aria-pressed', off ? 'true' : 'false');
+  }
+  var saved = false;
+  try { saved = localStorage.getItem('dif-ph-off') === '1'; } catch(e){}
+  apply(saved);
+  btn.addEventListener('click', function(){
+    var off = !root.classList.contains('ph-off');
+    apply(off);
+    try { localStorage.setItem('dif-ph-off', off ? '1' : '0'); } catch(e){}
+  });
+})();
+
+(function(){
+  // Precarga de producto S5 -> formulario + WhatsApp (doc 17 §17)
+  var WA_NUM = '5491159569713'; // [PENDIENTE] número definitivo de Diego (doc 05 §5B)
+  var WA_BASE = 'Hola, necesito cotizar indumentaria de trabajo para mi empresa.';
+  var hidden = document.getElementById('productoInteres');
+  var box = document.getElementById('quoting');
+  var nameEl = document.getElementById('quotingName');
+  var clear = document.getElementById('quotingClear');
+  var waLinks = document.querySelectorAll('.js-wa');
+  var target = document.getElementById('form-cotizacion-wrap');
+
+  function setWa(text){
+    var href = 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(text);
+    waLinks.forEach(function(a){ a.href = href; });
+  }
+  function setProduct(label){
+    if (!hidden) return;
+    hidden.value = label || '';
+    if (label){
+      nameEl.textContent = label;
+      box.hidden = false;
+      setWa('Hola, quiero cotizar ' + label + ' para mi empresa.');
+    } else {
+      box.hidden = true;
+      setWa(WA_BASE);
+    }
+  }
+  document.querySelectorAll('[data-js="consultar"]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var n = b.getAttribute('data-prod-nombre') || '';
+      var c = b.getAttribute('data-prod-codigo') || '';
+      setProduct(c ? n + ' (Cód. ' + c + ')' : n);
+      if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+  if (clear) clear.addEventListener('click', function(){ setProduct(''); });
+  setWa(WA_BASE);
+})();
+
+(function(){
+  // Catálogo: los CTAs "Descargar catálogo" expanden el form corto (no popup)
+  var toggle = document.querySelector('.catalog-l2__toggle');
+  var panel = document.getElementById('catalogPanel');
+  var wrap = document.getElementById('catalogo');
+  if (!toggle || !panel) return;
+  function open(v){
+    panel.hidden = !v;
+    toggle.setAttribute('aria-expanded', v ? 'true' : 'false');
+  }
+  toggle.addEventListener('click', function(){ open(panel.hidden); });
+  document.querySelectorAll('[data-js="catalogo"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      open(true);
+      wrap.scrollIntoView({behavior:'smooth', block:'start'});
+      setTimeout(function(){ var f = panel.querySelector('input:not([type=hidden]):not([tabindex="-1"])'); if (f) f.focus({preventScroll:true}); }, 600);
+    });
+  });
+})();
+
+(function(){
+  // Validación al salir del campo (blur) + envío con estado loading.
+  // [PENDIENTE] endpoint propio + webhook al CRM (doc 05 §7, doc 17 §19).
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  function fieldOf(el){ return el.closest('.field'); }
+  function valid(el){
+    if (el.type === 'checkbox') return !el.required || el.checked;
+    var v = (el.value || '').trim();
+    if (el.required && !v) return false;
+    if (el.type === 'email' && v && !EMAIL.test(v)) return false;
+    if (el.type === 'tel' && v && v.replace(/\D/g,'').length < 8) return false;
+    return true;
+  }
+  function check(el){
+    var f = fieldOf(el); if (!f) return true;
+    var ok = valid(el);
+    f.classList.toggle('is-invalid', !ok);
+    el.setAttribute('aria-invalid', ok ? 'false' : 'true');
+    return ok;
+  }
+  document.querySelectorAll('.js-lead-form').forEach(function(form){
+    var inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+    inputs.forEach(function(el){
+      el.addEventListener('blur', function(){ check(el); });
+      // Si el campo ya estaba marcado con error, se re-valida mientras se
+      // escribe: asi el error desaparece antes del blur y el layout no se
+      // mueve debajo del cursor cuando el usuario hace clic en otro campo.
+      var recheck = function(){ if (fieldOf(el) && fieldOf(el).classList.contains('is-invalid')) check(el); };
+      el.addEventListener('input', recheck);
+      el.addEventListener('change', recheck);
+    });
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var first = null;
+      inputs.forEach(function(el){ if (!check(el) && !first) first = el; });
+      if (first){ first.focus(); return; }
+      var hp = form.querySelector('input[name="website"]');
+      if (hp && hp.value) return; // bot
+      var btn = form.querySelector('button[type="submit"]');
+      var status = form.querySelector('.form-l2__status');
+      var label = btn.innerHTML;
+      btn.disabled = true; btn.textContent = 'Enviando…';
+      // Prototipo: simula el envío. Acá va el fetch al endpoint real; si
+      // falla, se conserva lo cargado y se muestra error recuperable.
+      setTimeout(function(){
+        var isCat = form.id === 'form-catalogo';
+        form.innerHTML =
+          '<div class="form-l2__ok" role="status">' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>' +
+          (isCat
+            ? '<h3>¡Listo!</h3><p>Te enviamos el catálogo de indumentaria por email.</p>'
+            : '<h3>¡Gracias! Recibimos tu pedido.</h3><p>Un responsable de cuenta te va a contactar para armar la cotización.</p>') +
+          '</div>';
+      }, 900);
+      if (status) status.textContent = '';
+      void label;
+    });
+  });
+})();
+</script>
+</body>
+</html>
