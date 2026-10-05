@@ -1,0 +1,21 @@
+
+/* ==========================================================================
+   L2 · Hero mobile (<768): la foto deja de ir detras del texto con velo
+   blanco (no se veia el producto) y pasa a ser una franja propia debajo
+   de los CTAs, sin velo, con un fundido suave arriba para unirla al fondo.
+   ========================================================================== */
+@media(max-width:767px){
+  .hero-v2--l2{flex-direction:column;--band-h:clamp(250px,72vw,360px);}
+  .hero-v2--l2 .hero-v2__inner{order:1;padding-bottom:28px;}
+  .hero-v2--l2 .hero-v2__bg{position:relative;inset:auto;order:2;flex:none;width:100%;height:var(--band-h);}
+  .hero-v2--l2 .hero-v2__bg::after{background:linear-gradient(to bottom, #eef1f4 0%, rgba(238,241,244,0) 30%);}
+  .hero-v2--l2 .hero-v2__bg img{object-position:50% 72%;}
+  /* los reflejos diagonales solo sobre la zona de texto, no sobre la foto */
+  .hero-v2--l2 .hero-v2__shine{bottom:var(--band-h);}
+  /* sin operario al costado: la bajada y los beneficios usan todo el ancho */
+  .hero-v2--l2 .hero-v2__lead,
+  .hero-v2--l2 .hero-v2__benefits{max-width:100%;}
+}
+@media(min-width:600px) and (max-width:767px){
+  .hero-v2--l2 .hero-v2__bg img{object-position:85% 78%;}
+}

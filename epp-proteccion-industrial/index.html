@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Indumentaria de Trabajo para Empresas | Diforza</title>
-<meta name="description" content="Camisas, pantalones, camperas y conjuntos de trabajo. Talles completos, stock permanente y personalización con el logo de tu empresa.">
-<!-- [PENDIENTE] canonical definitivo: https://<dominio>/indumentaria-de-trabajo/ -->
+<title>EPP Certificado para Industria | Diforza</title>
+<meta name="description" content="Protección craneal, auditiva, ocular, respiratoria y de manos con certificación IRAM. Stock permanente y asesoramiento por puesto de trabajo.">
+<!-- [VALIDAR] title y description mencionan certificación: sujetos a confirmación de Diforza (doc 06 §4) -->
+<!-- [PENDIENTE] canonical definitivo: https://<dominio>/epp-proteccion-industrial/ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -963,11 +964,11 @@ img{max-width:100%;display:block;}
 }
 
 /* ==========================================================================
-   L2 · INDUMENTARIA DE TRABAJO  (/indumentaria-de-trabajo/)
+   L3 · EPP Y PROTECCION INDUSTRIAL  (/epp-proteccion-industrial/)
    Todo lo de arriba es la base compartida de la home v2 (copiada tal cual,
    con las rutas de imagen reescritas a img/). Desde acá: solo lo propio
-   de L2. Mobile-first, breakpoints canonicos 768/1024/1280/1440/1700.
-   Prefijo de clases: *-l2.
+   de L3. Mobile-first, breakpoints canonicos 768/1024/1280/1440/1700.
+   Prefijo de clases: *-l3.
    ========================================================================== */
 
 /* ---- Marcas de placeholder ([VALIDAR] / [PENDIENTE]) ----
@@ -989,85 +990,85 @@ html.ph-off .ph{display:none;}
   cursor:pointer;box-shadow:0 6px 18px rgba(0,26,52,.14);
 }
 
-/* ---- Encabezados de seccion comunes en L2 ---- */
-.h2-l2{
+/* ---- Encabezados de seccion comunes en L3 ---- */
+.h2-l3{
   font-family:"Poppins","Montserrat",Arial,sans-serif;font-weight:800;
   font-size:28px;line-height:1.12;letter-spacing:-.02em;color:var(--navy);margin:0;
 }
-@media(min-width:768px){ .h2-l2{font-size:36px;} }
-@media(min-width:1280px){ .h2-l2{font-size:44px;} }
-.eyebrow-l2{
+@media(min-width:768px){ .h2-l3{font-size:36px;} }
+@media(min-width:1280px){ .h2-l3{font-size:44px;} }
+.eyebrow-l3{
   display:flex;align-items:center;gap:14px;
   font-weight:600;font-size:10px;color:var(--navy);letter-spacing:.12em;
   text-transform:uppercase;margin:0 0 14px;
 }
-.eyebrow-l2::before{content:"";width:20px;height:2px;background:var(--orange);flex:none;border-radius:2px;}
-@media(min-width:768px){ .eyebrow-l2{font-size:11px;letter-spacing:.16em;} .eyebrow-l2::before{width:36px;height:3px;} }
-@media(min-width:1280px){ .eyebrow-l2{font-size:12px;margin-bottom:16px;} }
+.eyebrow-l3::before{content:"";width:20px;height:2px;background:var(--orange);flex:none;border-radius:2px;}
+@media(min-width:768px){ .eyebrow-l3{font-size:11px;letter-spacing:.16em;} .eyebrow-l3::before{width:36px;height:3px;} }
+@media(min-width:1280px){ .eyebrow-l3{font-size:12px;margin-bottom:16px;} }
 
 /* ---- S1 · Hero (modificador del hero-v2 de la home) ----
-   El H1 de L2 es ~60% mas largo que el de la home: se baja el cuerpo en
+   El H1 de L3 es ~60% mas largo que el de la home: se baja el cuerpo en
    todos los breakpoints para que quede en 4 renglones en desktop. */
-.hero-v2--l2 .hero-v2__copy h1{font-size:31px;line-height:1.08;}
-@media(min-width:768px){ .hero-v2--l2 .hero-v2__copy h1{font-size:42px;} }
-@media(min-width:1024px){ .hero-v2--l2 .hero-v2__copy h1{font-size:38px;} }
-@media(min-width:1280px){ .hero-v2--l2 .hero-v2__copy h1{font-size:44px;} }
-@media(min-width:1440px){ .hero-v2--l2 .hero-v2__copy h1{font-size:52px;} }
-@media(min-width:1700px){ .hero-v2--l2 .hero-v2__copy h1{font-size:58px;} }
+.hero-v2--l3 .hero-v2__copy h1{font-size:31px;line-height:1.08;}
+@media(min-width:768px){ .hero-v2--l3 .hero-v2__copy h1{font-size:42px;} }
+@media(min-width:1024px){ .hero-v2--l3 .hero-v2__copy h1{font-size:38px;} }
+@media(min-width:1280px){ .hero-v2--l3 .hero-v2__copy h1{font-size:44px;} }
+@media(min-width:1440px){ .hero-v2--l3 .hero-v2__copy h1{font-size:52px;} }
+@media(min-width:1700px){ .hero-v2--l3 .hero-v2__copy h1{font-size:58px;} }
 /* >=1440: la columna de texto usa el 49% del contenedor, sin el tope de
    690px de la home. Con el tope (min(48%,690px) = 630px) el H1 a 58px
    caia en 5 renglones desde 1700px; con 49% (643px) queda en 4. */
-@media(min-width:1440px){ .hero-v2--l2 .hero-v2__copy{max-width:49%;} }
-.hero-v2--l2 .hero-v2__benefits li{align-items:center;}
-/* Fondo propio de L2: la persona (pantalon cargo azul marino) esta en la
-   foto, a ~65% del ancho. Se ancla abajo para no cortarle los botines. */
-.hero-v2--l2 .hero-v2__bg img{object-position:68% bottom;}
-/* <1024: la home usa un velo blanco vertical parejo; aca el velo va de
-   izquierda a derecha para que la copy se lea y la prenda siga visible. */
-/* Notebook 13-14": la foto se recorta menos a los costados; se corre la
-   persona a la derecha para que no quede debajo del H1 */
-@media(min-width:1024px) and (max-width:1279px){
-  .hero-v2--l2 .hero-v2__bg img{object-position:22% bottom;}
+@media(min-width:1440px){ .hero-v2--l3 .hero-v2__copy{max-width:49%;} }
+.hero-v2--l3 .hero-v2__benefits li{align-items:center;}
+/* Fondo de L3 (operario en torno, foto elegida por el usuario 30/09).
+   auditivo + cono a la derecha, con fundido blanco a la izquierda ya
+   incluido en la foto). Se ancla a la derecha para no cortar los EPP. */
+.hero-v2--l3 .hero-v2__bg img{object-position:right center;}
+/* >=1024: la foto es muy apaisada (2,6:1) y a pantalla completa los EPP
+   quedaban enormes y debajo del H1. Se limita a la mitad derecha y se
+   funde a blanco por la izquierda con una mascara. */
+@media(min-width:1024px){
+  .hero-v2--l3{background:#fff;}
+  .hero-v2--l3 .hero-v2__bg img{object-position:72% center;}
+  .hero-v2--l3 .hero-v2__bg{left:16%;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 24%);mask-image:linear-gradient(90deg,transparent 0,#000 24%);}
 }
-.hero-v2--l2 .hero-v2__bg picture{display:block;width:100%;height:100%;}
+.hero-v2--l3 .hero-v2__bg picture{display:block;width:100%;height:100%;}
 @media(max-width:1023px){
-  .hero-v2--l2 .hero-v2__bg img{object-position:60% bottom;}
-  .hero-v2--l2 .hero-v2__bg::after{
+  .hero-v2--l3 .hero-v2__bg img{object-position:right bottom;}
+  .hero-v2--l3 .hero-v2__bg::after{
     background:linear-gradient(90deg, rgb(255 255 255) 0%, rgb(255 255 255 / 44%) 55%, rgb(255 255 255 / 0%) 100%);
   }
 }
-
-/* <600px carga bg-hero-indumentaria-m.webp (recorte 640x768 de x=460..1100
-   del original): se centra para mostrar el mismo encuadre que antes */
+/* <600px: misma bg-hero-epp.webp (05/10), encuadrada en el operario */
 @media(max-width:599px){
-  .hero-v2--l2 .hero-v2__bg img{object-position:50% bottom;}
-  /* Solo con la imagen vertical (bg-hero-indumentaria-m.webp, <600px) */
-  .hero-v2--l2 .hero-v2__inner{padding-bottom:40px;width:95%;}
+  .hero-v2--l3 .hero-v2__bg img{object-position:57% center;}
+  .hero-v2--l3 .hero-v2__inner{padding-bottom:40px;width:95%;}
 }
 
 /* ---- S2 · Franja de confianza ---- */
-.trust-l2{background:#f2f2f2;padding:28px var(--pad);}
-@media(min-width:1024px){ .trust-l2{padding:34px var(--pad);} }
-@media(min-width:1280px){ .trust-l2{padding:40px var(--pad);} }
-.trust-l2__inner{display:flex;flex-direction:column;gap:24px;}
-@media(min-width:1024px){ .trust-l2__inner{flex-direction:row;align-items:center;justify-content:space-between;gap:48px;} }
-.trust-l2__text{
+.trust-l3{background:#f2f2f2;padding:28px var(--pad);}
+@media(min-width:1024px){ .trust-l3{padding:34px var(--pad);} }
+@media(min-width:1280px){ .trust-l3{padding:40px var(--pad);} }
+.trust-l3__inner{display:flex;flex-direction:column;gap:24px;}
+@media(min-width:1024px){ .trust-l3__inner{flex-direction:row;align-items:center;justify-content:space-between;gap:48px;} }
+.trust-l3__text{
   margin:0;padding-left:16px;border-left:3px solid var(--orange);
   font-weight:600;font-size:15px;line-height:1.5;color:var(--navy);max-width:44ch;
 }
-@media(min-width:1280px){ .trust-l2__text{font-size:17px;} }
-.trust-l2__brands{display:flex;align-items:stretch;gap:28px;}
-@media(min-width:1280px){ .trust-l2__brands{gap:48px;} }
-.trust-l2__brand{display:grid;grid-template-rows:auto 56px auto;justify-items:center;align-items:center;gap:8px;}
-.trust-l2__brand + .trust-l2__brand{padding-left:28px;border-left:1px solid #d9d9d9;}
-@media(min-width:1280px){ .trust-l2__brand + .trust-l2__brand{padding-left:48px;} .trust-l2__brand{grid-template-rows:auto 64px auto;} }
-.trust-l2__label{margin:0;font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);white-space:nowrap;}
-.trust-l2__brand img{height:48px;width:auto;}
-.trust-l2__brand--main img{height:56px;}
-@media(min-width:1280px){ .trust-l2__brand img{height:52px;} .trust-l2__brand--main img{height:64px;} }
-.trust-l2__brand img.is-sm{height:34px;}
-@media(min-width:1280px){ .trust-l2__brand img.is-sm{height:40px;} }
-.trust-l2__sub{margin:0;font-weight:500;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);white-space:nowrap;}
+@media(min-width:1280px){ .trust-l3__text{font-size:17px;} }
+.trust-l3__brands{display:flex;align-items:stretch;gap:28px;}
+@media(min-width:1280px){ .trust-l3__brands{gap:48px;} }
+.trust-l3__brand{display:grid;grid-template-rows:auto 56px auto;justify-items:center;align-items:center;gap:8px;}
+.trust-l3__brand + .trust-l3__brand{padding-left:28px;border-left:1px solid #d9d9d9;}
+@media(min-width:1280px){ .trust-l3__brand + .trust-l3__brand{padding-left:48px;} .trust-l3__brand{grid-template-rows:auto 64px auto;} }
+.trust-l3__label{margin:0;font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);white-space:nowrap;}
+.trust-l3__brand img{height:48px;width:auto;}
+.trust-l3__brand--main img{height:56px;}
+@media(min-width:1280px){ .trust-l3__brand img{height:52px;} .trust-l3__brand--main img{height:64px;} }
+.trust-l3__brand img.is-sm{height:34px;}
+@media(min-width:1280px){ .trust-l3__brand img.is-sm{height:40px;} }
+.trust-l3__sub{margin:0;font-weight:500;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);white-space:nowrap;}
 
 /* ---- S3 · Problema: integrado dentro de .dif-v2 (bloque naranja de la home) ---- */
 .dif-v2__problem-title{
@@ -1092,223 +1093,223 @@ html.ph-off .ph{display:none;}
 }
 
 /* ---- S4 · Solucion: linea completa ---- */
-.line-l2{background:var(--navy);color:#fff;padding:56px var(--pad);position:relative;overflow:hidden;}
-@media(min-width:1024px){ .line-l2{padding:80px var(--pad);} }
-@media(min-width:1280px){ .line-l2{padding:104px var(--pad);} }
+.line-l3{background:var(--navy);color:#fff;padding:56px var(--pad);position:relative;overflow:hidden;}
+@media(min-width:1024px){ .line-l3{padding:80px var(--pad);} }
+@media(min-width:1280px){ .line-l3{padding:104px var(--pad);} }
 /* Reflejo diagonal sutil, mismo lenguaje que los paneles del hero */
-.line-l2::before{
+.line-l3::before{
   content:"";position:absolute;top:-20%;bottom:-20%;left:62%;right:-40%;
   transform:skewX(-28deg);background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
   pointer-events:none;
 }
-.line-l2__inner{position:relative;display:flex;flex-direction:column;gap:36px;}
-@media(min-width:1024px){ .line-l2__inner{flex-direction:row;align-items:center;gap:64px;} }
-@media(min-width:1280px){ .line-l2__inner{gap:104px;} }
-.line-l2__copy{flex:1 1 42%;min-width:0;}
-.line-l2__copy .eyebrow-l2{color:rgba(255,255,255,.8);}
-.line-l2__copy .h2-l2{color:#fff;max-width:13ch;margin-bottom:20px;}
-.line-l2__copy p{margin:0 0 28px;font-weight:300;font-size:15px;line-height:1.6;color:rgba(255,255,255,.86);max-width:40ch;}
-@media(min-width:1280px){ .line-l2__copy p{font-size:17px;margin-bottom:34px;} }
-.line-l2__copy .btn{display:inline-flex;align-items:center;gap:10px;}
-.line-l2__copy .btn svg{width:15px;height:15px;flex:none;}
-.line-l2__list{flex:1 1 58%;min-width:0;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;column-gap:32px;}
-@media(min-width:480px){ .line-l2__list{grid-template-columns:1fr 1fr;} }
-@media(min-width:1280px){ .line-l2__list{column-gap:48px;} }
-.line-l2__list li{
+.line-l3__inner{position:relative;display:flex;flex-direction:column;gap:36px;}
+@media(min-width:1024px){ .line-l3__inner{flex-direction:row;align-items:center;gap:64px;} }
+@media(min-width:1280px){ .line-l3__inner{gap:104px;} }
+.line-l3__copy{flex:1 1 42%;min-width:0;}
+.line-l3__copy .eyebrow-l3{color:rgba(255,255,255,.8);}
+.line-l3__copy .h2-l3{color:#fff;max-width:21ch;margin-bottom:20px;}
+.line-l3__copy p{margin:0 0 28px;font-weight:300;font-size:15px;line-height:1.6;color:rgba(255,255,255,.86);max-width:40ch;}
+@media(min-width:1280px){ .line-l3__copy p{font-size:17px;margin-bottom:34px;} }
+.line-l3__copy .btn{display:inline-flex;align-items:center;gap:10px;}
+.line-l3__copy .btn svg{width:15px;height:15px;flex:none;}
+.line-l3__list{flex:1 1 58%;min-width:0;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;column-gap:32px;}
+@media(min-width:480px){ .line-l3__list{grid-template-columns:1fr 1fr;} }
+@media(min-width:1280px){ .line-l3__list{column-gap:48px;} }
+.line-l3__list li{
   display:flex;align-items:center;gap:14px;padding:15px 0;
   border-bottom:1px solid rgba(255,255,255,.14);
   font-weight:600;font-size:14px;line-height:1.35;color:#fff;
 }
-@media(min-width:1280px){ .line-l2__list li{font-size:16px;padding:19px 0;gap:18px;} }
-.line-l2__ic{
+@media(min-width:1280px){ .line-l3__list li{font-size:16px;padding:19px 0;gap:18px;} }
+.line-l3__ic{
   flex:none;width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);
   display:flex;align-items:center;justify-content:center;transition:background-color .2s ease,border-color .2s ease;
 }
-.line-l2__ic svg{width:21px;height:21px;color:#fff;stroke-width:1.5;}
-@media(min-width:1280px){ .line-l2__ic{width:46px;height:46px;} .line-l2__ic svg{width:23px;height:23px;} }
-.line-l2__list li:hover .line-l2__ic{background:var(--orange);border-color:var(--orange);}
+.line-l3__ic svg{width:21px;height:21px;color:#fff;stroke-width:1.5;}
+@media(min-width:1280px){ .line-l3__ic{width:46px;height:46px;} .line-l3__ic svg{width:23px;height:23px;} }
+.line-l3__list li:hover .line-l3__ic{background:var(--orange);border-color:var(--orange);}
 
 /* ---- S5 · Productos destacados ----
    Mobile/tablet: carrusel horizontal draggeable (mismo JS que la home).
    >=1024: grilla 4x2 — son 8 fichas con datos, conviene verlas todas. */
-.prod-l2{background:#f2f4f6;padding-bottom:52px;}
-@media(min-width:1024px){ .prod-l2{padding-bottom:72px;} }
-@media(min-width:1280px){ .prod-l2{padding-bottom:96px;} }
-.prod-l2__list{
+.prod-l3{background:#f2f4f6;padding-bottom:52px;}
+@media(min-width:1024px){ .prod-l3{padding-bottom:72px;} }
+@media(min-width:1280px){ .prod-l3{padding-bottom:96px;} }
+.prod-l3__list{
   margin-top:28px;padding:6px var(--pad) 12px;overflow-x:auto;-webkit-overflow-scrolling:touch;
   scrollbar-width:none;cursor:grab;user-select:none;
 }
-.prod-l2__list::-webkit-scrollbar{display:none;}
-.prod-l2__list.is-dragging{cursor:grabbing;}
-.prod-l2__track{display:flex;gap:16px;width:max-content;}
+.prod-l3__list::-webkit-scrollbar{display:none;}
+.prod-l3__list.is-dragging{cursor:grabbing;}
+.prod-l3__track{display:flex;gap:16px;width:max-content;}
 @media(min-width:1024px){
-  .prod-l2__list{overflow:visible;cursor:auto;user-select:auto;margin-top:40px;}
-  .prod-l2__track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;width:auto;}
+  .prod-l3__list{overflow:visible;cursor:auto;user-select:auto;margin-top:40px;}
+  .prod-l3__track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;width:auto;}
 }
-@media(min-width:1280px){ .prod-l2__track{gap:24px;} }
+@media(min-width:1280px){ .prod-l3__track{gap:24px;} }
 
-.pcard-l2{
+.pcard-l3{
   position:relative;flex:none;width:250px;background:#fff;border:1px solid #e6eaee;border-radius:14px;
   overflow:hidden;display:flex;flex-direction:column;
   box-shadow:0 4px 18px rgba(0,53,104,.06);transition:transform .2s ease,box-shadow .2s ease;
 }
-.pcard-l2:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,53,104,.12);}
-@media(min-width:768px){ .pcard-l2{width:270px;} }
-@media(min-width:1024px){ .pcard-l2{width:auto;} }
-.pcard-l2__media{
+.pcard-l3:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,53,104,.12);}
+@media(min-width:768px){ .pcard-l3{width:270px;} }
+@media(min-width:1024px){ .pcard-l3{width:auto;} }
+.pcard-l3__media{
   position:relative;height:190px;background:#f6f8fa;display:flex;align-items:center;justify-content:center;
   border-bottom:1px solid #eef1f4;
 }
-@media(min-width:1280px){ .pcard-l2__media{height:220px;} }
-.pcard-l2__media img{height:86%;width:auto;max-width:86%;object-fit:contain;-webkit-user-drag:none;pointer-events:none;}
+@media(min-width:1280px){ .pcard-l3__media{height:220px;} }
+.pcard-l3__media img{height:86%;width:auto;max-width:86%;object-fit:contain;-webkit-user-drag:none;pointer-events:none;}
 /* Placeholder de foto: silueta de la prenda + etiqueta, hasta tener la foto real en azul marino */
-.pcard-l2__media.is-ph{background:repeating-linear-gradient(135deg,#f6f8fa 0 12px,#f1f4f7 12px 24px);}
-.pcard-l2__media.is-ph svg{width:92px;height:92px;color:#9fb2c5;stroke-width:1;}
-@media(min-width:1280px){ .pcard-l2__media.is-ph svg{width:108px;height:108px;} }
-.pcard-l2__phlabel{
+.pcard-l3__media.is-ph{background:repeating-linear-gradient(135deg,#f6f8fa 0 12px,#f1f4f7 12px 24px);}
+.pcard-l3__media.is-ph svg{width:92px;height:92px;color:#9fb2c5;stroke-width:1;}
+@media(min-width:1280px){ .pcard-l3__media.is-ph svg{width:108px;height:108px;} }
+.pcard-l3__phlabel{
   position:absolute;bottom:10px;left:50%;transform:translateX(-50%);
   font-weight:600;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#8a9bab;white-space:nowrap;
 }
-html.ph-off .pcard-l2__phlabel{display:none;}
-.pcard-l2 .products-v2__badge{z-index:2;background:#fff;box-shadow:0 2px 8px rgba(0,53,104,.08);}
-.pcard-l2__body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:12px;flex:1;}
-@media(min-width:1280px){ .pcard-l2__body{padding:20px 22px 24px;} }
-.pcard-l2__name{margin:0;font-family:"Montserrat",Arial,sans-serif;font-weight:700;font-size:13px;line-height:1.35;letter-spacing:.03em;text-transform:uppercase;color:var(--navy);}
-@media(min-width:1280px){ .pcard-l2__name{font-size:14px;} }
-.pcard-l2__code{margin:-6px 0 0;font-weight:400;font-size:12px;color:var(--gray);}
-.pcard-l2__specs{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;padding-top:12px;border-top:1px solid #eef1f4;}
-.pcard-l2__specs dt{font-weight:600;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#8a96a3;padding-top:2px;}
-.pcard-l2__specs dd{margin:0;font-weight:500;font-size:12.5px;line-height:1.4;color:var(--navy);}
-.pcard-l2__cta{
+html.ph-off .pcard-l3__phlabel{display:none;}
+.pcard-l3 .products-v2__badge{z-index:2;background:#fff;box-shadow:0 2px 8px rgba(0,53,104,.08);}
+.pcard-l3__body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:12px;flex:1;}
+@media(min-width:1280px){ .pcard-l3__body{padding:20px 22px 24px;} }
+.pcard-l3__name{margin:0;font-family:"Montserrat",Arial,sans-serif;font-weight:700;font-size:13px;line-height:1.35;letter-spacing:.03em;text-transform:uppercase;color:var(--navy);}
+@media(min-width:1280px){ .pcard-l3__name{font-size:14px;} }
+.pcard-l3__code{margin:-6px 0 0;font-weight:400;font-size:12px;color:var(--gray);}
+.pcard-l3__specs{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;padding-top:12px;border-top:1px solid #eef1f4;}
+.pcard-l3__specs dt{font-weight:600;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#8a96a3;padding-top:2px;}
+.pcard-l3__specs dd{margin:0;font-weight:500;font-size:12.5px;line-height:1.4;color:var(--navy);}
+.pcard-l3__cta{
   margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;
   background:var(--orange);color:#fff;border:none;border-radius:999px;cursor:pointer;
   padding:12px 20px;font:700 11.5px/1 "Montserrat",Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase;
   transition:transform .2s ease,box-shadow .2s ease;
 }
-.pcard-l2__cta:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(255,126,52,.32);}
-.pcard-l2__cta svg{width:13px;height:13px;}
+.pcard-l3__cta:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(255,126,52,.32);}
+.pcard-l3__cta svg{width:13px;height:13px;}
 
 /* ---- S7 · Prueba social (dentro del sector diferenciales) ---- */
 /* Va dentro de .dif-v2 (.dif-v2__reviews), fondo blanco como en la home */
-.reviews-l2__grid{display:grid;grid-template-columns:1fr;gap:20px;}
-@media(min-width:1024px){ .reviews-l2__grid{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:24px;align-items:stretch;} }
-.quote-l2{
+.reviews-l3__grid{display:grid;grid-template-columns:1fr;gap:20px;}
+@media(min-width:1024px){ .reviews-l3__grid{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:24px;align-items:stretch;} }
+.quote-l3{
   position:relative;margin:0;background:var(--navy);color:#fff;border-radius:16px;
   padding:34px 26px 28px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:26px;
 }
-@media(min-width:1280px){ .quote-l2{padding:52px 48px 44px;} }
-.quote-l2::before{
+@media(min-width:1280px){ .quote-l3{padding:52px 48px 44px;} }
+.quote-l3::before{
   content:"\201C";position:absolute;top:-28px;right:18px;
   font-family:"Poppins",Arial,sans-serif;font-weight:800;font-size:180px;line-height:1;color:var(--orange);opacity:.9;
 }
-.quote-l2 p{position:relative;margin:0;font-family:"Poppins","Montserrat",Arial,sans-serif;font-weight:600;font-size:20px;line-height:1.4;max-width:30ch;}
-@media(min-width:1280px){ .quote-l2 p{font-size:27px;} }
-.quote-l2 footer{display:flex;align-items:center;gap:14px;}
-.quote-l2 .gcard__avatar{width:46px;height:46px;}
-.quote-l2 cite{font-style:normal;display:block;font-weight:700;font-size:15px;}
-.quote-l2 small{display:flex;align-items:center;gap:8px;margin-top:3px;font-size:12px;color:rgba(255,255,255,.7);}
-.quote-l2 .greviews__stars svg{width:14px;height:14px;}
-.reviews-l2__side{display:flex;flex-direction:column;gap:16px;}
-.reviews-l2__side .gcard{width:auto;max-width:none;flex:1;}
+.quote-l3 p{position:relative;margin:0;font-family:"Poppins","Montserrat",Arial,sans-serif;font-weight:600;font-size:20px;line-height:1.4;max-width:30ch;}
+@media(min-width:1280px){ .quote-l3 p{font-size:27px;} }
+.quote-l3 footer{display:flex;align-items:center;gap:14px;}
+.quote-l3 .gcard__avatar{width:46px;height:46px;}
+.quote-l3 cite{font-style:normal;display:block;font-weight:700;font-size:15px;}
+.quote-l3 small{display:flex;align-items:center;gap:8px;margin-top:3px;font-size:12px;color:rgba(255,255,255,.7);}
+.quote-l3 .greviews__stars svg{width:14px;height:14px;}
+.reviews-l3__side{display:flex;flex-direction:column;gap:16px;}
+.reviews-l3__side .gcard{width:auto;max-width:none;flex:1;}
 @media(max-width:1023px){
-  .reviews-l2__side{flex-direction:row;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--pad) * -1);padding:4px var(--pad) 8px;scrollbar-width:none;}
-  .reviews-l2__side::-webkit-scrollbar{display:none;}
-  .reviews-l2__side .gcard{flex:none;width:82vw;max-width:340px;}
+  .reviews-l3__side{flex-direction:row;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--pad) * -1);padding:4px var(--pad) 8px;scrollbar-width:none;}
+  .reviews-l3__side::-webkit-scrollbar{display:none;}
+  .reviews-l3__side .gcard{flex:none;width:82vw;max-width:340px;}
 }
 
 /* ---- S8 · Normativa (reusa el banner .solve-v2 de la home) ---- */
-.solve-v2--l2 .solve-v2__marks strong{margin-bottom:0;}
+.solve-v2--l3 .solve-v2__marks strong{margin-bottom:0;}
 
 /* ---- S9 · Como trabajamos ---- */
-.steps-l2{background:#fff;padding:56px var(--pad);}
-@media(min-width:1024px){ .steps-l2{padding:80px var(--pad);} }
-@media(min-width:1280px){ .steps-l2{padding:104px var(--pad);} }
-.steps-l2 .h2-l2{margin-bottom:36px;}
-@media(min-width:1280px){ .steps-l2 .h2-l2{margin-bottom:56px;} }
-.steps-l2__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:28px;counter-reset:step;}
-@media(min-width:768px){ .steps-l2__list{grid-template-columns:1fr 1fr;gap:36px 40px;} }
-@media(min-width:1280px){ .steps-l2__list{grid-template-columns:repeat(4,1fr);gap:40px;} }
-.steps-l2__item{position:relative;display:flex;gap:18px;align-items:flex-start;}
-@media(min-width:1280px){ .steps-l2__item{flex-direction:column;gap:22px;} }
-.steps-l2__n{
+.steps-l3{background:#fff;padding:56px var(--pad);}
+@media(min-width:1024px){ .steps-l3{padding:80px var(--pad);} }
+@media(min-width:1280px){ .steps-l3{padding:104px var(--pad);} }
+.steps-l3 .h2-l3{margin-bottom:36px;}
+@media(min-width:1280px){ .steps-l3 .h2-l3{margin-bottom:56px;} }
+.steps-l3__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:28px;counter-reset:step;}
+@media(min-width:768px){ .steps-l3__list{grid-template-columns:1fr 1fr;gap:36px 40px;} }
+@media(min-width:1280px){ .steps-l3__list{grid-template-columns:repeat(4,1fr);gap:40px;} }
+.steps-l3__item{position:relative;display:flex;gap:18px;align-items:flex-start;}
+@media(min-width:1280px){ .steps-l3__item{flex-direction:column;gap:22px;} }
+.steps-l3__n{
   flex:none;position:relative;z-index:1;width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff;
   display:flex;align-items:center;justify-content:center;
   font-family:"Poppins",Arial,sans-serif;font-weight:800;font-size:17px;
   box-shadow:0 0 0 6px #fff;
 }
-.steps-l2__item:last-child .steps-l2__n{background:var(--orange);}
+.steps-l3__item:last-child .steps-l3__n{background:var(--orange);}
 @media(min-width:1280px){
-  .steps-l2__n{width:56px;height:56px;font-size:19px;}
+  .steps-l3__n{width:56px;height:56px;font-size:19px;}
   /* linea que une los pasos */
-  .steps-l2__item:not(:last-child)::after{content:"";position:absolute;top:28px;left:56px;right:-40px;height:2px;background:repeating-linear-gradient(90deg,#c9d4df 0 8px,transparent 8px 14px);}
+  .steps-l3__item:not(:last-child)::after{content:"";position:absolute;top:28px;left:56px;right:-40px;height:2px;background:repeating-linear-gradient(90deg,#c9d4df 0 8px,transparent 8px 14px);}
 }
-.steps-l2__item p{margin:0;padding-top:4px;font-weight:500;font-size:15px;line-height:1.5;color:var(--navy);max-width:34ch;}
-@media(min-width:1280px){ .steps-l2__item p{font-size:17px;padding-top:0;} }
+.steps-l3__item p{margin:0;padding-top:4px;font-weight:500;font-size:15px;line-height:1.5;color:var(--navy);max-width:34ch;}
+@media(min-width:1280px){ .steps-l3__item p{font-size:17px;padding-top:0;} }
 
 /* ---- S10 · Garantia (borrador: no se publica hasta que Diforza valide) ---- */
-.guarantee-l2{background:#f2f4f6;padding:40px var(--pad);}
-@media(min-width:1280px){ .guarantee-l2{padding:56px var(--pad);} }
-.guarantee-l2__inner{display:flex;flex-direction:column;gap:22px;}
-@media(min-width:1024px){ .guarantee-l2__inner{flex-direction:row;align-items:center;gap:48px;} }
-.guarantee-l2__title{margin:0;flex:none;font-family:"Poppins",Arial,sans-serif;font-weight:800;font-size:22px;color:var(--navy);}
-@media(min-width:1280px){ .guarantee-l2__title{font-size:26px;} }
-.guarantee-l2__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:16px;flex:1;}
-@media(min-width:768px){ .guarantee-l2__list{grid-template-columns:repeat(3,1fr);gap:24px;} }
-.guarantee-l2__list li{display:flex;gap:12px;align-items:flex-start;font-weight:400;font-size:14px;line-height:1.5;color:var(--navy);}
-@media(min-width:1280px){ .guarantee-l2__list li{font-size:15px;} }
-.guarantee-l2__list svg{flex:none;width:26px;height:26px;color:var(--orange);stroke-width:1.6;}
+.guarantee-l3{background:#f2f4f6;padding:40px var(--pad);}
+@media(min-width:1280px){ .guarantee-l3{padding:56px var(--pad);} }
+.guarantee-l3__inner{display:flex;flex-direction:column;gap:22px;}
+@media(min-width:1024px){ .guarantee-l3__inner{flex-direction:row;align-items:center;gap:48px;} }
+.guarantee-l3__title{margin:0;flex:none;font-family:"Poppins",Arial,sans-serif;font-weight:800;font-size:22px;color:var(--navy);}
+@media(min-width:1280px){ .guarantee-l3__title{font-size:26px;} }
+.guarantee-l3__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:16px;flex:1;}
+@media(min-width:768px){ .guarantee-l3__list{grid-template-columns:repeat(3,1fr);gap:24px;} }
+.guarantee-l3__list li{display:flex;gap:12px;align-items:flex-start;font-weight:400;font-size:14px;line-height:1.5;color:var(--navy);}
+@media(min-width:1280px){ .guarantee-l3__list li{font-size:15px;} }
+.guarantee-l3__list svg{flex:none;width:26px;height:26px;color:var(--orange);stroke-width:1.6;}
 
-/* ---- S11 · FAQ (reusa .faq; en L2 no va pegada a otro sector blanco) ---- */
-.faq--l2{padding-top:56px;}
-@media(min-width:1024px){ .faq--l2{padding-top:88px;padding-bottom:104px;} }
-@media(min-width:1280px){ .faq--l2{padding-top:104px;padding-bottom:120px;} }
+/* ---- S11 · FAQ (reusa .faq; en L3 no va pegada a otro sector blanco) ---- */
+.faq--l3{padding-top:56px;}
+@media(min-width:1024px){ .faq--l3{padding-top:88px;padding-bottom:104px;} }
+@media(min-width:1280px){ .faq--l3{padding-top:104px;padding-bottom:120px;} }
 
 /* ---- S12 · CTA final + formulario ---- */
-.cta-l2{background:var(--navy);color:#fff;padding:56px var(--pad);position:relative;overflow:hidden;scroll-margin-top:70px;}
-@media(min-width:1024px){ .cta-l2{padding:88px var(--pad);} }
-@media(min-width:1280px){ .cta-l2{padding:112px var(--pad);} }
-.cta-l2::before{
+.cta-l3{background:var(--navy);color:#fff;padding:56px var(--pad);position:relative;overflow:hidden;scroll-margin-top:70px;}
+@media(min-width:1024px){ .cta-l3{padding:88px var(--pad);} }
+@media(min-width:1280px){ .cta-l3{padding:112px var(--pad);} }
+.cta-l3::before{
   content:"";position:absolute;top:-20%;bottom:-20%;left:-30%;right:70%;
   transform:skewX(-28deg);background:linear-gradient(90deg,rgba(255,255,255,.015),rgba(255,255,255,.05));pointer-events:none;
 }
-.cta-l2__inner{position:relative;display:grid;grid-template-columns:1fr;gap:36px;}
-@media(min-width:1024px){ .cta-l2__inner{grid-template-columns:minmax(0,.9fr) minmax(0,1.15fr);gap:56px;align-items:start;} }
-@media(min-width:1280px){ .cta-l2__inner{gap:96px;} }
-.cta-l2__copy .h2-l2{color:#fff;margin-bottom:18px;max-width:14ch;}
-@media(min-width:1440px){ .cta-l2__copy .h2-l2{font-size:52px;} }
-.cta-l2__reply{display:flex;align-items:center;gap:10px;margin:0 0 28px;font-weight:500;font-size:15px;color:rgba(255,255,255,.88);}
-.cta-l2__reply::before{content:"";width:9px;height:9px;border-radius:50%;background:#35c46f;box-shadow:0 0 0 4px rgba(53,196,111,.2);flex:none;}
-.cta-l2__mini{
+.cta-l3__inner{position:relative;display:grid;grid-template-columns:1fr;gap:36px;}
+@media(min-width:1024px){ .cta-l3__inner{grid-template-columns:minmax(0,.9fr) minmax(0,1.15fr);gap:56px;align-items:start;} }
+@media(min-width:1280px){ .cta-l3__inner{gap:96px;} }
+.cta-l3__copy .h2-l3{color:#fff;margin-bottom:18px;max-width:14ch;}
+@media(min-width:1440px){ .cta-l3__copy .h2-l3{font-size:52px;} }
+.cta-l3__reply{display:flex;align-items:center;gap:10px;margin:0 0 28px;font-weight:500;font-size:15px;color:rgba(255,255,255,.88);}
+.cta-l3__reply::before{content:"";width:9px;height:9px;border-radius:50%;background:#35c46f;box-shadow:0 0 0 4px rgba(53,196,111,.2);flex:none;}
+.cta-l3__mini{
   margin:0 0 28px;padding:20px 22px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
 }
-.cta-l2__mini p{margin:0 0 12px;font-weight:300;font-size:14px;line-height:1.6;color:rgba(255,255,255,.9);}
-.cta-l2__mini cite{font-style:normal;font-weight:700;font-size:13px;color:#fff;}
-.cta-l2__mini cite span{font-weight:400;color:rgba(255,255,255,.6);}
+.cta-l3__mini p{margin:0 0 12px;font-weight:300;font-size:14px;line-height:1.6;color:rgba(255,255,255,.9);}
+.cta-l3__mini cite{font-style:normal;font-weight:700;font-size:13px;color:#fff;}
+.cta-l3__mini cite span{font-weight:400;color:rgba(255,255,255,.6);}
 .btn--wa{display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(255,255,255,.4);color:#fff;}
 .btn--wa:hover{border-color:#25d366;}
 .btn--wa svg{width:18px;height:18px;color:#25d366;}
 
 /* Catalogo: formulario corto e independiente, colapsable (doc 05 §6) */
-.catalog-l2{margin-top:32px;border-top:1px solid rgba(255,255,255,.14);padding-top:24px;scroll-margin-top:90px;}
-.catalog-l2__toggle{
+.catalog-l3{margin-top:32px;border-top:1px solid rgba(255,255,255,.14);padding-top:24px;scroll-margin-top:90px;}
+.catalog-l3__toggle{
   display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;
   background:none;border:none;padding:0;cursor:pointer;text-align:left;color:#fff;
   font:700 14px/1.4 "Montserrat",Arial,sans-serif;letter-spacing:.02em;
 }
-.catalog-l2__toggle small{display:block;font-weight:300;font-size:13px;color:rgba(255,255,255,.7);letter-spacing:0;margin-top:2px;}
-.catalog-l2__toggle .chev{flex:none;width:18px;height:18px;transition:transform .2s ease;}
-.catalog-l2__toggle[aria-expanded="true"] .chev{transform:rotate(180deg);}
-.catalog-l2__panel{margin-top:20px;}
-.catalog-l2__panel[hidden]{display:none;}
+.catalog-l3__toggle small{display:block;font-weight:300;font-size:13px;color:rgba(255,255,255,.7);letter-spacing:0;margin-top:2px;}
+.catalog-l3__toggle .chev{flex:none;width:18px;height:18px;transition:transform .2s ease;}
+.catalog-l3__toggle[aria-expanded="true"] .chev{transform:rotate(180deg);}
+.catalog-l3__panel{margin-top:20px;}
+.catalog-l3__panel[hidden]{display:none;}
 
 /* Tarjeta del formulario de cotizacion */
-.form-l2{background:#fff;color:var(--navy);border-radius:18px;padding:26px 20px;box-shadow:0 24px 60px rgba(0,10,25,.35);scroll-margin-top:90px;}
-@media(min-width:768px){ .form-l2{padding:34px 32px;} }
-@media(min-width:1280px){ .form-l2{padding:42px 40px;} }
-.form-l2__title{margin:0 0 4px;font-family:"Poppins",Arial,sans-serif;font-weight:700;font-size:19px;}
-.form-l2__note{margin:0 0 22px;font-weight:300;font-size:13px;color:var(--gray);}
-.form-l2__grid{display:grid;grid-template-columns:1fr;gap:16px;}
-@media(min-width:768px){ .form-l2__grid{grid-template-columns:1fr 1fr;gap:18px 18px;} }
+.form-l3{background:#fff;color:var(--navy);border-radius:18px;padding:26px 20px;box-shadow:0 24px 60px rgba(0,10,25,.35);scroll-margin-top:90px;}
+@media(min-width:768px){ .form-l3{padding:34px 32px;} }
+@media(min-width:1280px){ .form-l3{padding:42px 40px;} }
+.form-l3__title{margin:0 0 4px;font-family:"Poppins",Arial,sans-serif;font-weight:700;font-size:19px;}
+.form-l3__note{margin:0 0 22px;font-weight:300;font-size:13px;color:var(--gray);}
+.form-l3__grid{display:grid;grid-template-columns:1fr;gap:16px;}
+@media(min-width:768px){ .form-l3__grid{grid-template-columns:1fr 1fr;gap:18px 18px;} }
 .field{display:flex;flex-direction:column;gap:6px;min-width:0;}
 .field--full{grid-column:1 / -1;}
 .field label{font-weight:600;font-size:12px;letter-spacing:.03em;color:var(--navy);}
@@ -1331,28 +1332,28 @@ html.ph-off .pcard-l2__phlabel{display:none;}
 .check input{flex:none;width:18px;height:18px;margin:1px 0 0;accent-color:var(--navy);}
 .check a{color:var(--navy);}
 .hp-field{position:absolute !important;left:-9999px !important;width:1px;height:1px;overflow:hidden;}
-.form-l2__submit{width:100%;justify-content:center;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;margin-top:4px;}
-.form-l2__submit[disabled]{opacity:.7;cursor:progress;transform:none;box-shadow:none;}
-.form-l2__submit svg{width:15px;height:15px;}
-.form-l2__status{margin:12px 0 0;font-size:13px;font-weight:500;}
-.form-l2__status.is-error{color:#c62828;}
-.form-l2__ok{text-align:center;padding:24px 8px;}
-.form-l2__ok svg{width:56px;height:56px;color:#25a55f;margin:0 auto 14px;}
-.form-l2__ok h3{margin:0 0 8px;font-family:"Poppins",Arial,sans-serif;font-weight:700;font-size:22px;color:var(--navy);}
-.form-l2__ok p{margin:0;font-weight:300;font-size:15px;color:var(--gray);}
+.form-l3__submit{width:100%;justify-content:center;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;margin-top:4px;}
+.form-l3__submit[disabled]{opacity:.7;cursor:progress;transform:none;box-shadow:none;}
+.form-l3__submit svg{width:15px;height:15px;}
+.form-l3__status{margin:12px 0 0;font-size:13px;font-weight:500;}
+.form-l3__status.is-error{color:#c62828;}
+.form-l3__ok{text-align:center;padding:24px 8px;}
+.form-l3__ok svg{width:56px;height:56px;color:#25a55f;margin:0 auto 14px;}
+.form-l3__ok h3{margin:0 0 8px;font-family:"Poppins",Arial,sans-serif;font-weight:700;font-size:22px;color:var(--navy);}
+.form-l3__ok p{margin:0;font-weight:300;font-size:15px;color:var(--gray);}
 
 /* Bloque "Estas cotizando: {producto}" (precarga desde S5, doc 17 §17) */
-.quoting-l2{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 18px;padding:12px 14px;border-radius:10px;background:#fff4ec;border:1px solid #ffd3b8;font-size:13.5px;color:var(--navy);}
-.quoting-l2[hidden]{display:none;}
-.quoting-l2 strong{font-weight:700;}
-.quoting-l2 button{flex:none;background:none;border:none;cursor:pointer;color:#c2561a;font:600 12px/1 "Montserrat",Arial,sans-serif;text-decoration:underline;}
+.quoting-l3{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 18px;padding:12px 14px;border-radius:10px;background:#fff4ec;border:1px solid #ffd3b8;font-size:13.5px;color:var(--navy);}
+.quoting-l3[hidden]{display:none;}
+.quoting-l3 strong{font-weight:700;}
+.quoting-l3 button{flex:none;background:none;border:none;cursor:pointer;color:#c2561a;font:600 12px/1 "Montserrat",Arial,sans-serif;text-decoration:underline;}
 
 /* Formulario de catalogo sobre fondo navy */
-.catalog-l2 .field label{color:#fff;}
-.catalog-l2 .check{color:rgba(255,255,255,.75);}
-.catalog-l2 .check a{color:#fff;}
-.catalog-l2 .form-l2__grid{gap:14px;}
-.catalog-l2 .form-l2__ok{background:#fff;border-radius:14px;}
+.catalog-l3 .field label{color:#fff;}
+.catalog-l3 .check{color:rgba(255,255,255,.75);}
+.catalog-l3 .check a{color:#fff;}
+.catalog-l3 .form-l3__grid{gap:14px;}
+.catalog-l3 .form-l3__ok{background:#fff;border-radius:14px;}
 
 /* ---- WhatsApp flotante (mobile/tablet, permanente — doc 02 regla 2) ---- */
 .wa-float{
@@ -1365,25 +1366,86 @@ html.ph-off .pcard-l2__phlabel{display:none;}
 
 /* ---- Mobile (<768): CTAs del mismo tamano que los de la home ---- */
 @media(max-width:767px){
-  .line-l2__copy .btn,.cta-l2 .btn--wa{padding:11px 20px;font-size:11px;}
-  .solve-v2--l2 .solve-v2__copy h2{font-size:32px;}
-  .form-l2__submit{padding:15px 20px;font-size:12px;}
+  .line-l3__copy .btn,.cta-l3 .btn--wa{padding:11px 20px;font-size:11px;}
+  .solve-v2--l3 .solve-v2__copy h2{font-size:32px;}
+  .form-l3__submit{padding:15px 20px;font-size:12px;}
 }
 
 /* ---- Ajustes post-verificacion ---- */
 /* El checkbox no hereda el estilo de input de texto de .field */
 .field .check input{width:18px;height:18px;min-height:0;padding:0;border-radius:4px;box-shadow:none;}
 .field label.check{font-weight:400;font-size:12.5px;letter-spacing:0;color:#4a5a6a;}
-.catalog-l2 .field label.check{color:rgba(255,255,255,.75);}
+.catalog-l3 .field label.check{color:rgba(255,255,255,.75);}
 /* Foto real sobre fondo blanco (los JPG de producto vienen con fondo blanco) */
-.pcard-l2__media:not(.is-ph){background:#fff;}
+.pcard-l3__media:not(.is-ph){background:#fff;}
 /* Notebook 13-14": la columna del hero es angosta; los 3 beneficios van apilados */
 @media(min-width:1024px) and (max-width:1279px){
-  .hero-v2--l2 .hero-v2__benefits{flex-direction:column;gap:10px;margin-bottom:28px;}
-  .hero-v2--l2 .hero-v2__benefits li{padding-left:0;border-left:none;}
+  .hero-v2--l3 .hero-v2__benefits{flex-direction:column;gap:10px;margin-bottom:28px;}
+  .hero-v2--l3 .hero-v2__benefits li{padding-left:0;border-left:none;}
 }
 @media(max-width:767px){
   .ph-toggle{padding:6px 10px;font-size:9px;opacity:.92;}
+}
+
+/* ==========================================================================
+   Propio de L3 (no existe en L2)
+   ========================================================================== */
+/* S2 · franja: Libus (socio) + ZIAO (propia) + grupo de distribuidas */
+/* <1440 el texto va arriba y las marcas abajo; >=1440 en una sola fila */
+@media(min-width:1024px) and (max-width:1439px){ .trust-l3__inner{flex-direction:column;align-items:flex-start;gap:24px;} .trust-l3__brands{flex-wrap:nowrap;} }
+@media(min-width:1440px){ .trust-l3__text{max-width:30ch;} .trust-l3__brands{flex-wrap:nowrap;gap:36px;} .trust-l3__brand + .trust-l3__brand{padding-left:36px;} }
+.trust-l3__brands{flex-wrap:wrap;row-gap:22px;}
+.trust-l3__brand--group{grid-template-rows:auto auto auto;}
+@media(min-width:1280px){ .trust-l3__brand--group{grid-template-rows:auto auto auto;} }
+.trust-l3__logos{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 22px;min-height:56px;}
+.trust-l3__logos img.is-sm{height:30px;}
+@media(min-width:1280px){ .trust-l3__logos img.is-sm{height:34px;} }
+.trust-l3__word{display:inline-flex;align-items:center;font-family:"Poppins",Arial,sans-serif;font-weight:800;font-size:17px;color:#6b7785;letter-spacing:.01em;}
+/* <768: Libus | ZIAO en una fila y el grupo de distribuidas abajo */
+@media(max-width:767px){
+  .trust-l3__brands{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;}
+  .trust-l3__brand + .trust-l3__brand{padding-left:18px;}
+  .trust-l3__brand--group{grid-column:1 / -1;padding-left:0 !important;border-left:none !important;border-top:1px solid #d9d9d9;padding-top:18px;}
+  .trust-l3__sub{white-space:normal;text-align:center;max-width:22ch;line-height:1.5;}
+  /* Libus y ZIAO con el mismo alto visual (05/10) */
+  .trust-l3__brand--main img,.trust-l3__brand img.is-sm{height:36px;}
+  .trust-l3__logos img.is-sm{height:28px;}
+}
+
+/* S4 · lista de categorias con alcance */
+.line-l3__list--desc li{align-items:flex-start;}
+.line-l3__txt{display:flex;flex-direction:column;gap:4px;padding-top:2px;}
+.line-l3__txt strong{font-weight:600;}
+.line-l3__txt small{font-weight:300;font-size:12.5px;line-height:1.45;color:rgba(255,255,255,.72);}
+@media(min-width:1280px){ .line-l3__txt small{font-size:13.5px;} .line-l3__txt{padding-top:4px;} }
+
+/* S5 · foto provisoria: la etiqueta va sobre la foto */
+.pcard-l3__media:not(.is-ph) .pcard-l3__phlabel{background:#fff4ec;color:#c2561a;border:1px dashed var(--orange);border-radius:4px;padding:2px 6px;}
+
+/* S12 · campo multi-seleccion: chips */
+.field--group{border:none;margin:0;padding:0;min-width:0;}
+.field--group legend{padding:0;margin-bottom:10px;font-weight:600;font-size:12px;letter-spacing:.03em;color:var(--navy);}
+.field--group legend small{font-weight:400;color:var(--gray);margin-left:6px;letter-spacing:0;}
+.chips-l3{display:flex;flex-wrap:wrap;gap:8px;}
+.chip-l3{position:relative;cursor:pointer;}
+.chip-l3 input{position:absolute;opacity:0;width:1px;height:1px;}
+.chip-l3 span{
+  display:inline-flex;align-items:center;min-height:40px;padding:8px 14px;border-radius:999px;
+  border:1px solid #cfd8e1;background:#fff;color:var(--navy);
+  font:500 13px/1.2 "Montserrat",Arial,sans-serif;transition:background-color .15s ease,border-color .15s ease,color .15s ease;
+}
+.chip-l3:hover span{border-color:var(--navy);}
+.chip-l3 input:checked + span{background:var(--navy);border-color:var(--navy);color:#fff;}
+.chip-l3 input:checked + span::before{content:"✓";margin-right:6px;font-weight:700;color:var(--orange);}
+.chip-l3 input:focus-visible + span{box-shadow:0 0 0 3px rgba(255,126,52,.35);}
+.field--group.is-invalid .chip-l3 span{border-color:#c62828;}
+
+/* S2 · Libus y ZIAO con el mismo alto también en tablet/desktop (05/10) */
+@media(min-width:768px){
+  .trust-l3__brand--main img,.trust-l3__brand > img.is-sm{height:40px;}
+}
+@media(min-width:1280px){
+  .trust-l3__brand--main img,.trust-l3__brand > img.is-sm{height:44px;}
 }
 </style>
 </head>
@@ -1406,56 +1468,53 @@ html.ph-off .pcard-l2__phlabel{display:none;}
 <main>
 
 <!-- ======================================================================
-     S1 · HERO  (reusa .hero-v2 de la home + modificador --l2)
-     Fondo propio: img/bg-hero-indumentaria.webp, la
-     persona ya viene en la foto, así que no se usa la capa del operario.
+     S1 · HERO  (reusa .hero-v2 de la home + modificador --l3)
+     Fondo: img/bg-hero-epp.webp (operario con antiparras y guantes en torno,
+     elegido por el usuario 30/09). Misma imagen en mobile (05/10).
      ====================================================================== -->
-<section class="hero-v2 hero-v2--l2">
+<section class="hero-v2 hero-v2--l3">
   <div class="hero-v2__bg">
-    <!-- <600px: recorte vertical centrado en la persona (19 KB); resto: foto completa (26 KB) -->
     <picture>
-      <source media="(max-width:599px)" srcset="img/bg-hero-indumentaria-m.webp" width="640" height="768">
-      <img src="img/bg-hero-indumentaria.webp" width="1376" height="768" fetchpriority="high" alt="Operario caminando con pantalón cargo Diforza azul marino y botines de seguridad">
+      <img src="img/bg-hero-epp.webp" width="1376" height="768" fetchpriority="high" alt="Operario con antiparras y guantes de seguridad trabajando en un torno">
     </picture>
   </div>
   <div class="hero-v2__shine" aria-hidden="true">
     <div class="panel"></div>
     <div class="panel panel--light"></div>
   </div>
-  <!-- En L2 no hay operario recortado aparte: la persona ya viene en el fondo -->
 
   <p class="hero-v2__claim hero-anim hero-anim--4">Equipamos<br>el trabajo<br>real</p>
 
   <div class="hero-v2__inner">
     <div class="hero-v2__copy">
-      <p class="hero-v2__eyebrow hero-anim hero-anim--1">Indumentaria de trabajo para empresas</p>
+      <p class="hero-v2__eyebrow hero-anim hero-anim--1">EPP y protección industrial</p>
 
-      <h1 class="hero-anim hero-anim--2">Indumentaria de trabajo para toda tu planta, <span class="accent">con talles y reposición asegurada</span></h1>
+      <h1 class="hero-anim hero-anim--2">EPP certificado para cada riesgo de tu planta, <span class="accent">siempre disponible</span></h1>
 
-      <p class="hero-v2__lead hero-anim hero-anim--3">Camisas, pantalones, camperas y conjuntos de trabajo. Stock permanente, talles completos y la posibilidad de personalizar con el logo de tu empresa.<span class="ph">Validar personalización</span></p>
+      <p class="hero-v2__lead hero-anim hero-anim--3">Protección craneal, auditiva, ocular, facial, respiratoria, de manos y anticaída. Con la documentación técnica que tus registros de SRT necesitan.<span class="ph">Validar</span></p>
 
       <ul class="hero-v2__benefits hero-anim hero-anim--3">
         <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16.5 16.5 3 21 7.5 7.5 21z"/><path d="M7 12.5l1.8 1.8M9.8 9.7l1.8 1.8M12.6 6.9l1.8 1.8"/></svg>
-          <span>Talles del XS al XXXL<span class="ph">Validar</span></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l7.4 2.9v6.1c0 4.3-3.1 7.6-7.4 9.4-4.3-1.8-7.4-5.1-7.4-9.4V5.7z"/><path d="M8.9 11.9l2.2 2.2 4-4.4"/></svg>
+          <span>Certificación IRAM<span class="ph">Validar alcance</span></span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 11.5 11 8.5a2.1 2.1 0 0 1 3 0l.5.5"/><path d="M2.5 11 6 7.5l4 1.5M21.5 11 18 7.5l-4 1.5"/><path d="M6 12.5l4.5 4.5a1.5 1.5 0 0 0 2.1 0l5.4-5.4"/><path d="M9 14.5l1.5-1.5M11 16.5l1.5-1.5"/></svg>
+          Socios de Libus
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.9l8.2 4.3v9.6L12 21.1l-8.2-4.3V7.2z"/><path d="M3.8 7.2L12 11.5l8.2-4.3M12 11.5v9.6"/></svg>
           Stock permanente
         </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 6.4h10.2v9.1H2.6z"/><path d="M12.8 9.4h3.6l2.9 2.9v3.2h-6.5z"/><circle cx="6.6" cy="17.6" r="1.9"/><circle cx="16.2" cy="17.6" r="1.9"/><path d="M8.5 17.6h5.8"/></svg>
-          Envíos a todo el país
-        </li>
       </ul>
 
       <div class="ctas hero-anim hero-anim--4">
-        <a href="#contacto" class="btn btn--solid">Pedir cotización por volumen
+        <a href="#contacto" class="btn btn--solid">Pedir cotización
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="#catalogo" class="btn btn--outline" data-js="catalogo">
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v9m0 0l-3.5-3.5M10 12l3.5-3.5M4 15.5h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Descargar catálogo de indumentaria
+          Descargar catálogo de EPP
         </a>
       </div>
     </div>
@@ -1463,177 +1522,177 @@ html.ph-off .pcard-l2__phlabel{display:none;}
 </section>
 
 <!-- ======================================================================
-     S2 · FRANJA DE CONFIANZA — Diforza destacado (línea propia) + Ombú
+     S2 · FRANJA DE CONFIANZA — versión conservadora (elegida 30/09).
+     La versión fuerte (IRAM + SRT) solo si Diforza confirma el alcance.
+     [PENDIENTE] logos de certificación (vectores) y logos Gamisol y W|S.
      ====================================================================== -->
-<section class="trust-l2">
-  <div class="trust-l2__inner reveal">
-    <p class="trust-l2__text">Indumentaria de trabajo con las especificaciones técnicas que tu actividad requiere.<span class="ph">Validar normas aplicables</span></p>
-    <div class="trust-l2__brands">
-      <div class="trust-l2__brand trust-l2__brand--main">
-        <p class="trust-l2__label">Marca propia</p>
-        <img src="img/brand-diforza.webp" alt="Diforza">
-        <p class="trust-l2__sub">Trabajo que protege</p>
+<section class="trust-l3">
+  <div class="trust-l3__inner reveal">
+    <p class="trust-l3__text">Cada elemento se entrega con su ficha técnica y su respaldo de ensayo, para que lo sumes a tus registros de seguridad.</p>
+    <div class="trust-l3__brands">
+      <div class="trust-l3__brand trust-l3__brand--main">
+        <p class="trust-l3__label">Socio estratégico oficial</p>
+        <img src="img/brand-libus.webp" alt="Libus">
       </div>
-      <div class="trust-l2__brand">
-        <p class="trust-l2__label">Marca distribuida</p>
-        <img src="img/logo-ombu.webp" alt="Ombú" class="is-sm">
-        <p class="trust-l2__sub">&nbsp;</p>
+      <div class="trust-l3__brand">
+        <p class="trust-l3__label">Marca propia</p>
+        <img src="img/brand-ziao.webp" alt="ZIAO" class="is-sm">
+      </div>
+      <div class="trust-l3__brand trust-l3__brand--group">
+        <p class="trust-l3__label">Marcas distribuidas</p>
+        <div class="trust-l3__logos">
+          <img src="img/brand-glovex.webp" alt="Glovex" class="is-sm">
+          <img src="img/brand-skiway.webp" alt="Skiway" class="is-sm">
+          <span class="trust-l3__word">Gamisol<span class="ph">Logo</span></span>
+          <span class="trust-l3__word">W|S<span class="ph">Logo</span></span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ======================================================================
-     S4 · SOLUCIÓN — línea completa (+ CTA de mitad de página)
+     S4 · SOLUCIÓN — cobertura por riesgo (+ CTA de mitad de página)
      ====================================================================== -->
-<section class="line-l2 on-dark">
-  <div class="line-l2__inner">
-    <div class="line-l2__copy reveal">
-      <h2 class="h2-l2">Línea completa de indumentaria de trabajo</h2>
-      <p>Con continuidad de línea: la prenda que estandarizás hoy la vas a poder reponer el año que viene.</p>
-      <a href="#contacto" class="btn btn--solid">Pedir cotización por volumen <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<section class="line-l3 on-dark">
+  <div class="line-l3__inner">
+    <div class="line-l3__copy reveal">
+      <h2 class="h2-l3">Cobertura completa, riesgo por riesgo</h2>
+      <p>Un solo proveedor para todo el mapa de riesgos de tu planta.</p>
+      <a href="#contacto" class="btn btn--solid">Pedir cotización <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
-    <ul class="line-l2__list reveal reveal--1">
-      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3 4 5.5 5.5 10 8 9v12h8V9l2.5 1L20 5.5 15 3l-3 3z"/><path d="M12 6v15M9 3l3 3 3-3"/></svg></span><span>Camisas de trabajo</span></li>
-      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10l1.2 18h-4.4L12 10.5 10.2 21H5.8z"/><path d="M7 6h10"/></svg></span><span>Pantalones y cargos</span></li>
-      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8v5l2.5 1.5V21h-4.5v-7h-4v7H5.5V9.5L8 8z"/><path d="M10 3v4h4V3M8 8h8"/></svg></span><span>Conjuntos y ambos</span></li>
-      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3 5 5.2V21h5V11M15 3l4 2.2V21h-5V11"/><path d="M9 3l3 3 3-3M12 6v15M7 14h2.5M14.5 14H17"/></svg></span><span>Camperas y abrigo</span></li>
-      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 4 3 7l2 4 3-1v10h8V10l3 1 2-4-5.5-3c-.6 1.4-1.9 2.2-3.5 2.2S9.1 5.4 8.5 4z"/></svg></span><span>Remeras y chombas</span></li>
-      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v4l3.5 2.2V21h-13V9.2L9 7z"/><path d="M5.5 10.5H3M18.5 10.5H21M9 14h6v3.5H9z"/></svg></span><span>Delantales y guardapolvos</span></li>
-      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 5 6v15h5v-8h4v8h5V6l-3-3-2 4h-4z"/><path d="M5 14h5M14 14h5M5 17h5M14 17h5"/></svg></span><span>Indumentaria de alta visibilidad</span></li>
-      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 2 1.4 3 2.5 3-.5-3 0-5.5 0-8z"/></svg></span><span>Indumentaria ignífuga / especial<span class="ph">Validar disponibilidad</span></span></li>
+    <ul class="line-l3__list line-l3__list--desc reveal reveal--1">
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h18"/><path d="M5 17a7 7 0 0 1 14 0"/><path d="M10 10.6V5.6a1.6 1.6 0 0 1 1.6-1.6h.8A1.6 1.6 0 0 1 14 5.6v5"/></svg></span><span class="line-l3__txt"><strong>Craneal</strong><small>Cascos, barbijos de casco, accesorios — línea Libus completa</small></span></li>
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 14v-3a7 7 0 0 1 14 0v3"/><rect x="3" y="13" width="4.5" height="7.5" rx="2.2"/><rect x="16.5" y="13" width="4.5" height="7.5" rx="2.2"/></svg></span><span class="line-l3__txt"><strong>Auditiva</strong><small>Endoaurales, de copa, con arnés</small></span></li>
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="14" r="3.5"/><circle cx="17.5" cy="14" r="3.5"/><path d="M10 14h4M3.2 12.6 5 8M20.8 12.6 19 8"/></svg></span><span class="line-l3__txt"><strong>Ocular</strong><small>Antiparras, lentes de seguridad, filtros</small></span></li>
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5h14v8.5a7 7 0 0 1-14 0z"/><path d="M3.5 5h17M9 9.5h6"/></svg></span><span class="line-l3__txt"><strong>Facial</strong><small>Máscaras, protectores faciales, soldadura</small></span></li>
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9c2.5-2.2 9.5-2.2 12 0l-1 6.5c-1.2 3.3-8.8 3.3-10 0z"/><path d="M6 10 2.5 8M18 10l3.5-2"/><circle cx="12" cy="13" r="2"/></svg></span><span class="line-l3__txt"><strong>Respiratoria</strong><small>Semimáscaras, máscaras, filtros y descartables</small></span></li>
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21v-3.5L4.6 13a1.6 1.6 0 0 1 2.5-2L8.5 12.5V5.5a1.5 1.5 0 0 1 3 0V11V4a1.5 1.5 0 0 1 3 0v7V5.5a1.5 1.5 0 0 1 3 0V16c0 2.8-2 5-4.8 5z"/></svg></span><span class="line-l3__txt"><strong>Manos</strong><small>Guantes según riesgo mecánico, químico, térmico y de corte</small></span></li>
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 9V6.5a3.5 3.5 0 0 1 7 0V17a3.5 3.5 0 0 1-7 0v-4"/><path d="M6.5 9h4"/><path d="M12 3v0"/></svg></span><span class="line-l3__txt"><strong>Anticaída</strong><small>Arneses, cabos de vida, líneas y accesorios</small></span></li>
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.8 4h4.4l4.3 15H5.5z"/><path d="M8.2 10h7.6M6.9 14.5h10.2M3 19h18"/></svg></span><span class="line-l3__txt"><strong>Vialidad y señalización</strong><small>Alta visibilidad, conos, señalización</small></span></li>
     </ul>
   </div>
 </section>
 
 <!-- ======================================================================
      S5 · PRODUCTOS DESTACADOS — los 8 por ventas reales ene–jun 2026 (doc 14)
-     Sin precios (son de lista, con IVA aparte y se desactualizan).
-     [ASSET] fotos sobre fondo neutro, línea en azul marino:
-     prod-<nombre-kebab>.webp (doc 17 §18).
+     Sin precios. Cada ficha DEBE mostrar la norma (argumento de venta).
+     [ASSET] fotos 800x800 fondo blanco: prod-<nombre-kebab>.webp
      ====================================================================== -->
-<section class="prod-l2" id="productos">
+<section class="prod-l3" id="productos">
   <div class="products-v2__top reveal">
     <div class="products-v2__heading">
-      <p class="products-v2__eyebrow">Línea propia Diforza</p>
+      <p class="products-v2__eyebrow">El EPP que se consume todos los meses</p>
       <h2>Productos destacados</h2>
     </div>
     <a href="#" class="btn btn--outline">Ir a tienda online
       <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
   </div>
-  <div class="prod-l2__list draggable-carousel reveal reveal--1">
-    <div class="prod-l2__track">
-      <article class="pcard-l2">
+  <div class="prod-l3__list draggable-carousel reveal reveal--1">
+    <div class="prod-l3__track">
+      <article class="pcard-l3">
         <span class="products-v2__badge products-v2__badge--top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4c1.6 2 2.6 3.4 2.6 4.9a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.7 1-2.5.5 1.2 1.6.9 1.6-2.4z"/></svg> Más vendido</span>
-        <div class="pcard-l2__media"><img src="img/prod-campera-trucker-diforza.webp" alt="Campera trucker Diforza azul marino" draggable="false" loading="lazy" width="800" height="800"></div>
-        <div class="pcard-l2__body">
-          <h3 class="pcard-l2__name">Campera trucker Diforza</h3>
-          <p class="pcard-l2__code">Azul marino · Cód. —<span class="ph">Pendiente</span></p>
-          <dl class="pcard-l2__specs">
-            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
-            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
-            <dt>Norma</dt><dd>Si aplica</dd>
+        <div class="pcard-l3__media"><img src="img/prod-anteojo-argon.webp" alt="Anteojo Argon Transparente HC" draggable="false" loading="lazy"></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Anteojo Argon</h3>
+          <p class="pcard-l3__code">Transparente HC · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>Libus</dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
           </dl>
-          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Campera trucker Diforza azul marino" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Anteojo Argon Transparente HC" data-prod-codigo="" data-prod-cat="Ocular">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </article>
-      <article class="pcard-l2">
+      <article class="pcard-l3">
         
-        <div class="pcard-l2__media"><img src="img/prod-buzo-polar-medio-cierre-diforza.webp" alt="Buzo polar 1/2 cierre Diforza" draggable="false" loading="lazy" width="800" height="800"></div>
-        <div class="pcard-l2__body">
-          <h3 class="pcard-l2__name">Buzo polar 1/2 cierre Diforza</h3>
-          <p class="pcard-l2__code">Cód. —<span class="ph">Pendiente</span></p>
-          <dl class="pcard-l2__specs">
-            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
-            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
-            <dt>Norma</dt><dd>Si aplica</dd>
+        <div class="pcard-l3__media"><img src="img/prod-anteojo-ecoline.webp" alt="Anteojo Eco-line Transparente HC" draggable="false" loading="lazy"></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Anteojo Eco-line</h3>
+          <p class="pcard-l3__code">Transparente HC · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>Libus</dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
           </dl>
-          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Buzo polar 1/2 cierre Diforza" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Anteojo Eco-line Transparente HC" data-prod-codigo="" data-prod-cat="Ocular">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </article>
-      <article class="pcard-l2">
+      <article class="pcard-l3">
         
-        <div class="pcard-l2__media"><img src="img/prod-camisa-clasica-diforza.webp" alt="Camisa clásica Diforza beige" draggable="false" loading="lazy" width="800" height="800"></div>
-        <div class="pcard-l2__body">
-          <h3 class="pcard-l2__name">Camisa clásica Diforza</h3>
-          <p class="pcard-l2__code">Beige · Cód. —<span class="ph">Pendiente</span></p>
-          <dl class="pcard-l2__specs">
-            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
-            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
-            <dt>Norma</dt><dd>Si aplica</dd>
+        <div class="pcard-l3__media"><img src="img/prod-auditivo-quantum.webp" alt="Protector auditivo Quantum" draggable="false" loading="lazy"></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Protector auditivo Quantum</h3>
+          <p class="pcard-l3__code">Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>Libus</dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
           </dl>
-          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Camisa clásica Diforza beige" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Protector auditivo Quantum" data-prod-codigo="" data-prod-cat="Auditiva">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </article>
-      <article class="pcard-l2">
+      <article class="pcard-l3">
         
-        <div class="pcard-l2__media"><img src="img/prod-camisa-trabajo-diforza.webp" alt="Camisa de trabajo Diforza" draggable="false" loading="lazy" width="800" height="800"></div>
-        <div class="pcard-l2__body">
-          <h3 class="pcard-l2__name">Camisa de trabajo Diforza</h3>
-          <p class="pcard-l2__code">Cód. —<span class="ph">Pendiente</span></p>
-          <dl class="pcard-l2__specs">
-            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
-            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
-            <dt>Norma</dt><dd>Si aplica</dd>
+        <div class="pcard-l3__media"><img src="img/prod-protector-auditivo-alternative.webp" alt="Protector auditivo Alternative Vincha" draggable="false" loading="lazy"></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Protector auditivo Alternative</h3>
+          <p class="pcard-l3__code">Vincha · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>—<span class="ph">Validar marca</span></dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
           </dl>
-          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Camisa de trabajo Diforza" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Protector auditivo Alternative Vincha" data-prod-codigo="" data-prod-cat="Auditiva">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </article>
-      <article class="pcard-l2">
+      <article class="pcard-l3">
         
-        <div class="pcard-l2__media"><img src="img/prod-chomba-pique-diforza.webp" alt="Chomba piqué Diforza azul marino" draggable="false" loading="lazy" width="800" height="800"></div>
-        <div class="pcard-l2__body">
-          <h3 class="pcard-l2__name">Chomba piqué Diforza</h3>
-          <p class="pcard-l2__code">Azul marino · Cód. —<span class="ph">Pendiente</span></p>
-          <dl class="pcard-l2__specs">
-            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
-            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
-            <dt>Norma</dt><dd>Si aplica</dd>
+        <div class="pcard-l3__media"><img src="img/prod-casco-milenium.webp" alt="Casco Milenium Amarillo y blanco" draggable="false" loading="lazy"></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Casco Milenium</h3>
+          <p class="pcard-l3__code">Amarillo y blanco · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>Libus</dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
           </dl>
-          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Chomba piqué Diforza azul marino" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Casco Milenium Amarillo y blanco" data-prod-codigo="" data-prod-cat="Craneal">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </article>
-      <article class="pcard-l2">
+      <article class="pcard-l3">
         
-        <div class="pcard-l2__media"><img src="img/prod-pantalon-refl-diforza.webp" alt="Mameluco con reflectivos Diforza azul marino" draggable="false" loading="lazy" width="800" height="800"></div>
-        <div class="pcard-l2__body">
-          <h3 class="pcard-l2__name">Mameluco con reflectivos Diforza<span class="ph">Validar nombre</span></h3>
-          <p class="pcard-l2__code">Azul marino · Cód. —<span class="ph">Pendiente</span></p>
-          <dl class="pcard-l2__specs">
-            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
-            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
-            <dt>Norma</dt><dd>Si aplica</dd>
+        <div class="pcard-l3__media"><img src="img/prod-arnes-a-cremallera-plastico.webp" alt="Arnés a cremallera plástico Para casco" draggable="false" loading="lazy"></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Arnés a cremallera plástico</h3>
+          <p class="pcard-l3__code">Para casco · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>Libus</dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
           </dl>
-          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Mameluco con reflectivos Diforza azul marino" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Arnés a cremallera plástico Para casco" data-prod-codigo="" data-prod-cat="Craneal">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </article>
-      <article class="pcard-l2">
+      <article class="pcard-l3">
         
-        <div class="pcard-l2__media"><img src="img/prod-traje-lluvia-diforza.webp" alt="Traje de lluvia Diforza amarillo" draggable="false" loading="lazy" width="800" height="800"></div>
-        <div class="pcard-l2__body">
-          <h3 class="pcard-l2__name">Traje de lluvia Diforza</h3>
-          <p class="pcard-l2__code">Amarillo · Cód. —<span class="ph">Pendiente</span></p>
-          <dl class="pcard-l2__specs">
-            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
-            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
-            <dt>Norma</dt><dd>Si aplica</dd>
+        <div class="pcard-l3__media"><img src="img/prod-arnes-completo.webp" alt="Arnés completo con toma frontal y faja lumbar" draggable="false" loading="lazy"></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Arnés completo con toma frontal y faja lumbar</h3>
+          <p class="pcard-l3__code">Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>Skiway<span class="ph">Validar marca</span></dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
           </dl>
-          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Traje de lluvia Diforza amarillo" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Arnés completo con toma frontal y faja lumbar" data-prod-codigo="" data-prod-cat="Anticaída">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </article>
-      <article class="pcard-l2">
+      <article class="pcard-l3">
         
-        <div class="pcard-l2__media"><img src="img/prod-traje-bombero-diforza.webp" alt="Traje de bombero Diforza" draggable="false" loading="lazy" width="800" height="800"></div>
-        <div class="pcard-l2__body">
-          <h3 class="pcard-l2__name">Traje de bombero Diforza<span class="ph">Validar norma</span></h3>
-          <p class="pcard-l2__code">Cód. —<span class="ph">Pendiente</span></p>
-          <dl class="pcard-l2__specs">
-            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
-            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
-            <dt>Norma</dt><dd>Si aplica</dd>
+        <div class="pcard-l3__media"><img src="img/prod-respirador.webp" alt="Respirador desechable 522 FFP2 NR D" draggable="false" loading="lazy"><span class="pcard-l3__phlabel">Foto provisoria</span></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Respirador desechable 522</h3>
+          <p class="pcard-l3__code">FFP2 NR D · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>—<span class="ph">Validar marca</span></dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
           </dl>
-          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Traje de bombero Diforza" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Respirador desechable 522 FFP2 NR D" data-prod-codigo="" data-prod-cat="Respiratoria">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </article>
     </div>
@@ -1642,8 +1701,7 @@ html.ph-off .pcard-l2__phlabel{display:none;}
 
 <!-- ======================================================================
      S6 · DIFERENCIALES + S3 PROBLEMA + S7 PRUEBA SOCIAL en un solo sector
-     (reusa .dif-v2 de la home; el problema usa el bloque naranja + acordeón)
-     No decir "fabricamos" hasta que Diforza confirme origen. No mencionar AGIO.
+     (mismo criterio que L2: fondo blanco, problema en caja naranja + acordeón)
      ====================================================================== -->
 <section class="dif-v2">
   <div class="dif-v2__head">
@@ -1658,29 +1716,20 @@ html.ph-off .pcard-l2__phlabel{display:none;}
   <div class="dif-v2__grid">
     <div class="dif-v2__item reveal">
       <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11.5 11 8.5a2.1 2.1 0 0 1 3 0l.5.5"/><path d="M2.5 11 6 7.5l4 1.5M21.5 11 18 7.5l-4 1.5"/><path d="M6 12.5l4.5 4.5a1.5 1.5 0 0 0 2.1 0l5.4-5.4"/></svg>
+      </span>
+      <div>
+        <h3>Socio estratégico oficial de Libus</h3>
+        <p>Libus es el fabricante de protección craneal más importante de la región. Somos socio estratégico oficial: acceso a línea completa, respaldo de fábrica y continuidad de suministro.</p>
+      </div>
+    </div>
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
       </span>
       <div>
-        <h3>Línea propia Diforza</h3>
-        <p>Camisas, pantalones, camperas, buzos y remeras de línea propia. Eso significa continuidad: no dependemos de que un tercero decida discontinuar el modelo que tu empresa ya estandarizó.</p>
-      </div>
-    </div>
-    <div class="dif-v2__item reveal">
-      <span class="dif-v2__icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16.5 16.5 3 21 7.5 7.5 21z"/><path d="M7 12.5l1.8 1.8M9.8 9.7l1.8 1.8M12.6 6.9l1.8 1.8"/></svg>
-      </span>
-      <div>
-        <h3>Talles reales y completos</h3>
-        <p>El talle grande no es un problema a resolver, es parte del stock.<span class="ph">Validar rango</span></p>
-      </div>
-    </div>
-    <div class="dif-v2__item reveal">
-      <span class="dif-v2__icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.3 6.8 19l1-5.8-4.2-4.1 5.8-.8z"/></svg>
-      </span>
-      <div>
-        <h3>Personalización con tu logo</h3>
-        <p>Bordado o estampado con la identidad de tu empresa.<span class="ph">Validar proceso, mínimos, plazos</span></p>
+        <h3>ZIAO, marca propia</h3>
+        <p>Nuestra propia línea de EPP. Control sobre calidad, stock y precio.<span class="ph">Pendiente alcance de categorías ZIAO</span></p>
       </div>
     </div>
     <div class="dif-v2__item reveal">
@@ -1688,49 +1737,57 @@ html.ph-off .pcard-l2__phlabel{display:none;}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
       </span>
       <div>
-        <h3>Un responsable de cuenta</h3>
-        <p>Alguien que ya sabe qué prenda usa tu personal y en qué talles. Reponer es un mensaje, no una licitación.</p>
+        <h3>Asesoramiento sobre el riesgo, no sobre el catálogo</h3>
+        <p>Te ayudamos a definir qué elemento corresponde a cada puesto según su riesgo real. La recomendación primero, el producto después.</p>
+      </div>
+    </div>
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.9l8.2 4.3v9.6L12 21.1l-8.2-4.3V7.2z"/><path d="M3.8 7.2L12 11.5l8.2-4.3M12 11.5v9.6"/></svg>
+      </span>
+      <div>
+        <h3>Stock permanente</h3>
+        <p>Mantenemos stock propio de todas las líneas. Cuando la urgencia aparece, no empieza el “te lo pido a fábrica”.</p>
       </div>
     </div>
   </div>
-  <!-- S3 · PROBLEMA (integrado): bloque naranja + acordeón, como en la home -->
+  <!-- S3 · PROBLEMA (integrado): bloque naranja + acordeón -->
   <div class="dif-v2__problem reveal">
     <div class="dif-v2__problem-box">
-      <h2 class="dif-v2__problem-title">Equipar a 80 personas no es comprar 80 camisas</h2>
-      <a href="#contacto" class="btn dif-v2__problem-cta">Pedir cotización por volumen <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <h2 class="dif-v2__problem-title">El riesgo no es solo el accidente. También es la multa.</h2>
+      <a href="#contacto" class="btn dif-v2__problem-cta">Pedir cotización <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
     <div class="dif-v2__problem-list">
       <div class="accordion">
           <details open>
-            <summary>Falta el talle justo
+            <summary>El EPP sin certificar no te cubre
               <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <p class="accordion__panel">Siempre hay alguien que queda sin uniforme porque el proveedor no tiene su talle.</p>
+            <p class="accordion__panel">Si el elemento no cumple la norma, ante una inspección o un siniestro es como si no lo hubieras entregado.</p>
           </details>
           <details>
-            <summary>El modelo se discontinúa
+            <summary>Nadie te dice cuál corresponde
               <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <p class="accordion__panel">Comprás una vez, y a los seis meses ya no existe. Tu personal queda vestido de tres formas distintas.</p>
+            <p class="accordion__panel">Te venden lo que hay en stock, no lo que el riesgo del puesto exige. La decisión técnica queda sobre tus hombros.</p>
           </details>
           <details>
-            <summary>Dura tres lavados
+            <summary>Falta un elemento y para el sector
               <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <p class="accordion__panel">La prenda barata se decolora, se descose y termina costando más.</p>
+            <p class="accordion__panel">Sin protección respiratoria disponible, ese trabajo no arranca.</p>
           </details>
           <details>
-            <summary>Reposiciones que tardan
+            <summary>Papeles que no aparecen
               <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <p class="accordion__panel">Entra gente nueva y esperás semanas para vestirla.</p>
+            <p class="accordion__panel">Llega la auditoría y no tenés la ficha técnica del elemento que entregaste hace ocho meses.</p>
           </details>
       </div>
     </div>
   </div>
 
-  <!-- S7 · PRUEBA SOCIAL — dentro del mismo sector que los diferenciales
-       (testimonio destacado que menciona indumentaria + 2) -->
+  <!-- S7 · PRUEBA SOCIAL — destacado: Ricardo Honaine (menciona elementos de seguridad) + 2 del doc 01 -->
   <div class="dif-v2__reviews">
     <div class="greviews__summary reveal">
       <svg class="g-icon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
@@ -1738,29 +1795,29 @@ html.ph-off .pcard-l2__phlabel{display:none;}
       <span class="greviews__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
       <span class="greviews__count">5.0 en Google · Reseñas de clientes</span>
     </div>
-    <div class="reviews-l2__grid">
-      <blockquote class="quote-l2 reveal">
-        <p>Diforza nos provee indumentaria y elementos de protección personal de altísima calidad. Diego maneja nuestra cuenta con mucho profesionalismo.</p>
+    <div class="reviews-l3__grid">
+      <blockquote class="quote-l3 reveal">
+        <p>Excelente atención y asesoramiento. En Diforza encontré todo lo que necesitaba en elementos de seguridad, con productos de primera calidad y entregas rápidas.</p>
         <footer>
-          <span class="gcard__avatar" style="background:#f57c00">AK</span>
+          <span class="gcard__avatar" style="background:#1976d2">RH</span>
           <div>
-            <cite>Ariel Kuznicki</cite>
+            <cite>Ricardo Honaine</cite>
             <small><span class="greviews__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span> Google Reviews</small>
           </div>
         </footer>
       </blockquote>
-      <div class="reviews-l2__side reveal reveal--1">
+      <div class="reviews-l3__side reveal reveal--1">
         <div class="gcard">
           <div class="gcard__top">
-            <div class="gcard__avatar" style="background:#1976d2">RH</div>
+            <div class="gcard__avatar" style="background:#f57c00">AK</div>
             <div class="gcard__id">
-              <div class="gcard__name">Ricardo Honaine</div>
+              <div class="gcard__name">Ariel Kuznicki</div>
               <div class="gcard__date">Google Reviews</div>
             </div>
             <svg class="gcard__g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
           </div>
           <span class="gcard__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
-          <p class="gcard__text">Excelente atención y asesoramiento. En Diforza encontré todo lo que necesitaba en elementos de seguridad, con productos de primera calidad y entregas rápidas. Se nota el compromiso y la seriedad con la que trabajan.</p>
+          <p class="gcard__text">Diforza nos provee indumentaria y elementos de protección personal de altísima calidad. Diego maneja nuestra cuenta con mucho profesionalismo.</p>
         </div>
         <div class="gcard">
           <div class="gcard__top">
@@ -1780,36 +1837,52 @@ html.ph-off .pcard-l2__phlabel{display:none;}
 </section>
 
 <!-- ======================================================================
-     S8 · NORMATIVA  (reusa el banner .solve-v2 de la home)
-     [PENDIENTE] normas IRAM aplicables a indumentaria — sin verificar.
+     S8 · CUMPLIMIENTO NORMATIVO (sección ampliada en L3) — banner .solve-v2
+     La tabla de normas por categoría queda OCULTA hasta que Diforza confirme
+     las normas IRAM (no publicar números sin confirmación). Ver bloque
+     comentado abajo para activarla.
      ====================================================================== -->
-<section class="solve-v2 solve-v2--l2">
+<section class="solve-v2 solve-v2--l3">
   <div class="solve-v2__inner">
     <div class="solve-v2__copy reveal">
-      <h2>La ropa de trabajo <br> también es un elemento <br> de protección</h2>
+      <h2>Tu empresa <br> protegida y en regla</h2>
 
-      <p class="solve-v2__lead">Según la actividad, la indumentaria tiene requisitos específicos: alta visibilidad, resistencia al fuego, protección contra salpicaduras. No es lo mismo vestir una planta de alimentos que una obra en ruta.<span class="ph">Pendiente normas IRAM</span></p>
+      <p class="solve-v2__lead">La normativa argentina obliga a proveer EPP certificado y a documentar su entrega. La responsabilidad es de la empresa y de quien firma como responsable de seguridad. Por eso cada elemento que entregamos viene con su respaldo documental.<span class="ph">Validar</span></p>
 
       <div class="ctas">
-        <a href="#contacto" class="btn btn--solid">Consultar qué corresponde a mi actividad
+        <a href="#contacto" class="btn btn--solid">Consultar por la normativa de mi industria
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
 
       <div class="solve-v2__marks">
         <div class="solve-v2__mark">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 5 6v15h5v-8h4v8h5V6l-3-3-2 4h-4z"/><path d="M5 14h5M14 14h5M5 17h5M14 17h5"/></svg>
-          <div><strong>Alta visibilidad</strong></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+          <div><strong>Ficha<br>técnica</strong></div>
         </div>
         <div class="solve-v2__mark">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 2 1.4 3 2.5 3-.5-3 0-5.5 0-8z"/></svg>
-          <div><strong>Resistencia al fuego</strong></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7 15h10"/></svg>
+          <div><strong>Respaldo<br>de ensayo</strong></div>
         </div>
         <div class="solve-v2__mark">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5s6 6.4 6 10.5a6 6 0 0 1-12 0c0-4.1 6-10.5 6-10.5z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg>
-          <div><strong>Protección contra salpicaduras</strong></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 12l2 2 4-4"/></svg>
+          <div><strong>Documentación<br>para tus registros</strong></div>
         </div>
       </div>
+      <!-- [PENDIENTE] Tabla de normas por categoría. Activar cuando Diforza confirme:
+      <table class="norms-l3">
+        <thead><tr><th>Categoría</th><th>Norma aplicable</th></tr></thead>
+        <tbody>
+          <tr><td>Craneal</td><td>—</td></tr>
+          <tr><td>Auditiva</td><td>—</td></tr>
+          <tr><td>Ocular</td><td>—</td></tr>
+          <tr><td>Facial</td><td>—</td></tr>
+          <tr><td>Respiratoria</td><td>—</td></tr>
+          <tr><td>Manos</td><td>—</td></tr>
+          <tr><td>Calzado</td><td>—</td></tr>
+          <tr><td>Anticaída</td><td>—</td></tr>
+        </tbody>
+      </table> -->
     </div>
   </div>
 
@@ -1819,24 +1892,24 @@ html.ph-off .pcard-l2__phlabel{display:none;}
 <!-- ======================================================================
      S9 · CÓMO TRABAJAMOS
      ====================================================================== -->
-<section class="steps-l2">
-  <h2 class="h2-l2 reveal">Cómo trabajamos</h2>
-  <ol class="steps-l2__list">
-    <li class="steps-l2__item reveal"><span class="steps-l2__n">1</span><p>Nos contás cuánta gente equipás y en qué actividad.</p></li>
-    <li class="steps-l2__item reveal reveal--1"><span class="steps-l2__n">2</span><p>Te proponemos prenda, tela y talles; si querés, con muestra previa.<span class="ph">Validar</span></p></li>
-    <li class="steps-l2__item reveal reveal--2"><span class="steps-l2__n">3</span><p>Coordinamos la entrega y, si aplica, la personalización.</p></li>
-    <li class="steps-l2__item reveal reveal--2"><span class="steps-l2__n">4</span><p>Quedás con la línea estandarizada y reposición ágil.</p></li>
+<section class="steps-l3">
+  <h2 class="h2-l3 reveal">Cómo trabajamos</h2>
+  <ol class="steps-l3__list">
+    <li class="steps-l3__item reveal"><span class="steps-l3__n">1</span><p>Nos contás qué riesgos tiene cada puesto.</p></li>
+    <li class="steps-l3__item reveal reveal--1"><span class="steps-l3__n">2</span><p>Armamos la propuesta de EPP por puesto, con la norma que cumple cada elemento.</p></li>
+    <li class="steps-l3__item reveal reveal--2"><span class="steps-l3__n">3</span><p>Cotizamos y coordinamos entrega.<span class="ph">Validar plazo</span></p></li>
+    <li class="steps-l3__item reveal reveal--2"><span class="steps-l3__n">4</span><p>Quedás con la documentación para tus registros y una cuenta para reponer.</p></li>
   </ol>
 </section>
 
 <!-- ======================================================================
-     S10 · GARANTÍA — BORRADOR. Textos placeholder del doc 16 §5.
-     No publicar hasta que Diego valide condiciones (doc 01 S10).
+     S10 · GARANTÍA — BORRADOR (misma del doc 01 §6 / doc 16 §5).
+     No publicar hasta que Diego valide condiciones.
      ====================================================================== -->
-<section class="guarantee-l2" data-draft="true">
-  <div class="guarantee-l2__inner reveal">
-    <h2 class="guarantee-l2__title">Garantía<span class="ph">Borrador · Validar</span></h2>
-    <ul class="guarantee-l2__list">
+<section class="guarantee-l3" data-draft="true">
+  <div class="guarantee-l3__inner reveal">
+    <h2 class="guarantee-l3__title">Garantía<span class="ph">Borrador · Validar</span></h2>
+    <ul class="guarantee-l3__list">
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l7.4 2.9v6.1c0 4.3-3.1 7.6-7.4 9.4-4.3-1.8-7.4-5.1-7.4-9.4V5.7z"/><path d="M8.9 11.9l2.2 2.2 4-4.4"/></svg>
         <span>Garantía por defectos de fabricación en todos nuestros productos.</span>
@@ -1854,36 +1927,35 @@ html.ph-off .pcard-l2__phlabel{display:none;}
 </section>
 
 <!-- ======================================================================
-     S11 · FAQ  (reusa .faq de la home). Schema FAQPage: se agrega cuando
-     las respuestas estén validadas (doc 07).
+     S11 · FAQ  (reusa .faq). Schema FAQPage cuando las respuestas estén validadas.
      ====================================================================== -->
-<section class="faq faq--l2">
+<section class="faq faq--l3">
   <div class="faq__inner reveal">
     <h2>Preguntas Frecuentes</h2>
     <div class="accordion">
       <details open>
-        <summary>¿Hacen talles especiales? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary>¿Cómo sé que el EPP está certificado? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Validar</span></p>
+      </details>
+      <details>
+        <summary>¿Me entregan ficha técnica y certificado con la compra? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Validar</span></p>
+      </details>
+      <details>
+        <summary>¿Me ayudan a definir qué EPP corresponde a cada puesto? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Sí. Te ayudamos a definir qué elemento corresponde a cada puesto según su riesgo real. La recomendación primero, el producto después.</p>
+      </details>
+      <details>
+        <summary>¿Trabajan con empresas de cualquier tamaño? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Pendiente</span></p>
       </details>
       <details>
-        <summary>¿Personalizan con el logo de la empresa? ¿Cuál es el mínimo? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary>¿Cuánto tardan en entregar un pedido urgente? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Pendiente</span></p>
       </details>
       <details>
-        <summary>¿Puedo ver una muestra antes de comprar volumen? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Pendiente</span></p>
-      </details>
-      <details>
-        <summary>¿Aseguran continuidad del modelo para reponer? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-        <p class="accordion__panel">Sí. Con continuidad de línea: la prenda que estandarizás hoy la vas a poder reponer el año que viene.<span class="ph">Validar</span></p>
-      </details>
-      <details>
-        <summary>¿Cuánto tardan en entregar un pedido de volumen? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Pendiente</span></p>
-      </details>
-      <details>
-        <summary>¿Hacen envíos al interior del país? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-        <p class="accordion__panel">Sí, despachamos y distribuimos indumentaria y EPP a empresas e industrias en todo el territorio nacional.</p>
+        <summary>¿Tienen recambio de filtros y consumibles con continuidad? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Validar</span></p>
       </details>
       <details>
         <summary>¿Puedo comprar por unidad? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
@@ -1894,35 +1966,34 @@ html.ph-off .pcard-l2__phlabel{display:none;}
 </section>
 
 <!-- ======================================================================
-     S12 · CTA FINAL + FORMULARIO (doc 05) — campo variable L2:
-     "Cantidad de personas a equipar".
+     S12 · CTA FINAL + FORMULARIO (doc 05) — campo variable L3:
+     "Categorías de EPP que necesitás" (selección múltiple, obligatorio).
      [PENDIENTE] endpoint del formulario / CRM y número definitivo de WhatsApp.
      ====================================================================== -->
-<section class="cta-l2 on-dark" id="contacto">
-  <div class="cta-l2__inner">
-    <div class="cta-l2__copy reveal">
-      <h2 class="h2-l2">Decinos cuánta gente tenés que vestir</h2>
-      <p class="cta-l2__reply">Te respondemos en el día<span class="ph">Validar</span></p>
+<section class="cta-l3 on-dark" id="contacto">
+  <div class="cta-l3__inner">
+    <div class="cta-l3__copy reveal">
+      <h2 class="h2-l3">Contanos qué riesgos tenés que cubrir</h2>
+      <p class="cta-l3__reply">Te respondemos en el día<span class="ph">Validar</span></p>
 
-      <figure class="cta-l2__mini">
+      <figure class="cta-l3__mini">
         <p>“Diforza nos provee indumentaria y elementos de protección personal de altísima calidad.”</p>
         <cite>Ariel Kuznicki <span>· Google Reviews</span></cite>
       </figure>
 
-      <a href="https://wa.me/5491159569713?text=Hola%2C%20necesito%20cotizar%20indumentaria%20de%20trabajo%20para%20mi%20empresa." class="btn btn--wa js-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg> Escribinos por WhatsApp</a>
+      <a href="https://wa.me/5491159569713?text=Hola%2C%20necesito%20cotizar%20EPP%20para%20mi%20empresa." class="btn btn--wa js-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg> Escribinos por WhatsApp</a>
 
-      <!-- Catálogo: formulario corto independiente (doc 05 §6) -->
-      <div class="catalog-l2" id="catalogo">
-        <button type="button" class="catalog-l2__toggle" aria-expanded="false" aria-controls="catalogPanel">
-          <span>Descargar catálogo de indumentaria<small>Te lo mandamos también por email.</small></span>
+      <div class="catalog-l3" id="catalogo">
+        <button type="button" class="catalog-l3__toggle" aria-expanded="false" aria-controls="catalogPanel">
+          <span>Descargar catálogo de EPP<small>Te lo mandamos también por email.</small></span>
           <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
-        <div class="catalog-l2__panel" id="catalogPanel" hidden>
+        <div class="catalog-l3__panel" id="catalogPanel" hidden>
           <form id="form-catalogo" class="js-lead-form" novalidate>
             <input type="hidden" name="tipo_lead" value="catalogo">
-            <input type="hidden" name="landing" value="l2-indumentaria">
+            <input type="hidden" name="landing" value="l3-epp">
             <div class="hp-field" aria-hidden="true"><label>No completar<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-            <div class="form-l2__grid">
+            <div class="form-l3__grid">
               <div class="field">
                 <label for="c-nombre">Nombre y apellido <span class="req">*</span></label>
                 <input id="c-nombre" name="nombre" type="text" autocomplete="name" required>
@@ -1948,8 +2019,8 @@ html.ph-off .pcard-l2__phlabel{display:none;}
                 <span class="field__error">Necesitamos tu consentimiento para enviarte el catálogo.</span>
               </div>
               <div class="field--full">
-                <button type="submit" class="btn btn--solid form-l2__submit"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v9m0 0l-3.5-3.5M10 12l3.5-3.5M4 15.5h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Descargar catálogo</button>
-                <p class="form-l2__status" role="status" aria-live="polite"></p>
+                <button type="submit" class="btn btn--solid form-l3__submit"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v9m0 0l-3.5-3.5M10 12l3.5-3.5M4 15.5h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Descargar catálogo</button>
+                <p class="form-l3__status" role="status" aria-live="polite"></p>
               </div>
             </div>
           </form>
@@ -1957,22 +2028,22 @@ html.ph-off .pcard-l2__phlabel{display:none;}
       </div>
     </div>
 
-    <div class="form-l2 reveal reveal--1" id="form-cotizacion-wrap">
+    <div class="form-l3 reveal reveal--1" id="form-cotizacion-wrap">
       <form id="form-cotizacion" class="js-lead-form" novalidate>
-        <p class="form-l2__title">Pedí tu cotización por volumen</p>
-        <p class="form-l2__note">Los campos con <span style="color:var(--orange)">*</span> son obligatorios.</p>
+        <p class="form-l3__title">Pedí tu cotización</p>
+        <p class="form-l3__note">Los campos con <span style="color:var(--orange)">*</span> son obligatorios.</p>
 
-        <div class="quoting-l2" id="quoting" hidden>
+        <div class="quoting-l3" id="quoting" hidden>
           <span>Estás cotizando: <strong id="quotingName"></strong></span>
           <button type="button" id="quotingClear">Quitar</button>
         </div>
 
         <input type="hidden" name="producto_interes" id="productoInteres" value="">
         <input type="hidden" name="tipo_lead" value="cotizacion">
-        <input type="hidden" name="landing" value="l2-indumentaria">
+        <input type="hidden" name="landing" value="l3-epp">
         <div class="hp-field" aria-hidden="true"><label>No completar<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
 
-        <div class="form-l2__grid">
+        <div class="form-l3__grid">
           <div class="field">
             <label for="f-nombre">Nombre y apellido <span class="req">*</span></label>
             <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
@@ -2022,17 +2093,20 @@ html.ph-off .pcard-l2__phlabel{display:none;}
             </select>
             <span class="field__error">Elegí el tamaño de tu empresa.</span>
           </div>
-          <div class="field field--full">
-            <label for="f-personas">Cantidad de personas a equipar <span class="req">*</span></label>
-            <select id="f-personas" name="personas_a_equipar" required>
-              <option value="">Elegí una opción</option>
-              <option>1–10</option>
-              <option>11–50</option>
-              <option>51–200</option>
-              <option>+200</option>
-            </select>
-            <span class="field__error">Contanos cuánta gente tenés que vestir.</span>
-          </div>
+          <fieldset class="field field--full field--group" data-required-group="categorias_epp">
+            <legend>Categorías de EPP que necesitás <span class="req">*</span> <small>Podés elegir varias</small></legend>
+            <div class="chips-l3">
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Craneal" data-cat="craneal"><span>Craneal</span></label>
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Auditiva" data-cat="auditiva"><span>Auditiva</span></label>
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Ocular" data-cat="ocular"><span>Ocular</span></label>
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Facial" data-cat="facial"><span>Facial</span></label>
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Respiratoria" data-cat="respiratoria"><span>Respiratoria</span></label>
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Manos" data-cat="manos"><span>Manos</span></label>
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Anticaída" data-cat="anticaida"><span>Anticaída</span></label>
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Vialidad" data-cat="vialidad"><span>Vialidad</span></label>
+            </div>
+            <span class="field__error">Elegí al menos una categoría.</span>
+          </fieldset>
           <div class="field field--full">
             <label for="f-mensaje">Contanos qué necesitás</label>
             <textarea id="f-mensaje" name="mensaje" rows="3"></textarea>
@@ -2042,8 +2116,8 @@ html.ph-off .pcard-l2__phlabel{display:none;}
             <span class="field__error">Necesitamos tu consentimiento para contactarte.</span>
           </div>
           <div class="field--full">
-            <button type="submit" class="btn btn--solid form-l2__submit">Pedir cotización por volumen <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-            <p class="form-l2__status" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn btn--solid form-l3__submit">Pedir cotización <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <p class="form-l3__status" role="status" aria-live="polite"></p>
           </div>
         </div>
       </form>
@@ -2061,8 +2135,8 @@ html.ph-off .pcard-l2__phlabel{display:none;}
     <div class="footer__col">
       <h4>Categorías</h4>
       <ul>
-        <li><a href="./" aria-current="page">Indumentaria general de trabajo</a></li>
-        <li><a href="../epp-proteccion-industrial/">EPP y protección industrial</a></li>
+        <li><a href="../indumentaria-de-trabajo/">Indumentaria general de trabajo</a></li>
+        <li><a href="./" aria-current="page">EPP y protección industrial</a></li>
         <li><a href="#">Mamelucos, descartables y ropa de lluvia</a></li>
         <li><a href="#">Calzado de seguridad y protección de manos</a></li>
       </ul>
@@ -2091,7 +2165,7 @@ html.ph-off .pcard-l2__phlabel{display:none;}
   </div>
 </footer>
 
-<a href="https://wa.me/5491159569713?text=Hola%2C%20necesito%20cotizar%20indumentaria%20de%20trabajo%20para%20mi%20empresa." class="wa-float js-wa" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<a href="https://wa.me/5491159569713?text=Hola%2C%20necesito%20cotizar%20EPP%20para%20mi%20empresa." class="wa-float js-wa" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
 <button type="button" class="ph-toggle" id="phToggle" aria-pressed="false">Ocultar marcas</button>
 
 <script>
@@ -2405,7 +2479,7 @@ html.ph-off .pcard-l2__phlabel{display:none;}
 })();
 
 /* ==========================================================================
-   L2 · JS propio (el de arriba es el de la home, sin cambios)
+   L3 · JS propio (el de arriba es el de la home, sin cambios)
    ========================================================================== */
 (function(){
   // Marcas [VALIDAR]/[PENDIENTE]: mostrar/ocultar (preferencia por visitante)
@@ -2430,7 +2504,7 @@ html.ph-off .pcard-l2__phlabel{display:none;}
 (function(){
   // Precarga de producto S5 -> formulario + WhatsApp (doc 17 §17)
   var WA_NUM = '5491159569713'; // [PENDIENTE] número definitivo de Diego (doc 05 §5B)
-  var WA_BASE = 'Hola, necesito cotizar indumentaria de trabajo para mi empresa.';
+  var WA_BASE = 'Hola, necesito cotizar EPP para mi empresa.';
   var hidden = document.getElementById('productoInteres');
   var box = document.getElementById('quoting');
   var nameEl = document.getElementById('quotingName');
@@ -2459,6 +2533,12 @@ html.ph-off .pcard-l2__phlabel{display:none;}
       var n = b.getAttribute('data-prod-nombre') || '';
       var c = b.getAttribute('data-prod-codigo') || '';
       setProduct(c ? n + ' (Cód. ' + c + ')' : n);
+      // L3: tilda la categoría del producto en el campo multi-selección
+      var cat = b.getAttribute('data-prod-cat');
+      if (cat){
+        var chk = document.querySelector('#form-cotizacion input[name="categorias_epp"][value="' + cat + '"]');
+        if (chk){ chk.checked = true; chk.dispatchEvent(new Event('change', {bubbles:true})); }
+      }
       if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
     });
   });
@@ -2468,7 +2548,7 @@ html.ph-off .pcard-l2__phlabel{display:none;}
 
 (function(){
   // Catálogo: los CTAs "Descargar catálogo" expanden el form corto (no popup)
-  var toggle = document.querySelector('.catalog-l2__toggle');
+  var toggle = document.querySelector('.catalog-l3__toggle');
   var panel = document.getElementById('catalogPanel');
   var wrap = document.getElementById('catalogo');
   if (!toggle || !panel) return;
@@ -2518,15 +2598,26 @@ html.ph-off .pcard-l2__phlabel{display:none;}
       el.addEventListener('input', recheck);
       el.addEventListener('change', recheck);
     });
+    // L3: grupos de checkboxes obligatorios (al menos uno tildado)
+    var groups = form.querySelectorAll('[data-required-group]');
+    function checkGroup(g){
+      var ok = !!g.querySelector('input[type=checkbox]:checked');
+      g.classList.toggle('is-invalid', !ok);
+      return ok;
+    }
+    groups.forEach(function(g){
+      g.addEventListener('change', function(){ if (g.classList.contains('is-invalid')) checkGroup(g); });
+    });
     form.addEventListener('submit', function(e){
       e.preventDefault();
       var first = null;
       inputs.forEach(function(el){ if (!check(el) && !first) first = el; });
+      groups.forEach(function(g){ if (!checkGroup(g) && !first) first = g.querySelector('input'); });
       if (first){ first.focus(); return; }
       var hp = form.querySelector('input[name="website"]');
       if (hp && hp.value) return; // bot
       var btn = form.querySelector('button[type="submit"]');
-      var status = form.querySelector('.form-l2__status');
+      var status = form.querySelector('.form-l3__status');
       var label = btn.innerHTML;
       btn.disabled = true; btn.textContent = 'Enviando…';
       // Prototipo: simula el envío. Acá va el fetch al endpoint real; si
@@ -2534,10 +2625,10 @@ html.ph-off .pcard-l2__phlabel{display:none;}
       setTimeout(function(){
         var isCat = form.id === 'form-catalogo';
         form.innerHTML =
-          '<div class="form-l2__ok" role="status">' +
+          '<div class="form-l3__ok" role="status">' +
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>' +
           (isCat
-            ? '<h3>¡Listo!</h3><p>Te enviamos el catálogo de indumentaria por email.</p>'
+            ? '<h3>¡Listo!</h3><p>Te enviamos el catálogo de EPP por email.</p>'
             : '<h3>¡Gracias! Recibimos tu pedido.</h3><p>Un responsable de cuenta te va a contactar para armar la cotización.</p>') +
           '</div>';
       }, 900);
