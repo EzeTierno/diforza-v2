@@ -7,9 +7,6 @@
   ],
   "defaultSeverity": "warning",
   "ignoreFiles": [
-    "src/assets/css/legacy/**",
-    "src/assets/css/l2.css",
-    "src/assets/css/l3.css",
     "_site/**"
   ],
   "rules": {

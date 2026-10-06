@@ -1,0 +1,226 @@
+/* ==========================================================================
+   Landing · líneas de producto (.category-lines--wide-title: título más ancho)
+   ========================================================================== */
+
+/* ---- S4 · Solucion: linea completa ---- */
+.category-lines {
+  position: relative;
+  padding: 56px var(--pad);
+  overflow: hidden;
+  color: #fff;
+  background: var(--navy);
+}
+
+@media (--lg) {
+  .category-lines {
+    padding: 80px var(--pad);
+  }
+}
+
+@media (--xl) {
+  .category-lines {
+    padding: 104px var(--pad);
+  }
+}
+
+/* Reflejo diagonal sutil, mismo lenguaje que los paneles del hero */
+.category-lines::before {
+  position: absolute;
+  inset: -20% -40% -20% 62%;
+  background: linear-gradient(90deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 1.5%));
+  transform: skewX(-28deg);
+  content: "";
+  pointer-events: none;
+}
+
+.category-lines__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+@media (--lg) {
+  .category-lines__inner {
+    flex-direction: row;
+    gap: 64px;
+    align-items: center;
+  }
+}
+
+@media (--xl) {
+  .category-lines__inner {
+    gap: 104px;
+  }
+}
+
+.category-lines__copy {
+  flex: 1 1 42%;
+  min-width: 0;
+}
+
+.category-lines__copy .eyebrow {
+  color: rgb(255 255 255 / 80%);
+}
+
+.category-lines__copy .section-title {
+  max-width: 13ch;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.category-lines--wide-title .category-lines__copy .section-title {
+  max-width: 21ch;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.category-lines__copy p {
+  max-width: 40ch;
+  margin: 0 0 28px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgb(255 255 255 / 86%);
+}
+
+@media (--xl) {
+  .category-lines__copy p {
+    font-size: 17px;
+    margin-bottom: 34px;
+  }
+}
+
+.category-lines__copy .btn {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.category-lines__copy .btn svg {
+  flex: none;
+  width: 15px;
+  height: 15px;
+}
+
+.category-lines__list {
+  display: grid;
+  flex: 1 1 58%;
+  grid-template-columns: 1fr;
+  column-gap: 32px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (--sm) {
+  .category-lines__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (--xl) {
+  .category-lines__list {
+    column-gap: 48px;
+  }
+}
+
+.category-lines__list li {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 15px 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #fff;
+  border-bottom: 1px solid rgb(255 255 255 / 14%);
+}
+
+@media (--xl) {
+  .category-lines__list li {
+    gap: 18px;
+    padding: 19px 0;
+    font-size: 16px;
+  }
+}
+
+.category-lines__ic {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid rgb(255 255 255 / 35%);
+  border-radius: 50%;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.category-lines__ic svg {
+  width: 21px;
+  height: 21px;
+  color: #fff;
+  stroke-width: 1.5;
+}
+
+@media (--xl) {
+  .category-lines__ic {
+    width: 46px;
+    height: 46px;
+  }
+
+  .category-lines__ic svg {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.category-lines__list li:hover .category-lines__ic {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+@media (--below-md) {
+  .category-lines__copy .btn,
+  .quote .btn--whatsapp {
+    padding: 11px 20px;
+    font-size: 11px;
+  }
+}
+
+/* S4 · lista de categorias con alcance */
+.category-lines__list--desc li {
+  align-items: flex-start;
+}
+
+.category-lines__txt {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 2px;
+}
+
+.category-lines__txt strong {
+  font-weight: 600;
+}
+
+.category-lines__txt small {
+  font-size: 12.5px;
+  font-weight: 300;
+  line-height: 1.45;
+  color: rgb(255 255 255 / 72%);
+}
+
+@media (--xl) {
+  .category-lines__txt small {
+    font-size: 13.5px;
+  }
+
+  .category-lines__txt {
+    padding-top: 4px;
+  }
+}

@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Home · carrusel infinito de marcas
+   ========================================================================== */
+
+/* ---- Sector 2: Marcas (carrusel) ---- */
+.brands {
+  padding: 28px 0;
+  overflow: hidden;
+  background: #f2f2f2;
+
+  --brands-gap: 48px;
+}
+
+@media (--lg) {
+  .brands {
+    padding: 36px 0;
+
+    --brands-gap: 72px;
+  }
+}
+
+@media (--xl) {
+  .brands {
+    padding: 44px 0;
+
+    --brands-gap: 110px;
+  }
+}
+
+/* Marquee: dos sets identicos dentro de un flex con el mismo gap.
+   El desplazamiento exacto es (ancho de un set + gap) -> loop sin corte. */
+.brands__track {
+  display: flex;
+  gap: var(--brands-gap);
+  width: max-content;
+  animation: brands-loop 45s linear infinite;
+  will-change: transform;
+}
+
+.brands__set {
+  display: flex;
+  gap: var(--brands-gap);
+  align-items: flex-start;
+}
+
+.brands:hover .brands__track {
+  animation-play-state: paused;
+}
+
+@keyframes brands-loop {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(calc(-50% - (var(--brands-gap) / 2)), 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brands__track {
+    animation: none;
+  }
+}
+
+.brands__group {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.brands__title {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--gray);
+}
+
+@media (--xl) {
+  .brands__title {
+    font-size: 11px;
+  }
+}
+
+.brands__logos {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 22px;
+  align-items: stretch;
+  justify-content: center;
+}
+
+@media (--md) {
+  .brands__logos {
+    gap: 30px;
+  }
+}
+
+@media (--xl) {
+  .brands__logos {
+    gap: 40px;
+  }
+}
+
+/* Fila de alto fijo para el logo: todos los logos comparten centro vertical
+   y todos los subtitulos arrancan en la misma linea. Los archivos estan
+   exportados a la misma altura, asi que una sola regla alcanza. */
+.brands__item {
+  display: grid;
+  flex: none;
+  grid-template-rows: var(--logo-row) auto;
+  gap: 8px;
+  place-items: center center;
+  padding: 0 14px;
+
+  --logo-row: 44px;
+}
+
+@media (--md) {
+  .brands__item {
+    --logo-row: 50px;
+  }
+}
+
+@media (--xl) {
+  .brands__item {
+    padding: 0 20px;
+
+    --logo-row: 56px;
+  }
+}
+
+.brands__item img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 44px;
+}
+
+@media (--md) {
+  .brands__item img {
+    height: 50px;
+  }
+}
+
+@media (--xl) {
+  .brands__item img {
+    height: 56px;
+  }
+}
+
+/* Ombu y Conwork se leen mas grandes de lo que deberian: -20% */
+.brands__item img.is-sm {
+  height: 35px;
+}
+
+@media (--md) {
+  .brands__item img.is-sm {
+    height: 40px;
+  }
+}
+
+@media (--xl) {
+  .brands__item img.is-sm {
+    height: 45px;
+  }
+}
+
+.brands__sub {
+  margin: 0;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--gray);
+}
+
+@media (--xl) {
+  .brands__sub {
+    font-size: 9px;
+  }
+}
+
+/* Separadores: UNA linea por limite de grupo, dibujada en el medio del gap
+   con un pseudo-elemento. Al ir en todos los grupos, el patron se repite
+   igual en el loop (el limite entre el ultimo grupo de un set y el primero
+   del siguiente queda cubierto por el ::before de ese primero). */
+.brands__group {
+  position: relative;
+}
+
+.brands__group::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(-1 * var(--brands-gap) / 2);
+  width: 1px;
+  background: #d9d9d9;
+  content: "";
+}

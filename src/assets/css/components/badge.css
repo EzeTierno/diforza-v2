@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Badge (etiqueta "Más vendido" / "En stock") — home y landings
+   ========================================================================== */
+
+/* Badge de estado, arriba a la izquierda */
+.badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  padding: 5px 11px 5px 6px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: #5c6873;
+  background: #f4f6f8;
+  border-radius: 999px;
+}
+
+@media (--xl) {
+  .badge {
+    top: 16px;
+    left: 16px;
+    font-size: 11px;
+  }
+}
+
+.badge svg {
+  flex: none;
+  width: 15px;
+  height: 15px;
+}
+
+.badge--stock svg {
+  color: #25a55f;
+}
+
+.badge--top svg {
+  color: var(--orange);
+}

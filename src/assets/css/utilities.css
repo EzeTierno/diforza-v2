@@ -1,0 +1,11 @@
+/* ==========================================================================
+   Utilidades (lista cerrada: ver _dev/prompts/refactor-css.md §5)
+   ========================================================================== */
+
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

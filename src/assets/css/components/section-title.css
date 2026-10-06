@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Título de sección (.section-title) y eyebrow de landings
+   ========================================================================== */
+
+/* ---- Encabezados de seccion comunes en L3 ---- */
+.section-title {
+  margin: 0;
+  font-family: Poppins, Montserrat, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+}
+
+@media (--md) {
+  .section-title {
+    font-size: 36px;
+  }
+}
+
+@media (--xl) {
+  .section-title {
+    font-size: 44px;
+  }
+}
+
+.eyebrow {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin: 0 0 14px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.eyebrow::before {
+  flex: none;
+  width: 20px;
+  height: 2px;
+  background: var(--orange);
+  border-radius: 2px;
+  content: "";
+}
+
+@media (--md) {
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+  }
+
+  .eyebrow::before {
+    width: 36px;
+    height: 3px;
+  }
+}
+
+@media (--xl) {
+  .eyebrow {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+}

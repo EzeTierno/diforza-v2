@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Home · fábrica en Mataderos
+   ========================================================================== */
+
+/* ---- Sector 8: Fábrica / Mataderos ---- */
+.factory {
+  padding: 56px var(--pad);
+  background: #fff;
+}
+
+@media (--lg) {
+  .factory {
+    padding: 80px var(--pad);
+  }
+}
+
+@media (--xl) {
+  .factory {
+    padding: 104px var(--pad);
+  }
+}
+
+.factory__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (--lg) {
+  .factory__inner {
+    flex-direction: row;
+    gap: 64px;
+    align-items: center;
+  }
+}
+
+@media (--xl) {
+  .factory__inner {
+    gap: 96px;
+  }
+}
+
+.factory__copy {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.factory__copy h2 {
+  margin: 0 0 20px;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 40px;
+  color: var(--navy);
+}
+
+@media (--md) {
+  .factory__copy h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+@media (--xl) {
+  .factory__copy h2 {
+    font-size: 38px;
+    line-height: 44px;
+    margin-bottom: 24px;
+  }
+}
+
+.factory__copy p {
+  max-width: 48ch;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  color: var(--gray);
+}
+
+@media (--xl) {
+  .factory__copy p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.factory__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (--xl) {
+  .factory__contact {
+    gap: 18px;
+    margin-top: 32px;
+  }
+}
+
+.factory__contact li {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.factory__contact .dot-icon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--navy);
+  border-radius: 50%;
+}
+
+.factory__contact .dot-icon svg {
+  width: 16px;
+  height: 16px;
+  color: #fff;
+}
+
+.factory__contact span {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--gray);
+}
+
+@media (--xl) {
+  .factory__contact span {
+    font-size: 16px;
+  }
+}
+
+.factory__media {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.factory__media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 502/450;
+  border-radius: 24px;
+  object-fit: cover;
+}

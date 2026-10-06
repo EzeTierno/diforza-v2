@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Footer del sitio (todas las páginas)
+   ========================================================================== */
+
+/* ---- Footer (igual a v1) ---- */
+.site-footer {
+  padding: 40px var(--pad) 32px;
+  color: #fff;
+  background: #011c37;
+}
+
+@media (--lg) {
+  .site-footer {
+    padding: 56px var(--pad) 40px;
+  }
+}
+
+@media (--xl) {
+  .site-footer {
+    padding: 72px var(--pad) 56px;
+  }
+}
+
+.site-footer__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+@media (--md) {
+  .site-footer__grid {
+    flex-flow: row wrap;
+    gap: 24px;
+    justify-content: space-between;
+  }
+}
+
+.site-footer__brand img {
+  height: 52px;
+}
+
+@media (--xl) {
+  .site-footer__brand img {
+    height: 68px;
+  }
+}
+
+.site-footer__col h4 {
+  margin: 0 0 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 55%);
+}
+
+.site-footer__col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer__col a {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.site-footer__links a {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.site-footer__links a.btn {
+  font-weight: 700;
+}
+
+.site-footer__links .btn {
+  margin-top: 4px;
+}
+
+.site-footer__social {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.site-footer__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.site-footer__social svg {
+  width: 18px;
+  height: 18px;
+  color: var(--navy);
+}

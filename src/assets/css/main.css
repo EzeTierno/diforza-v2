@@ -1,14 +1,52 @@
 /* ==========================================================================
-   main.css — punto de entrada del CSS compartido (lo compila Lightning CSS)
-   Orden de capas: las posteriores ganan a las anteriores sin importar la
-   especificidad. El código sin capa (legacy) gana a todas las capas: se
-   va vaciando a medida que avanza el refactor (fase B).
+   main.css — punto de entrada único del CSS (lo compila Lightning CSS)
+   Capas: las posteriores ganan a las anteriores sin importar la especificidad.
+   layout va DESPUÉS de components porque header/footer ajustan botones adentro.
    ========================================================================== */
 
-@layer reset, tokens, base, layout, components, sections, utilities;
+@layer reset, tokens, base, components, layout, sections, utilities;
 
 @import "settings/media.css";
 @import "settings/tokens.css" layer(tokens);
 
-/* Legacy (fase A): CSS original sin dividir */
-@import "legacy/base.css";
+/* base */
+@import "base/global.css" layer(base);
+
+/* components */
+@import "components/button.css" layer(components);
+@import "components/accordion.css" layer(components);
+@import "components/reveal.css" layer(components);
+@import "components/badge.css" layer(components);
+@import "components/review-card.css" layer(components);
+@import "components/placeholder.css" layer(components);
+@import "components/section-title.css" layer(components);
+@import "components/product-card.css" layer(components);
+@import "components/testimonial.css" layer(components);
+@import "components/form.css" layer(components);
+@import "components/wa-float.css" layer(components);
+
+/* layout */
+@import "layout/header.css" layer(layout);
+@import "layout/footer.css" layer(layout);
+
+/* sections */
+@import "sections/hero.css" layer(sections);
+@import "sections/home/brands.css" layer(sections);
+@import "sections/solve.css" layer(sections);
+@import "sections/home/featured-products.css" layer(sections);
+@import "sections/home/spotlight.css" layer(sections);
+@import "sections/benefits.css" layer(sections);
+@import "sections/home/compliance.css" layer(sections);
+@import "sections/home/factory.css" layer(sections);
+@import "sections/faq.css" layer(sections);
+@import "sections/landing/trust.css" layer(sections);
+@import "sections/landing/category-lines.css" layer(sections);
+@import "sections/landing/products.css" layer(sections);
+@import "sections/landing/reviews.css" layer(sections);
+@import "sections/landing/steps.css" layer(sections);
+@import "sections/landing/guarantee.css" layer(sections);
+@import "sections/landing/quote.css" layer(sections);
+@import "sections/landing/catalog.css" layer(sections);
+
+/* utilities */
+@import "utilities.css" layer(utilities);

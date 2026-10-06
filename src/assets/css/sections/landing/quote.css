@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Landing · sección de cotización (#contacto)
+   ========================================================================== */
+
+/* ---- S12 · CTA final + formulario ---- */
+.quote {
+  position: relative;
+  padding: 56px var(--pad);
+  overflow: hidden;
+  color: #fff;
+  background: var(--navy);
+  scroll-margin-top: 70px;
+}
+
+@media (--lg) {
+  .quote {
+    padding: 88px var(--pad);
+  }
+}
+
+@media (--xl) {
+  .quote {
+    padding: 112px var(--pad);
+  }
+}
+
+.quote::before {
+  position: absolute;
+  inset: -20% 70% -20% -30%;
+  background: linear-gradient(90deg, rgb(255 255 255 / 1.5%), rgb(255 255 255 / 5%));
+  transform: skewX(-28deg);
+  content: "";
+  pointer-events: none;
+}
+
+.quote__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+@media (--lg) {
+  .quote__inner {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.15fr);
+    gap: 56px;
+    align-items: start;
+  }
+}
+
+@media (--xl) {
+  .quote__inner {
+    gap: 96px;
+  }
+}
+
+.quote__copy .section-title {
+  max-width: 14ch;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+@media (--2xl) {
+  .quote__copy .section-title {
+    font-size: 52px;
+  }
+}
+
+.quote__reply {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0 0 28px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(255 255 255 / 88%);
+}
+
+.quote__reply::before {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  background: #35c46f;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgb(53 196 111 / 20%);
+  content: "";
+}
+
+.quote__mini {
+  margin: 0 0 28px;
+  padding: 20px 22px;
+  background: rgb(255 255 255 / 6%);
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 14px;
+}
+
+.quote__mini p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgb(255 255 255 / 90%);
+}
+
+.quote__mini cite {
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
+  color: #fff;
+}
+
+.quote__mini cite span {
+  font-weight: 400;
+  color: rgb(255 255 255 / 60%);
+}

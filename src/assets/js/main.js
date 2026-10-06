@@ -2,7 +2,7 @@
   // Header: transparente sobre el hero, navy solido al scrollear.
   var header = document.getElementById('siteHeader');
   if (header){
-    var hero = document.querySelector('.hero-v2');
+    var hero = document.querySelector('[data-js="hero"]');
     var onScroll = function(){
       if (window.scrollY > 40) header.classList.add('is-stuck');
       else header.classList.remove('is-stuck');
@@ -27,7 +27,7 @@
     window.addEventListener('load', setNavH);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(setNavH);
 
-    var over = hero && hero.querySelector('.hero-v2__worker--over');
+    var over = hero && hero.querySelector('[data-js="hero-worker-over"]');
     var measure = function(){
       setNavH();
       if (!over) return;
@@ -48,9 +48,9 @@
   // Dispara la secuencia de entrada del hero recien cuando la imagen del
   // operario esta decodificada, para que ninguna capa aparezca a destiempo.
   // Si algo falla, un timeout de seguridad muestra todo igual.
-  var hero = document.querySelector('.hero-v2');
+  var hero = document.querySelector('[data-js="hero"]');
   if (!hero) return;
-  var img = hero.querySelector('.hero-v2__worker img');
+  var img = hero.querySelector('[data-js="hero-worker"] img');
   var done = false;
   function start(){
     if (done) return;
@@ -81,10 +81,10 @@
 })();
 (function(){
   // Hace "draggeable" con mouse (y touch nativo) cualquier carrusel con
-  // la clase .draggable-carousel — se usa en el de categorías y en el de productos.
+  // el atributo data-js="drag-carousel" — se usa en el de categorías y en el de productos.
   // El scroll no sigue 1 a 1 al cursor: persigue un target con easing (lerp),
   // y al soltar sigue un poco por inercia (momentum) antes de frenar.
-  document.querySelectorAll('.draggable-carousel').forEach(function(carousel){
+  document.querySelectorAll('[data-js="drag-carousel"]').forEach(function(carousel){
     carousel.style.scrollBehavior = 'auto'; // el easing lo maneja el rAF, no el CSS
 
     var isDown = false, startX = 0, startScrollLeft = 0, moved = false;
@@ -198,7 +198,7 @@
   var dots = realItems.map(function(item, i){
     var dot = document.createElement('button');
     dot.type = 'button';
-    dot.className = 'solve-v2__cats-dot';
+    dot.className = 'solve__cats-dot';
     dot.setAttribute('aria-label', 'Ir a ' + item.dataset.name);
     dot.addEventListener('click', function(){ goTo(CLONES + i); });
     dotsWrap.appendChild(dot);
@@ -216,7 +216,7 @@
   function render(){
     var s = step();
     var itemW = items[0].offsetWidth;
-    var containerW = root.querySelector('.solve-v2__cats-viewport').clientWidth;
+    var containerW = root.querySelector('.solve__cats-viewport').clientWidth;
     var offset = (containerW / 2 - itemW / 2) - (pos * s);
     track.style.transform = 'translateX(' + offset + 'px)';
 
@@ -278,9 +278,9 @@
   render();
 })();
 (function(){
-  // Parallax: el fondo de .destacado-v2 se mueve, el texto queda fijo/normal
-  var section = document.querySelector('.destacado-v2');
-  var bg = section ? section.querySelector('.destacado-v2__bg') : null;
+  // Parallax: el fondo del destacado (spotlight) se mueve, el texto queda fijo/normal
+  var section = document.querySelector('[data-js="spotlight"]');
+  var bg = section ? section.querySelector('[data-js="spotlight-bg"]') : null;
   if (!section || !bg) return;
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduceMotion) return;

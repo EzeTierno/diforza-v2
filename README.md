@@ -26,11 +26,14 @@ src/
 │  ├─ layouts/base.njk        ← esqueleto de TODAS las páginas (<head>, header, footer, scripts)
 │  └─ partials/               ← header, footer, botón flotante de WhatsApp, fuentes, íconos
 ├─ assets/
-│  ├─ css/main.css            ← punto de entrada del CSS (lo compila Lightning CSS)
-│  ├─ css/settings/           ← tokens (variables) y breakpoints con nombre (@media (--lg))
-│  ├─ css/legacy/             ← CSS original en proceso de refactor (no agregar código acá)
-│  ├─ css/l2.css, l3.css      ← estilos propios de cada landing (se unifican en la fase B)
-│  └─ js/main.js, l2.js, l3.js
+│  ├─ css/main.css            ← punto de entrada único (Lightning CSS → un solo main.css minificado)
+│  ├─ css/settings/           ← tokens (variables) y breakpoints con nombre: @media (--lg)
+│  ├─ css/base/               ← reset y estilos globales
+│  ├─ css/components/         ← piezas reutilizables: botón, badge, formulario, tarjeta de producto…
+│  ├─ css/layout/             ← header y footer
+│  ├─ css/sections/           ← secciones: compartidas (hero, solve, benefits, faq), home/ y landing/
+│  ├─ css/utilities.css       ← utilidades (lista cerrada)
+│  └─ js/main.js, landing.js  ← main.js en todas; landing.js en las páginas de categoría
 ├─ img/                       ← imágenes compartidas
 ├─ index.njk                  ← home  →  /
 ├─ indumentaria-de-trabajo/   ← L2    →  /indumentaria-de-trabajo/
@@ -45,9 +48,9 @@ _site/                        ← salida del build. NO se edita ni se sube a git
 
 - **Header, footer y WhatsApp se editan en un solo lugar** (`src/_includes/partials/` y `src/_data/site.json`). Nunca copiar ese HTML dentro de una página.
 - **Número de WhatsApp:** `src/_data/site.json` → `whatsapp.number`. Lo usan los links, el botón flotante y el JS de "Consultar producto".
-- **Nueva landing:** crear `src/<slug>/index.njk` con el front matter (`layout`, `title`, `description`, `pageCss`, `pageJs`, `waText`), su CSS en `src/assets/css/` y sus imágenes en `src/<slug>/img/`. Sumarla al footer en `site.json`.
+- **Nueva landing:** crear `src/<slug>/index.njk` con el front matter (`layout`, `title`, `description`, `pageJs: /assets/js/landing.js`, `waText`, `catalogName`) usando las clases de las secciones de landing, y sus imágenes en `src/<slug>/img/`. Las diferencias de diseño van como modificador (ej. `hero--<slug>` para el encuadre de la foto). Sumarla al footer en `site.json`.
 - Rutas de imágenes y assets siempre **absolutas** (`/img/...`, `/<slug>/img/...`, `/assets/...`).
-- **CSS:** refactor en curso según `_dev/prompts/refactor-css.md`. Regla dura: cero cambio visual (verificar con `npm run test:visual`). Breakpoints: usar los nombres de `src/assets/css/settings/media.css`.
+- **CSS:** convenciones en `_dev/prompts/refactor-css.md` (BEM en inglés, tokens, capas, breakpoints con nombre). El JS engancha por `data-js="…"`, no por clases de estilo (excepciones: `.reveal`, `.field`). Regla dura: cero cambio visual (verificar con `npm run test:visual`). Breakpoints: usar los nombres de `src/assets/css/settings/media.css`.
 - Lo que no va al sitio (PSD, originales, scripts, notas) va en `_dev/`.
 
 ## Publicación (Cloudflare Pages)

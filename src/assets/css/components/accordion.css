@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Acordeón (details/summary) — lo usa el FAQ
+   ========================================================================== */
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion details {
+  padding: 18px 0;
+  border-top: 1px solid #d7e0e8;
+}
+
+.accordion details:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.accordion summary {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--navy);
+  cursor: pointer;
+  list-style: none;
+}
+
+@media (--xl) {
+  .accordion summary {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion summary .chev {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  color: var(--navy);
+  transition: transform 0.2s ease;
+}
+
+.accordion details[open] summary .chev {
+  transform: rotate(180deg);
+}
+
+.accordion__panel {
+  margin: 12px 0 0;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  color: var(--gray);
+}
+
+@media (--xl) {
+  .accordion__panel {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 16px;
+  }
+}

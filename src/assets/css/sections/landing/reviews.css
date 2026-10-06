@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Landing · reseñas
+   ========================================================================== */
+
+/* ---- S7 · Prueba social (dentro del sector diferenciales) ---- */
+
+/* Va dentro de .benefits (.benefits__reviews), fondo blanco como en la home */
+.reviews__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (--lg) {
+  .reviews__grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: stretch;
+  }
+}
+
+.reviews__side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reviews__side .review-card {
+  flex: 1;
+  width: auto;
+  max-width: none;
+}
+
+@media (--below-lg) {
+  .reviews__side {
+    flex-direction: row;
+    margin: 0 calc(var(--pad) * -1);
+    padding: 4px var(--pad) 8px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .reviews__side::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reviews__side .review-card {
+    flex: none;
+    width: 82vw;
+    max-width: 340px;
+  }
+}

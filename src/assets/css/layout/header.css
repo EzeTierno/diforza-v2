@@ -1,0 +1,268 @@
+/* ==========================================================================
+   Header — navbar fijo, menú mobile y CTA (todas las páginas)
+   ========================================================================== */
+
+/* ---- Header / Nav ----
+   Transparente montado sobre el hero; toma fondo navy solido al scrollear
+   (clase .is-stuck que agrega el JS del final). Un scrim oscuro muy leve
+   sostiene la legibilidad del logo blanco sobre el area clara del fondo. */
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px var(--pad);
+  background: transparent;
+  transition:
+    background-color 0.3s ease,
+    padding 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.header::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgb(0 20 42 / 75%), rgb(0 20 42 / 8800%));
+  transition: opacity 0.3s ease;
+  content: "";
+  pointer-events: none;
+}
+
+@media (--md) {
+  .header {
+    padding: 18px var(--pad);
+  }
+}
+
+@media (--xl) {
+  .header {
+    padding: 20px var(--pad);
+  }
+
+  .header.is-stuck {
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+}
+
+.header.is-stuck {
+  background: var(--navy);
+  box-shadow: 0 4px 20px rgb(0 26 52 / 25%);
+}
+
+.header.is-stuck::before {
+  opacity: 0;
+}
+
+.header__logo img {
+  width: auto;
+  height: 44px;
+}
+
+@media (--md) {
+  .header__logo img {
+    height: 54px;
+  }
+}
+
+@media (--xl) {
+  .header__logo img {
+    height: 66px;
+  }
+}
+
+.nav {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.nav.is-open {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  display: flex;
+  padding: 20px 24px 28px;
+  background: var(--navy);
+  box-shadow: 0 12px 24px rgb(0 26 52 / 25%);
+}
+
+@media (--lg) {
+  .nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .header .btn--nav {
+    display: inline-flex;
+  }
+}
+
+.nav a {
+  position: relative;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  padding-bottom: 3px;
+}
+
+@media (--xl) {
+  .nav a {
+    font-size: 13.5px;
+  }
+}
+
+.nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  content: "";
+  transform-origin: left;
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.header .btn--nav {
+  display: none;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 14px 26px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+  background: var(--orange);
+  border-radius: 999px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+@media (--xl) {
+  .header .btn--nav {
+    padding: 16px 32px;
+    font-size: 13px;
+  }
+}
+
+.header .btn--nav:hover {
+  box-shadow: 0 10px 20px rgb(255 126 52 / 35%);
+  transform: translateY(-2px);
+}
+
+.header .btn--nav svg {
+  flex: none;
+  width: 14px;
+  height: 14px;
+}
+
+/* El CTA del navbar usa el label largo salvo en <=374px (bloque final) */
+.header__cta-short {
+  display: none;
+}
+
+.nav-toggle {
+  display: inline-flex;
+  padding: 0;
+  font-size: 26px;
+  line-height: 1;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (--lg) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
+@media (--short-screen) {
+  /* ==========================================================================
+   A partir de acá van los estilos de cada sector nuevo (v2), sector por
+   sector, a medida que se van armando con las imágenes que me pases.
+   ========================================================================== */
+
+  /* Notebooks 14"/16" y pantallas bajas
+   Ya no hace falta comprimir el hero: el padding superior se deriva de
+   --nav-h y el alto minimo es fijo, asi que en pantallas bajas la pagina
+   simplemente scrollea. Se conserva solo el ajuste del header. */
+  .header {
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+
+  .header__logo img {
+    height: 66px;
+  }
+}
+
+@media (--below-md) {
+  /* ==========================================================================
+   MOBILE (<768px) — ajuste fino del hero segun la referencia de Illustrator:
+   navbar mas proporcionado, eyebrow compacta, H1 en 4 lineas, operario
+   visible a la derecha (sin bloquear clicks) y copy/CTAs en la mitad izq.
+   ========================================================================== */
+
+  /* 1 — Navbar: logo mas grande, CTA mas chico */
+  .header {
+    padding: 12px var(--pad);
+  }
+
+  .header__logo img {
+    height: 46px;
+  }
+
+  .header .btn--nav {
+    gap: 0;
+    padding: 9px 16px;
+    font-size: 9.5px;
+    letter-spacing: 0.05em;
+  }
+
+  .header .btn--nav svg {
+    display: none;
+  }
+
+  .nav-toggle {
+    font-size: 30px;
+  }
+}
+
+@media (--xs-only) {
+  .header__cta-long {
+    display: none;
+  }
+
+  .header__cta-short {
+    display: inline;
+  }
+}

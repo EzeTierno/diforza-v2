@@ -1,0 +1,376 @@
+/* ==========================================================================
+   Diferenciales + bloque problema + reseñas — home y landings (.benefits--landing)
+   ========================================================================== */
+
+/* ---- Sector 6: Diferenciales ---- */
+.benefits {
+  padding: 56px var(--pad);
+  background: #fff;
+}
+
+@media (--lg) {
+  .benefits {
+    padding: 72px var(--pad);
+  }
+}
+
+@media (--xl) {
+  .benefits {
+    padding: 96px var(--pad);
+  }
+}
+
+/* Mismo grid que .benefits__grid para que el badge arranque exactamente
+   donde arranca la segunda columna de items. */
+.benefits__head {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+@media (--md) {
+  .benefits__head {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    align-items: start;
+    margin-bottom: 56px;
+  }
+}
+
+@media (--xl) {
+  .benefits__head {
+    column-gap: 96px;
+    margin-bottom: 72px;
+  }
+}
+
+.benefits__title {
+  max-width: 16ch;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 34px;
+  color: var(--navy);
+}
+
+@media (--md) {
+  .benefits__title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+}
+
+@media (--xl) {
+  .benefits__title {
+    font-size: 42px;
+    line-height: 48px;
+  }
+}
+
+.benefits__badge {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-self: start;
+  max-width: 420px;
+  padding: 16px 20px;
+  background: #f2f2f2;
+  border-radius: 16px;
+}
+
+.benefits__badge-icon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
+}
+
+.benefits__badge-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.benefits__badge p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #555;
+}
+
+.benefits__badge strong {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+@media (--xl) {
+  .benefits__badge {
+    max-width: 440px;
+    padding: 18px 24px;
+  }
+
+  .benefits__badge p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.benefits__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (--md) {
+  .benefits__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 60px;
+  }
+}
+
+@media (--xl) {
+  .benefits__grid {
+    gap: 52px 96px;
+  }
+}
+
+.benefits__item {
+  display: flex;
+  gap: 16px;
+}
+
+@media (--xl) {
+  .benefits__item {
+    gap: 20px;
+  }
+}
+
+.benefits__icon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--navy);
+  border-radius: 50%;
+}
+
+@media (--xl) {
+  .benefits__icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.benefits__icon svg {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+}
+
+@media (--xl) {
+  .benefits__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.benefits__item h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 22px;
+  color: var(--navy);
+}
+
+@media (--xl) {
+  .benefits__item h3 {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+.benefits__item p {
+  max-width: 40ch;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  color: var(--gray);
+}
+
+@media (--xl) {
+  .benefits__item p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+.benefits__problem {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2em;
+  margin-top: 56px;
+}
+
+@media (--lg) {
+  .benefits__problem {
+    flex-direction: row;
+    gap: 48px;
+    align-items: flex-start;
+    margin-top: 80px;
+  }
+}
+
+@media (--xl) {
+  .benefits__problem {
+    gap: 72px;
+    margin-top: 104px;
+  }
+}
+
+.benefits__problem-box {
+  flex: none;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 32px 28px;
+  color: #fff;
+  background: var(--orange);
+}
+
+@media (--lg) {
+  .benefits__problem-box {
+    width: 300px;
+    padding: 40px 32px;
+  }
+}
+
+@media (--xl) {
+  .benefits__problem-box {
+    width: 380px;
+    padding: 56px 44px;
+  }
+}
+
+.benefits__problem-box p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+@media (--xl) {
+  .benefits__problem-box p {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.benefits__problem-box strong {
+  display: block;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.benefits__problem-list {
+  flex: 1;
+  width: 100%;
+}
+
+.benefits__problem-list .accordion summary {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (--xl) {
+  .benefits__problem-list .accordion summary {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+.benefits__problem-list .accordion__panel {
+  max-width: 56ch;
+}
+
+.benefits__reviews {
+  margin-top: 56px;
+}
+
+@media (--lg) {
+  .benefits__reviews {
+    margin-top: 80px;
+  }
+}
+
+@media (--xl) {
+  .benefits__reviews {
+    margin-top: 104px;
+  }
+}
+
+/* ---- S3 · Problema: integrado dentro de .benefits (bloque naranja de la home) ---- */
+.benefits--landing .benefits__problem-title {
+  margin: 0 0 24px;
+  font-family: Poppins, Montserrat, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+@media (--xl) {
+  .benefits--landing .benefits__problem-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.benefits--landing .benefits__problem-cta {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 13px 22px;
+  font-size: 12px;
+  text-align: left;
+  white-space: normal;
+  color: var(--navy);
+  background: #fff;
+}
+
+.benefits--landing .benefits__problem-cta svg {
+  flex: none;
+  width: 14px;
+  height: 14px;
+}
+
+@media (--lg) {
+  .benefits--landing .benefits__problem-box {
+    width: 350px;
+  }
+
+  .benefits--landing .benefits__problem-cta {
+    padding: 13px 20px;
+    font-size: 11.5px;
+    white-space: nowrap;
+  }
+}
+
+@media (--xl) {
+  .benefits--landing .benefits__problem-box {
+    width: 420px;
+  }
+
+  .benefits--landing .benefits__problem-cta {
+    padding: 15px 24px;
+    font-size: 12.5px;
+  }
+}

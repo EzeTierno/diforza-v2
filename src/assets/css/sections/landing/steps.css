@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Landing · cómo trabajamos (pasos)
+   ========================================================================== */
+
+/* ---- S9 · Como trabajamos ---- */
+.steps {
+  padding: 56px var(--pad);
+  background: #fff;
+}
+
+@media (--lg) {
+  .steps {
+    padding: 80px var(--pad);
+  }
+}
+
+@media (--xl) {
+  .steps {
+    padding: 104px var(--pad);
+  }
+}
+
+.steps .section-title {
+  margin-bottom: 36px;
+}
+
+@media (--xl) {
+  .steps .section-title {
+    margin-bottom: 56px;
+  }
+}
+
+.steps__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+  list-style: none;
+}
+
+@media (--md) {
+  .steps__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 40px;
+  }
+}
+
+@media (--xl) {
+  .steps__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+}
+
+.steps__item {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+@media (--xl) {
+  .steps__item {
+    flex-direction: column;
+    gap: 22px;
+  }
+}
+
+.steps__n {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: #fff;
+  background: var(--navy);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px #fff;
+}
+
+.steps__item:last-child .steps__n {
+  background: var(--orange);
+}
+
+@media (--xl) {
+  .steps__n {
+    width: 56px;
+    height: 56px;
+    font-size: 19px;
+  }
+
+  /* linea que une los pasos */
+  .steps__item:not(:last-child)::after {
+    position: absolute;
+    top: 28px;
+    right: -40px;
+    left: 56px;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, #c9d4df 0 8px, transparent 8px 14px);
+    content: "";
+  }
+}
+
+.steps__item p {
+  max-width: 34ch;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--navy);
+  padding-top: 4px;
+}
+
+@media (--xl) {
+  .steps__item p {
+    font-size: 17px;
+    padding-top: 0;
+  }
+}

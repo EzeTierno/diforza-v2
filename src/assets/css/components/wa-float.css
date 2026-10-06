@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Botón flotante de WhatsApp
+   ========================================================================== */
+
+/* ---- WhatsApp flotante (mobile/tablet, permanente — doc 02 regla 2) ---- */
+.wa-float {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 10px 24px rgb(0 0 0 / 25%);
+}
+
+.wa-float svg {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+
+@media (--lg) {
+  .wa-float {
+    display: none;
+  }
+}

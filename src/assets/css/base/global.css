@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Global — box-sizing, html/body, titulares e imágenes
+   ========================================================================== */
+
+/* ==========================================================================
+   LEGACY — CSS compartido original (home + landings), pendiente de dividir
+   en base/, layout/, components/ y sections/ (fase B del refactor).
+   No agregar código nuevo acá.
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: Montserrat, Arial, sans-serif;
+  color: var(--navy);
+}
+
+h1,
+h2,
+h3 {
+  font-family: Poppins, Montserrat, Arial, sans-serif;
+  font-weight: 800;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

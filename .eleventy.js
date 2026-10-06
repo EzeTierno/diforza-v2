@@ -15,14 +15,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/*/img");   // imágenes propias de cada landing
 
   // ---- CSS con Lightning CSS ----
-  // Solo se compilan los archivos que están directamente en src/assets/css/
-  // (puntos de entrada: main.css, l2.css, l3.css). Los de las subcarpetas
-  // son parciales: se incluyen con @import y no se publican sueltos.
+  // Solo se compila main.css (punto de entrada único). El resto son parciales:
+  // se incluyen con @import desde main.css y no se publican sueltos.
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {
     outputFileExtension: "css",
     compile: async function (_content, inputPath) {
-      if (path.dirname(path.normalize(inputPath)) !== CSS_DIR) return; // parcial → no se publica
+      if (path.normalize(inputPath) !== path.join(CSS_DIR, "main.css")) return; // parcial → no se publica
       const minify = process.env.ELEVENTY_RUN_MODE === "build";
       return async () => {
         const { code } = await bundleAsync({

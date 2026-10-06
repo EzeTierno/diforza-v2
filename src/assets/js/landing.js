@@ -1,5 +1,6 @@
 /* ==========================================================================
-   L2 · JS propio (el de arriba es el de la home, sin cambios)
+   Landing · JS de las páginas de categoría (L2, L3, …). Se carga después de main.js.
+   Textos por página: window.SITE.waText y window.SITE.catalogName (front matter).
    ========================================================================== */
 (function(){
   // Marcas [VALIDAR]/[PENDIENTE]: mostrar/ocultar (preferencia por visitante)
@@ -7,7 +8,7 @@
   if (!btn) return;
   var root = document.documentElement;
   function apply(off){
-    root.classList.toggle('ph-off', off);
+    root.classList.toggle('is-placeholders-hidden', off);
     btn.textContent = off ? 'Mostrar marcas' : 'Ocultar marcas';
     btn.setAttribute('aria-pressed', off ? 'true' : 'false');
   }
@@ -15,7 +16,7 @@
   try { saved = localStorage.getItem('dif-ph-off') === '1'; } catch(e){}
   apply(saved);
   btn.addEventListener('click', function(){
-    var off = !root.classList.contains('ph-off');
+    var off = !root.classList.contains('is-placeholders-hidden');
     apply(off);
     try { localStorage.setItem('dif-ph-off', off ? '1' : '0'); } catch(e){}
   });
@@ -24,12 +25,12 @@
 (function(){
   // Precarga de producto S5 -> formulario + WhatsApp (doc 17 §17)
   var WA_NUM = (window.SITE && window.SITE.whatsapp) || '5491163513333'; // número en src/_data/site.json
-  var WA_BASE = 'Hola, necesito cotizar indumentaria de trabajo para mi empresa.';
+  var WA_BASE = (window.SITE && window.SITE.waText) || '';
   var hidden = document.getElementById('productoInteres');
   var box = document.getElementById('quoting');
   var nameEl = document.getElementById('quotingName');
   var clear = document.getElementById('quotingClear');
-  var waLinks = document.querySelectorAll('.js-wa');
+  var waLinks = document.querySelectorAll('[data-js="wa"]');
   var target = document.getElementById('form-cotizacion-wrap');
 
   function setWa(text){
@@ -53,6 +54,12 @@
       var n = b.getAttribute('data-prod-nombre') || '';
       var c = b.getAttribute('data-prod-codigo') || '';
       setProduct(c ? n + ' (Cód. ' + c + ')' : n);
+      // Si el producto trae categoría, la tilda en el campo multi-selección (L3)
+      var cat = b.getAttribute('data-prod-cat');
+      if (cat){
+        var chk = document.querySelector('#form-cotizacion [data-required-group] input[value="' + cat + '"]');
+        if (chk){ chk.checked = true; chk.dispatchEvent(new Event('change', {bubbles:true})); }
+      }
       if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
     });
   });
@@ -62,7 +69,7 @@
 
 (function(){
   // Catálogo: los CTAs "Descargar catálogo" expanden el form corto (no popup)
-  var toggle = document.querySelector('.catalog-l2__toggle');
+  var toggle = document.querySelector('[data-js="catalog-toggle"]');
   var panel = document.getElementById('catalogPanel');
   var wrap = document.getElementById('catalogo');
   if (!toggle || !panel) return;
@@ -101,7 +108,7 @@
     el.setAttribute('aria-invalid', ok ? 'false' : 'true');
     return ok;
   }
-  document.querySelectorAll('.js-lead-form').forEach(function(form){
+  document.querySelectorAll('[data-js="lead-form"]').forEach(function(form){
     var inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
     inputs.forEach(function(el){
       el.addEventListener('blur', function(){ check(el); });
@@ -112,15 +119,26 @@
       el.addEventListener('input', recheck);
       el.addEventListener('change', recheck);
     });
+    // Grupos de checkboxes obligatorios (al menos uno tildado)
+    var groups = form.querySelectorAll('[data-required-group]');
+    function checkGroup(g){
+      var ok = !!g.querySelector('input[type=checkbox]:checked');
+      g.classList.toggle('is-invalid', !ok);
+      return ok;
+    }
+    groups.forEach(function(g){
+      g.addEventListener('change', function(){ if (g.classList.contains('is-invalid')) checkGroup(g); });
+    });
     form.addEventListener('submit', function(e){
       e.preventDefault();
       var first = null;
       inputs.forEach(function(el){ if (!check(el) && !first) first = el; });
+      groups.forEach(function(g){ if (!checkGroup(g) && !first) first = g.querySelector('input'); });
       if (first){ first.focus(); return; }
       var hp = form.querySelector('input[name="website"]');
       if (hp && hp.value) return; // bot
       var btn = form.querySelector('button[type="submit"]');
-      var status = form.querySelector('.form-l2__status');
+      var status = form.querySelector('[data-js="form-status"]');
       var label = btn.innerHTML;
       btn.disabled = true; btn.textContent = 'Enviando…';
       // Prototipo: simula el envío. Acá va el fetch al endpoint real; si
@@ -128,10 +146,10 @@
       setTimeout(function(){
         var isCat = form.id === 'form-catalogo';
         form.innerHTML =
-          '<div class="form-l2__ok" role="status">' +
+          '<div class="lead-form__ok" role="status">' +
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>' +
           (isCat
-            ? '<h3>¡Listo!</h3><p>Te enviamos el catálogo de indumentaria por email.</p>'
+            ? '<h3>¡Listo!</h3><p>Te enviamos el catálogo de ' + ((window.SITE && window.SITE.catalogName) || '') + ' por email.</p>'
             : '<h3>¡Gracias! Recibimos tu pedido.</h3><p>Un responsable de cuenta te va a contactar para armar la cotización.</p>') +
           '</div>';
       }, 900);

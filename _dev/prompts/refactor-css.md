@@ -116,7 +116,7 @@ src/assets/css/
 `main.css`:
 
 ```css
-@layer reset, tokens, base, layout, components, sections, utilities;
+@layer reset, tokens, base, components, layout, sections, utilities;
 
 @import "settings/tokens.css" layer(tokens);
 @import "settings/media.css";
@@ -125,6 +125,8 @@ src/assets/css/
 /* … resto en el orden del árbol … */
 @import "utilities.css" layer(utilities);
 ```
+
+**Orden de capas aplicado (fase B):** `components` va ANTES que `layout` porque el header y el footer ajustan botones adentro.
 
 **Cascade layers** resuelven el orden por capa y no por especificidad: una utilidad gana siempre a un componente sin `!important`, y una sección puede ajustar un componente sin escalar selectores.
 
@@ -334,32 +336,40 @@ Interlineado y tracking:
 - Contexto oscuro: modificador de sección (`.section--dark`), que redefine tokens semánticos localmente (`--color-text: var(--color-text-inverse)`) en vez de reescribir cada componente (reemplaza `.on-dark`).
 - Hooks de JS: `data-js="nav-toggle"`, `data-js="consultar"`, `data-js="wa"`… (reemplazar `js-wa`, `#navToggle` en JS, etc.; los `id` se mantienen solo para anclas y `aria-controls`).
 
-### 8.2 Tabla de renombres (a completar y entregar en la fase B)
+### 8.2 Tabla de renombres (APLICADA en la fase B, 6 oct 2026)
 
-| Actual | Nuevo | Tipo |
-|---|---|---|
-| `hero-v2`, `hero-v2--l2`, `hero-v2--l3` | `hero`, `hero--indumentaria`, `hero--epp` | sección |
-| `brands-v2` | `brands` | sección home |
-| `solve-v2`, `solve-v2--l2/l3` | `solve` (+ modificadores) | sección |
-| `products-v2`, `prod-l2`, `prod-l3` | `products` | sección |
-| `pcard-v2`, `pcard-l2`, `pcard-l3` | `product-card` | componente |
-| `destacado-v2` | `featured` | sección home |
-| `dif-v2` | `benefits` | sección |
-| `protect-v2` | `compliance` | sección home |
-| `factory-v2` | `factory` | sección home |
-| `trust-l2/l3` | `trust` | sección landing |
-| `line-l2/l3` | `category-lines` | sección landing |
-| `steps-l2/l3` | `steps` | sección landing |
-| `guarantee-l2/l3` | `guarantee` | sección landing |
-| `cta-l2/l3`, `form-l2/l3`, `quote-l2/l3`, `quoting-l2/l3` | `quote` + `form` + `field` | sección + componentes |
-| `catalog-l2/l3` | `catalog` | sección landing |
-| `eyebrow-l2/l3` | `eyebrow` | componente |
-| `h2-l2/l3` | `section-heading` | componente |
-| `gcard`, `greviews`, `reviews-l2/l3` | `review-card`, `reviews` | componente/sección |
-| `chips-l3`, `chip-l3` | `chips`, `chip` | componente |
-| `faq`, `faq--l2/l3`, `accordion` | `faq` + `accordion` | sección + componente |
-| `on-dark` | `section--dark` | modificador |
-| `ph`, `ph-toggle`, `ph-off` | `placeholder`, `placeholder-toggle`, `is-placeholders-hidden` | dev |
+| Antes | Ahora |
+|---|---|
+| `hero-v2`, `hero-v2--l2`, `hero-v2--l3` | `hero`; landings: `hero hero--landing hero--indumentaria` / `hero--epp` |
+| `brands-v2` | `brands` |
+| `solve-v2`, `solve-v2--l2/l3` | `solve`, `solve--landing` |
+| `products-v2` (home) | `featured-products` |
+| `products-v2__badge` | `badge` (componente, lo usan home y landings) |
+| `pcard-v2` | `product-tile` |
+| `destacado-v2` | `spotlight` |
+| `dif-v2` | `benefits` (+ `benefits--landing` en landings) |
+| `protect-v2` / `factory-v2` | `compliance` / `factory` |
+| `gcard` / `greviews` | `review-card` / `reviews-summary` |
+| `trust-l2/l3` | `trust` (+ `trust--grouped` en EPP) |
+| `line-l2/l3` | `category-lines` (+ `category-lines--wide-title` en EPP) |
+| `prod-l2/l3` / `pcard-l2/l3` | `products` / `product-card` |
+| `reviews-l2/l3`, `steps-…`, `guarantee-…`, `catalog-…`, `norms-l3` | `reviews`, `steps`, `guarantee`, `catalog`, `norms` |
+| `cta-l2/l3` (sección #contacto) / `form-l2/l3` | `quote` / `lead-form` |
+| `quote-l2/l3` (testimonio) / `quoting-l2/l3` | `testimonial` / `quote-product` |
+| `h2-l2/l3` / `eyebrow-l2/l3` | `section-title` / `eyebrow` |
+| `chips-l3` / `chip-l3` | `chips` / `chip` |
+| `faq--l2/l3` | `faq--landing` |
+| `footer__*` | `site-footer__*` |
+| `btn--solid` / `btn--wa` | `btn--primary` / `btn--whatsapp` |
+| `btn--nav__long/short` | `header__cta-long/short` |
+| `ph`, `ph-toggle`, `ph-off`, `is-ph` | `placeholder`, `placeholder-toggle`, `is-placeholders-hidden`, `is-placeholder` |
+| `on-dark` | `theme-dark` |
+| `req` / `br-d` / `br-m` | `field__required` / `br-desktop` / `br-mobile` |
+| keyframes `brands-v2-loop` | `brands-loop` |
+| JS: `.js-wa`, `.js-lead-form`, `.draggable-carousel`, `.catalog-l*__toggle`, `.form-l*__status`, `.hero-v2`, `.destacado-v2` | `data-js="wa"`, `"lead-form"`, `"drag-carousel"`, `"catalog-toggle"`, `"form-status"`, `"hero"`, `"spotlight"`… |
+| JS: `l2.js` + `l3.js` | `landing.js` (textos por página desde `window.SITE.waText` / `catalogName`) |
+
+Excepciones aceptadas a "JS solo por data-js": `.reveal` (clase de estado de animación compartida CSS/JS) y `.field` (contenedor de campo que el JS marca con `is-invalid`).
 
 ### 8.3 Diferencias entre landings
 
@@ -437,8 +447,8 @@ Interlineado y tracking:
 
 | Fase | Qué se hace | Cambio visual | Entregable |
 |---|---|---|---|
-| **A · Infraestructura** | Baseline visual + script de test · Lightning CSS en 11ty · `main.css` con `@layer` · `tokens.css` con los **valores exactos actuales** · `media.css` · Stylelint/Prettier configurados (aún en modo aviso) | Ninguno | Commit "CSS fase A" + test en verde |
-| **B · Arquitectura y nombres** | Partir el CSS en el árbol de §5 · renombrar clases (tabla §8.2) en CSS, `.njk` y JS · JS a `data-js` · unificar L2/L3 en componentes/secciones compartidas · media queries agrupadas por bloque · borrar CSS muerto y comentarios obsoletos | Ninguno | Commit "CSS fase B" + tabla de renombres + test en verde |
+| **A · Infraestructura** ✅ 6 oct | Baseline visual + script de test · Lightning CSS en 11ty · `main.css` con `@layer` · `tokens.css` con los **valores exactos actuales** · `media.css` · Stylelint/Prettier configurados (aún en modo aviso) | Ninguno | Commit "CSS fase A" + test en verde |
+| **B · Arquitectura y nombres** ✅ 6 oct | Partir el CSS en el árbol de §5 · renombrar clases (tabla §8.2) en CSS, `.njk` y JS · JS a `data-js` · unificar L2/L3 en componentes/secciones compartidas · media queries agrupadas por bloque · comentarios con nombres viejos actualizados (borrar CSS muerto pasa a la fase C) | Ninguno | Commit "CSS fase B" + tabla de renombres + test en verde |
 | **C · Tokens** | Reemplazar todos los valores sueltos por tokens **exactos** (sin consolidar) · Stylelint en modo error | **Ninguno** | Commit "CSS fase C" + tabla de tokens + test en verde |
 | **D · Accesibilidad** | CTA naranja → `#C2561A` (D5, aprobado) · informe de contraste, foco y áreas táctiles (lo que implique cambio visual se reporta, no se aplica sin OK) | Solo el CTA | Commit "CSS fase D" + informe |
 | **E · Documentación** | `_dev/notas/css-guia.md` (cómo crear un componente / una landing, tokens disponibles, breakpoints) · actualizar `README.md` y `MEMORY.md` | — | Commit "CSS fase E" |

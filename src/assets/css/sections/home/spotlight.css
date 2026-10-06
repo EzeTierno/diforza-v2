@@ -1,0 +1,158 @@
+/* ==========================================================================
+   Home · destacado con imagen de fondo (nueva línea)
+   ========================================================================== */
+
+/* ---- Sector 5: Destacado con imagen de fondo ---- */
+.spotlight {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 240px;
+  overflow: hidden;
+  background: var(--navy);
+}
+
+@media (--md) {
+  .spotlight {
+    min-height: 280px;
+  }
+}
+
+@media (--lg) {
+  .spotlight {
+    min-height: 0;
+    aspect-ratio: 1629/380;
+  }
+}
+
+.spotlight__bg {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 144%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+.spotlight__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgb(0 17 34 / 82%) 0%,
+    rgb(0 17 34 / 62%) 42%,
+    rgb(0 17 34 / 20%) 68%,
+    rgb(0 17 34 / 0%) 92%
+  );
+}
+
+.spotlight__content {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 var(--pad);
+}
+
+.spotlight__text {
+  max-width: 560px;
+}
+
+.spotlight__eyebrow {
+  display: block;
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+@media (--xl) {
+  .spotlight__eyebrow {
+    font-size: 16px;
+  }
+}
+
+.spotlight__content h2 {
+  margin: 0 0 16px;
+  font-size: 32px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (--md) {
+  .spotlight__content h2 {
+    font-size: 42px;
+    line-height: 46px;
+  }
+}
+
+@media (--xl) {
+  .spotlight__content h2 {
+    font-size: 54px;
+    line-height: 58px;
+    margin-bottom: 20px;
+  }
+}
+
+.spotlight__content p {
+  max-width: 42ch;
+  margin: 0 0 28px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: rgb(255 255 255 / 90%);
+}
+
+@media (--xl) {
+  .spotlight__content p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (--below-md) {
+  /* Sector destacado "Impermeables": mas alto, foto justificada a la
+     derecha (para que se vea el personaje) y caja con padding propio. */
+  .spotlight {
+    min-height: 400px;
+  }
+
+  .spotlight__bg {
+    object-position: 77% center;
+  }
+
+  .spotlight__overlay {
+    background: linear-gradient(
+      90deg,
+      rgb(0 17 34 / 88%) 0%,
+      rgb(0 17 34 / 78%) 40%,
+      rgb(0 17 34 / 45%) 72%,
+      rgb(0 17 34 / 18%) 100%
+    );
+  }
+
+  .spotlight__content {
+    padding: 28px var(--pad);
+  }
+
+  .spotlight__content p {
+    max-width: 26ch;
+    margin-bottom: 22px;
+  }
+
+  .spotlight .btn {
+    padding: 11px 20px;
+    font-size: 11px;
+  }
+}

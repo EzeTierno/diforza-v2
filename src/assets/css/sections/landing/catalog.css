@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Landing · descarga de catálogo y tabla de normas
+   ========================================================================== */
+
+/* Catalogo: formulario corto e independiente, colapsable (doc 05 §6) */
+.catalog {
+  border-top: 1px solid rgb(255 255 255 / 14%);
+  margin-top: 32px;
+  padding-top: 24px;
+  scroll-margin-top: 90px;
+}
+
+.catalog__toggle {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  font:
+    700 14px/1.4 Montserrat,
+    Arial,
+    sans-serif;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.catalog__toggle small {
+  display: block;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0;
+  color: rgb(255 255 255 / 70%);
+  margin-top: 2px;
+}
+
+.catalog__toggle .chev {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+}
+
+.catalog__toggle[aria-expanded="true"] .chev {
+  transform: rotate(180deg);
+}
+
+.catalog__panel {
+  margin-top: 20px;
+}
+
+.catalog__panel[hidden] {
+  display: none;
+}
+
+/* Formulario de catalogo sobre fondo navy */
+.catalog .field label {
+  color: #fff;
+}
+
+.catalog .check {
+  color: rgb(255 255 255 / 75%);
+}
+
+.catalog .check a {
+  color: #fff;
+}
+
+.catalog .lead-form__grid {
+  gap: 14px;
+}
+
+.catalog .lead-form__ok {
+  background: #fff;
+  border-radius: 14px;
+}
+
+.catalog .field label.check {
+  color: rgb(255 255 255 / 75%);
+}

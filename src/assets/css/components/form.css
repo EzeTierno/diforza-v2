@@ -1,0 +1,380 @@
+/* ==========================================================================
+   Formularios de lead: campos, checks, chips, estados de error y producto a cotizar
+   ========================================================================== */
+
+/* Tarjeta del formulario de cotizacion */
+.lead-form {
+  padding: 26px 20px;
+  color: var(--navy);
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgb(0 10 25 / 35%);
+  scroll-margin-top: 90px;
+}
+
+@media (--md) {
+  .lead-form {
+    padding: 34px 32px;
+  }
+}
+
+@media (--xl) {
+  .lead-form {
+    padding: 42px 40px;
+  }
+}
+
+.lead-form__title {
+  margin: 0 0 4px;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.lead-form__note {
+  margin: 0 0 22px;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--gray);
+}
+
+.lead-form__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (--md) {
+  .lead-form__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.field--full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--navy);
+}
+
+.field label .field__required {
+  color: var(--orange);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  font:
+    400 15px/1.4 Montserrat,
+    Arial,
+    sans-serif;
+  color: var(--navy);
+  background: #fff;
+  border: 1px solid #cfd8e1;
+  border-radius: 10px;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%23003568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 16px;
+  background-position: right 14px center;
+  background-repeat: no-repeat;
+  appearance: none;
+  appearance: none;
+  padding-right: 40px;
+}
+
+.field textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgb(255 126 52 / 28%);
+  outline: none;
+}
+
+.field.is-invalid input,
+.field.is-invalid select,
+.field.is-invalid textarea {
+  border-color: #c62828;
+}
+
+.field__error {
+  display: none;
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #c62828;
+}
+
+.field__error::before {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  background: #c62828;
+  border-radius: 50%;
+  content: "!";
+}
+
+.field.is-invalid .field__error {
+  display: flex;
+}
+
+.check {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4a5a6a;
+}
+
+.check input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 1px 0 0;
+  accent-color: var(--navy);
+}
+
+.check a {
+  color: var(--navy);
+}
+
+.lead-form__submit {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.lead-form__submit[disabled] {
+  box-shadow: none;
+  opacity: 0.7;
+  transform: none;
+  cursor: progress;
+}
+
+.lead-form__submit svg {
+  width: 15px;
+  height: 15px;
+}
+
+.lead-form__status {
+  margin: 12px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.lead-form__status.is-error {
+  color: #c62828;
+}
+
+.lead-form__ok {
+  padding: 24px 8px;
+  text-align: center;
+}
+
+.lead-form__ok svg {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 14px;
+  color: #25a55f;
+}
+
+.lead-form__ok h3 {
+  margin: 0 0 8px;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.lead-form__ok p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--gray);
+}
+
+/* Bloque "Estas cotizando: {producto}" (precarga desde S5, doc 17 §17) */
+.quote-product {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  font-size: 13.5px;
+  color: var(--navy);
+  background: #fff4ec;
+  border: 1px solid #ffd3b8;
+  border-radius: 10px;
+}
+
+.quote-product[hidden] {
+  display: none;
+}
+
+.quote-product strong {
+  font-weight: 700;
+}
+
+.quote-product button {
+  flex: none;
+  font:
+    600 12px/1 Montserrat,
+    Arial,
+    sans-serif;
+  text-decoration: underline;
+  color: #c2561a;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (--below-md) {
+  .lead-form__submit {
+    padding: 15px 20px;
+    font-size: 12px;
+  }
+}
+
+/* ---- Ajustes post-verificacion ---- */
+
+/* El checkbox no hereda el estilo de input de texto de .field */
+.field .check input {
+  width: 18px;
+  height: 18px;
+  min-height: 0;
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.field label.check {
+  font-size: 12.5px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #4a5a6a;
+}
+
+/* S12 · campo multi-seleccion: chips */
+.field--group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.field--group legend {
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.field--group legend small {
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--gray);
+  margin-left: 6px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  position: relative;
+  cursor: pointer;
+}
+
+.chip input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.chip span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 8px 14px;
+  font:
+    500 13px/1.2 Montserrat,
+    Arial,
+    sans-serif;
+  color: var(--navy);
+  background: #fff;
+  border: 1px solid #cfd8e1;
+  border-radius: 999px;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.chip:hover span {
+  border-color: var(--navy);
+}
+
+.chip input:checked + span {
+  color: #fff;
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.chip input:checked + span::before {
+  font-weight: 700;
+  color: var(--orange);
+  content: "✓";
+  margin-right: 6px;
+}
+
+.chip input:focus-visible + span {
+  box-shadow: 0 0 0 3px rgb(255 126 52 / 35%);
+}
+
+.field--group.is-invalid .chip span {
+  border-color: #c62828;
+}

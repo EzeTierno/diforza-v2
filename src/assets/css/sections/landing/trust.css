@@ -1,0 +1,258 @@
+/* ==========================================================================
+   Landing · franja de confianza / marcas (.trust--grouped: variante con grupo de distribuidas)
+   ========================================================================== */
+
+/* ---- S2 · Franja de confianza ---- */
+.trust {
+  padding: 28px var(--pad);
+  background: #f2f2f2;
+}
+
+@media (--lg) {
+  .trust {
+    padding: 34px var(--pad);
+  }
+}
+
+@media (--xl) {
+  .trust {
+    padding: 40px var(--pad);
+  }
+}
+
+.trust__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (--lg) {
+  .trust__inner {
+    flex-direction: row;
+    gap: 48px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.trust__text {
+  max-width: 44ch;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--navy);
+  border-left: 3px solid var(--orange);
+  padding-left: 16px;
+}
+
+@media (--xl) {
+  .trust__text {
+    font-size: 17px;
+  }
+}
+
+.trust__brands {
+  display: flex;
+  gap: 28px;
+  align-items: stretch;
+}
+
+@media (--xl) {
+  .trust__brands {
+    gap: 48px;
+  }
+}
+
+.trust__brand {
+  display: grid;
+  grid-template-rows: auto 56px auto;
+  gap: 8px;
+  place-items: center center;
+}
+
+.trust__brand + .trust__brand {
+  border-left: 1px solid #d9d9d9;
+  padding-left: 28px;
+}
+
+@media (--xl) {
+  .trust__brand + .trust__brand {
+    padding-left: 48px;
+  }
+
+  .trust__brand {
+    grid-template-rows: auto 64px auto;
+  }
+}
+
+.trust__label {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--gray);
+}
+
+.trust__brand img {
+  width: auto;
+  height: 48px;
+}
+
+.trust__brand--main img {
+  height: 56px;
+}
+
+@media (--xl) {
+  .trust__brand img {
+    height: 52px;
+  }
+
+  .trust__brand--main img {
+    height: 64px;
+  }
+}
+
+.trust__brand img.is-sm {
+  height: 34px;
+}
+
+@media (--xl) {
+  .trust__brand img.is-sm {
+    height: 40px;
+  }
+}
+
+.trust__sub {
+  margin: 0;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--gray);
+}
+
+@media (--lg-to-2xl) {
+  .trust--grouped .trust__inner {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .trust--grouped .trust__brands {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (--2xl) {
+  .trust--grouped .trust__text {
+    max-width: 30ch;
+  }
+
+  .trust--grouped .trust__brands {
+    flex-wrap: nowrap;
+    gap: 36px;
+  }
+
+  .trust--grouped .trust__brand + .trust__brand {
+    padding-left: 36px;
+  }
+}
+
+.trust--grouped .trust__brands {
+  flex-wrap: wrap;
+  row-gap: 22px;
+}
+
+.trust--grouped .trust__brand--group {
+  grid-template-rows: auto auto auto;
+}
+
+@media (--xl) {
+  .trust--grouped .trust__brand--group {
+    grid-template-rows: auto auto auto;
+  }
+}
+
+.trust--grouped .trust__logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+}
+
+.trust--grouped .trust__logos img.is-sm {
+  height: 30px;
+}
+
+@media (--xl) {
+  .trust--grouped .trust__logos img.is-sm {
+    height: 34px;
+  }
+}
+
+.trust--grouped .trust__word {
+  display: inline-flex;
+  align-items: center;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #6b7785;
+}
+
+@media (--below-md) {
+  .trust--grouped .trust__brands {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 18px;
+  }
+
+  .trust--grouped .trust__brand + .trust__brand {
+    padding-left: 18px;
+  }
+
+  .trust--grouped .trust__brand--group {
+    grid-column: 1 / -1;
+    border-left: none !important;
+    border-top: 1px solid #d9d9d9;
+    padding-left: 0 !important;
+    padding-top: 18px;
+  }
+
+  .trust--grouped .trust__sub {
+    max-width: 22ch;
+    line-height: 1.5;
+    text-align: center;
+    white-space: normal;
+  }
+
+  /* Libus y ZIAO con el mismo alto visual (05/10) */
+  .trust--grouped .trust__brand--main img,
+  .trust--grouped .trust__brand img.is-sm {
+    height: 36px;
+  }
+
+  .trust--grouped .trust__logos img.is-sm {
+    height: 28px;
+  }
+}
+
+@media (--md) {
+  .trust--grouped .trust__brand--main img,
+  .trust--grouped .trust__brand > img.is-sm {
+    height: 40px;
+  }
+}
+
+@media (--xl) {
+  .trust--grouped .trust__brand--main img,
+  .trust--grouped .trust__brand > img.is-sm {
+    height: 44px;
+  }
+}

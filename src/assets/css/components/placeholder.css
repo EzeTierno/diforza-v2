@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Marcas [VALIDAR]/[PENDIENTE] (.placeholder) y su botón — se quitan al lanzar
+   ========================================================================== */
+
+/* ---- Marcas de placeholder ([VALIDAR] / [PENDIENTE]) ----
+   Visibles por defecto en este borrador. El boton flotante de abajo a la
+   izquierda las oculta para ver la pagina "limpia". En produccion se borran. */
+.placeholder {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  padding: 2px 7px;
+  font:
+    600 9.5px/1.35 Montserrat,
+    Arial,
+    sans-serif;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #c2561a;
+  background: #fff4ec;
+  border: 1px dashed var(--orange);
+  border-radius: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.theme-dark .placeholder {
+  color: #ffb68b;
+  background: rgb(255 126 52 / 14%);
+}
+
+html.is-placeholders-hidden .placeholder {
+  display: none;
+}
+
+.placeholder-toggle {
+  position: fixed;
+  bottom: 14px;
+  left: 14px;
+  z-index: 60;
+  padding: 8px 14px;
+  font:
+    600 10.5px/1 Montserrat,
+    Arial,
+    sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #c2561a;
+  background: #fff;
+  border: 1px dashed var(--orange);
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgb(0 26 52 / 14%);
+  cursor: pointer;
+}
+
+html.is-placeholders-hidden .product-card__phlabel {
+  display: none;
+}
+
+@media (--below-md) {
+  .placeholder-toggle {
+    padding: 6px 10px;
+    font-size: 9px;
+    opacity: 0.92;
+  }
+}

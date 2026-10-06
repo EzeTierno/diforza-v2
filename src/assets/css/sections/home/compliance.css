@@ -1,0 +1,89 @@
+/* ==========================================================================
+   Home · "Tu planta protegida y en regla"
+   ========================================================================== */
+
+/* ---- Sector 7: Tu planta protegida y en regla ante cualquier inspección ---- */
+.compliance {
+  color: #fff;
+  background: var(--navy);
+}
+
+.compliance__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px var(--pad);
+}
+
+@media (--lg) {
+  .compliance__inner {
+    flex-direction: row;
+    gap: 60px;
+    align-items: flex-start;
+    padding: 64px var(--pad);
+  }
+}
+
+@media (--xl) {
+  .compliance__inner {
+    gap: 80px;
+    padding: 96px var(--pad);
+  }
+}
+
+.compliance__copy {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.compliance__cards {
+  display: flex;
+  flex: 1 1 50%;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.compliance__copy h2 {
+  margin: 18px 0;
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #fff;
+}
+
+@media (--md) {
+  .compliance__copy h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+@media (--xl) {
+  .compliance__copy h2 {
+    font-size: 38px;
+    line-height: 46px;
+    margin-bottom: 24px;
+  }
+}
+
+.compliance__copy p {
+  max-width: 46ch;
+  margin: 0 0 28px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  color: rgb(255 255 255 / 85%);
+}
+
+@media (--xl) {
+  .compliance__copy p {
+    font-size: 17px;
+    line-height: 28px;
+    margin-bottom: 32px;
+  }
+}
+
+.compliance__copy .ctas {
+  margin: 0;
+}

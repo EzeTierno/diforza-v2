@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Preguntas frecuentes — home y landings (.faq--landing)
+   ========================================================================== */
+
+/* ---- FAQ (igual a v1) ---- */
+
+/* FAQ va pegada al sector fabrica (las dos son blancas): sin padding
+   superior propio, para que el aire de arriba lo ponga solo .factory.
+   El doble espacio queda abajo, antes del footer. */
+.faq {
+  padding: 0 var(--pad) 96px;
+  background: #fff;
+}
+
+@media (--lg) {
+  .faq {
+    padding: 0 var(--pad) 144px;
+  }
+}
+
+@media (--xl) {
+  .faq {
+    padding: 0 var(--pad) 140px;
+  }
+}
+
+.faq__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq__inner h2 {
+  margin: 0 0 28px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+  color: var(--navy);
+}
+
+@media (--md) {
+  .faq__inner h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+@media (--xl) {
+  .faq__inner h2 {
+    font-size: 38px;
+    line-height: 46px;
+    margin-bottom: 40px;
+  }
+}
+
+.faq__inner .accordion summary {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+@media (--xl) {
+  .faq__inner .accordion summary {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+
+/* ---- S11 · FAQ (reusa .faq; en L3 no va pegada a otro sector blanco) ---- */
+.faq--landing {
+  padding-top: 56px;
+}
+
+@media (--lg) {
+  .faq--landing {
+    padding-bottom: 104px;
+    padding-top: 88px;
+  }
+}
+
+@media (--xl) {
+  .faq--landing {
+    padding-bottom: 120px;
+    padding-top: 104px;
+  }
+}

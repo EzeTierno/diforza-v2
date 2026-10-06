@@ -1,9 +1,9 @@
 <footer class="site-footer">
-  <div class="footer__grid">
-    <div class="footer__brand">
+  <div class="site-footer__grid">
+    <div class="site-footer__brand">
       <img src="/img/logo-blanco.webp" alt="{{ site.name }}">
     </div>
-    <div class="footer__col">
+    <div class="site-footer__col">
       <h4>Categorías</h4>
       <ul>
 {%- for c in site.footer.categorias %}
@@ -11,19 +11,19 @@
 {%- endfor %}
       </ul>
     </div>
-    <div class="footer__col">
+    <div class="site-footer__col">
       <h4>Secciones</h4>
-      <div class="footer__links">
+      <div class="site-footer__links">
         <a href="{{ site.footer.tiendaOnline }}">Tienda online</a>
         <a href="{{ site.footer.sobreNosotros }}">Sobre nosotros</a>
-        <a href="#contacto" class="btn btn--solid">Pedir cotización</a>
+        <a href="#contacto" class="btn btn--primary">Pedir cotización</a>
       </div>
     </div>
-    <div class="footer__col">
-      <div class="footer__links">
+    <div class="site-footer__col">
+      <div class="site-footer__links">
         <a href="#contacto">Contacto</a>
       </div>
-      <div class="footer__social">
+      <div class="site-footer__social">
         <a href="{{ site.social.instagram }}" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
         </a>

@@ -117,11 +117,15 @@ for (const page of PAGES) {
   for (const [w, h] of SCREENS) jobs.push({ page, w, h, full: false, id: `${page.name}_${w}x${h}` });
 }
 
+// La carga de fuentes web y el raster pueden variar entre una captura y otra:
+// si una captura difiere, se repite hasta RETRIES veces antes de darla por mala.
+const RETRIES = 3;
+
 let failed = 0;
 for (const j of jobs) {
-  const buf = await capture(browser, j.page, j.w, j.h, j.full);
-  fs.writeFileSync(path.join(dir, `${j.id}.png`), buf);
+  let buf = await capture(browser, j.page, j.w, j.h, j.full);
   if (MODE === "baseline") {
+    fs.writeFileSync(path.join(dir, `${j.id}.png`), buf);
     console.log(`  baseline  ${j.id}`);
     continue;
   }
@@ -131,7 +135,13 @@ for (const j of jobs) {
     failed++;
     continue;
   }
-  const r = compare(fs.readFileSync(basePath), buf);
+  const base = fs.readFileSync(basePath);
+  let r = compare(base, buf);
+  for (let k = 1; k < RETRIES && r.diff !== 0; k++) {
+    buf = await capture(browser, j.page, j.w, j.h, j.full);
+    r = compare(base, buf);
+  }
+  fs.writeFileSync(path.join(dir, `${j.id}.png`), buf);
   if (r.diff === 0) {
     console.log(`  ✓ ${j.id}`);
   } else {

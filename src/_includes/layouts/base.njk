@@ -9,10 +9,7 @@
 {%- endif %}
 {% include "partials/fonts.njk" %}
 <link rel="stylesheet" href="/assets/css/main.css">
-{%- if pageCss %}
-<link rel="stylesheet" href="{{ pageCss }}">
-{%- endif %}
-<script>window.SITE = { whatsapp: "{{ site.whatsapp.number }}" };</script>
+<script>window.SITE = {{ { whatsapp: site.whatsapp.number, waText: waText, catalogName: catalogName } | dump | safe }};</script>
 </head>
 <body>
 
@@ -24,7 +21,7 @@
 {% include "partials/wa-float.njk" %}
 {%- endif %}
 {%- if phToggle %}
-<button type="button" class="ph-toggle" id="phToggle" aria-pressed="false">Ocultar marcas</button>
+<button type="button" class="placeholder-toggle" id="phToggle" aria-pressed="false">Ocultar marcas</button>
 {%- endif %}
 
 <script src="/assets/js/main.js"></script>

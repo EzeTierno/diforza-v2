@@ -1,0 +1,344 @@
+/* ==========================================================================
+   Banner "Un solo lugar" — home y landings (.solve--landing)
+   ========================================================================== */
+
+/* ---- Sector 3: Banner "Un solo lugar" ---- */
+.solve {
+  position: relative;
+  overflow: hidden;
+  background: #eef2f6;
+  background-image: url("/img/bg-hero-3.webp");
+  background-size: cover;
+  background-position: 74% 62%;
+  background-repeat: no-repeat;
+}
+
+/* Velo para asegurar legibilidad del copy sobre la foto en pantallas chicas */
+.solve::before {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgb(238 242 246 / 97%) 0%,
+    rgb(238 242 246 / 94%) 46%,
+    rgb(238 242 246 / 55%) 64%,
+    rgb(238 242 246 / 0%) 82%
+  );
+  content: "";
+  pointer-events: none;
+}
+
+@media (--xl) {
+  .solve {
+    background-position: right 62%;
+  }
+
+  .solve::before {
+    background: linear-gradient(
+      100deg,
+      rgb(238 242 246 / 96%) 0%,
+      rgb(238 242 246 / 93%) 40%,
+      rgb(238 242 246 / 66%) 54%,
+      rgb(238 242 246 / 14%) 67%,
+      rgb(238 242 246 / 0%) 80%
+    );
+  }
+}
+
+.solve__inner {
+  position: relative;
+  z-index: 1;
+  padding: 52px var(--pad) 56px;
+}
+
+@media (--md) {
+  .solve__inner {
+    padding: 62px var(--pad) 66px;
+  }
+}
+
+@media (--lg) {
+  .solve__inner {
+    padding: 72px var(--pad) 76px;
+  }
+}
+
+@media (--xl) {
+  .solve__inner {
+    padding: 84px var(--pad) 92px;
+  }
+}
+
+.solve__copy {
+  width: 90%;
+  max-width: 510px;
+}
+
+@media (--lg) {
+  .solve__copy {
+    max-width: min(58%, 640px);
+  }
+}
+
+@media (--2xl) {
+  .solve__copy {
+    max-width: min(55%, 760px);
+  }
+}
+
+.solve__eyebrow {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin: 0 0 18px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.solve__eyebrow::before {
+  flex: none;
+  width: 36px;
+  height: 3px;
+  background: var(--orange);
+  border-radius: 2px;
+  content: "";
+}
+
+@media (--xl) {
+  .solve__eyebrow {
+    font-size: 12px;
+    margin-bottom: 22px;
+  }
+}
+
+.solve__copy h2 {
+  margin: 0 0 16px;
+  font-family: Poppins, Montserrat, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+}
+
+/* Los <br> fijan el quiebre en 3 renglones solo cuando hay ancho para eso */
+.solve__copy h2 br {
+  display: none;
+}
+
+@media (--lg) {
+  .solve__copy h2 {
+    font-size: 44px;
+  }
+
+  .solve__copy h2 br {
+    display: inline;
+  }
+}
+
+@media (--xl) {
+  .solve__copy h2 {
+    font-size: 50px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (--2xl) {
+  .solve__copy h2 {
+    font-size: 56px;
+  }
+}
+
+.solve__lead {
+  max-width: 44ch;
+  margin: 0 0 26px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--navy);
+}
+
+@media (--xl) {
+  .solve__lead {
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+}
+
+.solve__inner .ctas {
+  margin: 0 0 30px;
+}
+
+@media (--xl) {
+  .solve__inner .ctas {
+    margin-bottom: 38px;
+  }
+
+  .solve .btn {
+    padding: 16px 30px;
+    font-size: 14px;
+  }
+}
+
+.solve .btn {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.solve .btn svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+.solve .btn--outline {
+  color: var(--navy);
+  background: rgb(255 255 255 / 55%);
+  border-color: var(--navy);
+}
+
+.solve__marks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+}
+
+@media (--xl) {
+  .solve__marks {
+    gap: 24px 56px;
+  }
+}
+
+.solve__mark {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.solve__mark svg {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  color: var(--navy);
+  stroke-width: 1.5;
+}
+
+@media (--xl) {
+  .solve__mark svg {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.solve__mark strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+
+.solve__mark span {
+  display: block;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.35;
+  color: var(--gray);
+}
+
+@media (--xl) {
+  .solve__mark strong {
+    font-size: 14px;
+  }
+
+  .solve__mark span {
+    font-size: 13px;
+  }
+}
+
+.solve__claim {
+  position: absolute;
+  top: 84px;
+  right: 34px;
+  z-index: 1;
+  display: none;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+  text-align: right;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.solve__claim {
+  text-shadow:
+    0 1px 10px rgb(255 255 255 / 85%),
+    0 0 4px rgb(255 255 255 / 90%);
+}
+
+.solve__claim::before {
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin: 0 0 12px auto;
+  background: var(--orange);
+  content: "";
+}
+
+@media (--xl) {
+  .solve__claim {
+    display: block;
+  }
+}
+
+@media (--below-md) {
+  /* Sector "Un solo lugar": el H2 fluye sin quiebres forzados y la bajada
+     se mantiene sobre la zona clara del fondo. */
+  .solve__copy h2 {
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  .solve__copy h2 br {
+    display: none;
+  }
+
+  .solve__lead {
+    max-width: 71%;
+    font-size: 14px;
+  }
+
+  /* CTAs del mismo tamano que los del hero */
+  .solve__inner .ctas {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+
+  .solve .btn {
+    gap: 8px;
+    padding: 11px 20px;
+    font-size: 11px;
+  }
+
+  .solve .btn svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .solve--landing .solve__copy h2 {
+    font-size: 32px;
+  }
+}
+
+/* ---- S8 · Normativa (reusa el banner .solve de la home) ---- */
+.solve--landing .solve__marks strong {
+  margin-bottom: 0;
+}

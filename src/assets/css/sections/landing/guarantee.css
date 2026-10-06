@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Landing · garantía
+   ========================================================================== */
+
+/* ---- S10 · Garantia (borrador: no se publica hasta que Diforza valide) ---- */
+.guarantee {
+  padding: 40px var(--pad);
+  background: #f2f4f6;
+}
+
+@media (--xl) {
+  .guarantee {
+    padding: 56px var(--pad);
+  }
+}
+
+.guarantee__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+@media (--lg) {
+  .guarantee__inner {
+    flex-direction: row;
+    gap: 48px;
+    align-items: center;
+  }
+}
+
+.guarantee__title {
+  flex: none;
+  margin: 0;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+@media (--xl) {
+  .guarantee__title {
+    font-size: 26px;
+  }
+}
+
+.guarantee__list {
+  display: grid;
+  flex: 1;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (--md) {
+  .guarantee__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+.guarantee__list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+@media (--xl) {
+  .guarantee__list li {
+    font-size: 15px;
+  }
+}
+
+.guarantee__list svg {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  color: var(--orange);
+  stroke-width: 1.6;
+}
