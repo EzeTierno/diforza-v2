@@ -1,0 +1,673 @@
+---
+layout: layouts/base.njk
+title: "EPP Certificado para Industria | Diforza"
+description: "Protección craneal, auditiva, ocular, respiratoria y de manos con certificación IRAM. Stock permanente y asesoramiento por puesto de trabajo."
+pageCss: /assets/css/l3.css
+pageJs: /assets/js/l3.js
+waText: "Hola, necesito cotizar EPP para mi empresa."
+phToggle: true   # botón "Ocultar marcas" de [VALIDAR]/[PENDIENTE] — apagar antes de lanzar
+---
+{# [VALIDAR] title y description mencionan certificación: sujetos a confirmación de Diforza (doc 06 §4) #}
+{# [PENDIENTE] canonical definitivo: https://<dominio>/epp-proteccion-industrial/ #}
+<main>
+
+<!-- ======================================================================
+     S1 · HERO  (reusa .hero-v2 de la home + modificador --l3)
+     Fondo: img/bg-hero-epp.webp (operario con antiparras y guantes en torno,
+     elegido por el usuario 30/09). Misma imagen en mobile (05/10).
+     ====================================================================== -->
+<section class="hero-v2 hero-v2--l3">
+  <div class="hero-v2__bg">
+    <picture>
+      <img src="/epp-proteccion-industrial/img/bg-hero-epp.webp" width="1376" height="768" fetchpriority="high" alt="Operario con antiparras y guantes de seguridad trabajando en un torno">
+    </picture>
+  </div>
+  <div class="hero-v2__shine" aria-hidden="true">
+    <div class="panel"></div>
+    <div class="panel panel--light"></div>
+  </div>
+
+  <p class="hero-v2__claim hero-anim hero-anim--4">Equipamos<br>el trabajo<br>real</p>
+
+  <div class="hero-v2__inner">
+    <div class="hero-v2__copy">
+      <p class="hero-v2__eyebrow hero-anim hero-anim--1">EPP y protección industrial</p>
+
+      <h1 class="hero-anim hero-anim--2">EPP certificado para cada riesgo de tu planta, <span class="accent">siempre disponible</span></h1>
+
+      <p class="hero-v2__lead hero-anim hero-anim--3">Protección craneal, auditiva, ocular, facial, respiratoria, de manos y anticaída. Con la documentación técnica que tus registros de SRT necesitan.<span class="ph">Validar</span></p>
+
+      <ul class="hero-v2__benefits hero-anim hero-anim--3">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l7.4 2.9v6.1c0 4.3-3.1 7.6-7.4 9.4-4.3-1.8-7.4-5.1-7.4-9.4V5.7z"/><path d="M8.9 11.9l2.2 2.2 4-4.4"/></svg>
+          <span>Certificación IRAM<span class="ph">Validar alcance</span></span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 11.5 11 8.5a2.1 2.1 0 0 1 3 0l.5.5"/><path d="M2.5 11 6 7.5l4 1.5M21.5 11 18 7.5l-4 1.5"/><path d="M6 12.5l4.5 4.5a1.5 1.5 0 0 0 2.1 0l5.4-5.4"/><path d="M9 14.5l1.5-1.5M11 16.5l1.5-1.5"/></svg>
+          Socios de Libus
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.9l8.2 4.3v9.6L12 21.1l-8.2-4.3V7.2z"/><path d="M3.8 7.2L12 11.5l8.2-4.3M12 11.5v9.6"/></svg>
+          Stock permanente
+        </li>
+      </ul>
+
+      <div class="ctas hero-anim hero-anim--4">
+        <a href="#contacto" class="btn btn--solid">Pedir cotización
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#catalogo" class="btn btn--outline" data-js="catalogo">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v9m0 0l-3.5-3.5M10 12l3.5-3.5M4 15.5h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Descargar catálogo de EPP
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S2 · FRANJA DE CONFIANZA — versión conservadora (elegida 30/09).
+     La versión fuerte (IRAM + SRT) solo si Diforza confirma el alcance.
+     [PENDIENTE] logos de certificación (vectores) y logos Gamisol y W|S.
+     ====================================================================== -->
+<section class="trust-l3">
+  <div class="trust-l3__inner reveal">
+    <p class="trust-l3__text">Cada elemento se entrega con su ficha técnica y su respaldo de ensayo, para que lo sumes a tus registros de seguridad.</p>
+    <div class="trust-l3__brands">
+      <div class="trust-l3__brand trust-l3__brand--main">
+        <p class="trust-l3__label">Socio estratégico oficial</p>
+        <img src="/img/brand-libus.webp" alt="Libus">
+      </div>
+      <div class="trust-l3__brand">
+        <p class="trust-l3__label">Marca propia</p>
+        <img src="/img/brand-ziao.webp" alt="ZIAO" class="is-sm">
+      </div>
+      <div class="trust-l3__brand trust-l3__brand--group">
+        <p class="trust-l3__label">Marcas distribuidas</p>
+        <div class="trust-l3__logos">
+          <img src="/epp-proteccion-industrial/img/brand-glovex.webp" alt="Glovex" class="is-sm">
+          <img src="/img/brand-skiway.webp" alt="Skiway" class="is-sm">
+          <span class="trust-l3__word">Gamisol<span class="ph">Logo</span></span>
+          <span class="trust-l3__word">W|S<span class="ph">Logo</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S4 · SOLUCIÓN — cobertura por riesgo (+ CTA de mitad de página)
+     ====================================================================== -->
+<section class="line-l3 on-dark">
+  <div class="line-l3__inner">
+    <div class="line-l3__copy reveal">
+      <h2 class="h2-l3">Cobertura completa, riesgo por riesgo</h2>
+      <p>Un solo proveedor para todo el mapa de riesgos de tu planta.</p>
+      <a href="#contacto" class="btn btn--solid">Pedir cotización <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <ul class="line-l3__list line-l3__list--desc reveal reveal--1">
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h18"/><path d="M5 17a7 7 0 0 1 14 0"/><path d="M10 10.6V5.6a1.6 1.6 0 0 1 1.6-1.6h.8A1.6 1.6 0 0 1 14 5.6v5"/></svg></span><span class="line-l3__txt"><strong>Craneal</strong><small>Cascos, barbijos de casco, accesorios — línea Libus completa</small></span></li>
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 14v-3a7 7 0 0 1 14 0v3"/><rect x="3" y="13" width="4.5" height="7.5" rx="2.2"/><rect x="16.5" y="13" width="4.5" height="7.5" rx="2.2"/></svg></span><span class="line-l3__txt"><strong>Auditiva</strong><small>Endoaurales, de copa, con arnés</small></span></li>
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="14" r="3.5"/><circle cx="17.5" cy="14" r="3.5"/><path d="M10 14h4M3.2 12.6 5 8M20.8 12.6 19 8"/></svg></span><span class="line-l3__txt"><strong>Ocular</strong><small>Antiparras, lentes de seguridad, filtros</small></span></li>
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5h14v8.5a7 7 0 0 1-14 0z"/><path d="M3.5 5h17M9 9.5h6"/></svg></span><span class="line-l3__txt"><strong>Facial</strong><small>Máscaras, protectores faciales, soldadura</small></span></li>
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9c2.5-2.2 9.5-2.2 12 0l-1 6.5c-1.2 3.3-8.8 3.3-10 0z"/><path d="M6 10 2.5 8M18 10l3.5-2"/><circle cx="12" cy="13" r="2"/></svg></span><span class="line-l3__txt"><strong>Respiratoria</strong><small>Semimáscaras, máscaras, filtros y descartables</small></span></li>
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21v-3.5L4.6 13a1.6 1.6 0 0 1 2.5-2L8.5 12.5V5.5a1.5 1.5 0 0 1 3 0V11V4a1.5 1.5 0 0 1 3 0v7V5.5a1.5 1.5 0 0 1 3 0V16c0 2.8-2 5-4.8 5z"/></svg></span><span class="line-l3__txt"><strong>Manos</strong><small>Guantes según riesgo mecánico, químico, térmico y de corte</small></span></li>
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 9V6.5a3.5 3.5 0 0 1 7 0V17a3.5 3.5 0 0 1-7 0v-4"/><path d="M6.5 9h4"/><path d="M12 3v0"/></svg></span><span class="line-l3__txt"><strong>Anticaída</strong><small>Arneses, cabos de vida, líneas y accesorios</small></span></li>
+      <li><span class="line-l3__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.8 4h4.4l4.3 15H5.5z"/><path d="M8.2 10h7.6M6.9 14.5h10.2M3 19h18"/></svg></span><span class="line-l3__txt"><strong>Vialidad y señalización</strong><small>Alta visibilidad, conos, señalización</small></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S5 · PRODUCTOS DESTACADOS — los 8 por ventas reales ene–jun 2026 (doc 14)
+     Sin precios. Cada ficha DEBE mostrar la norma (argumento de venta).
+     [ASSET] fotos 800x800 fondo blanco: prod-<nombre-kebab>.webp
+     ====================================================================== -->
+<section class="prod-l3" id="productos">
+  <div class="products-v2__top reveal">
+    <div class="products-v2__heading">
+      <p class="products-v2__eyebrow">El EPP que se consume todos los meses</p>
+      <h2>Productos destacados</h2>
+    </div>
+    <a href="#" class="btn btn--outline">Ir a tienda online
+      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+  <div class="prod-l3__list draggable-carousel reveal reveal--1">
+    <div class="prod-l3__track">
+      <article class="pcard-l3">
+        <span class="products-v2__badge products-v2__badge--top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4c1.6 2 2.6 3.4 2.6 4.9a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.7 1-2.5.5 1.2 1.6.9 1.6-2.4z"/></svg> Más vendido</span>
+        <div class="pcard-l3__media"><img src="/epp-proteccion-industrial/img/prod-anteojo-argon.webp" alt="Anteojo Argon Transparente HC" draggable="false" loading="lazy"></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Anteojo Argon</h3>
+          <p class="pcard-l3__code">Transparente HC · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>Libus</dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
+          </dl>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Anteojo Argon Transparente HC" data-prod-codigo="" data-prod-cat="Ocular">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l3">
+        
+        <div class="pcard-l3__media"><img src="/epp-proteccion-industrial/img/prod-anteojo-ecoline.webp" alt="Anteojo Eco-line Transparente HC" draggable="false" loading="lazy"></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Anteojo Eco-line</h3>
+          <p class="pcard-l3__code">Transparente HC · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>Libus</dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
+          </dl>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Anteojo Eco-line Transparente HC" data-prod-codigo="" data-prod-cat="Ocular">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l3">
+        
+        <div class="pcard-l3__media"><img src="/epp-proteccion-industrial/img/prod-auditivo-quantum.webp" alt="Protector auditivo Quantum" draggable="false" loading="lazy"></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Protector auditivo Quantum</h3>
+          <p class="pcard-l3__code">Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>Libus</dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
+          </dl>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Protector auditivo Quantum" data-prod-codigo="" data-prod-cat="Auditiva">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l3">
+        
+        <div class="pcard-l3__media"><img src="/epp-proteccion-industrial/img/prod-protector-auditivo-alternative.webp" alt="Protector auditivo Alternative Vincha" draggable="false" loading="lazy"></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Protector auditivo Alternative</h3>
+          <p class="pcard-l3__code">Vincha · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>—<span class="ph">Validar marca</span></dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
+          </dl>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Protector auditivo Alternative Vincha" data-prod-codigo="" data-prod-cat="Auditiva">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l3">
+        
+        <div class="pcard-l3__media"><img src="/epp-proteccion-industrial/img/prod-casco-milenium.webp" alt="Casco Milenium Amarillo y blanco" draggable="false" loading="lazy"></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Casco Milenium</h3>
+          <p class="pcard-l3__code">Amarillo y blanco · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>Libus</dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
+          </dl>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Casco Milenium Amarillo y blanco" data-prod-codigo="" data-prod-cat="Craneal">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l3">
+        
+        <div class="pcard-l3__media"><img src="/epp-proteccion-industrial/img/prod-arnes-a-cremallera-plastico.webp" alt="Arnés a cremallera plástico Para casco" draggable="false" loading="lazy"></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Arnés a cremallera plástico</h3>
+          <p class="pcard-l3__code">Para casco · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>Libus</dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
+          </dl>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Arnés a cremallera plástico Para casco" data-prod-codigo="" data-prod-cat="Craneal">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l3">
+        
+        <div class="pcard-l3__media"><img src="/epp-proteccion-industrial/img/prod-arnes-completo.webp" alt="Arnés completo con toma frontal y faja lumbar" draggable="false" loading="lazy"></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Arnés completo con toma frontal y faja lumbar</h3>
+          <p class="pcard-l3__code">Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>Skiway<span class="ph">Validar marca</span></dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
+          </dl>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Arnés completo con toma frontal y faja lumbar" data-prod-codigo="" data-prod-cat="Anticaída">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l3">
+        
+        <div class="pcard-l3__media"><img src="/epp-proteccion-industrial/img/prod-respirador.webp" alt="Respirador desechable 522 FFP2 NR D" draggable="false" loading="lazy"><span class="pcard-l3__phlabel">Foto provisoria</span></div>
+        <div class="pcard-l3__body">
+          <h3 class="pcard-l3__name">Respirador desechable 522</h3>
+          <p class="pcard-l3__code">FFP2 NR D · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l3__specs">
+            <dt>Marca</dt><dd>—<span class="ph">Validar marca</span></dd>
+            <dt>Norma</dt><dd class="pcard-l3__norm">— <span class="ph">Pendiente norma</span></dd>
+          </dl>
+          <button type="button" class="pcard-l3__cta" data-js="consultar" data-prod-nombre="Respirador desechable 522 FFP2 NR D" data-prod-codigo="" data-prod-cat="Respiratoria">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S6 · DIFERENCIALES + S3 PROBLEMA + S7 PRUEBA SOCIAL en un solo sector
+     (mismo criterio que L2: fondo blanco, problema en caja naranja + acordeón)
+     ====================================================================== -->
+<section class="dif-v2">
+  <div class="dif-v2__head">
+    <h2 class="dif-v2__title reveal">Por qué las empresas eligen trabajar con Diforza</h2>
+    <div class="dif-v2__badge reveal">
+      <span class="dif-v2__badge-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ff7e34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg>
+      </span>
+      <p><strong>Más de 15 años</strong> brindando asesoramiento y soluciones en seguridad industrial</p>
+    </div>
+  </div>
+  <div class="dif-v2__grid">
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11.5 11 8.5a2.1 2.1 0 0 1 3 0l.5.5"/><path d="M2.5 11 6 7.5l4 1.5M21.5 11 18 7.5l-4 1.5"/><path d="M6 12.5l4.5 4.5a1.5 1.5 0 0 0 2.1 0l5.4-5.4"/></svg>
+      </span>
+      <div>
+        <h3>Socio estratégico oficial de Libus</h3>
+        <p>Libus es el fabricante de protección craneal más importante de la región. Somos socio estratégico oficial: acceso a línea completa, respaldo de fábrica y continuidad de suministro.</p>
+      </div>
+    </div>
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
+      </span>
+      <div>
+        <h3>ZIAO, marca propia</h3>
+        <p>Nuestra propia línea de EPP. Control sobre calidad, stock y precio.<span class="ph">Pendiente alcance de categorías ZIAO</span></p>
+      </div>
+    </div>
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+      </span>
+      <div>
+        <h3>Asesoramiento sobre el riesgo, no sobre el catálogo</h3>
+        <p>Te ayudamos a definir qué elemento corresponde a cada puesto según su riesgo real. La recomendación primero, el producto después.</p>
+      </div>
+    </div>
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.9l8.2 4.3v9.6L12 21.1l-8.2-4.3V7.2z"/><path d="M3.8 7.2L12 11.5l8.2-4.3M12 11.5v9.6"/></svg>
+      </span>
+      <div>
+        <h3>Stock permanente</h3>
+        <p>Mantenemos stock propio de todas las líneas. Cuando la urgencia aparece, no empieza el “te lo pido a fábrica”.</p>
+      </div>
+    </div>
+  </div>
+  <!-- S3 · PROBLEMA (integrado): bloque naranja + acordeón -->
+  <div class="dif-v2__problem reveal">
+    <div class="dif-v2__problem-box">
+      <h2 class="dif-v2__problem-title">El riesgo no es solo el accidente. También es la multa.</h2>
+      <a href="#contacto" class="btn dif-v2__problem-cta">Pedir cotización <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="dif-v2__problem-list">
+      <div class="accordion">
+          <details open>
+            <summary>El EPP sin certificar no te cubre
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="accordion__panel">Si el elemento no cumple la norma, ante una inspección o un siniestro es como si no lo hubieras entregado.</p>
+          </details>
+          <details>
+            <summary>Nadie te dice cuál corresponde
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="accordion__panel">Te venden lo que hay en stock, no lo que el riesgo del puesto exige. La decisión técnica queda sobre tus hombros.</p>
+          </details>
+          <details>
+            <summary>Falta un elemento y para el sector
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="accordion__panel">Sin protección respiratoria disponible, ese trabajo no arranca.</p>
+          </details>
+          <details>
+            <summary>Papeles que no aparecen
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="accordion__panel">Llega la auditoría y no tenés la ficha técnica del elemento que entregaste hace ocho meses.</p>
+          </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- S7 · PRUEBA SOCIAL — destacado: Ricardo Honaine (menciona elementos de seguridad) + 2 del doc 01 -->
+  <div class="dif-v2__reviews">
+    <div class="greviews__summary reveal">
+      <svg class="g-icon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+      <span class="greviews__score">5.0</span>
+      <span class="greviews__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
+      <span class="greviews__count">5.0 en Google · Reseñas de clientes</span>
+    </div>
+    <div class="reviews-l3__grid">
+      <blockquote class="quote-l3 reveal">
+        <p>Excelente atención y asesoramiento. En Diforza encontré todo lo que necesitaba en elementos de seguridad, con productos de primera calidad y entregas rápidas.</p>
+        <footer>
+          <span class="gcard__avatar" style="background:#1976d2">RH</span>
+          <div>
+            <cite>Ricardo Honaine</cite>
+            <small><span class="greviews__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span> Google Reviews</small>
+          </div>
+        </footer>
+      </blockquote>
+      <div class="reviews-l3__side reveal reveal--1">
+        <div class="gcard">
+          <div class="gcard__top">
+            <div class="gcard__avatar" style="background:#f57c00">AK</div>
+            <div class="gcard__id">
+              <div class="gcard__name">Ariel Kuznicki</div>
+              <div class="gcard__date">Google Reviews</div>
+            </div>
+            <svg class="gcard__g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+          </div>
+          <span class="gcard__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
+          <p class="gcard__text">Diforza nos provee indumentaria y elementos de protección personal de altísima calidad. Diego maneja nuestra cuenta con mucho profesionalismo.</p>
+        </div>
+        <div class="gcard">
+          <div class="gcard__top">
+            <div class="gcard__avatar" style="background:#388e3c">EC</div>
+            <div class="gcard__id">
+              <div class="gcard__name">Estudio Casa Viva</div>
+              <div class="gcard__date">Google Reviews</div>
+            </div>
+            <svg class="gcard__g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+          </div>
+          <span class="gcard__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
+          <p class="gcard__text">Muy buena experiencia. Tienen gran variedad de productos y siempre responden con rapidez y buena predisposición. La atención es personalizada y te ayudan a encontrar justo lo que necesitás.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S8 · CUMPLIMIENTO NORMATIVO (sección ampliada en L3) — banner .solve-v2
+     La tabla de normas por categoría queda OCULTA hasta que Diforza confirme
+     las normas IRAM (no publicar números sin confirmación). Ver bloque
+     comentado abajo para activarla.
+     ====================================================================== -->
+<section class="solve-v2 solve-v2--l3">
+  <div class="solve-v2__inner">
+    <div class="solve-v2__copy reveal">
+      <h2>Tu empresa <br> protegida y en regla</h2>
+
+      <p class="solve-v2__lead">La normativa argentina obliga a proveer EPP certificado y a documentar su entrega. La responsabilidad es de la empresa y de quien firma como responsable de seguridad. Por eso cada elemento que entregamos viene con su respaldo documental.<span class="ph">Validar</span></p>
+
+      <div class="ctas">
+        <a href="#contacto" class="btn btn--solid">Consultar por la normativa de mi industria
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="solve-v2__marks">
+        <div class="solve-v2__mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+          <div><strong>Ficha<br>técnica</strong></div>
+        </div>
+        <div class="solve-v2__mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7 15h10"/></svg>
+          <div><strong>Respaldo<br>de ensayo</strong></div>
+        </div>
+        <div class="solve-v2__mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 12l2 2 4-4"/></svg>
+          <div><strong>Documentación<br>para tus registros</strong></div>
+        </div>
+      </div>
+      <!-- [PENDIENTE] Tabla de normas por categoría. Activar cuando Diforza confirme:
+      <table class="norms-l3">
+        <thead><tr><th>Categoría</th><th>Norma aplicable</th></tr></thead>
+        <tbody>
+          <tr><td>Craneal</td><td>—</td></tr>
+          <tr><td>Auditiva</td><td>—</td></tr>
+          <tr><td>Ocular</td><td>—</td></tr>
+          <tr><td>Facial</td><td>—</td></tr>
+          <tr><td>Respiratoria</td><td>—</td></tr>
+          <tr><td>Manos</td><td>—</td></tr>
+          <tr><td>Calzado</td><td>—</td></tr>
+          <tr><td>Anticaída</td><td>—</td></tr>
+        </tbody>
+      </table> -->
+    </div>
+  </div>
+
+  <p class="solve-v2__claim reveal reveal--1">Equipamos<br>el trabajo real</p>
+</section>
+
+<!-- ======================================================================
+     S9 · CÓMO TRABAJAMOS
+     ====================================================================== -->
+<section class="steps-l3">
+  <h2 class="h2-l3 reveal">Cómo trabajamos</h2>
+  <ol class="steps-l3__list">
+    <li class="steps-l3__item reveal"><span class="steps-l3__n">1</span><p>Nos contás qué riesgos tiene cada puesto.</p></li>
+    <li class="steps-l3__item reveal reveal--1"><span class="steps-l3__n">2</span><p>Armamos la propuesta de EPP por puesto, con la norma que cumple cada elemento.</p></li>
+    <li class="steps-l3__item reveal reveal--2"><span class="steps-l3__n">3</span><p>Cotizamos y coordinamos entrega.<span class="ph">Validar plazo</span></p></li>
+    <li class="steps-l3__item reveal reveal--2"><span class="steps-l3__n">4</span><p>Quedás con la documentación para tus registros y una cuenta para reponer.</p></li>
+  </ol>
+</section>
+
+<!-- ======================================================================
+     S10 · GARANTÍA — BORRADOR (misma del doc 01 §6 / doc 16 §5).
+     No publicar hasta que Diego valide condiciones.
+     ====================================================================== -->
+<section class="guarantee-l3" data-draft="true">
+  <div class="guarantee-l3__inner reveal">
+    <h2 class="guarantee-l3__title">Garantía<span class="ph">Borrador · Validar</span></h2>
+    <ul class="guarantee-l3__list">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l7.4 2.9v6.1c0 4.3-3.1 7.6-7.4 9.4-4.3-1.8-7.4-5.1-7.4-9.4V5.7z"/><path d="M8.9 11.9l2.2 2.2 4-4.4"/></svg>
+        <span>Garantía por defectos de fabricación en todos nuestros productos.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg>
+        <span>Cambios sin cargo por talle o defecto dentro de [X] días con el producto sin uso.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.9l8.2 4.3v9.6L12 21.1l-8.2-4.3V7.2z"/><path d="M3.8 7.2L12 11.5l8.2-4.3M12 11.5v9.6"/></svg>
+        <span>Stock permanente para reposición inmediata.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S11 · FAQ  (reusa .faq). Schema FAQPage cuando las respuestas estén validadas.
+     ====================================================================== -->
+<section class="faq faq--l3">
+  <div class="faq__inner reveal">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="accordion">
+      <details open>
+        <summary>¿Cómo sé que el EPP está certificado? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Validar</span></p>
+      </details>
+      <details>
+        <summary>¿Me entregan ficha técnica y certificado con la compra? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Validar</span></p>
+      </details>
+      <details>
+        <summary>¿Me ayudan a definir qué EPP corresponde a cada puesto? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Sí. Te ayudamos a definir qué elemento corresponde a cada puesto según su riesgo real. La recomendación primero, el producto después.</p>
+      </details>
+      <details>
+        <summary>¿Trabajan con empresas de cualquier tamaño? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Pendiente</span></p>
+      </details>
+      <details>
+        <summary>¿Cuánto tardan en entregar un pedido urgente? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Pendiente</span></p>
+      </details>
+      <details>
+        <summary>¿Tienen recambio de filtros y consumibles con continuidad? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Validar</span></p>
+      </details>
+      <details>
+        <summary>¿Puedo comprar por unidad? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Sí, en la tienda online.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S12 · CTA FINAL + FORMULARIO (doc 05) — campo variable L3:
+     "Categorías de EPP que necesitás" (selección múltiple, obligatorio).
+     [PENDIENTE] endpoint del formulario / CRM y número definitivo de WhatsApp.
+     ====================================================================== -->
+<section class="cta-l3 on-dark" id="contacto">
+  <div class="cta-l3__inner">
+    <div class="cta-l3__copy reveal">
+      <h2 class="h2-l3">Contanos qué riesgos tenés que cubrir</h2>
+      <p class="cta-l3__reply">Te respondemos en el día<span class="ph">Validar</span></p>
+
+      <figure class="cta-l3__mini">
+        <p>“Diforza nos provee indumentaria y elementos de protección personal de altísima calidad.”</p>
+        <cite>Ariel Kuznicki <span>· Google Reviews</span></cite>
+      </figure>
+
+      <a href="https://wa.me/{{ site.whatsapp.number }}?text=Hola%2C%20necesito%20cotizar%20EPP%20para%20mi%20empresa." class="btn btn--wa js-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg> Escribinos por WhatsApp</a>
+
+      <div class="catalog-l3" id="catalogo">
+        <button type="button" class="catalog-l3__toggle" aria-expanded="false" aria-controls="catalogPanel">
+          <span>Descargar catálogo de EPP<small>Te lo mandamos también por email.</small></span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="catalog-l3__panel" id="catalogPanel" hidden>
+          <form id="form-catalogo" class="js-lead-form" novalidate>
+            <input type="hidden" name="tipo_lead" value="catalogo">
+            <input type="hidden" name="landing" value="l3-epp">
+            <div class="hp-field" aria-hidden="true"><label>No completar<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+            <div class="form-l3__grid">
+              <div class="field">
+                <label for="c-nombre">Nombre y apellido <span class="req">*</span></label>
+                <input id="c-nombre" name="nombre" type="text" autocomplete="name" required>
+                <span class="field__error">Ingresá tu nombre.</span>
+              </div>
+              <div class="field">
+                <label for="c-empresa">Empresa <span class="req">*</span></label>
+                <input id="c-empresa" name="empresa" type="text" autocomplete="organization" required>
+                <span class="field__error">Ingresá el nombre de tu empresa.</span>
+              </div>
+              <div class="field">
+                <label for="c-email">Email <span class="req">*</span></label>
+                <input id="c-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+                <span class="field__error">Ingresá un email válido.</span>
+              </div>
+              <div class="field">
+                <label for="c-tel">Teléfono / WhatsApp <span class="req">*</span></label>
+                <input id="c-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required>
+                <span class="field__error">Ingresá un teléfono de contacto.</span>
+              </div>
+              <div class="field field--full">
+                <label class="check"><input type="checkbox" name="consentimiento" required> <span>Acepto que Diforza me contacte y la <a href="#">política de privacidad</a>.</span></label>
+                <span class="field__error">Necesitamos tu consentimiento para enviarte el catálogo.</span>
+              </div>
+              <div class="field--full">
+                <button type="submit" class="btn btn--solid form-l3__submit"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v9m0 0l-3.5-3.5M10 12l3.5-3.5M4 15.5h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Descargar catálogo</button>
+                <p class="form-l3__status" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-l3 reveal reveal--1" id="form-cotizacion-wrap">
+      <form id="form-cotizacion" class="js-lead-form" novalidate>
+        <p class="form-l3__title">Pedí tu cotización</p>
+        <p class="form-l3__note">Los campos con <span style="color:var(--orange)">*</span> son obligatorios.</p>
+
+        <div class="quoting-l3" id="quoting" hidden>
+          <span>Estás cotizando: <strong id="quotingName"></strong></span>
+          <button type="button" id="quotingClear">Quitar</button>
+        </div>
+
+        <input type="hidden" name="producto_interes" id="productoInteres" value="">
+        <input type="hidden" name="tipo_lead" value="cotizacion">
+        <input type="hidden" name="landing" value="l3-epp">
+        <div class="hp-field" aria-hidden="true"><label>No completar<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="form-l3__grid">
+          <div class="field">
+            <label for="f-nombre">Nombre y apellido <span class="req">*</span></label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+            <span class="field__error">Ingresá tu nombre.</span>
+          </div>
+          <div class="field">
+            <label for="f-empresa">Empresa <span class="req">*</span></label>
+            <input id="f-empresa" name="empresa" type="text" autocomplete="organization" required>
+            <span class="field__error">Ingresá el nombre de tu empresa.</span>
+          </div>
+          <div class="field">
+            <label for="f-email">Email corporativo <span class="req">*</span></label>
+            <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+            <span class="field__error">Ingresá un email válido.</span>
+          </div>
+          <div class="field">
+            <label for="f-tel">Teléfono / WhatsApp <span class="req">*</span></label>
+            <input id="f-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required>
+            <span class="field__error">Ingresá un teléfono de contacto.</span>
+          </div>
+          <div class="field">
+            <label for="f-rubro">Rubro / industria <span class="req">*</span></label>
+            <select id="f-rubro" name="rubro" required>
+              <option value="">Elegí una opción</option>
+              <option>Industria / Manufactura</option>
+              <option>Construcción y obra</option>
+              <option>Logística y transporte</option>
+              <option>Alimentos y bebidas</option>
+              <option>Laboratorio y farmacéutica</option>
+              <option>Química y petroquímica</option>
+              <option>Agro</option>
+              <option>Minería y energía</option>
+              <option>Servicios y mantenimiento</option>
+              <option>Sector público</option>
+              <option>Otro</option>
+            </select>
+            <span class="field__error">Elegí el rubro de tu empresa.</span>
+          </div>
+          <div class="field">
+            <label for="f-tamano">Tamaño de la empresa <span class="req">*</span></label>
+            <select id="f-tamano" name="tamano_empresa" required>
+              <option value="">Elegí una opción</option>
+              <option>1–10</option>
+              <option>11–50</option>
+              <option>51–200</option>
+              <option>+200</option>
+            </select>
+            <span class="field__error">Elegí el tamaño de tu empresa.</span>
+          </div>
+          <fieldset class="field field--full field--group" data-required-group="categorias_epp">
+            <legend>Categorías de EPP que necesitás <span class="req">*</span> <small>Podés elegir varias</small></legend>
+            <div class="chips-l3">
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Craneal" data-cat="craneal"><span>Craneal</span></label>
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Auditiva" data-cat="auditiva"><span>Auditiva</span></label>
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Ocular" data-cat="ocular"><span>Ocular</span></label>
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Facial" data-cat="facial"><span>Facial</span></label>
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Respiratoria" data-cat="respiratoria"><span>Respiratoria</span></label>
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Manos" data-cat="manos"><span>Manos</span></label>
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Anticaída" data-cat="anticaida"><span>Anticaída</span></label>
+              <label class="chip-l3"><input type="checkbox" name="categorias_epp" value="Vialidad" data-cat="vialidad"><span>Vialidad</span></label>
+            </div>
+            <span class="field__error">Elegí al menos una categoría.</span>
+          </fieldset>
+          <div class="field field--full">
+            <label for="f-mensaje">Contanos qué necesitás</label>
+            <textarea id="f-mensaje" name="mensaje" rows="3"></textarea>
+          </div>
+          <div class="field field--full">
+            <label class="check"><input type="checkbox" name="consentimiento" required> <span>Acepto que Diforza me contacte y la <a href="#">política de privacidad</a>.</span></label>
+            <span class="field__error">Necesitamos tu consentimiento para contactarte.</span>
+          </div>
+          <div class="field--full">
+            <button type="submit" class="btn btn--solid form-l3__submit">Pedir cotización <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <p class="form-l3__status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+

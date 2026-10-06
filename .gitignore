@@ -1,0 +1,8 @@
+# Dependencias y salida del build (se regeneran)
+node_modules/
+_site/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini

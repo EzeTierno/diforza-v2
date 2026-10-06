@@ -1,0 +1,423 @@
+/* ==========================================================================
+   L2 · INDUMENTARIA DE TRABAJO  (/indumentaria-de-trabajo/)
+   Todo lo de arriba es la base compartida de la home v2 (copiada tal cual,
+   se carga /assets/css/base.css antes). Desde acá: solo lo propio
+   de L2. Mobile-first, breakpoints canonicos 768/1024/1280/1440/1700.
+   Prefijo de clases: *-l2.
+   ========================================================================== */
+
+/* ---- Marcas de placeholder ([VALIDAR] / [PENDIENTE]) ----
+   Visibles por defecto en este borrador. El boton flotante de abajo a la
+   izquierda las oculta para ver la pagina "limpia". En produccion se borran. */
+.ph{
+  display:inline-flex;align-items:center;gap:4px;margin-left:6px;vertical-align:middle;
+  padding:2px 7px;border:1px dashed var(--orange);border-radius:4px;
+  background:#fff4ec;color:#c2561a;
+  font:600 9.5px/1.35 "Montserrat",Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;
+  white-space:nowrap;font-style:normal;
+}
+.on-dark .ph{background:rgba(255,126,52,.14);color:#ffb68b;}
+html.ph-off .ph{display:none;}
+.ph-toggle{
+  position:fixed;left:14px;bottom:14px;z-index:60;
+  border:1px dashed var(--orange);background:#fff;color:#c2561a;border-radius:999px;
+  padding:8px 14px;font:600 10.5px/1 "Montserrat",Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;
+  cursor:pointer;box-shadow:0 6px 18px rgba(0,26,52,.14);
+}
+
+/* ---- Encabezados de seccion comunes en L2 ---- */
+.h2-l2{
+  font-family:"Poppins","Montserrat",Arial,sans-serif;font-weight:800;
+  font-size:28px;line-height:1.12;letter-spacing:-.02em;color:var(--navy);margin:0;
+}
+@media(min-width:768px){ .h2-l2{font-size:36px;} }
+@media(min-width:1280px){ .h2-l2{font-size:44px;} }
+.eyebrow-l2{
+  display:flex;align-items:center;gap:14px;
+  font-weight:600;font-size:10px;color:var(--navy);letter-spacing:.12em;
+  text-transform:uppercase;margin:0 0 14px;
+}
+.eyebrow-l2::before{content:"";width:20px;height:2px;background:var(--orange);flex:none;border-radius:2px;}
+@media(min-width:768px){ .eyebrow-l2{font-size:11px;letter-spacing:.16em;} .eyebrow-l2::before{width:36px;height:3px;} }
+@media(min-width:1280px){ .eyebrow-l2{font-size:12px;margin-bottom:16px;} }
+
+/* ---- S1 · Hero (modificador del hero-v2 de la home) ----
+   El H1 de L2 es ~60% mas largo que el de la home: se baja el cuerpo en
+   todos los breakpoints para que quede en 4 renglones en desktop. */
+.hero-v2--l2 .hero-v2__copy h1{font-size:31px;line-height:1.08;}
+@media(min-width:768px){ .hero-v2--l2 .hero-v2__copy h1{font-size:42px;} }
+@media(min-width:1024px){ .hero-v2--l2 .hero-v2__copy h1{font-size:38px;} }
+@media(min-width:1280px){ .hero-v2--l2 .hero-v2__copy h1{font-size:44px;} }
+@media(min-width:1440px){ .hero-v2--l2 .hero-v2__copy h1{font-size:52px;} }
+@media(min-width:1700px){ .hero-v2--l2 .hero-v2__copy h1{font-size:58px;} }
+/* >=1440: la columna de texto usa el 49% del contenedor, sin el tope de
+   690px de la home. Con el tope (min(48%,690px) = 630px) el H1 a 58px
+   caia en 5 renglones desde 1700px; con 49% (643px) queda en 4. */
+@media(min-width:1440px){ .hero-v2--l2 .hero-v2__copy{max-width:49%;} }
+.hero-v2--l2 .hero-v2__benefits li{align-items:center;}
+/* Fondo propio de L2: la persona (pantalon cargo azul marino) esta en la
+   foto, a ~65% del ancho. Se ancla abajo para no cortarle los botines. */
+.hero-v2--l2 .hero-v2__bg img{object-position:68% bottom;}
+/* <1024: la home usa un velo blanco vertical parejo; aca el velo va de
+   izquierda a derecha para que la copy se lea y la prenda siga visible. */
+/* Notebook 13-14": la foto se recorta menos a los costados; se corre la
+   persona a la derecha para que no quede debajo del H1 */
+@media(min-width:1024px) and (max-width:1279px){
+  .hero-v2--l2 .hero-v2__bg img{object-position:22% bottom;}
+}
+.hero-v2--l2 .hero-v2__bg picture{display:block;width:100%;height:100%;}
+@media(max-width:1023px){
+  .hero-v2--l2 .hero-v2__bg img{object-position:60% bottom;}
+  .hero-v2--l2 .hero-v2__bg::after{
+    background:linear-gradient(90deg, rgb(255 255 255) 0%, rgb(255 255 255 / 44%) 55%, rgb(255 255 255 / 0%) 100%);
+  }
+}
+
+/* <600px carga bg-hero-indumentaria-m.webp (recorte 640x768 de x=460..1100
+   del original): se centra para mostrar el mismo encuadre que antes */
+@media(max-width:599px){
+  .hero-v2--l2 .hero-v2__bg img{object-position:50% bottom;}
+  /* Solo con la imagen vertical (bg-hero-indumentaria-m.webp, <600px) */
+  .hero-v2--l2 .hero-v2__inner{padding-bottom:40px;width:95%;}
+}
+
+/* ---- S2 · Franja de confianza ---- */
+.trust-l2{background:#f2f2f2;padding:28px var(--pad);}
+@media(min-width:1024px){ .trust-l2{padding:34px var(--pad);} }
+@media(min-width:1280px){ .trust-l2{padding:40px var(--pad);} }
+.trust-l2__inner{display:flex;flex-direction:column;gap:24px;}
+@media(min-width:1024px){ .trust-l2__inner{flex-direction:row;align-items:center;justify-content:space-between;gap:48px;} }
+.trust-l2__text{
+  margin:0;padding-left:16px;border-left:3px solid var(--orange);
+  font-weight:600;font-size:15px;line-height:1.5;color:var(--navy);max-width:44ch;
+}
+@media(min-width:1280px){ .trust-l2__text{font-size:17px;} }
+.trust-l2__brands{display:flex;align-items:stretch;gap:28px;}
+@media(min-width:1280px){ .trust-l2__brands{gap:48px;} }
+.trust-l2__brand{display:grid;grid-template-rows:auto 56px auto;justify-items:center;align-items:center;gap:8px;}
+.trust-l2__brand + .trust-l2__brand{padding-left:28px;border-left:1px solid #d9d9d9;}
+@media(min-width:1280px){ .trust-l2__brand + .trust-l2__brand{padding-left:48px;} .trust-l2__brand{grid-template-rows:auto 64px auto;} }
+.trust-l2__label{margin:0;font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);white-space:nowrap;}
+.trust-l2__brand img{height:48px;width:auto;}
+.trust-l2__brand--main img{height:56px;}
+@media(min-width:1280px){ .trust-l2__brand img{height:52px;} .trust-l2__brand--main img{height:64px;} }
+.trust-l2__brand img.is-sm{height:34px;}
+@media(min-width:1280px){ .trust-l2__brand img.is-sm{height:40px;} }
+.trust-l2__sub{margin:0;font-weight:500;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);white-space:nowrap;}
+
+/* ---- S3 · Problema: integrado dentro de .dif-v2 (bloque naranja de la home) ---- */
+.dif-v2__problem-title{
+  margin:0 0 24px;font-family:"Poppins","Montserrat",Arial,sans-serif;font-weight:800;
+  font-size:26px;line-height:1.15;letter-spacing:-.01em;color:#fff;
+}
+@media(min-width:1280px){ .dif-v2__problem-title{font-size:32px;margin-bottom:32px;} }
+.dif-v2__problem-cta{
+  display:inline-flex;align-items:center;gap:10px;white-space:normal;text-align:left;
+  background:#fff;color:var(--navy);padding:13px 22px;font-size:12px;
+}
+.dif-v2__problem-cta svg{width:14px;height:14px;flex:none;}
+/* La caja naranja se ensancha un poco respecto de la home para que el CTA
+   entre en un solo renglon */
+@media(min-width:1024px){
+  .dif-v2__problem-box{width:350px;}
+  .dif-v2__problem-cta{white-space:nowrap;padding:13px 20px;font-size:11.5px;}
+}
+@media(min-width:1280px){
+  .dif-v2__problem-box{width:420px;}
+  .dif-v2__problem-cta{padding:15px 24px;font-size:12.5px;}
+}
+
+/* ---- S4 · Solucion: linea completa ---- */
+.line-l2{background:var(--navy);color:#fff;padding:56px var(--pad);position:relative;overflow:hidden;}
+@media(min-width:1024px){ .line-l2{padding:80px var(--pad);} }
+@media(min-width:1280px){ .line-l2{padding:104px var(--pad);} }
+/* Reflejo diagonal sutil, mismo lenguaje que los paneles del hero */
+.line-l2::before{
+  content:"";position:absolute;top:-20%;bottom:-20%;left:62%;right:-40%;
+  transform:skewX(-28deg);background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
+  pointer-events:none;
+}
+.line-l2__inner{position:relative;display:flex;flex-direction:column;gap:36px;}
+@media(min-width:1024px){ .line-l2__inner{flex-direction:row;align-items:center;gap:64px;} }
+@media(min-width:1280px){ .line-l2__inner{gap:104px;} }
+.line-l2__copy{flex:1 1 42%;min-width:0;}
+.line-l2__copy .eyebrow-l2{color:rgba(255,255,255,.8);}
+.line-l2__copy .h2-l2{color:#fff;max-width:13ch;margin-bottom:20px;}
+.line-l2__copy p{margin:0 0 28px;font-weight:300;font-size:15px;line-height:1.6;color:rgba(255,255,255,.86);max-width:40ch;}
+@media(min-width:1280px){ .line-l2__copy p{font-size:17px;margin-bottom:34px;} }
+.line-l2__copy .btn{display:inline-flex;align-items:center;gap:10px;}
+.line-l2__copy .btn svg{width:15px;height:15px;flex:none;}
+.line-l2__list{flex:1 1 58%;min-width:0;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;column-gap:32px;}
+@media(min-width:480px){ .line-l2__list{grid-template-columns:1fr 1fr;} }
+@media(min-width:1280px){ .line-l2__list{column-gap:48px;} }
+.line-l2__list li{
+  display:flex;align-items:center;gap:14px;padding:15px 0;
+  border-bottom:1px solid rgba(255,255,255,.14);
+  font-weight:600;font-size:14px;line-height:1.35;color:#fff;
+}
+@media(min-width:1280px){ .line-l2__list li{font-size:16px;padding:19px 0;gap:18px;} }
+.line-l2__ic{
+  flex:none;width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);
+  display:flex;align-items:center;justify-content:center;transition:background-color .2s ease,border-color .2s ease;
+}
+.line-l2__ic svg{width:21px;height:21px;color:#fff;stroke-width:1.5;}
+@media(min-width:1280px){ .line-l2__ic{width:46px;height:46px;} .line-l2__ic svg{width:23px;height:23px;} }
+.line-l2__list li:hover .line-l2__ic{background:var(--orange);border-color:var(--orange);}
+
+/* ---- S5 · Productos destacados ----
+   Mobile/tablet: carrusel horizontal draggeable (mismo JS que la home).
+   >=1024: grilla 4x2 — son 8 fichas con datos, conviene verlas todas. */
+.prod-l2{background:#f2f4f6;padding-bottom:52px;}
+@media(min-width:1024px){ .prod-l2{padding-bottom:72px;} }
+@media(min-width:1280px){ .prod-l2{padding-bottom:96px;} }
+.prod-l2__list{
+  margin-top:28px;padding:6px var(--pad) 12px;overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;cursor:grab;user-select:none;
+}
+.prod-l2__list::-webkit-scrollbar{display:none;}
+.prod-l2__list.is-dragging{cursor:grabbing;}
+.prod-l2__track{display:flex;gap:16px;width:max-content;}
+@media(min-width:1024px){
+  .prod-l2__list{overflow:visible;cursor:auto;user-select:auto;margin-top:40px;}
+  .prod-l2__track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;width:auto;}
+}
+@media(min-width:1280px){ .prod-l2__track{gap:24px;} }
+
+.pcard-l2{
+  position:relative;flex:none;width:250px;background:#fff;border:1px solid #e6eaee;border-radius:14px;
+  overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:0 4px 18px rgba(0,53,104,.06);transition:transform .2s ease,box-shadow .2s ease;
+}
+.pcard-l2:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,53,104,.12);}
+@media(min-width:768px){ .pcard-l2{width:270px;} }
+@media(min-width:1024px){ .pcard-l2{width:auto;} }
+.pcard-l2__media{
+  position:relative;height:190px;background:#f6f8fa;display:flex;align-items:center;justify-content:center;
+  border-bottom:1px solid #eef1f4;
+}
+@media(min-width:1280px){ .pcard-l2__media{height:220px;} }
+.pcard-l2__media img{height:86%;width:auto;max-width:86%;object-fit:contain;-webkit-user-drag:none;pointer-events:none;}
+/* Placeholder de foto: silueta de la prenda + etiqueta, hasta tener la foto real en azul marino */
+.pcard-l2__media.is-ph{background:repeating-linear-gradient(135deg,#f6f8fa 0 12px,#f1f4f7 12px 24px);}
+.pcard-l2__media.is-ph svg{width:92px;height:92px;color:#9fb2c5;stroke-width:1;}
+@media(min-width:1280px){ .pcard-l2__media.is-ph svg{width:108px;height:108px;} }
+.pcard-l2__phlabel{
+  position:absolute;bottom:10px;left:50%;transform:translateX(-50%);
+  font-weight:600;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#8a9bab;white-space:nowrap;
+}
+html.ph-off .pcard-l2__phlabel{display:none;}
+.pcard-l2 .products-v2__badge{z-index:2;background:#fff;box-shadow:0 2px 8px rgba(0,53,104,.08);}
+.pcard-l2__body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:12px;flex:1;}
+@media(min-width:1280px){ .pcard-l2__body{padding:20px 22px 24px;} }
+.pcard-l2__name{margin:0;font-family:"Montserrat",Arial,sans-serif;font-weight:700;font-size:13px;line-height:1.35;letter-spacing:.03em;text-transform:uppercase;color:var(--navy);}
+@media(min-width:1280px){ .pcard-l2__name{font-size:14px;} }
+.pcard-l2__code{margin:-6px 0 0;font-weight:400;font-size:12px;color:var(--gray);}
+.pcard-l2__specs{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;padding-top:12px;border-top:1px solid #eef1f4;}
+.pcard-l2__specs dt{font-weight:600;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#8a96a3;padding-top:2px;}
+.pcard-l2__specs dd{margin:0;font-weight:500;font-size:12.5px;line-height:1.4;color:var(--navy);}
+.pcard-l2__cta{
+  margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--orange);color:#fff;border:none;border-radius:999px;cursor:pointer;
+  padding:12px 20px;font:700 11.5px/1 "Montserrat",Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.pcard-l2__cta:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(255,126,52,.32);}
+.pcard-l2__cta svg{width:13px;height:13px;}
+
+/* ---- S7 · Prueba social (dentro del sector diferenciales) ---- */
+/* Va dentro de .dif-v2 (.dif-v2__reviews), fondo blanco como en la home */
+.reviews-l2__grid{display:grid;grid-template-columns:1fr;gap:20px;}
+@media(min-width:1024px){ .reviews-l2__grid{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:24px;align-items:stretch;} }
+.quote-l2{
+  position:relative;margin:0;background:var(--navy);color:#fff;border-radius:16px;
+  padding:34px 26px 28px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:26px;
+}
+@media(min-width:1280px){ .quote-l2{padding:52px 48px 44px;} }
+.quote-l2::before{
+  content:"\201C";position:absolute;top:-28px;right:18px;
+  font-family:"Poppins",Arial,sans-serif;font-weight:800;font-size:180px;line-height:1;color:var(--orange);opacity:.9;
+}
+.quote-l2 p{position:relative;margin:0;font-family:"Poppins","Montserrat",Arial,sans-serif;font-weight:600;font-size:20px;line-height:1.4;max-width:30ch;}
+@media(min-width:1280px){ .quote-l2 p{font-size:27px;} }
+.quote-l2 footer{display:flex;align-items:center;gap:14px;}
+.quote-l2 .gcard__avatar{width:46px;height:46px;}
+.quote-l2 cite{font-style:normal;display:block;font-weight:700;font-size:15px;}
+.quote-l2 small{display:flex;align-items:center;gap:8px;margin-top:3px;font-size:12px;color:rgba(255,255,255,.7);}
+.quote-l2 .greviews__stars svg{width:14px;height:14px;}
+.reviews-l2__side{display:flex;flex-direction:column;gap:16px;}
+.reviews-l2__side .gcard{width:auto;max-width:none;flex:1;}
+@media(max-width:1023px){
+  .reviews-l2__side{flex-direction:row;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--pad) * -1);padding:4px var(--pad) 8px;scrollbar-width:none;}
+  .reviews-l2__side::-webkit-scrollbar{display:none;}
+  .reviews-l2__side .gcard{flex:none;width:82vw;max-width:340px;}
+}
+
+/* ---- S8 · Normativa (reusa el banner .solve-v2 de la home) ---- */
+.solve-v2--l2 .solve-v2__marks strong{margin-bottom:0;}
+
+/* ---- S9 · Como trabajamos ---- */
+.steps-l2{background:#fff;padding:56px var(--pad);}
+@media(min-width:1024px){ .steps-l2{padding:80px var(--pad);} }
+@media(min-width:1280px){ .steps-l2{padding:104px var(--pad);} }
+.steps-l2 .h2-l2{margin-bottom:36px;}
+@media(min-width:1280px){ .steps-l2 .h2-l2{margin-bottom:56px;} }
+.steps-l2__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:28px;counter-reset:step;}
+@media(min-width:768px){ .steps-l2__list{grid-template-columns:1fr 1fr;gap:36px 40px;} }
+@media(min-width:1280px){ .steps-l2__list{grid-template-columns:repeat(4,1fr);gap:40px;} }
+.steps-l2__item{position:relative;display:flex;gap:18px;align-items:flex-start;}
+@media(min-width:1280px){ .steps-l2__item{flex-direction:column;gap:22px;} }
+.steps-l2__n{
+  flex:none;position:relative;z-index:1;width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Poppins",Arial,sans-serif;font-weight:800;font-size:17px;
+  box-shadow:0 0 0 6px #fff;
+}
+.steps-l2__item:last-child .steps-l2__n{background:var(--orange);}
+@media(min-width:1280px){
+  .steps-l2__n{width:56px;height:56px;font-size:19px;}
+  /* linea que une los pasos */
+  .steps-l2__item:not(:last-child)::after{content:"";position:absolute;top:28px;left:56px;right:-40px;height:2px;background:repeating-linear-gradient(90deg,#c9d4df 0 8px,transparent 8px 14px);}
+}
+.steps-l2__item p{margin:0;padding-top:4px;font-weight:500;font-size:15px;line-height:1.5;color:var(--navy);max-width:34ch;}
+@media(min-width:1280px){ .steps-l2__item p{font-size:17px;padding-top:0;} }
+
+/* ---- S10 · Garantia (borrador: no se publica hasta que Diforza valide) ---- */
+.guarantee-l2{background:#f2f4f6;padding:40px var(--pad);}
+@media(min-width:1280px){ .guarantee-l2{padding:56px var(--pad);} }
+.guarantee-l2__inner{display:flex;flex-direction:column;gap:22px;}
+@media(min-width:1024px){ .guarantee-l2__inner{flex-direction:row;align-items:center;gap:48px;} }
+.guarantee-l2__title{margin:0;flex:none;font-family:"Poppins",Arial,sans-serif;font-weight:800;font-size:22px;color:var(--navy);}
+@media(min-width:1280px){ .guarantee-l2__title{font-size:26px;} }
+.guarantee-l2__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:16px;flex:1;}
+@media(min-width:768px){ .guarantee-l2__list{grid-template-columns:repeat(3,1fr);gap:24px;} }
+.guarantee-l2__list li{display:flex;gap:12px;align-items:flex-start;font-weight:400;font-size:14px;line-height:1.5;color:var(--navy);}
+@media(min-width:1280px){ .guarantee-l2__list li{font-size:15px;} }
+.guarantee-l2__list svg{flex:none;width:26px;height:26px;color:var(--orange);stroke-width:1.6;}
+
+/* ---- S11 · FAQ (reusa .faq; en L2 no va pegada a otro sector blanco) ---- */
+.faq--l2{padding-top:56px;}
+@media(min-width:1024px){ .faq--l2{padding-top:88px;padding-bottom:104px;} }
+@media(min-width:1280px){ .faq--l2{padding-top:104px;padding-bottom:120px;} }
+
+/* ---- S12 · CTA final + formulario ---- */
+.cta-l2{background:var(--navy);color:#fff;padding:56px var(--pad);position:relative;overflow:hidden;scroll-margin-top:70px;}
+@media(min-width:1024px){ .cta-l2{padding:88px var(--pad);} }
+@media(min-width:1280px){ .cta-l2{padding:112px var(--pad);} }
+.cta-l2::before{
+  content:"";position:absolute;top:-20%;bottom:-20%;left:-30%;right:70%;
+  transform:skewX(-28deg);background:linear-gradient(90deg,rgba(255,255,255,.015),rgba(255,255,255,.05));pointer-events:none;
+}
+.cta-l2__inner{position:relative;display:grid;grid-template-columns:1fr;gap:36px;}
+@media(min-width:1024px){ .cta-l2__inner{grid-template-columns:minmax(0,.9fr) minmax(0,1.15fr);gap:56px;align-items:start;} }
+@media(min-width:1280px){ .cta-l2__inner{gap:96px;} }
+.cta-l2__copy .h2-l2{color:#fff;margin-bottom:18px;max-width:14ch;}
+@media(min-width:1440px){ .cta-l2__copy .h2-l2{font-size:52px;} }
+.cta-l2__reply{display:flex;align-items:center;gap:10px;margin:0 0 28px;font-weight:500;font-size:15px;color:rgba(255,255,255,.88);}
+.cta-l2__reply::before{content:"";width:9px;height:9px;border-radius:50%;background:#35c46f;box-shadow:0 0 0 4px rgba(53,196,111,.2);flex:none;}
+.cta-l2__mini{
+  margin:0 0 28px;padding:20px 22px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+}
+.cta-l2__mini p{margin:0 0 12px;font-weight:300;font-size:14px;line-height:1.6;color:rgba(255,255,255,.9);}
+.cta-l2__mini cite{font-style:normal;font-weight:700;font-size:13px;color:#fff;}
+.cta-l2__mini cite span{font-weight:400;color:rgba(255,255,255,.6);}
+.btn--wa{display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(255,255,255,.4);color:#fff;}
+.btn--wa:hover{border-color:#25d366;}
+.btn--wa svg{width:18px;height:18px;color:#25d366;}
+
+/* Catalogo: formulario corto e independiente, colapsable (doc 05 §6) */
+.catalog-l2{margin-top:32px;border-top:1px solid rgba(255,255,255,.14);padding-top:24px;scroll-margin-top:90px;}
+.catalog-l2__toggle{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;
+  background:none;border:none;padding:0;cursor:pointer;text-align:left;color:#fff;
+  font:700 14px/1.4 "Montserrat",Arial,sans-serif;letter-spacing:.02em;
+}
+.catalog-l2__toggle small{display:block;font-weight:300;font-size:13px;color:rgba(255,255,255,.7);letter-spacing:0;margin-top:2px;}
+.catalog-l2__toggle .chev{flex:none;width:18px;height:18px;transition:transform .2s ease;}
+.catalog-l2__toggle[aria-expanded="true"] .chev{transform:rotate(180deg);}
+.catalog-l2__panel{margin-top:20px;}
+.catalog-l2__panel[hidden]{display:none;}
+
+/* Tarjeta del formulario de cotizacion */
+.form-l2{background:#fff;color:var(--navy);border-radius:18px;padding:26px 20px;box-shadow:0 24px 60px rgba(0,10,25,.35);scroll-margin-top:90px;}
+@media(min-width:768px){ .form-l2{padding:34px 32px;} }
+@media(min-width:1280px){ .form-l2{padding:42px 40px;} }
+.form-l2__title{margin:0 0 4px;font-family:"Poppins",Arial,sans-serif;font-weight:700;font-size:19px;}
+.form-l2__note{margin:0 0 22px;font-weight:300;font-size:13px;color:var(--gray);}
+.form-l2__grid{display:grid;grid-template-columns:1fr;gap:16px;}
+@media(min-width:768px){ .form-l2__grid{grid-template-columns:1fr 1fr;gap:18px 18px;} }
+.field{display:flex;flex-direction:column;gap:6px;min-width:0;}
+.field--full{grid-column:1 / -1;}
+.field label{font-weight:600;font-size:12px;letter-spacing:.03em;color:var(--navy);}
+.field label .req{color:var(--orange);}
+.field input,.field select,.field textarea{
+  width:100%;font:400 15px/1.4 "Montserrat",Arial,sans-serif;color:var(--navy);
+  background:#fff;border:1px solid #cfd8e1;border-radius:10px;padding:12px 14px;min-height:48px;
+  transition:border-color .15s ease,box-shadow .15s ease;
+}
+.field select{appearance:none;-webkit-appearance:none;padding-right:40px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%23003568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;background-size:16px;}
+.field textarea{min-height:96px;resize:vertical;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(255,126,52,.28);}
+.field.is-invalid input,.field.is-invalid select,.field.is-invalid textarea{border-color:#c62828;}
+.field__error{display:none;align-items:center;gap:6px;font-weight:500;font-size:12px;color:#c62828;}
+.field__error::before{content:"!";display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;background:#c62828;color:#fff;font-weight:700;font-size:10px;flex:none;}
+.field.is-invalid .field__error{display:flex;}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:12.5px;line-height:1.5;color:#4a5a6a;}
+.check input{flex:none;width:18px;height:18px;margin:1px 0 0;accent-color:var(--navy);}
+.check a{color:var(--navy);}
+.hp-field{position:absolute !important;left:-9999px !important;width:1px;height:1px;overflow:hidden;}
+.form-l2__submit{width:100%;justify-content:center;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;margin-top:4px;}
+.form-l2__submit[disabled]{opacity:.7;cursor:progress;transform:none;box-shadow:none;}
+.form-l2__submit svg{width:15px;height:15px;}
+.form-l2__status{margin:12px 0 0;font-size:13px;font-weight:500;}
+.form-l2__status.is-error{color:#c62828;}
+.form-l2__ok{text-align:center;padding:24px 8px;}
+.form-l2__ok svg{width:56px;height:56px;color:#25a55f;margin:0 auto 14px;}
+.form-l2__ok h3{margin:0 0 8px;font-family:"Poppins",Arial,sans-serif;font-weight:700;font-size:22px;color:var(--navy);}
+.form-l2__ok p{margin:0;font-weight:300;font-size:15px;color:var(--gray);}
+
+/* Bloque "Estas cotizando: {producto}" (precarga desde S5, doc 17 §17) */
+.quoting-l2{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 18px;padding:12px 14px;border-radius:10px;background:#fff4ec;border:1px solid #ffd3b8;font-size:13.5px;color:var(--navy);}
+.quoting-l2[hidden]{display:none;}
+.quoting-l2 strong{font-weight:700;}
+.quoting-l2 button{flex:none;background:none;border:none;cursor:pointer;color:#c2561a;font:600 12px/1 "Montserrat",Arial,sans-serif;text-decoration:underline;}
+
+/* Formulario de catalogo sobre fondo navy */
+.catalog-l2 .field label{color:#fff;}
+.catalog-l2 .check{color:rgba(255,255,255,.75);}
+.catalog-l2 .check a{color:#fff;}
+.catalog-l2 .form-l2__grid{gap:14px;}
+.catalog-l2 .form-l2__ok{background:#fff;border-radius:14px;}
+
+/* ---- WhatsApp flotante (mobile/tablet, permanente — doc 02 regla 2) ---- */
+.wa-float{
+  position:fixed;right:16px;bottom:16px;z-index:55;width:56px;height:56px;border-radius:50%;
+  background:#25d366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 24px rgba(0,0,0,.25);
+}
+.wa-float svg{width:30px;height:30px;color:#fff;}
+@media(min-width:1024px){ .wa-float{display:none;} }
+
+/* ---- Mobile (<768): CTAs del mismo tamano que los de la home ---- */
+@media(max-width:767px){
+  .line-l2__copy .btn,.cta-l2 .btn--wa{padding:11px 20px;font-size:11px;}
+  .solve-v2--l2 .solve-v2__copy h2{font-size:32px;}
+  .form-l2__submit{padding:15px 20px;font-size:12px;}
+}
+
+/* ---- Ajustes post-verificacion ---- */
+/* El checkbox no hereda el estilo de input de texto de .field */
+.field .check input{width:18px;height:18px;min-height:0;padding:0;border-radius:4px;box-shadow:none;}
+.field label.check{font-weight:400;font-size:12.5px;letter-spacing:0;color:#4a5a6a;}
+.catalog-l2 .field label.check{color:rgba(255,255,255,.75);}
+/* Foto real sobre fondo blanco (los JPG de producto vienen con fondo blanco) */
+.pcard-l2__media:not(.is-ph){background:#fff;}
+/* Notebook 13-14": la columna del hero es angosta; los 3 beneficios van apilados */
+@media(min-width:1024px) and (max-width:1279px){
+  .hero-v2--l2 .hero-v2__benefits{flex-direction:column;gap:10px;margin-bottom:28px;}
+  .hero-v2--l2 .hero-v2__benefits li{padding-left:0;border-left:none;}
+}
+@media(max-width:767px){
+  .ph-toggle{padding:6px 10px;font-size:9px;opacity:.92;}
+}

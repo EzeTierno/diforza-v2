@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }}</title>
+{%- if description %}
+<meta name="description" content="{{ description }}">
+{%- endif %}
+{% include "partials/fonts.njk" %}
+<link rel="stylesheet" href="/assets/css/base.css">
+{%- if pageCss %}
+<link rel="stylesheet" href="{{ pageCss }}">
+{%- endif %}
+<script>window.SITE = { whatsapp: "{{ site.whatsapp.number }}" };</script>
+</head>
+<body>
+
+{% include "partials/header.njk" %}
+{{ content | safe }}
+{% include "partials/footer.njk" %}
+{%- if waText %}
+
+{% include "partials/wa-float.njk" %}
+{%- endif %}
+{%- if phToggle %}
+<button type="button" class="ph-toggle" id="phToggle" aria-pressed="false">Ocultar marcas</button>
+{%- endif %}
+
+<script src="/assets/js/main.js"></script>
+{%- if pageJs %}
+<script src="{{ pageJs }}"></script>
+{%- endif %}
+</body>
+</html>

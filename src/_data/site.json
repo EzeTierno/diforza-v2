@@ -1,0 +1,33 @@
+{
+  "name": "Diforza",
+  "url": "",
+  "whatsapp": {
+    "number": "5491163513333",
+    "display": "11 6351-3333"
+  },
+  "phone": {
+    "number": "+541159569713",
+    "display": "011 5956-9713"
+  },
+  "gtmId": "GTM-WKV5ZHCT",
+  "nav": [
+    { "label": "Productos", "href": "#productos" },
+    { "label": "Industrias", "href": "/#industrias" },
+    { "label": "La empresa", "href": "/#empresa" },
+    { "label": "Contacto", "href": "#contacto" }
+  ],
+  "footer": {
+    "categorias": [
+      { "label": "Indumentaria general de trabajo", "href": "/indumentaria-de-trabajo/" },
+      { "label": "EPP y protección industrial", "href": "/epp-proteccion-industrial/" },
+      { "label": "Mamelucos, descartables y ropa de lluvia", "href": "#" },
+      { "label": "Calzado de seguridad y protección de manos", "href": "#" }
+    ],
+    "tiendaOnline": "#",
+    "sobreNosotros": "/"
+  },
+  "social": {
+    "instagram": "#",
+    "linkedin": "#"
+  }
+}

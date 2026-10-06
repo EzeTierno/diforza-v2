@@ -1,0 +1,660 @@
+---
+layout: layouts/base.njk
+title: "Indumentaria de Trabajo para Empresas | Diforza"
+description: "Camisas, pantalones, camperas y conjuntos de trabajo. Talles completos, stock permanente y personalización con el logo de tu empresa."
+pageCss: /assets/css/l2.css
+pageJs: /assets/js/l2.js
+waText: "Hola, necesito cotizar indumentaria de trabajo para mi empresa."
+phToggle: true   # botón "Ocultar marcas" de [VALIDAR]/[PENDIENTE] — apagar antes de lanzar
+---
+{# [PENDIENTE] canonical definitivo: https://<dominio>/indumentaria-de-trabajo/ #}
+<main>
+
+<!-- ======================================================================
+     S1 · HERO  (reusa .hero-v2 de la home + modificador --l2)
+     Fondo propio: img/bg-hero-indumentaria.webp, la
+     persona ya viene en la foto, así que no se usa la capa del operario.
+     ====================================================================== -->
+<section class="hero-v2 hero-v2--l2">
+  <div class="hero-v2__bg">
+    <!-- <600px: recorte vertical centrado en la persona (19 KB); resto: foto completa (26 KB) -->
+    <picture>
+      <source media="(max-width:599px)" srcset="/indumentaria-de-trabajo/img/bg-hero-indumentaria-m.webp" width="640" height="768">
+      <img src="/indumentaria-de-trabajo/img/bg-hero-indumentaria.webp" width="1376" height="768" fetchpriority="high" alt="Operario caminando con pantalón cargo Diforza azul marino y botines de seguridad">
+    </picture>
+  </div>
+  <div class="hero-v2__shine" aria-hidden="true">
+    <div class="panel"></div>
+    <div class="panel panel--light"></div>
+  </div>
+  <!-- En L2 no hay operario recortado aparte: la persona ya viene en el fondo -->
+
+  <p class="hero-v2__claim hero-anim hero-anim--4">Equipamos<br>el trabajo<br>real</p>
+
+  <div class="hero-v2__inner">
+    <div class="hero-v2__copy">
+      <p class="hero-v2__eyebrow hero-anim hero-anim--1">Indumentaria de trabajo para empresas</p>
+
+      <h1 class="hero-anim hero-anim--2">Indumentaria de trabajo para toda tu planta, <span class="accent">con talles y reposición asegurada</span></h1>
+
+      <p class="hero-v2__lead hero-anim hero-anim--3">Camisas, pantalones, camperas y conjuntos de trabajo. Stock permanente, talles completos y la posibilidad de personalizar con el logo de tu empresa.<span class="ph">Validar personalización</span></p>
+
+      <ul class="hero-v2__benefits hero-anim hero-anim--3">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16.5 16.5 3 21 7.5 7.5 21z"/><path d="M7 12.5l1.8 1.8M9.8 9.7l1.8 1.8M12.6 6.9l1.8 1.8"/></svg>
+          <span>Talles del XS al XXXL<span class="ph">Validar</span></span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.9l8.2 4.3v9.6L12 21.1l-8.2-4.3V7.2z"/><path d="M3.8 7.2L12 11.5l8.2-4.3M12 11.5v9.6"/></svg>
+          Stock permanente
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 6.4h10.2v9.1H2.6z"/><path d="M12.8 9.4h3.6l2.9 2.9v3.2h-6.5z"/><circle cx="6.6" cy="17.6" r="1.9"/><circle cx="16.2" cy="17.6" r="1.9"/><path d="M8.5 17.6h5.8"/></svg>
+          Envíos a todo el país
+        </li>
+      </ul>
+
+      <div class="ctas hero-anim hero-anim--4">
+        <a href="#contacto" class="btn btn--solid">Pedir cotización por volumen
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#catalogo" class="btn btn--outline" data-js="catalogo">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v9m0 0l-3.5-3.5M10 12l3.5-3.5M4 15.5h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Descargar catálogo de indumentaria
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S2 · FRANJA DE CONFIANZA — Diforza destacado (línea propia) + Ombú
+     ====================================================================== -->
+<section class="trust-l2">
+  <div class="trust-l2__inner reveal">
+    <p class="trust-l2__text">Indumentaria de trabajo con las especificaciones técnicas que tu actividad requiere.<span class="ph">Validar normas aplicables</span></p>
+    <div class="trust-l2__brands">
+      <div class="trust-l2__brand trust-l2__brand--main">
+        <p class="trust-l2__label">Marca propia</p>
+        <img src="/img/brand-diforza.webp" alt="Diforza">
+        <p class="trust-l2__sub">Trabajo que protege</p>
+      </div>
+      <div class="trust-l2__brand">
+        <p class="trust-l2__label">Marca distribuida</p>
+        <img src="/img/logo-ombu.webp" alt="Ombú" class="is-sm">
+        <p class="trust-l2__sub">&nbsp;</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S4 · SOLUCIÓN — línea completa (+ CTA de mitad de página)
+     ====================================================================== -->
+<section class="line-l2 on-dark">
+  <div class="line-l2__inner">
+    <div class="line-l2__copy reveal">
+      <h2 class="h2-l2">Línea completa de indumentaria de trabajo</h2>
+      <p>Con continuidad de línea: la prenda que estandarizás hoy la vas a poder reponer el año que viene.</p>
+      <a href="#contacto" class="btn btn--solid">Pedir cotización por volumen <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <ul class="line-l2__list reveal reveal--1">
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3 4 5.5 5.5 10 8 9v12h8V9l2.5 1L20 5.5 15 3l-3 3z"/><path d="M12 6v15M9 3l3 3 3-3"/></svg></span><span>Camisas de trabajo</span></li>
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10l1.2 18h-4.4L12 10.5 10.2 21H5.8z"/><path d="M7 6h10"/></svg></span><span>Pantalones y cargos</span></li>
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8v5l2.5 1.5V21h-4.5v-7h-4v7H5.5V9.5L8 8z"/><path d="M10 3v4h4V3M8 8h8"/></svg></span><span>Conjuntos y ambos</span></li>
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3 5 5.2V21h5V11M15 3l4 2.2V21h-5V11"/><path d="M9 3l3 3 3-3M12 6v15M7 14h2.5M14.5 14H17"/></svg></span><span>Camperas y abrigo</span></li>
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 4 3 7l2 4 3-1v10h8V10l3 1 2-4-5.5-3c-.6 1.4-1.9 2.2-3.5 2.2S9.1 5.4 8.5 4z"/></svg></span><span>Remeras y chombas</span></li>
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v4l3.5 2.2V21h-13V9.2L9 7z"/><path d="M5.5 10.5H3M18.5 10.5H21M9 14h6v3.5H9z"/></svg></span><span>Delantales y guardapolvos</span></li>
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 5 6v15h5v-8h4v8h5V6l-3-3-2 4h-4z"/><path d="M5 14h5M14 14h5M5 17h5M14 17h5"/></svg></span><span>Indumentaria de alta visibilidad</span></li>
+      <li><span class="line-l2__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 2 1.4 3 2.5 3-.5-3 0-5.5 0-8z"/></svg></span><span>Indumentaria ignífuga / especial<span class="ph">Validar disponibilidad</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S5 · PRODUCTOS DESTACADOS — los 8 por ventas reales ene–jun 2026 (doc 14)
+     Sin precios (son de lista, con IVA aparte y se desactualizan).
+     [ASSET] fotos sobre fondo neutro, línea en azul marino:
+     prod-<nombre-kebab>.webp (doc 17 §18).
+     ====================================================================== -->
+<section class="prod-l2" id="productos">
+  <div class="products-v2__top reveal">
+    <div class="products-v2__heading">
+      <p class="products-v2__eyebrow">Línea propia Diforza</p>
+      <h2>Productos destacados</h2>
+    </div>
+    <a href="#" class="btn btn--outline">Ir a tienda online
+      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+  <div class="prod-l2__list draggable-carousel reveal reveal--1">
+    <div class="prod-l2__track">
+      <article class="pcard-l2">
+        <span class="products-v2__badge products-v2__badge--top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4c1.6 2 2.6 3.4 2.6 4.9a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.7 1-2.5.5 1.2 1.6.9 1.6-2.4z"/></svg> Más vendido</span>
+        <div class="pcard-l2__media"><img src="/indumentaria-de-trabajo/img/prod-campera-trucker-diforza.webp" alt="Campera trucker Diforza azul marino" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Campera trucker Diforza</h3>
+          <p class="pcard-l2__code">Azul marino · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Campera trucker Diforza azul marino" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l2">
+        
+        <div class="pcard-l2__media"><img src="/indumentaria-de-trabajo/img/prod-buzo-polar-medio-cierre-diforza.webp" alt="Buzo polar 1/2 cierre Diforza" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Buzo polar 1/2 cierre Diforza</h3>
+          <p class="pcard-l2__code">Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Buzo polar 1/2 cierre Diforza" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l2">
+        
+        <div class="pcard-l2__media"><img src="/indumentaria-de-trabajo/img/prod-camisa-clasica-diforza.webp" alt="Camisa clásica Diforza beige" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Camisa clásica Diforza</h3>
+          <p class="pcard-l2__code">Beige · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Camisa clásica Diforza beige" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l2">
+        
+        <div class="pcard-l2__media"><img src="/indumentaria-de-trabajo/img/prod-camisa-trabajo-diforza.webp" alt="Camisa de trabajo Diforza" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Camisa de trabajo Diforza</h3>
+          <p class="pcard-l2__code">Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Camisa de trabajo Diforza" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l2">
+        
+        <div class="pcard-l2__media"><img src="/indumentaria-de-trabajo/img/prod-chomba-pique-diforza.webp" alt="Chomba piqué Diforza azul marino" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Chomba piqué Diforza</h3>
+          <p class="pcard-l2__code">Azul marino · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Chomba piqué Diforza azul marino" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l2">
+        
+        <div class="pcard-l2__media"><img src="/indumentaria-de-trabajo/img/prod-pantalon-refl-diforza.webp" alt="Mameluco con reflectivos Diforza azul marino" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Mameluco con reflectivos Diforza<span class="ph">Validar nombre</span></h3>
+          <p class="pcard-l2__code">Azul marino · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Mameluco con reflectivos Diforza azul marino" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l2">
+        
+        <div class="pcard-l2__media"><img src="/indumentaria-de-trabajo/img/prod-traje-lluvia-diforza.webp" alt="Traje de lluvia Diforza amarillo" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Traje de lluvia Diforza</h3>
+          <p class="pcard-l2__code">Amarillo · Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Traje de lluvia Diforza amarillo" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pcard-l2">
+        
+        <div class="pcard-l2__media"><img src="/indumentaria-de-trabajo/img/prod-traje-bombero-diforza.webp" alt="Traje de bombero Diforza" draggable="false" loading="lazy" width="800" height="800"></div>
+        <div class="pcard-l2__body">
+          <h3 class="pcard-l2__name">Traje de bombero Diforza<span class="ph">Validar norma</span></h3>
+          <p class="pcard-l2__code">Cód. —<span class="ph">Pendiente</span></p>
+          <dl class="pcard-l2__specs">
+            <dt>Tela</dt><dd>— <span class="ph">Gramaje / composición</span></dd>
+            <dt>Talles</dt><dd>— <span class="ph">Validar</span></dd>
+            <dt>Norma</dt><dd>Si aplica</dd>
+          </dl>
+          <button type="button" class="pcard-l2__cta" data-js="consultar" data-prod-nombre="Traje de bombero Diforza" data-prod-codigo="">Consultar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S6 · DIFERENCIALES + S3 PROBLEMA + S7 PRUEBA SOCIAL en un solo sector
+     (reusa .dif-v2 de la home; el problema usa el bloque naranja + acordeón)
+     No decir "fabricamos" hasta que Diforza confirme origen. No mencionar AGIO.
+     ====================================================================== -->
+<section class="dif-v2">
+  <div class="dif-v2__head">
+    <h2 class="dif-v2__title reveal">Por qué las empresas eligen trabajar con Diforza</h2>
+    <div class="dif-v2__badge reveal">
+      <span class="dif-v2__badge-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ff7e34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg>
+      </span>
+      <p><strong>Más de 15 años</strong> brindando asesoramiento y soluciones en seguridad industrial</p>
+    </div>
+  </div>
+  <div class="dif-v2__grid">
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
+      </span>
+      <div>
+        <h3>Línea propia Diforza</h3>
+        <p>Camisas, pantalones, camperas, buzos y remeras de línea propia. Eso significa continuidad: no dependemos de que un tercero decida discontinuar el modelo que tu empresa ya estandarizó.</p>
+      </div>
+    </div>
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16.5 16.5 3 21 7.5 7.5 21z"/><path d="M7 12.5l1.8 1.8M9.8 9.7l1.8 1.8M12.6 6.9l1.8 1.8"/></svg>
+      </span>
+      <div>
+        <h3>Talles reales y completos</h3>
+        <p>El talle grande no es un problema a resolver, es parte del stock.<span class="ph">Validar rango</span></p>
+      </div>
+    </div>
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.3 6.8 19l1-5.8-4.2-4.1 5.8-.8z"/></svg>
+      </span>
+      <div>
+        <h3>Personalización con tu logo</h3>
+        <p>Bordado o estampado con la identidad de tu empresa.<span class="ph">Validar proceso, mínimos, plazos</span></p>
+      </div>
+    </div>
+    <div class="dif-v2__item reveal">
+      <span class="dif-v2__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+      </span>
+      <div>
+        <h3>Un responsable de cuenta</h3>
+        <p>Alguien que ya sabe qué prenda usa tu personal y en qué talles. Reponer es un mensaje, no una licitación.</p>
+      </div>
+    </div>
+  </div>
+  <!-- S3 · PROBLEMA (integrado): bloque naranja + acordeón, como en la home -->
+  <div class="dif-v2__problem reveal">
+    <div class="dif-v2__problem-box">
+      <h2 class="dif-v2__problem-title">Equipar a 80 personas no es comprar 80 camisas</h2>
+      <a href="#contacto" class="btn dif-v2__problem-cta">Pedir cotización por volumen <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="dif-v2__problem-list">
+      <div class="accordion">
+          <details open>
+            <summary>Falta el talle justo
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="accordion__panel">Siempre hay alguien que queda sin uniforme porque el proveedor no tiene su talle.</p>
+          </details>
+          <details>
+            <summary>El modelo se discontinúa
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="accordion__panel">Comprás una vez, y a los seis meses ya no existe. Tu personal queda vestido de tres formas distintas.</p>
+          </details>
+          <details>
+            <summary>Dura tres lavados
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="accordion__panel">La prenda barata se decolora, se descose y termina costando más.</p>
+          </details>
+          <details>
+            <summary>Reposiciones que tardan
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="accordion__panel">Entra gente nueva y esperás semanas para vestirla.</p>
+          </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- S7 · PRUEBA SOCIAL — dentro del mismo sector que los diferenciales
+       (testimonio destacado que menciona indumentaria + 2) -->
+  <div class="dif-v2__reviews">
+    <div class="greviews__summary reveal">
+      <svg class="g-icon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+      <span class="greviews__score">5.0</span>
+      <span class="greviews__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
+      <span class="greviews__count">5.0 en Google · Reseñas de clientes</span>
+    </div>
+    <div class="reviews-l2__grid">
+      <blockquote class="quote-l2 reveal">
+        <p>Diforza nos provee indumentaria y elementos de protección personal de altísima calidad. Diego maneja nuestra cuenta con mucho profesionalismo.</p>
+        <footer>
+          <span class="gcard__avatar" style="background:#f57c00">AK</span>
+          <div>
+            <cite>Ariel Kuznicki</cite>
+            <small><span class="greviews__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span> Google Reviews</small>
+          </div>
+        </footer>
+      </blockquote>
+      <div class="reviews-l2__side reveal reveal--1">
+        <div class="gcard">
+          <div class="gcard__top">
+            <div class="gcard__avatar" style="background:#1976d2">RH</div>
+            <div class="gcard__id">
+              <div class="gcard__name">Ricardo Honaine</div>
+              <div class="gcard__date">Google Reviews</div>
+            </div>
+            <svg class="gcard__g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+          </div>
+          <span class="gcard__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
+          <p class="gcard__text">Excelente atención y asesoramiento. En Diforza encontré todo lo que necesitaba en elementos de seguridad, con productos de primera calidad y entregas rápidas. Se nota el compromiso y la seriedad con la que trabajan.</p>
+        </div>
+        <div class="gcard">
+          <div class="gcard__top">
+            <div class="gcard__avatar" style="background:#388e3c">EC</div>
+            <div class="gcard__id">
+              <div class="gcard__name">Estudio Casa Viva</div>
+              <div class="gcard__date">Google Reviews</div>
+            </div>
+            <svg class="gcard__g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3C33.7 32 29.3 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6 29.2 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6 4.4C13.9 16.1 18.6 13 24 13c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.9 6.9 29.2 5 24 5c-7.9 0-14.7 4.4-18.2 10.9z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-1.7 13.5-4.8l-6.2-5.2C29.2 35.7 26.7 36.5 24 36.5c-5.3 0-9.7-3.4-11.3-8.1l-6.2 4.8C10 39.5 16.5 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.2-2.2 4.1-4.1 5.4l6.2 5.2C40.5 35.7 44 30.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+          </div>
+          <span class="gcard__stars"><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg><svg viewBox="0 0 20 20" fill="#fbbc04" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.9L10 14.7l-5.3 2.9 1.2-5.9-4.4-4.1 5.9-.7L10 1.5z"/></svg></span>
+          <p class="gcard__text">Muy buena experiencia. Tienen gran variedad de productos y siempre responden con rapidez y buena predisposición. La atención es personalizada y te ayudan a encontrar justo lo que necesitás.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S8 · NORMATIVA  (reusa el banner .solve-v2 de la home)
+     [PENDIENTE] normas IRAM aplicables a indumentaria — sin verificar.
+     ====================================================================== -->
+<section class="solve-v2 solve-v2--l2">
+  <div class="solve-v2__inner">
+    <div class="solve-v2__copy reveal">
+      <h2>La ropa de trabajo <br> también es un elemento <br> de protección</h2>
+
+      <p class="solve-v2__lead">Según la actividad, la indumentaria tiene requisitos específicos: alta visibilidad, resistencia al fuego, protección contra salpicaduras. No es lo mismo vestir una planta de alimentos que una obra en ruta.<span class="ph">Pendiente normas IRAM</span></p>
+
+      <div class="ctas">
+        <a href="#contacto" class="btn btn--solid">Consultar qué corresponde a mi actividad
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="solve-v2__marks">
+        <div class="solve-v2__mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 5 6v15h5v-8h4v8h5V6l-3-3-2 4h-4z"/><path d="M5 14h5M14 14h5M5 17h5M14 17h5"/></svg>
+          <div><strong>Alta visibilidad</strong></div>
+        </div>
+        <div class="solve-v2__mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 2 1.4 3 2.5 3-.5-3 0-5.5 0-8z"/></svg>
+          <div><strong>Resistencia al fuego</strong></div>
+        </div>
+        <div class="solve-v2__mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5s6 6.4 6 10.5a6 6 0 0 1-12 0c0-4.1 6-10.5 6-10.5z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg>
+          <div><strong>Protección contra salpicaduras</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="solve-v2__claim reveal reveal--1">Equipamos<br>el trabajo real</p>
+</section>
+
+<!-- ======================================================================
+     S9 · CÓMO TRABAJAMOS
+     ====================================================================== -->
+<section class="steps-l2">
+  <h2 class="h2-l2 reveal">Cómo trabajamos</h2>
+  <ol class="steps-l2__list">
+    <li class="steps-l2__item reveal"><span class="steps-l2__n">1</span><p>Nos contás cuánta gente equipás y en qué actividad.</p></li>
+    <li class="steps-l2__item reveal reveal--1"><span class="steps-l2__n">2</span><p>Te proponemos prenda, tela y talles; si querés, con muestra previa.<span class="ph">Validar</span></p></li>
+    <li class="steps-l2__item reveal reveal--2"><span class="steps-l2__n">3</span><p>Coordinamos la entrega y, si aplica, la personalización.</p></li>
+    <li class="steps-l2__item reveal reveal--2"><span class="steps-l2__n">4</span><p>Quedás con la línea estandarizada y reposición ágil.</p></li>
+  </ol>
+</section>
+
+<!-- ======================================================================
+     S10 · GARANTÍA — BORRADOR. Textos placeholder del doc 16 §5.
+     No publicar hasta que Diego valide condiciones (doc 01 S10).
+     ====================================================================== -->
+<section class="guarantee-l2" data-draft="true">
+  <div class="guarantee-l2__inner reveal">
+    <h2 class="guarantee-l2__title">Garantía<span class="ph">Borrador · Validar</span></h2>
+    <ul class="guarantee-l2__list">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l7.4 2.9v6.1c0 4.3-3.1 7.6-7.4 9.4-4.3-1.8-7.4-5.1-7.4-9.4V5.7z"/><path d="M8.9 11.9l2.2 2.2 4-4.4"/></svg>
+        <span>Garantía por defectos de fabricación en todos nuestros productos.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg>
+        <span>Cambios sin cargo por talle o defecto dentro de [X] días con el producto sin uso.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.9l8.2 4.3v9.6L12 21.1l-8.2-4.3V7.2z"/><path d="M3.8 7.2L12 11.5l8.2-4.3M12 11.5v9.6"/></svg>
+        <span>Stock permanente para reposición inmediata.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S11 · FAQ  (reusa .faq de la home). Schema FAQPage: se agrega cuando
+     las respuestas estén validadas (doc 07).
+     ====================================================================== -->
+<section class="faq faq--l2">
+  <div class="faq__inner reveal">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="accordion">
+      <details open>
+        <summary>¿Hacen talles especiales? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Pendiente</span></p>
+      </details>
+      <details>
+        <summary>¿Personalizan con el logo de la empresa? ¿Cuál es el mínimo? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Pendiente</span></p>
+      </details>
+      <details>
+        <summary>¿Puedo ver una muestra antes de comprar volumen? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Pendiente</span></p>
+      </details>
+      <details>
+        <summary>¿Aseguran continuidad del modelo para reponer? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Sí. Con continuidad de línea: la prenda que estandarizás hoy la vas a poder reponer el año que viene.<span class="ph">Validar</span></p>
+      </details>
+      <details>
+        <summary>¿Cuánto tardan en entregar un pedido de volumen? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Respuesta a confirmar con Diforza.<span class="ph">Pendiente</span></p>
+      </details>
+      <details>
+        <summary>¿Hacen envíos al interior del país? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Sí, despachamos y distribuimos indumentaria y EPP a empresas e industrias en todo el territorio nacional.</p>
+      </details>
+      <details>
+        <summary>¿Puedo comprar por unidad? <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <p class="accordion__panel">Sí, en la tienda online.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     S12 · CTA FINAL + FORMULARIO (doc 05) — campo variable L2:
+     "Cantidad de personas a equipar".
+     [PENDIENTE] endpoint del formulario / CRM y número definitivo de WhatsApp.
+     ====================================================================== -->
+<section class="cta-l2 on-dark" id="contacto">
+  <div class="cta-l2__inner">
+    <div class="cta-l2__copy reveal">
+      <h2 class="h2-l2">Decinos cuánta gente tenés que vestir</h2>
+      <p class="cta-l2__reply">Te respondemos en el día<span class="ph">Validar</span></p>
+
+      <figure class="cta-l2__mini">
+        <p>“Diforza nos provee indumentaria y elementos de protección personal de altísima calidad.”</p>
+        <cite>Ariel Kuznicki <span>· Google Reviews</span></cite>
+      </figure>
+
+      <a href="https://wa.me/{{ site.whatsapp.number }}?text=Hola%2C%20necesito%20cotizar%20indumentaria%20de%20trabajo%20para%20mi%20empresa." class="btn btn--wa js-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg> Escribinos por WhatsApp</a>
+
+      <!-- Catálogo: formulario corto independiente (doc 05 §6) -->
+      <div class="catalog-l2" id="catalogo">
+        <button type="button" class="catalog-l2__toggle" aria-expanded="false" aria-controls="catalogPanel">
+          <span>Descargar catálogo de indumentaria<small>Te lo mandamos también por email.</small></span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="catalog-l2__panel" id="catalogPanel" hidden>
+          <form id="form-catalogo" class="js-lead-form" novalidate>
+            <input type="hidden" name="tipo_lead" value="catalogo">
+            <input type="hidden" name="landing" value="l2-indumentaria">
+            <div class="hp-field" aria-hidden="true"><label>No completar<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+            <div class="form-l2__grid">
+              <div class="field">
+                <label for="c-nombre">Nombre y apellido <span class="req">*</span></label>
+                <input id="c-nombre" name="nombre" type="text" autocomplete="name" required>
+                <span class="field__error">Ingresá tu nombre.</span>
+              </div>
+              <div class="field">
+                <label for="c-empresa">Empresa <span class="req">*</span></label>
+                <input id="c-empresa" name="empresa" type="text" autocomplete="organization" required>
+                <span class="field__error">Ingresá el nombre de tu empresa.</span>
+              </div>
+              <div class="field">
+                <label for="c-email">Email <span class="req">*</span></label>
+                <input id="c-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+                <span class="field__error">Ingresá un email válido.</span>
+              </div>
+              <div class="field">
+                <label for="c-tel">Teléfono / WhatsApp <span class="req">*</span></label>
+                <input id="c-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required>
+                <span class="field__error">Ingresá un teléfono de contacto.</span>
+              </div>
+              <div class="field field--full">
+                <label class="check"><input type="checkbox" name="consentimiento" required> <span>Acepto que Diforza me contacte y la <a href="#">política de privacidad</a>.</span></label>
+                <span class="field__error">Necesitamos tu consentimiento para enviarte el catálogo.</span>
+              </div>
+              <div class="field--full">
+                <button type="submit" class="btn btn--solid form-l2__submit"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v9m0 0l-3.5-3.5M10 12l3.5-3.5M4 15.5h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Descargar catálogo</button>
+                <p class="form-l2__status" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-l2 reveal reveal--1" id="form-cotizacion-wrap">
+      <form id="form-cotizacion" class="js-lead-form" novalidate>
+        <p class="form-l2__title">Pedí tu cotización por volumen</p>
+        <p class="form-l2__note">Los campos con <span style="color:var(--orange)">*</span> son obligatorios.</p>
+
+        <div class="quoting-l2" id="quoting" hidden>
+          <span>Estás cotizando: <strong id="quotingName"></strong></span>
+          <button type="button" id="quotingClear">Quitar</button>
+        </div>
+
+        <input type="hidden" name="producto_interes" id="productoInteres" value="">
+        <input type="hidden" name="tipo_lead" value="cotizacion">
+        <input type="hidden" name="landing" value="l2-indumentaria">
+        <div class="hp-field" aria-hidden="true"><label>No completar<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="form-l2__grid">
+          <div class="field">
+            <label for="f-nombre">Nombre y apellido <span class="req">*</span></label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+            <span class="field__error">Ingresá tu nombre.</span>
+          </div>
+          <div class="field">
+            <label for="f-empresa">Empresa <span class="req">*</span></label>
+            <input id="f-empresa" name="empresa" type="text" autocomplete="organization" required>
+            <span class="field__error">Ingresá el nombre de tu empresa.</span>
+          </div>
+          <div class="field">
+            <label for="f-email">Email corporativo <span class="req">*</span></label>
+            <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+            <span class="field__error">Ingresá un email válido.</span>
+          </div>
+          <div class="field">
+            <label for="f-tel">Teléfono / WhatsApp <span class="req">*</span></label>
+            <input id="f-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required>
+            <span class="field__error">Ingresá un teléfono de contacto.</span>
+          </div>
+          <div class="field">
+            <label for="f-rubro">Rubro / industria <span class="req">*</span></label>
+            <select id="f-rubro" name="rubro" required>
+              <option value="">Elegí una opción</option>
+              <option>Industria / Manufactura</option>
+              <option>Construcción y obra</option>
+              <option>Logística y transporte</option>
+              <option>Alimentos y bebidas</option>
+              <option>Laboratorio y farmacéutica</option>
+              <option>Química y petroquímica</option>
+              <option>Agro</option>
+              <option>Minería y energía</option>
+              <option>Servicios y mantenimiento</option>
+              <option>Sector público</option>
+              <option>Otro</option>
+            </select>
+            <span class="field__error">Elegí el rubro de tu empresa.</span>
+          </div>
+          <div class="field">
+            <label for="f-tamano">Tamaño de la empresa <span class="req">*</span></label>
+            <select id="f-tamano" name="tamano_empresa" required>
+              <option value="">Elegí una opción</option>
+              <option>1–10</option>
+              <option>11–50</option>
+              <option>51–200</option>
+              <option>+200</option>
+            </select>
+            <span class="field__error">Elegí el tamaño de tu empresa.</span>
+          </div>
+          <div class="field field--full">
+            <label for="f-personas">Cantidad de personas a equipar <span class="req">*</span></label>
+            <select id="f-personas" name="personas_a_equipar" required>
+              <option value="">Elegí una opción</option>
+              <option>1–10</option>
+              <option>11–50</option>
+              <option>51–200</option>
+              <option>+200</option>
+            </select>
+            <span class="field__error">Contanos cuánta gente tenés que vestir.</span>
+          </div>
+          <div class="field field--full">
+            <label for="f-mensaje">Contanos qué necesitás</label>
+            <textarea id="f-mensaje" name="mensaje" rows="3"></textarea>
+          </div>
+          <div class="field field--full">
+            <label class="check"><input type="checkbox" name="consentimiento" required> <span>Acepto que Diforza me contacte y la <a href="#">política de privacidad</a>.</span></label>
+            <span class="field__error">Necesitamos tu consentimiento para contactarte.</span>
+          </div>
+          <div class="field--full">
+            <button type="submit" class="btn btn--solid form-l2__submit">Pedir cotización por volumen <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <p class="form-l2__status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
