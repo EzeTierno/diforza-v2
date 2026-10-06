@@ -1,0 +1,17 @@
+{#- Líneas de producto (fondo oscuro). Datos: L.lineas. Si los ítems traen "descripcion", la lista va en formato largo. -#}
+{%- set C = L.lineas %}
+{%- set conDesc = C.items[0].descripcion is defined %}
+<section class="category-lines theme-dark{% if C.tituloAncho %} category-lines--wide-title{% endif %}">
+  <div class="category-lines__inner">
+    <div class="category-lines__copy reveal">
+      <h2 class="section-title">{{ C.titulo | rich | safe }}</h2>
+      <p>{{ C.texto | rich | safe }}</p>
+      <a href="#contacto" class="btn btn--primary">{{ C.cta }} {{ icons['ui-flecha'] | safe }}</a>
+    </div>
+    <ul class="category-lines__list{% if conDesc %} category-lines__list--desc{% endif %} reveal reveal--1">
+      {%- for it in C.items %}
+      <li><span class="category-lines__ic">{{ icons[it.icono] | safe }}</span>{% if conDesc %}<span class="category-lines__txt"><strong>{{ it.titulo | rich | safe }}</strong><small>{{ it.descripcion | rich | safe }}</small></span>{% else %}<span>{{ it.texto | rich | safe }}</span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

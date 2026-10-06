@@ -1,0 +1,83 @@
+{#- Diferenciales + bloque problema + reseñas. Datos: L.diferenciales; reseñas en _data/reviews.json -#}
+{%- set B = L.diferenciales %}
+<section class="benefits benefits--landing">
+  <div class="benefits__head">
+    <h2 class="benefits__title reveal">{{ B.titulo or "Por qué las empresas eligen trabajar con Diforza" }}</h2>
+    <div class="benefits__badge reveal">
+      <span class="benefits__badge-icon">
+        {{ icons['ui-medalla'] | safe }}
+      </span>
+      <p><strong>Más de 15 años</strong> brindando asesoramiento y soluciones en seguridad industrial</p>
+    </div>
+  </div>
+  <div class="benefits__grid">
+    {%- for it in B.items %}
+    <div class="benefits__item reveal">
+      <span class="benefits__icon">
+        {{ icons[it.icono] | safe }}
+      </span>
+      <div>
+        <h3>{{ it.titulo | rich | safe }}</h3>
+        <p>{{ it.texto | rich | safe }}</p>
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+  <div class="benefits__problem reveal">
+    <div class="benefits__problem-box">
+      <h2 class="benefits__problem-title">{{ B.problema.titulo | rich | safe }}</h2>
+      <a href="#contacto" class="btn benefits__problem-cta">{{ B.problema.cta }} {{ icons['ui-flecha'] | safe }}</a>
+    </div>
+    <div class="benefits__problem-list">
+      <div class="accordion">
+        {%- for q in B.problema.items %}
+          <details{% if loop.first %} open{% endif %}>
+            <summary>{{ q.pregunta }}
+              {{ icons['ui-chevron-acordeon'] | safe }}
+            </summary>
+            <p class="accordion__panel">{{ q.respuesta | rich | safe }}</p>
+          </details>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="benefits__reviews">
+    <div class="reviews-summary__summary reveal">
+      {{ icons['ui-google'] | safe }}
+      <span class="reviews-summary__score">5.0</span>
+      <span class="reviews-summary__stars">{% for i in range(5) %}{{ icons['ui-estrella'] | safe }}{% endfor %}</span>
+      <span class="reviews-summary__count">5.0 en Google · Reseñas de clientes</span>
+    </div>
+    <div class="reviews__grid">
+      {%- set T = reviews[B.testimonio.resena] %}
+      <blockquote class="testimonial reveal">
+        <p>{{ B.testimonio.texto | rich | safe }}</p>
+        <footer>
+          <span class="review-card__avatar" style="background:{{ T.color }}">{{ T.iniciales }}</span>
+          <div>
+            <cite>{{ B.testimonio.resena }}</cite>
+            <small><span class="reviews-summary__stars">{% for i in range(5) %}{{ icons['ui-estrella'] | safe }}{% endfor %}</span> Google Reviews</small>
+          </div>
+        </footer>
+      </blockquote>
+      <div class="reviews__side reveal reveal--1">
+        {%- for nombre in B.resenas %}
+        {%- set R = reviews[nombre] %}
+        <div class="review-card">
+          <div class="review-card__top">
+            <div class="review-card__avatar" style="background:{{ R.color }}">{{ R.iniciales }}</div>
+            <div class="review-card__id">
+              <div class="review-card__name">{{ nombre }}</div>
+              <div class="review-card__date">Google Reviews</div>
+            </div>
+            {{ icons['ui-google-card'] | safe }}
+          </div>
+          <span class="review-card__stars">{% for i in range(5) %}{{ icons['ui-estrella'] | safe }}{% endfor %}</span>
+          <p class="review-card__text">{{ R.texto | rich | safe }}</p>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>

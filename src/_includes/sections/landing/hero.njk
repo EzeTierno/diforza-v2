@@ -1,0 +1,47 @@
+{#- Hero de landing. Datos: L.hero -#}
+{%- set H = L.hero %}
+<section class="hero hero--landing hero--{{ H.modificador }}" data-js="hero">
+  <div class="hero__bg">
+    <picture>
+      {%- if H.fondo.srcMobile %}
+      <source media="(max-width:599px)" srcset="{{ H.fondo.srcMobile }}" width="{{ H.fondo.anchoMobile }}" height="{{ H.fondo.altoMobile }}">
+      {%- endif %}
+      <img src="{{ H.fondo.src }}" width="{{ H.fondo.ancho }}" height="{{ H.fondo.alto }}" fetchpriority="high" alt="{{ H.fondo.alt }}">
+    </picture>
+  </div>
+  <div class="hero__shine" aria-hidden="true">
+    <div class="panel"></div>
+    <div class="panel panel--light"></div>
+  </div>
+
+  <p class="hero__claim hero-anim hero-anim--4">Equipamos<br>el trabajo<br>real</p>
+
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="hero__eyebrow hero-anim hero-anim--1">{{ H.eyebrow | rich | safe }}</p>
+
+      <h1 class="hero-anim hero-anim--2">{{ H.titulo | rich | safe }} <span class="accent">{{ H.acento | rich | safe }}</span></h1>
+
+      <p class="hero__lead hero-anim hero-anim--3">{{ H.bajada | rich | safe }}</p>
+
+      <ul class="hero__benefits hero-anim hero-anim--3">
+        {%- for b in H.beneficios %}
+        <li>
+          {{ icons[b.icono] | safe }}
+          {% if '[[' in b.texto %}<span>{{ b.texto | rich | safe }}</span>{% else %}{{ b.texto | rich | safe }}{% endif %}
+        </li>
+        {%- endfor %}
+      </ul>
+
+      <div class="ctas hero-anim hero-anim--4">
+        <a href="#contacto" class="btn btn--primary">{{ H.ctaPrincipal }}
+          {{ icons['ui-flecha'] | safe }}
+        </a>
+        <a href="#catalogo" class="btn btn--outline" data-js="catalogo">
+          {{ icons['ui-descarga'] | safe }}
+          {{ H.ctaCatalogo }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

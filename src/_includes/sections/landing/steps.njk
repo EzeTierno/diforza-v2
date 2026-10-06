@@ -1,0 +1,9 @@
+{#- Cómo trabajamos. Datos: L.pasos (lista de textos) -#}
+<section class="steps">
+  <h2 class="section-title reveal">Cómo trabajamos</h2>
+  <ol class="steps__list">
+    {%- for p in L.pasos %}
+    <li class="steps__item reveal{% if loop.index0 == 1 %} reveal--1{% elif loop.index0 > 1 %} reveal--2{% endif %}"><span class="steps__n">{{ loop.index }}</span><p>{{ p | rich | safe }}</p></li>
+    {%- endfor %}
+  </ol>
+</section>

@@ -1,0 +1,28 @@
+{#- Normativa / cumplimiento (reusa el banner .solve). Datos: L.normativa -#}
+{%- set N = L.normativa %}
+<section class="solve solve--landing">
+  <div class="solve__inner">
+    <div class="solve__copy reveal">
+      <h2>{{ N.titulo | rich | safe }}</h2>
+
+      <p class="solve__lead">{{ N.bajada | rich | safe }}</p>
+
+      <div class="ctas">
+        <a href="#contacto" class="btn btn--primary">{{ N.cta }}
+          {{ icons['ui-flecha'] | safe }}
+        </a>
+      </div>
+
+      <div class="solve__marks">
+        {%- for m in N.marcas %}
+        <div class="solve__mark">
+          {{ icons[m.icono] | safe }}
+          <div><strong>{{ m.texto | rich | safe }}</strong></div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+
+  <p class="solve__claim reveal reveal--1">Equipamos<br>el trabajo real</p>
+</section>

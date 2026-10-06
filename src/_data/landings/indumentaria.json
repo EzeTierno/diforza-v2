@@ -1,0 +1,325 @@
+{
+  "hero": {
+    "modificador": "indumentaria",
+    "fondo": {
+      "src": "/indumentaria-de-trabajo/img/bg-hero-indumentaria.webp",
+      "ancho": "1376",
+      "alto": "768",
+      "alt": "Operario caminando con pantalón cargo Diforza azul marino y botines de seguridad",
+      "srcMobile": "/indumentaria-de-trabajo/img/bg-hero-indumentaria-m.webp",
+      "anchoMobile": "640",
+      "altoMobile": "768"
+    },
+    "eyebrow": "Indumentaria de trabajo para empresas",
+    "acento": "con talles y reposición asegurada",
+    "titulo": "Indumentaria de trabajo para toda tu planta,",
+    "bajada": "Camisas, pantalones, camperas y conjuntos de trabajo. Stock permanente, talles completos y la posibilidad de personalizar con el logo de tu empresa.[[Validar personalización]]",
+    "beneficios": [
+      {
+        "icono": "talles",
+        "texto": "Talles del XS al XXXL[[Validar]]"
+      },
+      {
+        "icono": "caja",
+        "texto": "Stock permanente"
+      },
+      {
+        "icono": "camion",
+        "texto": "Envíos a todo el país"
+      }
+    ],
+    "ctaPrincipal": "Pedir cotización por volumen",
+    "ctaCatalogo": "Descargar catálogo de indumentaria"
+  },
+  "confianza": {
+    "agrupado": false,
+    "texto": "Indumentaria de trabajo con las especificaciones técnicas que tu actividad requiere.[[Validar normas aplicables]]",
+    "marcas": [
+      {
+        "etiqueta": "Marca propia",
+        "src": "/img/brand-diforza.webp",
+        "alt": "Diforza",
+        "principal": true,
+        "sub": "Trabajo que protege"
+      },
+      {
+        "etiqueta": "Marca distribuida",
+        "src": "/img/logo-ombu.webp",
+        "alt": "Ombú",
+        "chico": true,
+        "sub": " "
+      }
+    ]
+  },
+  "lineas": {
+    "tituloAncho": false,
+    "titulo": "Línea completa de indumentaria de trabajo",
+    "texto": "Con continuidad de línea: la prenda que estandarizás hoy la vas a poder reponer el año que viene.",
+    "cta": "Pedir cotización por volumen",
+    "items": [
+      {
+        "icono": "camisa",
+        "texto": "Camisas de trabajo"
+      },
+      {
+        "icono": "pantalon",
+        "texto": "Pantalones y cargos"
+      },
+      {
+        "icono": "conjunto",
+        "texto": "Conjuntos y ambos"
+      },
+      {
+        "icono": "campera",
+        "texto": "Camperas y abrigo"
+      },
+      {
+        "icono": "remera",
+        "texto": "Remeras y chombas"
+      },
+      {
+        "icono": "delantal",
+        "texto": "Delantales y guardapolvos"
+      },
+      {
+        "icono": "alta-visibilidad",
+        "texto": "Indumentaria de alta visibilidad"
+      },
+      {
+        "icono": "llama",
+        "texto": "Indumentaria ignífuga / especial[[Validar disponibilidad]]"
+      }
+    ]
+  },
+  "productos": {
+    "eyebrow": "Línea propia Diforza",
+    "titulo": "Productos destacados",
+    "items": [
+      {
+        "nombre": "Campera trucker Diforza",
+        "foto": "/indumentaria-de-trabajo/img/prod-campera-trucker-diforza.webp",
+        "nombreCompleto": "Campera trucker Diforza azul marino",
+        "variante": "Azul marino",
+        "masVendido": true,
+        "fotoAncho": "800",
+        "fotoAlto": "800"
+      },
+      {
+        "nombre": "Buzo polar 1/2 cierre Diforza",
+        "foto": "/indumentaria-de-trabajo/img/prod-buzo-polar-medio-cierre-diforza.webp",
+        "nombreCompleto": "Buzo polar 1/2 cierre Diforza",
+        "fotoAncho": "800",
+        "fotoAlto": "800"
+      },
+      {
+        "nombre": "Camisa clásica Diforza",
+        "foto": "/indumentaria-de-trabajo/img/prod-camisa-clasica-diforza.webp",
+        "nombreCompleto": "Camisa clásica Diforza beige",
+        "variante": "Beige",
+        "fotoAncho": "800",
+        "fotoAlto": "800"
+      },
+      {
+        "nombre": "Camisa de trabajo Diforza",
+        "foto": "/indumentaria-de-trabajo/img/prod-camisa-trabajo-diforza.webp",
+        "nombreCompleto": "Camisa de trabajo Diforza",
+        "fotoAncho": "800",
+        "fotoAlto": "800"
+      },
+      {
+        "nombre": "Chomba piqué Diforza",
+        "foto": "/indumentaria-de-trabajo/img/prod-chomba-pique-diforza.webp",
+        "nombreCompleto": "Chomba piqué Diforza azul marino",
+        "variante": "Azul marino",
+        "fotoAncho": "800",
+        "fotoAlto": "800"
+      },
+      {
+        "nombre": "Mameluco con reflectivos Diforza",
+        "foto": "/indumentaria-de-trabajo/img/prod-pantalon-refl-diforza.webp",
+        "nombreCompleto": "Mameluco con reflectivos Diforza azul marino",
+        "notaNombre": "Validar nombre",
+        "variante": "Azul marino",
+        "fotoAncho": "800",
+        "fotoAlto": "800"
+      },
+      {
+        "nombre": "Traje de lluvia Diforza",
+        "foto": "/indumentaria-de-trabajo/img/prod-traje-lluvia-diforza.webp",
+        "nombreCompleto": "Traje de lluvia Diforza amarillo",
+        "variante": "Amarillo",
+        "fotoAncho": "800",
+        "fotoAlto": "800"
+      },
+      {
+        "nombre": "Traje de bombero Diforza",
+        "foto": "/indumentaria-de-trabajo/img/prod-traje-bombero-diforza.webp",
+        "nombreCompleto": "Traje de bombero Diforza",
+        "notaNombre": "Validar norma",
+        "fotoAncho": "800",
+        "fotoAlto": "800"
+      }
+    ],
+    "specs": [
+      {
+        "nombre": "Tela",
+        "valor": "— [[Gramaje / composición]]"
+      },
+      {
+        "nombre": "Talles",
+        "valor": "— [[Validar]]"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "Si aplica"
+      }
+    ]
+  },
+  "diferenciales": {
+    "items": [
+      {
+        "icono": "escudo-check",
+        "titulo": "Línea propia Diforza",
+        "texto": "Camisas, pantalones, camperas, buzos y remeras de línea propia. Eso significa continuidad: no dependemos de que un tercero decida discontinuar el modelo que tu empresa ya estandarizó."
+      },
+      {
+        "icono": "talles-trazo2",
+        "titulo": "Talles reales y completos",
+        "texto": "El talle grande no es un problema a resolver, es parte del stock.[[Validar rango]]"
+      },
+      {
+        "icono": "estrella",
+        "titulo": "Personalización con tu logo",
+        "texto": "Bordado o estampado con la identidad de tu empresa.[[Validar proceso, mínimos, plazos]]"
+      },
+      {
+        "icono": "persona",
+        "titulo": "Un responsable de cuenta",
+        "texto": "Alguien que ya sabe qué prenda usa tu personal y en qué talles. Reponer es un mensaje, no una licitación."
+      }
+    ],
+    "problema": {
+      "titulo": "Equipar a 80 personas no es comprar 80 camisas",
+      "cta": "Pedir cotización por volumen",
+      "items": [
+        {
+          "pregunta": "Falta el talle justo",
+          "respuesta": "Siempre hay alguien que queda sin uniforme porque el proveedor no tiene su talle."
+        },
+        {
+          "pregunta": "El modelo se discontinúa",
+          "respuesta": "Comprás una vez, y a los seis meses ya no existe. Tu personal queda vestido de tres formas distintas."
+        },
+        {
+          "pregunta": "Dura tres lavados",
+          "respuesta": "La prenda barata se decolora, se descose y termina costando más."
+        },
+        {
+          "pregunta": "Reposiciones que tardan",
+          "respuesta": "Entra gente nueva y esperás semanas para vestirla."
+        }
+      ]
+    },
+    "testimonio": {
+      "resena": "Ariel Kuznicki",
+      "texto": "Diforza nos provee indumentaria y elementos de protección personal de altísima calidad. Diego maneja nuestra cuenta con mucho profesionalismo."
+    },
+    "resenas": [
+      "Ricardo Honaine",
+      "Estudio Casa Viva"
+    ]
+  },
+  "normativa": {
+    "titulo": "La ropa de trabajo <br/> también es un elemento <br/> de protección",
+    "bajada": "Según la actividad, la indumentaria tiene requisitos específicos: alta visibilidad, resistencia al fuego, protección contra salpicaduras. No es lo mismo vestir una planta de alimentos que una obra en ruta.[[Pendiente normas IRAM]]",
+    "cta": "Consultar qué corresponde a mi actividad",
+    "marcas": [
+      {
+        "icono": "alta-visibilidad",
+        "texto": "Alta visibilidad"
+      },
+      {
+        "icono": "llama",
+        "texto": "Resistencia al fuego"
+      },
+      {
+        "icono": "gota",
+        "texto": "Protección contra salpicaduras"
+      }
+    ]
+  },
+  "pasos": [
+    "Nos contás cuánta gente equipás y en qué actividad.",
+    "Te proponemos prenda, tela y talles; si querés, con muestra previa.[[Validar]]",
+    "Coordinamos la entrega y, si aplica, la personalización.",
+    "Quedás con la línea estandarizada y reposición ágil."
+  ],
+  "garantia": {
+    "titulo": "Garantía[[Borrador · Validar]]",
+    "items": [
+      {
+        "icono": "escudo-check-fino",
+        "texto": "Garantía por defectos de fabricación en todos nuestros productos."
+      },
+      {
+        "icono": "cambio",
+        "texto": "Cambios sin cargo por talle o defecto dentro de [X] días con el producto sin uso."
+      },
+      {
+        "icono": "caja",
+        "texto": "Stock permanente para reposición inmediata."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "pregunta": "¿Hacen talles especiales?",
+      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+    },
+    {
+      "pregunta": "¿Personalizan con el logo de la empresa? ¿Cuál es el mínimo?",
+      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+    },
+    {
+      "pregunta": "¿Puedo ver una muestra antes de comprar volumen?",
+      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+    },
+    {
+      "pregunta": "¿Aseguran continuidad del modelo para reponer?",
+      "respuesta": "Sí. Con continuidad de línea: la prenda que estandarizás hoy la vas a poder reponer el año que viene.[[Validar]]"
+    },
+    {
+      "pregunta": "¿Cuánto tardan en entregar un pedido de volumen?",
+      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+    },
+    {
+      "pregunta": "¿Hacen envíos al interior del país?",
+      "respuesta": "Sí, despachamos y distribuimos indumentaria y EPP a empresas e industrias en todo el territorio nacional."
+    },
+    {
+      "pregunta": "¿Puedo comprar por unidad?",
+      "respuesta": "Sí, en la tienda online."
+    }
+  ],
+  "cotizacion": {
+    "titulo": "Decinos cuánta gente tenés que vestir",
+    "respuesta": "Te respondemos en el día[[Validar]]",
+    "catalogo": "Descargar catálogo de indumentaria",
+    "landingId": "l2-indumentaria",
+    "formTitulo": "Pedí tu cotización por volumen",
+    "formBoton": "Pedir cotización por volumen",
+    "campoVariable": {
+      "tipo": "select",
+      "id": "f-personas",
+      "name": "personas_a_equipar",
+      "label": "Cantidad de personas a equipar",
+      "opciones": [
+        "1–10",
+        "11–50",
+        "51–200",
+        "+200"
+      ],
+      "error": "Contanos cuánta gente tenés que vestir."
+    }
+  }
+}

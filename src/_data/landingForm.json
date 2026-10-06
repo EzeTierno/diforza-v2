@@ -1,0 +1,21 @@
+{
+  "rubros": [
+    "Industria / Manufactura",
+    "Construcción y obra",
+    "Logística y transporte",
+    "Alimentos y bebidas",
+    "Laboratorio y farmacéutica",
+    "Química y petroquímica",
+    "Agro",
+    "Minería y energía",
+    "Servicios y mantenimiento",
+    "Sector público",
+    "Otro"
+  ],
+  "tamanos": [
+    "1–10",
+    "11–50",
+    "51–200",
+    "+200"
+  ]
+}

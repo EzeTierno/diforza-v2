@@ -1,0 +1,441 @@
+{
+  "hero": {
+    "modificador": "epp",
+    "fondo": {
+      "src": "/epp-proteccion-industrial/img/bg-hero-epp.webp",
+      "ancho": "1376",
+      "alto": "768",
+      "alt": "Operario con antiparras y guantes de seguridad trabajando en un torno"
+    },
+    "eyebrow": "EPP y protección industrial",
+    "acento": "siempre disponible",
+    "titulo": "EPP certificado para cada riesgo de tu planta,",
+    "bajada": "Protección craneal, auditiva, ocular, facial, respiratoria, de manos y anticaída. Con la documentación técnica que tus registros de SRT necesitan.[[Validar]]",
+    "beneficios": [
+      {
+        "icono": "escudo-check-fino",
+        "texto": "Certificación IRAM[[Validar alcance]]"
+      },
+      {
+        "icono": "apreton",
+        "texto": "Socios de Libus"
+      },
+      {
+        "icono": "caja",
+        "texto": "Stock permanente"
+      }
+    ],
+    "ctaPrincipal": "Pedir cotización",
+    "ctaCatalogo": "Descargar catálogo de EPP"
+  },
+  "confianza": {
+    "agrupado": true,
+    "texto": "Cada elemento se entrega con su ficha técnica y su respaldo de ensayo, para que lo sumes a tus registros de seguridad.",
+    "marcas": [
+      {
+        "etiqueta": "Socio estratégico oficial",
+        "src": "/img/brand-libus.webp",
+        "alt": "Libus",
+        "principal": true
+      },
+      {
+        "etiqueta": "Marca propia",
+        "src": "/img/brand-ziao.webp",
+        "alt": "ZIAO",
+        "chico": true
+      }
+    ],
+    "grupo": {
+      "etiqueta": "Marcas distribuidas",
+      "logos": [
+        {
+          "src": "/epp-proteccion-industrial/img/brand-glovex.webp",
+          "alt": "Glovex",
+          "chico": true
+        },
+        {
+          "src": "/img/brand-skiway.webp",
+          "alt": "Skiway",
+          "chico": true
+        }
+      ],
+      "palabras": [
+        "Gamisol[[Logo]]",
+        "W|S[[Logo]]"
+      ]
+    }
+  },
+  "lineas": {
+    "tituloAncho": true,
+    "titulo": "Cobertura completa, riesgo por riesgo",
+    "texto": "Un solo proveedor para todo el mapa de riesgos de tu planta.",
+    "cta": "Pedir cotización",
+    "items": [
+      {
+        "icono": "casco",
+        "titulo": "Craneal",
+        "descripcion": "Cascos, barbijos de casco, accesorios — línea Libus completa"
+      },
+      {
+        "icono": "auricular",
+        "titulo": "Auditiva",
+        "descripcion": "Endoaurales, de copa, con arnés"
+      },
+      {
+        "icono": "anteojos",
+        "titulo": "Ocular",
+        "descripcion": "Antiparras, lentes de seguridad, filtros"
+      },
+      {
+        "icono": "mascara-facial",
+        "titulo": "Facial",
+        "descripcion": "Máscaras, protectores faciales, soldadura"
+      },
+      {
+        "icono": "respirador",
+        "titulo": "Respiratoria",
+        "descripcion": "Semimáscaras, máscaras, filtros y descartables"
+      },
+      {
+        "icono": "mano",
+        "titulo": "Manos",
+        "descripcion": "Guantes según riesgo mecánico, químico, térmico y de corte"
+      },
+      {
+        "icono": "arnes",
+        "titulo": "Anticaída",
+        "descripcion": "Arneses, cabos de vida, líneas y accesorios"
+      },
+      {
+        "icono": "cono",
+        "titulo": "Vialidad y señalización",
+        "descripcion": "Alta visibilidad, conos, señalización"
+      }
+    ]
+  },
+  "productos": {
+    "eyebrow": "El EPP que se consume todos los meses",
+    "titulo": "Productos destacados",
+    "items": [
+      {
+        "nombre": "Anteojo Argon",
+        "foto": "/epp-proteccion-industrial/img/prod-anteojo-argon.webp",
+        "nombreCompleto": "Anteojo Argon Transparente HC",
+        "variante": "Transparente HC",
+        "masVendido": true,
+        "categoria": "Ocular",
+        "specs": [
+          {
+            "nombre": "Marca",
+            "valor": "Libus"
+          },
+          {
+            "nombre": "Norma",
+            "valor": "— [[Pendiente norma]]",
+            "norma": true
+          }
+        ]
+      },
+      {
+        "nombre": "Anteojo Eco-line",
+        "foto": "/epp-proteccion-industrial/img/prod-anteojo-ecoline.webp",
+        "nombreCompleto": "Anteojo Eco-line Transparente HC",
+        "variante": "Transparente HC",
+        "categoria": "Ocular",
+        "specs": [
+          {
+            "nombre": "Marca",
+            "valor": "Libus"
+          },
+          {
+            "nombre": "Norma",
+            "valor": "— [[Pendiente norma]]",
+            "norma": true
+          }
+        ]
+      },
+      {
+        "nombre": "Protector auditivo Quantum",
+        "foto": "/epp-proteccion-industrial/img/prod-auditivo-quantum.webp",
+        "nombreCompleto": "Protector auditivo Quantum",
+        "categoria": "Auditiva",
+        "specs": [
+          {
+            "nombre": "Marca",
+            "valor": "Libus"
+          },
+          {
+            "nombre": "Norma",
+            "valor": "— [[Pendiente norma]]",
+            "norma": true
+          }
+        ]
+      },
+      {
+        "nombre": "Protector auditivo Alternative",
+        "foto": "/epp-proteccion-industrial/img/prod-protector-auditivo-alternative.webp",
+        "nombreCompleto": "Protector auditivo Alternative Vincha",
+        "variante": "Vincha",
+        "categoria": "Auditiva",
+        "specs": [
+          {
+            "nombre": "Marca",
+            "valor": "—[[Validar marca]]"
+          },
+          {
+            "nombre": "Norma",
+            "valor": "— [[Pendiente norma]]",
+            "norma": true
+          }
+        ]
+      },
+      {
+        "nombre": "Casco Milenium",
+        "foto": "/epp-proteccion-industrial/img/prod-casco-milenium.webp",
+        "nombreCompleto": "Casco Milenium Amarillo y blanco",
+        "variante": "Amarillo y blanco",
+        "categoria": "Craneal",
+        "specs": [
+          {
+            "nombre": "Marca",
+            "valor": "Libus"
+          },
+          {
+            "nombre": "Norma",
+            "valor": "— [[Pendiente norma]]",
+            "norma": true
+          }
+        ]
+      },
+      {
+        "nombre": "Arnés a cremallera plástico",
+        "foto": "/epp-proteccion-industrial/img/prod-arnes-a-cremallera-plastico.webp",
+        "nombreCompleto": "Arnés a cremallera plástico Para casco",
+        "variante": "Para casco",
+        "categoria": "Craneal",
+        "specs": [
+          {
+            "nombre": "Marca",
+            "valor": "Libus"
+          },
+          {
+            "nombre": "Norma",
+            "valor": "— [[Pendiente norma]]",
+            "norma": true
+          }
+        ]
+      },
+      {
+        "nombre": "Arnés completo con toma frontal y faja lumbar",
+        "foto": "/epp-proteccion-industrial/img/prod-arnes-completo.webp",
+        "nombreCompleto": "Arnés completo con toma frontal y faja lumbar",
+        "categoria": "Anticaída",
+        "specs": [
+          {
+            "nombre": "Marca",
+            "valor": "Skiway[[Validar marca]]"
+          },
+          {
+            "nombre": "Norma",
+            "valor": "— [[Pendiente norma]]",
+            "norma": true
+          }
+        ]
+      },
+      {
+        "nombre": "Respirador desechable 522",
+        "foto": "/epp-proteccion-industrial/img/prod-respirador.webp",
+        "nombreCompleto": "Respirador desechable 522 FFP2 NR D",
+        "variante": "FFP2 NR D",
+        "fotoProvisoria": "Foto provisoria",
+        "categoria": "Respiratoria",
+        "specs": [
+          {
+            "nombre": "Marca",
+            "valor": "—[[Validar marca]]"
+          },
+          {
+            "nombre": "Norma",
+            "valor": "— [[Pendiente norma]]",
+            "norma": true
+          }
+        ]
+      }
+    ]
+  },
+  "diferenciales": {
+    "items": [
+      {
+        "icono": "apreton-trazo2",
+        "titulo": "Socio estratégico oficial de Libus",
+        "texto": "Libus es el fabricante de protección craneal más importante de la región. Somos socio estratégico oficial: acceso a línea completa, respaldo de fábrica y continuidad de suministro."
+      },
+      {
+        "icono": "escudo-check",
+        "titulo": "ZIAO, marca propia",
+        "texto": "Nuestra propia línea de EPP. Control sobre calidad, stock y precio.[[Pendiente alcance de categorías ZIAO]]"
+      },
+      {
+        "icono": "persona",
+        "titulo": "Asesoramiento sobre el riesgo, no sobre el catálogo",
+        "texto": "Te ayudamos a definir qué elemento corresponde a cada puesto según su riesgo real. La recomendación primero, el producto después."
+      },
+      {
+        "icono": "caja-trazo2",
+        "titulo": "Stock permanente",
+        "texto": "Mantenemos stock propio de todas las líneas. Cuando la urgencia aparece, no empieza el “te lo pido a fábrica”."
+      }
+    ],
+    "problema": {
+      "titulo": "El riesgo no es solo el accidente. También es la multa.",
+      "cta": "Pedir cotización",
+      "items": [
+        {
+          "pregunta": "El EPP sin certificar no te cubre",
+          "respuesta": "Si el elemento no cumple la norma, ante una inspección o un siniestro es como si no lo hubieras entregado."
+        },
+        {
+          "pregunta": "Nadie te dice cuál corresponde",
+          "respuesta": "Te venden lo que hay en stock, no lo que el riesgo del puesto exige. La decisión técnica queda sobre tus hombros."
+        },
+        {
+          "pregunta": "Falta un elemento y para el sector",
+          "respuesta": "Sin protección respiratoria disponible, ese trabajo no arranca."
+        },
+        {
+          "pregunta": "Papeles que no aparecen",
+          "respuesta": "Llega la auditoría y no tenés la ficha técnica del elemento que entregaste hace ocho meses."
+        }
+      ]
+    },
+    "testimonio": {
+      "resena": "Ricardo Honaine",
+      "texto": "Excelente atención y asesoramiento. En Diforza encontré todo lo que necesitaba en elementos de seguridad, con productos de primera calidad y entregas rápidas."
+    },
+    "resenas": [
+      "Ariel Kuznicki",
+      "Estudio Casa Viva"
+    ]
+  },
+  "normativa": {
+    "titulo": "Tu empresa <br/> protegida y en regla",
+    "bajada": "La normativa argentina obliga a proveer EPP certificado y a documentar su entrega. La responsabilidad es de la empresa y de quien firma como responsable de seguridad. Por eso cada elemento que entregamos viene con su respaldo documental.[[Validar]]",
+    "cta": "Consultar por la normativa de mi industria",
+    "marcas": [
+      {
+        "icono": "documento",
+        "texto": "Ficha<br/>técnica"
+      },
+      {
+        "icono": "probeta",
+        "texto": "Respaldo<br/>de ensayo"
+      },
+      {
+        "icono": "portapapeles",
+        "texto": "Documentación<br/>para tus registros"
+      }
+    ]
+  },
+  "pasos": [
+    "Nos contás qué riesgos tiene cada puesto.",
+    "Armamos la propuesta de EPP por puesto, con la norma que cumple cada elemento.",
+    "Cotizamos y coordinamos entrega.[[Validar plazo]]",
+    "Quedás con la documentación para tus registros y una cuenta para reponer."
+  ],
+  "garantia": {
+    "titulo": "Garantía[[Borrador · Validar]]",
+    "items": [
+      {
+        "icono": "escudo-check-fino",
+        "texto": "Garantía por defectos de fabricación en todos nuestros productos."
+      },
+      {
+        "icono": "cambio",
+        "texto": "Cambios sin cargo por talle o defecto dentro de [X] días con el producto sin uso."
+      },
+      {
+        "icono": "caja",
+        "texto": "Stock permanente para reposición inmediata."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "pregunta": "¿Cómo sé que el EPP está certificado?",
+      "respuesta": "Respuesta a confirmar con Diforza.[[Validar]]"
+    },
+    {
+      "pregunta": "¿Me entregan ficha técnica y certificado con la compra?",
+      "respuesta": "Respuesta a confirmar con Diforza.[[Validar]]"
+    },
+    {
+      "pregunta": "¿Me ayudan a definir qué EPP corresponde a cada puesto?",
+      "respuesta": "Sí. Te ayudamos a definir qué elemento corresponde a cada puesto según su riesgo real. La recomendación primero, el producto después."
+    },
+    {
+      "pregunta": "¿Trabajan con empresas de cualquier tamaño?",
+      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+    },
+    {
+      "pregunta": "¿Cuánto tardan en entregar un pedido urgente?",
+      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+    },
+    {
+      "pregunta": "¿Tienen recambio de filtros y consumibles con continuidad?",
+      "respuesta": "Respuesta a confirmar con Diforza.[[Validar]]"
+    },
+    {
+      "pregunta": "¿Puedo comprar por unidad?",
+      "respuesta": "Sí, en la tienda online."
+    }
+  ],
+  "cotizacion": {
+    "titulo": "Contanos qué riesgos tenés que cubrir",
+    "respuesta": "Te respondemos en el día[[Validar]]",
+    "catalogo": "Descargar catálogo de EPP",
+    "landingId": "l3-epp",
+    "formTitulo": "Pedí tu cotización",
+    "formBoton": "Pedir cotización",
+    "campoVariable": {
+      "tipo": "chips",
+      "name": "categorias_epp",
+      "legend": "Categorías de EPP que necesitás",
+      "ayuda": "Podés elegir varias",
+      "opciones": [
+        {
+          "valor": "Craneal",
+          "cat": "craneal"
+        },
+        {
+          "valor": "Auditiva",
+          "cat": "auditiva"
+        },
+        {
+          "valor": "Ocular",
+          "cat": "ocular"
+        },
+        {
+          "valor": "Facial",
+          "cat": "facial"
+        },
+        {
+          "valor": "Respiratoria",
+          "cat": "respiratoria"
+        },
+        {
+          "valor": "Manos",
+          "cat": "manos"
+        },
+        {
+          "valor": "Anticaída",
+          "cat": "anticaida"
+        },
+        {
+          "valor": "Vialidad",
+          "cat": "vialidad"
+        }
+      ],
+      "error": "Elegí al menos una categoría."
+    }
+  }
+}

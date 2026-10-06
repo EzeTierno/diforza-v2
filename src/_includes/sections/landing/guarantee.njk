@@ -1,0 +1,15 @@
+{#- Garantía (BORRADOR: no publicar hasta que Diego valide). Datos: L.garantia -#}
+{%- set G = L.garantia %}
+<section class="guarantee" data-draft="true">
+  <div class="guarantee__inner reveal">
+    <h2 class="guarantee__title">{{ G.titulo | rich | safe }}</h2>
+    <ul class="guarantee__list">
+      {%- for it in G.items %}
+      <li>
+        {{ icons[it.icono] | safe }}
+        <span>{{ it.texto | rich | safe }}</span>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

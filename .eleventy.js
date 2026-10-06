@@ -39,6 +39,11 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addWatchTarget("src/assets/");
 
+  // Textos de los JSON de landings: [[texto]] → marca de placeholder [VALIDAR]/[PENDIENTE]
+  eleventyConfig.addFilter("rich", (s) =>
+    s == null ? "" : String(s).replace(/\[\[(.+?)\]\]/g, '<span class="placeholder">$1</span>')
+  );
+
   return {
     dir: {
       input: "src",

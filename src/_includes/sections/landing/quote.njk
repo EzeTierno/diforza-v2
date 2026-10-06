@@ -1,0 +1,156 @@
+{#- Cotización (#contacto): copy + WhatsApp + catálogo + formulario. Datos: L.cotizacion; waText y catalogName del front matter -#}
+{%- set Q = L.cotizacion %}
+<section class="quote theme-dark" id="contacto">
+  <div class="quote__inner">
+    <div class="quote__copy reveal">
+      <h2 class="section-title">{{ Q.titulo | rich | safe }}</h2>
+      <p class="quote__reply">{{ Q.respuesta | rich | safe }}</p>
+
+      <figure class="quote__mini">
+        <p>“Diforza nos provee indumentaria y elementos de protección personal de altísima calidad.”</p>
+        <cite>Ariel Kuznicki <span>· Google Reviews</span></cite>
+      </figure>
+
+      <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ waText | urlencode }}" class="btn btn--whatsapp" data-js="wa" target="_blank" rel="noopener">{{ icons['ui-whatsapp'] | safe }} Escribinos por WhatsApp</a>
+
+      <div class="catalog" id="catalogo">
+        <button type="button" class="catalog__toggle" data-js="catalog-toggle" aria-expanded="false" aria-controls="catalogPanel">
+          <span>{{ Q.catalogo }}<small>Te lo mandamos también por email.</small></span>
+          {{ icons['ui-chevron'] | safe }}
+        </button>
+        <div class="catalog__panel" id="catalogPanel" hidden>
+          <form id="form-catalogo" data-js="lead-form" novalidate>
+            <input type="hidden" name="tipo_lead" value="catalogo">
+            <input type="hidden" name="landing" value="{{ Q.landingId }}">
+            <div class="hp-field" aria-hidden="true"><label>No completar<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+            <div class="lead-form__grid">
+              <div class="field">
+                <label for="c-nombre">Nombre y apellido <span class="field__required">*</span></label>
+                <input id="c-nombre" name="nombre" type="text" autocomplete="name" required>
+                <span class="field__error">Ingresá tu nombre.</span>
+              </div>
+              <div class="field">
+                <label for="c-empresa">Empresa <span class="field__required">*</span></label>
+                <input id="c-empresa" name="empresa" type="text" autocomplete="organization" required>
+                <span class="field__error">Ingresá el nombre de tu empresa.</span>
+              </div>
+              <div class="field">
+                <label for="c-email">Email <span class="field__required">*</span></label>
+                <input id="c-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+                <span class="field__error">Ingresá un email válido.</span>
+              </div>
+              <div class="field">
+                <label for="c-tel">Teléfono / WhatsApp <span class="field__required">*</span></label>
+                <input id="c-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required>
+                <span class="field__error">Ingresá un teléfono de contacto.</span>
+              </div>
+              <div class="field field--full">
+                <label class="check"><input type="checkbox" name="consentimiento" required> <span>Acepto que Diforza me contacte y la <a href="#">política de privacidad</a>.</span></label>
+                <span class="field__error">Necesitamos tu consentimiento para enviarte el catálogo.</span>
+              </div>
+              <div class="field--full">
+                <button type="submit" class="btn btn--primary lead-form__submit">{{ icons['ui-descarga'] | safe }} Descargar catálogo</button>
+                <p class="lead-form__status" data-js="form-status" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="lead-form reveal reveal--1" id="form-cotizacion-wrap">
+      <form id="form-cotizacion" data-js="lead-form" novalidate>
+        <p class="lead-form__title">{{ Q.formTitulo | rich | safe }}</p>
+        <p class="lead-form__note">Los campos con <span style="color:var(--orange)">*</span> son obligatorios.</p>
+
+        <div class="quote-product" id="quoting" hidden>
+          <span>Estás cotizando: <strong id="quotingName"></strong></span>
+          <button type="button" id="quotingClear">Quitar</button>
+        </div>
+
+        <input type="hidden" name="producto_interes" id="productoInteres" value="">
+        <input type="hidden" name="tipo_lead" value="cotizacion">
+        <input type="hidden" name="landing" value="{{ Q.landingId }}">
+        <div class="hp-field" aria-hidden="true"><label>No completar<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="lead-form__grid">
+          <div class="field">
+            <label for="f-nombre">Nombre y apellido <span class="field__required">*</span></label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+            <span class="field__error">Ingresá tu nombre.</span>
+          </div>
+          <div class="field">
+            <label for="f-empresa">Empresa <span class="field__required">*</span></label>
+            <input id="f-empresa" name="empresa" type="text" autocomplete="organization" required>
+            <span class="field__error">Ingresá el nombre de tu empresa.</span>
+          </div>
+          <div class="field">
+            <label for="f-email">Email corporativo <span class="field__required">*</span></label>
+            <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+            <span class="field__error">Ingresá un email válido.</span>
+          </div>
+          <div class="field">
+            <label for="f-tel">Teléfono / WhatsApp <span class="field__required">*</span></label>
+            <input id="f-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required>
+            <span class="field__error">Ingresá un teléfono de contacto.</span>
+          </div>
+          <div class="field">
+            <label for="f-rubro">Rubro / industria <span class="field__required">*</span></label>
+            <select id="f-rubro" name="rubro" required>
+              <option value="">Elegí una opción</option>
+              {%- for r in landingForm.rubros %}
+              <option>{{ r }}</option>
+              {%- endfor %}
+            </select>
+            <span class="field__error">Elegí el rubro de tu empresa.</span>
+          </div>
+          <div class="field">
+            <label for="f-tamano">Tamaño de la empresa <span class="field__required">*</span></label>
+            <select id="f-tamano" name="tamano_empresa" required>
+              <option value="">Elegí una opción</option>
+              {%- for t in landingForm.tamanos %}
+              <option>{{ t }}</option>
+              {%- endfor %}
+            </select>
+            <span class="field__error">Elegí el tamaño de tu empresa.</span>
+          </div>
+          {%- set V = Q.campoVariable %}
+          {%- if V.tipo == 'select' %}
+          <div class="field field--full">
+            <label for="{{ V.id }}">{{ V.label }} <span class="field__required">*</span></label>
+            <select id="{{ V.id }}" name="{{ V.name }}" required>
+              <option value="">Elegí una opción</option>
+              {%- for o in V.opciones %}
+              <option>{{ o }}</option>
+              {%- endfor %}
+            </select>
+            <span class="field__error">{{ V.error }}</span>
+          </div>
+          {%- elif V.tipo == 'chips' %}
+          <fieldset class="field field--full field--group" data-required-group="{{ V.name }}">
+            <legend>{{ V.legend }} <span class="field__required">*</span> <small>{{ V.ayuda }}</small></legend>
+            <div class="chips">
+              {%- for o in V.opciones %}
+              <label class="chip"><input type="checkbox" name="{{ V.name }}" value="{{ o.valor }}" data-cat="{{ o.cat }}"><span>{{ o.valor }}</span></label>
+              {%- endfor %}
+            </div>
+            <span class="field__error">{{ V.error }}</span>
+          </fieldset>
+          {%- endif %}
+          <div class="field field--full">
+            <label for="f-mensaje">Contanos qué necesitás</label>
+            <textarea id="f-mensaje" name="mensaje" rows="3"></textarea>
+          </div>
+          <div class="field field--full">
+            <label class="check"><input type="checkbox" name="consentimiento" required> <span>Acepto que Diforza me contacte y la <a href="#">política de privacidad</a>.</span></label>
+            <span class="field__error">Necesitamos tu consentimiento para contactarte.</span>
+          </div>
+          <div class="field--full">
+            <button type="submit" class="btn btn--primary lead-form__submit">{{ Q.formBoton }} {{ icons['ui-flecha'] | safe }}</button>
+            <p class="lead-form__status" data-js="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

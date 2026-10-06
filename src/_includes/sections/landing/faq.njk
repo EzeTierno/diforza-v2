@@ -1,0 +1,14 @@
+{#- Preguntas frecuentes. Datos: L.faq -#}
+<section class="faq faq--landing">
+  <div class="faq__inner reveal">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="accordion">
+      {%- for q in L.faq %}
+      <details{% if loop.first %} open{% endif %}>
+        <summary>{{ q.pregunta }} {{ icons['ui-chevron'] | safe }}</summary>
+        <p class="accordion__panel">{{ q.respuesta | rich | safe }}</p>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

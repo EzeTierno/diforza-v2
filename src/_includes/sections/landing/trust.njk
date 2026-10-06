@@ -1,0 +1,31 @@
+{#- Franja de confianza / marcas. Datos: L.confianza (agrupado: true → variante con grupo de marcas distribuidas) -#}
+{%- set T = L.confianza %}
+<section class="trust{% if T.agrupado %} trust--grouped{% endif %}">
+  <div class="trust__inner reveal">
+    <p class="trust__text">{{ T.texto | rich | safe }}</p>
+    <div class="trust__brands">
+      {%- for m in T.marcas %}
+      <div class="trust__brand{% if m.principal %} trust__brand--main{% endif %}">
+        <p class="trust__label">{{ m.etiqueta | rich | safe }}</p>
+        <img src="{{ m.src }}" alt="{{ m.alt }}"{% if m.chico %} class="is-sm"{% endif %}>
+        {%- if m.sub is defined %}
+        <p class="trust__sub">{{ m.sub | rich | safe }}</p>
+        {%- endif %}
+      </div>
+      {%- endfor %}
+      {%- if T.grupo %}
+      <div class="trust__brand trust__brand--group">
+        <p class="trust__label">{{ T.grupo.etiqueta | rich | safe }}</p>
+        <div class="trust__logos">
+          {%- for g in T.grupo.logos %}
+          <img src="{{ g.src }}" alt="{{ g.alt }}"{% if g.chico %} class="is-sm"{% endif %}>
+          {%- endfor %}
+          {%- for w in T.grupo.palabras %}
+          <span class="trust__word">{{ w | rich | safe }}</span>
+          {%- endfor %}
+        </div>
+      </div>
+      {%- endif %}
+    </div>
+  </div>
+</section>
