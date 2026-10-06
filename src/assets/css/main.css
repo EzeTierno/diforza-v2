@@ -1,0 +1,14 @@
+/* ==========================================================================
+   main.css — punto de entrada del CSS compartido (lo compila Lightning CSS)
+   Orden de capas: las posteriores ganan a las anteriores sin importar la
+   especificidad. El código sin capa (legacy) gana a todas las capas: se
+   va vaciando a medida que avanza el refactor (fase B).
+   ========================================================================== */
+
+@layer reset, tokens, base, layout, components, sections, utilities;
+
+@import "settings/media.css";
+@import "settings/tokens.css" layer(tokens);
+
+/* Legacy (fase A): CSS original sin dividir */
+@import "legacy/base.css";

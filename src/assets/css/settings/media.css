@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Breakpoints con nombre (Lightning CSS los compila a px)
+   Uso: @media (--lg) { … }   — mobile-first: la regla sin media es mobile.
+   Usar SOLO estos. Ver _dev/notas/resumen_sesion_breakpoints_v2.md
+   ========================================================================== */
+
+@custom-media --sm (min-width: 480px); /* phones grandes: solo gutter / ajustes menores */
+@custom-media --md (min-width: 768px); /* tablet: arrancan layouts de 2+ columnas */
+@custom-media --lg (min-width: 1024px); /* notebook 13-14" */
+@custom-media --xl (min-width: 1280px); /* notebook 15-16" / desktop chico */
+@custom-media --2xl (min-width: 1440px); /* desktop: el shell llega a su máximo */
+@custom-media --3xl (min-width: 1700px); /* desktop grande: solo escala tipográfica */
+
+/* Excepciones documentadas (no usar fuera de estos casos) */
+@custom-media --xs-only (max-width: 374px); /* mobile chico: H1 y CTA corto del navbar */
+@custom-media --below-sm (max-width: 599px); /* foto de hero mobile (<picture>) */
+@custom-media --below-md (max-width: 767px); /* mostrar/ocultar piezas puntuales */
+@custom-media --below-lg (max-width: 1023px); /* mostrar/ocultar piezas puntuales */
+@custom-media --lg-only (min-width: 1024px) and (max-width: 1279px); /* ajustes de notebook 13-14" */
+@custom-media --lg-to-2xl (min-width: 1024px) and (max-width: 1439px); /* copy del hero vs operario */
+@custom-media --short-screen (min-width: 1024px) and (max-height: 820px); /* compactar header en notebooks bajas */

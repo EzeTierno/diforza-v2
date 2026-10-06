@@ -5,9 +5,14 @@ Sitio estático generado con **[11ty (Eleventy)](https://www.11ty.dev/)**. El HT
 ## Cómo trabajar
 
 ```bash
-npm install      # una sola vez (o cuando cambie package.json)
-npm start        # servidor local con recarga en vivo → http://localhost:8080
-npm run build    # genera _site/ (lo que se publica)
+npm install                 # una sola vez (o cuando cambie package.json)
+npx playwright install chromium   # una sola vez: navegador para el test visual
+npm start                   # servidor local con recarga en vivo → http://localhost:8080
+npm run build               # genera _site/ (lo que se publica, CSS minificado)
+npm run lint:css            # revisa las convenciones del CSS (Stylelint)
+npm run format              # formatea el CSS (Prettier)
+npm run test:visual:baseline  # captura el sitio actual como referencia (antes de un cambio)
+npm run test:visual           # compara contra la referencia: 0 píxeles distintos = OK
 ```
 
 > No uses Live Server para este proyecto: mostraría los archivos fuente, no el sitio armado.
@@ -21,8 +26,10 @@ src/
 │  ├─ layouts/base.njk        ← esqueleto de TODAS las páginas (<head>, header, footer, scripts)
 │  └─ partials/               ← header, footer, botón flotante de WhatsApp, fuentes, íconos
 ├─ assets/
-│  ├─ css/base.css            ← estilos compartidos (home + todas las landings)
-│  ├─ css/l2.css, l3.css      ← estilos propios de cada landing
+│  ├─ css/main.css            ← punto de entrada del CSS (lo compila Lightning CSS)
+│  ├─ css/settings/           ← tokens (variables) y breakpoints con nombre (@media (--lg))
+│  ├─ css/legacy/             ← CSS original en proceso de refactor (no agregar código acá)
+│  ├─ css/l2.css, l3.css      ← estilos propios de cada landing (se unifican en la fase B)
 │  └─ js/main.js, l2.js, l3.js
 ├─ img/                       ← imágenes compartidas
 ├─ index.njk                  ← home  →  /
@@ -40,7 +47,7 @@ _site/                        ← salida del build. NO se edita ni se sube a git
 - **Número de WhatsApp:** `src/_data/site.json` → `whatsapp.number`. Lo usan los links, el botón flotante y el JS de "Consultar producto".
 - **Nueva landing:** crear `src/<slug>/index.njk` con el front matter (`layout`, `title`, `description`, `pageCss`, `pageJs`, `waText`), su CSS en `src/assets/css/` y sus imágenes en `src/<slug>/img/`. Sumarla al footer en `site.json`.
 - Rutas de imágenes y assets siempre **absolutas** (`/img/...`, `/<slug>/img/...`, `/assets/...`).
-- Breakpoints y tokens: ver `_dev/notas/resumen_sesion_breakpoints_v2.md` antes de tocar media queries.
+- **CSS:** refactor en curso según `_dev/prompts/refactor-css.md`. Regla dura: cero cambio visual (verificar con `npm run test:visual`). Breakpoints: usar los nombres de `src/assets/css/settings/media.css`.
 - Lo que no va al sitio (PSD, originales, scripts, notas) va en `_dev/`.
 
 ## Publicación (Cloudflare Pages)

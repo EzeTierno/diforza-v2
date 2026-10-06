@@ -1,11 +1,43 @@
 // Configuración de 11ty — sitio Diforza
 // Fuente: src/  ·  Salida (lo que se publica en Cloudflare Pages): _site/
+const path = require("node:path");
+const fs = require("node:fs");
+const browserslist = require("browserslist");
+const { bundleAsync, browserslistToTargets } = require("lightningcss");
+
+const CSS_DIR = path.join("src", "assets", "css");
+const targets = browserslistToTargets(browserslist());
+
 module.exports = function (eleventyConfig) {
   // Archivos que se copian tal cual (no se procesan como plantillas)
-  eleventyConfig.addPassthroughCopy("src/assets");   // CSS y JS
-  eleventyConfig.addPassthroughCopy("src/img");      // imágenes compartidas
-  eleventyConfig.addPassthroughCopy("src/*/img");    // imágenes propias de cada landing
+  eleventyConfig.addPassthroughCopy("src/assets/js");
+  eleventyConfig.addPassthroughCopy("src/img");     // imágenes compartidas
+  eleventyConfig.addPassthroughCopy("src/*/img");   // imágenes propias de cada landing
 
+  // ---- CSS con Lightning CSS ----
+  // Solo se compilan los archivos que están directamente en src/assets/css/
+  // (puntos de entrada: main.css, l2.css, l3.css). Los de las subcarpetas
+  // son parciales: se incluyen con @import y no se publican sueltos.
+  eleventyConfig.addTemplateFormats("css");
+  eleventyConfig.addExtension("css", {
+    outputFileExtension: "css",
+    compile: async function (_content, inputPath) {
+      if (path.dirname(path.normalize(inputPath)) !== CSS_DIR) return; // parcial → no se publica
+      const minify = process.env.ELEVENTY_RUN_MODE === "build";
+      return async () => {
+        const { code } = await bundleAsync({
+          filename: inputPath,
+          minify,
+          targets,
+          drafts: { customMedia: true },
+          resolver: {
+            read: (file) => fs.readFileSync(file, "utf8"),
+          },
+        });
+        return code.toString();
+      };
+    },
+  });
   eleventyConfig.addWatchTarget("src/assets/");
 
   return {

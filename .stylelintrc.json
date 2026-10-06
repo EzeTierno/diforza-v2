@@ -1,0 +1,155 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "defaultSeverity": "warning",
+  "ignoreFiles": [
+    "src/assets/css/legacy/**",
+    "src/assets/css/l2.css",
+    "src/assets/css/l3.css",
+    "_site/**"
+  ],
+  "rules": {
+    "color-no-hex": true,
+    "function-disallowed-list": [
+      "rgba",
+      "hsla"
+    ],
+    "declaration-no-important": true,
+    "selector-max-id": 0,
+    "selector-max-specificity": "0,3,0",
+    "max-nesting-depth": 2,
+    "selector-class-pattern": [
+      "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+      {
+        "message": "Usar BEM en minúsculas: bloque__elemento--modificador"
+      }
+    ],
+    "custom-property-pattern": null,
+    "declaration-property-value-disallowed-list": {
+      "/^(font-size|line-height|letter-spacing|margin|margin-.*|padding|padding-.*|gap|row-gap|column-gap)$/": [
+        "/^-?\\d*\\.?\\d+px$/"
+      ],
+      "z-index": [
+        "/^-?\\d+$/"
+      ]
+    },
+    "media-feature-range-notation": null,
+    "import-notation": "string",
+    "order/properties-order": [
+      [
+        "position",
+        "inset",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "z-index",
+        "display",
+        "flex",
+        "flex-direction",
+        "flex-wrap",
+        "flex-grow",
+        "flex-shrink",
+        "flex-basis",
+        "grid",
+        "grid-template",
+        "grid-template-columns",
+        "grid-template-rows",
+        "grid-template-areas",
+        "grid-column",
+        "grid-row",
+        "gap",
+        "row-gap",
+        "column-gap",
+        "place-items",
+        "place-content",
+        "align-items",
+        "align-content",
+        "align-self",
+        "justify-items",
+        "justify-content",
+        "justify-self",
+        "order",
+        "box-sizing",
+        "width",
+        "min-width",
+        "max-width",
+        "height",
+        "min-height",
+        "max-height",
+        "aspect-ratio",
+        "margin",
+        "margin-block",
+        "margin-inline",
+        "padding",
+        "padding-block",
+        "padding-inline",
+        "overflow",
+        "overflow-x",
+        "overflow-y",
+        "font",
+        "font-family",
+        "font-size",
+        "font-weight",
+        "font-style",
+        "line-height",
+        "letter-spacing",
+        "text-align",
+        "text-transform",
+        "text-decoration",
+        "white-space",
+        "color",
+        "background",
+        "background-color",
+        "background-image",
+        "background-size",
+        "background-position",
+        "background-repeat",
+        "border",
+        "border-width",
+        "border-style",
+        "border-color",
+        "border-radius",
+        "box-shadow",
+        "opacity",
+        "filter",
+        "transform",
+        "transition",
+        "animation"
+      ],
+      {
+        "unspecified": "bottomAlphabetical"
+      }
+    ],
+    "custom-media-pattern": [
+      "^[a-z0-9]+(-[a-z0-9]+)*$",
+      {
+        "message": "Nombre de breakpoint en minúsculas (ej. --lg, --2xl)"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/assets/css/settings/**"
+      ],
+      "rules": {
+        "color-no-hex": null,
+        "function-disallowed-list": null,
+        "declaration-property-value-disallowed-list": null
+      }
+    },
+    {
+      "files": [
+        "src/assets/css/utilities.css"
+      ],
+      "rules": {
+        "declaration-no-important": null
+      }
+    }
+  ]
+}

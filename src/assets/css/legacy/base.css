@@ -1,60 +1,8 @@
-/* Base compartida con la v1 (preview_html/index.html): variables, reset,
-   header/nav, botones, footer y sistema de animaciones (scroll-reveal).
-   Google Fonts es solo para esta revisión rápida; en el proyecto final
-   se usa Montserrat autoalojada (carpeta /fonts, ya copiada acá). */
-
-:root{
-  --navy:#003568;
-  --orange:#ff7e34;
-  --gray:#727272;
-
-  /* ---- SISTEMA DE LAYOUT ----------------------------------------------
-     Breakpoints canonicos del proyecto (usar SOLO estos):
-       <768      mobile
-       >=768     tablet
-       >=1024    notebook 13-14"
-       >=1280    notebook 15-16" / desktop chico
-       >=1440    desktop
-       >=1700    desktop grande (solo escala tipografica)
-     --gutter : margen de seguridad lateral (nunca se toca el contenido)
-     --shell  : ancho maximo del contenido (caja, gutters incluidos)
-     --pad    : padding lateral real = gutter + centrado del shell.
-                Cualquier sector a ancho completo usa `padding: X var(--pad)`
-                y queda alineado con todos los demas.
-     --nav-h  : alto real del header, lo mide el JS (fallback abajo).
-     --hero-gap: aire minimo garantizado entre el navbar y el contenido. */
-  --gutter: 20px;
-  --shell: 1440px;
-  --pad: max(var(--gutter), calc((100% - var(--shell)) / 2 + var(--gutter)));
-  --nav-h: 78px;
-  --hero-gap: 24px;
-  --hero-min: 560px;
-
-  --h1-size: 34px;
-  --h1-lh: 38px;
-  --lead-size: 16px;
-  --lead-lh: 26px;
-}
-@media(min-width:480px){
-  :root{ --gutter:24px; }
-}
-@media(min-width:768px){
-  :root{ --gutter:40px; --hero-gap:32px; --hero-min:620px;
-         --h1-size:46px; --h1-lh:50px; --lead-size:17px; --lead-lh:28px; }
-}
-@media(min-width:1024px){
-  :root{ --gutter:48px; --hero-gap:36px; --hero-min:640px; }
-}
-@media(min-width:1280px){
-  :root{ --gutter:56px; --hero-gap:40px; --hero-min:660px;
-         --h1-size:56px; --h1-lh:62px; --lead-size:17px; --lead-lh:29px; }
-}
-@media(min-width:1440px){
-  :root{ --gutter:64px; }
-}
-@media(min-width:1700px){
-  :root{ --h1-size:70px; --h1-lh:74px; --lead-size:18px; --lead-lh:31px; }
-}
+/* ==========================================================================
+   LEGACY — CSS compartido original (home + landings), pendiente de dividir
+   en base/, layout/, components/ y sections/ (fase B del refactor).
+   No agregar código nuevo acá.
+   ========================================================================== */
 
 *,*::before,*::after{box-sizing:border-box;}
 html{overflow-x:hidden;}

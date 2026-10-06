@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Tokens — variables globales del sitio
+   Fuente única de valores de diseño. Fase A del refactor: contiene las
+   variables que ya existían (valores exactos). En la fase C se suman los
+   tokens de color, tipografía, espaciado, radios, sombras, z-index y tiempos.
+   Regla: los valores son EXACTOS a los del diseño aprobado (no redondear).
+   ========================================================================== */
+
+:root {
+  --navy: #003568;
+  --orange: #ff7e34;
+  --gray: #727272;
+
+  /* ---- SISTEMA DE LAYOUT ----------------------------------------------
+     Breakpoints canonicos del proyecto (usar SOLO estos):
+       <768      mobile
+       >=768     tablet
+       >=1024    notebook 13-14"
+       >=1280    notebook 15-16" / desktop chico
+       >=1440    desktop
+       >=1700    desktop grande (solo escala tipografica)
+     --gutter : margen de seguridad lateral (nunca se toca el contenido)
+     --shell  : ancho maximo del contenido (caja, gutters incluidos)
+     --pad    : padding lateral real = gutter + centrado del shell.
+                Cualquier sector a ancho completo usa `padding: X var(--pad)`
+                y queda alineado con todos los demas.
+     --nav-h  : alto real del header, lo mide el JS (fallback abajo).
+     --hero-gap: aire minimo garantizado entre el navbar y el contenido. */
+  --gutter: 20px;
+  --shell: 1440px;
+  --pad: max(var(--gutter), calc((100% - var(--shell)) / 2 + var(--gutter)));
+  --nav-h: 78px;
+  --hero-gap: 24px;
+  --hero-min: 560px;
+  --h1-size: 34px;
+  --h1-lh: 38px;
+  --lead-size: 16px;
+  --lead-lh: 26px;
+}
+
+@media (--sm) {
+  :root {
+    --gutter: 24px;
+  }
+}
+
+@media (--md) {
+  :root {
+    --gutter: 40px;
+    --hero-gap: 32px;
+    --hero-min: 620px;
+    --h1-size: 46px;
+    --h1-lh: 50px;
+    --lead-size: 17px;
+    --lead-lh: 28px;
+  }
+}
+
+@media (--lg) {
+  :root {
+    --gutter: 48px;
+    --hero-gap: 36px;
+    --hero-min: 640px;
+  }
+}
+
+@media (--xl) {
+  :root {
+    --gutter: 56px;
+    --hero-gap: 40px;
+    --hero-min: 660px;
+    --h1-size: 56px;
+    --h1-lh: 62px;
+    --lead-size: 17px;
+    --lead-lh: 29px;
+  }
+}
+
+@media (--2xl) {
+  :root {
+    --gutter: 64px;
+  }
+}
+
+@media (--3xl) {
+  :root {
+    --h1-size: 70px;
+    --h1-lh: 74px;
+    --lead-size: 18px;
+    --lead-lh: 31px;
+  }
+}

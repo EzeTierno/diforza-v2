@@ -6,3 +6,6 @@ _site/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Test visual (capturas locales)
+tests/visual/output/
