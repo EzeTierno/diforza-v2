@@ -203,7 +203,7 @@
   font-size: var(--fs-17);
   font-weight: var(--fw-black);
   letter-spacing: 0.01em;
-  color: var(--slate-600);
+  color: var(--slate-650);
 }
 
 @media (--below-md) {

@@ -40,9 +40,9 @@
   --green-600: #25a55f;
   --green-500: #35c46f;
   --google-yellow: #fbbc04;
-  --avatar-orange: #f57c00; /* avatares de reseñas (colores de Google) */
+  --avatar-orange: #c2561a; /* avatares de reseñas: blanco encima ≥ 4,5:1 (accesibilidad, 7 oct 2026) */
   --avatar-blue: #1976d2;
-  --avatar-green: #388e3c;
+  --avatar-green: #2e7d32;
 
   /* Canales RGB para transparencias: rgb(var(--rgb-x) / 50%) */
   --rgb-white: 255 255 255;
@@ -146,7 +146,7 @@
   --z-dev: 60; /* botón "Ocultar marcas" (solo borrador) */
   --navy: #003568;
   --orange: #ff7e34;
-  --gray: #727272;
+  --gray: #6b6b6b; /* era #727272: 4,4:1 sobre --slate-75 → 4,8:1 (accesibilidad, 7 oct 2026) */
 
   /* ---- SISTEMA DE LAYOUT ----------------------------------------------
      Breakpoints canonicos del proyecto (usar SOLO estos):

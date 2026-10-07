@@ -542,3 +542,19 @@ Las marcas `[[placeholder]]` (4,2:1) no se cuentan: desaparecen antes del lanzam
 - README: estructura actualizada (calzado, plantilla de landings, guía) y regla de tokens. MEMORY: entrada del refactor.
 
 **Refactor de CSS cerrado (fases A–E).** Pendiente fuera del refactor: hash del CSS para caché (deploy), CSS crítico y fuentes autoalojadas (performance), puntos del informe de accesibilidad (con OK).
+
+---
+
+## Accesibilidad — aplicado (7 oct 2026, con OK del usuario)
+
+Los 6 puntos del informe de la fase D:
+1. `.benefits__problem-box`: fondo `--color-primary` (blanco encima 4,5:1).
+2. `.featured-products__top .btn--outline` ("Ir a tienda online", fondo claro): texto y borde `--color-primary`. Sobre fondo azul (`.compliance`) queda `--orange`.
+3. `--avatar-orange: #c2561a`, `--avatar-green: #2e7d32`.
+4. `--gray: #6b6b6b` (era `#727272`; cambio global, ΔE mínimo); `.product-card__specs dt` → `--slate-600`; marcas de `.trust--grouped` → `--slate-650`.
+5. `:focus-visible` global en `base/global.css` (outline 2px `--color-primary`, offset 2px, halo blanco con `box-shadow` para fondos azules). Checkbox de consentimiento: `.field .check input:focus-visible`. Los campos de texto conservan su foco propio (`.field input:focus`, capa components).
+6. `.accordion summary`: `padding: 11px 0; margin: -11px 0` → área táctil ≥ 44px sin mover el layout. Footer < 768px: links de `li > a` y `.site-footer__links > a:not(.btn)` con `padding: 14px 0` y `gap: 0` (el footer mobile crece ~107px).
+
+Verificación: estilos computados viejo/nuevo en 4 páginas × 390/768/1440 → solo esos cambios; alto de página igual salvo footer mobile. Capturas de foco en header, botón sobre azul, botón sobre claro, checkbox y footer.
+
+Extra (aprobado 7 oct): `.hero__copy h1 .accent`, `.steps__item:last-child .steps__n`, `.field__required` y `.lead-form__required` → `--color-primary`. Auditoría de contraste sin fallas (excepto etiquetas de placeholder, temporales).

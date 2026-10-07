@@ -70,11 +70,11 @@
 }
 
 .field label .field__required {
-  color: var(--orange);
+  color: var(--color-primary);
 }
 
 .lead-form__required {
-  color: var(--orange);
+  color: var(--color-primary);
 }
 
 .field input,
@@ -281,6 +281,11 @@
   padding: 0;
   border-radius: var(--radius-4);
   box-shadow: none;
+}
+
+.field .check input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .field label.check {

@@ -438,3 +438,10 @@
     height: 150px;
   }
 }
+
+/* "Ir a tienda online" va sobre fondo claro: naranja accesible (4,5:1).
+   Sobre fondo azul (.compliance) queda el naranja de marca. */
+.featured-products__top .btn--outline {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}

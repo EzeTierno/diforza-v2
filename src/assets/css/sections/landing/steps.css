@@ -87,7 +87,7 @@
 }
 
 .steps__item:last-child .steps__n {
-  background: var(--orange);
+  background: var(--color-primary);
 }
 
 @media (--xl) {

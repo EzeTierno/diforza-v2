@@ -36,3 +36,12 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* Foco con teclado: anillo de 2px con separación. El halo blanco rellena la
+   separación para que el anillo se vea también sobre fondos azules.
+   Solo aparece navegando con teclado (:focus-visible). */
+:focus-visible {
+  box-shadow: 0 0 0 2px var(--white);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

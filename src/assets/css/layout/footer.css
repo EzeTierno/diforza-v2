@@ -117,3 +117,17 @@
   height: 18px;
   color: var(--navy);
 }
+
+/* Mobile: links con área táctil de 44px (el espacio entre links pasa al padding) */
+@media (--below-md) {
+  .site-footer__col ul,
+  .site-footer__links {
+    gap: 0;
+  }
+
+  .site-footer__col li > a,
+  .site-footer__links > a:not(.btn) {
+    display: inline-block;
+    padding: 14px 0;
+  }
+}

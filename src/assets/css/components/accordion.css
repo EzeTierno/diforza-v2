@@ -22,6 +22,8 @@
   gap: 16px;
   align-items: center;
   justify-content: space-between;
+  margin: -11px 0; /* área táctil ≥ 44px sin mover el layout: */
+  padding: 11px 0; /* padding + margen negativo se compensan */
   font-size: var(--fs-17);
   font-weight: var(--fw-bold);
   line-height: 24px;

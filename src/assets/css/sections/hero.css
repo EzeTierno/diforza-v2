@@ -300,7 +300,7 @@
    El .accent va inline siempre: es lo que permite que la mitad naranja
    arranque a mitad de renglon. */
 .hero__copy h1 .accent {
-  color: var(--orange);
+  color: var(--color-primary); /* naranja accesible sobre el fondo claro del hero */
 }
 
 .hero__copy h1 .h1-big {
