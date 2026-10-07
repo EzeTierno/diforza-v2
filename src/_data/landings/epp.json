@@ -26,7 +26,7 @@
       }
     ],
     "ctaPrincipal": "Pedir cotización",
-    "ctaCatalogo": "Descargar catálogo de EPP"
+    "ctaCatalogo": "Descargar catálogo"
   },
   "confianza": {
     "agrupado": true,
@@ -361,81 +361,49 @@
   },
   "faq": [
     {
-      "pregunta": "¿Cómo sé que el EPP está certificado?",
-      "respuesta": "Respuesta a confirmar con Diforza.[[Validar]]"
+      "pregunta": "¿Qué elementos de protección personal vende Diforza?",
+      "respuesta": "Diforza vende EPP para empresas: protección craneal, auditiva, ocular, facial y respiratoria, guantes, equipos para trabajo en altura y elementos de señalización. Es socio oficial de Libus y trabaja también con 3M, MSA y su línea propia ZIAO."
     },
     {
-      "pregunta": "¿Me entregan ficha técnica y certificado con la compra?",
-      "respuesta": "Respuesta a confirmar con Diforza.[[Validar]]"
+      "pregunta": "¿El EPP está certificado? ¿Entregan ficha técnica?",
+      "respuesta": "Sí. Todos los elementos de protección personal de Diforza cumplen las normas de certificación que les corresponden y se entregan con su ficha técnica y, según el producto, con el certificado del fabricante o el informe de ensayo."
+    },
+    {
+      "pregunta": "¿La documentación sirve para la SRT?",
+      "respuesta": "Sí. La ficha técnica y los certificados que entrega Diforza le sirven al responsable de Higiene y Seguridad para sus registros y para la constancia de entrega de ropa de trabajo y EPP que pide la SRT (Resolución 299/11)."
     },
     {
       "pregunta": "¿Me ayudan a definir qué EPP corresponde a cada puesto?",
-      "respuesta": "Sí. Te ayudamos a definir qué elemento corresponde a cada puesto según su riesgo real. La recomendación primero, el producto después."
+      "respuesta": "Sí. En Diforza te ayudamos a definir qué elemento de protección corresponde a cada puesto según su riesgo real. La recomendación primero, el producto después. La definición final la toma el responsable de Higiene y Seguridad de tu empresa."
+    },
+    {
+      "pregunta": "¿Tienen filtros, cartuchos y consumibles para reponer?",
+      "respuesta": "Sí. Diforza trabaja con stock permanente de consumibles: filtros y cartuchos para semimáscaras y máscaras, prefiltros, tapones auditivos y respiradores descartables, para que puedas reponer siempre el mismo producto."
+    },
+    {
+      "pregunta": "¿Qué guantes de seguridad tienen?",
+      "respuesta": "Diforza tiene guantes para cada tarea: moteados, de vaqueta y descarne, de nitrilo, látex y PVC, anticorte, de aramida, descartables y guantes dieléctricos con certificación, de marcas como Gamisol, W|S y Glovex."
     },
     {
       "pregunta": "¿Trabajan con empresas de cualquier tamaño?",
-      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+      "respuesta": "Sí. Diforza provee EPP a empresas de cualquier rubro y tamaño, y no hay pedido mínimo: cotizamos desde algunas unidades hasta el equipamiento completo de una planta."
     },
     {
-      "pregunta": "¿Cuánto tardan en entregar un pedido urgente?",
-      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+      "pregunta": "¿Hacen envíos a todo el país o se puede retirar?",
+      "respuesta": "Sí. Diforza hace envíos a empresas de todo el país y el envío se coordina con tu vendedor al confirmar el pedido. Si preferís, también podés retirarlo por nuestro depósito en Mataderos, CABA. Como empresa, emitimos factura A."
     },
     {
-      "pregunta": "¿Tienen recambio de filtros y consumibles con continuidad?",
-      "respuesta": "Respuesta a confirmar con Diforza.[[Validar]]"
-    },
-    {
-      "pregunta": "¿Puedo comprar por unidad?",
-      "respuesta": "Sí, en la tienda online."
+      "pregunta": "¿Cómo pido una cotización de EPP?",
+      "respuesta": "Escribinos por WhatsApp al 11 6351-3333, completá el formulario de esta página o mandanos un mail a info@diforza.com.ar. Para cotizar nos sirve saber tu rubro, qué elementos necesitás, para cuántas personas y la zona de entrega."
     }
   ],
   "cotizacion": {
     "titulo": "Contanos qué riesgos tenés que cubrir",
-    "respuesta": "Te respondemos en el día[[Validar]]",
-    "catalogo": "Descargar catálogo de EPP",
+    "respuesta": "Te respondemos en el día",
+    "catalogo": "Descargar catálogo",
     "landingId": "l3-epp",
-    "formTitulo": "Pedí tu cotización",
-    "formBoton": "Pedir cotización",
-    "campoVariable": {
-      "tipo": "chips",
-      "name": "categorias_epp",
-      "legend": "Categorías de EPP que necesitás",
-      "ayuda": "Podés elegir varias",
-      "opciones": [
-        {
-          "valor": "Craneal",
-          "cat": "craneal"
-        },
-        {
-          "valor": "Auditiva",
-          "cat": "auditiva"
-        },
-        {
-          "valor": "Ocular",
-          "cat": "ocular"
-        },
-        {
-          "valor": "Facial",
-          "cat": "facial"
-        },
-        {
-          "valor": "Respiratoria",
-          "cat": "respiratoria"
-        },
-        {
-          "valor": "Manos",
-          "cat": "manos"
-        },
-        {
-          "valor": "Anticaída",
-          "cat": "anticaida"
-        },
-        {
-          "valor": "Vialidad",
-          "cat": "vialidad"
-        }
-      ],
-      "error": "Elegí al menos una categoría."
-    }
-  }
+    "formTitulo": "¿Preferís que te contactemos por mail?",
+    "formBoton": "Pedir cotización"
+  },
+  "faqTitulo": "Preguntas frecuentes sobre EPP"
 }

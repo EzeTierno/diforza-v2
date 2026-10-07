@@ -1,4 +1,4 @@
-{#- Cotización (#contacto): copy + WhatsApp + catálogo + formulario. Datos: L.cotizacion; waText y catalogName del front matter -#}
+{#- Cotización (#contacto): copy + WhatsApp + acceso al catálogo (ventana) + formulario. Datos: L.cotizacion; waText del front matter -#}
 {%- set Q = L.cotizacion %}
 <section class="quote theme-dark" id="contacto">
   <div class="quote__inner">
@@ -6,55 +6,31 @@
       <h2 class="section-title">{{ Q.titulo | rich | safe }}</h2>
       <p class="quote__reply">{{ Q.respuesta | rich | safe }}</p>
 
-      <figure class="quote__mini">
-        <p>“Diforza nos provee indumentaria y elementos de protección personal de altísima calidad.”</p>
-        <cite>Ariel Kuznicki <span>· Google Reviews</span></cite>
-      </figure>
+      <div class="quote__reviews" data-js="review-rotator" role="region" aria-label="Reseñas de clientes en Google">
+        <div class="quote__reviews-track">
+{%- for nombre, r in reviews %}
+          <figure class="quote__mini{% if loop.first %} is-active{% endif %}"{% if not loop.first %} aria-hidden="true"{% endif %}>
+            <div class="quote__stars" role="img" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="currentColor"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="currentColor"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="currentColor"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="currentColor"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="currentColor"/></svg></div>
+            <p>“{{ r.texto }}”</p>
+            <cite>{{ nombre }} <span>· Google Reviews</span></cite>
+          </figure>
+{%- endfor %}
+        </div>
+        <div class="quote__dots">
+{%- for nombre, r in reviews %}
+          <button type="button" class="quote__dot{% if loop.first %} is-active{% endif %}" aria-label="Ver reseña de {{ nombre }}"{% if loop.first %} aria-current="true"{% endif %}></button>
+{%- endfor %}
+        </div>
+      </div>
 
-      <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ waText | urlencode }}" class="btn btn--whatsapp" data-js="wa" target="_blank" rel="noopener">{{ icons['ui-whatsapp'] | safe }} Escribinos por WhatsApp</a>
+      <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ waText | urlencode }}" class="btn btn--primary btn--icon quote__wa" data-js="wa" target="_blank" rel="noopener">{{ icons['ui-whatsapp'] | safe }} {{ site.cta.whatsapp }}</a>
+      <p class="quote__hint">Cotizá directo por chat, sin completar formularios.</p>
 
       <div class="catalog" id="catalogo">
-        <button type="button" class="catalog__toggle" data-js="catalog-toggle" aria-expanded="false" aria-controls="catalogPanel">
-          <span>{{ Q.catalogo }}<small>Te lo mandamos también por email.</small></span>
-          {{ icons['ui-chevron'] | safe }}
-        </button>
-        <div class="catalog__panel" id="catalogPanel" hidden>
-          <form id="form-catalogo" data-js="lead-form" novalidate>
-            <input type="hidden" name="tipo_lead" value="catalogo">
-            <input type="hidden" name="landing" value="{{ Q.landingId }}">
-            <div class="hp-field" aria-hidden="true"><label>No completar<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-            <div class="lead-form__grid">
-              <div class="field">
-                <label for="c-nombre">Nombre y apellido <span class="field__required">*</span></label>
-                <input id="c-nombre" name="nombre" type="text" autocomplete="name" required>
-                <span class="field__error">Ingresá tu nombre.</span>
-              </div>
-              <div class="field">
-                <label for="c-empresa">Empresa <span class="field__required">*</span></label>
-                <input id="c-empresa" name="empresa" type="text" autocomplete="organization" required>
-                <span class="field__error">Ingresá el nombre de tu empresa.</span>
-              </div>
-              <div class="field">
-                <label for="c-email">Email <span class="field__required">*</span></label>
-                <input id="c-email" name="email" type="email" inputmode="email" autocomplete="email" required>
-                <span class="field__error">Ingresá un email válido.</span>
-              </div>
-              <div class="field">
-                <label for="c-tel">Teléfono / WhatsApp <span class="field__required">*</span></label>
-                <input id="c-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required>
-                <span class="field__error">Ingresá un teléfono de contacto.</span>
-              </div>
-              <div class="field field--full">
-                <label class="check"><input type="checkbox" name="consentimiento" required> <span>Acepto que Diforza me contacte y la <a href="#">política de privacidad</a>.</span></label>
-                <span class="field__error">Necesitamos tu consentimiento para enviarte el catálogo.</span>
-              </div>
-              <div class="field--full">
-                <button type="submit" class="btn btn--primary lead-form__submit">{{ icons['ui-descarga'] | safe }} Descargar catálogo</button>
-                <p class="lead-form__status" data-js="form-status" role="status" aria-live="polite"></p>
-              </div>
-            </div>
-          </form>
-        </div>
+        <a href="#catalogo" class="catalog__toggle" data-js="catalogo">
+          <span>{{ Q.catalogo }}<small>Indumentaria, calzado y EPP en un PDF. Se descarga al instante.</small></span>
+          {{ icons['ui-descarga'] | safe }}
+        </a>
       </div>
     </div>
 
@@ -75,7 +51,7 @@
 
         <div class="lead-form__grid">
           <div class="field">
-            <label for="f-nombre">Nombre y apellido <span class="field__required">*</span></label>
+            <label for="f-nombre">Nombre <span class="field__required">*</span></label>
             <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
             <span class="field__error">Ingresá tu nombre.</span>
           </div>
@@ -94,9 +70,9 @@
             <input id="f-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required>
             <span class="field__error">Ingresá un teléfono de contacto.</span>
           </div>
-          <div class="field">
-            <label for="f-rubro">Rubro / industria <span class="field__required">*</span></label>
-            <select id="f-rubro" name="rubro" required>
+          <div class="field field--full">
+            <label for="f-rubro">Rubro / industria <small class="field__optional">(opcional)</small></label>
+            <select id="f-rubro" name="rubro">
               <option value="">Elegí una opción</option>
               {%- for r in landingForm.rubros %}
               <option>{{ r }}</option>
@@ -104,46 +80,13 @@
             </select>
             <span class="field__error">Elegí el rubro de tu empresa.</span>
           </div>
-          <div class="field">
-            <label for="f-tamano">Tamaño de la empresa <span class="field__required">*</span></label>
-            <select id="f-tamano" name="tamano_empresa" required>
-              <option value="">Elegí una opción</option>
-              {%- for t in landingForm.tamanos %}
-              <option>{{ t }}</option>
-              {%- endfor %}
-            </select>
-            <span class="field__error">Elegí el tamaño de tu empresa.</span>
-          </div>
-          {%- set V = Q.campoVariable %}
-          {%- if V.tipo == 'select' %}
-          <div class="field field--full">
-            <label for="{{ V.id }}">{{ V.label }} <span class="field__required">*</span></label>
-            <select id="{{ V.id }}" name="{{ V.name }}" required>
-              <option value="">Elegí una opción</option>
-              {%- for o in V.opciones %}
-              <option>{{ o }}</option>
-              {%- endfor %}
-            </select>
-            <span class="field__error">{{ V.error }}</span>
-          </div>
-          {%- elif V.tipo == 'chips' %}
-          <fieldset class="field field--full field--group" data-required-group="{{ V.name }}">
-            <legend>{{ V.legend }} <span class="field__required">*</span> <small>{{ V.ayuda }}</small></legend>
-            <div class="chips">
-              {%- for o in V.opciones %}
-              <label class="chip"><input type="checkbox" name="{{ V.name }}" value="{{ o.valor }}" data-cat="{{ o.cat }}"><span>{{ o.valor }}</span></label>
-              {%- endfor %}
-            </div>
-            <span class="field__error">{{ V.error }}</span>
-          </fieldset>
-          {%- endif %}
           <div class="field field--full">
             <label for="f-mensaje">Contanos qué necesitás</label>
             <textarea id="f-mensaje" name="mensaje" rows="3"></textarea>
           </div>
           <div class="field field--full">
-            <label class="check"><input type="checkbox" name="consentimiento" required> <span>Acepto que Diforza me contacte y la <a href="#">política de privacidad</a>.</span></label>
-            <span class="field__error">Necesitamos tu consentimiento para contactarte.</span>
+            <label class="check"><input type="checkbox" name="consentimiento" required checked> <span>Acepto la <a href="{{ site.legal.privacidad }}" target="_blank">política de privacidad</a>.</span></label>
+            <span class="field__error">Para contactarte necesitamos que aceptes la política de privacidad.</span>
           </div>
           <div class="field--full">
             <button type="submit" class="btn btn--primary lead-form__submit">{{ Q.formBoton }} {{ icons['ui-flecha'] | safe }}</button>

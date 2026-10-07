@@ -1,12 +1,15 @@
+{#- Header de todas las páginas. Links en site.nav; CTA principal = WhatsApp (texto por página: waText). -#}
+{%- set waHref = "https://wa.me/" + site.whatsapp.number + "?text=" + ((waText or site.whatsapp.text) | urlencode) %}
 <header class="header" id="siteHeader">
-  <a href="/" class="header__logo"><img src="/img/logo-blanco.webp" alt="{{ site.name }}"></a>
-  <nav class="nav" id="mainNav">
+  <a href="/" class="header__logo"><img src="/img/logo-blanco.webp" alt="{{ site.name }} — inicio"></a>
+  <nav class="nav" id="mainNav" aria-label="Principal">
 {%- for item in site.nav %}
-    <a href="{{ item.href }}">{{ item.label }}</a>
+    <a href="{{ item.href }}"{% if item.href == page.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
 {%- endfor %}
+    <a href="{{ site.catalogo.href }}" class="nav__catalog" data-js="catalogo">{% include "partials/icon-download.njk" %}{{ site.catalogo.label }}</a>
   </nav>
-  <a href="#contacto" class="btn--nav header__cta"><span class="header__cta-long">Pedir cotización</span><span class="header__cta-short">Cotizar</span>
-    {% include "partials/icon-arrow.njk" %}
+  <a href="{{ waHref }}" class="btn--nav header__cta" data-js="wa" target="_blank" rel="noopener">
+    {% include "partials/icon-wa.njk" %}<span class="header__cta-long">Cotizar por WhatsApp</span><span class="header__cta-short">Cotizar</span>
   </a>
   <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">&#9776;</button>
 </header>

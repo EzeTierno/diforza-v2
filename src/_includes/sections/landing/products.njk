@@ -6,9 +6,11 @@
       <p class="featured-products__eyebrow">{{ P.eyebrow | rich | safe }}</p>
       <h2>{{ P.titulo | rich | safe }}</h2>
     </div>
-    <a href="{{ site.footer.tiendaOnline }}" class="btn btn--outline">Ir a tienda online
+{%- if site.tienda.mostrar %}
+    <a href="{{ site.tienda.url }}" class="btn btn--outline">Ir a tienda online
       {{ icons['ui-flecha'] | safe }}
     </a>
+{%- endif %}
   </div>
   <div class="products__list reveal reveal--1" data-js="drag-carousel">
     <div class="products__track">

@@ -1,0 +1,107 @@
+---
+layout: layouts/base.njk
+title: "Política de privacidad | Diforza"
+description: "Cómo Diforza (Gennaro SRL) recopila, usa y protege los datos personales que se dejan en este sitio y por WhatsApp."
+waText: "Hola, tengo una consulta sobre mis datos personales."
+actualizado: "7 de octubre de 2026"
+---
+{#- Borrador redactado el 7 oct 2026 a partir del contexto del proyecto. Debe revisarlo un abogado
+    antes de publicar. Lo marcado con [[…]] falta confirmar. -#}
+<main class="legal">
+  <div class="legal__inner">
+    <p class="legal__eyebrow">Legales</p>
+    <h1>Política de privacidad</h1>
+    <p class="legal__updated">Última actualización: {{ actualizado }}</p>
+
+    <p>En Diforza cuidamos los datos que nos dejás. Esta política explica qué información recopilamos cuando visitás este sitio, completás un formulario o nos escribís por WhatsApp, para qué la usamos, con quién la compartimos y cómo podés ejercer tus derechos. Se rige por la Ley 25.326 de Protección de los Datos Personales y sus normas complementarias.</p>
+
+    <nav class="legal__toc" aria-label="Contenido">
+      <ol>
+        <li><a href="#responsable">Quién es el responsable</a></li>
+        <li><a href="#datos">Qué datos recopilamos</a></li>
+        <li><a href="#finalidad">Para qué los usamos</a></li>
+        <li><a href="#terceros">Con quién los compartimos</a></li>
+        <li><a href="#cookies">Cookies y medición</a></li>
+        <li><a href="#conservacion">Cuánto tiempo los guardamos</a></li>
+        <li><a href="#seguridad">Seguridad</a></li>
+        <li><a href="#derechos">Tus derechos</a></li>
+        <li><a href="#otros">Otras condiciones</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="responsable">1. Quién es el responsable</h2>
+    <p>El responsable de la base de datos es <strong>{{ site.legal.razonSocial }}</strong> (nombre comercial <strong>{{ site.name }}</strong>), <span class="legal__nowrap">CUIT {{ site.legal.cuit }}</span>, con domicilio en {{ site.address.line }}, República Argentina.</p>
+    <ul>
+      <li>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      <li>Teléfono: <a href="tel:{{ site.phone.number }}">{{ site.phone.display }}</a></li>
+      <li>WhatsApp: <a href="https://wa.me/{{ site.whatsapp.number }}" target="_blank" rel="noopener">{{ site.whatsapp.display }}</a></li>
+    </ul>
+    <p>La base de datos de clientes y contactos comerciales está inscripta en el Registro Nacional de Bases de Datos. {{ "[[Validar inscripción y número]]" | rich | safe }}</p>
+
+    <h2 id="datos">2. Qué datos recopilamos</h2>
+    <h3>Datos que nos das vos</h3>
+    <ul>
+      <li><strong>Formulario de cotización:</strong> nombre, empresa, email, teléfono, rubro (opcional), el producto que estés consultando y el mensaje que escribas.</li>
+      <li><strong>Descarga del catálogo:</strong> empresa, email y, si querés, teléfono.</li>
+      <li><strong>WhatsApp:</strong> tu número, tu nombre de perfil y el contenido de la conversación. Durante la charla te podemos pedir datos de tu empresa (nombre, rubro, cantidad de personas a equipar, productos que necesitás y zona de entrega) para preparar la cotización.</li>
+      <li><strong>Email y teléfono:</strong> los datos que nos envíes al comunicarte con nosotros.</li>
+    </ul>
+    <p>Nuestros servicios están pensados para empresas. Te pedimos que no nos envíes datos sensibles (por ejemplo, de salud, origen racial o afiliación sindical) ni datos de terceros sin su autorización.</p>
+    <h3>Datos que se recopilan automáticamente</h3>
+    <p>Al navegar el sitio se registran datos técnicos: dirección IP aproximada, tipo de dispositivo y navegador, páginas visitadas, cómo llegaste al sitio (por ejemplo, desde un anuncio o un buscador) y las acciones que hacés, como tocar el botón de WhatsApp, enviar un formulario o descargar el catálogo. Ver la sección <a href="#cookies">Cookies y medición</a>.</p>
+
+    <h2 id="finalidad">3. Para qué los usamos</h2>
+    <ul>
+      <li>Responder tus consultas y enviarte cotizaciones.</li>
+      <li>Enviarte el catálogo que pediste.</li>
+      <li>Hacer el seguimiento comercial de tu consulta y gestionar la relación con tu empresa como cliente.</li>
+      <li>Enviarte información comercial sobre productos, novedades o promociones. Podés pedir que no te enviemos más en cualquier momento.</li>
+      <li>Medir cómo funciona el sitio y nuestros anuncios, y mostrar publicidad de Diforza a personas que ya nos visitaron.</li>
+      <li>Cumplir obligaciones legales, contables e impositivas.</li>
+    </ul>
+    <p>Al enviar un formulario o escribirnos, prestás tu consentimiento para estos usos. No vendemos ni alquilamos tus datos.</p>
+
+    <h2 id="terceros">4. Con quién los compartimos</h2>
+    <p>Para funcionar usamos proveedores que tratan los datos por cuenta nuestra y solo para los fines de esta política:</p>
+    <ul>
+      <li><strong>Kommo:</strong> sistema de gestión de clientes (CRM) donde registramos las consultas y conversaciones.</li>
+      <li><strong>Meta (WhatsApp Business):</strong> canal de mensajería. WhatsApp trata tus datos también según sus propias políticas.</li>
+      <li><strong>Google (Analytics, Ads y Tag Manager) y Meta (píxel de Facebook e Instagram):</strong> medición del sitio y publicidad.</li>
+      <li><strong>Cloudflare:</strong> alojamiento y seguridad del sitio.</li>
+      <li><strong>Nuestro equipo comercial y sistema de gestión interno:</strong> para cotizar, facturar y entregar.</li>
+    </ul>
+    <p>Algunos de estos proveedores almacenan datos en servidores fuera de la Argentina, por ejemplo en Estados Unidos o en la Unión Europea. Al usar el sitio y nuestros canales, aceptás esa transferencia internacional, que se hace con proveedores que aplican medidas de seguridad adecuadas.</p>
+    <p>También podemos compartir datos cuando lo exija una ley o una autoridad competente.</p>
+
+    <h2 id="cookies">5. Cookies y medición</h2>
+    <p>Las cookies son pequeños archivos que el navegador guarda en tu dispositivo. Este sitio usa:</p>
+    <ul>
+      <li><strong>Necesarias:</strong> para que el sitio funcione y recuerde preferencias básicas.</li>
+      <li><strong>De medición:</strong> Google Analytics, para entender cuántas personas nos visitan y qué páginas usan.</li>
+      <li><strong>De publicidad:</strong> Google Ads y el píxel de Meta, para saber qué anuncios generan consultas y mostrar anuncios de Diforza a quienes visitaron el sitio.</li>
+    </ul>
+    <p>Podés bloquear o borrar las cookies desde la configuración de tu navegador. También podés limitar la publicidad personalizada desde la configuración de anuncios de tu cuenta de Google y desde las preferencias de anuncios de Facebook e Instagram. Si bloqueás cookies, el sitio sigue funcionando.</p>
+
+    <h2 id="conservacion">6. Cuánto tiempo los guardamos</h2>
+    <p>Conservamos los datos mientras dure la relación comercial o mientras sean útiles para responder tu consulta y hacer su seguimiento. Después los conservamos solo el tiempo que exijan las obligaciones legales, contables o impositivas, o hasta que pidas que los eliminemos, si no hay una obligación que nos lo impida.</p>
+
+    <h2 id="seguridad">7. Seguridad</h2>
+    <p>Aplicamos medidas técnicas y organizativas razonables para proteger tus datos contra pérdida, acceso no autorizado o uso indebido: conexión cifrada (HTTPS), acceso restringido al personal que los necesita y proveedores con estándares de seguridad reconocidos. Ningún sistema es completamente infalible, pero trabajamos para reducir los riesgos.</p>
+
+    <h2 id="derechos">8. Tus derechos</h2>
+    <p>Podés pedir en cualquier momento <strong>acceder</strong> a tus datos, <strong>rectificarlos</strong>, <strong>actualizarlos</strong> o <strong>suprimirlos</strong>, y dejar de recibir comunicaciones comerciales. Para hacerlo, escribinos a <a href="mailto:{{ site.email }}">{{ site.email }}</a> indicando tu nombre, tu empresa y qué querés hacer. Te podemos pedir que acredites tu identidad.</p>
+    <p>Respondemos los pedidos de acceso dentro de los 10 días corridos y los de rectificación, actualización o supresión dentro de los 5 días hábiles, según la Ley 25.326.</p>
+    <div class="legal__notice">
+      <p>El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto conforme lo establecido en el artículo 14, inciso 3 de la Ley N° 25.326.</p>
+      <p>La AGENCIA DE ACCESO A LA INFORMACIÓN PÚBLICA, en su carácter de Órgano de Control de la Ley N° 25.326, tiene la atribución de atender las denuncias y reclamos que interpongan quienes resulten afectados en sus derechos por incumplimiento de las normas vigentes en materia de protección de datos personales.</p>
+    </div>
+
+    <h2 id="otros">9. Otras condiciones</h2>
+    <ul>
+      <li><strong>Menores de edad:</strong> el sitio está dirigido a empresas y profesionales. No recopilamos a sabiendas datos de menores de 18 años.</li>
+      <li><strong>Sitios de terceros:</strong> si seguís un link a otro sitio (por ejemplo, nuestras redes sociales), se aplican las políticas de ese sitio.</li>
+      <li><strong>Cambios:</strong> podemos actualizar esta política. La versión vigente es siempre la publicada en esta página, con su fecha de actualización.</li>
+    </ul>
+    <p>¿Dudas sobre tus datos? Escribinos a <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+  </div>
+</main>

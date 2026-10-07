@@ -1,0 +1,57 @@
+{
+  "_nota": "Contenido de la home. Por ahora solo la sección de contacto; el resto se migra en el paso 4 (home como plantilla).",
+  "cotizacion": {
+    "titulo": "Contanos qué necesita tu equipo",
+    "respuesta": "Te respondemos en el día",
+    "catalogo": "Descargar catálogo",
+    "landingId": "home",
+    "formTitulo": "¿Preferís que te contactemos por mail?",
+    "formBoton": "Pedir cotización"
+  },
+  "faq": [
+    {
+      "pregunta": "¿Qué es Diforza y qué productos vende?",
+      "respuesta": "Diforza (Gennaro SRL) es un proveedor de indumentaria de trabajo, calzado de seguridad y elementos de protección personal (EPP) para empresas, con más de 15 años en el rubro y fábrica propia en Mataderos, CABA. Una empresa puede equipar a todo su personal con un solo proveedor: ropa de trabajo, botines de seguridad, guantes, cascos y protección auditiva, ocular, respiratoria y para trabajo en altura."
+    },
+    {
+      "pregunta": "¿Diforza vende ropa de trabajo y EPP por mayor a empresas?",
+      "respuesta": "Sí. Diforza trabaja con empresas de cualquier rubro y tamaño, y no hay pedido mínimo: cotizamos desde algunas unidades hasta el equipamiento completo de una planta. La cotización se arma según los productos, los talles y las cantidades que necesites."
+    },
+    {
+      "pregunta": "¿Hacen envíos de indumentaria de trabajo y EPP a todo el país?",
+      "respuesta": "Sí. Diforza hace envíos de ropa de trabajo, calzado de seguridad y EPP a empresas de todo el país. El envío se coordina con tu vendedor al confirmar el pedido. Si preferís, también podés retirarlo por nuestro depósito en Mataderos, CABA."
+    },
+    {
+      "pregunta": "¿Diforza emite factura A? ¿Qué medios de pago aceptan?",
+      "respuesta": "Sí. Diforza (Gennaro SRL) emite factura A a empresas. Trabajamos con los medios de pago habituales entre empresas, como transferencia bancaria, cheque y efectivo, y las condiciones de pago las acordás con tu vendedor."
+    },
+    {
+      "pregunta": "¿Los elementos de protección personal están certificados y sirven para la SRT?",
+      "respuesta": "Sí. Cada producto de Diforza se entrega con su ficha técnica y, según el caso, con el certificado del fabricante o el informe de ensayo. Esa documentación le sirve al responsable de Higiene y Seguridad para sus registros y para la constancia de entrega de ropa de trabajo y EPP que pide la SRT (Resolución 299/11)."
+    },
+    {
+      "pregunta": "¿Puedo personalizar la ropa de trabajo con el logo de mi empresa?",
+      "respuesta": "Sí. La indumentaria de trabajo de Diforza es de fabricación propia, así que se puede personalizar con el logo de tu empresa en bordado, estampado o transfer, y sumar cinta reflectiva o colores a pedido. Antes de producir te enviamos el diseño para aprobar."
+    },
+    {
+      "pregunta": "¿Tienen stock permanente para reponer la ropa de trabajo y el EPP?",
+      "respuesta": "Sí. Diforza trabaja con stock permanente y su indumentaria es de línea propia: el modelo que elegís hoy lo vas a poder reponer el año que viene, para el personal nuevo o por desgaste, sin que tu equipo quede vestido de tres formas distintas."
+    },
+    {
+      "pregunta": "¿Me ayudan a elegir qué EPP necesita cada puesto?",
+      "respuesta": "Sí. En Diforza te asesoramos para elegir los elementos de protección personal según el riesgo de cada puesto y el rubro: construcción, industria, logística, alimenticia, laboratorios o energía. La recomendación primero y el producto después. La definición final la toma el responsable de Higiene y Seguridad de tu empresa."
+    },
+    {
+      "pregunta": "¿Qué marcas de calzado de seguridad y EPP trabaja Diforza?",
+      "respuesta": "Diforza combina indumentaria de fabricación propia, su línea ZIAO de productos técnicos y descartables, y marcas reconocidas del rubro. Es socio oficial de Libus (cascos, protección auditiva, ocular y respiratoria) y trabaja botines y zapatos de seguridad CONWORK y Ombú, además de 3M, MSA y guantes Gamisol, W|S y Glovex."
+    },
+    {
+      "pregunta": "¿Qué talles de ropa de trabajo y calzado de seguridad tienen?",
+      "respuesta": "Diforza tiene talles para todo el personal, desde XS hasta talles especiales grandes, en indumentaria y calzado de seguridad. Con la cotización te enviamos la tabla de talles de cada producto para que armes el pedido sin errores."
+    },
+    {
+      "pregunta": "¿Cómo pido una cotización a Diforza?",
+      "respuesta": "La forma más rápida es escribirnos por WhatsApp al 11 6351-3333. También podés completar el formulario de esta página o escribir a info@diforza.com.ar. Te respondemos en el día. Para cotizar nos sirve saber tu empresa y rubro, qué productos necesitás, cuántas personas hay que equipar y la zona de entrega."
+    }
+  ]
+}

@@ -47,6 +47,7 @@
 @import "sections/landing/guarantee.css" layer(sections);
 @import "sections/landing/quote.css" layer(sections);
 @import "sections/landing/catalog.css" layer(sections);
+@import "sections/legal.css" layer(sections);
 
 /* utilities */
 @import "utilities.css" layer(utilities);

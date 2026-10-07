@@ -1,7 +1,7 @@
 {#- Preguntas frecuentes. Datos: L.faq -#}
 <section class="faq faq--landing">
   <div class="faq__inner reveal">
-    <h2>Preguntas Frecuentes</h2>
+    <h2>{{ L.faqTitulo or "Preguntas frecuentes" }}</h2>
     <div class="accordion">
       {%- for q in L.faq %}
       <details{% if loop.first %} open{% endif %}>
@@ -12,3 +12,5 @@
     </div>
   </div>
 </section>
+{%- set faqItems = L.faq %}
+{% include "partials/faq-schema.njk" %}

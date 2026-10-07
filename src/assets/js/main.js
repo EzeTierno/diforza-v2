@@ -187,3 +187,98 @@
   window.addEventListener('resize', onScroll);
   update();
 })();
+
+(function(){
+  // Ventana "Descargar catálogo": la abren todos los links data-js="catalogo".
+  // Formulario corto (empresa, email, teléfono opcional) → descarga inmediata del PDF.
+  // Si ya lo completó en esta visita, los siguientes clics descargan directo.
+  // [PENDIENTE] enviar los datos al endpoint de formularios → Kommo (paso 5).
+  var modal = document.getElementById('catModal');
+  if (!modal || typeof modal.showModal !== 'function') return;
+  var form = modal.querySelector('[data-js="catalog-form"]');
+  var stepForm = modal.querySelector('[data-js="cat-step-form"]');
+  var stepDone = modal.querySelector('[data-js="cat-step-done"]');
+  var PDF = (window.SITE && window.SITE.catalogPdf) || '';
+  var KEY = 'dif-cat-ok';
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var lastTrigger = null;
+
+  function done(){ try { return sessionStorage.getItem(KEY) === '1'; } catch(e){ return false; } }
+  function download(){
+    if (!PDF) return;
+    var a = document.createElement('a');
+    a.href = PDF; a.download = PDF.split('/').pop();
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+  function track(ev, extra){
+    window.dataLayer = window.dataLayer || [];
+    var o = { event: ev, lead_type: 'catalogo', page_path: location.pathname };
+    for (var k in extra) o[k] = extra[k];
+    window.dataLayer.push(o);
+  }
+  function open(trigger){
+    lastTrigger = trigger || null;
+    var already = done();
+    stepForm.hidden = already;
+    stepDone.hidden = !already;
+    modal.showModal();
+    document.documentElement.classList.add('has-modal');
+    if (already) download();
+    else { var f = form.querySelector('input:not([type=hidden]):not([tabindex="-1"])'); if (f) f.focus(); }
+    track(already ? 'catalog_redownload' : 'catalog_open', {});
+  }
+  function close(){ modal.close(); }
+  modal.addEventListener('close', function(){
+    document.documentElement.classList.remove('has-modal');
+    if (lastTrigger && lastTrigger.focus) lastTrigger.focus({preventScroll:true});
+  });
+  // Clic fuera de la caja (sobre el fondo) cierra
+  modal.addEventListener('click', function(e){ if (e.target === modal) close(); });
+  modal.querySelector('[data-js="cat-close"]').addEventListener('click', close);
+
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('[data-js="catalogo"]');
+    if (!a) return;
+    e.preventDefault();
+    // Si el menú mobile está abierto, se cierra
+    var nav = document.getElementById('mainNav');
+    var tgl = document.getElementById('navToggle');
+    if (nav && nav.classList.contains('is-open') && tgl) tgl.click();
+    open(a);
+  });
+
+  function valid(el){
+    if (el.type === 'checkbox') return !el.required || el.checked;
+    var v = (el.value || '').trim();
+    if (el.required && !v) return false;
+    if (el.type === 'email' && v && !EMAIL.test(v)) return false;
+    if (el.type === 'tel' && v && v.replace(/\D/g, '').length < 8) return false;
+    return true;
+  }
+  function check(el){
+    var f = el.closest('.field'); var ok = valid(el);
+    if (f) f.classList.toggle('is-invalid', !ok);
+    el.setAttribute('aria-invalid', ok ? 'false' : 'true');
+    return ok;
+  }
+  var inputs = form.querySelectorAll('input:not([type=hidden]):not([name=website])');
+  inputs.forEach(function(el){
+    el.addEventListener('blur', function(){ check(el); });
+    el.addEventListener('input', function(){ var f = el.closest('.field'); if (f && f.classList.contains('is-invalid')) check(el); });
+    el.addEventListener('change', function(){ var f = el.closest('.field'); if (f && f.classList.contains('is-invalid')) check(el); });
+  });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var first = null;
+    inputs.forEach(function(el){ if (!check(el) && !first) first = el; });
+    if (first){ first.focus(); return; }
+    var hp = form.querySelector('input[name="website"]');
+    if (hp && hp.value) return; // bot
+    // [PENDIENTE] fetch al endpoint con new FormData(form) (paso 5)
+    try { sessionStorage.setItem(KEY, '1'); } catch(err){}
+    track('generate_lead', {});
+    stepForm.hidden = true;
+    stepDone.hidden = false;
+    download();
+  });
+})();

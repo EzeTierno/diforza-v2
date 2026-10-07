@@ -1,6 +1,9 @@
 ---
 layout: layouts/base.njk
 title: "Diforza — L1 Institucional v2 (borrador en construcción)"
+waText: "Hola, quiero hacer una consulta para mi empresa."
+pageJs: /assets/js/landing.js
+phToggle: true   # botón "Ocultar marcas" — apagar antes de lanzar
 ---
 <section class="hero" data-js="hero">
   <div class="hero__bg">
@@ -58,10 +61,11 @@ title: "Diforza — L1 Institucional v2 (borrador en construcción)"
       </ul>
 
       <div class="ctas hero-anim hero-anim--4">
-        <a href="#contacto" class="btn btn--primary">Pedir cotización
-          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ waText | urlencode }}" class="btn btn--primary" data-js="wa" target="_blank" rel="noopener">
+          {% include "partials/icon-wa.njk" %}
+          {{ site.cta.whatsapp }}
         </a>
-        <a href="#" class="btn btn--outline">
+        <a href="#catalogo" class="btn btn--outline" data-js="catalogo">
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v9m0 0l-3.5-3.5M10 12l3.5-3.5M4 15.5h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Descargar catálogo
         </a>
@@ -177,7 +181,7 @@ title: "Diforza — L1 Institucional v2 (borrador en construcción)"
         <a href="#contacto" class="btn btn--primary">Pedir cotización
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#" class="btn btn--outline">
+        <a href="#catalogo" class="btn btn--outline" data-js="catalogo">
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v9m0 0l-3.5-3.5M10 12l3.5-3.5M3.5 15.5h13"/></svg>
           Descargar catálogo
         </a>
@@ -212,9 +216,11 @@ title: "Diforza — L1 Institucional v2 (borrador en construcción)"
       <h2>Productos destacados</h2>
       <p>Los más elegidos con stock disponible y entrega inmediata</p>
     </div>
-    <a href="#" class="btn btn--outline">Ir a tienda online
+{%- if site.tienda.mostrar %}
+    <a href="{{ site.tienda.url }}" class="btn btn--outline">Ir a tienda online
       <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
+{%- endif %}
   </div>
   <div class="featured-products__carousel reveal reveal--1" data-js="drag-carousel">
     <div class="featured-products__track">
@@ -223,70 +229,70 @@ title: "Diforza — L1 Institucional v2 (borrador en construcción)"
         <img src="/img/cat-ocu.webp" alt="Antiparra New Classic">
         <span class="featured-products__name">Antiparra New Classic</span>
         <p class="featured-products__cat">Protección visual</p>
-        <a href="#" class="featured-products__more">Más info</a>
+        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Antiparra New Classic para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
       </div>
       <div class="featured-products__card">
         <span class="badge badge--top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4c1.6 2 2.6 3.4 2.6 4.9a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.7 1-2.5.5 1.2 1.6.9 1.6-2.4z"/></svg> Más vendido</span>
         <img src="/img/cat-craneana.webp" alt="Casco de seguridad">
         <span class="featured-products__name">Casco de seguridad</span>
         <p class="featured-products__cat">Protección craneana</p>
-        <a href="#" class="featured-products__more">Más info</a>
+        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Casco de seguridad para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
       </div>
       <div class="featured-products__card">
         <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
         <img src="/img/cat-audi.webp" alt="Protector Auditivo L-340">
         <span class="featured-products__name">Protector Auditivo L-340</span>
         <p class="featured-products__cat">Protección auditiva</p>
-        <a href="#" class="featured-products__more">Más info</a>
+        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Protector Auditivo L-340 para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
       </div>
       <div class="featured-products__card">
         <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
         <img src="/img/cat-resp.webp" alt="Respirador Desech Zero 30">
         <span class="featured-products__name">Respirador Desech Zero 30</span>
         <p class="featured-products__cat">Protección respiratoria</p>
-        <a href="#" class="featured-products__more">Más info</a>
+        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Respirador Desech Zero 30 para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
       </div>
       <div class="featured-products__card">
         <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
         <img src="/img/cat-calzado2.webp" alt="Zapatilla Puntera de Acero">
         <span class="featured-products__name">Zapatilla Puntera de Acero</span>
         <p class="featured-products__cat">Calzado de seguridad</p>
-        <a href="#" class="featured-products__more">Más info</a>
+        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Zapatilla Puntera de Acero para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
       </div>
       <div class="featured-products__card">
         <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
         <img src="/img/cat-ocu.webp" alt="Antiparra New Classic">
         <span class="featured-products__name">Antiparra New Classic</span>
         <p class="featured-products__cat">Protección visual</p>
-        <a href="#" class="featured-products__more">Más info</a>
+        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Antiparra New Classic para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
       </div>
       <div class="featured-products__card">
         <span class="badge badge--top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4c1.6 2 2.6 3.4 2.6 4.9a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.7 1-2.5.5 1.2 1.6.9 1.6-2.4z"/></svg> Más vendido</span>
         <img src="/img/cat-craneana.webp" alt="Casco de seguridad">
         <span class="featured-products__name">Casco de seguridad</span>
         <p class="featured-products__cat">Protección craneana</p>
-        <a href="#" class="featured-products__more">Más info</a>
+        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Casco de seguridad para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
       </div>
       <div class="featured-products__card">
         <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
         <img src="/img/cat-audi.webp" alt="Protector Auditivo L-340">
         <span class="featured-products__name">Protector Auditivo L-340</span>
         <p class="featured-products__cat">Protección auditiva</p>
-        <a href="#" class="featured-products__more">Más info</a>
+        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Protector Auditivo L-340 para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
       </div>
       <div class="featured-products__card">
         <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
         <img src="/img/cat-resp.webp" alt="Respirador Desech Zero 30">
         <span class="featured-products__name">Respirador Desech Zero 30</span>
         <p class="featured-products__cat">Protección respiratoria</p>
-        <a href="#" class="featured-products__more">Más info</a>
+        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Respirador Desech Zero 30 para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
       </div>
       <div class="featured-products__card">
         <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
         <img src="/img/cat-calzado2.webp" alt="Zapatilla Puntera de Acero">
         <span class="featured-products__name">Zapatilla Puntera de Acero</span>
         <p class="featured-products__cat">Calzado de seguridad</p>
-        <a href="#" class="featured-products__more">Más info</a>
+        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Zapatilla Puntera de Acero para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
       </div>
     </div>
   </div>
@@ -300,7 +306,7 @@ title: "Diforza — L1 Institucional v2 (borrador en construcción)"
       <span class="spotlight__eyebrow">Nueva línea</span>
       <h2>Impermeables</h2>
       <p>Conocé la nueva línea de indumentaria impermeable de fabricación propia, garantizando la mejor calidad del mercado.</p>
-      <a href="#" class="btn btn--primary">Pedir cotización</a>
+      <a href="#contacto" class="btn btn--primary">Pedir cotización</a>
     </div>
   </div>
 </section>
@@ -322,7 +328,7 @@ title: "Diforza — L1 Institucional v2 (borrador en construcción)"
       </span>
       <div>
         <h3>Continuidad garantizada con marcas propias</h3>
-        <p>Desarrollamos dos líneas estratégicas para proteger tu operación: ZIAO en productos técnicos y descartables, y AGIO en indumentaria. Te garantizamos estabilidad de precios y continuidad de stock.</p>
+        <p>Desarrollamos dos líneas estratégicas para proteger tu operación: ZIAO en productos técnicos y descartables, y AGIO en indumentaria. Te garantizamos continuidad de stock.</p>
       </div>
     </div>
     <div class="benefits__item reveal">
@@ -442,8 +448,8 @@ title: "Diforza — L1 Institucional v2 (borrador en construcción)"
       <h2>Tu planta protegida y en regla ante cualquier inspección</h2>
       <p>Si falta el EPP certificado, el operario no entra a la planta. El verdadero costo no es la compra: es la producción frenada por una entrega colgada.</p>
       <div class="ctas">
-        <a href="#" class="btn btn--primary">Pedir cotización</a>
-        <a href="#" class="btn btn--outline">Descargar catálogo</a>
+        <a href="#contacto" class="btn btn--primary">Pedir cotización</a>
+        <a href="#catalogo" class="btn btn--outline" data-js="catalogo">Descargar catálogo</a>
       </div>
     </div>
     <div class="compliance__cards reveal reveal--1">
@@ -462,7 +468,7 @@ title: "Diforza — L1 Institucional v2 (borrador en construcción)"
         </span>
         <div>
           <h3>Certificaciones oficiales</h3>
-          <p>Productos que cumplen con las normas IRAM específicas para cada nivel de riesgo industrial.</p>
+          <p>Productos con certificados de fábrica e informes de ensayo. Cada producto cuenta con su respaldo: certificado del fabricante, informe de ensayo o ficha técnica, según corresponda.</p>
         </div>
       </div>
       <div class="product-tile">
@@ -482,27 +488,13 @@ title: "Diforza — L1 Institucional v2 (borrador en construcción)"
   <div class="factory__inner">
     <div class="factory__copy reveal">
       <h2>Más de 15 años produciendo en nuestra fábrica en Mataderos, CABA.</h2>
-      <p>Te invitamos a conocer nuestras instalaciones, procesos y equipo de trabajo. Podés revisar los productos en mano y sus documentos. Esperamos tu contacto para coordinar una reunión.</p>
+      <p>Te invitamos a conocer nuestras instalaciones, procesos y equipo de trabajo. Podés revisar los productos en mano y sus documentos. Esperamos tu contacto para coordinar una reunión. También podés retirar tus pedidos por nuestro depósito.</p>
+      {%- set waHref = "https://wa.me/" + site.whatsapp.number + "?text=" + ((waText or site.whatsapp.text) | urlencode) %}
       <ul class="factory__contact">
-        <li>
-          <span class="dot-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </span>
-          <span>Albariño 2243 2245, C1440</span>
-        </li>
-        <li>
-          <span class="dot-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.9.6 2.8a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2z"/></svg>
-          </span>
-          <span>+54 9 11 5956-9713</span>
-        </li>
-        <li>
-          <span class="dot-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-          </span>
-          <span>info@diforza.com.ar</span>
-        </li>
+{% include "partials/contact-items.njk" %}
       </ul>
+      {%- set socialClass = "factory__social" %}
+      {% include "partials/social-links.njk" %}
     </div>
     <div class="factory__media reveal reveal--1">
       <img src="/img/factory-v2.jpg" alt="Fábrica de Diforza en Mataderos, CABA">
@@ -510,31 +502,28 @@ title: "Diforza — L1 Institucional v2 (borrador en construcción)"
   </div>
 </section>
 
+{#- Preguntas frecuentes de la home: src/_data/home.json → faq (+ datos estructurados FAQPage) -#}
 <section class="faq">
   <div class="faq__inner reveal">
-    <h2>Preguntas Frecuentes</h2>
+    <h2>Preguntas frecuentes sobre Diforza</h2>
     <div class="accordion">
-      <details open>
-        <summary>¿Los productos sirven para mis registros de la SRT?
-          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+{%- for q in home.faq %}
+      <details{% if loop.first %} open{% endif %}>
+        <summary>{{ q.pregunta }}
+          <svg class="chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </summary>
-        <p class="accordion__panel">Ficha técnica e informes de ensayo entregados con cada producto.</p>
+        <p class="accordion__panel">{{ q.respuesta }}</p>
       </details>
-      <details>
-        <summary>¿Hacen envíos al interior del país?
-          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <p class="accordion__panel">Sí, despachamos a todo el país con stock propio permanente.</p>
-      </details>
-      <details>
-        <summary>¿Puedo comprar por unidad?
-          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <p class="accordion__panel">Sí, trabajamos tanto pedidos unitarios como por volumen para toda la planta.</p>
-      </details>
+{%- endfor %}
     </div>
   </div>
 </section>
+{%- set faqItems = home.faq %}
+{% include "partials/faq-schema.njk" %}
+
+{#- Sección de contacto: la misma de las landings, con textos de src/_data/home.json -#}
+{%- set L = home %}
+{% include "sections/landing/quote.njk" %}
 
 <!-- ==========================================================================
      SECTORES v2 — se van agregando acá, uno por uno, a medida que

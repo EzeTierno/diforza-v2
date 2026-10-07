@@ -1,0 +1,21 @@
+{#- Datos estructurados FAQPage (Google y buscadores con IA). Recibe `faqItems`.
+    Se omiten las respuestas pendientes ([[…]] o "a confirmar"). -#}
+{%- set faqValid = [] %}
+{%- for q in faqItems %}{% if '[[' not in q.respuesta and 'a confirmar' not in q.respuesta %}{% set faqValid = (faqValid.push(q), faqValid) %}{% endif %}{% endfor %}
+{%- if faqValid | length %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+{%- for q in faqValid %}
+    {
+      "@type": "Question",
+      "name": {{ q.pregunta | dump | safe }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ q.respuesta | dump | safe }} }
+    }{% if not loop.last %},{% endif %}
+{%- endfor %}
+  ]
+}
+</script>
+{%- endif %}

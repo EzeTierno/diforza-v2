@@ -145,8 +145,77 @@
   transform-origin: left;
 }
 
-.nav a:hover::after {
+.nav a:hover::after,
+.nav a[aria-current="page"]::after {
   transform: scaleX(1);
+}
+
+/* "Catálogo": link secundario con ícono, separado de las categorías (no compite con el CTA) */
+.nav__catalog {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav__catalog svg {
+  flex: none;
+  width: 15px;
+  height: 15px;
+  color: var(--orange);
+}
+
+.nav.is-open .nav__catalog {
+  align-self: stretch;
+  border-top: 1px solid rgb(var(--rgb-white) / 15%);
+  padding-top: 20px;
+}
+
+.nav.is-open .nav__catalog::after {
+  display: none;
+}
+
+@media (--lg) {
+  .nav__catalog {
+    border-left: 1px solid rgb(var(--rgb-white) / 25%);
+    padding-left: 32px;
+  }
+
+  .nav__catalog::after {
+    left: 32px;
+  }
+}
+
+/* Notebook 13-14": achicar separaciones y usar el CTA corto para que entren
+   las 3 categorías, "Catálogo" y el CTA en una línea con aire */
+@media (--lg-only) {
+  .nav {
+    gap: 22px;
+  }
+
+  .nav a {
+    white-space: nowrap;
+  }
+
+  .nav__catalog {
+    padding-left: 22px;
+  }
+
+  .nav__catalog::after {
+    left: 22px;
+  }
+
+  .header .btn--nav {
+    padding: 13px 22px;
+  }
+
+  /* En este ancho el CTA usa el label corto ("Cotizar" + ícono de WhatsApp) */
+  .header .header__cta-long {
+    display: none;
+  }
+
+  .header .header__cta-short {
+    display: inline;
+  }
 }
 
 .header .btn--nav {
@@ -182,8 +251,8 @@
 
 .header .btn--nav svg {
   flex: none;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
 }
 
 /* El CTA del navbar usa el label largo salvo en <=374px (bloque final) */
@@ -245,14 +314,15 @@
   }
 
   .header .btn--nav {
-    gap: 0;
+    gap: 6px;
     padding: 9px 16px;
     font-size: var(--fs-9-5);
     letter-spacing: 0.05em;
   }
 
   .header .btn--nav svg {
-    display: none;
+    width: 14px;
+    height: 14px;
   }
 
   .nav-toggle {

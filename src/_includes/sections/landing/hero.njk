@@ -34,8 +34,9 @@
       </ul>
 
       <div class="ctas hero-anim hero-anim--4">
-        <a href="#contacto" class="btn btn--primary">{{ H.ctaPrincipal }}
-          {{ icons['ui-flecha'] | safe }}
+        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ waText | urlencode }}" class="btn btn--primary" data-js="wa" target="_blank" rel="noopener">
+          {{ icons['ui-whatsapp'] | safe }}
+          {{ site.cta.whatsapp }}
         </a>
         <a href="#catalogo" class="btn btn--outline" data-js="catalogo">
           {{ icons['ui-descarga'] | safe }}

@@ -1,17 +1,37 @@
 {
+  "Ariel Kuznicki": {
+    "iniciales": "AK",
+    "color": "orange",
+    "texto": "Diforza nos provee indumentaria y elementos de protección personal de altísima calidad. Diego maneja nuestra cuenta con mucho profesionalismo."
+  },
+  "Guillermo Rodriguez": {
+    "iniciales": "GR",
+    "color": "blue",
+    "texto": "Productos de 1ra calidad, eternos y bien confeccionados. Si están buscando ropa de trabajo, se los recomiendo. Felicitaciones."
+  },
   "Ricardo Honaine": {
     "iniciales": "RH",
     "color": "blue",
     "texto": "Excelente atención y asesoramiento. En Diforza encontré todo lo que necesitaba en elementos de seguridad, con productos de primera calidad y entregas rápidas. Se nota el compromiso y la seriedad con la que trabajan."
   },
+  "Jeremias Miranda": {
+    "iniciales": "JM",
+    "color": "green",
+    "texto": "Muy atentos y amables. Súper recomendables, ¡gracias muchachos! Compramos mamelucos descartables XXXL."
+  },
   "Estudio Casa Viva": {
     "iniciales": "EC",
     "color": "green",
-    "texto": "Muy buena experiencia. Tienen gran variedad de productos y siempre responden con rapidez y buena predisposición. La atención es personalizada y te ayudan a encontrar justo lo que necesitás."
+    "texto": "Muy buena experiencia con DIFORZA. Tienen gran variedad de productos y siempre responden con rapidez y buena predisposición. La atención es personalizada y te ayudan a encontrar justo lo que necesitás."
   },
-  "Ariel Kuznicki": {
-    "iniciales": "AK",
+  "Federico Andrei": {
+    "iniciales": "FA",
     "color": "orange",
-    "texto": "Diforza nos provee indumentaria y elementos de protección personal de altísima calidad. Diego maneja nuestra cuenta con mucho profesionalismo."
+    "texto": "Una empresa seria, que crece, apuesta y siempre va para adelante. A seguir siempre así 🙌🏻"
+  },
+  "Gabriel Cabrera": {
+    "iniciales": "GC",
+    "color": "blue",
+    "texto": "Lo mejor en atención y muy buena calidad en sus ropas de trabajo y excelentes precios."
   }
 }

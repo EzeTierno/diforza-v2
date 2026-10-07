@@ -1,36 +1,54 @@
-<footer class="site-footer">
+{#- Footer de todas las páginas. Datos en src/_data/site.json; lo que falta se marca con [[placeholder]]. -#}
+{%- set waHref = "https://wa.me/" + site.whatsapp.number + "?text=" + ((waText or site.whatsapp.text) | urlencode) %}
+<footer class="site-footer theme-dark">
   <div class="site-footer__grid">
     <div class="site-footer__brand">
       <img src="/img/logo-blanco.webp" alt="{{ site.name }}">
+      <p class="site-footer__about">{{ site.footer.about }}</p>
+      <p class="site-footer__partners">Marcas propias <strong>ZIAO</strong> y <strong>AGIO</strong> · Socio estratégico <strong>Libus</strong></p>
     </div>
-    <div class="site-footer__col">
-      <h4>Categorías</h4>
+
+    <nav class="site-footer__col" aria-label="Productos">
+      <p class="site-footer__title">Productos</p>
       <ul>
 {%- for c in site.footer.categorias %}
         <li><a href="{{ c.href }}"{% if c.href == page.url %} aria-current="page"{% endif %}>{{ c.label }}</a></li>
 {%- endfor %}
+        <li><a href="{{ site.catalogo.href }}" data-js="catalogo">Descargar catálogo</a></li>
+{%- if site.tienda.mostrar %}
+        <li><a href="{{ site.tienda.url }}">Tienda online</a></li>
+{%- endif %}
+      </ul>
+    </nav>
+
+    <div class="site-footer__col">
+      <p class="site-footer__title">Contacto</p>
+      <ul class="site-footer__contact">
+{% include "partials/contact-items.njk" %}
       </ul>
     </div>
+
     <div class="site-footer__col">
-      <h4>Secciones</h4>
-      <div class="site-footer__links">
-        <a href="{{ site.footer.tiendaOnline }}">Tienda online</a>
-        <a href="{{ site.footer.sobreNosotros }}">Sobre nosotros</a>
-        <a href="#contacto" class="btn btn--primary">Pedir cotización</a>
-      </div>
+      <p class="site-footer__title">Seguinos</p>
+      {%- set socialClass = "site-footer__social" %}
+      {% include "partials/social-links.njk" %}
+{%- if not (site.social.instagram and site.social.linkedin and site.social.facebook) %}
+      <p class="site-footer__note">{{ "[[Links de redes]]" | rich | safe }}</p>
+{%- endif %}
+      <a href="{{ waHref }}" class="btn btn--primary site-footer__cta" data-js="wa" target="_blank" rel="noopener">{% include "partials/icon-wa.njk" %}Cotizar por WhatsApp</a>
     </div>
-    <div class="site-footer__col">
-      <div class="site-footer__links">
-        <a href="#contacto">Contacto</a>
-      </div>
-      <div class="site-footer__social">
-        <a href="{{ site.social.instagram }}" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
-        </a>
-        <a href="{{ site.social.linkedin }}" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-      </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <p>© {{ year }} {{ site.legal.razonSocial }} · {{ site.name }}. Todos los derechos reservados.</p>
+    <p>CUIT {% if site.legal.cuit %}{{ site.legal.cuit }}{% else %}{{ "[[CUIT]]" | rich | safe }}{% endif %}
+      · {% if site.legal.privacidad %}<a href="{{ site.legal.privacidad }}">Política de privacidad</a>{% else %}<span>Política de privacidad {{ "[[URL]]" | rich | safe }}</span>{% endif %}</p>
+    <div class="site-footer__fiscal">
+{%- if site.legal.dataFiscal.url and site.legal.dataFiscal.img %}
+      <a href="{{ site.legal.dataFiscal.url }}" target="_blank" rel="noopener"><img src="{{ site.legal.dataFiscal.img }}" alt="Data Fiscal ARCA" width="44" height="60" loading="lazy"></a>
+{%- else %}
+      {{ "[[QR Data Fiscal ARCA]]" | rich | safe }}
+{%- endif %}
     </div>
   </div>
 </footer>

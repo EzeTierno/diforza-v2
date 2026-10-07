@@ -30,7 +30,7 @@
       }
     ],
     "ctaPrincipal": "Pedir cotización",
-    "ctaCatalogo": "Descargar catálogo de calzado"
+    "ctaCatalogo": "Descargar catálogo"
   },
   "confianza": {
     "agrupado": false,
@@ -312,53 +312,49 @@
   },
   "faq": [
     {
-      "pregunta": "¿Qué rango de talles manejan?",
-      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+      "pregunta": "¿Qué calzado de seguridad vende Diforza?",
+      "respuesta": "Diforza vende botines, zapatos y zapatillas de seguridad CONWORK —su línea principal, con el botín negro como el más pedido— y calzado Ombú, además de botas de lluvia, botas industriales de caña larga y botas frigoríficas."
     },
     {
-      "pregunta": "¿Tienen calzado para industria alimenticia?",
-      "respuesta": "Sí, calzado blanco para industria alimenticia.[[Validar modelos]]"
+      "pregunta": "¿Tienen botines de seguridad con puntera de acero?",
+      "respuesta": "Sí. Diforza tiene botines, zapatos y zapatillas de seguridad con puntera de acero, y también modelos con puntera plástica, según el uso y el riesgo de cada puesto."
     },
     {
-      "pregunta": "¿Tienen calzado dieléctrico?",
-      "respuesta": "Respuesta a confirmar con Diforza.[[Validar]]"
+      "pregunta": "¿Qué talles de calzado de seguridad manejan?",
+      "respuesta": "Diforza tiene calzado de seguridad para todo el personal, incluidos talles especiales grandes. Con la cotización te enviamos la curva de talles de cada modelo."
     },
     {
-      "pregunta": "¿Puedo pedir una muestra de talle antes de comprar volumen?",
-      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+      "pregunta": "¿Tienen calzado para la industria alimenticia?",
+      "respuesta": "Sí. Diforza tiene botas frigoríficas blancas de media caña, con y sin puntera de acero, y zapatos de seguridad blancos, pensados para plantas de alimentos y pisos húmedos."
     },
     {
-      "pregunta": "¿Cuánto tardan en reponer un pedido?",
-      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+      "pregunta": "¿Tienen botas de lluvia con puntera de acero?",
+      "respuesta": "Sí. Diforza tiene botas de lluvia con y sin puntera de acero y botas industriales de caña larga para obra, campo y trabajos a la intemperie."
     },
     {
-      "pregunta": "¿Hacen envíos al interior del país?",
-      "respuesta": "Sí, despachamos y distribuimos indumentaria y EPP a empresas e industrias en todo el territorio nacional."
+      "pregunta": "¿Puedo reponer el mismo modelo de botín más adelante?",
+      "respuesta": "Sí. Diforza trabaja con stock permanente, así que podés reponer el mismo modelo de calzado de seguridad cuando lo necesites, para el personal nuevo o por desgaste."
     },
     {
-      "pregunta": "¿Puedo comprar por unidad?",
-      "respuesta": "Sí, en la tienda online."
+      "pregunta": "¿Venden calzado de seguridad por mayor? ¿Hay pedido mínimo?",
+      "respuesta": "Diforza vende calzado de seguridad a empresas de cualquier tamaño y no hay pedido mínimo: cotizamos desde algunos pares hasta el calzado de toda la planta."
+    },
+    {
+      "pregunta": "¿Hacen envíos a todo el país o se puede retirar?",
+      "respuesta": "Sí. Diforza hace envíos a empresas de todo el país y el envío se coordina con tu vendedor al confirmar el pedido. Si preferís, también podés retirarlo por nuestro depósito en Mataderos, CABA. Como empresa, emitimos factura A."
+    },
+    {
+      "pregunta": "¿Cómo pido una cotización de calzado de seguridad?",
+      "respuesta": "Escribinos por WhatsApp al 11 6351-3333, completá el formulario de esta página o mandanos un mail a info@diforza.com.ar. Para cotizar nos sirve saber qué modelo necesitás, la cantidad de pares por talle y la zona de entrega."
     }
   ],
   "cotizacion": {
     "titulo": "Pasanos tu curva de talles y te cotizamos",
-    "respuesta": "Te respondemos en el día[[Validar]]",
-    "catalogo": "Descargar catálogo de calzado",
+    "respuesta": "Te respondemos en el día",
+    "catalogo": "Descargar catálogo",
     "landingId": "calzado",
-    "formTitulo": "Pedí tu cotización",
-    "formBoton": "Pedir cotización",
-    "campoVariable": {
-      "tipo": "select",
-      "id": "f-personas",
-      "name": "personas_a_equipar",
-      "label": "Cantidad de personas a equipar",
-      "opciones": [
-        "1–10",
-        "11–50",
-        "51–200",
-        "+200"
-      ],
-      "error": "Contanos cuánta gente tenés que equipar."
-    }
-  }
+    "formTitulo": "¿Preferís que te contactemos por mail?",
+    "formBoton": "Pedir cotización"
+  },
+  "faqTitulo": "Preguntas frecuentes sobre calzado de seguridad"
 }

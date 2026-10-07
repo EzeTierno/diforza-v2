@@ -1,6 +1,6 @@
 /* ==========================================================================
    Landing · JS de las páginas de categoría (L2, L3, …). Se carga después de main.js.
-   Textos por página: window.SITE.waText y window.SITE.catalogName (front matter).
+   Textos por página: window.SITE.waText (front matter).
    ========================================================================== */
 (function(){
   // Marcas [VALIDAR]/[PENDIENTE]: mostrar/ocultar (preferencia por visitante)
@@ -68,24 +68,34 @@
 })();
 
 (function(){
-  // Catálogo: los CTAs "Descargar catálogo" expanden el form corto (no popup)
-  var toggle = document.querySelector('[data-js="catalog-toggle"]');
-  var panel = document.getElementById('catalogPanel');
-  var wrap = document.getElementById('catalogo');
-  if (!toggle || !panel) return;
-  function open(v){
-    panel.hidden = !v;
-    toggle.setAttribute('aria-expanded', v ? 'true' : 'false');
-  }
-  toggle.addEventListener('click', function(){ open(panel.hidden); });
-  document.querySelectorAll('[data-js="catalogo"]').forEach(function(a){
-    a.addEventListener('click', function(e){
-      e.preventDefault();
-      open(true);
-      wrap.scrollIntoView({behavior:'smooth', block:'start'});
-      setTimeout(function(){ var f = panel.querySelector('input:not([type=hidden]):not([tabindex="-1"])'); if (f) f.focus({preventScroll:true}); }, 600);
+  // Reseñas de la sección de contacto: rotan cada 7 s; pausa con el mouse o el
+  // foco encima; sin rotación automática si el usuario prefiere menos movimiento.
+  var root = document.querySelector('[data-js="review-rotator"]');
+  if (!root) return;
+  var items = root.querySelectorAll('.quote__mini');
+  var dots = root.querySelectorAll('.quote__dot');
+  if (items.length < 2) return;
+  var i = 0, timer = null;
+  function show(n){
+    i = (n + items.length) % items.length;
+    items.forEach(function(el, k){
+      el.classList.toggle('is-active', k === i);
+      if (k === i) el.removeAttribute('aria-hidden'); else el.setAttribute('aria-hidden', 'true');
     });
-  });
+    dots.forEach(function(d, k){
+      d.classList.toggle('is-active', k === i);
+      if (k === i) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current');
+    });
+  }
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function start(){ if (!reduce && !timer) timer = setInterval(function(){ show(i + 1); }, 7000); }
+  function stop(){ clearInterval(timer); timer = null; }
+  dots.forEach(function(d, k){ d.addEventListener('click', function(){ show(k); stop(); start(); }); });
+  root.addEventListener('mouseenter', stop);
+  root.addEventListener('mouseleave', start);
+  root.addEventListener('focusin', stop);
+  root.addEventListener('focusout', start);
+  start();
 })();
 
 (function(){
@@ -144,13 +154,10 @@
       // Prototipo: simula el envío. Acá va el fetch al endpoint real; si
       // falla, se conserva lo cargado y se muestra error recuperable.
       setTimeout(function(){
-        var isCat = form.id === 'form-catalogo';
         form.innerHTML =
           '<div class="lead-form__ok" role="status">' +
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>' +
-          (isCat
-            ? '<h3>¡Listo!</h3><p>Te enviamos el catálogo de ' + ((window.SITE && window.SITE.catalogName) || '') + ' por email.</p>'
-            : '<h3>¡Gracias! Recibimos tu pedido.</h3><p>Un responsable de cuenta te va a contactar para armar la cotización.</p>') +
+          '<h3>¡Gracias! Recibimos tu pedido.</h3><p>Un responsable de cuenta te va a contactar para armar la cotización.</p>' +
           '</div>';
       }, 900);
       if (status) status.textContent = '';

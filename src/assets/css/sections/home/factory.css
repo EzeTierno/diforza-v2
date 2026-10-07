@@ -102,37 +102,66 @@
 
 .factory__contact li {
   display: flex;
-  gap: 14px;
-  align-items: center;
-}
-
-.factory__contact .dot-icon {
-  display: flex;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  background: var(--navy);
-  border-radius: var(--radius-round);
-}
-
-.factory__contact .dot-icon svg {
-  width: 16px;
-  height: 16px;
-  color: var(--white);
-}
-
-.factory__contact span {
+  gap: 12px;
+  align-items: flex-start;
   font-size: var(--fs-15);
-  font-weight: var(--fw-regular);
-  color: var(--gray);
+  line-height: 22px;
+  color: var(--slate-800);
 }
 
 @media (--xl) {
-  .factory__contact span {
+  .factory__contact li {
     font-size: var(--fs-16);
   }
+}
+
+/* Mismo estilo de íconos que el footer: trazo naranja, sin círculo */
+.factory__contact svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+  margin-top: 1px;
+}
+
+.factory__contact a {
+  text-decoration: none;
+  color: var(--navy);
+}
+
+.factory__contact a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.factory__social {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.factory__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--navy);
+  border: 1px solid var(--slate-250);
+  border-radius: var(--radius-round);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.factory__social a:hover {
+  background: var(--slate-75);
+  border-color: var(--navy);
+}
+
+.factory__social svg {
+  width: 18px;
+  height: 18px;
 }
 
 .factory__media {

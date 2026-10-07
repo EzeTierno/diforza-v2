@@ -20,6 +20,7 @@
   font: var(--fw-bold) var(--fs-14)/1.4 var(--font-body);
   letter-spacing: 0.02em;
   text-align: left;
+  text-decoration: none;
   color: var(--white);
   background: none;
   border: none;
@@ -35,47 +36,145 @@
   margin-top: 2px;
 }
 
-.catalog__toggle .chev {
+.catalog__toggle svg {
   flex: none;
-  width: 18px;
-  height: 18px;
-  transition: transform 0.2s ease;
+  width: 20px;
+  height: 20px;
+  color: var(--orange);
 }
 
-.catalog__toggle[aria-expanded="true"] .chev {
-  transform: rotate(180deg);
+/* ==========================================================================
+   Ventana "Descargar catálogo" (<dialog>, todas las páginas)
+   ========================================================================== */
+html.has-modal {
+  overflow: hidden;
 }
 
-.catalog__panel {
-  margin-top: 20px;
-}
-
-.catalog__panel[hidden] {
-  display: none;
-}
-
-/* Formulario de catalogo sobre fondo navy */
-.catalog .field label {
-  color: var(--white);
-}
-
-.catalog .check {
-  color: rgb(var(--rgb-white) / 75%);
-}
-
-.catalog .check a {
-  color: var(--white);
-}
-
-.catalog .lead-form__grid {
-  gap: 14px;
-}
-
-.catalog .lead-form__ok {
+.cat-modal {
+  width: min(480px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  padding: 0;
+  overflow: auto;
+  color: var(--navy);
   background: var(--white);
-  border-radius: var(--radius-14);
+  border: none;
+  border-radius: var(--radius-18);
+  box-shadow: 0 24px 60px rgb(var(--rgb-ink-950) / 35%);
 }
 
-.catalog .field label.check {
-  color: rgb(var(--rgb-white) / 75%);
+.cat-modal::backdrop {
+  background: rgb(var(--rgb-ink-900) / 70%);
+}
+
+.cat-modal[open] {
+  animation: cat-modal-in 0.25s ease;
+}
+
+@keyframes cat-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cat-modal[open] {
+    animation: none;
+  }
+}
+
+.cat-modal__box {
+  position: relative;
+  padding: 32px 24px 28px;
+}
+
+@media (--md) {
+  .cat-modal__box {
+    padding: 40px 36px 32px;
+  }
+}
+
+.cat-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: var(--slate-700);
+  background: none;
+  border: none;
+  border-radius: var(--radius-round);
+  cursor: pointer;
+}
+
+.cat-modal__close:hover {
+  background: var(--slate-75);
+}
+
+.cat-modal__close svg {
+  width: 22px;
+  height: 22px;
+}
+
+.cat-modal__eyebrow {
+  margin: 0 0 8px;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.cat-modal__title {
+  margin: 0 0 8px;
+  font-family: var(--font-display-alt);
+  font-size: var(--fs-24);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+.cat-modal__lead {
+  margin: 0 0 22px;
+  font-size: var(--fs-14);
+  line-height: 22px;
+  color: var(--slate-800);
+}
+
+.cat-modal__lead a {
+  font-weight: var(--fw-semibold);
+  color: var(--navy);
+}
+
+.cat-modal__fields {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.cat-modal__submit,
+.cat-modal__wa {
+  justify-content: center;
+  width: 100%;
+}
+
+.cat-modal__done {
+  text-align: center;
+  padding-top: 8px;
+}
+
+.cat-modal__done > svg {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 14px;
+  color: var(--green-600);
 }

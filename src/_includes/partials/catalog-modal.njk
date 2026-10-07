@@ -1,0 +1,52 @@
+{#- Ventana "Descargar catálogo" (todas las páginas). La abren los links con data-js="catalogo".
+    Lógica en assets/js/main.js. [PENDIENTE] envío de los datos a Kommo (paso 5). -#}
+<dialog class="cat-modal" id="catModal" aria-labelledby="catModalTitle">
+  <div class="cat-modal__box">
+    <button type="button" class="cat-modal__close" data-js="cat-close" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+
+    <div data-js="cat-step-form">
+      <p class="cat-modal__eyebrow">Catálogo 2026 · PDF</p>
+      <h2 class="cat-modal__title" id="catModalTitle">Descargá el catálogo completo</h2>
+      <p class="cat-modal__lead">Indumentaria de trabajo, calzado de seguridad y EPP en un solo archivo. Dejanos tus datos y se descarga al instante.</p>
+      <form id="form-catalogo" data-js="catalog-form" novalidate>
+        <input type="hidden" name="tipo_lead" value="catalogo">
+        <input type="hidden" name="pagina" value="{{ page.url }}">
+        <div class="hp-field" aria-hidden="true"><label>No completar<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <div class="cat-modal__fields">
+          <div class="field">
+            <label for="cat-empresa">Empresa <span class="field__required">*</span></label>
+            <input id="cat-empresa" name="empresa" type="text" autocomplete="organization" required>
+            <span class="field__error">Ingresá el nombre de tu empresa.</span>
+          </div>
+          <div class="field">
+            <label for="cat-email">Email <span class="field__required">*</span></label>
+            <input id="cat-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+            <span class="field__error">Ingresá un email válido.</span>
+          </div>
+          <div class="field">
+            <label for="cat-tel">Teléfono / WhatsApp <small class="field__optional">(opcional)</small></label>
+            <input id="cat-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel">
+            <span class="field__error">Revisá el teléfono.</span>
+          </div>
+          <div class="field">
+            <label class="check"><input type="checkbox" name="consentimiento" required checked> <span>Acepto la <a href="{{ site.legal.privacidad }}" target="_blank">política de privacidad</a>.</span></label>
+            <span class="field__error">Para descargar el catálogo necesitamos que aceptes la política de privacidad.</span>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary btn--icon cat-modal__submit">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v9m0 0l-3.5-3.5M10 12l3.5-3.5M4 15.5h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Descargar catálogo
+        </button>
+      </form>
+    </div>
+
+    <div class="cat-modal__done" data-js="cat-step-done" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>
+      <p class="cat-modal__title" role="status">¡Listo! Tu catálogo se está descargando.</p>
+      <p class="cat-modal__lead">¿No se descargó? <a href="{{ site.catalogo.pdf }}" target="_blank" rel="noopener" data-js="cat-pdf">Abrilo acá</a>.</p>
+      <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ (waText or site.whatsapp.text) | urlencode }}" class="btn btn--primary btn--icon cat-modal__wa" data-js="wa" target="_blank" rel="noopener">{% include "partials/icon-wa.njk" %}{{ site.cta.whatsapp }}</a>
+    </div>
+  </div>
+</dialog>

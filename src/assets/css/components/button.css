@@ -56,6 +56,19 @@
   border: 2px solid var(--orange);
 }
 
+/* Botón con ícono a la izquierda (CTA de WhatsApp) */
+.btn--icon {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn--icon svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
 .btn--whatsapp {
   display: inline-flex;
   gap: 10px;

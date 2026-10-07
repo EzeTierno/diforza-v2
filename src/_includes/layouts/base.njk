@@ -9,13 +9,14 @@
 {%- endif %}
 {% include "partials/fonts.njk" %}
 <link rel="stylesheet" href="/assets/css/main.css">
-<script>window.SITE = {{ { whatsapp: site.whatsapp.number, waText: waText, catalogName: catalogName } | dump | safe }};</script>
+<script>window.SITE = {{ { whatsapp: site.whatsapp.number, waText: waText, catalogPdf: site.catalogo.pdf } | dump | safe }};</script>
 </head>
 <body>
 
 {% include "partials/header.njk" %}
 {{ content | safe }}
 {% include "partials/footer.njk" %}
+{% include "partials/catalog-modal.njk" %}
 {%- if waText %}
 
 {% include "partials/wa-float.njk" %}

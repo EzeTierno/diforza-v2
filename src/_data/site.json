@@ -3,7 +3,8 @@
   "url": "",
   "whatsapp": {
     "number": "5491163513333",
-    "display": "11 6351-3333"
+    "display": "11 6351-3333",
+    "text": "Hola, quiero hacer una consulta para mi empresa."
   },
   "phone": {
     "number": "+541159569713",
@@ -12,23 +13,20 @@
   "gtmId": "GTM-WKV5ZHCT",
   "nav": [
     {
-      "label": "Productos",
-      "href": "#productos"
+      "label": "Indumentaria",
+      "href": "/indumentaria-de-trabajo/"
     },
     {
-      "label": "Industrias",
-      "href": "/#industrias"
+      "label": "Calzado",
+      "href": "/calzado-de-seguridad/"
     },
     {
-      "label": "La empresa",
-      "href": "/#empresa"
-    },
-    {
-      "label": "Contacto",
-      "href": "#contacto"
+      "label": "EPP y protección",
+      "href": "/epp-proteccion-industrial/"
     }
   ],
   "footer": {
+    "about": "Distribuidora de EPP e indumentaria de trabajo. Más de 15 años equipando a empresas de todo el país, con stock permanente.",
     "categorias": [
       {
         "label": "Indumentaria general de trabajo",
@@ -42,12 +40,42 @@
         "label": "Calzado de seguridad",
         "href": "/calzado-de-seguridad/"
       }
-    ],
-    "tiendaOnline": "#",
-    "sobreNosotros": "/"
+    ]
   },
   "social": {
-    "instagram": "#",
-    "linkedin": "#"
+    "instagram": "https://www.instagram.com/diforzaok",
+    "linkedin": "https://www.linkedin.com/in/diforza/",
+    "facebook": "https://www.facebook.com/diforzaok"
+  },
+  "catalogo": {
+    "label": "Catálogo",
+    "href": "#catalogo",
+    "pdf": "/assets/docs/diforza-catalogo-2026.pdf",
+    "_nota": "Los links con data-js=\"catalogo\" abren la ventana (partials/catalog-modal.njk). PDF = catálogo sin precios, versión reducida."
+  },
+  "tienda": {
+    "mostrar": false,
+    "url": "https://www.diforza.com.ar/",
+    "_nota": "Oculta hasta la tienda propia (fase B). true = vuelven 'Ir a tienda online' y el link del footer."
+  },
+  "email": "info@diforza.com.ar",
+  "address": {
+    "line": "Albariño 2243, Mataderos, CABA",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Diforza+Albari%C3%B1o+2243+CABA"
+  },
+  "hours": "Lunes a viernes de 8 a 17 h",
+  "legal": {
+    "razonSocial": "Gennaro SRL",
+    "cuit": "30-71770058-5",
+    "privacidad": "/politica-de-privacidad/",
+    "dataFiscal": {
+      "url": "",
+      "img": "",
+      "_nota": "Data Fiscal de ARCA (F. 960/D): link y URL de la imagen del QR que da ARCA al generarlo con clave fiscal."
+    }
+  },
+  "cta": {
+    "whatsapp": "Cotizar por WhatsApp",
+    "catalogo": "Descargar catálogo"
   }
 }

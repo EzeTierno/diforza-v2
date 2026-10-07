@@ -1,57 +1,96 @@
 /* ==========================================================================
    Footer del sitio (todas las páginas)
+   4 columnas en desktop: marca · productos · contacto · redes + CTA.
+   Barra inferior con razón social, CUIT y política de privacidad.
    ========================================================================== */
 
-/* ---- Footer (igual a v1) ---- */
 .site-footer {
-  padding: 40px var(--pad) 32px;
-  color: var(--white);
+  padding: 48px var(--pad) 0;
+  color: rgb(var(--rgb-white) / 78%);
   background: var(--navy-950);
 }
 
 @media (--lg) {
   .site-footer {
-    padding: 56px var(--pad) 40px;
+    padding-top: 64px;
   }
 }
 
 @media (--xl) {
   .site-footer {
-    padding: 72px var(--pad) 56px;
+    padding-top: 80px;
   }
 }
 
+.site-footer a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .site-footer__grid {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
+  display: grid;
+  gap: 40px;
 }
 
 @media (--md) {
   .site-footer__grid {
-    gap: 24px;
-    justify-content: space-between;
-    flex-flow: row wrap;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 40px;
   }
 }
 
+@media (--lg) {
+  .site-footer__grid {
+    grid-template-columns: 1.35fr 1fr 1.35fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* ---- Marca ---- */
 .site-footer__brand img {
+  width: auto;
   height: 52px;
 }
 
 @media (--xl) {
   .site-footer__brand img {
-    height: 68px;
+    height: 64px;
   }
 }
 
-.site-footer__col h4 {
-  margin: 0 0 16px;
+.site-footer__about {
+  max-width: 34ch;
+  margin: 20px 0 0;
+  font-size: var(--fs-14);
+  line-height: 22px;
+}
+
+.site-footer__partners {
+  margin: 16px 0 0;
+  font-size: var(--fs-12);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgb(var(--rgb-white) / 60%);
+}
+
+.site-footer__partners strong {
+  font-weight: var(--fw-bold);
+  color: var(--white);
+}
+
+/* ---- Columnas ---- */
+.site-footer__title {
+  margin: 0 0 18px;
   font-size: var(--fs-12);
   font-weight: var(--fw-bold);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgb(var(--rgb-white) / 55%);
+  color: var(--orange);
 }
 
 .site-footer__col ul {
@@ -63,71 +102,148 @@
   list-style: none;
 }
 
-.site-footer__col a {
-  font-size: var(--fs-13);
-  font-weight: var(--fw-regular);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--white);
+.site-footer__col li {
+  font-size: var(--fs-14);
+  line-height: 20px;
 }
 
-.site-footer__links {
+.site-footer__col a[aria-current="page"] {
+  font-weight: var(--fw-semibold);
+}
+
+.site-footer__contact li {
   display: flex;
-  flex-direction: column;
-  gap: 14px;
+  gap: 12px;
   align-items: flex-start;
 }
 
-.site-footer__links a {
-  font-size: var(--fs-13);
-  font-weight: var(--fw-regular);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--white);
+.site-footer__contact svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  color: var(--orange);
+  margin-top: 1px;
 }
 
-.site-footer__links a.btn {
-  font-weight: var(--fw-bold);
-}
-
-.site-footer__links .btn {
-  margin-top: 4px;
-}
-
+/* ---- Redes + CTA ---- */
 .site-footer__social {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
 }
 
 .site-footer__social a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
-  background: var(--white);
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgb(var(--rgb-white) / 30%);
   border-radius: var(--radius-round);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.site-footer__social a:hover {
+  background: rgb(var(--rgb-white) / 10%);
+  border-color: var(--white);
 }
 
 .site-footer__social svg {
   width: 18px;
   height: 18px;
-  color: var(--navy);
+}
+
+.site-footer__note {
+  margin: 10px 0 0;
+}
+
+.site-footer__note .placeholder {
+  margin-left: 0;
+}
+
+.site-footer .site-footer__cta {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 14px 24px;
+  font-size: var(--fs-12-5);
+  text-decoration: none;
+  margin-top: 28px;
+}
+
+.site-footer__cta svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+/* ---- Barra inferior ---- */
+.site-footer__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px 0 28px;
+  font-size: var(--fs-12);
+  line-height: 18px;
+  color: rgb(var(--rgb-white) / 60%);
+  border-top: 1px solid rgb(var(--rgb-white) / 12%);
+  margin-top: 48px;
+}
+
+.site-footer__bottom p {
+  margin: 0;
+}
+
+.site-footer__fiscal img {
+  display: block;
+  width: 44px;
+  height: auto;
+}
+
+.site-footer__fiscal .placeholder {
+  margin-left: 0;
+}
+
+.site-footer__bottom a {
+  color: rgb(var(--rgb-white) / 78%);
+}
+
+@media (--md) {
+  .site-footer__bottom {
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-footer__bottom p:first-child {
+    margin-right: auto;
+  }
+}
+
+@media (--lg) {
+  .site-footer__bottom {
+    margin-top: 64px;
+  }
 }
 
 /* Mobile: links con área táctil de 44px (el espacio entre links pasa al padding) */
 @media (--below-md) {
-  .site-footer__col ul,
-  .site-footer__links {
+  .site-footer__col ul {
     gap: 0;
   }
 
-  .site-footer__col li > a,
-  .site-footer__links > a:not(.btn) {
+  .site-footer__col li > a {
     display: inline-block;
-    padding: 14px 0;
+    padding: 12px 0;
+  }
+
+  .site-footer__contact li {
+    align-items: center;
+  }
+
+  .site-footer__contact svg {
+    margin-top: 0;
   }
 }

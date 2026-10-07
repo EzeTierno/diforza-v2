@@ -11,6 +11,7 @@ const targets = browserslistToTargets(browserslist());
 module.exports = function (eleventyConfig) {
   // Archivos que se copian tal cual (no se procesan como plantillas)
   eleventyConfig.addPassthroughCopy("src/assets/js");
+  eleventyConfig.addPassthroughCopy("src/assets/docs"); // catálogo PDF
   eleventyConfig.addPassthroughCopy("src/img");     // imágenes compartidas
   eleventyConfig.addPassthroughCopy("src/*/img");   // imágenes propias de cada landing
 
@@ -38,6 +39,9 @@ module.exports = function (eleventyConfig) {
     },
   });
   eleventyConfig.addWatchTarget("src/assets/");
+
+  // Año para el copyright del footer
+  eleventyConfig.addGlobalData("year", () => new Date().getFullYear());
 
   // Textos de los JSON de landings: [[texto]] → marca de placeholder [VALIDAR]/[PENDIENTE]
   eleventyConfig.addFilter("rich", (s) =>

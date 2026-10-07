@@ -29,7 +29,7 @@
       }
     ],
     "ctaPrincipal": "Pedir cotización por volumen",
-    "ctaCatalogo": "Descargar catálogo de indumentaria"
+    "ctaCatalogo": "Descargar catálogo"
   },
   "confianza": {
     "agrupado": false,
@@ -273,53 +273,45 @@
   },
   "faq": [
     {
-      "pregunta": "¿Hacen talles especiales?",
-      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+      "pregunta": "¿Qué ropa de trabajo fabrica Diforza?",
+      "respuesta": "Diforza fabrica su propia indumentaria de trabajo en Mataderos, CABA: camisas y pantalones de gabardina (clásicos y cargo), camperas, buzos, remeras, chombas, mamelucos y ropa de alta visibilidad. Los colores más pedidos son azul marino, beige y gris."
     },
     {
-      "pregunta": "¿Personalizan con el logo de la empresa? ¿Cuál es el mínimo?",
-      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+      "pregunta": "¿Puedo personalizar la ropa de trabajo con el logo de mi empresa?",
+      "respuesta": "Sí. Como la indumentaria de Diforza es de fabricación propia, se personaliza con el logo de tu empresa en bordado, estampado o transfer, y se puede sumar cinta reflectiva o colores a pedido. Antes de producir te enviamos el diseño para aprobar."
     },
     {
-      "pregunta": "¿Puedo ver una muestra antes de comprar volumen?",
-      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+      "pregunta": "¿Qué talles de uniformes de trabajo tienen?",
+      "respuesta": "Diforza tiene talles para todo el personal, desde XS hasta talles especiales grandes. Con la cotización te enviamos la tabla de talles de cada prenda para que armes el pedido sin errores."
     },
     {
-      "pregunta": "¿Aseguran continuidad del modelo para reponer?",
-      "respuesta": "Sí. Con continuidad de línea: la prenda que estandarizás hoy la vas a poder reponer el año que viene.[[Validar]]"
+      "pregunta": "¿Puedo reponer el mismo modelo de uniforme más adelante?",
+      "respuesta": "Sí. La ropa de trabajo de Diforza es de línea propia y con stock permanente: la prenda que elegís hoy la vas a poder reponer el año que viene, para el personal nuevo o por desgaste, sin que tu equipo quede vestido de tres formas distintas."
     },
     {
-      "pregunta": "¿Cuánto tardan en entregar un pedido de volumen?",
-      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+      "pregunta": "¿Tienen ropa de trabajo de alta visibilidad y para lluvia?",
+      "respuesta": "Sí. Diforza tiene camisas y pantalones reflectivos, mamelucos de alta visibilidad y chalecos reflectivos, además de capas y trajes de lluvia y una línea nueva de indumentaria impermeable de fabricación propia."
     },
     {
-      "pregunta": "¿Hacen envíos al interior del país?",
-      "respuesta": "Sí, despachamos y distribuimos indumentaria y EPP a empresas e industrias en todo el territorio nacional."
+      "pregunta": "¿Venden ropa de trabajo por mayor? ¿Hay pedido mínimo?",
+      "respuesta": "Diforza vende indumentaria de trabajo a empresas de cualquier tamaño y no hay pedido mínimo: cotizamos desde algunas prendas hasta los uniformes de toda la planta."
     },
     {
-      "pregunta": "¿Puedo comprar por unidad?",
-      "respuesta": "Sí, en la tienda online."
+      "pregunta": "¿Hacen envíos a todo el país o se puede retirar?",
+      "respuesta": "Sí. Diforza hace envíos a empresas de todo el país y el envío se coordina con tu vendedor al confirmar el pedido. Si preferís, también podés retirarlo por nuestro depósito en Mataderos, CABA. Como empresa, emitimos factura A."
+    },
+    {
+      "pregunta": "¿Cómo pido una cotización de ropa de trabajo?",
+      "respuesta": "Escribinos por WhatsApp al 11 6351-3333, completá el formulario de esta página o mandanos un mail a info@diforza.com.ar. Para cotizar nos sirve saber cuántas personas hay que vestir, qué prendas necesitás, los talles si los tenés y si llevan el logo de tu empresa."
     }
   ],
   "cotizacion": {
     "titulo": "Decinos cuánta gente tenés que vestir",
-    "respuesta": "Te respondemos en el día[[Validar]]",
-    "catalogo": "Descargar catálogo de indumentaria",
+    "respuesta": "Te respondemos en el día",
+    "catalogo": "Descargar catálogo",
     "landingId": "l2-indumentaria",
-    "formTitulo": "Pedí tu cotización por volumen",
-    "formBoton": "Pedir cotización por volumen",
-    "campoVariable": {
-      "tipo": "select",
-      "id": "f-personas",
-      "name": "personas_a_equipar",
-      "label": "Cantidad de personas a equipar",
-      "opciones": [
-        "1–10",
-        "11–50",
-        "51–200",
-        "+200"
-      ],
-      "error": "Contanos cuánta gente tenés que vestir."
-    }
-  }
+    "formTitulo": "¿Preferís que te contactemos por mail?",
+    "formBoton": "Pedir cotización"
+  },
+  "faqTitulo": "Preguntas frecuentes sobre ropa de trabajo"
 }

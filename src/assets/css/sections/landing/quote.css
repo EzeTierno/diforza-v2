@@ -83,11 +83,104 @@
   background: var(--green-500);
   border-radius: var(--radius-round);
   box-shadow: 0 0 0 4px rgb(var(--rgb-green-500) / 20%);
+  animation: quote-ping 2s ease-out infinite;
   content: "";
 }
 
-.quote__mini {
+/* "Timbre": el punto verde emite una onda que se expande y desvanece */
+@keyframes quote-ping {
+  0% {
+    box-shadow: 0 0 0 0 rgb(var(--rgb-green-500) / 55%);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgb(var(--rgb-green-500) / 0%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(var(--rgb-green-500) / 0%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quote__reply::before {
+    animation: none;
+  }
+}
+
+.quote__hint {
+  margin: 12px 0 28px;
+  font-size: var(--fs-13);
+  color: rgb(var(--rgb-white) / 70%);
+}
+
+/* Reseñas que rotan: todas ocupan la misma celda (el alto lo define la más
+   larga, así no salta el layout) y se alternan con un fundido. */
+.quote__reviews {
   margin: 0 0 28px;
+}
+
+.quote__reviews-track {
+  display: grid;
+}
+
+.quote__reviews-track > .quote__mini {
+  opacity: 0;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s;
+  grid-area: 1 / 1;
+  visibility: hidden;
+}
+
+.quote__reviews-track > .quote__mini.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.quote__stars {
+  display: flex;
+  gap: 2px;
+  color: var(--google-yellow);
+  margin-bottom: 10px;
+}
+
+.quote__stars svg {
+  width: 16px;
+  height: 16px;
+}
+
+.quote__dots {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.quote__dot {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.quote__dot::before {
+  position: absolute;
+  inset: 8px;
+  background: rgb(var(--rgb-white) / 30%);
+  border-radius: var(--radius-round);
+  transition: background-color 0.2s ease;
+  content: "";
+}
+
+.quote__dot.is-active::before {
+  background: var(--white);
+}
+
+.quote__mini {
+  margin: 0;
   padding: 20px 22px;
   background: rgb(var(--rgb-white) / 6%);
   border: 1px solid rgb(var(--rgb-white) / 12%);
