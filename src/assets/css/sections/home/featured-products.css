@@ -4,7 +4,7 @@
 
 /* ---- Sector 4: Productos destacados (carrusel difuminado en los bordes) ---- */
 .featured-products {
-  background: #f2f4f6;
+  background: var(--slate-75);
   padding-bottom: 52px;
 }
 
@@ -39,9 +39,6 @@
     gap: 24px;
     align-items: flex-start;
     justify-content: space-between;
-  }
-
-  .featured-products__top {
     padding: 60px var(--pad) 0;
   }
 }
@@ -57,8 +54,8 @@
   gap: 14px;
   align-items: center;
   margin: 0 0 14px;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: var(--fs-11);
+  font-weight: var(--fw-semibold);
   letter-spacing: 0.16em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -70,13 +67,13 @@
   width: 36px;
   height: 3px;
   background: var(--orange);
-  border-radius: 2px;
+  border-radius: var(--radius-2);
   content: "";
 }
 
 @media (--xl) {
   .featured-products__eyebrow {
-    font-size: 12px;
+    font-size: var(--fs-12);
     margin-bottom: 16px;
   }
 }
@@ -87,9 +84,9 @@
 
 .featured-products__heading h2 {
   margin: 0 0 8px;
-  font-family: Poppins, Montserrat, Arial, sans-serif;
-  font-size: 28px;
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: var(--fs-28);
+  font-weight: var(--fw-black);
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--navy);
@@ -97,13 +94,13 @@
 
 @media (--md) {
   .featured-products__heading h2 {
-    font-size: 36px;
+    font-size: var(--fs-36);
   }
 }
 
 @media (--xl) {
   .featured-products__heading h2 {
-    font-size: 44px;
+    font-size: var(--fs-44);
     margin-bottom: 10px;
   }
 }
@@ -111,15 +108,15 @@
 .featured-products__heading p {
   max-width: 46ch;
   margin: 0;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-light);
   line-height: 22px;
   color: var(--gray);
 }
 
 @media (--xl) {
   .featured-products__heading p {
-    font-size: 16px;
+    font-size: var(--fs-16);
     line-height: 24px;
   }
 }
@@ -130,7 +127,7 @@
   gap: 10px;
   align-items: center;
   align-self: flex-start;
-  background: #fff;
+  background: var(--white);
 }
 
 .featured-products__top .btn svg {
@@ -152,15 +149,8 @@
   mask-image: linear-gradient(
     to right,
     transparent 0,
-    #000 24px,
-    #000 calc(100% - 24px),
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    #000 24px,
-    #000 calc(100% - 24px),
+    var(--black) 24px,
+    var(--black) calc(100% - 24px),
     transparent 100%
   );
   -webkit-overflow-scrolling: touch;
@@ -191,15 +181,8 @@
     mask-image: linear-gradient(
       to right,
       transparent 0,
-      #000 40px,
-      #000 calc(100% - 40px),
-      transparent 100%
-    );
-    mask-image: linear-gradient(
-      to right,
-      transparent 0,
-      #000 40px,
-      #000 calc(100% - 40px),
+      var(--black) 40px,
+      var(--black) calc(100% - 40px),
       transparent 100%
     );
   }
@@ -228,10 +211,10 @@
   width: 210px;
   padding: 44px 18px 22px;
   text-align: center;
-  background: #fff;
-  border: 1px solid #e8ebee;
-  border-radius: 14px;
-  box-shadow: 0 4px 18px rgb(0 53 104 / 6%);
+  background: var(--white);
+  border: 1px solid var(--slate-150);
+  border-radius: var(--radius-14);
+  box-shadow: 0 4px 18px rgb(var(--rgb-navy) / 6%);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -239,7 +222,7 @@
 }
 
 .featured-products__card:hover {
-  box-shadow: 0 10px 26px rgb(0 53 104 / 12%);
+  box-shadow: 0 10px 26px rgb(var(--rgb-navy) / 12%);
   transform: translateY(-3px);
 }
 
@@ -279,8 +262,8 @@
 }
 
 .featured-products__name {
-  font-size: 12px;
-  font-weight: 700;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-bold);
   line-height: 1.35;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -289,34 +272,34 @@
 
 @media (--xl) {
   .featured-products__name {
-    font-size: 13px;
+    font-size: var(--fs-13);
   }
 }
 
 .featured-products__cat {
   margin: -6px 0 0;
-  font-size: 12px;
-  font-weight: 300;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-light);
   color: var(--gray);
 }
 
 @media (--xl) {
   .featured-products__cat {
-    font-size: 13px;
+    font-size: var(--fs-13);
   }
 }
 
 .featured-products__more {
   display: inline-block;
   padding: 10px 26px;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: var(--fs-11);
+  font-weight: var(--fw-bold);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
-  background: var(--orange);
-  border-radius: 999px;
+  color: var(--white);
+  background: var(--color-primary);
+  border-radius: var(--radius-pill);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -324,14 +307,14 @@
 }
 
 .featured-products__more:hover {
-  box-shadow: 0 8px 16px rgb(255 126 52 / 32%);
+  box-shadow: 0 8px 16px rgb(var(--rgb-orange) / 32%);
   transform: translateY(-2px);
 }
 
 @media (--xl) {
   .featured-products__more {
     padding: 11px 30px;
-    font-size: 12px;
+    font-size: var(--fs-12);
   }
 }
 
@@ -342,18 +325,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 24px;
-  background: #fff;
-  border-radius: 4px;
-}
-
-.product-tile {
+  background: var(--white);
+  border-radius: var(--radius-4);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
 .product-tile:hover {
-  box-shadow: 0 14px 28px rgb(0 0 0 / 16%);
+  box-shadow: 0 14px 28px rgb(var(--rgb-black) / 16%);
   transform: translateY(-4px);
 }
 
@@ -372,7 +352,7 @@
   width: 52px;
   height: 52px;
   border: 2px solid var(--navy);
-  border-radius: 50%;
+  border-radius: var(--radius-round);
 }
 
 @media (--xl) {
@@ -397,30 +377,30 @@
 
 .product-tile h3 {
   margin: 0 0 10px;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: var(--fs-20);
+  font-weight: var(--fw-bold);
   line-height: 26px;
   color: var(--navy);
 }
 
 @media (--xl) {
   .product-tile h3 {
-    font-size: 24px;
+    font-size: var(--fs-24);
     line-height: 30px;
   }
 }
 
 .product-tile p {
   margin: 0;
-  font-size: 15px;
-  font-weight: 300;
+  font-size: var(--fs-15);
+  font-weight: var(--fw-light);
   line-height: 24px;
   color: var(--gray);
 }
 
 @media (--xl) {
   .product-tile p {
-    font-size: 16px;
+    font-size: var(--fs-16);
     line-height: 26px;
   }
 }
@@ -432,7 +412,7 @@
      asi que la eyebrow necesita el selector mas especifico */
   .featured-products__heading .featured-products__eyebrow {
     gap: 9px;
-    font-size: 10px;
+    font-size: var(--fs-10);
     letter-spacing: 0.1em;
     margin-bottom: 12px;
   }
@@ -443,14 +423,14 @@
   }
 
   .featured-products__heading h2 {
-    font-size: 40px;
+    font-size: var(--fs-40);
     line-height: 1.05;
     margin-bottom: 10px;
   }
 
   .featured-products__heading p:not(.featured-products__eyebrow) {
     max-width: 75%;
-    font-size: 14px;
+    font-size: var(--fs-14);
     line-height: 21px;
   }
 

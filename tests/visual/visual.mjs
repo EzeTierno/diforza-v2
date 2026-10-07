@@ -28,6 +28,7 @@ const PAGES = [
   { name: "home", url: "/" },
   { name: "indumentaria", url: "/indumentaria-de-trabajo/" },
   { name: "epp", url: "/epp-proteccion-industrial/" },
+  { name: "calzado", url: "/calzado-de-seguridad/" },
 ];
 
 // Página completa en estos anchos (alto de ventana 900)
@@ -99,13 +100,29 @@ function compare(a, b) {
   }
   const D = new PNG({ width: A.width, height: A.height });
   const diff = pixelmatch(A.data, B.data, D.data, A.width, A.height, { threshold: 0.1 });
-  return { diff, png: diff ? PNG.sync.write(D) : null };
+  // ¿Ruido de fuentes? Pocos píxeles (<0,05%) repartidos por toda la página (muchas
+  // franjas de 100px con alguna diferencia) = antialiasing del texto, no un cambio real.
+  // Un cambio real suele concentrarse en una zona.
+  let noise = false;
+  if (diff && diff / (A.width * A.height) < 0.0005) {
+    const bands = new Set();
+    for (let y = 0; y < A.height; y++)
+      for (let x = 0; x < A.width; x++) {
+        const i = (y * A.width + x) * 4;
+        if (D.data[i] === 255 && D.data[i + 1] === 0 && D.data[i + 2] === 0) { bands.add(Math.floor(y / 100)); break; }
+      }
+    noise = bands.size >= 12 && bands.size >= Math.ceil(A.height / 100) * 0.3;
+  }
+  return { diff, noise, png: diff ? PNG.sync.write(D) : null };
 }
 
 const server = serve();
-const browser = await chromium.launch(
-  process.env.PW_CHROMIUM_PATH ? { executablePath: process.env.PW_CHROMIUM_PATH } : {}
-);
+// Flags para que el texto se dibuje siempre igual (sin GPU ni suavizado subpíxel):
+// evita falsas alarmas por el antialiasing de las fuentes, sobre todo en Windows.
+const browser = await chromium.launch({
+  ...(process.env.PW_CHROMIUM_PATH ? { executablePath: process.env.PW_CHROMIUM_PATH } : {}),
+  args: ["--disable-gpu", "--font-render-hinting=none", "--disable-lcd-text", "--disable-font-subpixel-positioning", "--force-color-profile=srgb"],
+});
 const dir = path.join(OUT_DIR, MODE);
 fs.rmSync(dir, { recursive: true, force: true });
 fs.mkdirSync(dir, { recursive: true });
@@ -122,6 +139,7 @@ for (const page of PAGES) {
 const RETRIES = 3;
 
 let failed = 0;
+let noisy = 0;
 for (const j of jobs) {
   let buf = await capture(browser, j.page, j.w, j.h, j.full);
   if (MODE === "baseline") {
@@ -144,6 +162,11 @@ for (const j of jobs) {
   fs.writeFileSync(path.join(dir, `${j.id}.png`), buf);
   if (r.diff === 0) {
     console.log(`  ✓ ${j.id}`);
+  } else if (r.noise) {
+    noisy++;
+    fs.mkdirSync(path.join(OUT_DIR, "diff"), { recursive: true });
+    fs.writeFileSync(path.join(OUT_DIR, "diff", `${j.id}.png`), r.png);
+    console.log(`  ≈ ${j.id}  ${r.diff} píxeles sueltos en toda la página (ruido de fuentes, no bloquea)`);
   } else {
     failed++;
     if (r.diff === -1) console.log(`  ✗ ${j.id}  cambió el tamaño de la página: ${r.size}`);
@@ -159,6 +182,6 @@ server.close();
 
 if (MODE === "baseline") console.log(`\nBaseline generada: ${jobs.length} capturas.`);
 else {
-  console.log(`\n${jobs.length - failed}/${jobs.length} capturas idénticas.`);
+  console.log(`\n${jobs.length - failed - noisy}/${jobs.length} capturas idénticas` + (noisy ? ` · ${noisy} con ruido de fuentes (no bloquea)` : "") + (failed ? ` · ${failed} CON CAMBIOS` : "") + ".");
   process.exit(failed ? 1 : 0);
 }

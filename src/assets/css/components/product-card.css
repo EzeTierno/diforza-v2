@@ -9,17 +9,17 @@
   flex-direction: column;
   width: 250px;
   overflow: hidden;
-  background: #fff;
-  border: 1px solid #e6eaee;
-  border-radius: 14px;
-  box-shadow: 0 4px 18px rgb(0 53 104 / 6%);
+  background: var(--white);
+  border: 1px solid var(--slate-150);
+  border-radius: var(--radius-14);
+  box-shadow: 0 4px 18px rgb(var(--rgb-navy) / 6%);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
 
 .product-card:hover {
-  box-shadow: 0 12px 28px rgb(0 53 104 / 12%);
+  box-shadow: 0 12px 28px rgb(var(--rgb-navy) / 12%);
   transform: translateY(-3px);
 }
 
@@ -41,8 +41,8 @@
   align-items: center;
   justify-content: center;
   height: 190px;
-  background: #f6f8fa;
-  border-bottom: 1px solid #eef1f4;
+  background: var(--slate-50);
+  border-bottom: 1px solid var(--slate-100);
 }
 
 @media (--xl) {
@@ -62,13 +62,13 @@
 
 /* Placeholder de foto: silueta de la prenda + etiqueta, hasta tener la foto real en azul marino */
 .product-card__media.is-placeholder {
-  background: repeating-linear-gradient(135deg, #f6f8fa 0 12px, #f1f4f7 12px 24px);
+  background: repeating-linear-gradient(135deg, var(--slate-50) 0 12px, var(--slate-75) 12px 24px);
 }
 
 .product-card__media.is-placeholder svg {
   width: 92px;
   height: 92px;
-  color: #9fb2c5;
+  color: var(--slate-400);
   stroke-width: 1;
 }
 
@@ -83,19 +83,19 @@
   position: absolute;
   bottom: 10px;
   left: 50%;
-  font-size: 9.5px;
-  font-weight: 600;
+  font-size: var(--fs-9-5);
+  font-weight: var(--fw-semibold);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   white-space: nowrap;
-  color: #8a9bab;
+  color: var(--slate-450);
   transform: translateX(-50%);
 }
 
 .product-card .badge {
-  z-index: 2;
-  background: #fff;
-  box-shadow: 0 2px 8px rgb(0 53 104 / 8%);
+  z-index: var(--z-layer-2);
+  background: var(--white);
+  box-shadow: 0 2px 8px rgb(var(--rgb-navy) / 8%);
 }
 
 .product-card__body {
@@ -114,9 +114,9 @@
 
 .product-card__name {
   margin: 0;
-  font-family: Montserrat, Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: var(--fs-13);
+  font-weight: var(--fw-bold);
   line-height: 1.35;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -125,14 +125,14 @@
 
 @media (--xl) {
   .product-card__name {
-    font-size: 14px;
+    font-size: var(--fs-14);
   }
 }
 
 .product-card__code {
   margin: -6px 0 0;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-regular);
   color: var(--gray);
 }
 
@@ -141,23 +141,23 @@
   grid-template-columns: auto 1fr;
   gap: 6px 12px;
   margin: 0;
-  border-top: 1px solid #eef1f4;
+  border-top: 1px solid var(--slate-100);
   padding-top: 12px;
 }
 
 .product-card__specs dt {
-  font-size: 10px;
-  font-weight: 600;
+  font-size: var(--fs-10);
+  font-weight: var(--fw-semibold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #8a96a3;
+  color: var(--slate-500);
   padding-top: 2px;
 }
 
 .product-card__specs dd {
   margin: 0;
-  font-size: 12.5px;
-  font-weight: 500;
+  font-size: var(--fs-12-5);
+  font-weight: var(--fw-medium);
   line-height: 1.4;
   color: var(--navy);
 }
@@ -168,16 +168,13 @@
   align-items: center;
   justify-content: center;
   padding: 12px 20px;
-  font:
-    700 11.5px/1 Montserrat,
-    Arial,
-    sans-serif;
+  font: var(--fw-bold) var(--fs-11-5)/1 var(--font-body);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #fff;
-  background: var(--orange);
+  color: var(--white);
+  background: var(--color-primary);
   border: none;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -186,7 +183,7 @@
 }
 
 .product-card__cta:hover {
-  box-shadow: 0 8px 16px rgb(255 126 52 / 32%);
+  box-shadow: 0 8px 16px rgb(var(--rgb-orange) / 32%);
   transform: translateY(-2px);
 }
 
@@ -197,14 +194,14 @@
 
 /* Foto real sobre fondo blanco (los JPG de producto vienen con fondo blanco) */
 .product-card__media:not(.is-placeholder) {
-  background: #fff;
+  background: var(--white);
 }
 
 /* S5 · foto provisoria: la etiqueta va sobre la foto */
 .product-card__media:not(.is-placeholder) .product-card__phlabel {
   padding: 2px 6px;
-  color: #c2561a;
-  background: #fff4ec;
+  color: var(--orange-700);
+  background: var(--orange-50);
   border: 1px dashed var(--orange);
-  border-radius: 4px;
+  border-radius: var(--radius-4);
 }

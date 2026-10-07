@@ -7,7 +7,7 @@
   position: relative;
   padding: 56px var(--pad);
   overflow: hidden;
-  color: #fff;
+  color: var(--white);
   background: var(--navy);
 }
 
@@ -27,7 +27,7 @@
 .category-lines::before {
   position: absolute;
   inset: -20% -40% -20% 62%;
-  background: linear-gradient(90deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 1.5%));
+  background: linear-gradient(90deg, rgb(var(--rgb-white) / 5%), rgb(var(--rgb-white) / 1.5%));
   transform: skewX(-28deg);
   content: "";
   pointer-events: none;
@@ -59,34 +59,30 @@
   min-width: 0;
 }
 
-.category-lines__copy .eyebrow {
-  color: rgb(255 255 255 / 80%);
-}
-
 .category-lines__copy .section-title {
   max-width: 13ch;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 20px;
 }
 
 .category-lines--wide-title .category-lines__copy .section-title {
   max-width: 21ch;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 20px;
 }
 
 .category-lines__copy p {
   max-width: 40ch;
   margin: 0 0 28px;
-  font-size: 15px;
-  font-weight: 300;
+  font-size: var(--fs-15);
+  font-weight: var(--fw-light);
   line-height: 1.6;
-  color: rgb(255 255 255 / 86%);
+  color: rgb(var(--rgb-white) / 86%);
 }
 
 @media (--xl) {
   .category-lines__copy p {
-    font-size: 17px;
+    font-size: var(--fs-17);
     margin-bottom: 34px;
   }
 }
@@ -131,18 +127,18 @@
   gap: 14px;
   align-items: center;
   padding: 15px 0;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-semibold);
   line-height: 1.35;
-  color: #fff;
-  border-bottom: 1px solid rgb(255 255 255 / 14%);
+  color: var(--white);
+  border-bottom: 1px solid rgb(var(--rgb-white) / 14%);
 }
 
 @media (--xl) {
   .category-lines__list li {
     gap: 18px;
     padding: 19px 0;
-    font-size: 16px;
+    font-size: var(--fs-16);
   }
 }
 
@@ -153,8 +149,8 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  border: 1.5px solid rgb(255 255 255 / 35%);
-  border-radius: 50%;
+  border: 1.5px solid rgb(var(--rgb-white) / 35%);
+  border-radius: var(--radius-round);
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease;
@@ -163,7 +159,7 @@
 .category-lines__ic svg {
   width: 21px;
   height: 21px;
-  color: #fff;
+  color: var(--white);
   stroke-width: 1.5;
 }
 
@@ -188,7 +184,7 @@
   .category-lines__copy .btn,
   .quote .btn--whatsapp {
     padding: 11px 20px;
-    font-size: 11px;
+    font-size: var(--fs-11);
   }
 }
 
@@ -205,19 +201,19 @@
 }
 
 .category-lines__txt strong {
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
 }
 
 .category-lines__txt small {
-  font-size: 12.5px;
-  font-weight: 300;
+  font-size: var(--fs-12-5);
+  font-weight: var(--fw-light);
   line-height: 1.45;
-  color: rgb(255 255 255 / 72%);
+  color: rgb(var(--rgb-white) / 72%);
 }
 
 @media (--xl) {
   .category-lines__txt small {
-    font-size: 13.5px;
+    font-size: var(--fs-13-5);
   }
 
   .category-lines__txt {

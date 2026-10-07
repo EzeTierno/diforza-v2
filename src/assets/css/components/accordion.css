@@ -9,7 +9,7 @@
 
 .accordion details {
   padding: 18px 0;
-  border-top: 1px solid #d7e0e8;
+  border-top: 1px solid var(--slate-200);
 }
 
 .accordion details:first-child {
@@ -22,8 +22,8 @@
   gap: 16px;
   align-items: center;
   justify-content: space-between;
-  font-size: 17px;
-  font-weight: 700;
+  font-size: var(--fs-17);
+  font-weight: var(--fw-bold);
   line-height: 24px;
   color: var(--navy);
   cursor: pointer;
@@ -32,7 +32,7 @@
 
 @media (--xl) {
   .accordion summary {
-    font-size: 20px;
+    font-size: var(--fs-20);
     line-height: 27px;
   }
 }
@@ -55,15 +55,15 @@
 
 .accordion__panel {
   margin: 12px 0 0;
-  font-size: 15px;
-  font-weight: 300;
+  font-size: var(--fs-15);
+  font-weight: var(--fw-light);
   line-height: 24px;
   color: var(--gray);
 }
 
 @media (--xl) {
   .accordion__panel {
-    font-size: 16px;
+    font-size: var(--fs-16);
     line-height: 26px;
     margin-top: 16px;
   }

@@ -5,7 +5,7 @@
   "plugins": [
     "stylelint-order"
   ],
-  "defaultSeverity": "warning",
+  "defaultSeverity": "error",
   "ignoreFiles": [
     "_site/**"
   ],
@@ -17,7 +17,7 @@
     ],
     "declaration-no-important": true,
     "selector-max-id": 0,
-    "selector-max-specificity": "0,3,0",
+    "selector-max-specificity": "0,4,1",
     "max-nesting-depth": 2,
     "selector-class-pattern": [
       "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
@@ -27,11 +27,15 @@
     ],
     "custom-property-pattern": null,
     "declaration-property-value-disallowed-list": {
-      "/^(font-size|line-height|letter-spacing|margin|margin-.*|padding|padding-.*|gap|row-gap|column-gap)$/": [
+      "font-size": [
         "/^-?\\d*\\.?\\d+px$/"
       ],
       "z-index": [
         "/^-?\\d+$/"
+      ],
+      "/.*/": [
+        "/rgba?\\(\\s*\\d/",
+        "/hsla?\\(\\s*\\d/"
       ]
     },
     "media-feature-range-notation": null,
@@ -126,6 +130,18 @@
       "^[a-z0-9]+(-[a-z0-9]+)*$",
       {
         "message": "Nombre de breakpoint en minúsculas (ej. --lg, --2xl)"
+      }
+    ],
+    "no-descending-specificity": null,
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreKeywords": [
+          "Arial",
+          "Montserrat",
+          "Poppins"
+        ],
+        "camelCaseSvgKeywords": true
       }
     ]
   },

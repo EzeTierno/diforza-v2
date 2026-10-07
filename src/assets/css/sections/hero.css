@@ -59,13 +59,13 @@
      acompana el viewport hasta un techo de 900px. */
   min-height: max(var(--hero-min), min(100svh, 900px));
   overflow: hidden;
-  background: #eef1f4;
+  background: var(--slate-100);
 }
 
 .hero__bg {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: var(--z-base);
 }
 
 .hero__bg img {
@@ -81,9 +81,9 @@
     inset: 0;
     background: linear-gradient(
       to bottom,
-      rgb(255 255 255 / 92%) 0%,
-      rgb(255 255 255 / 86%) 45%,
-      rgb(255 255 255 / 60%) 100%
+      rgb(var(--rgb-white) / 92%) 0%,
+      rgb(var(--rgb-white) / 86%) 45%,
+      rgb(var(--rgb-white) / 60%) 100%
     );
     content: "";
   }
@@ -101,7 +101,7 @@
 .hero__shine {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: var(--z-layer-1);
   overflow: hidden;
   pointer-events: none;
 }
@@ -112,9 +112,9 @@
   inset: -15% -55% -15% 95%;
   background: linear-gradient(
     90deg,
-    rgb(0 18 38 / 10%) 0%,
-    rgb(0 18 38 / 5.5%) 45%,
-    rgb(0 18 38 / 8.5%) 100%
+    rgb(var(--rgb-ink-875) / 10%) 0%,
+    rgb(var(--rgb-ink-875) / 5.5%) 45%,
+    rgb(var(--rgb-ink-875) / 8.5%) 100%
   );
   transform: skewX(-28deg) translateX(0);
   transform-origin: top left;
@@ -128,9 +128,9 @@
   inset: -15% 47% -15% -55%;
   background: linear-gradient(
     90deg,
-    rgb(255 255 255 / 38%) 0%,
-    rgb(255 255 255 / 26%) 55%,
-    rgb(255 255 255 / 42%) 100%
+    rgb(var(--rgb-white) / 38%) 0%,
+    rgb(var(--rgb-white) / 26%) 55%,
+    rgb(var(--rgb-white) / 42%) 100%
   );
   transform: skewX(-28deg) translateX(0);
   transform-origin: top left;
@@ -141,7 +141,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: var(--z-layer-2);
   display: none;
   height: 88%;
   pointer-events: none;
@@ -193,7 +193,7 @@
    Al scrollear se desvanece mientras el navbar toma fondo solido; el ojo
    lee las dos transiciones como una sola y no percibe el cambio de capa. */
 .hero__worker--over {
-  z-index: 40;
+  z-index: var(--z-over-header);
   transition: opacity 0.2s ease;
   clip-path: inset(0 0 calc(100% - var(--over-h, 0px)) 0);
 }
@@ -209,7 +209,7 @@
 
 .hero__inner {
   position: relative;
-  z-index: 3;
+  z-index: var(--z-layer-3);
   display: flex;
   align-items: center;
   width: 100%;
@@ -256,9 +256,9 @@
   gap: 14px;
   align-items: center;
   margin: 0 0 18px;
-  font-family: Montserrat, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  font-weight: var(--fw-semibold);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--navy);
@@ -269,22 +269,22 @@
   width: 36px;
   height: 3px;
   background: var(--orange);
-  border-radius: 2px;
+  border-radius: var(--radius-2);
   content: "";
 }
 
 @media (--xl) {
   .hero__eyebrow {
-    font-size: 13px;
+    font-size: var(--fs-13);
     margin-bottom: 22px;
   }
 }
 
 .hero__copy h1 {
   margin: 0 0 18px;
-  font-family: Poppins, Montserrat, Arial, sans-serif;
-  font-size: 34px;
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: var(--fs-34);
+  font-weight: var(--fw-black);
   line-height: 1.06;
   letter-spacing: -0.02em;
   color: var(--navy);
@@ -329,41 +329,41 @@
 
 @media (--md) {
   .hero__copy h1 {
-    font-size: 48px;
+    font-size: var(--fs-48);
   }
 }
 
 @media (--lg) {
   .hero__copy h1 {
-    font-size: 44px;
+    font-size: var(--fs-44);
   }
 }
 
 @media (--xl) {
   .hero__copy h1 {
-    font-size: 50px;
+    font-size: var(--fs-50);
     margin-bottom: 20px;
   }
 }
 
 @media (--2xl) {
   .hero__copy h1 {
-    font-size: 62px;
+    font-size: var(--fs-62);
   }
 }
 
 .hero__lead {
   max-width: 34em;
   margin: 0 0 28px;
-  font-size: 15px;
-  font-weight: 400;
+  font-size: var(--fs-15);
+  font-weight: var(--fw-regular);
   line-height: 1.55;
-  color: #3c4c5c;
+  color: var(--slate-900);
 }
 
 @media (--xl) {
   .hero__lead {
-    font-size: 17px;
+    font-size: var(--fs-17);
     margin-bottom: 34px;
   }
 }
@@ -390,7 +390,7 @@
 
   .hero__benefits li {
     flex: 1 1 auto;
-    border-left: 1px solid rgb(0 53 104 / 16%);
+    border-left: 1px solid rgb(var(--rgb-navy) / 16%);
     padding-left: 22px;
   }
 
@@ -410,15 +410,15 @@
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  font-size: 12.5px;
-  font-weight: 400;
+  font-size: var(--fs-12-5);
+  font-weight: var(--fw-regular);
   line-height: 1.4;
   color: var(--navy);
 }
 
 @media (--xl) {
   .hero__benefits li {
-    font-size: 13.5px;
+    font-size: var(--fs-13-5);
   }
 }
 
@@ -454,12 +454,12 @@
 
 .hero .btn--outline {
   color: var(--navy);
-  background: rgb(255 255 255 / 55%);
-  border: 2px solid rgb(0 53 104 / 35%);
+  background: rgb(var(--rgb-white) / 55%);
+  border: 2px solid rgb(var(--rgb-navy) / 35%);
 }
 
 .hero .btn--outline:hover {
-  background: #fff;
+  background: var(--white);
   border-color: var(--navy);
 }
 
@@ -471,11 +471,11 @@
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
-  font-size: 11px;
-  font-weight: 500;
+  font-size: var(--fs-11);
+  font-weight: var(--fw-medium);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #5a6b7c;
+  color: var(--slate-700);
   padding-top: 22px;
 }
 
@@ -485,14 +485,14 @@
   left: 0;
   width: 96px;
   height: 1px;
-  background: rgb(0 53 104 / 28%);
+  background: rgb(var(--rgb-navy) / 28%);
   content: "";
 }
 
 @media (--xl) {
   .hero__tags {
     gap: 12px;
-    font-size: 12px;
+    font-size: var(--fs-12);
   }
 
   .hero__tags::before {
@@ -501,13 +501,7 @@
 }
 
 .hero__tags .sep {
-  color: rgb(0 53 104 / 28%);
-}
-
-.hero__tags img {
-  display: inline-block;
-  width: auto;
-  height: 13px;
+  color: rgb(var(--rgb-navy) / 28%);
 }
 
 /* Bloques verticales sobre la foto (solo desktop). */
@@ -515,15 +509,15 @@
   position: absolute;
   top: 32%;
   right: 22px;
-  z-index: 4;
+  z-index: var(--z-layer-4);
   display: none;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-semibold);
   line-height: 1.9;
   letter-spacing: 0.22em;
   text-align: right;
   text-transform: uppercase;
-  color: rgb(255 255 255 / 90%);
+  color: rgb(var(--rgb-white) / 90%);
 }
 
 @media (--xl) {
@@ -546,7 +540,7 @@
   position: absolute;
   right: 22px;
   bottom: 9%;
-  z-index: 4;
+  z-index: var(--z-layer-4);
   display: none;
   flex-direction: column;
   gap: 20px;
@@ -571,24 +565,26 @@
 
 .hero__pillars span {
   max-width: 90px;
-  font-size: 10.5px;
-  font-weight: 600;
+  font-size: var(--fs-10-5);
+  font-weight: var(--fw-semibold);
   line-height: 1.5;
   letter-spacing: 0.2em;
   text-align: right;
   text-transform: uppercase;
-  color: rgb(255 255 255 / 92%);
+  color: rgb(var(--rgb-white) / 92%);
 }
 
 .hero__pillars svg {
   flex: none;
   width: 26px;
   height: 26px;
-  color: rgb(255 255 255 / 92%);
+  color: rgb(var(--rgb-white) / 92%);
   stroke-width: 1.3;
 }
 
-/* Estado inicial: las capas esperan ocultas antes de .is-ready */
+/* Estado inicial: las capas esperan ocultas antes de .is-ready.
+   Va separado (y después) de las reglas base a propósito: pisa su opacity/transform. */
+/* stylelint-disable no-duplicate-selectors */
 .hero__bg img {
   opacity: 0;
   transform: scale(1.08);
@@ -602,6 +598,7 @@
   opacity: 0;
   transform: translateY(40px) scale(1.04);
 }
+/* stylelint-enable no-duplicate-selectors */
 
 .hero .hero-anim {
   opacity: 0;
@@ -790,7 +787,7 @@
 
   .hero .btn {
     padding: 15px 26px;
-    font-size: 13px;
+    font-size: var(--fs-13);
   }
 
   .hero .btn svg {
@@ -803,7 +800,7 @@
   /* 2 — Eyebrow: linea y texto mas compactos */
   .hero__eyebrow {
     gap: 9px;
-    font-size: 10px;
+    font-size: var(--fs-10);
     letter-spacing: 0.1em;
     margin-bottom: 14px;
   }
@@ -815,7 +812,7 @@
 
   /* 3 — H1 en 4 lineas (los saltos .br-m ya estan activos por defecto) */
   .hero__copy h1 {
-    font-size: 37px;
+    font-size: var(--fs-37);
     line-height: 1.04;
     margin-bottom: 16px;
   }
@@ -832,7 +829,7 @@
 
   .hero__lead {
     max-width: 66%;
-    font-size: 14px;
+    font-size: var(--fs-14);
     line-height: 1.5;
     margin-bottom: 18px;
   }
@@ -846,7 +843,7 @@
   .hero__benefits li {
     gap: 10px;
     align-items: center;
-    font-size: 12.5px;
+    font-size: var(--fs-12-5);
     line-height: 1.35;
   }
 
@@ -859,7 +856,7 @@
   .hero__worker {
     right: -22vw;
     bottom: 0;
-    z-index: 2;
+    z-index: var(--z-layer-2);
     display: block;
     width: 84vw;
     height: auto;
@@ -881,7 +878,7 @@
   /* 6 — CTAs mas chicos, apilados y por delante del operario */
   .hero .ctas {
     position: relative;
-    z-index: 5;
+    z-index: var(--z-layer-5);
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;
@@ -891,7 +888,7 @@
   .hero .btn {
     gap: 8px;
     padding: 11px 20px;
-    font-size: 11px;
+    font-size: var(--fs-11);
   }
 
   .hero .btn svg {
@@ -911,7 +908,7 @@
    Unico ancho donde el CTA del navbar se acorta a "Cotizar".
    ========================================================================== */
   .hero__copy h1 {
-    font-size: 32px;
+    font-size: var(--fs-32);
   }
 
   .hero__lead {
@@ -923,35 +920,35 @@
    El H1 de L3 es ~60% mas largo que el de la home: se baja el cuerpo en
    todos los breakpoints para que quede en 4 renglones en desktop. */
 .hero--landing .hero__copy h1 {
-  font-size: 31px;
+  font-size: var(--fs-31);
   line-height: 1.08;
 }
 
 @media (--md) {
   .hero--landing .hero__copy h1 {
-    font-size: 42px;
+    font-size: var(--fs-42);
   }
 }
 
 @media (--lg) {
   .hero--landing .hero__copy h1 {
-    font-size: 38px;
+    font-size: var(--fs-38);
   }
 
   .hero--epp {
-    background: #fff;
+    background: var(--white);
   }
 }
 
 @media (--xl) {
   .hero--landing .hero__copy h1 {
-    font-size: 44px;
+    font-size: var(--fs-44);
   }
 }
 
 @media (--2xl) {
   .hero--landing .hero__copy h1 {
-    font-size: 52px;
+    font-size: var(--fs-52);
   }
 
   .hero--landing .hero__copy {
@@ -961,7 +958,7 @@
 
 @media (--3xl) {
   .hero--landing .hero__copy h1 {
-    font-size: 58px;
+    font-size: var(--fs-58);
   }
 }
 
@@ -1001,8 +998,7 @@
 
   .hero--epp .hero__bg {
     left: 16%;
-    mask-image: linear-gradient(90deg, transparent 0, #000 24%);
-    mask-image: linear-gradient(90deg, transparent 0, #000 24%);
+    mask-image: linear-gradient(90deg, transparent 0, var(--black) 24%);
   }
 }
 
@@ -1024,9 +1020,9 @@
   .hero--landing .hero__bg::after {
     background: linear-gradient(
       90deg,
-      rgb(255 255 255) 0%,
-      rgb(255 255 255 / 44%) 55%,
-      rgb(255 255 255 / 0%) 100%
+      rgb(var(--rgb-white)) 0%,
+      rgb(var(--rgb-white) / 44%) 55%,
+      rgb(var(--rgb-white) / 0%) 100%
     );
   }
 }

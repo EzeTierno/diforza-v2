@@ -1,12 +1,149 @@
 /* ==========================================================================
    Tokens — variables globales del sitio
    Fuente única de valores de diseño. Fase A del refactor: contiene las
-   variables que ya existían (valores exactos). En la fase C se suman los
-   tokens de color, tipografía, espaciado, radios, sombras, z-index y tiempos.
+   variables de layout y los tokens de color, tipografía, radios y capas
+   (fase C, 6 oct 2026). Espaciados y tamaños de caja quedan en px en cada
+   componente (decisión de la fase C: ver _dev/prompts/refactor-css.md).
    Regla: los valores son EXACTOS a los del diseño aprobado (no redondear).
    ========================================================================== */
 
 :root {
+  /* ---- COLOR · primitivos (valores exactos del diseño aprobado) --------
+     Grises unificados solo donde la diferencia era imperceptible (ΔE < 1,5;
+     decisión del 6 oct 2026). No agregar colores nuevos sin necesidad. */
+  --white: #fff;
+  --black: #000;
+  --navy-950: #011c37;
+  --neutral-600: #555;
+  --neutral-200: #d9d9d9;
+  --slate-900: #3c4c5c;
+  --slate-800: #4a5a6a;
+  --slate-700: #5a6b7c;
+  --slate-650: #5c6873;
+  --slate-600: #6b7785;
+  --slate-500: #8a96a3;
+  --slate-450: #8a9bab;
+  --slate-400: #9fb2c5;
+  --slate-300: #c9d4df;
+  --slate-250: #cfd8e1;
+  --slate-200: #d7e0e8;
+  --slate-150: #e6eaee; /* unifica #e4e8ec, #e6eaee, #e8ebee */
+  --slate-100: #eef2f6; /* unifica #eef1f4, #eef2f6 */
+  --slate-75: #f2f4f6; /* unifica #f1f4f7, #f2f2f2, #f2f4f6 */
+  --slate-50: #f6f8fa; /* unifica #f4f6f8, #f6f8fa */
+  --orange-700: #c2561a;
+  --orange-300: #ffb68b;
+  --orange-200: #ffd3b8;
+  --orange-50: #fff4ec;
+  --red-700: #c62828;
+  --green-wa: #25d366;
+  --green-600: #25a55f;
+  --green-500: #35c46f;
+  --google-yellow: #fbbc04;
+  --avatar-orange: #f57c00; /* avatares de reseñas (colores de Google) */
+  --avatar-blue: #1976d2;
+  --avatar-green: #388e3c;
+
+  /* Canales RGB para transparencias: rgb(var(--rgb-x) / 50%) */
+  --rgb-white: 255 255 255;
+  --rgb-black: 0 0 0;
+  --rgb-navy: 0 53 104;
+  --rgb-orange: 255 126 52;
+  --rgb-slate-100: 238 242 246;
+  --rgb-green-500: 53 196 111;
+  --rgb-ink-950: 0 10 25;
+  --rgb-ink-900: 0 17 34;
+  --rgb-ink-875: 0 18 38;
+  --rgb-ink-850: 0 20 42;
+  --rgb-ink-800: 0 26 52;
+
+  /* ---- COLOR · semánticos (usar estos en componentes nuevos) ---- */
+  --color-text: var(--navy);
+  --color-accent: var(--orange);
+  --color-primary: var(--orange); /* fondo de CTA principal (fase D: naranja accesible) */
+  --color-on-primary: var(--white);
+  --color-whatsapp: var(--green-wa);
+  --color-error: var(--red-700);
+  --color-success: var(--green-500);
+
+  /* ---- TIPOGRAFÍA ---- */
+  --font-display: "Poppins", "Montserrat", Arial, sans-serif;
+  --font-display-alt: "Poppins", Arial, sans-serif;
+  --font-body: "Montserrat", Arial, sans-serif;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  /* Escala de tamaños: valores exactos en uso (escala congelada, ver prompt §7.3) */
+  --fs-8: 8px;
+  --fs-9: 9px;
+  --fs-9-5: 9.5px;
+  --fs-10: 10px;
+  --fs-10-5: 10.5px;
+  --fs-11: 11px;
+  --fs-11-5: 11.5px;
+  --fs-12: 12px;
+  --fs-12-5: 12.5px;
+  --fs-13: 13px;
+  --fs-13-5: 13.5px;
+  --fs-14: 14px;
+  --fs-15: 15px;
+  --fs-16: 16px;
+  --fs-17: 17px;
+  --fs-18: 18px;
+  --fs-19: 19px;
+  --fs-20: 20px;
+  --fs-22: 22px;
+  --fs-24: 24px;
+  --fs-26: 26px;
+  --fs-27: 27px;
+  --fs-28: 28px;
+  --fs-30: 30px;
+  --fs-31: 31px;
+  --fs-32: 32px;
+  --fs-34: 34px;
+  --fs-36: 36px;
+  --fs-37: 37px;
+  --fs-38: 38px;
+  --fs-40: 40px;
+  --fs-42: 42px;
+  --fs-44: 44px;
+  --fs-48: 48px;
+  --fs-50: 50px;
+  --fs-52: 52px;
+  --fs-54: 54px;
+  --fs-56: 56px;
+  --fs-58: 58px;
+  --fs-62: 62px;
+  --fs-180: 180px;
+
+  /* ---- FORMA ---- */
+  --radius-2: 2px;
+  --radius-4: 4px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-14: 14px;
+  --radius-16: 16px;
+  --radius-18: 18px;
+  --radius-24: 24px;
+  --radius-pill: 999px;
+  --radius-round: 50%;
+
+  /* ---- CAPAS (z-index) ---- */
+  --z-below: -1;
+  --z-base: 0;
+  --z-layer-1: 1; /* capas locales dentro de una sección (fondo, velo, contenido…) */
+  --z-layer-2: 2;
+  --z-layer-3: 3;
+  --z-layer-4: 4;
+  --z-layer-5: 5;
+  --z-header: 30;
+  --z-over-header: 40; /* operario del hero que cruza el navbar */
+  --z-float: 55; /* botón flotante de WhatsApp */
+  --z-dev: 60; /* botón "Ocultar marcas" (solo borrador) */
   --navy: #003568;
   --orange: #ff7e34;
   --gray: #727272;

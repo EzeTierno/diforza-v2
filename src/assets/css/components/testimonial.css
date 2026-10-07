@@ -11,9 +11,9 @@
   margin: 0;
   padding: 34px 26px 28px;
   overflow: hidden;
-  color: #fff;
+  color: var(--white);
   background: var(--navy);
-  border-radius: 16px;
+  border-radius: var(--radius-16);
 }
 
 @media (--xl) {
@@ -26,9 +26,9 @@
   position: absolute;
   top: -28px;
   right: 18px;
-  font-family: Poppins, Arial, sans-serif;
-  font-size: 180px;
-  font-weight: 800;
+  font-family: var(--font-display-alt);
+  font-size: var(--fs-180);
+  font-weight: var(--fw-black);
   line-height: 1;
   color: var(--orange);
   opacity: 0.9;
@@ -39,15 +39,15 @@
   position: relative;
   max-width: 30ch;
   margin: 0;
-  font-family: Poppins, Montserrat, Arial, sans-serif;
-  font-size: 20px;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: var(--fs-20);
+  font-weight: var(--fw-semibold);
   line-height: 1.4;
 }
 
 @media (--xl) {
   .testimonial p {
-    font-size: 27px;
+    font-size: var(--fs-27);
   }
 }
 
@@ -64,8 +64,8 @@
 
 .testimonial cite {
   display: block;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: var(--fs-15);
+  font-weight: var(--fw-bold);
   font-style: normal;
 }
 
@@ -73,8 +73,8 @@
   display: flex;
   gap: 8px;
   align-items: center;
-  font-size: 12px;
-  color: rgb(255 255 255 / 70%);
+  font-size: var(--fs-12);
+  color: rgb(var(--rgb-white) / 70%);
   margin-top: 3px;
 }
 

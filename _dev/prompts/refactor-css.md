@@ -449,7 +449,7 @@ Excepciones aceptadas a "JS solo por data-js": `.reveal` (clase de estado de ani
 |---|---|---|---|
 | **A · Infraestructura** ✅ 6 oct | Baseline visual + script de test · Lightning CSS en 11ty · `main.css` con `@layer` · `tokens.css` con los **valores exactos actuales** · `media.css` · Stylelint/Prettier configurados (aún en modo aviso) | Ninguno | Commit "CSS fase A" + test en verde |
 | **B · Arquitectura y nombres** ✅ 6 oct | Partir el CSS en el árbol de §5 · renombrar clases (tabla §8.2) en CSS, `.njk` y JS · JS a `data-js` · unificar L2/L3 en componentes/secciones compartidas · media queries agrupadas por bloque · comentarios con nombres viejos actualizados (borrar CSS muerto pasa a la fase C) | Ninguno | Commit "CSS fase B" + tabla de renombres + test en verde |
-| **C · Tokens** | Reemplazar todos los valores sueltos por tokens **exactos** (sin consolidar) · Stylelint en modo error | **Ninguno** | Commit "CSS fase C" + tabla de tokens + test en verde |
+| **C · Tokens** ✅ 7 oct | Reemplazar todos los valores sueltos por tokens **exactos** (sin consolidar) · Stylelint en modo error | **Ninguno** | Commit "CSS fase C" + tabla de tokens + test en verde |
 | **D · Accesibilidad** | CTA naranja → `#C2561A` (D5, aprobado) · informe de contraste, foco y áreas táctiles (lo que implique cambio visual se reporta, no se aplica sin OK) | Solo el CTA | Commit "CSS fase D" + informe |
 | **E · Documentación** | `_dev/notas/css-guia.md` (cómo crear un componente / una landing, tokens disponibles, breakpoints) · actualizar `README.md` y `MEMORY.md` | — | Commit "CSS fase E" |
 
@@ -475,3 +475,26 @@ Tracking (GTM/GA4/Meta), SEO, optimización de imágenes, fuentes autoalojadas y
 - [ ] CTA naranja en `#C2561A`; informe de contraste del resto entregado.
 - [ ] Guía `_dev/notas/css-guia.md` + README y MEMORY actualizados.
 - [ ] Peso del bundle completo (gzip) ≤ 20 KB, que es lo que pesan hoy base + l2 + l3 juntos sin minificar (hoy cada landing descarga ~18–19 KB gzip).
+
+---
+
+## Registro fase C (6–7 oct 2026)
+
+**Qué se hizo**
+- `settings/tokens.css`: colores primitivos con valor exacto (`--slate-*`, `--orange-*`, `--green-*`, avatares…), canales `--rgb-*` para transparencias (`rgb(var(--rgb-navy) / 12%)`), semánticos (`--color-text`, `--color-accent`, `--color-primary`, `--color-on-primary`, `--color-whatsapp`, `--color-error`, `--color-success`), familias `--font-*`, pesos `--fw-*`, 41 tamaños `--fs-*` (px exactos, escala congelada), radios `--radius-*` y capas `--z-*`.
+- Cero HEX/rgba literales fuera de `tokens.css`. Los CTA principales (`.btn--primary`, `.product-card__cta`, `.header .btn--nav`, `.featured-products__more`) usan `--color-primary`: la fase D cambia el naranja en una sola línea.
+- **Unificación B de grises** (aprobada, ΔE < 1,5, imperceptible): `#e4e8ec/#e8ebee → #e6eaee`, `#eef1f4 → #eef2f6`, `#f1f4f7/#f2f2f2 → #f2f4f6`, `#f4f6f8 → #f6f8fa`. 6 colores menos.
+- Estilos inline fuera del HTML: avatares de reseñas → `.review-card__avatar--orange|blue|green` (`reviews.json` guarda el nombre), asterisco del form → `.lead-form__required`.
+- CSS y JS muerto borrado: `.eyebrow`, `.category-lines__copy .eyebrow`, `.hero__tags img`, IIFE del carrusel "spotlight" de categorías en `main.js`.
+- Selectores duplicados unidos (`.btn`, `.review-card`, `.solve__claim`, `.product-tile`, `.brands__group`, `.featured-products__top`); `!important` de `trust.css` eliminado.
+- Stylelint en modo **error**: prohíbe `font-size` en px, `z-index` numérico y colores `rgb()/hsl()` literales.
+- Test visual: incluye `/calzado-de-seguridad/` (60 capturas), flags de Chromium estables y marca "≈ ruido de fuentes" (no bloquea).
+
+**Decisiones**
+- Espaciados, tamaños de caja, `line-height` y sombras quedan en px en cada componente: tokenizarlos no aporta mientras la escala no se rediseñe (son valores únicos por componente).
+- Velo del header (`.header::before`): el original era `rgba(…, 88)` (typo: alfa > 1 → opaco). Corregido a `88%` con OK del usuario el 7 oct (único cambio visual fuera de los grises B: el borde inferior del header deja ver levemente la foto del hero).
+- `clamp()` fluidos y auditoría de cortes de fuente quedan para un rediseño (no son "cero cambio visual").
+
+**Verificación**
+- Estilos computados de todos los elementos (incl. ::before/::after, hover, foco, menú mobile, form inválido) en 7 anchos × 4 páginas: única diferencia, los grises B. Delta máx. de píxel 4/255. Animaciones y keyframes: 0 diferencias. JS sin errores.
+- `npx stylelint "src/**/*.css"` sin errores. Baseline visual regenerada (cambió por los grises, los flags y la página de calzado).

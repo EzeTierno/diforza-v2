@@ -29,7 +29,7 @@
   position: absolute;
   top: -10%;
   left: 0;
-  z-index: 0;
+  z-index: var(--z-base);
   width: 100%;
   height: 144%;
   object-fit: cover;
@@ -39,19 +39,19 @@
 .spotlight__overlay {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: var(--z-layer-1);
   background: linear-gradient(
     90deg,
-    rgb(0 17 34 / 82%) 0%,
-    rgb(0 17 34 / 62%) 42%,
-    rgb(0 17 34 / 20%) 68%,
-    rgb(0 17 34 / 0%) 92%
+    rgb(var(--rgb-ink-900) / 82%) 0%,
+    rgb(var(--rgb-ink-900) / 62%) 42%,
+    rgb(var(--rgb-ink-900) / 20%) 68%,
+    rgb(var(--rgb-ink-900) / 0%) 92%
   );
 }
 
 .spotlight__content {
   position: relative;
-  z-index: 2;
+  z-index: var(--z-layer-2);
   box-sizing: border-box;
   width: 100%;
   padding: 0 var(--pad);
@@ -64,8 +64,8 @@
 .spotlight__eyebrow {
   display: block;
   margin: 0 0 4px;
-  font-size: 14px;
-  font-weight: 800;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-black);
   font-style: italic;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -74,31 +74,31 @@
 
 @media (--xl) {
   .spotlight__eyebrow {
-    font-size: 16px;
+    font-size: var(--fs-16);
   }
 }
 
 .spotlight__content h2 {
   margin: 0 0 16px;
-  font-size: 32px;
-  font-weight: 800;
+  font-size: var(--fs-32);
+  font-weight: var(--fw-black);
   font-style: italic;
   line-height: 36px;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--white);
 }
 
 @media (--md) {
   .spotlight__content h2 {
-    font-size: 42px;
+    font-size: var(--fs-42);
     line-height: 46px;
   }
 }
 
 @media (--xl) {
   .spotlight__content h2 {
-    font-size: 54px;
+    font-size: var(--fs-54);
     line-height: 58px;
     margin-bottom: 20px;
   }
@@ -107,15 +107,15 @@
 .spotlight__content p {
   max-width: 42ch;
   margin: 0 0 28px;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-regular);
   line-height: 22px;
-  color: rgb(255 255 255 / 90%);
+  color: rgb(var(--rgb-white) / 90%);
 }
 
 @media (--xl) {
   .spotlight__content p {
-    font-size: 16px;
+    font-size: var(--fs-16);
     line-height: 26px;
     margin-bottom: 32px;
   }
@@ -135,10 +135,10 @@
   .spotlight__overlay {
     background: linear-gradient(
       90deg,
-      rgb(0 17 34 / 88%) 0%,
-      rgb(0 17 34 / 78%) 40%,
-      rgb(0 17 34 / 45%) 72%,
-      rgb(0 17 34 / 18%) 100%
+      rgb(var(--rgb-ink-900) / 88%) 0%,
+      rgb(var(--rgb-ink-900) / 78%) 40%,
+      rgb(var(--rgb-ink-900) / 45%) 72%,
+      rgb(var(--rgb-ink-900) / 18%) 100%
     );
   }
 
@@ -153,6 +153,6 @@
 
   .spotlight .btn {
     padding: 11px 20px;
-    font-size: 11px;
+    font-size: var(--fs-11);
   }
 }

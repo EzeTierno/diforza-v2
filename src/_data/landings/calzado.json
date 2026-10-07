@@ -1,0 +1,364 @@
+{
+  "_pendientes": "Fotos: hero provisorio (foto de indumentaria con botines) y productos con placeholder. Normas IRAM de calzado. Rango de talles. Validar marcas de cada producto.",
+  "hero": {
+    "modificador": "indumentaria",
+    "fondo": {
+      "src": "/indumentaria-de-trabajo/img/bg-hero-indumentaria.webp",
+      "ancho": "1376",
+      "alto": "768",
+      "alt": "Operario con botines de seguridad y pantalón cargo de trabajo",
+      "srcMobile": "/indumentaria-de-trabajo/img/bg-hero-indumentaria-m.webp",
+      "anchoMobile": "640",
+      "altoMobile": "768"
+    },
+    "eyebrow": "Calzado de seguridad para empresas",
+    "titulo": "Calzado de seguridad:",
+    "acento": "el EPP que tu gente usa todos los días",
+    "bajada": "Botines, zapatos, zapatillas y botas con puntera de acero. Talles completos, stock permanente y reposición sin demoras.[[Foto de hero provisoria]]",
+    "beneficios": [
+      {
+        "icono": "talles",
+        "texto": "Talles completos[[Validar rango]]"
+      },
+      {
+        "icono": "caja",
+        "texto": "Stock permanente"
+      },
+      {
+        "icono": "camion",
+        "texto": "Envíos a todo el país"
+      }
+    ],
+    "ctaPrincipal": "Pedir cotización",
+    "ctaCatalogo": "Descargar catálogo de calzado"
+  },
+  "confianza": {
+    "agrupado": false,
+    "texto": "Calzado de seguridad con certificación según el riesgo de cada puesto.[[Validar normas]]",
+    "marcas": [
+      {
+        "etiqueta": "Línea principal",
+        "src": "/img/logo-conwork.webp",
+        "alt": "Conwork",
+        "principal": true,
+        "chico": true
+      },
+      {
+        "etiqueta": "Marca distribuida",
+        "src": "/img/logo-ombu.webp",
+        "alt": "Ombú",
+        "chico": true
+      }
+    ]
+  },
+  "lineas": {
+    "tituloAncho": false,
+    "titulo": "Calzado de seguridad para cada puesto",
+    "texto": "Del botín de obra al calzado blanco para la industria alimenticia, en negro, marrón y blanco.",
+    "cta": "Pedir cotización",
+    "items": [
+      {
+        "icono": "zapatilla",
+        "texto": "Zapatillas de seguridad"
+      },
+      {
+        "icono": "zapato",
+        "texto": "Zapatos de seguridad"
+      },
+      {
+        "icono": "botin",
+        "texto": "Botines con puntera de acero"
+      },
+      {
+        "icono": "botin",
+        "texto": "Botín francés con puntera y reflectivo"
+      },
+      {
+        "icono": "bota",
+        "texto": "Botas industriales de caña larga"
+      },
+      {
+        "icono": "gota",
+        "texto": "Calzado blanco para industria alimenticia"
+      }
+    ]
+  },
+  "productos": {
+    "eyebrow": "Línea Conwork y Ombú",
+    "titulo": "Productos destacados",
+    "iconoPlaceholder": "botin",
+    "items": [
+      {
+        "nombre": "Botín de seguridad Conwork",
+        "variante": "Negro",
+        "nombreCompleto": "Botín de seguridad Conwork negro",
+        "masVendido": true,
+        "specs": [
+          {
+            "nombre": "Marca",
+            "valor": "Conwork"
+          },
+          {
+            "nombre": "Talles",
+            "valor": "—[[Validar]]"
+          },
+          {
+            "nombre": "Norma",
+            "valor": "— [[Pendiente norma]]",
+            "norma": true
+          }
+        ]
+      },
+      {
+        "nombre": "Botín de seguridad Conwork",
+        "variante": "Negro",
+        "codigo": "25BAF",
+        "nombreCompleto": "Botín de seguridad Conwork 25BAF negro",
+        "specs": [
+          {
+            "nombre": "Marca",
+            "valor": "Conwork"
+          },
+          {
+            "nombre": "Talles",
+            "valor": "—[[Validar]]"
+          },
+          {
+            "nombre": "Norma",
+            "valor": "— [[Pendiente norma]]",
+            "norma": true
+          }
+        ]
+      },
+      {
+        "nombre": "Zapato de seguridad Conwork",
+        "variante": "Negro",
+        "codigo": "41ZA",
+        "nombreCompleto": "Zapato de seguridad Conwork negro",
+        "specs": [
+          {
+            "nombre": "Marca",
+            "valor": "Conwork"
+          },
+          {
+            "nombre": "Talles",
+            "valor": "—[[Validar]]"
+          },
+          {
+            "nombre": "Norma",
+            "valor": "— [[Pendiente norma]]",
+            "norma": true
+          }
+        ]
+      },
+      {
+        "nombre": "Botín de seguridad Conwork",
+        "variante": "Marrón",
+        "codigo": "653BAF",
+        "nombreCompleto": "Botín de seguridad Conwork 653 marrón",
+        "specs": [
+          {
+            "nombre": "Marca",
+            "valor": "Conwork"
+          },
+          {
+            "nombre": "Talles",
+            "valor": "—[[Validar]]"
+          },
+          {
+            "nombre": "Norma",
+            "valor": "— [[Pendiente norma]]",
+            "norma": true
+          }
+        ]
+      },
+      {
+        "nombre": "Bota de caña larga con puntera",
+        "nombreCompleto": "Bota de caña larga con puntera",
+        "specs": [
+          {
+            "nombre": "Marca",
+            "valor": "Ombú[[Validar marca]]"
+          },
+          {
+            "nombre": "Talles",
+            "valor": "—[[Validar]]"
+          },
+          {
+            "nombre": "Norma",
+            "valor": "— [[Pendiente norma]]",
+            "norma": true
+          }
+        ]
+      },
+      {
+        "nombre": "Zapatilla de seguridad Conwork Nueva Origen 2.0",
+        "variante": "Marrón",
+        "codigo": "655ZA",
+        "nombreCompleto": "Zapatilla de seguridad Conwork 655ZA marrón",
+        "specs": [
+          {
+            "nombre": "Marca",
+            "valor": "Conwork"
+          },
+          {
+            "nombre": "Talles",
+            "valor": "—[[Validar]]"
+          },
+          {
+            "nombre": "Norma",
+            "valor": "— [[Pendiente norma]]",
+            "norma": true
+          }
+        ]
+      }
+    ]
+  },
+  "diferenciales": {
+    "items": [
+      {
+        "icono": "talles-trazo2",
+        "titulo": "Talles completos, en serio",
+        "texto": "El talle grande y el talle chico son parte del stock, no un pedido especial.[[Validar rango real]]"
+      },
+      {
+        "icono": "escudo-check",
+        "titulo": "Conwork y Ombú",
+        "texto": "Conwork es nuestra línea principal de calzado de seguridad: zapatillas, zapatos y botines con puntera, en negro, chocolate y blanco. Ombú cubre bota industrial y calzado para ambientes húmedos."
+      },
+      {
+        "icono": "caja-trazo2",
+        "titulo": "Reposición sostenida",
+        "texto": "El calzado es consumo permanente: la continuidad importa más que el precio unitario. Mantenemos stock propio."
+      },
+      {
+        "icono": "persona",
+        "titulo": "Tu curva de talles registrada",
+        "texto": "Guardamos qué modelo y qué talles usa tu personal. Reponer es un mensaje, no volver a empezar."
+      }
+    ],
+    "problema": {
+      "titulo": "El calzado es el EPP que más se usa y más se rompe",
+      "cta": "Pedir cotización",
+      "items": [
+        {
+          "pregunta": "El talle que nunca hay",
+          "respuesta": "Un operario sin su talle de botín es un operario que no entra a planta."
+        },
+        {
+          "pregunta": "Recambio constante",
+          "respuesta": "Es consumo permanente. Si el proveedor no repone rápido, el problema vuelve todos los meses."
+        },
+        {
+          "pregunta": "Barato que sale caro",
+          "respuesta": "El calzado de baja calidad se descose en tres meses y se compra dos veces por año."
+        },
+        {
+          "pregunta": "El calzado equivocado para el puesto",
+          "respuesta": "Un botín pensado para obra no sirve en una planta de alimentos con piso húmedo."
+        }
+      ]
+    },
+    "testimonio": {
+      "resena": "Ricardo Honaine",
+      "texto": "Excelente atención y asesoramiento. En Diforza encontré todo lo que necesitaba en elementos de seguridad, con productos de primera calidad y entregas rápidas."
+    },
+    "resenas": [
+      "Ariel Kuznicki",
+      "Estudio Casa Viva"
+    ]
+  },
+  "normativa": {
+    "titulo": "El calzado de seguridad <br> también se certifica",
+    "bajada": "El calzado de seguridad responde a normas específicas según el riesgo: impacto en la puntera, perforación de la suela, deslizamiento y riesgo eléctrico.[[Pendiente normas IRAM de calzado]]",
+    "cta": "Consultar qué corresponde a mi actividad",
+    "marcas": [
+      {
+        "icono": "escudo-check-fino",
+        "texto": "Puntera<br>de acero"
+      },
+      {
+        "icono": "suela",
+        "texto": "Suela<br>antideslizante"
+      },
+      {
+        "icono": "rayo",
+        "texto": "Riesgo<br>eléctrico[[Validar]]"
+      }
+    ]
+  },
+  "pasos": [
+    "Nos contás cuántas personas equipás, qué tareas hacen y qué talles necesitás.",
+    "Te proponemos el calzado adecuado para cada puesto de trabajo.",
+    "Cotizamos y coordinamos entrega.[[Validar plazo]]",
+    "Quedás con una cuenta y la curva de talles registrada para reponer rápido."
+  ],
+  "garantia": {
+    "titulo": "Garantía[[Borrador · Validar]]",
+    "items": [
+      {
+        "icono": "escudo-check-fino",
+        "texto": "Garantía por defectos de fabricación en todos nuestros productos."
+      },
+      {
+        "icono": "cambio",
+        "texto": "Cambios sin cargo por talle o defecto dentro de [X] días con el producto sin uso."
+      },
+      {
+        "icono": "caja",
+        "texto": "Stock permanente para reposición inmediata."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "pregunta": "¿Qué rango de talles manejan?",
+      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+    },
+    {
+      "pregunta": "¿Tienen calzado para industria alimenticia?",
+      "respuesta": "Sí, calzado blanco para industria alimenticia.[[Validar modelos]]"
+    },
+    {
+      "pregunta": "¿Tienen calzado dieléctrico?",
+      "respuesta": "Respuesta a confirmar con Diforza.[[Validar]]"
+    },
+    {
+      "pregunta": "¿Puedo pedir una muestra de talle antes de comprar volumen?",
+      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+    },
+    {
+      "pregunta": "¿Cuánto tardan en reponer un pedido?",
+      "respuesta": "Respuesta a confirmar con Diforza.[[Pendiente]]"
+    },
+    {
+      "pregunta": "¿Hacen envíos al interior del país?",
+      "respuesta": "Sí, despachamos y distribuimos indumentaria y EPP a empresas e industrias en todo el territorio nacional."
+    },
+    {
+      "pregunta": "¿Puedo comprar por unidad?",
+      "respuesta": "Sí, en la tienda online."
+    }
+  ],
+  "cotizacion": {
+    "titulo": "Pasanos tu curva de talles y te cotizamos",
+    "respuesta": "Te respondemos en el día[[Validar]]",
+    "catalogo": "Descargar catálogo de calzado",
+    "landingId": "calzado",
+    "formTitulo": "Pedí tu cotización",
+    "formBoton": "Pedir cotización",
+    "campoVariable": {
+      "tipo": "select",
+      "id": "f-personas",
+      "name": "personas_a_equipar",
+      "label": "Cantidad de personas a equipar",
+      "opciones": [
+        "1–10",
+        "11–50",
+        "51–200",
+        "+200"
+      ],
+      "error": "Contanos cuánta gente tenés que equipar."
+    }
+  }
+}

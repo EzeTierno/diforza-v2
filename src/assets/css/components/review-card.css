@@ -23,8 +23,8 @@
 }
 
 .reviews-summary__score {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: var(--fs-20);
+  font-weight: var(--fw-bold);
   color: var(--navy);
 }
 
@@ -47,8 +47,8 @@
 }
 
 .reviews-summary__count {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-regular);
   color: var(--gray);
 }
 
@@ -82,21 +82,18 @@
   width: 82vw;
   max-width: 340px;
   padding: 20px;
-  background: #fff;
-  border: 1px solid #e4e8ec;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgb(0 53 104 / 5%);
-  scroll-snap-align: start;
-}
-
-.review-card {
+  background: var(--white);
+  border: 1px solid var(--slate-150);
+  border-radius: var(--radius-12);
+  box-shadow: 0 2px 10px rgb(var(--rgb-navy) / 5%);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
+  scroll-snap-align: start;
 }
 
 .review-card:hover {
-  box-shadow: 0 14px 28px rgb(0 53 104 / 12%);
+  box-shadow: 0 14px 28px rgb(var(--rgb-navy) / 12%);
   transform: translateY(-4px);
 }
 
@@ -127,10 +124,10 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  font-size: 15px;
-  font-weight: 700;
-  color: #fff;
-  border-radius: 50%;
+  font-size: var(--fs-15);
+  font-weight: var(--fw-bold);
+  color: var(--white);
+  border-radius: var(--radius-round);
 }
 
 .review-card__id {
@@ -140,16 +137,16 @@
 
 .review-card__name {
   overflow: hidden;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-bold);
   white-space: nowrap;
   color: var(--navy);
   text-overflow: ellipsis;
 }
 
 .review-card__date {
-  font-size: 12px;
-  font-weight: 400;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-regular);
   color: var(--gray);
 }
 
@@ -174,8 +171,8 @@
   display: -webkit-box;
   margin: 0;
   overflow: hidden;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-light);
   line-height: 22px;
   color: var(--gray);
   -webkit-box-orient: vertical;
@@ -184,7 +181,20 @@
 
 @media (--xl) {
   .review-card__text {
-    font-size: 15px;
+    font-size: var(--fs-15);
     line-height: 24px;
   }
+}
+
+/* Color del avatar: modificador por reseña (en _data/reviews.json → "color") */
+.review-card__avatar--orange {
+  background: var(--avatar-orange);
+}
+
+.review-card__avatar--blue {
+  background: var(--avatar-blue);
+}
+
+.review-card__avatar--green {
+  background: var(--avatar-green);
 }

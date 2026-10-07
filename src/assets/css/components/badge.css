@@ -11,20 +11,20 @@
   gap: 6px;
   align-items: center;
   padding: 5px 11px 5px 6px;
-  font-size: 10px;
-  font-weight: 600;
+  font-size: var(--fs-10);
+  font-weight: var(--fw-semibold);
   letter-spacing: 0.02em;
   white-space: nowrap;
-  color: #5c6873;
-  background: #f4f6f8;
-  border-radius: 999px;
+  color: var(--slate-650);
+  background: var(--slate-50);
+  border-radius: var(--radius-pill);
 }
 
 @media (--xl) {
   .badge {
     top: 16px;
     left: 16px;
-    font-size: 11px;
+    font-size: var(--fs-11);
   }
 }
 
@@ -35,7 +35,7 @@
 }
 
 .badge--stock svg {
-  color: #25a55f;
+  color: var(--green-600);
 }
 
 .badge--top svg {

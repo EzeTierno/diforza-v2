@@ -6,9 +6,9 @@
 .lead-form {
   padding: 26px 20px;
   color: var(--navy);
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 24px 60px rgb(0 10 25 / 35%);
+  background: var(--white);
+  border-radius: var(--radius-18);
+  box-shadow: 0 24px 60px rgb(var(--rgb-ink-950) / 35%);
   scroll-margin-top: 90px;
 }
 
@@ -26,15 +26,15 @@
 
 .lead-form__title {
   margin: 0 0 4px;
-  font-family: Poppins, Arial, sans-serif;
-  font-size: 19px;
-  font-weight: 700;
+  font-family: var(--font-display-alt);
+  font-size: var(--fs-19);
+  font-weight: var(--fw-bold);
 }
 
 .lead-form__note {
   margin: 0 0 22px;
-  font-size: 13px;
-  font-weight: 300;
+  font-size: var(--fs-13);
+  font-weight: var(--fw-light);
   color: var(--gray);
 }
 
@@ -63,13 +63,17 @@
 }
 
 .field label {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-semibold);
   letter-spacing: 0.03em;
   color: var(--navy);
 }
 
 .field label .field__required {
+  color: var(--orange);
+}
+
+.lead-form__required {
   color: var(--orange);
 }
 
@@ -79,14 +83,11 @@
   width: 100%;
   min-height: 48px;
   padding: 12px 14px;
-  font:
-    400 15px/1.4 Montserrat,
-    Arial,
-    sans-serif;
+  font: var(--fw-regular) var(--fs-15)/1.4 var(--font-body);
   color: var(--navy);
-  background: #fff;
-  border: 1px solid #cfd8e1;
-  border-radius: 10px;
+  background: var(--white);
+  border: 1px solid var(--slate-250);
+  border-radius: var(--radius-10);
   transition:
     border-color 0.15s ease,
     box-shadow 0.15s ease;
@@ -97,7 +98,6 @@
   background-size: 16px;
   background-position: right 14px center;
   background-repeat: no-repeat;
-  appearance: none;
   appearance: none;
   padding-right: 40px;
 }
@@ -111,23 +111,23 @@
 .field select:focus,
 .field textarea:focus {
   border-color: var(--navy);
-  box-shadow: 0 0 0 3px rgb(255 126 52 / 28%);
+  box-shadow: 0 0 0 3px rgb(var(--rgb-orange) / 28%);
   outline: none;
 }
 
 .field.is-invalid input,
 .field.is-invalid select,
 .field.is-invalid textarea {
-  border-color: #c62828;
+  border-color: var(--red-700);
 }
 
 .field__error {
   display: none;
   gap: 6px;
   align-items: center;
-  font-size: 12px;
-  font-weight: 500;
-  color: #c62828;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-medium);
+  color: var(--red-700);
 }
 
 .field__error::before {
@@ -137,11 +137,11 @@
   justify-content: center;
   width: 15px;
   height: 15px;
-  font-size: 10px;
-  font-weight: 700;
-  color: #fff;
-  background: #c62828;
-  border-radius: 50%;
+  font-size: var(--fs-10);
+  font-weight: var(--fw-bold);
+  color: var(--white);
+  background: var(--red-700);
+  border-radius: var(--radius-round);
   content: "!";
 }
 
@@ -153,10 +153,10 @@
   display: flex;
   gap: 10px;
   align-items: flex-start;
-  font-size: 12.5px;
-  font-weight: 400;
+  font-size: var(--fs-12-5);
+  font-weight: var(--fw-regular);
   line-height: 1.5;
-  color: #4a5a6a;
+  color: var(--slate-800);
 }
 
 .check input {
@@ -196,12 +196,12 @@
 
 .lead-form__status {
   margin: 12px 0 0;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: var(--fs-13);
+  font-weight: var(--fw-medium);
 }
 
 .lead-form__status.is-error {
-  color: #c62828;
+  color: var(--red-700);
 }
 
 .lead-form__ok {
@@ -213,21 +213,21 @@
   width: 56px;
   height: 56px;
   margin: 0 auto 14px;
-  color: #25a55f;
+  color: var(--green-600);
 }
 
 .lead-form__ok h3 {
   margin: 0 0 8px;
-  font-family: Poppins, Arial, sans-serif;
-  font-size: 22px;
-  font-weight: 700;
+  font-family: var(--font-display-alt);
+  font-size: var(--fs-22);
+  font-weight: var(--fw-bold);
   color: var(--navy);
 }
 
 .lead-form__ok p {
   margin: 0;
-  font-size: 15px;
-  font-weight: 300;
+  font-size: var(--fs-15);
+  font-weight: var(--fw-light);
   color: var(--gray);
 }
 
@@ -239,11 +239,11 @@
   justify-content: space-between;
   margin: 0 0 18px;
   padding: 12px 14px;
-  font-size: 13.5px;
+  font-size: var(--fs-13-5);
   color: var(--navy);
-  background: #fff4ec;
-  border: 1px solid #ffd3b8;
-  border-radius: 10px;
+  background: var(--orange-50);
+  border: 1px solid var(--orange-200);
+  border-radius: var(--radius-10);
 }
 
 .quote-product[hidden] {
@@ -251,17 +251,14 @@
 }
 
 .quote-product strong {
-  font-weight: 700;
+  font-weight: var(--fw-bold);
 }
 
 .quote-product button {
   flex: none;
-  font:
-    600 12px/1 Montserrat,
-    Arial,
-    sans-serif;
+  font: var(--fw-semibold) var(--fs-12)/1 var(--font-body);
   text-decoration: underline;
-  color: #c2561a;
+  color: var(--orange-700);
   background: none;
   border: none;
   cursor: pointer;
@@ -270,7 +267,7 @@
 @media (--below-md) {
   .lead-form__submit {
     padding: 15px 20px;
-    font-size: 12px;
+    font-size: var(--fs-12);
   }
 }
 
@@ -282,15 +279,15 @@
   height: 18px;
   min-height: 0;
   padding: 0;
-  border-radius: 4px;
+  border-radius: var(--radius-4);
   box-shadow: none;
 }
 
 .field label.check {
-  font-size: 12.5px;
-  font-weight: 400;
+  font-size: var(--fs-12-5);
+  font-weight: var(--fw-regular);
   letter-spacing: 0;
-  color: #4a5a6a;
+  color: var(--slate-800);
 }
 
 /* S12 · campo multi-seleccion: chips */
@@ -303,15 +300,15 @@
 
 .field--group legend {
   padding: 0;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-semibold);
   letter-spacing: 0.03em;
   color: var(--navy);
   margin-bottom: 10px;
 }
 
 .field--group legend small {
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   letter-spacing: 0;
   color: var(--gray);
   margin-left: 6px;
@@ -340,14 +337,11 @@
   align-items: center;
   min-height: 40px;
   padding: 8px 14px;
-  font:
-    500 13px/1.2 Montserrat,
-    Arial,
-    sans-serif;
+  font: var(--fw-medium) var(--fs-13)/1.2 var(--font-body);
   color: var(--navy);
-  background: #fff;
-  border: 1px solid #cfd8e1;
-  border-radius: 999px;
+  background: var(--white);
+  border: 1px solid var(--slate-250);
+  border-radius: var(--radius-pill);
   transition:
     background-color 0.15s ease,
     border-color 0.15s ease,
@@ -359,22 +353,22 @@
 }
 
 .chip input:checked + span {
-  color: #fff;
+  color: var(--white);
   background: var(--navy);
   border-color: var(--navy);
 }
 
 .chip input:checked + span::before {
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   color: var(--orange);
   content: "✓";
   margin-right: 6px;
 }
 
 .chip input:focus-visible + span {
-  box-shadow: 0 0 0 3px rgb(255 126 52 / 35%);
+  box-shadow: 0 0 0 3px rgb(var(--rgb-orange) / 35%);
 }
 
 .field--group.is-invalid .chip span {
-  border-color: #c62828;
+  border-color: var(--red-700);
 }

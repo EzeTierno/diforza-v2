@@ -6,7 +6,7 @@
    Mobile/tablet: carrusel horizontal draggeable (mismo JS que la home).
    >=1024: grilla 4x2 — son 8 fichas con datos, conviene verlas todas. */
 .products {
-  background: #f2f4f6;
+  background: var(--slate-75);
   padding-bottom: 52px;
 }
 

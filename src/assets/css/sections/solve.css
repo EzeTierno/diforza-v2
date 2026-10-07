@@ -6,7 +6,7 @@
 .solve {
   position: relative;
   overflow: hidden;
-  background: #eef2f6;
+  background: var(--slate-100);
   background-image: url("/img/bg-hero-3.webp");
   background-size: cover;
   background-position: 74% 62%;
@@ -19,10 +19,10 @@
   inset: 0;
   background: linear-gradient(
     100deg,
-    rgb(238 242 246 / 97%) 0%,
-    rgb(238 242 246 / 94%) 46%,
-    rgb(238 242 246 / 55%) 64%,
-    rgb(238 242 246 / 0%) 82%
+    rgb(var(--rgb-slate-100) / 97%) 0%,
+    rgb(var(--rgb-slate-100) / 94%) 46%,
+    rgb(var(--rgb-slate-100) / 55%) 64%,
+    rgb(var(--rgb-slate-100) / 0%) 82%
   );
   content: "";
   pointer-events: none;
@@ -36,18 +36,18 @@
   .solve::before {
     background: linear-gradient(
       100deg,
-      rgb(238 242 246 / 96%) 0%,
-      rgb(238 242 246 / 93%) 40%,
-      rgb(238 242 246 / 66%) 54%,
-      rgb(238 242 246 / 14%) 67%,
-      rgb(238 242 246 / 0%) 80%
+      rgb(var(--rgb-slate-100) / 96%) 0%,
+      rgb(var(--rgb-slate-100) / 93%) 40%,
+      rgb(var(--rgb-slate-100) / 66%) 54%,
+      rgb(var(--rgb-slate-100) / 14%) 67%,
+      rgb(var(--rgb-slate-100) / 0%) 80%
     );
   }
 }
 
 .solve__inner {
   position: relative;
-  z-index: 1;
+  z-index: var(--z-layer-1);
   padding: 52px var(--pad) 56px;
 }
 
@@ -91,8 +91,8 @@
   gap: 14px;
   align-items: center;
   margin: 0 0 18px;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: var(--fs-11);
+  font-weight: var(--fw-semibold);
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--navy);
@@ -103,22 +103,22 @@
   width: 36px;
   height: 3px;
   background: var(--orange);
-  border-radius: 2px;
+  border-radius: var(--radius-2);
   content: "";
 }
 
 @media (--xl) {
   .solve__eyebrow {
-    font-size: 12px;
+    font-size: var(--fs-12);
     margin-bottom: 22px;
   }
 }
 
 .solve__copy h2 {
   margin: 0 0 16px;
-  font-family: Poppins, Montserrat, Arial, sans-serif;
-  font-size: 32px;
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: var(--fs-32);
+  font-weight: var(--fw-black);
   line-height: 1.08;
   letter-spacing: -0.02em;
   color: var(--navy);
@@ -131,7 +131,7 @@
 
 @media (--lg) {
   .solve__copy h2 {
-    font-size: 44px;
+    font-size: var(--fs-44);
   }
 
   .solve__copy h2 br {
@@ -141,29 +141,29 @@
 
 @media (--xl) {
   .solve__copy h2 {
-    font-size: 50px;
+    font-size: var(--fs-50);
     margin-bottom: 18px;
   }
 }
 
 @media (--2xl) {
   .solve__copy h2 {
-    font-size: 56px;
+    font-size: var(--fs-56);
   }
 }
 
 .solve__lead {
   max-width: 44ch;
   margin: 0 0 26px;
-  font-size: 15px;
-  font-weight: 300;
+  font-size: var(--fs-15);
+  font-weight: var(--fw-light);
   line-height: 1.55;
   color: var(--navy);
 }
 
 @media (--xl) {
   .solve__lead {
-    font-size: 17px;
+    font-size: var(--fs-17);
     margin-bottom: 30px;
   }
 }
@@ -179,7 +179,7 @@
 
   .solve .btn {
     padding: 16px 30px;
-    font-size: 14px;
+    font-size: var(--fs-14);
   }
 }
 
@@ -197,7 +197,7 @@
 
 .solve .btn--outline {
   color: var(--navy);
-  background: rgb(255 255 255 / 55%);
+  background: rgb(var(--rgb-white) / 55%);
   border-color: var(--navy);
 }
 
@@ -236,27 +236,27 @@
 
 .solve__mark strong {
   display: block;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: var(--fs-13);
+  font-weight: var(--fw-bold);
   color: var(--navy);
   margin-bottom: 2px;
 }
 
 .solve__mark span {
   display: block;
-  font-size: 12px;
-  font-weight: 300;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-light);
   line-height: 1.35;
   color: var(--gray);
 }
 
 @media (--xl) {
   .solve__mark strong {
-    font-size: 14px;
+    font-size: var(--fs-14);
   }
 
   .solve__mark span {
-    font-size: 13px;
+    font-size: var(--fs-13);
   }
 }
 
@@ -264,22 +264,19 @@
   position: absolute;
   top: 84px;
   right: 34px;
-  z-index: 1;
+  z-index: var(--z-layer-1);
   display: none;
   margin: 0;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: var(--fs-13);
+  font-weight: var(--fw-semibold);
   line-height: 1.5;
   letter-spacing: 0.16em;
   text-align: right;
   text-transform: uppercase;
   color: var(--navy);
-}
-
-.solve__claim {
   text-shadow:
-    0 1px 10px rgb(255 255 255 / 85%),
-    0 0 4px rgb(255 255 255 / 90%);
+    0 1px 10px rgb(var(--rgb-white) / 85%),
+    0 0 4px rgb(var(--rgb-white) / 90%);
 }
 
 .solve__claim::before {
@@ -301,7 +298,7 @@
   /* Sector "Un solo lugar": el H2 fluye sin quiebres forzados y la bajada
      se mantiene sobre la zona clara del fondo. */
   .solve__copy h2 {
-    font-size: 36px;
+    font-size: var(--fs-36);
     line-height: 1.1;
   }
 
@@ -311,7 +308,7 @@
 
   .solve__lead {
     max-width: 71%;
-    font-size: 14px;
+    font-size: var(--fs-14);
   }
 
   /* CTAs del mismo tamano que los del hero */
@@ -325,7 +322,7 @@
   .solve .btn {
     gap: 8px;
     padding: 11px 20px;
-    font-size: 11px;
+    font-size: var(--fs-11);
   }
 
   .solve .btn svg {
@@ -334,7 +331,7 @@
   }
 
   .solve--landing .solve__copy h2 {
-    font-size: 32px;
+    font-size: var(--fs-32);
   }
 }
 

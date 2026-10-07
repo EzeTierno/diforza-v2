@@ -81,7 +81,7 @@
 })();
 (function(){
   // Hace "draggeable" con mouse (y touch nativo) cualquier carrusel con
-  // el atributo data-js="drag-carousel" — se usa en el de categorías y en el de productos.
+  // el atributo data-js="drag-carousel" — hoy: los carruseles de productos (home y landings).
   // El scroll no sigue 1 a 1 al cursor: persigue un target con easing (lerp),
   // y al soltar sigue un poco por inercia (momentum) antes de frenar.
   document.querySelectorAll('[data-js="drag-carousel"]').forEach(function(carousel){
@@ -157,125 +157,6 @@
     toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     toggle.textContent = isOpen ? '✕' : '☰';
   });
-})();
-(function(){
-  // Carrusel "spotlight" de categorías (sector 3), infinito: el ítem activo
-  // queda centrado y más grande, los vecinos más chicos y difuminados.
-  // Para que nunca haya un hueco en los extremos, se clonan un par de ítems
-  // a cada punta (suficiente para cubrir la distancia máxima visible, 2).
-  // Al cruzar hacia una punta clonada se "teletransporta" sin transición al
-  // ítem real equivalente, dando la ilusión de loop infinito.
-  //
-  // La corrección de posición se dispara con el evento nativo
-  // "transitionend" (no con un setTimeout a ciegas): así siempre reacciona
-  // al final REAL de la animación, sin importar si el usuario clickeó una
-  // vez o encadenó varios clicks rápido. Además, antes de aplicar cualquier
-  // click nuevo, la posición se auto-corrige si ya estaba fuera de rango
-  // (por ejemplo si el usuario clickeó más rápido de lo que tarda la
-  // animación en asentarse) — así "pos" nunca puede alejarse más de un paso
-  // de la zona segura, y nunca se sale del array de ítems.
-  var root = document.getElementById('catsCarousel');
-  if (!root) return;
-  var track = document.getElementById('catsTrack');
-  var realItems = Array.prototype.slice.call(track.children);
-  var N = realItems.length;
-  var CLONES = 2; // = distancia máxima visible (data-dist "2")
-  var label = document.getElementById('catsLabel');
-  var dotsWrap = document.getElementById('catsDots');
-  var prevBtn = document.getElementById('catsPrev');
-  var nextBtn = document.getElementById('catsNext');
-
-  // arma [clones de las últimas N] + [ítems reales] + [clones de las primeras N]
-  var headClones = realItems.slice(N - CLONES).map(function(el){ return el.cloneNode(true); });
-  var tailClones = realItems.slice(0, CLONES).map(function(el){ return el.cloneNode(true); });
-  headClones.forEach(function(el){ track.insertBefore(el, track.firstChild); });
-  tailClones.forEach(function(el){ track.appendChild(el); });
-
-  var items = Array.prototype.slice.call(track.children); // longitud N + 2*CLONES
-  var pos = CLONES; // posición extendida; pos-CLONES = índice real activo
-
-  // dots (uno por categoría real)
-  var dots = realItems.map(function(item, i){
-    var dot = document.createElement('button');
-    dot.type = 'button';
-    dot.className = 'solve__cats-dot';
-    dot.setAttribute('aria-label', 'Ir a ' + item.dataset.name);
-    dot.addEventListener('click', function(){ goTo(CLONES + i); });
-    dotsWrap.appendChild(dot);
-    return dot;
-  });
-
-  function step(){
-    // offsetLeft/offsetWidth ignoran el transform:scale() de cada ítem
-    // (getBoundingClientRect no, y eso rompía el centrado según qué ítem
-    // estuviera en juego y su escala actual en ese momento).
-    if (items.length < 2) return items[0] ? items[0].offsetWidth : 0;
-    return items[1].offsetLeft - items[0].offsetLeft;
-  }
-
-  function render(){
-    var s = step();
-    var itemW = items[0].offsetWidth;
-    var containerW = root.querySelector('.solve__cats-viewport').clientWidth;
-    var offset = (containerW / 2 - itemW / 2) - (pos * s);
-    track.style.transform = 'translateX(' + offset + 'px)';
-
-    items.forEach(function(item, i){
-      var dist = Math.abs(i - pos);
-      item.setAttribute('data-dist', dist >= 3 ? 'far' : String(dist));
-    });
-    var realIndex = ((pos - CLONES) % N + N) % N;
-    dots.forEach(function(dot, i){ dot.classList.toggle('is-active', i === realIndex); });
-    label.textContent = items[realIndex + CLONES].dataset.name;
-  }
-
-  function jumpInstant(newPos){
-    // reubica sin animación (usado para "teletransportar" al ítem real
-    // equivalente cuando la posición cae en la zona clonada)
-    track.style.transition = 'none';
-    pos = newPos;
-    render();
-    void track.offsetWidth; // fuerza reflow antes de reactivar la transición
-    track.style.transition = '';
-  }
-
-  function normalize(){
-    if (pos >= N + CLONES){ jumpInstant(pos - N); }
-    else if (pos < CLONES){ jumpInstant(pos + N); }
-  }
-
-  // corrige ANTES de aplicar un nuevo movimiento si "pos" ya había quedado
-  // fuera de rango (típico de clicks encadenados más rápido que la animación)
-  function settleIfNeeded(){
-    if (pos >= N + CLONES || pos < CLONES){
-      var real = ((pos - CLONES) % N + N) % N;
-      pos = CLONES + real;
-    }
-  }
-
-  function step_(delta){
-    settleIfNeeded();
-    pos += delta;
-    render();
-  }
-
-  function goTo(newPos){
-    settleIfNeeded();
-    pos = newPos;
-    render();
-  }
-
-  track.addEventListener('transitionend', function(e){
-    if (e.target !== track || e.propertyName !== 'transform') return;
-    normalize();
-  });
-
-  prevBtn.addEventListener('click', function(){ step_(-1); });
-  nextBtn.addEventListener('click', function(){ step_(1); });
-  items.forEach(function(item, i){ item.addEventListener('click', function(){ goTo(i); }); });
-  window.addEventListener('resize', render);
-
-  render();
 })();
 (function(){
   // Parallax: el fondo del destacado (spotlight) se mueve, el texto queda fijo/normal

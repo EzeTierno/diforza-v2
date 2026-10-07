@@ -27,7 +27,7 @@ src/
 │  └─ partials/               ← header, footer, botón flotante de WhatsApp, fuentes, íconos
 ├─ assets/
 │  ├─ css/main.css            ← punto de entrada único (Lightning CSS → un solo main.css minificado)
-│  ├─ css/settings/           ← tokens (variables) y breakpoints con nombre: @media (--lg)
+│  ├─ css/settings/           ← tokens (colores, tipografía, radios, capas) y breakpoints: @media (--lg)
 │  ├─ css/base/               ← reset y estilos globales
 │  ├─ css/components/         ← piezas reutilizables: botón, badge, formulario, tarjeta de producto…
 │  ├─ css/layout/             ← header y footer
@@ -53,7 +53,7 @@ _site/                        ← salida del build. NO se edita ni se sube a git
 - **Formato de los textos en los JSON:** `[[texto]]` = marca de pendiente ([VALIDAR]/[PENDIENTE]) que se ve con borde naranja; se permite `<br>` para cortes de línea. Íconos: nombre de `src/_data/icons.json`. Reseñas: por nombre de `src/_data/reviews.json`. Opciones de rubro y tamaño del formulario: `src/_data/landingForm.json`.
 - **Campos útiles del JSON:** `confianza.agrupado` (franja con grupo de marcas distribuidas), `lineas.tituloAncho`, ítems de `lineas` con `descripcion` (formato largo), `productos.specs` (iguales para todos) o `specs` por producto, `categoria` del producto (tilda la categoría en el formulario), `cotizacion.campoVariable` (`select` o `chips`), `secciones` (orden/selección de secciones; si no está, va el orden estándar).
 - Rutas de imágenes y assets siempre **absolutas** (`/img/...`, `/<slug>/img/...`, `/assets/...`).
-- **CSS:** convenciones en `_dev/prompts/refactor-css.md` (BEM en inglés, tokens, capas, breakpoints con nombre). El JS engancha por `data-js="…"`, no por clases de estilo (excepciones: `.reveal`, `.field`). Regla dura: cero cambio visual (verificar con `npm run test:visual`). Breakpoints: usar los nombres de `src/assets/css/settings/media.css`.
+- **CSS:** convenciones en `_dev/prompts/refactor-css.md` (BEM en inglés, tokens, capas, breakpoints con nombre). El JS engancha por `data-js="…"`, no por clases de estilo (excepciones: `.reveal`, `.field`). Colores, tamaños de fuente, pesos, radios y z-index **siempre por token** (`settings/tokens.css`; el linter lo exige); en componentes nuevos usar los semánticos (`--color-primary`, `--color-text`…). Regla dura: cero cambio visual (verificar con `npm run test:visual`). Breakpoints: usar los nombres de `src/assets/css/settings/media.css`.
 - Lo que no va al sitio (PSD, originales, scripts, notas) va en `_dev/`.
 
 ## Publicación (Cloudflare Pages)

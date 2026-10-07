@@ -4,7 +4,7 @@
 
 /* Catalogo: formulario corto e independiente, colapsable (doc 05 §6) */
 .catalog {
-  border-top: 1px solid rgb(255 255 255 / 14%);
+  border-top: 1px solid rgb(var(--rgb-white) / 14%);
   margin-top: 32px;
   padding-top: 24px;
   scroll-margin-top: 90px;
@@ -17,13 +17,10 @@
   justify-content: space-between;
   width: 100%;
   padding: 0;
-  font:
-    700 14px/1.4 Montserrat,
-    Arial,
-    sans-serif;
+  font: var(--fw-bold) var(--fs-14)/1.4 var(--font-body);
   letter-spacing: 0.02em;
   text-align: left;
-  color: #fff;
+  color: var(--white);
   background: none;
   border: none;
   cursor: pointer;
@@ -31,10 +28,10 @@
 
 .catalog__toggle small {
   display: block;
-  font-size: 13px;
-  font-weight: 300;
+  font-size: var(--fs-13);
+  font-weight: var(--fw-light);
   letter-spacing: 0;
-  color: rgb(255 255 255 / 70%);
+  color: rgb(var(--rgb-white) / 70%);
   margin-top: 2px;
 }
 
@@ -59,15 +56,15 @@
 
 /* Formulario de catalogo sobre fondo navy */
 .catalog .field label {
-  color: #fff;
+  color: var(--white);
 }
 
 .catalog .check {
-  color: rgb(255 255 255 / 75%);
+  color: rgb(var(--rgb-white) / 75%);
 }
 
 .catalog .check a {
-  color: #fff;
+  color: var(--white);
 }
 
 .catalog .lead-form__grid {
@@ -75,10 +72,10 @@
 }
 
 .catalog .lead-form__ok {
-  background: #fff;
-  border-radius: 14px;
+  background: var(--white);
+  border-radius: var(--radius-14);
 }
 
 .catalog .field label.check {
-  color: rgb(255 255 255 / 75%);
+  color: rgb(var(--rgb-white) / 75%);
 }

@@ -9,7 +9,7 @@
    El doble espacio queda abajo, antes del footer. */
 .faq {
   padding: 0 var(--pad) 96px;
-  background: #fff;
+  background: var(--white);
 }
 
 @media (--lg) {
@@ -31,8 +31,8 @@
 
 .faq__inner h2 {
   margin: 0 0 28px;
-  font-size: 26px;
-  font-weight: 700;
+  font-size: var(--fs-26);
+  font-weight: var(--fw-bold);
   line-height: 32px;
   text-align: center;
   color: var(--navy);
@@ -40,27 +40,27 @@
 
 @media (--md) {
   .faq__inner h2 {
-    font-size: 32px;
+    font-size: var(--fs-32);
     line-height: 38px;
   }
 }
 
 @media (--xl) {
   .faq__inner h2 {
-    font-size: 38px;
+    font-size: var(--fs-38);
     line-height: 46px;
     margin-bottom: 40px;
   }
 }
 
 .faq__inner .accordion summary {
-  font-size: 18px;
+  font-size: var(--fs-18);
   line-height: 25px;
 }
 
 @media (--xl) {
   .faq__inner .accordion summary {
-    font-size: 22px;
+    font-size: var(--fs-22);
     line-height: 29px;
   }
 }

@@ -7,7 +7,7 @@
   position: relative;
   padding: 56px var(--pad);
   overflow: hidden;
-  color: #fff;
+  color: var(--white);
   background: var(--navy);
   scroll-margin-top: 70px;
 }
@@ -27,7 +27,7 @@
 .quote::before {
   position: absolute;
   inset: -20% 70% -20% -30%;
-  background: linear-gradient(90deg, rgb(255 255 255 / 1.5%), rgb(255 255 255 / 5%));
+  background: linear-gradient(90deg, rgb(var(--rgb-white) / 1.5%), rgb(var(--rgb-white) / 5%));
   transform: skewX(-28deg);
   content: "";
   pointer-events: none;
@@ -56,13 +56,13 @@
 
 .quote__copy .section-title {
   max-width: 14ch;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 18px;
 }
 
 @media (--2xl) {
   .quote__copy .section-title {
-    font-size: 52px;
+    font-size: var(--fs-52);
   }
 }
 
@@ -71,45 +71,45 @@
   gap: 10px;
   align-items: center;
   margin: 0 0 28px;
-  font-size: 15px;
-  font-weight: 500;
-  color: rgb(255 255 255 / 88%);
+  font-size: var(--fs-15);
+  font-weight: var(--fw-medium);
+  color: rgb(var(--rgb-white) / 88%);
 }
 
 .quote__reply::before {
   flex: none;
   width: 9px;
   height: 9px;
-  background: #35c46f;
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px rgb(53 196 111 / 20%);
+  background: var(--green-500);
+  border-radius: var(--radius-round);
+  box-shadow: 0 0 0 4px rgb(var(--rgb-green-500) / 20%);
   content: "";
 }
 
 .quote__mini {
   margin: 0 0 28px;
   padding: 20px 22px;
-  background: rgb(255 255 255 / 6%);
-  border: 1px solid rgb(255 255 255 / 12%);
-  border-radius: 14px;
+  background: rgb(var(--rgb-white) / 6%);
+  border: 1px solid rgb(var(--rgb-white) / 12%);
+  border-radius: var(--radius-14);
 }
 
 .quote__mini p {
   margin: 0 0 12px;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-light);
   line-height: 1.6;
-  color: rgb(255 255 255 / 90%);
+  color: rgb(var(--rgb-white) / 90%);
 }
 
 .quote__mini cite {
-  font-size: 13px;
-  font-weight: 700;
+  font-size: var(--fs-13);
+  font-weight: var(--fw-bold);
   font-style: normal;
-  color: #fff;
+  color: var(--white);
 }
 
 .quote__mini cite span {
-  font-weight: 400;
-  color: rgb(255 255 255 / 60%);
+  font-weight: var(--fw-regular);
+  color: rgb(var(--rgb-white) / 60%);
 }

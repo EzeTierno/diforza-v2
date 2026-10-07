@@ -10,25 +10,22 @@
   gap: 4px;
   align-items: center;
   padding: 2px 7px;
-  font:
-    600 9.5px/1.35 Montserrat,
-    Arial,
-    sans-serif;
+  font: var(--fw-semibold) var(--fs-9-5)/1.35 var(--font-body);
   font-style: normal;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   white-space: nowrap;
-  color: #c2561a;
-  background: #fff4ec;
+  color: var(--orange-700);
+  background: var(--orange-50);
   border: 1px dashed var(--orange);
-  border-radius: 4px;
+  border-radius: var(--radius-4);
   margin-left: 6px;
   vertical-align: middle;
 }
 
 .theme-dark .placeholder {
-  color: #ffb68b;
-  background: rgb(255 126 52 / 14%);
+  color: var(--orange-300);
+  background: rgb(var(--rgb-orange) / 14%);
 }
 
 html.is-placeholders-hidden .placeholder {
@@ -39,19 +36,16 @@ html.is-placeholders-hidden .placeholder {
   position: fixed;
   bottom: 14px;
   left: 14px;
-  z-index: 60;
+  z-index: var(--z-dev);
   padding: 8px 14px;
-  font:
-    600 10.5px/1 Montserrat,
-    Arial,
-    sans-serif;
+  font: var(--fw-semibold) var(--fs-10-5)/1 var(--font-body);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #c2561a;
-  background: #fff;
+  color: var(--orange-700);
+  background: var(--white);
   border: 1px dashed var(--orange);
-  border-radius: 999px;
-  box-shadow: 0 6px 18px rgb(0 26 52 / 14%);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 6px 18px rgb(var(--rgb-ink-800) / 14%);
   cursor: pointer;
 }
 
@@ -62,7 +56,7 @@ html.is-placeholders-hidden .product-card__phlabel {
 @media (--below-md) {
   .placeholder-toggle {
     padding: 6px 10px;
-    font-size: 9px;
+    font-size: var(--fs-9);
     opacity: 0.92;
   }
 }
