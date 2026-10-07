@@ -60,7 +60,7 @@
   /* ---- COLOR · semánticos (usar estos en componentes nuevos) ---- */
   --color-text: var(--navy);
   --color-accent: var(--orange);
-  --color-primary: var(--orange); /* fondo de CTA principal (fase D: naranja accesible) */
+  --color-primary: var(--orange-700);    /* fondo de CTA principal: naranja accesible, blanco encima 4,5:1 (fase D) */
   --color-on-primary: var(--white);
   --color-whatsapp: var(--green-wa);
   --color-error: var(--red-700);

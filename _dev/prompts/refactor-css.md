@@ -450,8 +450,8 @@ Excepciones aceptadas a "JS solo por data-js": `.reveal` (clase de estado de ani
 | **A · Infraestructura** ✅ 6 oct | Baseline visual + script de test · Lightning CSS en 11ty · `main.css` con `@layer` · `tokens.css` con los **valores exactos actuales** · `media.css` · Stylelint/Prettier configurados (aún en modo aviso) | Ninguno | Commit "CSS fase A" + test en verde |
 | **B · Arquitectura y nombres** ✅ 6 oct | Partir el CSS en el árbol de §5 · renombrar clases (tabla §8.2) en CSS, `.njk` y JS · JS a `data-js` · unificar L2/L3 en componentes/secciones compartidas · media queries agrupadas por bloque · comentarios con nombres viejos actualizados (borrar CSS muerto pasa a la fase C) | Ninguno | Commit "CSS fase B" + tabla de renombres + test en verde |
 | **C · Tokens** ✅ 7 oct | Reemplazar todos los valores sueltos por tokens **exactos** (sin consolidar) · Stylelint en modo error | **Ninguno** | Commit "CSS fase C" + tabla de tokens + test en verde |
-| **D · Accesibilidad** | CTA naranja → `#C2561A` (D5, aprobado) · informe de contraste, foco y áreas táctiles (lo que implique cambio visual se reporta, no se aplica sin OK) | Solo el CTA | Commit "CSS fase D" + informe |
-| **E · Documentación** | `_dev/notas/css-guia.md` (cómo crear un componente / una landing, tokens disponibles, breakpoints) · actualizar `README.md` y `MEMORY.md` | — | Commit "CSS fase E" |
+| **D · Accesibilidad** ✅ 7 oct | CTA naranja → `#C2561A` (D5, aprobado) · informe de contraste, foco y áreas táctiles (lo que implique cambio visual se reporta, no se aplica sin OK) | Solo el CTA | Commit "CSS fase D" + informe |
+| **E · Documentación** ✅ 7 oct | `_dev/notas/css-guia.md` (cómo crear un componente / una landing, tokens disponibles, breakpoints) · actualizar `README.md` y `MEMORY.md` | — | Commit "CSS fase E" |
 
 **Plantilla de landing (recomendado, misma pasada que la fase B):** como en la fase B se reescribe el HTML de L2/L3 con clases unificadas, extraer las secciones de landing a parciales (`src/_includes/sections/landing/*.njk`) alimentados por datos de cada página (front matter o `src/_data/landings/*.json`: productos, líneas, FAQ, textos). Resultado: L4 y L5 = un archivo de datos + fotos.
 
@@ -465,16 +465,16 @@ Tracking (GTM/GA4/Meta), SEO, optimización de imágenes, fuentes autoalojadas y
 
 ## 14. Criterios de aceptación (checklist final)
 
-- [ ] Un solo `main.css` en producción, minificado y con hash; ningún `pageCss`.
-- [ ] Ninguna clase con `-v2`, `-l2`, `-l3`; ningún archivo CSS por página.
-- [ ] `npm run lint:css` en verde en modo error (0 HEX/rgba fuera de tokens, 0 px de tipografía/espaciado, 0 `!important` fuera de utilidades, 0 IDs).
-- [ ] `npm run test:visual`: 0 diff en A, B y C; en D solo el CTA naranja.
-- [ ] Media queries solo con los nombres de `media.css`; tipografía idéntica a la actual.
-- [ ] JS sin selectores por clase de estilo (solo `data-js` / ids de ancla).
-- [ ] Sin errores de consola, sin 404, sin overflow horizontal en los 11 anchos.
-- [ ] CTA naranja en `#C2561A`; informe de contraste del resto entregado.
-- [ ] Guía `_dev/notas/css-guia.md` + README y MEMORY actualizados.
-- [ ] Peso del bundle completo (gzip) ≤ 20 KB, que es lo que pesan hoy base + l2 + l3 juntos sin minificar (hoy cada landing descarga ~18–19 KB gzip).
+- [x] Un solo `main.css` en producción, minificado; ningún `pageCss`. *(El hash para caché va con el deploy en Cloudflare: fase de performance.)*
+- [x] Ninguna clase con `-v2`, `-l2`, `-l3`; ningún archivo CSS por página.
+- [x] `npm run lint:css` en verde en modo error (0 HEX/rgba fuera de tokens, 0 px de tipografía, 0 z-index numéricos, 0 `!important` fuera de utilidades, 0 IDs). *Espaciados en px: decisión de la fase C.*
+- [x] `npm run test:visual`: 0 diff en A, B y C; en D solo el CTA naranja.
+- [x] Media queries solo con los nombres de `media.css`; tipografía idéntica a la actual.
+- [x] JS sin selectores por clase de estilo (solo `data-js` / ids de ancla).
+- [x] Sin errores de consola, sin 404, sin overflow horizontal en los 11 anchos.
+- [x] CTA naranja en `#C2561A`; informe de contraste del resto entregado.
+- [x] Guía `_dev/notas/css-guia.md` + README y MEMORY actualizados.
+- [x] Peso del bundle completo (gzip) ≤ 20 KB — **13 KB** (74 KB minificado) para todo el sitio, que es lo que pesan hoy base + l2 + l3 juntos sin minificar (hoy cada landing descarga ~18–19 KB gzip).
 
 ---
 
@@ -498,3 +498,47 @@ Tracking (GTM/GA4/Meta), SEO, optimización de imágenes, fuentes autoalojadas y
 **Verificación**
 - Estilos computados de todos los elementos (incl. ::before/::after, hover, foco, menú mobile, form inválido) en 7 anchos × 4 páginas: única diferencia, los grises B. Delta máx. de píxel 4/255. Animaciones y keyframes: 0 diferencias. JS sin errores.
 - `npx stylelint "src/**/*.css"` sin errores. Baseline visual regenerada (cambió por los grises, los flags y la página de calzado).
+
+---
+
+## Registro fase D (7 oct 2026)
+
+**Qué se hizo**
+- `--color-primary: var(--orange-700)` → todos los CTA sólidos (`.btn--primary`, `.product-card__cta`, CTA del header, "Más info" de la home, botón del formulario) pasan de `#FF7E34` a **`#C2561A`** (blanco encima: 4,5:1, WCAG AA). El naranja `#FF7E34` sigue como acento.
+- Velo del header corregido a 88% (ver registro de la fase C, aprobado por el usuario).
+- Limpieza: declaración muerta `display: none` en `.header .btn--nav` (la pisaba la línea siguiente).
+- Verificación por estilos computados (4 páginas, 390 y 1440, con hover y foco): **la única diferencia es `background-color` de los CTA** (`rgb(255,126,52)` → `rgb(194,86,26)`). Sin overflow horizontal, sin errores de consola ni 404 en las 4 páginas × 11 anchos.
+
+**Informe de accesibilidad (NO aplicado: cada punto implica cambio visual y necesita OK)**
+
+*Contraste insuficiente sobre fondos sólidos:*
+
+| Dónde | Qué | Contraste | Mínimo | Propuesta |
+|---|---|---|---|---|
+| Landings + home: caja naranja "Equipar a 80 personas…" (`.benefits__problem-box`) | Texto blanco sobre `#FF7E34` | 2,5:1 | 3 (título) / 4,5 (texto) | Fondo `--color-primary` (`#C2561A`) |
+| Home: botón "Ir a tienda online" (`.btn--outline` sobre blanco) | Texto y borde `#FF7E34` sobre blanco | 2,5:1 | 4,5 | Texto/borde `#C2561A` cuando va sobre fondo claro (sobre fondo oscuro está bien) |
+| Reseñas: avatar naranja (iniciales) | Blanco sobre `#F57C00` | 2,7:1 | 4,5 | Avatar `#C2561A` o iniciales en azul |
+| Reseñas: avatar verde | Blanco sobre `#388E3C` | 4,1:1 | 4,5 | Verde un punto más oscuro (`#2E7D32`, 5,1:1) |
+| Tarjetas de producto: nombre de la spec ("Tela", "Talles") | `#8A96A3` sobre blanco, 10px | 3,0:1 | 4,5 | `--slate-600` (`#6B7785`, 4,6:1) |
+| Etiquetas chicas grises ("Marca propia", "Socio estratégico", eyebrow de productos, subtítulos de marcas) | `#727272` sobre `#F2F4F6` | 4,4:1 | 4,5 | Gris un tono más oscuro (`#6B6B6B`) — diferencia casi invisible |
+| Franja de confianza EPP: palabras de marcas | `#6B7785` sobre `#F2F4F6` | 4,1:1 | 4,5 | `--slate-650` |
+
+Las marcas `[[placeholder]]` (4,2:1) no se cuentan: desaparecen antes del lanzamiento. Los textos sobre fotos (hero, banners) no se miden automáticamente; a ojo tienen velo oscuro y se leen bien.
+
+*Foco con teclado:*
+- El checkbox de consentimiento del formulario **no muestra foco** (`outline: none` sin reemplazo). Propuesta: anillo `--color-primary` con `:focus-visible`.
+- El resto usa el foco por defecto del navegador (línea fina oscura): casi invisible sobre el header y los fondos azules. Propuesta: un `:focus-visible` global (anillo de 2px naranja con separación) — solo lo ven quienes navegan con teclado.
+
+*Áreas táctiles (WCAG 2.2 pide 24×24 px):*
+- Links del footer (16px de alto) y del menú desktop (19px): pasan por la excepción de espaciado (hay aire alrededor), pero en mobile conviene sumar padding vertical para llegar a ~44px.
+- Preguntas del bloque "¿Inconvenientes…?" en mobile: 22px de alto. Sumar padding.
+- Checkbox de consentimiento 18×18: lo salva el label clickeable.
+
+---
+
+## Registro fase E (7 oct 2026)
+
+- `_dev/notas/css-guia.md`: cómo está armado (capas, carpetas, breakpoints), qué tokens usar, nombres, recetas (cambiar un color, crear componente / sección / landing, variantes), checklist antes del commit y reglas mínimas de accesibilidad.
+- README: estructura actualizada (calzado, plantilla de landings, guía) y regla de tokens. MEMORY: entrada del refactor.
+
+**Refactor de CSS cerrado (fases A–E).** Pendiente fuera del refactor: hash del CSS para caché (deploy), CSS crítico y fuentes autoalojadas (performance), puntos del informe de accesibilidad (con OK).

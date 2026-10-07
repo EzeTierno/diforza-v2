@@ -34,12 +34,15 @@ src/
 │  ├─ css/sections/           ← secciones: compartidas (hero, solve, benefits, faq), home/ y landing/
 │  ├─ css/utilities.css       ← utilidades (lista cerrada)
 │  └─ js/main.js, landing.js  ← main.js en todas; landing.js en las páginas de categoría
+├─ _includes/sections/landing/ ← secciones de la plantilla de landing (hero, trust, products, faq, quote…)
+├─ _data/landings/            ← contenido de cada landing (indumentaria.json, epp.json, calzado.json)
 ├─ img/                       ← imágenes compartidas
 ├─ index.njk                  ← home  →  /
-├─ indumentaria-de-trabajo/   ← L2    →  /indumentaria-de-trabajo/
-│  ├─ index.njk
+├─ indumentaria-de-trabajo/   ← landing  →  /indumentaria-de-trabajo/
+│  ├─ index.njk               ← solo front matter (landingKey: indumentaria)
 │  └─ img/                    ← imágenes propias de la landing
-└─ epp-proteccion-industrial/ ← L3    →  /epp-proteccion-industrial/
+├─ epp-proteccion-industrial/ ← landing  →  /epp-proteccion-industrial/
+└─ calzado-de-seguridad/      ← landing  →  /calzado-de-seguridad/
 _dev/                         ← material de trabajo (PSD, originales, notas, versiones viejas). NO se publica.
 _site/                        ← salida del build. NO se edita ni se sube a git.
 ```
@@ -53,7 +56,7 @@ _site/                        ← salida del build. NO se edita ni se sube a git
 - **Formato de los textos en los JSON:** `[[texto]]` = marca de pendiente ([VALIDAR]/[PENDIENTE]) que se ve con borde naranja; se permite `<br>` para cortes de línea. Íconos: nombre de `src/_data/icons.json`. Reseñas: por nombre de `src/_data/reviews.json`. Opciones de rubro y tamaño del formulario: `src/_data/landingForm.json`.
 - **Campos útiles del JSON:** `confianza.agrupado` (franja con grupo de marcas distribuidas), `lineas.tituloAncho`, ítems de `lineas` con `descripcion` (formato largo), `productos.specs` (iguales para todos) o `specs` por producto, `categoria` del producto (tilda la categoría en el formulario), `cotizacion.campoVariable` (`select` o `chips`), `secciones` (orden/selección de secciones; si no está, va el orden estándar).
 - Rutas de imágenes y assets siempre **absolutas** (`/img/...`, `/<slug>/img/...`, `/assets/...`).
-- **CSS:** convenciones en `_dev/prompts/refactor-css.md` (BEM en inglés, tokens, capas, breakpoints con nombre). El JS engancha por `data-js="…"`, no por clases de estilo (excepciones: `.reveal`, `.field`). Colores, tamaños de fuente, pesos, radios y z-index **siempre por token** (`settings/tokens.css`; el linter lo exige); en componentes nuevos usar los semánticos (`--color-primary`, `--color-text`…). Regla dura: cero cambio visual (verificar con `npm run test:visual`). Breakpoints: usar los nombres de `src/assets/css/settings/media.css`.
+- **CSS:** guía práctica en **`_dev/notas/css-guia.md`** (leer antes de tocar estilos); plan y decisiones en `_dev/prompts/refactor-css.md` (BEM en inglés, tokens, capas, breakpoints con nombre). El JS engancha por `data-js="…"`, no por clases de estilo (excepciones: `.reveal`, `.field`). Colores, tamaños de fuente, pesos, radios y z-index **siempre por token** (`settings/tokens.css`; el linter lo exige); en componentes nuevos usar los semánticos (`--color-primary`, `--color-text`…). Regla dura: cero cambio visual (verificar con `npm run test:visual`). Breakpoints: usar los nombres de `src/assets/css/settings/media.css`.
 - Lo que no va al sitio (PSD, originales, scripts, notas) va en `_dev/`.
 
 ## Publicación (Cloudflare Pages)
