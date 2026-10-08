@@ -21,10 +21,11 @@ npm run test:visual           # compara contra la referencia: 0 píxeles distint
 
 ```
 src/
-├─ _data/site.json            ← datos globales: WhatsApp, teléfono, GTM, menú, footer, redes
+├─ _data/site.json            ← datos globales: WhatsApp, teléfono, email, dirección, horario, legales, menú, CTAs, catálogo, tienda, redes
+├─ _data/home.json            ← contenido de la home: categorías, destacados por línea, FAQ, sección de contacto
 ├─ _includes/
 │  ├─ layouts/base.njk        ← esqueleto de TODAS las páginas (<head>, header, footer, scripts)
-│  └─ partials/               ← header, footer, botón flotante de WhatsApp, fuentes, íconos
+│  └─ partials/               ← header, footer, WhatsApp flotante, ventana del catálogo (catalog-modal), datos de contacto y redes (contact-items, social-links), schema FAQ (faq-schema), fuentes, íconos
 ├─ assets/
 │  ├─ css/main.css            ← punto de entrada único (Lightning CSS → un solo main.css minificado)
 │  ├─ css/settings/           ← tokens (colores, tipografía, radios, capas) y breakpoints: @media (--lg)
@@ -37,6 +38,8 @@ src/
 ├─ _includes/sections/landing/ ← secciones de la plantilla de landing (hero, trust, products, faq, quote…)
 ├─ _data/landings/            ← contenido de cada landing (indumentaria.json, epp.json, calzado.json)
 ├─ img/                       ← imágenes compartidas
+├─ assets/docs/               ← catálogo PDF sin precios (lo descarga la ventana del catálogo)
+├─ politica-de-privacidad/    ← /politica-de-privacidad/
 ├─ index.njk                  ← home  →  /
 ├─ indumentaria-de-trabajo/   ← landing  →  /indumentaria-de-trabajo/
 │  ├─ index.njk               ← solo front matter (landingKey: indumentaria)
@@ -57,6 +60,10 @@ _site/                        ← salida del build. NO se edita ni se sube a git
 - **Campos útiles del JSON:** `confianza.agrupado` (franja con grupo de marcas distribuidas), `lineas.tituloAncho`, ítems de `lineas` con `descripcion` (formato largo), `productos.specs` (iguales para todos) o `specs` por producto, `categoria` del producto (tilda la categoría en el formulario), `cotizacion.campoVariable` (`select` o `chips`), `secciones` (orden/selección de secciones; si no está, va el orden estándar).
 - Rutas de imágenes y assets siempre **absolutas** (`/img/...`, `/<slug>/img/...`, `/assets/...`).
 - **CSS:** guía práctica en **`_dev/notas/css-guia.md`** (leer antes de tocar estilos); plan y decisiones en `_dev/prompts/refactor-css.md` (BEM en inglés, tokens, capas, breakpoints con nombre). El JS engancha por `data-js="…"`, no por clases de estilo (excepciones: `.reveal`, `.field`). Colores, tamaños de fuente, pesos, radios y z-index **siempre por token** (`settings/tokens.css`; el linter lo exige); en componentes nuevos usar los semánticos (`--color-primary`, `--color-text`…). Regla dura: cero cambio visual (verificar con `npm run test:visual`). Breakpoints: usar los nombres de `src/assets/css/settings/media.css`.
+- **CTA principal = WhatsApp** (`site.cta.whatsapp`, texto por página con `waText` en el front matter). **Ventana del catálogo:** cualquier link con `data-js="catalogo"` la abre (lógica en `main.js`); el PDF está en `site.catalogo.pdf`. Eventos al dataLayer: `catalog_open`, `generate_lead` (lead_type=catalogo), `catalog_redownload`.
+- **Tienda online:** oculta con `site.tienda.mostrar: false`; con `true` vuelven los links.
+- **FAQ:** cada página genera su schema `FAQPage` con `partials/faq-schema.njk` (omite respuestas con `[[…]]` o "a confirmar").
+- **Si agregás un archivo nuevo en `src/_data/`, reiniciá `npm start`** (11ty no siempre lo detecta en caliente).
 - Lo que no va al sitio (PSD, originales, scripts, notas) va en `_dev/`.
 
 ## Publicación (Cloudflare Pages)
