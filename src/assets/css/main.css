@@ -33,6 +33,7 @@
 @import "sections/hero.css" layer(sections);
 @import "sections/home/brands.css" layer(sections);
 @import "sections/solve.css" layer(sections);
+@import "sections/home/categories.css" layer(sections);
 @import "sections/home/featured-products.css" layer(sections);
 @import "sections/home/spotlight.css" layer(sections);
 @import "sections/benefits.css" layer(sections);

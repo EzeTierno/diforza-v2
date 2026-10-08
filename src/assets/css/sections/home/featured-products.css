@@ -445,3 +445,195 @@
   color: var(--color-primary);
   border-color: var(--color-primary);
 }
+
+/* ---- Pestañas por línea (Indumentaria / Calzado / EPP) ---- */
+.featured-products__tabs {
+  display: inline-flex;
+  flex: none;
+  gap: 4px;
+  align-self: flex-start;
+  padding: 4px;
+  background: var(--white);
+  border: 1px solid var(--slate-150);
+  border-radius: var(--radius-pill);
+}
+
+@media (--lg) {
+  .featured-products__tabs {
+    margin-top: 34px;
+  }
+}
+
+.featured-products__tab {
+  min-height: 40px;
+  padding: 8px 18px;
+  font: var(--fw-semibold) var(--fs-13) / 1 var(--font-body);
+  letter-spacing: 0.02em;
+  color: var(--navy);
+  background: none;
+  border: none;
+  border-radius: var(--radius-pill);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  cursor: pointer;
+}
+
+@media (--md) {
+  .featured-products__tab {
+    padding: 8px 22px;
+    font-size: var(--fs-14);
+  }
+}
+
+.featured-products__tab:hover {
+  background: var(--slate-75);
+}
+
+.featured-products__tab[aria-selected="true"] {
+  color: var(--white);
+  background: var(--navy);
+}
+
+.featured-products__panel[hidden] {
+  display: none;
+}
+
+/* Imagen: packshot (contain) o foto de ambiente provisoria (cover) */
+.featured-products__img {
+  position: relative;
+  width: 100%;
+}
+
+.featured-products__card--photo img {
+  border-radius: var(--radius-10);
+  object-fit: cover;
+}
+
+.featured-products__ph {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.featured-products__ph .placeholder {
+  margin-left: 0;
+}
+
+.featured-products__all {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  margin: 22px var(--pad) 0;
+  font-size: var(--fs-13);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.featured-products__all svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.featured-products__all:hover svg {
+  transform: translateX(4px);
+}
+
+/* Grilla (catálogo amplio): 2 columnas en mobile, 3 en tablet, 4 en desktop.
+   Las tarjetas toman el ancho de la columna (anula el ancho fijo del carrusel). */
+.featured-products__grid {
+  margin: 28px var(--pad) 0;
+}
+
+@media (--xl) {
+  .featured-products__grid {
+    margin-top: 38px;
+  }
+}
+
+.featured-products__grid .featured-products__track {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: auto;
+  padding: 0;
+}
+
+@media (--md) {
+  .featured-products__grid .featured-products__track {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (--lg) {
+  .featured-products__grid .featured-products__track {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+.featured-products__grid .featured-products__card {
+  width: auto;
+}
+
+/* Mobile: slider horizontal (swipe) con snap. Cada tarjeta ocupa ~84% del
+   ancho (el producto se ve grande) y la siguiente asoma apenas para invitar a deslizar. Las pestañas quedan arriba, siempre a mano. */
+@media (--below-md) {
+  .featured-products__grid {
+    margin: 24px 0 0;
+  }
+
+  .featured-products__grid .featured-products__track {
+    display: flex;
+    gap: 12px;
+    padding: 4px var(--pad) 14px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scroll-padding-inline: var(--pad);
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .featured-products__grid .featured-products__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .featured-products__grid .featured-products__card {
+    flex: 0 0 84%;
+    gap: 10px;
+    padding: 40px 14px 18px;
+    scroll-snap-align: start;
+  }
+
+  .featured-products__grid .featured-products__card:hover {
+    transform: none;
+  }
+
+  .featured-products__grid .featured-products__card img {
+    height: 230px;
+  }
+
+  .featured-products__grid .featured-products__name {
+    font-size: var(--fs-14);
+  }
+
+  .featured-products__grid .featured-products__cat {
+    font-size: var(--fs-13);
+  }
+
+  .featured-products__grid .featured-products__more {
+    padding: 12px 32px;
+    font-size: var(--fs-12);
+  }
+
+  .featured-products__all {
+    margin-top: 10px;
+  }
+}

@@ -43,7 +43,7 @@ phToggle: true   # botón "Ocultar marcas" — apagar antes de lanzar
 
       <h1 class="hero-anim hero-anim--2"><span class="h1-big">Indumentaria<br class="br-mobile"> y<br class="br-desktop"> seguridad</span><br class="br-mobile"> <span class="accent">para los<br class="br-desktop"> que<br class="br-mobile"> hacen industria</span></h1>
 
-      <p class="hero__lead hero-anim hero-anim--3">Soluciones confiables, diseño funcional y producción nacional para equipos que no se detienen.</p>
+      <p class="hero__lead hero-anim hero-anim--3">Ropa de trabajo, calzado de seguridad y elementos de protección personal para empresas. Fabricación propia, stock permanente y envíos a todo el país.</p>
 
       <ul class="hero__benefits hero-anim hero-anim--3">
         <li>
@@ -192,7 +192,7 @@ phToggle: true   # botón "Ocultar marcas" — apagar antes de lanzar
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.9l8.2 4.3v9.6L12 21.1l-8.2-4.3V7.2z"/><path d="M3.8 7.2L12 11.5l8.2-4.3M12 11.5v9.6"/></svg>
           <div>
             <strong>Stock permanente</strong>
-            <span>Amplio inventario en todo el país</span>
+            <span>Envíos a todo el país</span>
           </div>
         </div>
         <div class="solve__mark">
@@ -209,93 +209,77 @@ phToggle: true   # botón "Ocultar marcas" — apagar antes de lanzar
   <p class="solve__claim reveal reveal--1">Equipamos<br>el trabajo real</p>
 </section>
 
+{#- Categorías (líneas de producto) → landings. Datos: src/_data/home.json → categorias -#}
+{%- set C = home.categorias %}
+<section class="categories" id="categorias">
+  <div class="categories__head reveal">
+    <p class="categories__eyebrow">{{ C.eyebrow }}</p>
+    <h2>{{ C.titulo }}</h2>
+    <p>{{ C.bajada }}</p>
+  </div>
+  <div class="categories__grid">
+{%- for c in C.items %}
+    <a href="{{ c.href }}" class="category-card reveal{% if not loop.first %} reveal--{{ loop.index0 }}{% endif %}">
+      <div class="category-card__media">
+        <img src="{{ c.img }}" alt="{{ c.alt }}" width="800" height="600" loading="lazy">
+      </div>
+      <div class="category-card__body">
+        <h3>{{ c.titulo }}</h3>
+        <p>{{ c.texto }}</p>
+        <ul class="category-card__sub">
+{%- for x in c.sub %}
+          <li>{{ x }}</li>
+{%- endfor %}
+        </ul>
+        <span class="category-card__cta">{{ c.cta }} {% include "partials/icon-arrow.njk" %}</span>
+      </div>
+    </a>
+{%- endfor %}
+  </div>
+</section>
+
+{#- Productos destacados por línea (pestañas). Datos: src/_data/home.json → destacados -#}
+{%- set D = home.destacados %}
 <section class="featured-products">
   <div class="featured-products__top reveal">
     <div class="featured-products__heading">
-      <p class="featured-products__eyebrow">Seguridad, calidad y confianza</p>
-      <h2>Productos destacados</h2>
-      <p>Los más elegidos con stock disponible y entrega inmediata</p>
+      <p class="featured-products__eyebrow">{{ D.eyebrow }}</p>
+      <h2>{{ D.titulo }}</h2>
+      <p>{{ D.bajada }}</p>
     </div>
-{%- if site.tienda.mostrar %}
-    <a href="{{ site.tienda.url }}" class="btn btn--outline">Ir a tienda online
-      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
+    <div class="featured-products__tabs" role="tablist" aria-label="Líneas de producto" data-js="tabs">
+{%- for l in D.lineas %}
+      <button type="button" class="featured-products__tab" role="tab" id="tab-{{ l.id }}" aria-controls="panel-{{ l.id }}" aria-selected="{{ 'true' if loop.first else 'false' }}"{% if not loop.first %} tabindex="-1"{% endif %}>{{ l.label }}</button>
+{%- endfor %}
+    </div>
+  </div>
+{%- for l in D.lineas %}
+  <div class="featured-products__panel" role="tabpanel" id="panel-{{ l.id }}" aria-labelledby="tab-{{ l.id }}"{% if not loop.first %} hidden{% endif %}>
+    <div class="featured-products__grid reveal reveal--1">
+      <div class="featured-products__track">
+{%- for p in l.items %}
+        <div class="featured-products__card{% if p.ambiente %} featured-products__card--photo{% endif %}">
+{%- if p.badge == 'top' %}
+          <span class="badge badge--top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4c1.6 2 2.6 3.4 2.6 4.9a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.7 1-2.5.5 1.2 1.6.9 1.6-2.4z"/></svg> Más vendido</span>
+{%- else %}
+          <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
 {%- endif %}
-  </div>
-  <div class="featured-products__carousel reveal reveal--1" data-js="drag-carousel">
-    <div class="featured-products__track">
-      <div class="featured-products__card">
-        <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="/img/cat-ocu.webp" alt="Antiparra New Classic">
-        <span class="featured-products__name">Antiparra New Classic</span>
-        <p class="featured-products__cat">Protección visual</p>
-        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Antiparra New Classic para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
-      </div>
-      <div class="featured-products__card">
-        <span class="badge badge--top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4c1.6 2 2.6 3.4 2.6 4.9a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.7 1-2.5.5 1.2 1.6.9 1.6-2.4z"/></svg> Más vendido</span>
-        <img src="/img/cat-craneana.webp" alt="Casco de seguridad">
-        <span class="featured-products__name">Casco de seguridad</span>
-        <p class="featured-products__cat">Protección craneana</p>
-        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Casco de seguridad para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
-      </div>
-      <div class="featured-products__card">
-        <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="/img/cat-audi.webp" alt="Protector Auditivo L-340">
-        <span class="featured-products__name">Protector Auditivo L-340</span>
-        <p class="featured-products__cat">Protección auditiva</p>
-        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Protector Auditivo L-340 para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
-      </div>
-      <div class="featured-products__card">
-        <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="/img/cat-resp.webp" alt="Respirador Desech Zero 30">
-        <span class="featured-products__name">Respirador Desech Zero 30</span>
-        <p class="featured-products__cat">Protección respiratoria</p>
-        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Respirador Desech Zero 30 para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
-      </div>
-      <div class="featured-products__card">
-        <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="/img/cat-calzado2.webp" alt="Zapatilla Puntera de Acero">
-        <span class="featured-products__name">Zapatilla Puntera de Acero</span>
-        <p class="featured-products__cat">Calzado de seguridad</p>
-        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Zapatilla Puntera de Acero para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
-      </div>
-      <div class="featured-products__card">
-        <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="/img/cat-ocu.webp" alt="Antiparra New Classic">
-        <span class="featured-products__name">Antiparra New Classic</span>
-        <p class="featured-products__cat">Protección visual</p>
-        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Antiparra New Classic para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
-      </div>
-      <div class="featured-products__card">
-        <span class="badge badge--top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4c1.6 2 2.6 3.4 2.6 4.9a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.7 1-2.5.5 1.2 1.6.9 1.6-2.4z"/></svg> Más vendido</span>
-        <img src="/img/cat-craneana.webp" alt="Casco de seguridad">
-        <span class="featured-products__name">Casco de seguridad</span>
-        <p class="featured-products__cat">Protección craneana</p>
-        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Casco de seguridad para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
-      </div>
-      <div class="featured-products__card">
-        <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="/img/cat-audi.webp" alt="Protector Auditivo L-340">
-        <span class="featured-products__name">Protector Auditivo L-340</span>
-        <p class="featured-products__cat">Protección auditiva</p>
-        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Protector Auditivo L-340 para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
-      </div>
-      <div class="featured-products__card">
-        <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="/img/cat-resp.webp" alt="Respirador Desech Zero 30">
-        <span class="featured-products__name">Respirador Desech Zero 30</span>
-        <p class="featured-products__cat">Protección respiratoria</p>
-        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Respirador Desech Zero 30 para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
-      </div>
-      <div class="featured-products__card">
-        <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-        <img src="/img/cat-calzado2.webp" alt="Zapatilla Puntera de Acero">
-        <span class="featured-products__name">Zapatilla Puntera de Acero</span>
-        <p class="featured-products__cat">Calzado de seguridad</p>
-        <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ "Hola, quiero cotizar Zapatilla Puntera de Acero para mi empresa." | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
+          <div class="featured-products__img">
+            <img src="{{ p.img }}" alt="{{ p.nombre }}" loading="lazy">
+{%- if p.ambiente %}
+            <span class="featured-products__ph">{{ "[[Foto provisoria]]" | rich | safe }}</span>
+{%- endif %}
+          </div>
+          <span class="featured-products__name">{{ p.nombre }}</span>
+          <p class="featured-products__cat">{{ p.cat }}</p>
+          <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ ('Hola, quiero cotizar ' + p.nombre + ' para mi empresa.') | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
+        </div>
+{%- endfor %}
       </div>
     </div>
+    <a href="{{ l.href }}" class="featured-products__all">{{ l.cta }} {% include "partials/icon-arrow.njk" %}</a>
   </div>
+{%- endfor %}
 </section>
 
 <section class="spotlight" data-js="spotlight">
@@ -446,7 +430,7 @@ phToggle: true   # botón "Ocultar marcas" — apagar antes de lanzar
   <div class="compliance__inner">
     <div class="compliance__copy reveal">
       <h2>Tu planta protegida y en regla ante cualquier inspección</h2>
-      <p>Si falta el EPP certificado, el operario no entra a la planta. El verdadero costo no es la compra: es la producción frenada por una entrega colgada.</p>
+      <p>Cuando llega la auditoría o la ART pide la documentación, la tenés a mano: cada elemento que te entregamos viene con su ficha técnica y su respaldo, listo para tus registros de la SRT.</p>
       <div class="ctas">
         <a href="#contacto" class="btn btn--primary">Pedir cotización</a>
         <a href="#catalogo" class="btn btn--outline" data-js="catalogo">Descargar catálogo</a>
