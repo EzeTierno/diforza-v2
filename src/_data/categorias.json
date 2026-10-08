@@ -85,24 +85,26 @@
         {
           "id": "botines",
           "nombre": "Botines",
-          "incluye": "Conwork (negro, 25BAF, 525BAF, 653, 401BAF), Ombú (Ozono Plus, Francés ojalado con puntera de acero, Krypton, Gema, Sneaker)"
+          "incluye": "Conwork (negro, 25BAF, 525BAF, 653, 401BAF), Ombú (Ozono Plus, Francés ojalado con puntera de acero, Krypton, Gema, Sneaker); Funcional (Frontier, Street, Mujer Capri); Voran (Argos, Apolo, Aquiles, Neptuno, Cronos)"
         },
         {
           "id": "zapatillas",
           "nombre": "Zapatillas",
-          "incluye": "Conwork Nueva Origen 655ZA/641ZA, Ombú (Sneaker, Krypton, Gema, Cobalto)"
+          "incluye": "Conwork Nueva Origen 655ZA/641ZA, Ombú (Sneaker, Krypton, Gema, Cobalto); Funcional (Soul, Lander, Mujer Bali)"
         },
         {
           "id": "zapatos",
           "nombre": "Zapatos",
-          "incluye": "Conwork (41ZA, 555ZA, 201), Ombú (Ozono Plus, Prusiano, Krypton)"
+          "incluye": "Conwork (41ZA, 555ZA, 201), Ombú (Ozono Plus, Prusiano, Krypton); Funcional (City, Horizon); Voran (Tauro, Jano, Teucro)"
         }
       ],
       "marcas": [
         "Conwork",
-        "Ombú"
+        "Ombú",
+        "Funcional",
+        "Voran"
       ],
-      "_nota": "Solo se comunican Conwork y Ombú (decisión 8 oct 2026), aunque se vendan otras marcas."
+      "_nota": "Se comunican Conwork, Ombú, Funcional y Voran (están en el catálogo PDF de Diforza, 8 oct 2026). Febo/Arseg, SkiWay y Grafa 70 quedan ocultas."
     },
     {
       "id": "epp",
@@ -193,11 +195,11 @@
     ],
     "calzado_comunicado": [
       "Conwork",
-      "Ombú"
+      "Ombú",
+      "Funcional",
+      "Voran"
     ],
     "no_se_comunican": [
-      "Funcional (no está en TiendaNube ni en el sitio GBP — decisión 8 oct 2026)",
-      "Voran",
       "Febo/Arseg",
       "SkiWay",
       "Grafa 70"

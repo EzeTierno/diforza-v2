@@ -1,5 +1,5 @@
 {
- "_nota": "Catálogo maestro completo de Diforza. Fuente: export ERP GBP 8 oct 2026 (SKU agrupados por código base) + ventas ene–jun 2026 + decisiones del usuario. Regenerar con 02_sitio-web/catalogo/catalogo_build.py. visible=false → no se muestra en el sitio. Categorías: categorias.json · colores: colores.json · fichas curadas (descripción, foto, destacados): productos.json.",
+ "_nota": "Catálogo maestro completo de Diforza. Fuente: export ERP GBP 8 oct 2026 (SKU agrupados por código base) + ventas ene–jun 2026 + decisiones del usuario. Regenerar con 02_sitio-web/catalogo/catalogo_build.py. visible=false → no se muestra en el sitio. Categorías: categorias.json · colores: colores.json · fichas curadas (descripción, foto, destacados): productos.json. Incluye productos del catálogo PDF de Diforza (oct 2026) sin código ERP (catalogo_pdf_extra.py).",
  "actualizado": "2026-10-08",
  "productos": [
   {
@@ -1619,8 +1619,7 @@
     "marron"
    ],
    "talles": "36 al 47",
-   "visible": false,
-   "nota": "Marca FUNCIONAL: no se comunica",
+   "visible": true,
    "ventasEneJun2026": {
     "unidades": 1,
     "empresas": 1
@@ -1641,8 +1640,7 @@
     "negro"
    ],
    "talles": "34 al 42",
-   "visible": false,
-   "nota": "Marca FUNCIONAL: no se comunica"
+   "visible": true
   },
   {
    "id": "botin-funcional-street",
@@ -1660,8 +1658,7 @@
     "vison"
    ],
    "talles": "36 al 47",
-   "visible": false,
-   "nota": "Marca FUNCIONAL: no se comunica"
+   "visible": true
   },
   {
    "id": "botin-grafa-70-con-puntera",
@@ -1821,8 +1818,7 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": false,
-   "nota": "Marca VORAN: no se comunica"
+   "visible": true
   },
   {
    "id": "botin-voran-aquiles",
@@ -1838,8 +1834,7 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": false,
-   "nota": "Marca VORAN: no se comunica"
+   "visible": true
   },
   {
    "id": "botin-voran-argos-marron",
@@ -1855,8 +1850,7 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": false,
-   "nota": "Marca VORAN: no se comunica"
+   "visible": true
   },
   {
    "id": "botin-voran-cronos",
@@ -1871,8 +1865,7 @@
     "negro"
    ],
    "talles": "36 al 46",
-   "visible": false,
-   "nota": "Marca VORAN: no se comunica"
+   "visible": true
   },
   {
    "id": "botin-voran-neptuno",
@@ -1887,8 +1880,7 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": false,
-   "nota": "Marca VORAN: no se comunica"
+   "visible": true
   },
   {
    "id": "botiquin",
@@ -7937,8 +7929,7 @@
     "negro"
    ],
    "talles": "36 al 46",
-   "visible": false,
-   "nota": "Marca FUNCIONAL: no se comunica"
+   "visible": true
   },
   {
    "id": "zapatilla-funcional-mujer-bali",
@@ -7955,8 +7946,7 @@
     "negro"
    ],
    "talles": "34 al 42",
-   "visible": false,
-   "nota": "Marca FUNCIONAL: no se comunica"
+   "visible": true
   },
   {
    "id": "zapatilla-funcional-soul",
@@ -7973,8 +7963,7 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": false,
-   "nota": "Marca FUNCIONAL: no se comunica"
+   "visible": true
   },
   {
    "id": "zapatilla-nexus-900za",
@@ -8158,8 +8147,7 @@
     "vison"
    ],
    "talles": "36 al 47",
-   "visible": false,
-   "nota": "Marca FUNCIONAL: no se comunica"
+   "visible": true
   },
   {
    "id": "zapato-funcional-horizon-marron",
@@ -8174,8 +8162,7 @@
     "marron"
    ],
    "talles": "36 al 47",
-   "visible": false,
-   "nota": "Marca FUNCIONAL: no se comunica"
+   "visible": true
   },
   {
    "id": "zapato-ombu-gema-mujer-c-p-composite",
@@ -8260,8 +8247,7 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": false,
-   "nota": "Marca VORAN: no se comunica"
+   "visible": true
   },
   {
    "id": "zapato-voran-tauro-marron",
@@ -8277,8 +8263,7 @@
     "negro"
    ],
    "talles": "35 al 47",
-   "visible": false,
-   "nota": "Marca VORAN: no se comunica"
+   "visible": true
   },
   {
    "id": "zapato-voran-teucro-marron",
@@ -8294,8 +8279,7 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": false,
-   "nota": "Marca VORAN: no se comunica"
+   "visible": true
   },
   {
    "id": "zapatilla-conwork",
@@ -8335,6 +8319,381 @@
     "unidades": 500,
     "empresas": 1
    }
+  },
+  {
+   "id": "cono-multiuso-flexible-20",
+   "nombre": "Cono multiuso flexible 20 cm",
+   "marca": "Conoflex",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "1025"
+  },
+  {
+   "id": "cono-ciudad-light-50",
+   "nombre": "Cono Ciudad Light semiflexible 50 cm",
+   "marca": "Conoflex",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "2051L-1R"
+  },
+  {
+   "id": "cono-econo-classic-75",
+   "nombre": "Cono Econo Classic semiflexible 75 cm",
+   "marca": "Conoflex",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "2070-2R"
+  },
+  {
+   "id": "econo-semiflexible-sin-base-70",
+   "nombre": "Econo semiflexible sin base 2 piezas 70 cm",
+   "marca": "Conoflex",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "2071L-2R"
+  },
+  {
+   "id": "rutero-semiflexible-36",
+   "nombre": "Rutero semiflexible 2 piezas 36×36 cm",
+   "marca": "Conoflex",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "1200LSF-2R"
+  },
+  {
+   "id": "cono-economico-rigido-75",
+   "nombre": "Cono económico rígido 75 cm, 2 bandas reflectivas de 10 cm",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "UCU0002PV"
+  },
+  {
+   "id": "cono-delineador-flexible-60",
+   "nombre": "Cono delineador flexible 60 cm, hormigón/asfalto",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "DR 600 LE"
+  },
+  {
+   "id": "cono-delineador-flexible-60-desmontable",
+   "nombre": "Cono delineador flexible 60 cm desmontable, fijación H/A",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "DR 600 LE BN"
+  },
+  {
+   "id": "tope-de-camion-90",
+   "nombre": "Tope de camión 90 cm, hormigón/asfalto",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "MP3048HD"
+  },
+  {
+   "id": "casco-m-class-visor",
+   "nombre": "Casco M. Class S/V con visor",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "J53"
+  },
+  {
+   "id": "casco-de-altura-libus",
+   "nombre": "Casco de altura Libus",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "J61"
+  },
+  {
+   "id": "msa-kit-visor",
+   "nombre": "Kit visor MSA",
+   "marca": "MSA",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "10190769"
+  },
+  {
+   "id": "protector-auditivo-l360-high-visibility",
+   "nombre": "Protector auditivo L-360 High Visibility",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "902926"
+  },
+  {
+   "id": "protector-copa-l360-casco-high-visibility",
+   "nombre": "Protector de copa L-360 para casco High Visibility",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "902927"
+  },
+  {
+   "id": "protector-auditivo-libus-b300",
+   "nombre": "Protector auditivo Libus B300",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+  },
+  {
+   "id": "kit-mecanizado-liviano",
+   "nombre": "Kit mecanizado liviano",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "kits",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "902660"
+  },
+  {
+   "id": "kit-herramientas-de-corte",
+   "nombre": "Kit herramientas de corte",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "kits",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "902661"
+  },
+  {
+   "id": "anteojo-3m-securefit-3700",
+   "nombre": "Anteojo 3M SecureFit 3700 OTG transparente",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+  },
+  {
+   "id": "zapatilla-conwork-origen-641za",
+   "nombre": "Zapatilla de seguridad Conwork Origen 641ZA",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "zapatillas",
+   "codigosERP": [],
+   "colores": [
+    "azul",
+    "rojo"
+   ],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "641ZA"
+  },
+  {
+   "id": "bota-frigorifica-media-cana-sin-puntera",
+   "nombre": "Bota frigorífica blanca media caña sin puntera de acero",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botas",
+   "codigosERP": [],
+   "colores": [
+    "blanco"
+   ],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+  },
+  {
+   "id": "bota-frigorifica-media-cana-con-puntera",
+   "nombre": "Bota frigorífica blanca media caña con puntera de acero",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botas",
+   "codigosERP": [],
+   "colores": [
+    "blanco"
+   ],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+  },
+  {
+   "id": "guante-aramida-g7",
+   "nombre": "Guante de aramida sin costura G7",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [],
+   "colores": [],
+   "talles": "10",
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+  },
+  {
+   "id": "guante-latex-neoprene",
+   "nombre": "Guante látex neoprene mix flocado",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+  },
+  {
+   "id": "arnes-3-puntos-sky",
+   "nombre": "Arnés 3 puntos: toma anticaída dorsal, sujeción en cintura y amarre 1,5 m",
+   "marca": "SKY",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "SKY10403E"
+  },
+  {
+   "id": "arnes-5-puntos-sky",
+   "nombre": "Arnés 5 puntos: toma anticaída dorsal, coleta 0,35 m y 4 argollas en cintura",
+   "marca": "SKY",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "SKY10420"
+  },
+  {
+   "id": "arnes-6-puntos-sky",
+   "nombre": "Arnés 6 puntos: toma dorsal y frontal, coleta 0,35 m y 4 argollas en cintura",
+   "marca": "SKY",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "codigoFabricante": "SKY10420F"
+  },
+  {
+   "id": "descensor-8-alado",
+   "nombre": "Descensor 8 alado de aluminio, soga de 9 a 16 mm, carga hasta 35 kN",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+  },
+  {
+   "id": "conector-anclaje-mosqueton-18",
+   "nombre": "Conector de anclaje para mosquetón 18 mm",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+  },
+  {
+   "id": "campera-menos-20-grados",
+   "nombre": "Campera -20 °C",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Línea impermeable (cuestionario, preg. 9). Modelo a definir con Diforza"
   }
  ]
 }
