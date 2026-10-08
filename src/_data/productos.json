@@ -276,8 +276,8 @@
         }
       ],
       "foto": {
-        "src": null,
-        "estado": "falta"
+        "src": "/img/productos/capa-lluvia.webp",
+        "estado": "producto"
       },
       "empresas": 34,
       "catalogoId": "capa-de-lluvia",
@@ -305,8 +305,8 @@
         }
       ],
       "foto": {
-        "src": "/img/dest-chaleco-reflectivo.webp",
-        "estado": "provisoria"
+        "src": "/img/productos/chaleco-reflectivo.webp",
+        "estado": "producto"
       },
       "empresas": 34,
       "tambienEn": [
@@ -347,39 +347,10 @@
       "id": "botin-conwork-negro",
       "linea": "calzado",
       "subcategoria": "botines",
-      "nombre": "Botín de seguridad Conwork",
-      "marca": "Conwork",
-      "codigo": "BOTCONW",
-      "descripcion": "El botín de seguridad más pedido por las empresas.",
-      "atributos": [
-        {
-          "tipo": "colores",
-          "valores": [
-            "negro"
-          ]
-        },
-        {
-          "tipo": "talles",
-          "valor": "35 al 47"
-        }
-      ],
-      "foto": {
-        "src": "/img/dest-botin-conwork-negro.webp",
-        "estado": "provisoria"
-      },
-      "masVendido": true,
-      "empresas": 81,
-      "pendiente": "Modelo/artículo exacto, tipo de puntera y norma IRAM",
-      "catalogoId": "botin-conwork"
-    },
-    {
-      "id": "botin-conwork-25baf",
-      "linea": "calzado",
-      "subcategoria": "botines",
-      "nombre": "Botín Conwork 25BAF",
+      "nombre": "Botín de seguridad Conwork 25BAF",
       "marca": "Conwork",
       "codigo": "25BAF",
-      "descripcion": "Línea industrial. Versión blanca para industria alimenticia.",
+      "descripcion": "Línea industrial. El botín de seguridad más pedido por las empresas.",
       "atributos": [
         {
           "tipo": "colores",
@@ -390,15 +361,15 @@
         },
         {
           "tipo": "talles",
-          "valor": "35 al 47"
+          "valor": "35 al 48"
         }
       ],
       "foto": {
-        "src": "/img/dest-botin-conwork-25baf.webp",
-        "estado": "provisoria"
+        "src": "/img/productos/botin-conwork-negro.webp",
+        "estado": "producto"
       },
-      "empresas": 61,
-      "pendiente": "Blanco figura 'a consultar stock' en el catálogo",
+      "masVendido": true,
+      "empresas": 81,
       "catalogoId": "botin-conwork-25baf"
     },
     {
@@ -423,8 +394,8 @@
         }
       ],
       "foto": {
-        "src": "/img/dest-zapato-conwork.webp",
-        "estado": "provisoria"
+        "src": "/img/productos/zapato-conwork.webp",
+        "estado": "producto"
       },
       "empresas": 39,
       "catalogoId": "zapato-conwork-41za"
@@ -451,8 +422,8 @@
         }
       ],
       "foto": {
-        "src": "/img/dest-bota-cana-larga.webp",
-        "estado": "provisoria"
+        "src": "/img/productos/bota-cana-larga.webp",
+        "estado": "producto"
       },
       "empresas": 33,
       "nota": "Agrupa BOOMSP, BOOMCP, BOOMSP-BL y BOOMCP-BL (negra/blanca, con/sin puntera). Talles 35 al 48.",
@@ -463,7 +434,7 @@
       "id": "zapatilla-conwork",
       "linea": "calzado",
       "subcategoria": "zapatillas",
-      "nombre": "Zapatilla de seguridad Conwork Nueva Origen 2.0",
+      "nombre": "Zapatilla Conwork Origen 655ZA",
       "marca": "Conwork",
       "codigo": "655ZA",
       "descripcion": "Alta gama por diseño y confort.",
@@ -481,8 +452,8 @@
         }
       ],
       "foto": {
-        "src": "/img/cat-calzado2.webp",
-        "estado": "provisoria"
+        "src": "/img/productos/zapatilla-conwork.webp",
+        "estado": "producto"
       },
       "empresas": 32,
       "catalogoId": "zapatilla-conwork-655za"
@@ -491,10 +462,10 @@
       "id": "botin-conwork-653",
       "linea": "calzado",
       "subcategoria": "botines",
-      "nombre": "Botín Conwork 653",
+      "nombre": "Botín Conwork Origen 653BAF",
       "marca": "Conwork",
       "codigo": "653BAF",
-      "descripcion": "Botín de seguridad de cuero.",
+      "descripcion": "Cuero flor, puntera de aluminio y planta dieléctrica PU bidensidad.",
       "atributos": [
         {
           "tipo": "colores",
@@ -509,11 +480,10 @@
         }
       ],
       "foto": {
-        "src": "/img/dest-botin-conwork-653.webp",
-        "estado": "provisoria"
+        "src": "/img/productos/botin-conwork-653.webp",
+        "estado": "producto"
       },
       "empresas": 14,
-      "pendiente": "Validar 'de cuero'",
       "catalogoId": "botin-conwork-art-653-marron"
     },
     {
@@ -537,8 +507,8 @@
         }
       ],
       "foto": {
-        "src": "/img/dest-botin-ombu.webp",
-        "estado": "provisoria"
+        "src": "/img/productos/botin-ombu-ozono.webp",
+        "estado": "producto"
       },
       "empresas": 11,
       "catalogoId": "botin-ombu-ozono"
@@ -564,8 +534,8 @@
         }
       ],
       "foto": {
-        "src": null,
-        "estado": "falta"
+        "src": "/img/productos/zapato-ombu-ozono.webp",
+        "estado": "producto"
       },
       "empresas": null,
       "catalogoId": "zapato-ozono-plus"
@@ -589,7 +559,7 @@
         }
       ],
       "foto": {
-        "src": "/epp-proteccion-industrial/img/prod-anteojo-argon.webp",
+        "src": "/img/productos/anteojo-argon.webp",
         "estado": "producto"
       },
       "masVendido": true,
@@ -623,7 +593,7 @@
         }
       ],
       "foto": {
-        "src": "/epp-proteccion-industrial/img/prod-casco-milenium.webp",
+        "src": "/img/productos/casco-milenium.webp",
         "estado": "producto"
       },
       "empresas": 48,
@@ -648,7 +618,7 @@
         }
       ],
       "foto": {
-        "src": "/epp-proteccion-industrial/img/prod-anteojo-ecoline.webp",
+        "src": "/img/productos/anteojo-ecoline.webp",
         "estado": "producto"
       },
       "empresas": 45,
@@ -718,7 +688,7 @@
         }
       ],
       "foto": {
-        "src": "/epp-proteccion-industrial/img/prod-arnes-a-cremallera-plastico.webp",
+        "src": "/img/productos/arnes-cremallera.webp",
         "estado": "producto"
       },
       "empresas": 37,
@@ -743,7 +713,7 @@
         }
       ],
       "foto": {
-        "src": "/epp-proteccion-industrial/img/prod-auditivo-quantum.webp",
+        "src": "/img/productos/protector-quantum.webp",
         "estado": "producto"
       },
       "pendiente": "26 dB según revendedor (ventasxmayor), no figura en la ficha oficial de Libus",
@@ -764,8 +734,8 @@
         }
       ],
       "foto": {
-        "src": "/img/dest-guante-vaqueta.webp",
-        "estado": "provisoria"
+        "src": "/img/productos/guante-vaqueta.webp",
+        "estado": "producto"
       },
       "empresas": 29,
       "catalogoId": "guante-vaqueta-certificado"
@@ -785,7 +755,7 @@
         }
       ],
       "foto": {
-        "src": "/epp-proteccion-industrial/img/prod-protector-auditivo-alternative.webp",
+        "src": "/img/productos/protector-alternative.webp",
         "estado": "producto"
       },
       "empresas": 26,
@@ -854,7 +824,7 @@
         }
       ],
       "foto": {
-        "src": "/epp-proteccion-industrial/img/prod-arnes-completo.webp",
+        "src": "/img/productos/arnes-anticaida.webp",
         "estado": "producto"
       },
       "empresas": null,
@@ -879,8 +849,8 @@
         }
       ],
       "foto": {
-        "src": "/img/dest-semimascara.webp",
-        "estado": "provisoria"
+        "src": "/img/productos/semimascara.webp",
+        "estado": "producto"
       },
       "empresas": null,
       "catalogoId": "semimascara-4000-next-r-m-l"
@@ -906,8 +876,8 @@
         }
       ],
       "foto": {
-        "src": null,
-        "estado": "falta"
+        "src": "/img/productos/mameluco-ziao.webp",
+        "estado": "producto"
       },
       "impulsar": true,
       "catalogoId": "mameluco-laminado-ziao"
@@ -981,6 +951,33 @@
       },
       "impulsar": true,
       "catalogoId": "mascarilla-502-n95"
+    },
+    {
+      "id": "botin-ombu-frances",
+      "linea": "calzado",
+      "subcategoria": "botines",
+      "nombre": "Botín Francés Ombú",
+      "marca": "Ombú",
+      "codigo": "BOTFRAOM",
+      "descripcion": "Con puntera de acero y reflectivo.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "negro",
+            "blanco"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "35 al 48"
+        }
+      ],
+      "foto": {
+        "src": "/img/productos/botin-ombu-frances.webp",
+        "estado": "producto"
+      },
+      "catalogoId": "botin-frances"
     }
   ],
   "destacados": {
@@ -1004,11 +1001,11 @@
       "botin-conwork-negro",
       "zapato-conwork",
       "bota-cana-larga",
-      "botin-conwork-25baf",
       "zapatilla-conwork",
       "botin-conwork-653",
       "zapato-ombu-ozono",
-      "botin-ombu-ozono"
+      "botin-ombu-ozono",
+      "botin-ombu-frances"
     ],
     "epp": [
       "anteojo-argon",

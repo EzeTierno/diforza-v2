@@ -13,7 +13,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/adaptador-casco-facial-audit-l-400.webp"
   },
   {
    "id": "adaptador-casco-facial-universal-abs",
@@ -26,7 +27,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/adaptador-casco-facial-universal-abs.webp"
   },
   {
    "id": "adaptador-facial-p-casco-y-auditivo",
@@ -147,7 +149,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/anteojo-argon-elite-dark-green-w5-af.webp"
   },
   {
    "id": "anteojo-argon-elite-gris-hc",
@@ -160,7 +163,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/anteojo-argon-elite-gris-hc.webp"
   },
   {
    "id": "anteojo-argon-elite-outdoor-indoor-hc",
@@ -177,7 +181,8 @@
    "ventasEneJun2026": {
     "unidades": 52,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/anteojo-argon-elite-outdoor-indoor-hc.webp"
   },
   {
    "id": "anteojo-argon-elite-transparente-hc",
@@ -194,7 +199,8 @@
    "ventasEneJun2026": {
     "unidades": 280,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/anteojo-argon-elite-transparente-hc.webp"
   },
   {
    "id": "anteojo-argon-gris-af",
@@ -207,7 +213,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/anteojo-argon-gris-af.webp"
   },
   {
    "id": "anteojo-argon-gris-hc",
@@ -224,7 +231,8 @@
    "ventasEneJun2026": {
     "unidades": 3710,
     "empresas": 18
-   }
+   },
+   "foto": "/img/catalogo/anteojo-argon-gris-hc.webp"
   },
   {
    "id": "anteojo-argon-transparente-af",
@@ -241,7 +249,8 @@
    "ventasEneJun2026": {
     "unidades": 1100,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/anteojo-argon-transparente-af.webp"
   },
   {
    "id": "anteojo-argon-transparente-hc",
@@ -258,7 +267,8 @@
    "ventasEneJun2026": {
     "unidades": 8495,
     "empresas": 36
-   }
+   },
+   "foto": "/img/catalogo/anteojo-argon-transparente-hc.webp"
   },
   {
    "id": "anteojo-eco-sport-gris-af",
@@ -271,7 +281,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/anteojo-eco-sport-gris-af.webp"
   },
   {
    "id": "anteojo-eco-sport-transparente-af",
@@ -288,7 +299,8 @@
    "ventasEneJun2026": {
     "unidades": 160,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/anteojo-eco-sport-transparente-af.webp"
   },
   {
    "id": "anteojo-eco-line-amarillo-af",
@@ -305,7 +317,8 @@
    "ventasEneJun2026": {
     "unidades": 480,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/anteojo-eco-line-amarillo-af.webp"
   },
   {
    "id": "anteojo-eco-line-gris-hc",
@@ -322,7 +335,8 @@
    "ventasEneJun2026": {
     "unidades": 4061,
     "empresas": 21
-   }
+   },
+   "foto": "/img/catalogo/anteojo-eco-line-gris-hc.webp"
   },
   {
    "id": "anteojo-eco-line-gris-af",
@@ -339,7 +353,8 @@
    "ventasEneJun2026": {
     "unidades": 5,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/anteojo-eco-line-gris-af.webp"
   },
   {
    "id": "anteojo-eco-line-in-out-hc",
@@ -352,7 +367,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/anteojo-eco-line-in-out-hc.webp"
   },
   {
    "id": "anteojo-eco-line-transparente-af",
@@ -365,7 +381,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/anteojo-eco-line-transparente-af.webp"
   },
   {
    "id": "anteojo-eco-line-transparente-hc",
@@ -382,7 +399,8 @@
    "ventasEneJun2026": {
     "unidades": 5601,
     "empresas": 40
-   }
+   },
+   "foto": "/img/catalogo/anteojo-eco-line-transparente-hc.webp"
   },
   {
    "id": "anteojo-fall-dual-gris-af",
@@ -412,7 +430,8 @@
    "ventasEneJun2026": {
     "unidades": 1,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/anteojo-fall-dual-transparente-af.webp"
   },
   {
    "id": "anteojo-k2-antiempano-antiraya-claros",
@@ -451,7 +470,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/anteojo-mig-hc-gris.webp"
   },
   {
    "id": "anteojo-mig-hc-transparente",
@@ -468,7 +488,8 @@
    "ventasEneJun2026": {
     "unidades": 120,
     "empresas": 3
-   }
+   },
+   "foto": "/img/catalogo/anteojo-mig-hc-transparente.webp"
   },
   {
    "id": "anteojo-neon-gris-af",
@@ -481,7 +502,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/anteojo-neon-gris-af.webp"
   },
   {
    "id": "anteojo-neon-plus-gris-af",
@@ -494,7 +516,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/anteojo-neon-plus-gris-af.webp"
   },
   {
    "id": "anteojo-neon-plus-gris-hc",
@@ -507,7 +530,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/anteojo-neon-plus-gris-hc.webp"
   },
   {
    "id": "anteojo-neon-plus-transparente-af",
@@ -520,7 +544,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/anteojo-neon-plus-transparente-af.webp"
   },
   {
    "id": "anteojo-neon-plus-transparente-hc",
@@ -533,7 +558,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/anteojo-neon-plus-transparente-hc.webp"
   },
   {
    "id": "anteojo-neon-transparente-af",
@@ -546,7 +572,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/anteojo-neon-transparente-af.webp"
   },
   {
    "id": "anteojo-neon-transparente-hc",
@@ -559,7 +586,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/anteojo-neon-transparente-hc.webp"
   },
   {
    "id": "anteojo-nevado-in-out",
@@ -723,7 +751,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/antiparra-3m-2890a-transparente-hc-af.webp"
   },
   {
    "id": "antiparra-aviator-af-gris",
@@ -740,7 +769,8 @@
    "ventasEneJun2026": {
     "unidades": 1,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/antiparra-aviator-af-gris.webp"
   },
   {
    "id": "antiparra-aviator-transparente-af-gris",
@@ -757,7 +787,8 @@
    "ventasEneJun2026": {
     "unidades": 17,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/antiparra-aviator-transparente-af-gris.webp"
   },
   {
    "id": "antiparra-fravida-1702-trasparente",
@@ -770,7 +801,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/antiparra-fravida-1702-trasparente.webp"
   },
   {
    "id": "antiparra-new-classic-af-gris",
@@ -783,7 +815,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/antiparra-new-classic-af-gris.webp"
   },
   {
    "id": "antiparra-new-classic-af-transparente",
@@ -796,7 +829,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/antiparra-new-classic-af-transparente.webp"
   },
   {
    "id": "antiparra-new-classic-hc-gris",
@@ -813,7 +847,8 @@
    "ventasEneJun2026": {
     "unidades": 50,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/antiparra-new-classic-hc-gris.webp"
   },
   {
    "id": "antiparra-new-classic-hc-transparente",
@@ -830,7 +865,8 @@
    "ventasEneJun2026": {
     "unidades": 200,
     "empresas": 13
-   }
+   },
+   "foto": "/img/catalogo/antiparra-new-classic-hc-transparente.webp"
   },
   {
    "id": "antiparra-soldador-rectangular-flip-up",
@@ -847,7 +883,8 @@
    "ventasEneJun2026": {
     "unidades": 10,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/antiparra-soldador-rectangular-flip-up.webp"
   },
   {
    "id": "antiparra-transparente-1700-fravida",
@@ -860,7 +897,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/antiparra-transparente-1700-fravida.webp"
   },
   {
    "id": "armazon-de-seguridad-azul-xtreme",
@@ -903,7 +941,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/arnes-a-cremallera-4-puntos-3m.webp"
   },
   {
    "id": "arnes-a-cremallera-fravida-2500",
@@ -933,7 +972,8 @@
    "ventasEneJun2026": {
     "unidades": 968,
     "empresas": 32
-   }
+   },
+   "foto": "/img/catalogo/arnes-a-cremallera-plastico-libus.webp"
   },
   {
    "id": "arnes-a-cremallera-strong-welder",
@@ -946,7 +986,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/arnes-a-cremallera-strong-welder.webp"
   },
   {
    "id": "arnes-a-cremallera-textil-libus",
@@ -959,7 +1000,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/arnes-a-cremallera-textil-libus.webp"
   },
   {
    "id": "arnes-completo-con-toma-frontal-y-faja-lumbar",
@@ -976,7 +1018,8 @@
    "ventasEneJun2026": {
     "unidades": 120,
     "empresas": 12
-   }
+   },
+   "foto": "/img/catalogo/arnes-completo-con-toma-frontal-y-faja-lumbar.webp"
   },
   {
    "id": "arnes-con-toma-anticaidas-dorsal-y-sujecion-en-la-cintura",
@@ -1002,7 +1045,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/arnes-standar-4-puntos-3m.webp"
   },
   {
    "id": "arnes-standard-plastico-libus",
@@ -1019,7 +1063,8 @@
    "ventasEneJun2026": {
     "unidades": 1381,
     "empresas": 17
-   }
+   },
+   "foto": "/img/catalogo/arnes-standard-plastico-libus.webp"
   },
   {
    "id": "arnes-standart-textil-libus",
@@ -1032,7 +1077,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/arnes-standart-textil-libus.webp"
   },
   {
    "id": "bandana",
@@ -1118,7 +1164,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/barbijo-1730-sin-valvula.webp"
   },
   {
    "id": "barbijo-1740-con-valvula",
@@ -1131,7 +1178,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/barbijo-1740-con-valvula.webp"
   },
   {
    "id": "barbijo-8511-n95-con-valvula",
@@ -1144,7 +1192,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/barbijo-8511-n95-con-valvula.webp"
   },
   {
    "id": "barbijo-9502-n95-3m",
@@ -1157,7 +1206,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/barbijo-9502-n95-3m.webp"
   },
   {
    "id": "barbijo-c-valvula-plastica",
@@ -1269,7 +1319,8 @@
     "negro"
    ],
    "talles": "35 al 47",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/borcegui-conwork-33bra.webp"
   },
   {
    "id": "borcegui-ozono-plus-con-puntera",
@@ -1336,7 +1387,8 @@
    "ventasEneJun2026": {
     "unidades": 468,
     "empresas": 25
-   }
+   },
+   "foto": "/img/catalogo/bota-cana-larga-con-puntera.webp"
   },
   {
    "id": "bota-cana-larga-sin-puntera",
@@ -1356,7 +1408,8 @@
    "ventasEneJun2026": {
     "unidades": 1267,
     "empresas": 15
-   }
+   },
+   "foto": "/img/catalogo/bota-cana-larga-sin-puntera.webp"
   },
   {
    "id": "bota-ombu-nautica",
@@ -1371,7 +1424,8 @@
     "azul"
    ],
    "talles": "38 al 45",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/bota-ombu-nautica.webp"
   },
   {
    "id": "bota-ombu-urbana-blanca",
@@ -1387,7 +1441,8 @@
     "negro"
    ],
    "talles": "37 al 45",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/bota-ombu-urbana-blanca.webp"
   },
   {
    "id": "bota-petrombu-marron",
@@ -1402,7 +1457,8 @@
     "marron"
    ],
    "talles": "37 al 47",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/bota-petrombu-marron.webp"
   },
   {
    "id": "bota-wader-de-pvc",
@@ -1448,27 +1504,8 @@
     "negro"
    ],
    "talles": "35 al 48",
-   "visible": true
-  },
-  {
-   "id": "botin-conwork",
-   "nombre": "Botin Conwork",
-   "marca": "Conwork",
-   "linea": "calzado",
-   "subcategoria": "botines",
-   "codigosERP": [
-    "BOTCONW",
-    "9BOTCONW"
-   ],
-   "colores": [
-    "negro"
-   ],
-   "talles": "35 al 47",
    "visible": true,
-   "ventasEneJun2026": {
-    "unidades": 5979,
-    "empresas": 78
-   }
+   "foto": "/img/catalogo/botin-boro-con-puntera-de-acero-cas.webp"
   },
   {
    "id": "botin-conwork-25baf",
@@ -1477,7 +1514,9 @@
    "linea": "calzado",
    "subcategoria": "botines",
    "codigosERP": [
-    "BOTCONW25BAF"
+    "BOTCONW25BAF",
+    "BOTCONW",
+    "9BOTCONW"
    ],
    "colores": [
     "blanco",
@@ -1486,9 +1525,11 @@
    "talles": "35 al 48",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 3069,
-    "empresas": 60
-   }
+    "unidades": 9048,
+    "empresas": 78
+   },
+   "nota": "Incluye el \"Botín Conwork negro\" del ERP (BOTCONW/9BOTCONW) = modelo 25BAF (confirmado por el usuario, 8 oct 2026)",
+   "foto": "/img/productos/botin-conwork-negro.webp"
   },
   {
    "id": "botin-conwork-401baf-allworks",
@@ -1503,7 +1544,8 @@
     "negro"
    ],
    "talles": "35 al 47",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/botin-conwork-401baf-allworks.webp"
   },
   {
    "id": "botin-conwork-525baf-marron",
@@ -1519,7 +1561,8 @@
     "negro"
    ],
    "talles": "35 al 48",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/botin-conwork-525baf-marron.webp"
   },
   {
    "id": "botin-conwork-art-653-marron",
@@ -1539,7 +1582,8 @@
    "ventasEneJun2026": {
     "unidades": 417,
     "empresas": 13
-   }
+   },
+   "foto": "/img/productos/botin-conwork-653.webp"
   },
   {
    "id": "botin-eco-pvc",
@@ -1591,7 +1635,8 @@
    "ventasEneJun2026": {
     "unidades": 112,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/botin-frances.webp"
   },
   {
    "id": "botin-frances-con-plantilla-de-acero",
@@ -1714,7 +1759,8 @@
    "ventasEneJun2026": {
     "unidades": 1,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/botin-ombu-gema-mujer-c-p-composite.webp"
   },
   {
    "id": "botin-ombu-krypton",
@@ -1753,7 +1799,8 @@
    "ventasEneJun2026": {
     "unidades": 107,
     "empresas": 8
-   }
+   },
+   "foto": "/img/catalogo/botin-ombu-ozono.webp"
   },
   {
    "id": "botin-ombu-sneaker-c-p-composite",
@@ -1773,7 +1820,8 @@
    "ventasEneJun2026": {
     "unidades": 1,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/botin-ombu-sneaker-c-p-composite.webp"
   },
   {
    "id": "botin-prusiano",
@@ -2174,7 +2222,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/cadena-plastica-rojo-blanco-x-25-mts.webp"
   },
   {
    "id": "camisa-clasica-diforza",
@@ -2243,7 +2292,8 @@
    "ventasEneJun2026": {
     "unidades": 58,
     "empresas": 5
-   }
+   },
+   "foto": "/img/catalogo/camisa-clasica-ombu.webp"
   },
   {
    "id": "camisa-clasica-ombu-grafil",
@@ -2274,7 +2324,8 @@
     "verde"
    ],
    "talles": "36 al 66",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/camisa-de-trabajo-pampero.webp"
   },
   {
    "id": "camisa-ignifuga-nomex-6-oz",
@@ -2352,7 +2403,8 @@
    "ventasEneJun2026": {
     "unidades": 26,
     "empresas": 3
-   }
+   },
+   "foto": "/img/catalogo/campera-descarne-soldador.webp"
   },
   {
    "id": "campera-friza-diforza",
@@ -2507,7 +2559,8 @@
    "ventasEneJun2026": {
     "unidades": 2484,
     "empresas": 34
-   }
+   },
+   "foto": "/img/catalogo/campera-trucker.webp"
   },
   {
    "id": "campera-trucker-eco",
@@ -2541,7 +2594,8 @@
    "ventasEneJun2026": {
     "unidades": 3422,
     "empresas": 34
-   }
+   },
+   "foto": "/img/catalogo/capa-de-lluvia.webp"
   },
   {
    "id": "capa-de-lluvia-ombu",
@@ -2557,7 +2611,8 @@
     "amarillo"
    ],
    "talles": "L al 2XL",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/capa-de-lluvia-ombu.webp"
   },
   {
    "id": "careta-soldador-fravida-2550",
@@ -2708,7 +2763,8 @@
     "verde"
    ],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/casco-3m-h700.webp"
   },
   {
    "id": "casco-milenium",
@@ -2735,7 +2791,8 @@
    "ventasEneJun2026": {
     "unidades": 2970,
     "empresas": 45
-   }
+   },
+   "foto": "/img/catalogo/casco-milenium.webp"
   },
   {
    "id": "casco-milenium-class-fb-s-v-slot",
@@ -2757,7 +2814,8 @@
    "ventasEneJun2026": {
     "unidades": 10,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/casco-milenium-class-fb-s-v-slot.webp"
   },
   {
    "id": "casquete-c-foam-p-gorra",
@@ -2775,7 +2833,8 @@
    "ventasEneJun2026": {
     "unidades": 30,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/casquete-c-foam-p-gorra.webp"
   },
   {
    "id": "chaleco-geologo",
@@ -2836,7 +2895,8 @@
    "ventasEneJun2026": {
     "unidades": 6379,
     "empresas": 33
-   }
+   },
+   "foto": "/img/catalogo/chaleco-reflectivo.webp"
   },
   {
    "id": "chaleco-reflectivo-especial-con-cierre-y-bolsillo",
@@ -3119,7 +3179,8 @@
    "ventasEneJun2026": {
     "unidades": 1617,
     "empresas": 15
-   }
+   },
+   "foto": "/img/catalogo/cinta-peligro-x-200-mts.webp"
   },
   {
    "id": "cinta-reflectiva-roja",
@@ -3389,7 +3450,8 @@
    "ventasEneJun2026": {
     "unidades": 43,
     "empresas": 3
-   }
+   },
+   "foto": "/img/catalogo/cola-en-1-5mts-elast-y-amorti-18mm-55cm.webp"
   },
   {
    "id": "cola-en-2mts-cinta-pos-18mm",
@@ -3406,7 +3468,8 @@
    "ventasEneJun2026": {
     "unidades": 21,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/cola-en-2mts-cinta-pos-18mm.webp"
   },
   {
    "id": "cola-en-y-dos-mosquetones-de-55-y-1-de-18",
@@ -3423,7 +3486,8 @@
    "ventasEneJun2026": {
     "unidades": 33,
     "empresas": 4
-   }
+   },
+   "foto": "/img/catalogo/cola-en-y-dos-mosquetones-de-55-y-1-de-18.webp"
   },
   {
    "id": "conector-anclaje-1mts",
@@ -3492,7 +3556,8 @@
    "ventasEneJun2026": {
     "unidades": 21,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/cono-con-base-de-goma-1m-ucu0003pv.webp"
   },
   {
    "id": "cono-flexible-50-cm-con-reflectivos",
@@ -3522,7 +3587,8 @@
    "ventasEneJun2026": {
     "unidades": 288,
     "empresas": 8
-   }
+   },
+   "foto": "/img/catalogo/cono-flexible-75-cm-con-reflectivos-ucu0002pv.webp"
   },
   {
    "id": "cono-king-cone-semiflex-70-cm-1570lsf-2r",
@@ -3741,7 +3807,8 @@
    "ventasEneJun2026": {
     "unidades": 8,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/delantal-descarne-reforzado-60-x-90.webp"
   },
   {
    "id": "delantal-rayado-negro",
@@ -3831,7 +3898,8 @@
    "ventasEneJun2026": {
     "unidades": 58,
     "empresas": 8
-   }
+   },
+   "foto": "/img/catalogo/delantal-descarne-simple-60-x-90.webp"
   },
   {
    "id": "delantal-goma-plomo-60x90",
@@ -3848,7 +3916,8 @@
    "ventasEneJun2026": {
     "unidades": 29,
     "empresas": 6
-   }
+   },
+   "foto": "/img/catalogo/delantal-goma-plomo-60x90.webp"
   },
   {
    "id": "delantal-grafa-cocinero-blanco",
@@ -3992,7 +4061,8 @@
     "negro"
    ],
    "talles": "S al 2XL",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/faja-lumbar-2xl-ombu.webp"
   },
   {
    "id": "faja-lumbar-diforza",
@@ -4024,7 +4094,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/filtro-2091-p100-3m.webp"
   },
   {
    "id": "filtro-2096-p100-3m",
@@ -4037,7 +4108,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/filtro-2096-p100-3m.webp"
   },
   {
    "id": "filtro-2097-p100-partic-y-vo",
@@ -4050,7 +4122,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/filtro-2097-p100-partic-y-vo.webp"
   },
   {
    "id": "filtro-6001-v-o",
@@ -4063,7 +4136,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/filtro-6001-v-o.webp"
   },
   {
    "id": "filtro-6004-amoniaco-y-metilamina",
@@ -4076,7 +4150,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/filtro-6004-amoniaco-y-metilamina.webp"
   },
   {
    "id": "filtro-6006-multigas-3m",
@@ -4089,7 +4164,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/filtro-6006-multigas-3m.webp"
   },
   {
    "id": "filtro-fravida-v-o-5300-20",
@@ -4115,7 +4191,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/filtro-particulas-niosh-p95.webp"
   },
   {
    "id": "filtro-segurind-a-b",
@@ -4191,7 +4268,8 @@
    "ventasEneJun2026": {
     "unidades": 15,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/gorra-con-casquete-plastico-azul.webp"
   },
   {
    "id": "gorra-de-5-gajos",
@@ -4483,7 +4561,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/guante-de-latex-c-polvo.webp"
   },
   {
    "id": "guante-de-latex-s-polvo",
@@ -4543,7 +4622,8 @@
    "ventasEneJun2026": {
     "unidades": 44,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/guante-de-nitrilo-negro.webp"
   },
   {
    "id": "guante-de-nitrilo-violeta",
@@ -4559,7 +4639,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/guante-de-nitrilo-violeta.webp"
   },
   {
    "id": "guante-descarne-puno-corto",
@@ -4576,7 +4657,8 @@
    "ventasEneJun2026": {
     "unidades": 1163,
     "empresas": 11
-   }
+   },
+   "foto": "/img/catalogo/guante-descarne-puno-corto.webp"
   },
   {
    "id": "guante-descarne-puno-largo",
@@ -4593,7 +4675,8 @@
    "ventasEneJun2026": {
     "unidades": 1,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/guante-descarne-puno-largo.webp"
   },
   {
    "id": "guante-descarne-ref-pistola-puno-corto",
@@ -4619,7 +4702,8 @@
    ],
    "colores": [],
    "talles": "9 al 11",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/guante-dielectrico-glovex-1000v-clase-0.webp"
   },
   {
    "id": "guante-dielectrico-glovex-20000v-clase2",
@@ -4632,7 +4716,8 @@
    ],
    "colores": [],
    "talles": "9 al 11",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/guante-dielectrico-glovex-20000v-clase2.webp"
   },
   {
    "id": "guante-dielectrico-glovex-2500v-clase-00",
@@ -4650,7 +4735,8 @@
    "ventasEneJun2026": {
     "unidades": 100,
     "empresas": 3
-   }
+   },
+   "foto": "/img/catalogo/guante-dielectrico-glovex-2500v-clase-00.webp"
   },
   {
    "id": "guante-g13-hppe-bano-total-dob-nitrilo",
@@ -5109,7 +5195,8 @@
    "ventasEneJun2026": {
     "unidades": 201,
     "empresas": 5
-   }
+   },
+   "foto": "/img/catalogo/guante-pvc-rojo-30-cm.webp"
   },
   {
    "id": "guante-rugoso-mapa-enduro-328",
@@ -5163,7 +5250,8 @@
    "ventasEneJun2026": {
     "unidades": 184,
     "empresas": 4
-   }
+   },
+   "foto": "/img/catalogo/guante-soldador-descarne-forrado-costura-kevlar.webp"
   },
   {
    "id": "guante-tej-naranja-recub-en-latex-rugoso-dps89175",
@@ -5298,7 +5386,8 @@
    "ventasEneJun2026": {
     "unidades": 4297,
     "empresas": 28
-   }
+   },
+   "foto": "/img/catalogo/guante-vaqueta-certificado.webp"
   },
   {
    "id": "guante-vaqueta-certificado-sve",
@@ -5357,7 +5446,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/kit-cartucho-g01-ov.webp"
   },
   {
    "id": "kit-cartucho-g02-ag",
@@ -5370,7 +5460,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/kit-cartucho-g02-ag.webp"
   },
   {
    "id": "kit-cartucho-g03-ov-ag",
@@ -5387,7 +5478,8 @@
    "ventasEneJun2026": {
     "unidades": 13,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/kit-cartucho-g03-ov-ag.webp"
   },
   {
    "id": "kit-cartucho-g73-ov-ag-p100-9000",
@@ -5400,7 +5492,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/kit-cartucho-g73-ov-ag-p100-9000.webp"
   },
   {
    "id": "kit-cartucho-g78-multigas-p100-p-r-9000",
@@ -5413,7 +5506,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/kit-cartucho-g78-multigas-p100-p-r-9000.webp"
   },
   {
    "id": "kit-cartuchos-xp100-ov-ag-p-resp-l-9000",
@@ -5426,7 +5520,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/kit-cartuchos-xp100-ov-ag-p-resp-l-9000.webp"
   },
   {
    "id": "kit-cartuchos-xp100-p-resp-l-9000",
@@ -5439,7 +5534,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/kit-cartuchos-xp100-p-resp-l-9000.webp"
   },
   {
    "id": "kit-desmalezador",
@@ -5456,7 +5552,8 @@
    "ventasEneJun2026": {
     "unidades": 5,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/kit-desmalezador.webp"
   },
   {
    "id": "kit-filtro-com-222-abek1p3r",
@@ -5520,7 +5617,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/kit-filtro-g08-multi-gas.webp"
   },
   {
    "id": "kit-filtro-gas-211-a2",
@@ -5648,7 +5746,8 @@
    "ventasEneJun2026": {
     "unidades": 4,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/kit-forestal.webp"
   },
   {
    "id": "kit-g01-901793-901950-901911-901913",
@@ -5687,7 +5786,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/kit-pintura-serie-9000-9211.webp"
   },
   {
    "id": "kit-prefiltro-301-p2-p2r",
@@ -5743,7 +5843,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/kit-repuesto-prot-auditivo-l-320-casco.webp"
   },
   {
    "id": "kit-repuesto-prot-auditivo-l-320-vincha",
@@ -5760,7 +5861,8 @@
    "ventasEneJun2026": {
     "unidades": 50,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/kit-repuesto-prot-auditivo-l-320-vincha.webp"
   },
   {
    "id": "kit-repuesto-prot-auditivo-l-340-casco",
@@ -6033,7 +6135,8 @@
     "unidades": 2894,
     "empresas": 16
    },
-   "nota": "Descartable, 55 y 63 g"
+   "nota": "Descartable, 55 y 63 g",
+   "foto": "/img/catalogo/mameluco-laminado-ziao.webp"
   },
   {
    "id": "mameluco-trucker",
@@ -6111,7 +6214,8 @@
    "ventasEneJun2026": {
     "unidades": 60,
     "empresas": 3
-   }
+   },
+   "foto": "/img/catalogo/manga-soldador.webp"
   },
   {
    "id": "manga-terrycloth-alg-reforzado-en-poliester-45-cm",
@@ -6249,7 +6353,8 @@
    "ventasEneJun2026": {
     "unidades": 14,
     "empresas": 4
-   }
+   },
+   "foto": "/img/catalogo/mascara-soldador-strong-welder-1000.webp"
   },
   {
    "id": "mascara-soldador-strong-welder-500",
@@ -6279,7 +6384,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/mascara-soldador-sw-510.webp"
   },
   {
    "id": "mascarilla-3m-8801-p2",
@@ -6335,7 +6441,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/mascarilla-r95-mod-1845-vo-ga-c-val.webp"
   },
   {
    "id": "mascarilla-segurind-bi-filtro",
@@ -6361,7 +6468,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/matafuego.webp"
   },
   {
    "id": "medias",
@@ -6391,7 +6499,8 @@
    "ventasEneJun2026": {
     "unidades": 81,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/medias-termicas.webp"
   },
   {
    "id": "mentonera-15mm",
@@ -6408,7 +6517,8 @@
    "ventasEneJun2026": {
     "unidades": 985,
     "empresas": 19
-   }
+   },
+   "foto": "/img/catalogo/mentonera-15mm.webp"
   },
   {
    "id": "mentonera-textl-simple",
@@ -6425,7 +6535,8 @@
    "ventasEneJun2026": {
     "unidades": 70,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/mentonera-textl-simple.webp"
   },
   {
    "id": "mentonera-yugular-libus",
@@ -6442,7 +6553,8 @@
    "ventasEneJun2026": {
     "unidades": 216,
     "empresas": 5
-   }
+   },
+   "foto": "/img/catalogo/mentonera-yugular-libus.webp"
   },
   {
    "id": "metatarsal",
@@ -6473,7 +6585,8 @@
    "ventasEneJun2026": {
     "unidades": 2,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/mosqueton-oval-con-cierre-de-seguridad.webp"
   },
   {
    "id": "pantalon-cargo-diforza",
@@ -6551,7 +6664,8 @@
     "negro"
    ],
    "talles": "36 al 64",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/pantalon-cargo-ombu.webp"
   },
   {
    "id": "pantalon-cargo-pampero",
@@ -6651,7 +6765,8 @@
    "ventasEneJun2026": {
     "unidades": 99,
     "empresas": 5
-   }
+   },
+   "foto": "/img/catalogo/pantalon-clasico-ombu.webp"
   },
   {
    "id": "pantalon-clasico-ombu-grafil",
@@ -6701,7 +6816,8 @@
     "verde"
    ],
    "talles": "36 al 64",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/pantalon-de-trabajo-pampero.webp"
   },
   {
    "id": "pantalon-nautico-gabardina-diforza",
@@ -6796,7 +6912,8 @@
    "colores": [],
    "talles": null,
    "visible": false,
-   "nota": "Accesorio de calzado: en el JSON, no visible"
+   "nota": "Accesorio de calzado: en el JSON, no visible",
+   "foto": "/img/catalogo/plantilla-confort.webp"
   },
   {
    "id": "polaina-descarne-con-hebilla",
@@ -6843,7 +6960,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/poncho-de-pvc-con-capucha-color-amarillo.webp"
   },
   {
    "id": "poncho-de-pvc-con-capucha-color-azul",
@@ -6869,7 +6987,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/poncho-pe-transparente-100-x-125-cm-0-0018-mm.webp"
   },
   {
    "id": "porta-herramienta-ts-90",
@@ -6908,7 +7027,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/pre-filtro-5n-11-3m.webp"
   },
   {
    "id": "prot-facial-cilindrico-arc-flash12-af",
@@ -6947,7 +7067,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/protector-auditivo-3m-510pe-p-casco.webp"
   },
   {
    "id": "protector-auditivo-3m-520a-vincha",
@@ -6960,7 +7081,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/protector-auditivo-3m-520a-vincha.webp"
   },
   {
    "id": "protector-auditivo-3m-h510b",
@@ -6973,7 +7095,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/protector-auditivo-3m-h510b.webp"
   },
   {
    "id": "protector-auditivo-alternative-vincha",
@@ -6990,7 +7113,8 @@
    "ventasEneJun2026": {
     "unidades": 766,
     "empresas": 26
-   }
+   },
+   "foto": "/img/catalogo/protector-auditivo-alternative-vincha.webp"
   },
   {
    "id": "protector-auditivo-de-copa-l-450",
@@ -7020,7 +7144,8 @@
    "ventasEneJun2026": {
     "unidades": 27,
     "empresas": 4
-   }
+   },
+   "foto": "/img/catalogo/protector-auditivo-l-320-vincha.webp"
   },
   {
    "id": "protector-auditivo-l-340-p-casco",
@@ -7037,7 +7162,8 @@
    "ventasEneJun2026": {
     "unidades": 100,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/protector-auditivo-l-340-p-casco.webp"
   },
   {
    "id": "protector-auditivo-l-340-vincha",
@@ -7054,7 +7180,8 @@
    "ventasEneJun2026": {
     "unidades": 38,
     "empresas": 3
-   }
+   },
+   "foto": "/img/catalogo/protector-auditivo-l-340-vincha.webp"
   },
   {
    "id": "protector-auditivo-l-360-vincha",
@@ -7067,7 +7194,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/protector-auditivo-l-360-vincha.webp"
   },
   {
    "id": "protector-auditivo-l-450-p-casco",
@@ -7097,7 +7225,8 @@
    "ventasEneJun2026": {
     "unidades": 140,
     "empresas": 10
-   }
+   },
+   "foto": "/img/catalogo/protector-auditivo-p-casco-l-320.webp"
   },
   {
    "id": "protector-auditivo-p-casco-l-360",
@@ -7114,7 +7243,8 @@
    "ventasEneJun2026": {
     "unidades": 24,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/protector-auditivo-p-casco-l-360.webp"
   },
   {
    "id": "protector-auditivo-quantum",
@@ -7131,7 +7261,8 @@
    "ventasEneJun2026": {
     "unidades": 12155,
     "empresas": 27
-   }
+   },
+   "foto": "/img/catalogo/protector-auditivo-quantum.webp"
   },
   {
    "id": "protector-auditivo-quantum-detec",
@@ -7200,7 +7331,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/protector-facial-burbuja-dark-green-w3.webp"
   },
   {
    "id": "protector-facial-burbuja-gris",
@@ -7213,7 +7345,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/protector-facial-burbuja-gris.webp"
   },
   {
    "id": "protector-facial-cilindrico-arc-flash10-af",
@@ -7239,7 +7372,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/protector-facial-cronos-libus-c-masc-quir.webp"
   },
   {
    "id": "protector-facial-fravida-art-2020",
@@ -7252,7 +7386,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/protector-facial-fravida-art-2020.webp"
   },
   {
    "id": "protector-facial-transparente-burbuja",
@@ -7269,7 +7404,8 @@
    "ventasEneJun2026": {
     "unidades": 63,
     "empresas": 10
-   }
+   },
+   "foto": "/img/catalogo/protector-facial-transparente-burbuja.webp"
   },
   {
    "id": "protector-facial-verde-burbuja",
@@ -7282,7 +7418,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/protector-facial-verde-burbuja.webp"
   },
   {
    "id": "puntera-plastica-de-visita",
@@ -7439,7 +7576,8 @@
    "ventasEneJun2026": {
     "unidades": 301,
     "empresas": 12
-   }
+   },
+   "foto": "/img/catalogo/repuesto-facial-plano-libus.webp"
   },
   {
    "id": "respirador-de-copa-bls-129bw",
@@ -7495,7 +7633,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/respirador-descart-particulas-pleg-3230-n95-904522.webp"
   },
   {
    "id": "respirador-desech-zer0-30-ffp3rd",
@@ -7662,7 +7801,8 @@
    "ventasEneJun2026": {
     "unidades": 12,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/salvacaidas-para-soga-diam-13-16-mm-c-mosq-oval.webp"
   },
   {
    "id": "salvacaidas-para-soga-diam-8-mm-c-amort-y-mosq-oval",
@@ -7675,7 +7815,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/salvacaidas-para-soga-diam-8-mm-c-amort-y-mosq-oval.webp"
   },
   {
    "id": "semi-mascara-6200-3m",
@@ -7722,7 +7863,8 @@
    "ventasEneJun2026": {
     "unidades": 53,
     "empresas": 5
-   }
+   },
+   "foto": "/img/catalogo/semimascara-4000-next-r-m-l.webp"
   },
   {
    "id": "semimascara-4000-next-s-m-l-sil",
@@ -7739,7 +7881,8 @@
    "ventasEneJun2026": {
     "unidades": 62,
     "empresas": 7
-   }
+   },
+   "foto": "/img/catalogo/semimascara-4000-next-s-m-l-sil.webp"
   },
   {
    "id": "semi-mascara-fravida-5330",
@@ -7795,7 +7938,8 @@
    "ventasEneJun2026": {
     "unidades": 163,
     "empresas": 12
-   }
+   },
+   "foto": "/img/catalogo/soporte-p-protector-facial-arnes-simple.webp"
   },
   {
    "id": "soporte-p-protector-facial-arnes-cremallera",
@@ -7812,7 +7956,8 @@
    "ventasEneJun2026": {
     "unidades": 12,
     "empresas": 3
-   }
+   },
+   "foto": "/img/catalogo/soporte-p-protector-facial-arnes-cremallera.webp"
   },
   {
    "id": "soporte-prefiltro-retenedor-de-libus",
@@ -7890,7 +8035,8 @@
     "negro"
    ],
    "talles": "M al 2XL",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/traje-ejecutivo-ombu.webp"
   },
   {
    "id": "zapatilla-conwork-655za",
@@ -7899,7 +8045,8 @@
    "linea": "calzado",
    "subcategoria": "zapatillas",
    "codigosERP": [
-    "ZAPCONW655ZA"
+    "ZAPCONW655ZA",
+    "9ZAPCNW"
    ],
    "colores": [
     "gris",
@@ -7909,9 +8056,10 @@
    "talles": "35 al 48",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 216,
-    "empresas": 15
-   }
+    "unidades": 390,
+    "empresas": 16
+   },
+   "foto": "/img/productos/zapatilla-conwork.webp"
   },
   {
    "id": "zapatilla-funcional-lander",
@@ -7982,7 +8130,9 @@
     "negro"
    ],
    "talles": "38 al 46",
-   "visible": true
+   "visible": false,
+   "nota": "Línea Origen: solo se comunica la 655ZA (decisión 8 oct 2026)",
+   "foto": "/img/catalogo/zapatilla-nexus-900za.webp"
   },
   {
    "id": "zapatilla-ombu-krypton-c-p",
@@ -8002,7 +8152,8 @@
    "ventasEneJun2026": {
     "unidades": 4,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/zapatilla-ombu-krypton-c-p.webp"
   },
   {
    "id": "zapatilla-ombu-sneaker-c-p-composite",
@@ -8022,7 +8173,8 @@
    "ventasEneJun2026": {
     "unidades": 1,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/zapatilla-ombu-sneaker-c-p-composite.webp"
   },
   {
    "id": "zapato-conwork",
@@ -8077,7 +8229,8 @@
    "ventasEneJun2026": {
     "unidades": 557,
     "empresas": 17
-   }
+   },
+   "foto": "/img/productos/zapato-conwork.webp"
   },
   {
    "id": "zapato-conwork-555za-marron",
@@ -8097,7 +8250,8 @@
    "ventasEneJun2026": {
     "unidades": 64,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/zapato-conwork-555za-marron.webp"
   },
   {
    "id": "zapato-de-vestir",
@@ -8178,7 +8332,8 @@
     "negro"
    ],
    "talles": "35 al 41",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/zapato-ombu-gema-mujer-c-p-composite.webp"
   },
   {
    "id": "zapato-ozono-plus",
@@ -8198,7 +8353,8 @@
    "ventasEneJun2026": {
     "unidades": 201,
     "empresas": 4
-   }
+   },
+   "foto": "/img/catalogo/zapato-ozono-plus.webp"
   },
   {
    "id": "zapato-prusiano-con-puntera-plastica",
@@ -8213,7 +8369,8 @@
     "negro"
    ],
    "talles": "35 al 48",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/zapato-prusiano-con-puntera-plastica.webp"
   },
   {
    "id": "zapato-prusiano",
@@ -8232,7 +8389,8 @@
    "ventasEneJun2026": {
     "unidades": 26,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/zapato-prusiano.webp"
   },
   {
    "id": "zapato-voran-jano",
@@ -8280,27 +8438,6 @@
    ],
    "talles": "36 al 47",
    "visible": true
-  },
-  {
-   "id": "zapatilla-conwork",
-   "nombre": "Zapatilla Conwork",
-   "marca": "Conwork",
-   "linea": "calzado",
-   "subcategoria": "zapatillas",
-   "codigosERP": [
-    "9ZAPCNW"
-   ],
-   "colores": [
-    "marron",
-    "negro"
-   ],
-   "talles": "36 al 46",
-   "visible": true,
-   "nota": "Código no figura en el export del ERP (solo en ventas)",
-   "ventasEneJun2026": {
-    "unidades": 174,
-    "empresas": 16
-   }
   },
   {
    "id": "barbijo-descartable-con-elastico",
@@ -8448,7 +8585,8 @@
    "talles": null,
    "visible": true,
    "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
-   "codigoFabricante": "J53"
+   "codigoFabricante": "J53",
+   "foto": "/img/catalogo/casco-m-class-visor.webp"
   },
   {
    "id": "casco-de-altura-libus",
@@ -8525,7 +8663,8 @@
    "talles": null,
    "visible": true,
    "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
-   "codigoFabricante": "902660"
+   "codigoFabricante": "902660",
+   "foto": "/img/catalogo/kit-mecanizado-liviano.webp"
   },
   {
    "id": "kit-herramientas-de-corte",
@@ -8538,7 +8677,8 @@
    "talles": null,
    "visible": true,
    "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
-   "codigoFabricante": "902661"
+   "codigoFabricante": "902661",
+   "foto": "/img/catalogo/kit-herramientas-de-corte.webp"
   },
   {
    "id": "anteojo-3m-securefit-3700",
@@ -8553,22 +8693,6 @@
    "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
   },
   {
-   "id": "zapatilla-conwork-origen-641za",
-   "nombre": "Zapatilla de seguridad Conwork Origen 641ZA",
-   "marca": "Conwork",
-   "linea": "calzado",
-   "subcategoria": "zapatillas",
-   "codigosERP": [],
-   "colores": [
-    "azul",
-    "rojo"
-   ],
-   "talles": null,
-   "visible": true,
-   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
-   "codigoFabricante": "641ZA"
-  },
-  {
    "id": "bota-frigorifica-media-cana-sin-puntera",
    "nombre": "Bota frigorífica blanca media caña sin puntera de acero",
    "marca": "Ombú",
@@ -8580,7 +8704,8 @@
    ],
    "talles": null,
    "visible": true,
-   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "foto": "/img/catalogo/bota-frigorifica-media-cana-sin-puntera.webp"
   },
   {
    "id": "bota-frigorifica-media-cana-con-puntera",
@@ -8594,7 +8719,8 @@
    ],
    "talles": null,
    "visible": true,
-   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "foto": "/img/catalogo/bota-frigorifica-media-cana-con-puntera.webp"
   },
   {
    "id": "guante-aramida-g7",
@@ -8631,7 +8757,8 @@
    "talles": null,
    "visible": true,
    "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
-   "codigoFabricante": "SKY10403E"
+   "codigoFabricante": "SKY10403E",
+   "foto": "/img/catalogo/arnes-3-puntos-sky.webp"
   },
   {
    "id": "arnes-5-puntos-sky",
@@ -8644,7 +8771,8 @@
    "talles": null,
    "visible": true,
    "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
-   "codigoFabricante": "SKY10420"
+   "codigoFabricante": "SKY10420",
+   "foto": "/img/catalogo/arnes-5-puntos-sky.webp"
   },
   {
    "id": "arnes-6-puntos-sky",
@@ -8669,7 +8797,8 @@
    "colores": [],
    "talles": null,
    "visible": true,
-   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "foto": "/img/catalogo/descensor-8-alado.webp"
   },
   {
    "id": "conector-anclaje-mosqueton-18",
