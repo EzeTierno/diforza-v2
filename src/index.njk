@@ -238,7 +238,7 @@ phToggle: true   # botón "Ocultar marcas" — apagar antes de lanzar
   </div>
 </section>
 
-{#- Productos destacados por línea (pestañas). Datos: src/_data/home.json → destacados -#}
+{#- Productos destacados por línea (pestañas). Textos: home.json → destacados · productos: productos.json → destacados (vía vitrina.js) -#}
 {%- set D = home.destacados %}
 <section class="featured-products">
   <div class="featured-products__top reveal">
@@ -255,27 +255,9 @@ phToggle: true   # botón "Ocultar marcas" — apagar antes de lanzar
   </div>
 {%- for l in D.lineas %}
   <div class="featured-products__panel" role="tabpanel" id="panel-{{ l.id }}" aria-labelledby="tab-{{ l.id }}"{% if not loop.first %} hidden{% endif %}>
-    <div class="featured-products__grid reveal reveal--1">
-      <div class="featured-products__track">
-{%- for p in l.items %}
-        <div class="featured-products__card{% if p.ambiente %} featured-products__card--photo{% endif %}">
-{%- if p.badge == 'top' %}
-          <span class="badge badge--top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4c1.6 2 2.6 3.4 2.6 4.9a2.6 2.6 0 0 1-5.2 0c0-.9.4-1.7 1-2.5.5 1.2 1.6.9 1.6-2.4z"/></svg> Más vendido</span>
-{%- else %}
-          <span class="badge badge--stock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg> En stock</span>
-{%- endif %}
-          <div class="featured-products__img">
-            <img src="{{ p.img }}" alt="{{ p.nombre }}" loading="lazy">
-{%- if p.ambiente %}
-            <span class="featured-products__ph">{{ "[[Foto provisoria]]" | rich | safe }}</span>
-{%- endif %}
-          </div>
-          <span class="featured-products__name">{{ p.nombre }}</span>
-          <p class="featured-products__cat">{{ p.cat }}</p>
-          <a href="https://wa.me/{{ site.whatsapp.number }}?text={{ ('Hola, quiero cotizar ' + p.nombre + ' para mi empresa.') | urlencode }}" class="featured-products__more" data-js="wa-producto" target="_blank" rel="noopener">Consultar</a>
-        </div>
-{%- endfor %}
-      </div>
+    <div class="reveal reveal--1">
+{%- set items = vitrina[l.id] %}
+{%- include "partials/product-grid.njk" %}
     </div>
     <a href="{{ l.href }}" class="featured-products__all">{{ l.cta }} {% include "partials/icon-arrow.njk" %}</a>
   </div>

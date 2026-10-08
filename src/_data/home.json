@@ -113,228 +113,26 @@
     "eyebrow": "Seguridad, calidad y confianza",
     "titulo": "Productos destacados",
     "bajada": "Los que más eligen las empresas, con stock disponible y entrega inmediata.",
-    "_nota": "Selección por cantidad de clientes que los compran (análisis de ventas ene–jun 2026). ambiente=true → foto provisoria hasta tener la foto de producto.",
     "lineas": [
       {
         "id": "indumentaria",
         "label": "Indumentaria",
         "href": "/indumentaria-de-trabajo/",
-        "cta": "Ver toda la indumentaria",
-        "items": [
-          {
-            "nombre": "Pantalón cargo Diforza",
-            "cat": "Indumentaria de trabajo",
-            "img": "/img/dest-pantalon-cargo.webp",
-            "ambiente": true,
-            "badge": "top"
-          },
-          {
-            "nombre": "Campera trucker Diforza",
-            "cat": "Indumentaria de trabajo",
-            "img": "/indumentaria-de-trabajo/img/prod-campera-trucker-diforza.webp",
-            "ambiente": false,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Camisa clásica Diforza",
-            "cat": "Indumentaria de trabajo",
-            "img": "/indumentaria-de-trabajo/img/prod-camisa-clasica-diforza.webp",
-            "ambiente": false,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Pantalón clásico Diforza",
-            "cat": "Indumentaria de trabajo",
-            "img": "/img/dest-pantalon-clasico.webp",
-            "ambiente": true,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Buzo polar ½ cierre Diforza",
-            "cat": "Indumentaria de trabajo",
-            "img": "/indumentaria-de-trabajo/img/prod-buzo-polar-medio-cierre-diforza.webp",
-            "ambiente": false,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Chomba piqué Diforza",
-            "cat": "Indumentaria de trabajo",
-            "img": "/indumentaria-de-trabajo/img/prod-chomba-pique-diforza.webp",
-            "ambiente": false,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Traje de lluvia Diforza",
-            "cat": "Ropa de lluvia",
-            "img": "/indumentaria-de-trabajo/img/prod-traje-lluvia-diforza.webp",
-            "ambiente": false,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Chaleco reflectivo",
-            "cat": "Alta visibilidad",
-            "img": "/img/dest-chaleco-reflectivo.webp",
-            "ambiente": true,
-            "badge": "stock"
-          }
-        ]
+        "cta": "Ver toda la indumentaria"
       },
       {
         "id": "calzado",
         "label": "Calzado",
         "href": "/calzado-de-seguridad/",
-        "cta": "Ver todo el calzado",
-        "items": [
-          {
-            "nombre": "Botín de seguridad Conwork negro",
-            "cat": "Calzado de seguridad",
-            "img": "/img/dest-botin-conwork-negro.webp",
-            "ambiente": true,
-            "badge": "top"
-          },
-          {
-            "nombre": "Botín de seguridad Conwork 25BAF",
-            "cat": "Calzado de seguridad",
-            "img": "/img/dest-botin-conwork-25baf.webp",
-            "ambiente": true,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Zapato de seguridad Conwork",
-            "cat": "Calzado de seguridad",
-            "img": "/img/dest-zapato-conwork.webp",
-            "ambiente": true,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Botín de seguridad Conwork 653 marrón",
-            "cat": "Calzado de seguridad",
-            "img": "/img/dest-botin-conwork-653.webp",
-            "ambiente": true,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Zapatilla de seguridad Conwork",
-            "cat": "Calzado de seguridad",
-            "img": "/img/cat-calzado2.webp",
-            "ambiente": false,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Botín de seguridad Ombú",
-            "cat": "Calzado de seguridad",
-            "img": "/img/dest-botin-ombu.webp",
-            "ambiente": true,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Bota de caña larga",
-            "cat": "Botas",
-            "img": "/img/dest-bota-cana-larga.webp",
-            "ambiente": true,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Bota frigorífica blanca",
-            "cat": "Botas · industria alimenticia",
-            "img": "/img/dest-bota-frigorifica.webp",
-            "ambiente": true,
-            "badge": "stock"
-          }
-        ]
+        "cta": "Ver todo el calzado"
       },
       {
         "id": "epp",
         "label": "EPP",
         "href": "/epp-proteccion-industrial/",
-        "cta": "Ver todo el EPP",
-        "items": [
-          {
-            "nombre": "Anteojo Libus Argon",
-            "cat": "Protección ocular",
-            "img": "/epp-proteccion-industrial/img/prod-anteojo-argon.webp",
-            "ambiente": false,
-            "badge": "top"
-          },
-          {
-            "nombre": "Anteojo Libus Eco-line",
-            "cat": "Protección ocular",
-            "img": "/epp-proteccion-industrial/img/prod-anteojo-ecoline.webp",
-            "ambiente": false,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Antiparra New Classic",
-            "cat": "Protección ocular",
-            "img": "/img/cat-ocu.webp",
-            "ambiente": false,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Protector auditivo Quantum",
-            "cat": "Protección auditiva",
-            "img": "/epp-proteccion-industrial/img/prod-auditivo-quantum.webp",
-            "ambiente": false,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Protector auditivo de copa Alternative",
-            "cat": "Protección auditiva",
-            "img": "/epp-proteccion-industrial/img/prod-protector-auditivo-alternative.webp",
-            "ambiente": false,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Casco de seguridad Libus",
-            "cat": "Protección craneal",
-            "img": "/epp-proteccion-industrial/img/prod-casco-milenium.webp",
-            "ambiente": false,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Respirador descartable",
-            "cat": "Protección respiratoria",
-            "img": "/epp-proteccion-industrial/img/prod-respirador.webp",
-            "ambiente": false,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Semimáscara con filtros",
-            "cat": "Protección respiratoria",
-            "img": "/img/dest-semimascara.webp",
-            "ambiente": true,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Guante moteado Gamisol",
-            "cat": "Protección de manos",
-            "img": "/img/dest-guante-moteado.webp",
-            "ambiente": true,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Guante de vaqueta",
-            "cat": "Protección de manos",
-            "img": "/img/dest-guante-vaqueta.webp",
-            "ambiente": true,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Arnés anticaída completo",
-            "cat": "Trabajo en altura",
-            "img": "/epp-proteccion-industrial/img/prod-arnes-completo.webp",
-            "ambiente": false,
-            "badge": "stock"
-          },
-          {
-            "nombre": "Cono de señalización",
-            "cat": "Vialidad y señalización",
-            "img": "/img/dest-cono-senalizacion.webp",
-            "ambiente": true,
-            "badge": "stock"
-          }
-        ]
+        "cta": "Ver todo el EPP"
       }
-    ]
+    ],
+    "_nota": "Productos: src/_data/productos.json → destacados (orden y fichas). Acá solo textos y pestañas."
   }
 }

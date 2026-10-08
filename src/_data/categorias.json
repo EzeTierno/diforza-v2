@@ -1,0 +1,206 @@
+{
+  "_nota": "Mapa definitivo de categorías y subcategorías (definido por el usuario, 8 oct 2026). Fuente única: home, landings y badges de productos.json leen de acá. No agregar ni renombrar sin OK del usuario.",
+  "categorias": [
+    {
+      "id": "indumentaria",
+      "nombre": "Indumentaria",
+      "href": "/indumentaria-de-trabajo/",
+      "subcategorias": [
+        {
+          "id": "pantalones",
+          "nombre": "Pantalones",
+          "incluye": "Cargo, clásico, cargo elastizado, bermuda cargo"
+        },
+        {
+          "id": "remera",
+          "nombre": "Remera"
+        },
+        {
+          "id": "chomba",
+          "nombre": "Chomba"
+        },
+        {
+          "id": "camisa",
+          "nombre": "Camisa"
+        },
+        {
+          "id": "buzo",
+          "nombre": "Buzo",
+          "incluye": "Polar ½ cierre, friza"
+        },
+        {
+          "id": "campera",
+          "nombre": "Campera",
+          "incluye": "Trucker, polar, rompeviento"
+        },
+        {
+          "id": "chaleco",
+          "nombre": "Chaleco",
+          "incluye": "Reflectivo, polar, trucker, geólogo",
+          "tambienEn": "Vialidad y señalización (chaleco reflectivo)"
+        },
+        {
+          "id": "mameluco",
+          "nombre": "Mameluco",
+          "incluye": "Gabardina, alta visibilidad, descartable laminado ZIAO 63 g"
+        },
+        {
+          "id": "traje-de-lluvia",
+          "nombre": "Traje de lluvia",
+          "incluye": "Traje y capa de lluvia"
+        },
+        {
+          "id": "sanidad-y-gastronomia",
+          "nombre": "Sanidad y gastronomía",
+          "incluye": "Ambos, guardapolvos, cofias, cubre barba, delantal de cocinero, descartables (camisolín, cubre calzado, ambo descartable)"
+        },
+        {
+          "id": "ropa-primera-piel",
+          "nombre": "Ropa de primera piel",
+          "incluye": "Equipo primera piel, remera y pantalón térmicos, medias térmicas, cuello polar"
+        },
+        {
+          "id": "delantales",
+          "nombre": "Delantales",
+          "incluye": "Delantal de PVC blanco con refuerzo",
+          "tambienEn": "Delantal de descarne → EPP › Protección soldadura"
+        },
+        {
+          "id": "gorras",
+          "nombre": "Gorras",
+          "incluye": "Gorras de 5 y 6 gajos, gorra tapa nuca, gorro Rocky, bandana"
+        }
+      ]
+    },
+    {
+      "id": "calzado",
+      "nombre": "Calzado",
+      "href": "/calzado-de-seguridad/",
+      "subcategorias": [
+        {
+          "id": "botas",
+          "nombre": "Botas",
+          "incluye": "Bota industrial Ombú (negra/blanca, con/sin puntera, caña larga), bota de goma náutica, waders"
+        },
+        {
+          "id": "botines",
+          "nombre": "Botines",
+          "incluye": "Conwork (negro, 25BAF, 525BAF, 653, 401BAF), Ombú (Ozono Plus, Francés ojalado con puntera de acero, Krypton, Gema, Sneaker)"
+        },
+        {
+          "id": "zapatillas",
+          "nombre": "Zapatillas",
+          "incluye": "Conwork Nueva Origen 655ZA/641ZA, Ombú (Sneaker, Krypton, Gema, Cobalto)"
+        },
+        {
+          "id": "zapatos",
+          "nombre": "Zapatos",
+          "incluye": "Conwork (41ZA, 555ZA, 201), Ombú (Ozono Plus, Prusiano, Krypton)"
+        }
+      ],
+      "marcas": [
+        "Conwork",
+        "Ombú"
+      ],
+      "_nota": "Solo se comunican Conwork y Ombú (decisión 8 oct 2026), aunque se vendan otras marcas."
+    },
+    {
+      "id": "epp",
+      "nombre": "EPP",
+      "href": "/epp-proteccion-industrial/",
+      "subcategorias": [
+        {
+          "id": "proteccion-auditiva",
+          "nombre": "Protección auditiva"
+        },
+        {
+          "id": "proteccion-craneal",
+          "nombre": "Protección craneal",
+          "incluye": "Cascos, arneses para casco, mentoneras, gorras con casquete"
+        },
+        {
+          "id": "proteccion-facial",
+          "nombre": "Protección facial"
+        },
+        {
+          "id": "proteccion-ocular",
+          "nombre": "Protección ocular"
+        },
+        {
+          "id": "proteccion-respiratoria",
+          "nombre": "Protección respiratoria",
+          "incluye": "Descartables, semimáscaras, máscaras completas, filtros y cartuchos, barbijo tricapa"
+        },
+        {
+          "id": "proteccion-manos",
+          "nombre": "Protección de manos",
+          "incluye": "Todos los guantes (incluye los de soldador, también listados en Protección soldadura)"
+        },
+        {
+          "id": "altura",
+          "nombre": "Altura",
+          "incluye": "Arneses anticaída, colas de amarre, conectores, salvacaídas, mosquetones, porta herramientas"
+        },
+        {
+          "id": "senalizacion",
+          "nombre": "Señalización",
+          "tambienIncluye": "Chaleco reflectivo (también en Indumentaria → Chaleco)",
+          "incluye": "Conos, delineadores, cintas, mallas, banderas; chaleco reflectivo (también en Indumentaria › Chaleco); carteles de seguridad"
+        },
+        {
+          "id": "proteccion-soldadura",
+          "nombre": "Protección soldadura",
+          "incluye": "Máscaras de soldador; campera, delantal, mangas, polainas y guantes de descarne"
+        },
+        {
+          "id": "ergonomia",
+          "nombre": "Ergonomía",
+          "incluye": "Faja lumbar, rodilleras"
+        },
+        {
+          "id": "kits",
+          "nombre": "Kits",
+          "incluye": "Kits Libus: forestal, jardinero, desmalezador, herramientas de corte, mecanizado"
+        },
+        {
+          "id": "emergencias",
+          "nombre": "Emergencias y primeros auxilios",
+          "incluye": "Botiquines, lavaojos, matafuegos, tabla inmovilizadora, kit antiderrame, manta ignífuga"
+        }
+      ]
+    }
+  ],
+  "_reglas": [
+    "Cada producto tiene UNA subcategoría principal (la del badge). Puede listarse en otra con 'tambienEn'.",
+    "Usos y variantes (alimenticia, con/sin puntera, talles especiales) son atributos, no subcategorías.",
+    "Calzado: solo se comunican Conwork y Ombú."
+  ],
+  "_marcas": {
+    "propias": [
+      "Diforza",
+      "ZIAO",
+      "AGIO"
+    ],
+    "comercializa (cuestionario 2 oct)": [
+      "Libus",
+      "Conwork",
+      "Funcional",
+      "Ombú",
+      "WorkSafe",
+      "Gamisol",
+      "Glovex",
+      "De Pascale"
+    ],
+    "calzado_comunicado": [
+      "Conwork",
+      "Ombú"
+    ],
+    "no_se_comunican": [
+      "Funcional (no está en TiendaNube ni en el sitio GBP — decisión 8 oct 2026)",
+      "Voran",
+      "Febo/Arseg",
+      "SkiWay",
+      "Grafa 70"
+    ]
+  }
+}

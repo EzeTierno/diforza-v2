@@ -1,0 +1,1031 @@
+{
+  "_nota": "Fichas curadas de los productos que se muestran en tarjetas (descripción, atributos, foto, destacados). El catálogo completo está en catalogo.json; colores en colores.json; categorías en categorias.json.",
+  "_esquema": {
+    "subcategoria": "id de categorias.json (el badge muestra su nombre). Indumentaria ya definida; calzado y EPP pendientes.",
+    "descripcion": "1 línea, máx. ~70 caracteres",
+    "atributos": "1 o 2. tipo 'colores' → puntos de color; tipo 'talles' o 'texto' → texto corto",
+    "foto.estado": "producto = foto definitiva · provisoria = foto de ambiente · falta = sin foto",
+    "empresas": "Cantidad de empresas distintas que lo compraron (ene–jun 2026). Interno, no se muestra",
+    "normas": "Las normas (IRAM/EN) no se muestran en la tarjeta de producto (decisión 8 oct 2026).",
+    "impulsar": "true = producto que Diforza quiere empujar (cuestionario 2 oct 2026)"
+  },
+  "productos": [
+    {
+      "id": "pantalon-cargo",
+      "linea": "indumentaria",
+      "subcategoria": "pantalones",
+      "nombre": "Pantalón cargo Diforza",
+      "marca": "Diforza",
+      "codigo": "PANCADIF",
+      "descripcion": "Gabardina, modelo cargo con refuerzo entre piernas y triple costura.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "azul-marino",
+            "beige",
+            "negro",
+            "gris",
+            "verde-ingles"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "36 al 64"
+        }
+      ],
+      "foto": {
+        "src": "/img/dest-pantalon-cargo.webp",
+        "estado": "provisoria"
+      },
+      "masVendido": true,
+      "empresas": 86,
+      "catalogoId": "pantalon-cargo-diforza"
+    },
+    {
+      "id": "pantalon-clasico",
+      "linea": "indumentaria",
+      "subcategoria": "pantalones",
+      "nombre": "Pantalón clásico Diforza",
+      "marca": "Diforza / Ombú",
+      "codigo": "PANCLDZ",
+      "descripcion": "Gabardina, modelo clásico. Marca Diforza u Ombú.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "azul-marino",
+            "azulino",
+            "beige"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "36 al 60"
+        }
+      ],
+      "foto": {
+        "src": "/img/dest-pantalon-clasico.webp",
+        "estado": "provisoria"
+      },
+      "empresas": 71,
+      "catalogoId": "pantalon-clasico-diforza"
+    },
+    {
+      "id": "pantalon-elastizado",
+      "linea": "indumentaria",
+      "subcategoria": "pantalones",
+      "nombre": "Pantalón cargo elastizado Diforza",
+      "marca": "Diforza",
+      "codigo": "PANTCARGELAST",
+      "descripcion": "Gabardina elastizada, modelo cargo. Más libertad de movimiento.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "azul-marino",
+            "gris",
+            "verde-ingles",
+            "beige"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "46 al 52"
+        }
+      ],
+      "foto": {
+        "src": null,
+        "estado": "falta"
+      },
+      "empresas": null,
+      "nota": "En el catálogo figura como 'Modelo AGIO'.",
+      "catalogoId": "pantalon-cargo-elastizado-diforza"
+    },
+    {
+      "id": "camisa-clasica",
+      "linea": "indumentaria",
+      "subcategoria": "camisa",
+      "nombre": "Camisa clásica Diforza",
+      "marca": "Diforza",
+      "codigo": "CAMCLDIAZ",
+      "descripcion": "Camisa de trabajo de gabardina, modelo clásico.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "azul-marino",
+            "beige",
+            "gris",
+            "blanco"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "36 al 64"
+        }
+      ],
+      "foto": {
+        "src": "/indumentaria-de-trabajo/img/prod-camisa-clasica-diforza.webp",
+        "estado": "producto"
+      },
+      "empresas": 61,
+      "catalogoId": "camisa-clasica-diforza"
+    },
+    {
+      "id": "remera",
+      "linea": "indumentaria",
+      "subcategoria": "remera",
+      "nombre": "Remera Diforza",
+      "marca": "Diforza",
+      "codigo": "REMDIAZ",
+      "descripcion": "Cuello redondo, manga corta. Algodón 24.1 peinado.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "azul-marino",
+            "gris-melange",
+            "negro",
+            "blanco"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "S al 5XL"
+        }
+      ],
+      "foto": {
+        "src": null,
+        "estado": "falta"
+      },
+      "empresas": 50,
+      "pendiente": "Confirmar composición ('24.1 peinado' figura en el catálogo)",
+      "catalogoId": "remera"
+    },
+    {
+      "id": "buzo-polar",
+      "linea": "indumentaria",
+      "subcategoria": "buzo",
+      "nombre": "Buzo polar ½ cierre Diforza",
+      "marca": "Diforza",
+      "codigo": "BUPOLDIF",
+      "descripcion": "Polar con medio cierre, abrigo liviano para el día a día.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "azul-marino",
+            "negro"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "S al 4XL"
+        }
+      ],
+      "foto": {
+        "src": "/indumentaria-de-trabajo/img/prod-buzo-polar-medio-cierre-diforza.webp",
+        "estado": "producto"
+      },
+      "empresas": 46,
+      "nota": "Las 46 empresas suman buzo polar + buzo friza (BUFRDIF).",
+      "catalogoId": "buzo-polar-1-2-cierre-diforza"
+    },
+    {
+      "id": "campera-trucker",
+      "linea": "indumentaria",
+      "subcategoria": "campera",
+      "nombre": "Campera trucker Diforza",
+      "marca": "Diforza",
+      "codigo": "CAMTRUDIF",
+      "descripcion": "Campera de abrigo para trabajo exterior y bajas temperaturas.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "azul-marino",
+            "negro",
+            "naranja",
+            "verde-ingles"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "S al 5XL"
+        }
+      ],
+      "foto": {
+        "src": "/indumentaria-de-trabajo/img/prod-campera-trucker-diforza.webp",
+        "estado": "producto"
+      },
+      "empresas": 40,
+      "pendiente": "Validar descripción (tipo de abrigo/forro)",
+      "catalogoId": "campera-trucker"
+    },
+    {
+      "id": "chomba-pique",
+      "linea": "indumentaria",
+      "subcategoria": "chomba",
+      "nombre": "Chomba piqué Diforza",
+      "marca": "Diforza",
+      "codigo": "CHDIAZ",
+      "descripcion": "Tela piqué con dos botones. Ideal para bordar el logo.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "azul-marino",
+            "blanco",
+            "negro",
+            "gris-melange",
+            "gris-topo"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "S al 4XL"
+        }
+      ],
+      "foto": {
+        "src": "/indumentaria-de-trabajo/img/prod-chomba-pique-diforza.webp",
+        "estado": "producto"
+      },
+      "empresas": 34,
+      "catalogoId": "chomba-pique"
+    },
+    {
+      "id": "capa-lluvia",
+      "linea": "indumentaria",
+      "subcategoria": "traje-de-lluvia",
+      "nombre": "Capa de lluvia",
+      "marca": "Diforza",
+      "codigo": "CALLU",
+      "descripcion": "Capa impermeable. Bulto por 20 unidades.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "amarillo",
+            "azul-marino"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "S al 5XL"
+        }
+      ],
+      "foto": {
+        "src": null,
+        "estado": "falta"
+      },
+      "empresas": 34,
+      "catalogoId": "capa-de-lluvia",
+      "impulsar": true
+    },
+    {
+      "id": "chaleco-reflectivo",
+      "linea": "indumentaria",
+      "subcategoria": "chaleco",
+      "nombre": "Chaleco reflectivo",
+      "marca": "Diforza",
+      "codigo": "CHALREF",
+      "descripcion": "Dos bandas reflectivas de 5 cm. Liviano, 60 g.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "amarillo",
+            "naranja"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "Talle único"
+        }
+      ],
+      "foto": {
+        "src": "/img/dest-chaleco-reflectivo.webp",
+        "estado": "provisoria"
+      },
+      "empresas": 34,
+      "tambienEn": [
+        "senalizacion"
+      ],
+      "catalogoId": "chaleco-reflectivo"
+    },
+    {
+      "id": "traje-lluvia",
+      "linea": "indumentaria",
+      "subcategoria": "traje-de-lluvia",
+      "nombre": "Traje de lluvia Diforza",
+      "marca": "Diforza",
+      "codigo": "TRAJLLUV",
+      "descripcion": "Chaqueta y pantalón impermeables con reflectivo.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "amarillo",
+            "azul"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "S al 3XL"
+        }
+      ],
+      "foto": {
+        "src": "/indumentaria-de-trabajo/img/prod-traje-lluvia-diforza.webp",
+        "estado": "producto"
+      },
+      "empresas": 11,
+      "catalogoId": "traje-de-lluvia-con-reflectivo",
+      "impulsar": true
+    },
+    {
+      "id": "botin-conwork-negro",
+      "linea": "calzado",
+      "subcategoria": "botines",
+      "nombre": "Botín de seguridad Conwork",
+      "marca": "Conwork",
+      "codigo": "BOTCONW",
+      "descripcion": "El botín de seguridad más pedido por las empresas.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "negro"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "35 al 47"
+        }
+      ],
+      "foto": {
+        "src": "/img/dest-botin-conwork-negro.webp",
+        "estado": "provisoria"
+      },
+      "masVendido": true,
+      "empresas": 81,
+      "pendiente": "Modelo/artículo exacto, tipo de puntera y norma IRAM",
+      "catalogoId": "botin-conwork"
+    },
+    {
+      "id": "botin-conwork-25baf",
+      "linea": "calzado",
+      "subcategoria": "botines",
+      "nombre": "Botín Conwork 25BAF",
+      "marca": "Conwork",
+      "codigo": "25BAF",
+      "descripcion": "Línea industrial. Versión blanca para industria alimenticia.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "negro",
+            "blanco"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "35 al 47"
+        }
+      ],
+      "foto": {
+        "src": "/img/dest-botin-conwork-25baf.webp",
+        "estado": "provisoria"
+      },
+      "empresas": 61,
+      "pendiente": "Blanco figura 'a consultar stock' en el catálogo",
+      "catalogoId": "botin-conwork-25baf"
+    },
+    {
+      "id": "zapato-conwork",
+      "linea": "calzado",
+      "subcategoria": "zapatos",
+      "nombre": "Zapato de seguridad Conwork 41ZA",
+      "marca": "Conwork",
+      "codigo": "41ZA",
+      "descripcion": "Zapato de seguridad, línea industrial.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "negro",
+            "blanco"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "35 al 47"
+        }
+      ],
+      "foto": {
+        "src": "/img/dest-zapato-conwork.webp",
+        "estado": "provisoria"
+      },
+      "empresas": 39,
+      "catalogoId": "zapato-conwork-41za"
+    },
+    {
+      "id": "bota-cana-larga",
+      "linea": "calzado",
+      "subcategoria": "botas",
+      "nombre": "Bota industrial Ombú",
+      "marca": "Ombú",
+      "codigo": "BOOMCP",
+      "descripcion": "Bota de PVC para agua, barro e industria alimenticia.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "negro",
+            "blanco"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "valor": "Con o sin puntera de acero"
+        }
+      ],
+      "foto": {
+        "src": "/img/dest-bota-cana-larga.webp",
+        "estado": "provisoria"
+      },
+      "empresas": 33,
+      "nota": "Agrupa BOOMSP, BOOMCP, BOOMSP-BL y BOOMCP-BL (negra/blanca, con/sin puntera). Talles 35 al 48.",
+      "pendiente": "Validar material (PVC)",
+      "catalogoId": "bota-cana-larga-con-puntera"
+    },
+    {
+      "id": "zapatilla-conwork",
+      "linea": "calzado",
+      "subcategoria": "zapatillas",
+      "nombre": "Zapatilla de seguridad Conwork Nueva Origen 2.0",
+      "marca": "Conwork",
+      "codigo": "655ZA",
+      "descripcion": "Alta gama por diseño y confort.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "marron",
+            "negro"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "35 al 46"
+        }
+      ],
+      "foto": {
+        "src": "/img/cat-calzado2.webp",
+        "estado": "provisoria"
+      },
+      "empresas": 32,
+      "catalogoId": "zapatilla-conwork-655za"
+    },
+    {
+      "id": "botin-conwork-653",
+      "linea": "calzado",
+      "subcategoria": "botines",
+      "nombre": "Botín Conwork 653",
+      "marca": "Conwork",
+      "codigo": "653BAF",
+      "descripcion": "Botín de seguridad de cuero.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "marron",
+            "negro"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "35 al 46"
+        }
+      ],
+      "foto": {
+        "src": "/img/dest-botin-conwork-653.webp",
+        "estado": "provisoria"
+      },
+      "empresas": 14,
+      "pendiente": "Validar 'de cuero'",
+      "catalogoId": "botin-conwork-art-653-marron"
+    },
+    {
+      "id": "botin-ombu-ozono",
+      "linea": "calzado",
+      "subcategoria": "botines",
+      "nombre": "Botín Ombú Ozono Plus",
+      "marca": "Ombú",
+      "codigo": "BOTOMOZ",
+      "descripcion": "Con puntera de acero.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "negro"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "35 al 46"
+        }
+      ],
+      "foto": {
+        "src": "/img/dest-botin-ombu.webp",
+        "estado": "provisoria"
+      },
+      "empresas": 11,
+      "catalogoId": "botin-ombu-ozono"
+    },
+    {
+      "id": "zapato-ombu-ozono",
+      "linea": "calzado",
+      "subcategoria": "zapatos",
+      "nombre": "Zapato Ombú Ozono Plus",
+      "marca": "Ombú",
+      "codigo": "ZAPOZOM",
+      "descripcion": "Con puntera de acero y suela inyectada de PU bidensidad.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "negro"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "35 al 46"
+        }
+      ],
+      "foto": {
+        "src": null,
+        "estado": "falta"
+      },
+      "empresas": null,
+      "catalogoId": "zapato-ozono-plus"
+    },
+    {
+      "id": "anteojo-argon",
+      "linea": "epp",
+      "subcategoria": "proteccion-ocular",
+      "nombre": "Anteojo Libus Argon",
+      "marca": "Libus",
+      "codigo": "900499",
+      "descripcion": "Anteojo de seguridad liviano. Versión antiempañante (AF).",
+      "atributos": [
+        {
+          "tipo": "texto",
+          "valor": "Lente transparente o gris"
+        },
+        {
+          "tipo": "texto",
+          "valor": "HC antirrayadura / AF antiempaño"
+        }
+      ],
+      "foto": {
+        "src": "/epp-proteccion-industrial/img/prod-anteojo-argon.webp",
+        "estado": "producto"
+      },
+      "masVendido": true,
+      "empresas": 72,
+      "catalogoId": "anteojo-argon-transparente-hc"
+    },
+    {
+      "id": "casco-milenium",
+      "linea": "epp",
+      "subcategoria": "proteccion-craneal",
+      "nombre": "Casco Libus Milenium",
+      "marca": "Libus",
+      "codigo": "902386/95",
+      "descripcion": "Visera frontal y 8 ranuras de anclaje para accesorios.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "amarillo",
+            "blanco",
+            "azul-marino",
+            "rojo",
+            "verde",
+            "naranja",
+            "gris"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "valor": "Arnés plástico o textil"
+        }
+      ],
+      "foto": {
+        "src": "/epp-proteccion-industrial/img/prod-casco-milenium.webp",
+        "estado": "producto"
+      },
+      "empresas": 48,
+      "catalogoId": "casco-milenium"
+    },
+    {
+      "id": "anteojo-ecoline",
+      "linea": "epp",
+      "subcategoria": "proteccion-ocular",
+      "nombre": "Anteojo Libus Eco-line",
+      "marca": "Libus",
+      "codigo": "900558",
+      "descripcion": "Anteojo de seguridad económico, para uso diario.",
+      "atributos": [
+        {
+          "tipo": "texto",
+          "valor": "Lente transparente o gris"
+        },
+        {
+          "tipo": "texto",
+          "valor": "HC antirrayadura / AF antiempaño"
+        }
+      ],
+      "foto": {
+        "src": "/epp-proteccion-industrial/img/prod-anteojo-ecoline.webp",
+        "estado": "producto"
+      },
+      "empresas": 45,
+      "catalogoId": "anteojo-eco-line-transparente-hc"
+    },
+    {
+      "id": "faja-lumbar",
+      "linea": "epp",
+      "subcategoria": "ergonomia",
+      "nombre": "Faja lumbar Diforza modelo Full",
+      "marca": "Diforza",
+      "codigo": "FAJLUDIF",
+      "descripcion": "Soporte lumbar para tareas de carga y levantamiento.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "negro"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "S al 3XL"
+        }
+      ],
+      "foto": {
+        "src": null,
+        "estado": "falta"
+      },
+      "empresas": 44,
+      "catalogoId": "faja-lumbar-diforza"
+    },
+    {
+      "id": "guante-moteado",
+      "linea": "epp",
+      "subcategoria": "proteccion-manos",
+      "nombre": "Guante moteado Gamisol",
+      "marca": "Gamisol",
+      "codigo": "GUAMOTGA",
+      "descripcion": "Tejido de algodón con moteado antideslizante.",
+      "atributos": [
+        {
+          "tipo": "texto",
+          "valor": "Uso general"
+        }
+      ],
+      "foto": {
+        "src": "/img/dest-guante-moteado.webp",
+        "estado": "provisoria"
+      },
+      "empresas": 41,
+      "pendiente": "Talle",
+      "catalogoId": "guante-moteado-blanco-1100fer-gamisol"
+    },
+    {
+      "id": "arnes-cremallera",
+      "linea": "epp",
+      "subcategoria": "proteccion-craneal",
+      "nombre": "Arnés Libus a cremallera",
+      "marca": "Libus",
+      "codigo": "902414",
+      "descripcion": "Arnés de repuesto para casco Milenium, ajuste por cremallera.",
+      "atributos": [
+        {
+          "tipo": "texto",
+          "valor": "Plástico o textil"
+        }
+      ],
+      "foto": {
+        "src": "/epp-proteccion-industrial/img/prod-arnes-a-cremallera-plastico.webp",
+        "estado": "producto"
+      },
+      "empresas": 37,
+      "catalogoId": "arnes-a-cremallera-plastico-libus"
+    },
+    {
+      "id": "protector-quantum",
+      "linea": "epp",
+      "subcategoria": "proteccion-auditiva",
+      "nombre": "Tapón auditivo Libus Quantum",
+      "marca": "Libus",
+      "codigo": "900473",
+      "descripcion": "Reutilizable y lavable, diseño de triple aleta. Con cordón.",
+      "atributos": [
+        {
+          "tipo": "texto",
+          "valor": "Atenuación 26 dB"
+        },
+        {
+          "tipo": "texto",
+          "valor": "Dispenser o caja para cinturón"
+        }
+      ],
+      "foto": {
+        "src": "/epp-proteccion-industrial/img/prod-auditivo-quantum.webp",
+        "estado": "producto"
+      },
+      "pendiente": "26 dB según revendedor (ventasxmayor), no figura en la ficha oficial de Libus",
+      "catalogoId": "protector-auditivo-quantum"
+    },
+    {
+      "id": "guante-vaqueta",
+      "linea": "epp",
+      "subcategoria": "proteccion-manos",
+      "nombre": "Guante de vaqueta",
+      "marca": null,
+      "codigo": "GUAVQT10C",
+      "descripcion": "Cuero vaqueta medio paseo, puño corto. Certificado.",
+      "atributos": [
+        {
+          "tipo": "talles",
+          "valor": "10 y 11"
+        }
+      ],
+      "foto": {
+        "src": "/img/dest-guante-vaqueta.webp",
+        "estado": "provisoria"
+      },
+      "empresas": 29,
+      "catalogoId": "guante-vaqueta-certificado"
+    },
+    {
+      "id": "protector-alternative",
+      "linea": "epp",
+      "subcategoria": "proteccion-auditiva",
+      "nombre": "Protector auditivo de copa Alternative",
+      "marca": "Libus",
+      "codigo": "901374",
+      "descripcion": "Copa con vincha plástica flexible, almohadillas lavables.",
+      "atributos": [
+        {
+          "tipo": "texto",
+          "valor": "Atenuación 22 dB"
+        }
+      ],
+      "foto": {
+        "src": "/epp-proteccion-industrial/img/prod-protector-auditivo-alternative.webp",
+        "estado": "producto"
+      },
+      "empresas": 26,
+      "pendiente": "22 dB según revendedor (ventasxmayor), no figura en la ficha oficial de Libus",
+      "catalogoId": "protector-auditivo-alternative-vincha"
+    },
+    {
+      "id": "guante-nitrilo",
+      "linea": "epp",
+      "subcategoria": "proteccion-manos",
+      "nombre": "Guante de acrilonitrilo WorkSafe 15 mil",
+      "marca": "WorkSafe",
+      "codigo": "AN15MIL",
+      "descripcion": "Guante pesado de acrilonitrilo, 15 mil de espesor, largo ±33 cm.",
+      "atributos": [
+        {
+          "tipo": "talles",
+          "valor": "7 al 11"
+        }
+      ],
+      "foto": {
+        "src": null,
+        "estado": "falta"
+      },
+      "empresas": 25,
+      "catalogoId": "guante-acrilo-nitrilo-ws-15mil"
+    },
+    {
+      "id": "guante-anticorte",
+      "linea": "epp",
+      "subcategoria": "proteccion-manos",
+      "nombre": "Guante anticorte WorkSafe H2101",
+      "marca": "WorkSafe",
+      "codigo": "H2101",
+      "descripcion": "Tejido resistente al corte, galga 10, con baño de nitrilo.",
+      "atributos": [
+        {
+          "tipo": "talles",
+          "valor": "7 al 11"
+        }
+      ],
+      "foto": {
+        "src": null,
+        "estado": "falta"
+      },
+      "empresas": 19,
+      "pendiente": "Nivel de corte EN 388: no se encontró ficha pública de WorkSafe",
+      "catalogoId": "guante-anticorte-ws-h2101"
+    },
+    {
+      "id": "arnes-anticaida",
+      "linea": "epp",
+      "subcategoria": "altura",
+      "nombre": "Arnés anticaída SKY 10404F",
+      "marca": "SKY",
+      "codigo": "SKY10404F",
+      "descripcion": "Toma dorsal y frontal, faja lumbar acolchada. Poliéster de alta tenacidad.",
+      "atributos": [
+        {
+          "tipo": "texto",
+          "valor": "Hebillas regulables en hombros y piernas"
+        },
+        {
+          "tipo": "texto",
+          "valor": "Colas de amarre por separado"
+        }
+      ],
+      "foto": {
+        "src": "/epp-proteccion-industrial/img/prod-arnes-completo.webp",
+        "estado": "producto"
+      },
+      "empresas": null,
+      "catalogoId": "arnes-completo-con-toma-frontal-y-faja-lumbar"
+    },
+    {
+      "id": "semimascara",
+      "linea": "epp",
+      "subcategoria": "proteccion-respiratoria",
+      "nombre": "Semimáscara Libus 4000 Next",
+      "marca": "Libus",
+      "codigo": "1051726",
+      "descripcion": "Semimáscara reutilizable con filtros intercambiables.",
+      "atributos": [
+        {
+          "tipo": "texto",
+          "valor": "Talla M/L · TPE o silicona"
+        },
+        {
+          "tipo": "texto",
+          "valor": "Filtros para gases, vapores y partículas"
+        }
+      ],
+      "foto": {
+        "src": "/img/dest-semimascara.webp",
+        "estado": "provisoria"
+      },
+      "empresas": null,
+      "catalogoId": "semimascara-4000-next-r-m-l"
+    },
+    {
+      "id": "mameluco-ziao",
+      "linea": "indumentaria",
+      "subcategoria": "mameluco",
+      "nombre": "Mameluco descartable ZIAO",
+      "marca": "ZIAO",
+      "codigo": "MAMLAMZIAO",
+      "descripcion": "Laminado respirable, para pintura, limpieza y polvo. Bulto por 50.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "blanco"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "S al 3XL"
+        }
+      ],
+      "foto": {
+        "src": null,
+        "estado": "falta"
+      },
+      "impulsar": true,
+      "catalogoId": "mameluco-laminado-ziao"
+    },
+    {
+      "id": "mameluco-gabardina",
+      "linea": "indumentaria",
+      "subcategoria": "mameluco",
+      "nombre": "Mameluco de gabardina Diforza",
+      "marca": "Diforza",
+      "codigo": "MAMGABDIF",
+      "descripcion": "Gabardina, cuello camisero. Fabricación propia, se personaliza con tu logo.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "azul-marino",
+            "naranja"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "S al 4XL"
+        }
+      ],
+      "foto": {
+        "src": null,
+        "estado": "falta"
+      },
+      "impulsar": true,
+      "catalogoId": "mameluco-gabardina-diforza"
+    },
+    {
+      "id": "respirador-522",
+      "linea": "epp",
+      "subcategoria": "proteccion-respiratoria",
+      "nombre": "Respirador descartable Libus 522",
+      "marca": "Libus",
+      "codigo": "1051724",
+      "descripcion": "Respirador plegable para polvo y partículas, sin válvula.",
+      "atributos": [
+        {
+          "tipo": "texto",
+          "valor": "FFP2 NR D"
+        }
+      ],
+      "foto": {
+        "src": "/epp-proteccion-industrial/img/prod-respirador.webp",
+        "estado": "provisoria"
+      },
+      "impulsar": true,
+      "catalogoId": "respirador-522"
+    },
+    {
+      "id": "mascarilla-502",
+      "linea": "epp",
+      "subcategoria": "proteccion-respiratoria",
+      "nombre": "Mascarilla 502 tipo N95",
+      "marca": "Diforza",
+      "codigo": "MASC502",
+      "descripcion": "Mascarilla descartable para polvo y partículas.",
+      "atributos": [
+        {
+          "tipo": "texto",
+          "valor": "Tipo N95"
+        }
+      ],
+      "foto": {
+        "src": null,
+        "estado": "falta"
+      },
+      "impulsar": true,
+      "catalogoId": "mascarilla-502-n95"
+    }
+  ],
+  "destacados": {
+    "_criterio": "Por cantidad de empresas que compran + productos que Diforza quiere impulsar (cuestionario, preg. 18: mamelucos, capas y trajes de lluvia, EPP). Subcategorías mezcladas, badge en la tarjeta.",
+    "indumentaria": [
+      "pantalon-cargo",
+      "camisa-clasica",
+      "mameluco-ziao",
+      "buzo-polar",
+      "capa-lluvia",
+      "remera",
+      "chaleco-reflectivo",
+      "mameluco-gabardina",
+      "pantalon-clasico",
+      "traje-lluvia",
+      "campera-trucker",
+      "chomba-pique",
+      "pantalon-elastizado"
+    ],
+    "calzado": [
+      "botin-conwork-negro",
+      "zapato-conwork",
+      "bota-cana-larga",
+      "botin-conwork-25baf",
+      "zapatilla-conwork",
+      "botin-conwork-653",
+      "zapato-ombu-ozono",
+      "botin-ombu-ozono"
+    ],
+    "epp": [
+      "anteojo-argon",
+      "respirador-522",
+      "casco-milenium",
+      "protector-quantum",
+      "guante-moteado",
+      "mascarilla-502",
+      "faja-lumbar",
+      "arnes-anticaida",
+      "anteojo-ecoline",
+      "semimascara",
+      "arnes-cremallera",
+      "guante-vaqueta",
+      "protector-alternative",
+      "guante-nitrilo",
+      "guante-anticorte"
+    ]
+  }
+}

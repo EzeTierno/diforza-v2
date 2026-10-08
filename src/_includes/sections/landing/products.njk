@@ -1,4 +1,5 @@
-{#- Productos destacados. Datos: L.productos (specs por producto o L.productos.specs para todos) -#}
+{#- Productos destacados de la landing. Encabezado: L.productos (eyebrow/título) ·
+    productos: src/_data/productos.json → destacados[landingKey] (vía vitrina.js) -#}
 {%- set P = L.productos %}
 <section class="products" id="productos">
   <div class="featured-products__top reveal">
@@ -6,34 +7,9 @@
       <p class="featured-products__eyebrow">{{ P.eyebrow | rich | safe }}</p>
       <h2>{{ P.titulo | rich | safe }}</h2>
     </div>
-{%- if site.tienda.mostrar %}
-    <a href="{{ site.tienda.url }}" class="btn btn--outline">Ir a tienda online
-      {{ icons['ui-flecha'] | safe }}
-    </a>
-{%- endif %}
   </div>
-  <div class="products__list reveal reveal--1" data-js="drag-carousel">
-    <div class="products__track">
-      {%- for p in P.items %}
-      <article class="product-card">
-        {% if p.masVendido %}<span class="badge badge--top">{{ icons['ui-mas-vendido'] | safe }} Más vendido</span>{% endif %}
-        {%- if p.foto %}
-        <div class="product-card__media"><img src="{{ p.foto }}" alt="{{ p.alt or p.nombreCompleto }}" draggable="false" loading="lazy"{% if p.fotoAncho %} width="{{ p.fotoAncho }}" height="{{ p.fotoAlto }}"{% endif %}>{% if p.fotoProvisoria %}<span class="product-card__phlabel">{{ p.fotoProvisoria }}</span>{% endif %}</div>
-        {%- else %}
-        <div class="product-card__media is-placeholder">{{ icons[P.iconoPlaceholder or 'caja'] | safe }}<span class="product-card__phlabel">Foto a reemplazar</span></div>
-        {%- endif %}
-        <div class="product-card__body">
-          <h3 class="product-card__name">{{ p.nombre }}{% if p.notaNombre %}<span class="placeholder">{{ p.notaNombre }}</span>{% endif %}</h3>
-          <p class="product-card__code">{% if p.variante %}{{ p.variante }} · {% endif %}{% if p.codigo %}Cód. {{ p.codigo }}{% else %}Cód. —<span class="placeholder">Pendiente</span>{% endif %}</p>
-          <dl class="product-card__specs">
-            {%- for s in (p.specs or P.specs) %}
-            <dt>{{ s.nombre }}</dt><dd{% if s.norma %} class="product-card__norm"{% endif %}>{{ s.valor | rich | safe }}</dd>
-            {%- endfor %}
-          </dl>
-          <button type="button" class="product-card__cta" data-js="consultar" data-prod-nombre="{{ p.nombreCompleto }}" data-prod-codigo="{{ p.codigo }}"{% if p.categoria %} data-prod-cat="{{ p.categoria }}"{% endif %}>Consultar {{ icons['ui-flecha'] | safe }}</button>
-        </div>
-      </article>
-      {%- endfor %}
-    </div>
+  <div class="reveal reveal--1">
+{%- set items = vitrina[landingKey] %}
+{%- include "partials/product-grid.njk" %}
   </div>
 </section>

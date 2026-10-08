@@ -3,8 +3,8 @@
    ========================================================================== */
 
 /* ---- S5 · Productos destacados ----
-   Mobile/tablet: carrusel horizontal draggeable (mismo JS que la home).
-   >=1024: grilla 4x2 — son 8 fichas con datos, conviene verlas todas. */
+   La grilla y la tarjeta son componentes compartidos con la home:
+   components/product-grid.css y components/product-card.css. */
 .products {
   background: var(--slate-75);
   padding-bottom: 52px;
@@ -19,51 +19,5 @@
 @media (--xl) {
   .products {
     padding-bottom: 96px;
-  }
-}
-
-.products__list {
-  padding: 6px var(--pad) 12px;
-  overflow-x: auto;
-  cursor: grab;
-  margin-top: 28px;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  user-select: none;
-}
-
-.products__list::-webkit-scrollbar {
-  display: none;
-}
-
-.products__list.is-dragging {
-  cursor: grabbing;
-}
-
-.products__track {
-  display: flex;
-  gap: 16px;
-  width: max-content;
-}
-
-@media (--lg) {
-  .products__list {
-    overflow: visible;
-    cursor: auto;
-    margin-top: 40px;
-    user-select: auto;
-  }
-
-  .products__track {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
-    width: auto;
-  }
-}
-
-@media (--xl) {
-  .products__track {
-    gap: 24px;
   }
 }

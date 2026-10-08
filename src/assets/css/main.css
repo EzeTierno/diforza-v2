@@ -21,6 +21,7 @@
 @import "components/placeholder.css" layer(components);
 @import "components/section-title.css" layer(components);
 @import "components/product-card.css" layer(components);
+@import "components/product-grid.css" layer(components);
 @import "components/testimonial.css" layer(components);
 @import "components/form.css" layer(components);
 @import "components/wa-float.css" layer(components);

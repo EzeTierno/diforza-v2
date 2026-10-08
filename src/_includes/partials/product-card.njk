@@ -1,0 +1,53 @@
+{#- Tarjeta de producto única (home y landings). Recibe `p` = una tarjeta de vitrina.js.
+    Foto 4:5 protagonista → subcategoría + "Más vendido" sobre la foto → marca → nombre →
+    descripción → 1–2 atributos (colores / talles / dato técnico) → "Personalizable" → CTA WhatsApp. -#}
+<article class="product-card">
+  <div class="product-card__media{% if not p.foto %} is-placeholder{% endif %}">
+{%- if p.foto %}
+    <img class="product-card__img" src="{{ p.foto }}" alt="{{ p.nombre }}" loading="lazy" draggable="false">
+{%- else %}
+    <span class="product-card__ph">Foto a reemplazar</span>
+{%- endif %}
+{%- if p.subcategoria %}
+    <span class="product-card__sub">{{ p.subcategoria }}</span>
+{%- endif %}
+{%- if p.masVendido %}
+    <span class="product-card__flag">{{ icons['ui-mas-vendido'] | safe }} Más vendido</span>
+{%- endif %}
+{%- if p.fotoProvisoria %}
+    <span class="product-card__prov">Foto provisoria</span>
+{%- endif %}
+  </div>
+  <div class="product-card__body">
+{%- if p.marca %}
+    <p class="product-card__brand">{{ p.marca }}</p>
+{%- endif %}
+    <h3 class="product-card__name">{{ p.nombre }}</h3>
+{%- if p.descripcion %}
+    <p class="product-card__desc">{{ p.descripcion }}</p>
+{%- endif %}
+{%- if p.atributos.length %}
+    <ul class="product-card__attrs">
+{%- for a in p.atributos %}
+      <li class="product-card__attr"{% if a.titulo %} title="{{ a.titulo }}" aria-label="Colores: {{ a.titulo }}"{% endif %}>
+{%- if a.tipo == "colores" %}
+        <span class="product-card__dots" aria-hidden="true">
+{%- for c in a.puntos %}<span class="product-card__dot" style="--dot: {{ c.hex }}"></span>{% endfor %}
+{%- if a.extra %}<span class="product-card__dots-more">+{{ a.extra }}</span>{% endif %}
+        </span>
+        {{ a.texto }}
+{%- elif a.tipo == "talles" %}
+        <b>Talles</b> {{ a.texto }}
+{%- else %}
+        {{ a.texto }}
+{%- endif %}
+      </li>
+{%- endfor %}
+    </ul>
+{%- endif %}
+{%- if p.personalizable %}
+    <p class="product-card__perso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.3l5-.7z"/></svg> Personalizable con tu logo</p>
+{%- endif %}
+    <a class="product-card__cta" href="{{ p.wa }}" target="_blank" rel="noopener" data-js="wa-producto" data-prod-id="{{ p.id }}" data-prod-nombre="{{ p.nombre }}" aria-label="Cotizar {{ p.nombre }} por WhatsApp">{% include "partials/icon-wa.njk" %} Cotizar</a>
+  </div>
+</article>

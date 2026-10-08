@@ -1,0 +1,16 @@
+{#- Grilla de productos destacados (home y landings). Recibe `items` (lista de vitrina.js).
+    Mobile: slider horizontal con snap (la siguiente tarjeta asoma).
+    Tablet/desktop: grilla de 3/4 columnas; muestra 8 y el resto con "Ver más productos". -#}
+{%- set visibles = 8 %}
+<div class="product-grid" data-js="product-grid">
+  <div class="product-grid__track">
+{%- for p in items %}
+    <div class="product-grid__item{% if loop.index > visibles %} product-grid__item--extra{% endif %}">
+{%- include "partials/product-card.njk" %}
+    </div>
+{%- endfor %}
+  </div>
+{%- if items.length > visibles %}
+  <button type="button" class="product-grid__more" data-js="show-more" aria-expanded="false">Ver más productos ({{ items.length - visibles }})</button>
+{%- endif %}
+</div>

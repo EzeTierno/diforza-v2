@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Grilla de productos destacados (.product-grid) — home y landings
+   Marcado: src/_includes/partials/product-grid.njk
+   Mobile: slider con snap, tarjeta al 72% (asoma la siguiente).
+   Tablet: 3 columnas · desktop: 4. Muestra 8 y el resto con "Ver más productos".
+   ========================================================================== */
+
+.product-grid {
+  margin: 24px 0 0;
+}
+
+@media (--md) {
+  .product-grid {
+    margin: 28px var(--pad) 0;
+  }
+}
+
+@media (--xl) {
+  .product-grid {
+    margin-top: 38px;
+  }
+}
+
+/* Mobile: slider horizontal */
+.product-grid__track {
+  display: flex;
+  gap: 12px;
+  padding: 4px var(--pad) 14px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scroll-padding-inline: var(--pad);
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.product-grid__track::-webkit-scrollbar {
+  display: none;
+}
+
+.product-grid__item {
+  flex: 0 0 72%;
+  scroll-snap-align: start;
+}
+
+@media (--sm) {
+  .product-grid__item {
+    flex-basis: 56%;
+  }
+}
+
+/* Tablet/desktop: grilla */
+@media (--md) {
+  .product-grid__track {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    padding: 6px 0 10px;
+    overflow: visible;
+  }
+
+  .product-grid__item--extra {
+    display: none;
+  }
+
+  .product-grid.is-expanded .product-grid__item--extra {
+    display: block;
+  }
+}
+
+@media (--lg) {
+  .product-grid__track {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (--xl) {
+  .product-grid__track {
+    gap: 24px;
+  }
+}
+
+/* "Ver más productos": solo en tablet/desktop (en mobile el slider ya muestra todo) */
+.product-grid__more {
+  display: none;
+}
+
+@media (--md) {
+  .product-grid__more {
+    display: block;
+    margin: 18px auto 0;
+    padding: 11px 26px;
+    font-family: var(--font-body);
+    font-size: var(--fs-13);
+    font-weight: var(--fw-bold);
+    color: var(--color-text);
+    background: var(--white);
+    border: 1.5px solid var(--slate-250);
+    border-radius: var(--radius-pill);
+    transition: border-color 0.2s ease;
+    cursor: pointer;
+  }
+
+  .product-grid__more:hover {
+    border-color: var(--navy);
+  }
+
+  .product-grid.is-expanded .product-grid__more {
+    display: none;
+  }
+}

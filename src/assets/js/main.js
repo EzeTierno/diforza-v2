@@ -310,3 +310,18 @@
     });
   });
 })();
+
+(function(){
+  // Grilla de productos (partials/product-grid.njk): en tablet/desktop muestra 8
+  // tarjetas; "Ver más productos" despliega el resto y lleva el foco a la primera nueva.
+  document.querySelectorAll('[data-js="product-grid"]').forEach(function(grid){
+    var btn = grid.querySelector('[data-js="show-more"]');
+    if (!btn) return;
+    btn.addEventListener('click', function(){
+      grid.classList.add('is-expanded');
+      btn.setAttribute('aria-expanded', 'true');
+      var first = grid.querySelector('.product-grid__item--extra a');
+      if (first) first.focus({preventScroll: true});
+    });
+  });
+})();

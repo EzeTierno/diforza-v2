@@ -1,0 +1,8340 @@
+{
+ "_nota": "Catálogo maestro completo de Diforza. Fuente: export ERP GBP 8 oct 2026 (SKU agrupados por código base) + ventas ene–jun 2026 + decisiones del usuario. Regenerar con 02_sitio-web/catalogo/catalogo_build.py. visible=false → no se muestra en el sitio. Categorías: categorias.json · colores: colores.json · fichas curadas (descripción, foto, destacados): productos.json.",
+ "actualizado": "2026-10-08",
+ "productos": [
+  {
+   "id": "adaptador-casco-facial-audit-l-400",
+   "nombre": "Adaptador casco Facial/Audit. L-400",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "ADCASCFAC/AUDITL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "adaptador-casco-facial-universal-abs",
+   "nombre": "Adaptador Casco-facial Universal Abs",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "ADFCCASUN"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "adaptador-facial-p-casco-y-auditivo",
+   "nombre": "Adaptador Facial P/Casco y auditivo",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "ADFACCAS"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 150,
+    "empresas": 8
+   }
+  },
+  {
+   "id": "ambo-combinado",
+   "nombre": "Ambo combinado",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "AMBCOM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "ambo-descartable",
+   "nombre": "Ambo descartable",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "AMBO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "ambo-ezca",
+   "nombre": "Ambo Ezca",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "AMBEZCA"
+   ],
+   "colores": [
+    "gris"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true
+  },
+  {
+   "id": "ambo-sanidad",
+   "nombre": "Ambo sanidad",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "AMBSAN"
+   ],
+   "colores": [
+    "azul-marino",
+    "blanco"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 87,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "andes-s-v-blanco-textil-cremallera",
+   "nombre": "Andes S/V Blanco Textil Cremallera",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "ANBLTCRLIB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 20,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "andes-s-v-verde-textl-cremallera",
+   "nombre": "Andes S/V Verde Textl Cremallera",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "ANVLTCRLIB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-argon-elite-dark-green-w5-af",
+   "nombre": "Anteojo Argón Elite Dark Green W5 AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "LENSOL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-argon-elite-gris-hc",
+   "nombre": "Anteojo Argon Elite Gris HC",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTARGELGRHC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-argon-elite-outdoor-indoor-hc",
+   "nombre": "Anteojo Argon Elite Outdoor/Indoor HC",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTARGELOUIN"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 52,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "anteojo-argon-elite-transparente-hc",
+   "nombre": "Anteojo Argon Elite Transparente HC",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTARGELTRHC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 280,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "anteojo-argon-gris-af",
+   "nombre": "Anteojo Argon Gris AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTARLIBGRAF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-argon-gris-hc",
+   "nombre": "Anteojo Argon gris HC",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTARLIBGR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 3710,
+    "empresas": 18
+   }
+  },
+  {
+   "id": "anteojo-argon-transparente-af",
+   "nombre": "Anteojo Argon Transparente AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTARLIBTR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1100,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "anteojo-argon-transparente-hc",
+   "nombre": "Anteojo Argon transparente HC",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTARLIB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 8495,
+    "empresas": 36
+   }
+  },
+  {
+   "id": "anteojo-eco-sport-gris-af",
+   "nombre": "Anteojo Eco Sport Gris AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTECOSGRAF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-eco-sport-transparente-af",
+   "nombre": "Anteojo Eco Sport Transparente AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTECOSINAF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 160,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "anteojo-eco-line-amarillo-af",
+   "nombre": "Anteojo Eco-line Amarillo AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTECOLAMAF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 480,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "anteojo-eco-line-gris-hc",
+   "nombre": "Anteojo Eco-line gris HC",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTECLIBGR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 4061,
+    "empresas": 21
+   }
+  },
+  {
+   "id": "anteojo-eco-line-gris-af",
+   "nombre": "Anteojo Eco-line Gris AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTECLIBGRAF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 5,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "anteojo-eco-line-in-out-hc",
+   "nombre": "Anteojo Eco-line in/out HC",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTECLIBIND OUT"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-eco-line-transparente-af",
+   "nombre": "Anteojo Eco-Line Transparente AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTECLINAF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-eco-line-transparente-hc",
+   "nombre": "Anteojo Eco-line transparente HC",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTECLIB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 5601,
+    "empresas": 40
+   }
+  },
+  {
+   "id": "anteojo-fall-dual-gris-af",
+   "nombre": "Anteojo Fall Dual Gris AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTFDGR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-fall-dual-transparente-af",
+   "nombre": "Anteojo Fall Dual transparente AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTFDTR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "anteojo-k2-antiempano-antiraya-claros",
+   "nombre": "Anteojo K2 Antiempaño Antiraya- Claros",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTWORKSAFEANTEMPC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-k2-antiempano-antiraya-gris",
+   "nombre": "Anteojo K2 Antiempaño Antiraya- Gris",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTWORKSAFEANTEMPG"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-mig-hc-gris",
+   "nombre": "Anteojo MIG HC gris",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTMIGGRIS"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-mig-hc-transparente",
+   "nombre": "Anteojo MIG HC transparente",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTMIGTRNS"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 120,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "anteojo-neon-gris-af",
+   "nombre": "Anteojo Neon gris AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTNEGRAF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-neon-plus-gris-af",
+   "nombre": "Anteojo Neon Plus Gris AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTNEPLGRAF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-neon-plus-gris-hc",
+   "nombre": "Anteojo Neon Plus Gris HC",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTNEPLGRHC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-neon-plus-transparente-af",
+   "nombre": "Anteojo Neon Plus Transparente AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTNEPLINAF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-neon-plus-transparente-hc",
+   "nombre": "Anteojo Neon Plus Transparente HC",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTNEPLINC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-neon-transparente-af",
+   "nombre": "Anteojo Neon Transparente AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTNETRAF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-neon-transparente-hc",
+   "nombre": "Anteojo Neon Transparente HC",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTNETRHC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-nevado-in-out",
+   "nombre": "Anteojo Nevado IN-OUT",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTNEVINOUT"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-ucu-111b-trasparente-dps",
+   "nombre": "Anteojo Ucu 111B trasparente DPS",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTUCUDP"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 380,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "anteojo-ucu-oscuro-dps",
+   "nombre": "Anteojo Ucu oscuro DPS",
+   "marca": "De Pascale",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTUCUOSCDP"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 330,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "anteojo-virtua-3m",
+   "nombre": "Anteojo virtua 3M",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTENVIR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-virtual-ap-transparente-3m",
+   "nombre": "Anteojo virtual AP transparente 3M",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTIVRAP3M"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-xtreme-am-bifoc-pc-transp",
+   "nombre": "Anteojo XTREME AM BIFOC PC Transp",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTEXTRBIFTR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-xtreme-am-monof-pc-transp",
+   "nombre": "Anteojo XTREME AM MONOF PC Transp",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTEXTRMONTR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-xtreme-am-multifoc-pc-transp",
+   "nombre": "Anteojo XTREME AM MULTIFOC PC Transp",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTEXTRMULTR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-xtreme-az-bifoc-pc-transp",
+   "nombre": "Anteojo XTREME AZ BIFOC PC Transp",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTEXTRAZBIF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-xtreme-az-monof-pc-transp",
+   "nombre": "Anteojo XTREME AZ MONOF PC Transp",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTEXTRAZMONTR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "anteojo-xtreme-az-multif-pc-transp",
+   "nombre": "Anteojo XTREME AZ MULTIF PC Transp",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTEXTRAZMULT"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "antiparra-3m-2890a-transparente-hc-af",
+   "nombre": "Antiparra 3M 2890A transparente HC AF",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANT2890A3M"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "antiparra-aviator-af-gris",
+   "nombre": "Antiparra Aviator AF gris",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTIPAVGR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "antiparra-aviator-transparente-af-gris",
+   "nombre": "Antiparra Aviator transparente AF Gris",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTAVTR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 17,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "antiparra-fravida-1702-trasparente",
+   "nombre": "Antiparra fravida 1702 trasparente",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTFR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "antiparra-new-classic-af-gris",
+   "nombre": "Antiparra New Classic AF Gris",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTAFGR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "antiparra-new-classic-af-transparente",
+   "nombre": "Antiparra New Classic AF transparente",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTAFTR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "antiparra-new-classic-hc-gris",
+   "nombre": "Antiparra New Classic HC gris",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTNCGR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 50,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "antiparra-new-classic-hc-transparente",
+   "nombre": "Antiparra New Classic HC transparente",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTNCTR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 200,
+    "empresas": 13
+   }
+  },
+  {
+   "id": "antiparra-soldador-rectangular-flip-up",
+   "nombre": "Antiparra Soldador Rectangular Flip-Up",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "ANTSOLRECFU"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 10,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "antiparra-transparente-1700-fravida",
+   "nombre": "Antiparra transparente 1700 Fravida",
+   "marca": "Fravida",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ANTFRTRAN"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "armazon-de-seguridad-azul-xtreme",
+   "nombre": "Armazón de seguridad Azul Xtreme",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-ocular",
+   "codigosERP": [
+    "ARMEXT"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "arnes-6897-p-mascara-6800-3m",
+   "nombre": "Arnes 6897 P/mascara 6800 3M",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "AR6897PAR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "arnes-a-cremallera-4-puntos-3m",
+   "nombre": "Arnés a cremallera 4 puntos 3M",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "ARNCREM3M"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "arnes-a-cremallera-fravida-2500",
+   "nombre": "Arnés a cremallera Fravida 2500",
+   "marca": "Fravida",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "ARCREMFR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "arnes-a-cremallera-plastico-libus",
+   "nombre": "Arnés a cremallera plástico Libus",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "ARPCASLIB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 968,
+    "empresas": 32
+   }
+  },
+  {
+   "id": "arnes-a-cremallera-strong-welder",
+   "nombre": "Arnes a Cremallera Strong Welder",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "ARCRSW"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "arnes-a-cremallera-textil-libus",
+   "nombre": "Arnes a cremallera Textil Libus",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "ARNCREMTEX"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "arnes-completo-con-toma-frontal-y-faja-lumbar",
+   "nombre": "Arnés completo Con Toma Frontal y Faja Lumbar",
+   "marca": "Sky",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY10404F"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 120,
+    "empresas": 12
+   }
+  },
+  {
+   "id": "arnes-con-toma-anticaidas-dorsal-y-sujecion-en-la-cintura",
+   "nombre": "Arnés con toma anticaídas dorsal y sujeción en la cintura",
+   "marca": "Eslingar",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY10404"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "arnes-standar-4-puntos-3m",
+   "nombre": "Arnés standar 4 puntos 3M",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "ARNSTAND3M"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "arnes-standard-plastico-libus",
+   "nombre": "Arnés standard plástico Libus",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "ARCASLIB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1381,
+    "empresas": 17
+   }
+  },
+  {
+   "id": "arnes-standart-textil-libus",
+   "nombre": "Arnes Standart Textil Libus",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "ARNSTANTEX"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "bandana",
+   "nombre": "Bandana",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "gorras",
+   "codigosERP": [
+    "COFIBAN"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "bandera-peligro-50-x70",
+   "nombre": "Bandera Peligro 50 x70",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "BANDPELI"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 102,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "bandolera-con-reflectivo-amarillo",
+   "nombre": "Bandolera con Reflectivo Amarillo",
+   "marca": "De Pascale",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "BANREFLAM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "bandolera-con-reflectivo-naranja",
+   "nombre": "Bandolera con Reflectivo Naranja",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "BANREFLNJA"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 200,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "bandolera-pvc-fluo-con-reflectivo",
+   "nombre": "Bandolera PVC Fluo con Reflectivo",
+   "marca": "Lube",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "BANPVCFLUB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "barbijo-1730-sin-valvula",
+   "nombre": "Barbijo 1730 Sin Válvula",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "BAR1730SV"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "barbijo-1740-con-valvula",
+   "nombre": "Barbijo 1740 Con Válvula",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "BAR1740CV"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "barbijo-8511-n95-con-valvula",
+   "nombre": "Barbijo 8511-N95 Con Válvula",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "BAR3MCV"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "barbijo-9502-n95-3m",
+   "nombre": "Barbijo 9502 N95 3M",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "BAR9502"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "barbijo-c-valvula-plastica",
+   "nombre": "Barbijo c/ válvula plastica",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "BARFRA"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "barbijo-rigido-bi-capa",
+   "nombre": "Barbijo Rígido Bi Capa",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "BARIG"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "barbijo-tricapa-con-certificado-anmat",
+   "nombre": "Barbijo Tricapa Con Certificado ANMAT",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "BATRAN"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1701,
+    "empresas": 4
+   }
+  },
+  {
+   "id": "bermuda-cargo",
+   "nombre": "Bermuda cargo",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "BERCARGAB"
+   ],
+   "colores": [
+    "azul-marino",
+    "beige",
+    "gris-topo",
+    "negro"
+   ],
+   "talles": "36 al 68",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 21,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "bermuda-clasico-eco",
+   "nombre": "Bermuda clásico ECO",
+   "marca": "Beato",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "BERCLECO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Línea económica (Beato)"
+  },
+  {
+   "id": "bombacha-de-campo-pampero",
+   "nombre": "Bombacha de campo Pampero",
+   "marca": "Pampero",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "BOMPAMP"
+   ],
+   "colores": [
+    "azul-marino",
+    "beige",
+    "negro",
+    "verde"
+   ],
+   "talles": "36 al 64",
+   "visible": true
+  },
+  {
+   "id": "borcegui-conwork-33bra",
+   "nombre": "Borcegui Conwork 33BRA",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BORC33BRA"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "35 al 47",
+   "visible": true
+  },
+  {
+   "id": "borcegui-ozono-plus-con-puntera",
+   "nombre": "Borcegui Ozono plus con puntera",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOROZOMCP"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "37 al 48",
+   "visible": true
+  },
+  {
+   "id": "borcegui-tactico-c-punt-de-acero-base-goma-febo",
+   "nombre": "Borcegui Tactico C/Punt de Acero Base Goma Febo",
+   "marca": "Arseg",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BORCTACTCPA"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": false,
+   "nota": "Marca ARSEG: no se comunica"
+  },
+  {
+   "id": "borcegui-tactico-c-punt-plast-base-goma-febo",
+   "nombre": "Borcegui Tactico C/Punt Plast Base Goma Febo",
+   "marca": "Arseg",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BORCTACTCP"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "36 al 48",
+   "visible": false,
+   "nota": "Marca ARSEG: no se comunica"
+  },
+  {
+   "id": "bota-cana-larga-con-puntera",
+   "nombre": "Bota caña larga con puntera",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botas",
+   "codigosERP": [
+    "BOOMCP"
+   ],
+   "colores": [
+    "blanco",
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 468,
+    "empresas": 25
+   }
+  },
+  {
+   "id": "bota-cana-larga-sin-puntera",
+   "nombre": "Bota caña larga sin puntera",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botas",
+   "codigosERP": [
+    "BOOMSP"
+   ],
+   "colores": [
+    "blanco",
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1267,
+    "empresas": 15
+   }
+  },
+  {
+   "id": "bota-ombu-nautica",
+   "nombre": "Bota Ombu Nautica",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botas",
+   "codigosERP": [
+    "BOTOMNAUTICA"
+   ],
+   "colores": [
+    "azul"
+   ],
+   "talles": "38 al 45",
+   "visible": true
+  },
+  {
+   "id": "bota-ombu-urbana-blanca",
+   "nombre": "Bota Ombu Urbana Blanca",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botas",
+   "codigosERP": [
+    "BOTOMBURBANA"
+   ],
+   "colores": [
+    "blanco",
+    "negro"
+   ],
+   "talles": "37 al 45",
+   "visible": true
+  },
+  {
+   "id": "bota-petrombu-marron",
+   "nombre": "Bota petrOMBU Marron",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botas",
+   "codigosERP": [
+    "BOTOMPET"
+   ],
+   "colores": [
+    "marron"
+   ],
+   "talles": "37 al 47",
+   "visible": true
+  },
+  {
+   "id": "bota-wader-de-pvc",
+   "nombre": "Bota Wader de PVC",
+   "marca": "Diforza",
+   "linea": "calzado",
+   "subcategoria": "botas",
+   "codigosERP": [
+    "BOTWADPVC"
+   ],
+   "colores": [],
+   "talles": "38 al 46",
+   "visible": false,
+   "nota": "Marca DI FORZA: no se comunica"
+  },
+  {
+   "id": "botella-lava-ojo-emergencia",
+   "nombre": "Botella Lava Ojo Emergencia",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "LAVAOJO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 20,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "botin-boro-con-puntera-de-acero-cas",
+   "nombre": "Botín Boro con puntera de acero CAS",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTBORCAS"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": true
+  },
+  {
+   "id": "botin-conwork",
+   "nombre": "Botin Conwork",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTCONW",
+    "9BOTCONW"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "35 al 47",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 5979,
+    "empresas": 78
+   }
+  },
+  {
+   "id": "botin-conwork-25baf",
+   "nombre": "Botin Conwork 25BAF",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTCONW25BAF"
+   ],
+   "colores": [
+    "blanco",
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 3069,
+    "empresas": 60
+   }
+  },
+  {
+   "id": "botin-conwork-401baf-allworks",
+   "nombre": "Botin Conwork 401BAF Allworks",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTAWCONW401BAF"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "35 al 47",
+   "visible": true
+  },
+  {
+   "id": "botin-conwork-525baf-marron",
+   "nombre": "Botin Conwork 525BAF Marron",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTCONW525BAF"
+   ],
+   "colores": [
+    "marron",
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": true
+  },
+  {
+   "id": "botin-conwork-art-653-marron",
+   "nombre": "Botin Conwork Art 653 Marron",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTCONW653"
+   ],
+   "colores": [
+    "marron",
+    "negro"
+   ],
+   "talles": "35 al 47",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 417,
+    "empresas": 13
+   }
+  },
+  {
+   "id": "botin-eco-pvc",
+   "nombre": "Botín eco PVC",
+   "marca": "Diforza",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTECOPVC"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": false,
+   "nota": "Marca DI FORZA: no se comunica"
+  },
+  {
+   "id": "botin-febo",
+   "nombre": "Botín febo",
+   "marca": "Diforza",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTFB"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": false,
+   "nota": "Marca DI FORZA: no se comunica"
+  },
+  {
+   "id": "botin-frances",
+   "nombre": "Botín Frances",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTFRAOM"
+   ],
+   "colores": [
+    "blanco",
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 112,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "botin-frances-con-plantilla-de-acero",
+   "nombre": "Botin Frances con Plantilla de Acero",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTFRANOMPLA"
+   ],
+   "colores": [],
+   "talles": "35 al 48",
+   "visible": true
+  },
+  {
+   "id": "botin-funcional-frontier-marron",
+   "nombre": "Botin Funcional Frontier Marron",
+   "marca": "Funcional",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTFUNCFR"
+   ],
+   "colores": [
+    "marron"
+   ],
+   "talles": "36 al 47",
+   "visible": false,
+   "nota": "Marca FUNCIONAL: no se comunica",
+   "ventasEneJun2026": {
+    "unidades": 1,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "botin-funcional-mujer-capri",
+   "nombre": "Botin Funcional Mujer Capri",
+   "marca": "Funcional",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTFUNCMCAP"
+   ],
+   "colores": [
+    "beige",
+    "gris",
+    "negro"
+   ],
+   "talles": "34 al 42",
+   "visible": false,
+   "nota": "Marca FUNCIONAL: no se comunica"
+  },
+  {
+   "id": "botin-funcional-street",
+   "nombre": "Botin Funcional Street",
+   "marca": "Funcional",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTFUNCSTR"
+   ],
+   "colores": [
+    "camel",
+    "marron",
+    "negro",
+    "vison"
+   ],
+   "talles": "36 al 47",
+   "visible": false,
+   "nota": "Marca FUNCIONAL: no se comunica"
+  },
+  {
+   "id": "botin-grafa-70-con-puntera",
+   "nombre": "Botin GRAFA 70 con Puntera",
+   "marca": "Grafa 70",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTCPGRAFA70"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "36 al 46",
+   "visible": false,
+   "nota": "Marca GRAFA 70: no se comunica"
+  },
+  {
+   "id": "botin-homologado-febo",
+   "nombre": "Botin Homologado Febo",
+   "marca": "Diforza",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTFEBO"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": false,
+   "nota": "Marca DI FORZA: no se comunica",
+   "ventasEneJun2026": {
+    "unidades": 32,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "botin-ombu-gema-mujer-c-p-composite",
+   "nombre": "Botin Ombu Gema Mujer C/P Composite",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTOMGEMCP"
+   ],
+   "colores": [
+    "gris",
+    "negro"
+   ],
+   "talles": "35 al 41",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "botin-ombu-krypton",
+   "nombre": "Botin Ombu Krypton",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTOMKRYP"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "36 al 47",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 2,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "botin-ombu-ozono",
+   "nombre": "Botin Ombu Ozono",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTOMOZ"
+   ],
+   "colores": [
+    "blanco",
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 107,
+    "empresas": 8
+   }
+  },
+  {
+   "id": "botin-ombu-sneaker-c-p-composite",
+   "nombre": "Botin Ombu Sneaker C/P Composite",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTOMBSNEAKCP"
+   ],
+   "colores": [
+    "gris",
+    "negro"
+   ],
+   "talles": "36 al 47",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "botin-prusiano",
+   "nombre": "Botín Prusiano",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTPRUOM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "botin-skiway-art-3252",
+   "nombre": "Botin SkiWay ART 3252",
+   "marca": "Skiway",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTSWY"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "35 al 47",
+   "visible": false,
+   "nota": "Marca SKIWAY: no se comunica"
+  },
+  {
+   "id": "botin-voran-apolo-marron",
+   "nombre": "Botin Voran Apolo Marron",
+   "marca": "Voran",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTVORANAPO"
+   ],
+   "colores": [
+    "marron",
+    "negro"
+   ],
+   "talles": "36 al 47",
+   "visible": false,
+   "nota": "Marca VORAN: no se comunica"
+  },
+  {
+   "id": "botin-voran-aquiles",
+   "nombre": "Botin Voran Aquiles",
+   "marca": "Voran",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTVORANAQUIL"
+   ],
+   "colores": [
+    "blanco",
+    "negro"
+   ],
+   "talles": "36 al 47",
+   "visible": false,
+   "nota": "Marca VORAN: no se comunica"
+  },
+  {
+   "id": "botin-voran-argos-marron",
+   "nombre": "Botin Voran Argos Marron",
+   "marca": "Voran",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTVORANARG"
+   ],
+   "colores": [
+    "marron",
+    "negro"
+   ],
+   "talles": "36 al 47",
+   "visible": false,
+   "nota": "Marca VORAN: no se comunica"
+  },
+  {
+   "id": "botin-voran-cronos",
+   "nombre": "Botin Voran Cronos",
+   "marca": "Voran",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTVORANCRO"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "36 al 46",
+   "visible": false,
+   "nota": "Marca VORAN: no se comunica"
+  },
+  {
+   "id": "botin-voran-neptuno",
+   "nombre": "Botin Voran Neptuno",
+   "marca": "Voran",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTVORANNEPT"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "36 al 47",
+   "visible": false,
+   "nota": "Marca VORAN: no se comunica"
+  },
+  {
+   "id": "botiquin",
+   "nombre": "Botiquín",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "BOTIQUIN"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "botiquin-chapa-pintura-horneada-250x160x100",
+   "nombre": "Botiquin Chapa Pintura Horneada 250X160X100",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "BOTCHAPINHOR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "botiquin-metalico-n16-24-unidades",
+   "nombre": "Botiquin Metalico N°16 (24 Unidades)",
+   "marca": "Practy Botiquin",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "BOTMET24UN"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "botiquin-plastico-11-elementos-13x8x7",
+   "nombre": "Botiquin Plastico 11 Elementos 13X8X7",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "BOTPLAS11ELEM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "botiquin-plastico-32-elementos",
+   "nombre": "Botiquin Plastico 32 Elementos",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "BOTPLAS32EL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "botiquin-plastico-n1-10-unidades",
+   "nombre": "Botiquin Plastico N°1 (10 Unidades)",
+   "marca": "Practy Botiquin",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "BOTPLAS10U"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "botiquin-plastico-n5-20-unidades",
+   "nombre": "Botiquin Plastico N°5 (20 Unidades)",
+   "marca": "Practy Botiquin",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "BOTPLAS20U"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "buzo-friza",
+   "nombre": "Buzo friza",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "buzo",
+   "codigosERP": [
+    "BUFRDIF"
+   ],
+   "colores": [
+    "gris",
+    "verde",
+    "azul-marino",
+    "beige",
+    "blanco",
+    "bordo",
+    "celeste",
+    "gris-melange",
+    "gris-topo",
+    "naranja",
+    "negro",
+    "verde-benetton",
+    "verde-ingles",
+    "verde-oliva"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 643,
+    "empresas": 26
+   }
+  },
+  {
+   "id": "buzo-friza-azul",
+   "nombre": "Buzo Friza Azul",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "buzo",
+   "codigosERP": [
+    "BUZFRIAZUL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "buzo-friza-bordo",
+   "nombre": "Buzo Friza Bordo",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "buzo",
+   "codigosERP": [
+    "BUZFRIBOR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "buzo-friza-celeste",
+   "nombre": "Buzo Friza Celeste",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "buzo",
+   "codigosERP": [
+    "BUZFRICEL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "buzo-friza-eco",
+   "nombre": "Buzo friza ECO",
+   "marca": "Beato",
+   "linea": "indumentaria",
+   "subcategoria": "buzo",
+   "codigosERP": [
+    "BUZOECO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Línea económica (Beato)"
+  },
+  {
+   "id": "buzo-friza-gris-topo",
+   "nombre": "Buzo Friza Gris Topo",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "buzo",
+   "codigosERP": [
+    "BUZFRIGRIST"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "buzo-friza-negro",
+   "nombre": "Buzo Friza Negro",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "buzo",
+   "codigosERP": [
+    "BUZFRINEG"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "buzo-polar-1-2-cierre-diforza",
+   "nombre": "Buzo polar 1/2 cierre Diforza",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "buzo",
+   "codigosERP": [
+    "BUPOLDIF"
+   ],
+   "colores": [
+    "azul-marino",
+    "negro",
+    "verde-benetton",
+    "verde-ingles",
+    "verde-oliva",
+    "naranja"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1515,
+    "empresas": 18
+   }
+  },
+  {
+   "id": "buzo-polar-combinado",
+   "nombre": "Buzo Polar Combinado",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "buzo",
+   "codigosERP": [
+    "BUZPOLCMB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "buzo-polar-eco",
+   "nombre": "Buzo polar ECO",
+   "marca": "Beato",
+   "linea": "indumentaria",
+   "subcategoria": "buzo",
+   "codigosERP": [
+    "POLARECO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Línea económica (Beato)"
+  },
+  {
+   "id": "cadena-de-25mts",
+   "nombre": "Cadena de 25mts",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CADE25"
+   ],
+   "colores": [
+    "naranja"
+   ],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cadena-de-senalizacion-vial",
+   "nombre": "Cadena de Señalizacion Vial",
+   "marca": "Lube",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CADSEÑVI"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cadena-plastica-rojo-blanco-x-25-mts",
+   "nombre": "Cadena Plastica Rojo/Blanco X 25 Mts.",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CADENAMIX"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "camisa-clasica-diforza",
+   "nombre": "Camisa clásica Diforza",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "camisa",
+   "codigosERP": [
+    "CAMCLDIAZ"
+   ],
+   "colores": [
+    "azul-marino",
+    "azulino",
+    "beige",
+    "blanco",
+    "celeste",
+    "gris",
+    "gris-topo",
+    "jean",
+    "naranja",
+    "negro",
+    "verde-benetton",
+    "verde-ingles",
+    "verde-oliva",
+    "verde"
+   ],
+   "talles": "36 al 68",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 3278,
+    "empresas": 53
+   }
+  },
+  {
+   "id": "camisa-clasica-eco",
+   "nombre": "Camisa clásica ECO",
+   "marca": "Beato",
+   "linea": "indumentaria",
+   "subcategoria": "camisa",
+   "codigosERP": [
+    "CAMCLECO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Línea económica (Beato)"
+  },
+  {
+   "id": "camisa-clasica-ombu",
+   "nombre": "Camisa clásica Ombu",
+   "marca": "Ombú",
+   "linea": "indumentaria",
+   "subcategoria": "camisa",
+   "codigosERP": [
+    "CAMCLOM"
+   ],
+   "colores": [
+    "azul-marino",
+    "azulino",
+    "beige",
+    "blanco",
+    "verde"
+   ],
+   "talles": "36 al 64",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 58,
+    "empresas": 5
+   }
+  },
+  {
+   "id": "camisa-clasica-ombu-grafil",
+   "nombre": "Camisa Clasica Ombu Grafil",
+   "marca": "Ombú",
+   "linea": "indumentaria",
+   "subcategoria": "camisa",
+   "codigosERP": [
+    "CAMOMGRAF"
+   ],
+   "colores": [],
+   "talles": "36 al 60",
+   "visible": true
+  },
+  {
+   "id": "camisa-de-trabajo-pampero",
+   "nombre": "Camisa de trabajo Pampero",
+   "marca": "Pampero",
+   "linea": "indumentaria",
+   "subcategoria": "camisa",
+   "codigosERP": [
+    "CAMCLAPAM"
+   ],
+   "colores": [
+    "azul-marino",
+    "beige",
+    "negro",
+    "verde"
+   ],
+   "talles": "36 al 66",
+   "visible": true
+  },
+  {
+   "id": "camisa-ignifuga-nomex-6-oz",
+   "nombre": "Camisa Ignífuga Nomex 6 Oz",
+   "marca": "Prentex",
+   "linea": "indumentaria",
+   "subcategoria": "camisa",
+   "codigosERP": [
+    "CAMIG6OZ"
+   ],
+   "colores": [
+    "azul-marino",
+    "azul"
+   ],
+   "talles": "36 al 60",
+   "visible": true
+  },
+  {
+   "id": "camisolin-descartable",
+   "nombre": "Camisolin descartable",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "CAMDES"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "campera-aviador",
+   "nombre": "Campera Aviador",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [
+    "CAMPAVIADOR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "campera-congelados",
+   "nombre": "Campera Congelados",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [
+    "CAMPCONG"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 6,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "campera-descarne-soldador",
+   "nombre": "Campera descarne soldador",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "CAMDESCAR"
+   ],
+   "colores": [
+    "amarillo"
+   ],
+   "talles": "L al 4XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 26,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "campera-friza-diforza",
+   "nombre": "CAMPERA FRIZA DIFORZA",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [
+    "CAMP.FRIZA"
+   ],
+   "colores": [
+    "gris-topo"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true
+  },
+  {
+   "id": "campera-ignifuga-nomex-c-reflectivo",
+   "nombre": "Campera ignifuga Nomex c/reflectivo",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [
+    "CAMPIGN"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Ignífugo"
+  },
+  {
+   "id": "campera-ignifugo-nomex-c-reflec-5-cm",
+   "nombre": "Campera Ignífugo Nomex c/ Reflec 5 Cm",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [
+    "CAMIGCR"
+   ],
+   "colores": [
+    "azulino"
+   ],
+   "talles": "S al 4XL",
+   "visible": true,
+   "nota": "Ignífugo"
+  },
+  {
+   "id": "campera-polar-diforza",
+   "nombre": "Campera Polar Diforza",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [
+    "CAMPOLDIF"
+   ],
+   "colores": [
+    "azul",
+    "negro",
+    "verde-ingles"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 284,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "campera-rompeviento-con-polar",
+   "nombre": "Campera rompeviento con polar",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [
+    "CAMROMPOL"
+   ],
+   "colores": [
+    "azul-marino"
+   ],
+   "talles": "S al 4XL",
+   "visible": true
+  },
+  {
+   "id": "campera-silver-diforza-verde-ingles",
+   "nombre": "Campera Silver Diforza Verde Ingles",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [
+    "CAMPSILV"
+   ],
+   "colores": [
+    "verde-ingles"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true
+  },
+  {
+   "id": "campera-soft-diforza",
+   "nombre": "Campera Soft Diforza",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [
+    "CAMPSOF"
+   ],
+   "colores": [],
+   "talles": "XS al 6XL",
+   "visible": true
+  },
+  {
+   "id": "campera-softshell-negra",
+   "nombre": "Campera Softshell Negra",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [
+    "CAMPSOFSH"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "S al 4XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 3,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "campera-trucker",
+   "nombre": "Campera trucker",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [
+    "CAMTRUDIF"
+   ],
+   "colores": [
+    "gris",
+    "verde",
+    "azul-marino",
+    "blanco",
+    "naranja",
+    "negro",
+    "verde-benetton",
+    "verde-ingles",
+    "verde-manzana"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 2484,
+    "empresas": 34
+   }
+  },
+  {
+   "id": "campera-trucker-eco",
+   "nombre": "Campera Trucker ECO",
+   "marca": "Beato",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [
+    "CAMPTRUECO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Línea económica (Beato)"
+  },
+  {
+   "id": "capa-de-lluvia",
+   "nombre": "Capa de lluvia",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "traje-de-lluvia",
+   "codigosERP": [
+    "CALLU"
+   ],
+   "colores": [
+    "amarillo",
+    "azul-marino"
+   ],
+   "talles": "S al 5XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 3422,
+    "empresas": 34
+   }
+  },
+  {
+   "id": "capa-de-lluvia-ombu",
+   "nombre": "Capa de lluvia OMBU",
+   "marca": "Ombú",
+   "linea": "indumentaria",
+   "subcategoria": "traje-de-lluvia",
+   "codigosERP": [
+    "CAPLLUVOM",
+    "CAPLLUV"
+   ],
+   "colores": [
+    "amarillo"
+   ],
+   "talles": "L al 2XL",
+   "visible": true
+  },
+  {
+   "id": "careta-soldador-fravida-2550",
+   "nombre": "Careta soldador Fravida 2550",
+   "marca": "Fravida",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "CARSOLFR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "careta-soldador-fravida-2560",
+   "nombre": "Careta Soldador Fravida 2560",
+   "marca": "Fravida",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "CARSOLFRA2560"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cartel-50mts-cerrado-al-transito-corrugado-50x70",
+   "nombre": "Cartel 50mts cerrado al transito - corrugado 50x70",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CARCERRTRS"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cartel-corrugado-50x70",
+   "nombre": "Cartel corrugado 50x70",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CARCOR50X70"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cartel-de-piso-mojado-corrugado-50x70",
+   "nombre": "Cartel de piso mojado - corrugado 50x70",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CARPISMOJ"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cartel-obligacion-de-usar-proteccion-respiratoria",
+   "nombre": "Cartel Obligacion de usar proteccion respiratoria",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CAROBLPR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cartel-precaucion-hombres-trabajando",
+   "nombre": "Cartel precaución hombres trabajando",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CARTHOMTR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cartel-precaucion-maquinas-trabajando-corrugado-50x70",
+   "nombre": "Cartel precaución maquinas trabajando - corrugado 50x70",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CARMAQTRA"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cartel-prohibida-la-entrada-a-toda-persona-ajena-corrugado-50x70",
+   "nombre": "Cartel prohibida la entrada a toda persona ajena - corrugado 50x70",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CARTPRH"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "carteleria",
+   "nombre": "Cartelería",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CART"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "casco-3m-h700",
+   "nombre": "Casco 3M H700",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "CASC3M"
+   ],
+   "colores": [
+    "amarillo",
+    "azul-marino",
+    "blanco",
+    "gris",
+    "naranja",
+    "rojo",
+    "verde"
+   ],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "casco-milenium",
+   "nombre": "Casco Milenium",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "CASMILIB"
+   ],
+   "colores": [
+    "amarillo",
+    "azul-marino",
+    "blanco",
+    "gris",
+    "marron",
+    "naranja",
+    "negro",
+    "rojo",
+    "verde"
+   ],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 2970,
+    "empresas": 45
+   }
+  },
+  {
+   "id": "casco-milenium-class-fb-s-v-slot",
+   "nombre": "Casco Milenium Class FB S/V Slot",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "CASLIBFB"
+   ],
+   "colores": [
+    "amarillo",
+    "azulino",
+    "blanco",
+    "rojo"
+   ],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 10,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "casquete-c-foam-p-gorra",
+   "nombre": "Casquete C/Foam p/Gorra",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "CASQPGOR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Gorra con casquete (bump cap)",
+   "ventasEneJun2026": {
+    "unidades": 30,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "chaleco-geologo",
+   "nombre": "Chaleco geologo",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "chaleco",
+   "codigosERP": [
+    "CHGEO"
+   ],
+   "colores": [
+    "naranja"
+   ],
+   "talles": "S al 3XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 152,
+    "empresas": 6
+   }
+  },
+  {
+   "id": "chaleco-polar-diforza",
+   "nombre": "Chaleco polar Diforza",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "chaleco",
+   "codigosERP": [
+    "CHAPOLDIF"
+   ],
+   "colores": [
+    "azul-marino"
+   ],
+   "talles": "S al 3XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 429,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "chaleco-reflectivo",
+   "nombre": "Chaleco reflectivo",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "chaleco",
+   "codigosERP": [
+    "CHALREF"
+   ],
+   "colores": [
+    "amarillo",
+    "naranja"
+   ],
+   "talles": null,
+   "visible": true,
+   "tambienEn": [
+    "senalizacion"
+   ],
+   "ventasEneJun2026": {
+    "unidades": 6379,
+    "empresas": 33
+   }
+  },
+  {
+   "id": "chaleco-reflectivo-especial-con-cierre-y-bolsillo",
+   "nombre": "Chaleco Reflectivo Especial Con Cierre y Bolsillo",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "chaleco",
+   "codigosERP": [
+    "CHALECOREFLEC",
+    "CHALREFLEC"
+   ],
+   "colores": [
+    "amarillo"
+   ],
+   "talles": null,
+   "visible": true,
+   "tambienEn": [
+    "senalizacion"
+   ],
+   "ventasEneJun2026": {
+    "unidades": 10,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "chaleco-trucker",
+   "nombre": "Chaleco trucker",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "chaleco",
+   "codigosERP": [
+    "CHATRUDIF"
+   ],
+   "colores": [
+    "blanco",
+    "azul-marino"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 370,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "chaqueta-de-ambo",
+   "nombre": "Chaqueta de ambo",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "CHAQAMBO"
+   ],
+   "colores": [
+    "azul-marino",
+    "blanco",
+    "negro",
+    "verde"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true
+  },
+  {
+   "id": "chaqueta-diforza",
+   "nombre": "Chaqueta Diforza",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [
+    "CHAQ"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "chomba-eco",
+   "nombre": "Chomba ECO",
+   "marca": "Beato",
+   "linea": "indumentaria",
+   "subcategoria": "chomba",
+   "codigosERP": [
+    "CHOMECO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Línea económica (Beato)"
+  },
+  {
+   "id": "chomba-azul",
+   "nombre": "Chomba Azul",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "chomba",
+   "codigosERP": [
+    "CHOMAZUL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "chomba-bordo",
+   "nombre": "Chomba Bordo",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "chomba",
+   "codigosERP": [
+    "COMBBORD"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "chomba-celeste",
+   "nombre": "Chomba Celeste",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "chomba",
+   "codigosERP": [
+    "CHOMCEL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "chomba-frigorifica-beige",
+   "nombre": "Chomba Frigorifica Beige",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "chomba",
+   "codigosERP": [
+    "CHOMBFRIG"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "chomba-gris-melange",
+   "nombre": "Chomba Gris Melange",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "chomba",
+   "codigosERP": [
+    "CHOMGRIS"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "chomba-gris-topo",
+   "nombre": "Chomba Gris Topo",
+   "marca": "3M",
+   "linea": "indumentaria",
+   "subcategoria": "chomba",
+   "codigosERP": [
+    "CHOMGRISTOP"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "chomba-negra",
+   "nombre": "Chomba Negra",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "chomba",
+   "codigosERP": [
+    "8CHOMNEG"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "chomba-pique",
+   "nombre": "Chomba pique",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "chomba",
+   "codigosERP": [
+    "CHDIAZ",
+    "9CHDIAZ"
+   ],
+   "colores": [
+    "naranja",
+    "verde",
+    "azul-marino",
+    "beige",
+    "blanco",
+    "bordo",
+    "celeste",
+    "gris-melange",
+    "gris-topo",
+    "negro",
+    "verde-benetton",
+    "verde-ingles",
+    "verde-oliva"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 2702,
+    "empresas": 23
+   }
+  },
+  {
+   "id": "chomba-pique-diforza-azul-francia",
+   "nombre": "Chomba Pique Diforza Azul Francia",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "chomba",
+   "codigosERP": [
+    "CHOMBDIFAZFR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "chomba-pique-diforza-m-l",
+   "nombre": "Chomba Pique Diforza M/L",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "chomba",
+   "codigosERP": [
+    "CHOMBM/L"
+   ],
+   "colores": [
+    "azul-marino",
+    "gris-melange"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true
+  },
+  {
+   "id": "cinta-de-precaucion-amarilla-y-negra-x-200mts",
+   "nombre": "Cinta de Precaución Amarilla y Negra x 200Mts",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CINPRECA"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cinta-peligro-x-100-mts",
+   "nombre": "Cinta Peligro x 100 Mts",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CINPEL100"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cinta-peligro-x-200-mts",
+   "nombre": "Cinta Peligro x 200 Mts",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CINPELI200"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1617,
+    "empresas": 15
+   }
+  },
+  {
+   "id": "cinta-reflectiva-roja",
+   "nombre": "Cinta Reflectiva Roja",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CINRERJ"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cinta-reflectiva-blanca",
+   "nombre": "Cinta Reflectiva Blanca",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CINRBL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cinta-reflectiva-cebrada-blanco-y-roja",
+   "nombre": "Cinta Reflectiva Cebrada Blanco y Roja",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CINRECEBBYR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cinturon-linero-hercules-con-porta-herramientas",
+   "nombre": "Cinturon Linero Hercules con Porta Herramientas",
+   "marca": "X-Urban",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "30350020"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cinturon-minero-3-puntos-de-enganche-hebilla-regulable",
+   "nombre": "Cinturon Minero 3 Puntos de Enganche Hebilla Regulable",
+   "marca": "X-Urban",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "30350023"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cofia-de-tela-azul",
+   "nombre": "Cofia De Tela Azul",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "COFiATELA."
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1976,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "cofia-de-tela-blanca",
+   "nombre": "Cofia De Tela Blanca",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "COFIATELABL."
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 995,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "cofia-de-tela-gris",
+   "nombre": "Cofia De Tela Gris",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "COFIATELAGR."
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 997,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "cofia-descartable",
+   "nombre": "Cofia descartable",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "COFIA"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 300,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "cofia-hongo-de-tela",
+   "nombre": "Cofia Hongo de Tela",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "COFIATELA"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cofia-tablita-blanca",
+   "nombre": "Cofia Tablita Blanca",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "COTABL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cola-2mts-regulable-1-mosqueton-18mm-y-55mm",
+   "nombre": "Cola 2Mts regulable, 1 mosqueton 18mm y 55mm",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "WXECV1020"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cola-1-5-mm-con-amort-y-mosq18mm-y-55mm",
+   "nombre": "Cola 1.5 MM con amort y mosq18mm y 55mm",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY10475E"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 2,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "cola-de-amarre-1-5-mts-1-mosq-18mm-55",
+   "nombre": "Cola de Amarre 1.5 Mts 1 Mosq 18mm/55",
+   "marca": "Sky",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY10471ER"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 8,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "cola-de-amarre-2-mts-c-amort-y-mosq-18x55-mm",
+   "nombre": "Cola de Amarre 2 Mts C/Amort y Mosq 18X55 mm",
+   "marca": "Sky",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY10475ER"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 28,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "cola-de-amarre-anticaida-doble-c-mosq-de-18-y-dos-de-55",
+   "nombre": "Cola de amarre anticaída doble c/ mosq de 18 y dos de 55",
+   "marca": "Sky",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY10479P"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 7,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "cola-elastizada-1-5-amortiguador-mosqueton-18mm-y-55mm",
+   "nombre": "Cola elastizada 1.5 amortiguador, mosqueton 18mm y 55mm",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "WXECV1020EA"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cola-en-1-5mts-elast-y-amorti-18mm-55cm",
+   "nombre": "Cola en 1.5Mts Elast y Amorti 18MM-55CM",
+   "marca": "Sky",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY10477E"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 43,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "cola-en-2mts-cinta-pos-18mm",
+   "nombre": "Cola en 2Mts Cinta Pos. 18MM",
+   "marca": "Sky",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY10464ER"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 21,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "cola-en-y-dos-mosquetones-de-55-y-1-de-18",
+   "nombre": "Cola en Y dos mosquetones de 55 y 1 de 18",
+   "marca": "Sky",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY10479E"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 33,
+    "empresas": 4
+   }
+  },
+  {
+   "id": "conector-anclaje-1mts",
+   "nombre": "Conector Anclaje 1Mts",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY10435"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "conector-anclaje-2mts",
+   "nombre": "Conector Anclaje 2Mts",
+   "marca": "Eslingar",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY10436"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cono-autopista-2pie-120-cm-2401-2p",
+   "nombre": "Cono Autopista 2Pie 120 Cm 2401-2P",
+   "marca": "Conoflex",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CONAUTOPIST"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cono-ciudad-semiflexible-con-base-50-cm-2051-1r",
+   "nombre": "Cono Ciudad Semiflexible con Base 50 Cm 2051-1R",
+   "marca": "Conoflex",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CONCIUSEMFLEX"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cono-con-base-de-goma-1m-ucu0003pv",
+   "nombre": "Cono con base de goma 1m UCU0003PV",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CON1M"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 21,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "cono-flexible-50-cm-con-reflectivos",
+   "nombre": "Cono Flexible 50 cm Con Reflectivos",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CON50REF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cono-flexible-75-cm-con-reflectivos-ucu0002pv",
+   "nombre": "Cono Flexible 75 cm Con Reflectivos UCU0002PV",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CON75REF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 288,
+    "empresas": 8
+   }
+  },
+  {
+   "id": "cono-king-cone-semiflex-70-cm-1570lsf-2r",
+   "nombre": "Cono King Cone Semiflex 70 Cm 1570LSF-2R",
+   "marca": "Conoflex",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CONMODKICON"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 180,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "cono-obrador-classic-2pie-120-cm-2301-classic-2r",
+   "nombre": "Cono Obrador Classic 2Pie 120 Cm 2301-CLASSIC -2R",
+   "marca": "Conoflex",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CONOBRADCLA"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cono-rigido-100-cm-2-tiras-reflectivas-base-negra",
+   "nombre": "Cono Rigido 100 Cm 2 Tiras Reflectivas Base Negra",
+   "marca": "Lube",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CONRIG100CM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 2,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "cono-rigido-75-cm-1-tira-reflectiva-negra",
+   "nombre": "Cono Rigido 75 Cm 1 Tira Reflectiva Negra",
+   "marca": "Lube",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CONRIG75"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cono-rutero-light-1pie-90-cm-1200l-2r-na",
+   "nombre": "Cono Rutero Light 1Pie 90 Cm 1200L-2R NA",
+   "marca": "Conoflex",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CONRUTLIG"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cono-vencedor-2pie-120-cm-2300-2r",
+   "nombre": "Cono Vencedor 2Pie 120 Cm 2300-2R",
+   "marca": "Conoflex",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CONVENCED"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cono-vencedor-light-2pie-120-cm-2300l-2r",
+   "nombre": "Cono Vencedor Light 2Pie 120 Cm 2300L-2R",
+   "marca": "Conoflex",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "CONVENLIGHT"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 42,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "cristal-rectangular-2mm-incoloro",
+   "nombre": "Cristal Rectangular 2mm Incoloro",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "CRISTRECTIN"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Repuesto de máscara",
+   "ventasEneJun2026": {
+    "unidades": 130,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "cristal-rectangular-hb-oscuro",
+   "nombre": "Cristal Rectangular HB oscuro",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "CRISRECT"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Repuesto de máscara"
+  },
+  {
+   "id": "cristal-rectangular-hb-tono-10",
+   "nombre": "Cristal Rectangular HB Tono 10",
+   "marca": "Paimun",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "CRISTRECTHB10"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Repuesto de máscara"
+  },
+  {
+   "id": "cristal-rectangular-hb-tono-6",
+   "nombre": "Cristal Rectangular HB Tono 6",
+   "marca": "Paimun",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "CRISTRECTHB6"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Repuesto de máscara"
+  },
+  {
+   "id": "cubre-barba-descartable",
+   "nombre": "Cubre Barba Descartable",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "CUBARDES"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cubre-calzado-descartable",
+   "nombre": "Cubre calzado descartable",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "CUBCALDES"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "cuello-polar",
+   "nombre": "Cuello Polar",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "ropa-primera-piel",
+   "codigosERP": [
+    "CUEPOL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "delantal-descarne-reforzado-60-x-90",
+   "nombre": "Delantal Descarne Reforzado 60 X 90",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "DELANTADECREF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 8,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "delantal-rayado-negro",
+   "nombre": "Delantal Rayado Negro",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "delantales",
+   "codigosERP": [
+    "DELRAY"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "delantal-aluminizado-kevlar-0-60-x-0-90",
+   "nombre": "Delantal Aluminizado Kevlar 0.60 x 0.90",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "delantales",
+   "codigosERP": [
+    "DELALUMN"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "delantal-de-jean",
+   "nombre": "Delantal de Jean",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "delantales",
+   "codigosERP": [
+    "DELJEAN"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "delantal-de-pvc-blanco-c-refuerzo-0-90-x-1-20",
+   "nombre": "Delantal de Pvc Blanco c/Refuerzo 0.90 x 1.20",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "delantales",
+   "codigosERP": [
+    "DELPVCBL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 119,
+    "empresas": 7
+   }
+  },
+  {
+   "id": "delantal-de-pvc-verde",
+   "nombre": "Delantal de pvc verde",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "delantales",
+   "codigosERP": [
+    "DELPVCBLN"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 70,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "delantal-descarne-simple-60-x-90",
+   "nombre": "Delantal Descarne Simple 60 x 90",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "DELANTADEC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 58,
+    "empresas": 8
+   }
+  },
+  {
+   "id": "delantal-goma-plomo-60x90",
+   "nombre": "Delantal Goma Plomo 60X90",
+   "marca": "De Pascale",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "DELDECGPL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 29,
+    "empresas": 6
+   }
+  },
+  {
+   "id": "delantal-grafa-cocinero-blanco",
+   "nombre": "Delantal Grafa Cocinero Blanco",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "DELGRAFBL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "delineador-desmontable-75-cm",
+   "nombre": "Delineador Desmontable 75 cm",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "DELDESM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "dispositivo-antitrauma",
+   "nombre": "Dispositivo Antitrauma",
+   "marca": "Topsafe",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY10441"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 20,
+    "empresas": 4
+   }
+  },
+  {
+   "id": "econo-semiflex-c-base-2pie-70-cm-2071le-2r",
+   "nombre": "Econo semiflex C/Base 2Pie 70 Cm 2071LE-2R",
+   "marca": "Conoflex",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "ECONSEMFLEX"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 4,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "economax-1pie-100-cm-2081-2r-na",
+   "nombre": "Economax 1Pie 100 Cm 2081-2R NA",
+   "marca": "Conoflex",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "ECOMAX"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "equipo-primera-piel",
+   "nombre": "Equipo Primera Piel",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "ropa-primera-piel",
+   "codigosERP": [
+    "EQUIPRPIEL"
+   ],
+   "colores": [],
+   "talles": "1 al 3",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 149,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "equipo-retractil-xr-10-en-cable-de-acero-x-10-mts",
+   "nombre": "Equipo Retractil XR-10 en Cable de Acero x 10 Mts",
+   "marca": "X-Urban",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "30301010"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "eslinga-portaherramientas-ts0200",
+   "nombre": "Eslinga Portaherramientas TS0200",
+   "marca": "Topsafe",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "ESLPORHERR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "estacion-lavaojo-portatil",
+   "nombre": "Estacion Lavaojo Portatil",
+   "marca": "Paimun",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "ESTACIONLAVOJ"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "faja-lumbar-2xl-ombu",
+   "nombre": "Faja lumbar 2XL Ombu",
+   "marca": "Ombú",
+   "linea": "epp",
+   "subcategoria": "ergonomia",
+   "codigosERP": [
+    "FAJLUOMB"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "S al 2XL",
+   "visible": true
+  },
+  {
+   "id": "faja-lumbar-diforza",
+   "nombre": "Faja lumbar Diforza",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "ergonomia",
+   "codigosERP": [
+    "FAJLUDIF"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "S al 3XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 676,
+    "empresas": 35
+   }
+  },
+  {
+   "id": "filtro-2091-p100-3m",
+   "nombre": "Filtro 2091 P100 3M",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "FIL2091/P100"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "filtro-2096-p100-3m",
+   "nombre": "Filtro 2096 P100 3M",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "FIL2096/P100"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "filtro-2097-p100-partic-y-vo",
+   "nombre": "Filtro 2097 P100 Partic. y VO",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "FI2097P100"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "filtro-6001-v-o",
+   "nombre": "Filtro 6001 V/O",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "FI6001VO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "filtro-6004-amoniaco-y-metilamina",
+   "nombre": "Filtro 6004 amoniaco y Metilamina",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "FI6004"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "filtro-6006-multigas-3m",
+   "nombre": "Filtro 6006 Multigas 3M",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "F6006"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "filtro-fravida-v-o-5300-20",
+   "nombre": "Filtro Fravida V/O ( 5300.20 )",
+   "marca": "Fravida",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "FILVOFRA"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "filtro-particulas-niosh-p95",
+   "nombre": "Filtro particulas niosh P95",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "FILTPAR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "filtro-segurind-a-b",
+   "nombre": "Filtro Segurind A/B",
+   "marca": "Segurid A",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "FILTSEG"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "g15-algodon-100",
+   "nombre": "G15 Algodon 100%",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "G15ALG."
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "gabinete-estacion-lavaojo-2-botellas-sin-solucion",
+   "nombre": "Gabinete Estacion Lavaojo 2 Botellas (Sin Solucion)",
+   "marca": "Avlis",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "GAB.LABAOJOX2bot"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "gorra-6-gajos-algodon-poliester",
+   "nombre": "Gorra 6 Gajos Algodón/ Poliester",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "gorras",
+   "codigosERP": [
+    "GOR6GAJ"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "gorra-con-casquete-plastico-azul",
+   "nombre": "Gorra con Casquete plastico Azul",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "CASQLIB"
+   ],
+   "colores": [
+    "azul-marino",
+    "beige",
+    "blanco",
+    "negro",
+    "rojo"
+   ],
+   "talles": null,
+   "visible": true,
+   "nota": "Gorra con casquete (bump cap)",
+   "ventasEneJun2026": {
+    "unidades": 15,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "gorra-de-5-gajos",
+   "nombre": "Gorra de 5 gajos",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "gorras",
+   "codigosERP": [
+    "GORRA"
+   ],
+   "colores": [
+    "blanco"
+   ],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 414,
+    "empresas": 9
+   }
+  },
+  {
+   "id": "gorra-de-5-gajos-verde-ingles",
+   "nombre": "Gorra de 5 gajos verde ingles",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "gorras",
+   "codigosERP": [
+    "gorra ver"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "gorra-tapa-nuca",
+   "nombre": "Gorra Tapa Nuca",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "gorras",
+   "codigosERP": [
+    "GOTAPNUC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "gorro-tipo-rocky",
+   "nombre": "Gorro Tipo Rocky",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "gorras",
+   "codigosERP": [
+    "GOTIROCK"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 103,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-descarne",
+   "nombre": "Guante Descarne",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUADES"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-descarne-soldador-rojo",
+   "nombre": "Guante Descarne Soldador rojo",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUADESSOL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "tambienEn": [
+    "proteccion-soldadura"
+   ],
+   "ventasEneJun2026": {
+    "unidades": 128,
+    "empresas": 9
+   }
+  },
+  {
+   "id": "guante-moteado-pesado-gris",
+   "nombre": "Guante Moteado Pesado Gris",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUAMOTGR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-acrilo-nitrilo",
+   "nombre": "Guante Acrilo Nitrilo",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUAACR"
+   ],
+   "colores": [
+    "verde"
+   ],
+   "talles": "7 al 11",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 72,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-acrilo-nitrilo-ws-15mil",
+   "nombre": "Guante Acrilo Nitrilo WS 15mil",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUACRINITWS15MIL"
+   ],
+   "colores": [],
+   "talles": "7 al 11",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1218,
+    "empresas": 10
+   }
+  },
+  {
+   "id": "guante-anti-impacto",
+   "nombre": "Guante Anti Impacto",
+   "marca": "De Pascale",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUAIMPAC"
+   ],
+   "colores": [],
+   "talles": "8 al 11",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 85,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-anticorte",
+   "nombre": "Guante anticorte",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUADINE"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1099,
+    "empresas": 6
+   }
+  },
+  {
+   "id": "guante-anticorte-ap1306-ws",
+   "nombre": "Guante anticorte AP1306 WS",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANTAP1306WS",
+    "9GUANTAPI306WS"
+   ],
+   "colores": [],
+   "talles": "7 al 10",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 200,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-anticorte-bano-nit-anti-impacto-tx2000",
+   "nombre": "Guante Anticorte baño nit Anti-Impacto TX2000",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANTANTTX2000"
+   ],
+   "colores": [],
+   "talles": "8 al 11",
+   "visible": true
+  },
+  {
+   "id": "guante-anticorte-ws-h2101",
+   "nombre": "Guante Anticorte WS H2101",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANTWSH2101"
+   ],
+   "colores": [],
+   "talles": "8 al 11",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1309,
+    "empresas": 6
+   }
+  },
+  {
+   "id": "guante-anticorte-ws-h5101",
+   "nombre": "Guante Anticorte WS H5101",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANTWSH5101"
+   ],
+   "colores": [],
+   "talles": "8 al 9",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 9,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-bano-compl-puno-teijdo-1615-ws",
+   "nombre": "Guante Baño compl Puño Teijdo 1615 WS",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANPT1615WS"
+   ],
+   "colores": [],
+   "talles": "8 al 11",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 273,
+    "empresas": 4
+   }
+  },
+  {
+   "id": "guante-cobertor-dielec-vaqueta-tipo-north",
+   "nombre": "Guante cobertor dielec Vaqueta Tipo North",
+   "marca": "De Pascale",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUCOVQTN"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 40,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-de-latex-c-polvo",
+   "nombre": "Guante de Latex C/Polvo",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUACPTXTL",
+    "GUACPTXTM",
+    "GUACPTXTXL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-de-latex-s-polvo",
+   "nombre": "Guante de Látex S/Polvo",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUALATXTL",
+    "GUALATXTM",
+    "GUALATXTS",
+    "GUALATXTXL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 11,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-de-nitrilo-azul",
+   "nombre": "Guante de nitrilo Azul",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANIAZTL",
+    "GUANIAZTM",
+    "GUANIAZTS",
+    "GUANIAZTXL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 7,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "guante-de-nitrilo-negro",
+   "nombre": "Guante de Nitrilo Negro",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANINETL",
+    "GUANINETM",
+    "GUANINETS",
+    "GUNINETXL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 44,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-de-nitrilo-violeta",
+   "nombre": "Guante de Nitrilo Violeta",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANIVITL",
+    "GUANIVITM",
+    "GUANIVITS",
+    "GUANIVITXL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-descarne-puno-corto",
+   "nombre": "Guante Descarne Puño Corto",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUADESPCO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1163,
+    "empresas": 11
+   }
+  },
+  {
+   "id": "guante-descarne-puno-largo",
+   "nombre": "Guante Descarne Puño Largo",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUADESPLG"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-descarne-ref-pistola-puno-corto",
+   "nombre": "Guante Descarne Ref Pistola Puño Corto",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUDESPIPUNC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-dielectrico-glovex-1000v-clase-0",
+   "nombre": "Guante Dielectrico Glovex 1000V ( Clase 0 )",
+   "marca": "Glovex",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUADIE0"
+   ],
+   "colores": [],
+   "talles": "9 al 11",
+   "visible": true
+  },
+  {
+   "id": "guante-dielectrico-glovex-20000v-clase2",
+   "nombre": "Guante Dielectrico Glovex 20000V ( Clase2 )",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUADIE02"
+   ],
+   "colores": [],
+   "talles": "9 al 11",
+   "visible": true
+  },
+  {
+   "id": "guante-dielectrico-glovex-2500v-clase-00",
+   "nombre": "Guante Dielectrico Glovex 2500V (Clase 00)",
+   "marca": "Glovex",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUADIEL00",
+    "GUADIE00"
+   ],
+   "colores": [],
+   "talles": "9 al 11",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 100,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "guante-g13-hppe-bano-total-dob-nitrilo",
+   "nombre": "Guante G13 HPPE baño total dob nitrilo",
+   "marca": "Gamisol",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANG13HPPE"
+   ],
+   "colores": [],
+   "talles": "9 al 10",
+   "visible": true
+  },
+  {
+   "id": "guante-g7-aplique-de-descarne-gm-7101",
+   "nombre": "Guante G7 aplique de Descarne GM 7101",
+   "marca": "Gamisol",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUG7APDESGM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-g7-aplique-de-descarne-simple-7101-gamisol",
+   "nombre": "Guante G7 Aplique de Descarne Simple 7101 Gamisol",
+   "marca": "Gamisol",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANG7APLDESC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-g7-kevlar-hibrida",
+   "nombre": "Guante G7 Kevlar Hibrida",
+   "marca": "Prentex",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANKVHIBT"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1740,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-g8-arps-moteado-doble-2-caras-10000a52",
+   "nombre": "Guante G8 ARPS Moteado Doble 2 caras 10000a52",
+   "marca": "Prentex",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANG8MOT2C"
+   ],
+   "colores": [],
+   "talles": "8",
+   "visible": true
+  },
+  {
+   "id": "guante-g8-kevlar-acero-moteado-2-caras-en-pvc",
+   "nombre": "Guante G8 Kevlar acero Moteado 2 caras en PVC",
+   "marca": "Prentex",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANG8KEVMOT"
+   ],
+   "colores": [],
+   "talles": "8 al 9",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 240,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-harpon-mapa",
+   "nombre": "Guante Harpon Mapa",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUAHART10",
+    "GUAHART9"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-latex-industrial-negro-ws",
+   "nombre": "Guante Latex Industrial Negro WS",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUALATINDWS"
+   ],
+   "colores": [],
+   "talles": "8 al 10",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 230,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "guante-latex-negro-industrial",
+   "nombre": "Guante Látex Negro Industrial",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUALATNE"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-latex-uso-domestico",
+   "nombre": "Guante Látex Uso Domestico",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUALATDO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-mapa-559-anti-corte",
+   "nombre": "Guante Mapa 559 Anti Corte",
+   "marca": "Mapa",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "MAPA559"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-mapa-duo-mix",
+   "nombre": "Guante Mapa Duo Mix",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUMAPADM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-mapa-technimix-415",
+   "nombre": "Guante Mapa Technimix 415",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUAMAPA415"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-mondongo-puno-de-lona-l1705-ws",
+   "nombre": "Guante Mondongo Puño de Lona L1705 WS",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUMONDPLWST10",
+    "GUMONPLWST8",
+    "GUMONDPLWST9"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-moteado-blanco-1100fer-gamisol",
+   "nombre": "Guante Moteado Blanco 1100FER Gamisol",
+   "marca": "Gamisol",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUAMOTGA"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 22511,
+    "empresas": 40
+   }
+  },
+  {
+   "id": "guante-nit-b-comp-azul-p-lona-antishock-dps11255x",
+   "nombre": "Guante Nit B Comp Azul P.Lona Antishock DPS11255X",
+   "marca": "De Pascale",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GULOANTIS11255X"
+   ],
+   "colores": [],
+   "talles": "10",
+   "visible": true
+  },
+  {
+   "id": "guante-nitrilo-g-ultrane-525",
+   "nombre": "Guante Nitrilo G-Ultrane 525",
+   "marca": "Mapa",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUAMAPA525"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "8 al 11",
+   "visible": true
+  },
+  {
+   "id": "guante-nitrilo-g-ultrane-526",
+   "nombre": "Guante Nitrilo G-Ultrane 526",
+   "marca": "Mapa",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUAMAPA526"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "8 al 11",
+   "visible": true
+  },
+  {
+   "id": "guante-nitrilo-med-bano-compl-anti-impacto",
+   "nombre": "Guante Nitrilo Med Baño Compl Anti Impacto",
+   "marca": "De Pascale",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANIMDANIM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 52,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-nitrilo-puno-de-lona",
+   "nombre": "Guante nitrilo puño de lona",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANITPUÑLON"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 3397,
+    "empresas": 7
+   }
+  },
+  {
+   "id": "guante-nitrilo-puno-de-lona-1604-ws",
+   "nombre": "Guante Nitrilo Puño de Lona 1604 WS",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUNPL1604WS"
+   ],
+   "colores": [],
+   "talles": "8 al 11",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 512,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "guante-nitrilo-puno-de-lona-1605-ws",
+   "nombre": "Guante Nitrilo Puño de Lona 1605 WS",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUNPL1605WS"
+   ],
+   "colores": [],
+   "talles": "8 al 11",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 574,
+    "empresas": 5
+   }
+  },
+  {
+   "id": "guante-nitrilo-puno-elastizado",
+   "nombre": "Guante Nitrilo Puño Elastizado",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUNITPEL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-nitrilo-term-2101-ws",
+   "nombre": "Guante Nitrilo Term 2101 WS",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANITERM2101WS"
+   ],
+   "colores": [],
+   "talles": "8 al 10",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 12,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-nylon-latex",
+   "nombre": "Guante Nylon Látex",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANYLAT"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 12,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-nylon-nitrilo",
+   "nombre": "Guante Nylon Nitrilo",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUNYNITR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 52,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "guante-nylon-pu-2101-2102-ws",
+   "nombre": "Guante Nylon PU 2101/2102 WS",
+   "marca": "WorkSafe",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANYPU2101/2102WS",
+    "9GUANYLPU2101WS"
+   ],
+   "colores": [],
+   "talles": "7 al 10",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 2770,
+    "empresas": 9
+   }
+  },
+  {
+   "id": "guante-nylon-pu-negro",
+   "nombre": "Guante Nylon Pu Negro",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUNYPUNGT10",
+    "GUNYPUNGT8",
+    "GUNYPUNGT9"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 94,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-poliester-latex",
+   "nombre": "Guante Poliester Látex",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANYPOL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-pvc-rojo-30-cm",
+   "nombre": "Guante Pvc Rojo - 30 Cm",
+   "marca": "Prentex",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUPVCRJ",
+    "0GUAPVCRJ30",
+    "0GUAPVCRJ35",
+    "0GUAPVCRJ40"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 201,
+    "empresas": 5
+   }
+  },
+  {
+   "id": "guante-rugoso-mapa-enduro-328",
+   "nombre": "Guante Rugoso Mapa Enduro 328",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUAMA328"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 36,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-sin-cost-anticorte",
+   "nombre": "Guante Sin Cost Anticorte",
+   "marca": "De Pascale",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANTDPS"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 600,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-soldador-descarne-forrado-costura-kevlar",
+   "nombre": "Guante soldador descarne forrado costura kevlar",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUSOLKEV"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "tambienEn": [
+    "proteccion-soldadura"
+   ],
+   "ventasEneJun2026": {
+    "unidades": 184,
+    "empresas": 4
+   }
+  },
+  {
+   "id": "guante-tej-naranja-recub-en-latex-rugoso-dps89175",
+   "nombre": "Guante Tej Naranja Recub en Latex Rugoso DPS89175",
+   "marca": "De Pascale",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUNARRUGT1089175",
+    "GUNARRUGT989175"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 396,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "guante-tej-naranja-recub-en-latex-rugoso-dps89174",
+   "nombre": "Guante Tej Naranja Recub en Latex Rugoso DPS89174",
+   "marca": "De Pascale",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUNARRUGT989174"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-tejido-bano-completo-nitrilo",
+   "nombre": "Guante Tejido Baño Completo Nitrilo",
+   "marca": "De Pascale",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUBAÑCNIT",
+    "GUABAÑCNIT"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-tejido-g7-jersey-de-spectra-liso",
+   "nombre": "Guante tejido G7 jersey de Spectra liso",
+   "marca": "Gamisol",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUTEJASPELI"
+   ],
+   "colores": [],
+   "talles": "6 al 10",
+   "visible": true
+  },
+  {
+   "id": "guante-terrycloth-acolchado-algodon-laminado-1-cara-pvc",
+   "nombre": "Guante Terrycloth Acolchado Algodón Laminado 1 Cara PVC",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUATRACOLAM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 2,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guante-terrycloth-algodon-pesado",
+   "nombre": "Guante Terrycloth Algodon Pesado",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUANTERRYCPE"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-terrycloth-kevlar-acol-algodon-puno-descarne",
+   "nombre": "Guante Terrycloth Kevlar Acol Algodón Puño Descarne",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUATRACOLPD"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "guante-terrycloth-kevlar-acolchado-algodon",
+   "nombre": "Guante Terrycloth Kevlar Acolchado Algodón",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUATRACOL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 42,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "guante-vaqueta-certificado",
+   "nombre": "Guante Vaqueta Certificado",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUAVQT10C"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 4297,
+    "empresas": 28
+   }
+  },
+  {
+   "id": "guante-vaqueta-certificado-sve",
+   "nombre": "Guante Vaqueta Certificado",
+   "marca": "Sve",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "GUAVQT11C"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 240,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "guardapolvo-adulto",
+   "nombre": "Guardapolvo Adulto",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "GUARDP.AD"
+   ],
+   "colores": [
+    "azul-marino",
+    "blanco"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true
+  },
+  {
+   "id": "kit-antiderrame-sorbex-ii",
+   "nombre": "Kit Antiderrame Sorbex II",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "KITANTDRME"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-cartucho-g01-ov",
+   "nombre": "Kit Cartucho G01 OV",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "CARTG01LIB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-cartucho-g02-ag",
+   "nombre": "Kit Cartucho G02 /AG",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "CARTG02LIB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-cartucho-g03-ov-ag",
+   "nombre": "Kit Cartucho G03 OV/AG",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "CARTG03LIB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 13,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "kit-cartucho-g73-ov-ag-p100-9000",
+   "nombre": "Kit Cartucho G73 OV/AG/P100 9000",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITCG73 OV AG P 100"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-cartucho-g78-multigas-p100-p-r-9000",
+   "nombre": "Kit Cartucho G78 Multigas/P100 p/R 9000",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITCARG78"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-cartuchos-xp100-ov-ag-p-resp-l-9000",
+   "nombre": "Kit Cartuchos XP100 OV/AG p/Resp. L-9000",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KitsXP"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-cartuchos-xp100-p-resp-l-9000",
+   "nombre": "Kit Cartuchos XP100 p/Resp. L-9000",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KIT2075"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-desmalezador",
+   "nombre": "Kit desmalezador",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "kits",
+   "codigosERP": [
+    "KITDESM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 5,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "kit-filtro-com-222-abek1p3r",
+   "nombre": "Kit filtro com 222 [ABEK1P3R]",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITFILCOMB222"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 3,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "kit-filtro-comb-221-a2p3r",
+   "nombre": "Kit filtro comb 221 [A2P3R]",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITFILCOMB221"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 8,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "kit-filtro-comb-226-ab1p3r",
+   "nombre": "Kit filtro comb 226 [AB1P3R]",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITFILCOM226"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 17,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "kit-filtro-g08-multi-gas",
+   "nombre": "Kit Filtro G08 multi gas",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "FILG08"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-filtro-gas-211-a2",
+   "nombre": "Kit Filtro Gas 211 [A2]",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITFIG211"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 44,
+    "empresas": 9
+   }
+  },
+  {
+   "id": "kit-filtro-gas-213-abek1",
+   "nombre": "Kit Filtro Gas 213 [ABEK1]",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITFIG213"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 39,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "kit-filtro-gas-214-abek1",
+   "nombre": "Kit Filtro Gas 214 [ABEK1]",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITFIG214"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 23,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "kit-filtro-gas-244-k2",
+   "nombre": "Kit filtro gas 244 [K2]",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITFILG244"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-filtro-part-201-3c-p3r-part-olor-mo",
+   "nombre": "Kit Filtro Part 201-3C P3R Part+Olor Mo",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KIT FILPART201"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 12,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "kit-filtro-partic-202-p3r",
+   "nombre": "Kit filtro partic 202 [P3R]",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITFILP202"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-filtro-particulas-201-3",
+   "nombre": "Kit Filtro Particulas 201-3",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITFIPA201"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 41,
+    "empresas": 4
+   }
+  },
+  {
+   "id": "kit-forestal",
+   "nombre": "kit Forestal",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "kits",
+   "codigosERP": [
+    "KITFOREST"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 4,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "kit-g01-901793-901950-901911-901913",
+   "nombre": "Kit G01(901793+901950+901911+901913)",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITG01"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-g03-901793-901794-901911-901913",
+   "nombre": "kit G03 (901793+901794+901911+901913)",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITG03"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-pintura-serie-9000-9211",
+   "nombre": "Kit pintura serie 9000-9211",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITPIN"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-prefiltro-301-p2-p2r",
+   "nombre": "Kit prefiltro 301 P2 [P2R]",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITPREF301"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 149,
+    "empresas": 5
+   }
+  },
+  {
+   "id": "kit-punto-de-enganche-anticaida",
+   "nombre": "Kit Punto de Enganche Anticaida",
+   "marca": "X-Urban",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "10430013"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-repuesto-prot-audi-alternative",
+   "nombre": "Kit Repuesto Prot Audi Alternative",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "KITREPROTAUDALT"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-repuesto-prot-auditivo-l-320-casco",
+   "nombre": "Kit Repuesto Prot Auditivo L-320 casco",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "REPRAU320PC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-repuesto-prot-auditivo-l-320-vincha",
+   "nombre": "Kit Repuesto Prot Auditivo L-320 vincha",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "REPRAU320"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 50,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "kit-repuesto-prot-auditivo-l-340-casco",
+   "nombre": "Kit Repuesto Prot Auditivo L-340 casco",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "REPRAU340PC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-repuesto-prot-auditivo-l-340-vincha",
+   "nombre": "Kit Repuesto Prot Auditivo L-340 vincha",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "REPRAU340"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "kit-xp100-901793-902075",
+   "nombre": "Kit XP100 (901793+902075)",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "KITXP100"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "linea-de-anclaje-x-20-metros-conector-ojal",
+   "nombre": "Linea de Anclaje x 20 Metros conector ojal",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY10552"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "malla-plastica-forestal",
+   "nombre": "Malla plástica forestal",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "MALLPLAFOR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 138,
+    "empresas": 5
+   }
+  },
+  {
+   "id": "malla-senalizacion-liviana-naranja",
+   "nombre": "Malla Señalización Liviana Naranja",
+   "marca": "De Pascale",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "MALLASEÑ"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 718,
+    "empresas": 7
+   }
+  },
+  {
+   "id": "malla-vallado-naranja",
+   "nombre": "Malla Vallado Naranja",
+   "marca": "Lube",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "MALLNAR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "malla-vallado-naranja-60-grs-1-mtx45-7-mts-duty",
+   "nombre": "Malla Vallado Naranja 60 Grs 1 mtX45,7 Mts DUTY",
+   "marca": "Lube",
+   "linea": "epp",
+   "subcategoria": "senalizacion",
+   "codigosERP": [
+    "MALLVANAR60GRS"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "mameluco-gabardina-diforza",
+   "nombre": "Mameluco de gabardina Diforza",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "mameluco",
+   "codigosERP": [
+    "MAMGABDIF"
+   ],
+   "colores": [
+    "azul-marino",
+    "naranja"
+   ],
+   "talles": "36 al 68 · XS al 6XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 39,
+    "empresas": 4
+   }
+  },
+  {
+   "id": "mameluco-alaska",
+   "nombre": "Mameluco Alaska",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "mameluco",
+   "codigosERP": [
+    "MAMELALASKA"
+   ],
+   "colores": [
+    "azul-marino"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true
+  },
+  {
+   "id": "mameluco-diforza-naranja",
+   "nombre": "Mameluco Diforza Naranja",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "mameluco",
+   "codigosERP": [
+    "MANARdif"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "mameluco-eco",
+   "nombre": "Mameluco ECO",
+   "marca": "Beato",
+   "linea": "indumentaria",
+   "subcategoria": "mameluco",
+   "codigosERP": [
+    "MAMGABECO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Línea económica (Beato)"
+  },
+  {
+   "id": "mameluco-ignifugo-nomex-4-5-oz-c-reflec-5-cm",
+   "nombre": "Mameluco Ignífugo Nomex 4.5 Oz c/ Reflec 5 Cm",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "mameluco",
+   "codigosERP": [
+    "MAMIG4OZ"
+   ],
+   "colores": [
+    "azul-marino",
+    "gris"
+   ],
+   "talles": "36 al 64",
+   "visible": true,
+   "nota": "Ignífugo"
+  },
+  {
+   "id": "mameluco-ignifugo-nomex-6-oz-c-reflec-5-cm",
+   "nombre": "Mameluco Ignífugo Nomex 6 Oz C/ Reflec 5 Cm",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "mameluco",
+   "codigosERP": [
+    "MAMIG6OZ"
+   ],
+   "colores": [
+    "azul-marino",
+    "gris"
+   ],
+   "talles": "36 al 64",
+   "visible": true,
+   "nota": "Ignífugo"
+  },
+  {
+   "id": "mameluco-laminado",
+   "nombre": "Mameluco laminado",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "mameluco",
+   "codigosERP": [
+    "MAMELAM"
+   ],
+   "colores": [],
+   "talles": "S al 3XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1426,
+    "empresas": 5
+   }
+  },
+  {
+   "id": "mameluco-laminado-de-60-grm",
+   "nombre": "Mameluco laminado de 60 grm",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "mameluco",
+   "codigosERP": [
+    "MAMELAM60GRM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "mameluco-laminado-mgn",
+   "nombre": "Mameluco Laminado MGN",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "mameluco",
+   "codigosERP": [
+    "MALAMGN"
+   ],
+   "colores": [
+    "blanco"
+   ],
+   "talles": "M al 3XL",
+   "visible": true
+  },
+  {
+   "id": "mameluco-laminado-ziao",
+   "nombre": "Mameluco laminado ZIAO",
+   "marca": "Ziao",
+   "linea": "indumentaria",
+   "subcategoria": "mameluco",
+   "codigosERP": [
+    "MAMLAMZIAO"
+   ],
+   "colores": [
+    "blanco"
+   ],
+   "talles": "XS al 3XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 2894,
+    "empresas": 16
+   },
+   "nota": "Descartable, 55 y 63 g"
+  },
+  {
+   "id": "mameluco-trucker",
+   "nombre": "Mameluco trucker",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "mameluco",
+   "codigosERP": [
+    "MAMTRUDIF"
+   ],
+   "colores": [
+    "azul-marino",
+    "negro"
+   ],
+   "talles": "36 al 68 · S al 4XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 2,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "mameluco-tyvek-con-capucha",
+   "nombre": "Mameluco Tyvek con Capucha",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "mameluco",
+   "codigosERP": [
+    "MAMTV"
+   ],
+   "colores": [],
+   "talles": "M al 3XL",
+   "visible": true
+  },
+  {
+   "id": "manga-anticorte-hppe-35-cm-dps1008106",
+   "nombre": "Manga Anticorte HPPE 35 Cm DPS1008106",
+   "marca": "De Pascale",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "MANGANTHPPE"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Manga (protección de antebrazo)"
+  },
+  {
+   "id": "manga-protectora-anti-corte-de-antebrazos",
+   "nombre": "Manga Protectora Anti Corte De Antebrazos",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "MANGAPVC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Manga (protección de antebrazo)"
+  },
+  {
+   "id": "manga-soldador",
+   "nombre": "Manga Soldador",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "MANGASL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 60,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "manga-terrycloth-alg-reforzado-en-poliester-45-cm",
+   "nombre": "Manga Terrycloth Alg Reforzado en Poliester 45 Cm",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-manos",
+   "codigosERP": [
+    "MANGATE"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Manga (protección de antebrazo)",
+   "ventasEneJun2026": {
+    "unidades": 34,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "manta-de-borosilicato-2-x1-mts",
+   "nombre": "Manta de Borosilicato 2 x1 mts",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "MANBRS"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "mascara-3m-6800",
+   "nombre": "Mascara 3M 6800",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "MAS6800"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "mascara-cara-completa-libus",
+   "nombre": "Mascara Cara Completa Libus",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "MASCOMPLIBU"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "mascara-completa-5600-cl2-tpe",
+   "nombre": "Mascara Completa 5600 CL2 TPE",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "MASC5600"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 6,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "mascara-completa-5700-cl2-l-sil",
+   "nombre": "Mascara Completa 5700 CL2-L SIL",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "MASCOMP5700L"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 11,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "mascara-completa-5700-cl2-m-sil",
+   "nombre": "Mascara Completa 5700 CL2-M SIL",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "MASCOMP5700M"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 2,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "mascara-completa-5700-cl2-s-sil",
+   "nombre": "Mascara Completa 5700 CL2-S SIL",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "MASCOMP5700S"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "mascara-soldador-strong-welder-1000",
+   "nombre": "Mascara Soldador Strong Welder 1000",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "MASCSOL1000LI"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 14,
+    "empresas": 4
+   }
+  },
+  {
+   "id": "mascara-soldador-strong-welder-500",
+   "nombre": "Mascara Soldador Strong Welder 500",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "MASCSOL500LI"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 9,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "mascara-soldador-sw-510",
+   "nombre": "Mascara Soldador SW-510",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "MASCSOLSW"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "mascarilla-3m-8801-p2",
+   "nombre": "Mascarilla 3M 8801 P2",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "MASC3M8801"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "mascarilla-502-n95",
+   "nombre": "Mascarilla 502 tipo N95",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "MASC502"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 2050,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "mascarilla-n95-plegable-2130c-901801",
+   "nombre": "Mascarilla N95 Plegable 2130C ( 901801 )",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "MASLIB2130"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "mascarilla-r95-mod-1845-vo-ga-c-val",
+   "nombre": "Mascarilla R95 Mod 1845 VO/GA c/Val",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "MASCR95"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "mascarilla-segurind-bi-filtro",
+   "nombre": "Mascarilla Segurind Bi Filtro",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "MASCSEG"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "matafuego",
+   "nombre": "Matafuego",
+   "marca": "Eslingar",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "MATAFUEGO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "medias",
+   "nombre": "Medias",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "ropa-primera-piel",
+   "codigosERP": [
+    "MEDIAS"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "medias-termicas",
+   "nombre": "Medias termicas",
+   "marca": "Ombú",
+   "linea": "indumentaria",
+   "subcategoria": "ropa-primera-piel",
+   "codigosERP": [
+    "MEDTERM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 81,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "mentonera-15mm",
+   "nombre": "Mentonera 15mm",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "MENTLIB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 985,
+    "empresas": 19
+   }
+  },
+  {
+   "id": "mentonera-textl-simple",
+   "nombre": "Mentonera Textl Simple",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "MENTTEXSIM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 70,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "mentonera-yugular-libus",
+   "nombre": "Mentonera Yugular Libus",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "MENTLIBYUG"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 216,
+    "empresas": 5
+   }
+  },
+  {
+   "id": "metatarsal",
+   "nombre": "Metatarsal",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": null,
+   "codigosERP": [
+    "METATARS"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": false,
+   "nota": "Accesorio de calzado: en el JSON, no visible"
+  },
+  {
+   "id": "mosqueton-oval-con-cierre-de-seguridad",
+   "nombre": "Mosqueton Oval con cierre de seguridad",
+   "marca": "Sky",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 2,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "pantalon-cargo-diforza",
+   "nombre": "Pantalón cargo Diforza",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "PANCADIF"
+   ],
+   "colores": [
+    "azul-marino",
+    "beige",
+    "gris",
+    "negro",
+    "verde-ingles"
+   ],
+   "talles": "36 al 68",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 4147,
+    "empresas": 78
+   }
+  },
+  {
+   "id": "pantalon-cargo-eco",
+   "nombre": "Pantalón cargo ECO",
+   "marca": "Beato",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "PANCAECO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Línea económica (Beato)"
+  },
+  {
+   "id": "pantalon-cargo-elastizado-diforza",
+   "nombre": "Pantalon Cargo Elastizado Diforza",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "9PANTCARGELAST",
+    "PANTCARGELAST"
+   ],
+   "colores": [
+    "azul-marino",
+    "azul",
+    "beige",
+    "gris",
+    "verde"
+   ],
+   "talles": "56",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 360,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "pantalon-cargo-ombu",
+   "nombre": "Pantalón Cargo Ombu",
+   "marca": "Ombú",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "PANCAROM"
+   ],
+   "colores": [
+    "azul-marino",
+    "beige",
+    "negro"
+   ],
+   "talles": "36 al 64",
+   "visible": true
+  },
+  {
+   "id": "pantalon-cargo-pampero",
+   "nombre": "Pantalón cargo Pampero",
+   "marca": "Pampero",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "PANCARPAM"
+   ],
+   "colores": [
+    "azul-marino",
+    "beige"
+   ],
+   "talles": "36 al 68",
+   "visible": true
+  },
+  {
+   "id": "pantalon-clasico-diforza",
+   "nombre": "Pantalón clásico Diforza",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "PANCLDZ"
+   ],
+   "colores": [
+    "azul-marino",
+    "azulino",
+    "beige",
+    "blanco",
+    "gris",
+    "gris-topo",
+    "naranja",
+    "negro",
+    "verde-benetton",
+    "verde-ingles",
+    "verde-oliva",
+    "verde"
+   ],
+   "talles": "36 al 68",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 3125,
+    "empresas": 59
+   }
+  },
+  {
+   "id": "pantalon-clasico-eco",
+   "nombre": "Pantalón clásico ECO",
+   "marca": "Beato",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "PANCLECO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Línea económica (Beato)"
+  },
+  {
+   "id": "pantalon-clasico-ignifugo-nomex-6-oz",
+   "nombre": "Pantalon Clasico Ignífugo Nomex 6 Oz",
+   "marca": "Prentex",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "PANCLIG6OZ"
+   ],
+   "colores": [
+    "azul-marino"
+   ],
+   "talles": "36 al 64",
+   "visible": true,
+   "nota": "Ignífugo"
+  },
+  {
+   "id": "pantalon-clasico-ombu",
+   "nombre": "Pantalón clásico Ombu",
+   "marca": "Ombú",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "PACLOM"
+   ],
+   "colores": [
+    "azul-marino",
+    "azulino",
+    "beige",
+    "jean",
+    "negro",
+    "verde"
+   ],
+   "talles": "36 al 68",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 99,
+    "empresas": 5
+   }
+  },
+  {
+   "id": "pantalon-clasico-ombu-grafil",
+   "nombre": "Pantalon Clasico Ombu Grafil",
+   "marca": "Ombú",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "PANTCLASOMGRAF"
+   ],
+   "colores": [
+    "azul-marino"
+   ],
+   "talles": "36 al 68",
+   "visible": true
+  },
+  {
+   "id": "pantalon-de-ambo",
+   "nombre": "Pantalón de ambo",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "sanidad-y-gastronomia",
+   "codigosERP": [
+    "PANAMB"
+   ],
+   "colores": [
+    "azul-marino",
+    "blanco",
+    "negro"
+   ],
+   "talles": "S al 3XL",
+   "visible": true
+  },
+  {
+   "id": "pantalon-de-trabajo-pampero",
+   "nombre": "Pantalón de trabajo Pampero",
+   "marca": "Pampero",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "PANTRPAM"
+   ],
+   "colores": [
+    "azul-marino",
+    "beige",
+    "negro",
+    "verde"
+   ],
+   "talles": "36 al 64",
+   "visible": true
+  },
+  {
+   "id": "pantalon-nautico-gabardina-diforza",
+   "nombre": "Pantalon Nautico Gabardina Diforza",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "PANAUTGAB"
+   ],
+   "colores": [
+    "blanco"
+   ],
+   "talles": "36 al 60",
+   "visible": true
+  },
+  {
+   "id": "pantalon-nautico-tela-grafil",
+   "nombre": "Pantalón náutico, tela grafil",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "PANTNAUGRAF"
+   ],
+   "colores": [
+    "azul-marino"
+   ],
+   "talles": "S al 4XL",
+   "visible": true
+  },
+  {
+   "id": "pantalon-nautico-tela-polyester",
+   "nombre": "Pantalón náutico, tela polyester",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "PANTNAU"
+   ],
+   "colores": [
+    "azul-marino",
+    "blanco",
+    "negro",
+    "verde"
+   ],
+   "talles": "36 al 60 · XS al 6XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 281,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "pantalon-termico",
+   "nombre": "Pantalón térmico",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "ropa-primera-piel",
+   "codigosERP": [
+    "PANTER"
+   ],
+   "colores": [
+    "azul-marino"
+   ],
+   "talles": "S al 4XL",
+   "visible": true
+  },
+  {
+   "id": "pantalon-trucker-eco",
+   "nombre": "Pantalón Trucker ECO",
+   "marca": "Beato",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [
+    "PANTRUECO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Línea económica (Beato)"
+  },
+  {
+   "id": "plantilla-confort",
+   "nombre": "Plantilla confort",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": null,
+   "codigosERP": [
+    "PLANCONF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": false,
+   "nota": "Accesorio de calzado: en el JSON, no visible"
+  },
+  {
+   "id": "polaina-descarne-con-hebilla",
+   "nombre": "Polaina Descarne con hebilla",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "POLAINADEHEB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 22,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "polaina-descarne-con-velcro",
+   "nombre": "Polaina Descarne con Velcro",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-soldadura",
+   "codigosERP": [
+    "POLAINADEC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 29,
+    "empresas": 6
+   }
+  },
+  {
+   "id": "poncho-de-pvc-con-capucha-color-amarillo",
+   "nombre": "Poncho de Pvc Con Capucha, color amarillo,",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "traje-de-lluvia",
+   "codigosERP": [
+    "PONCHOAM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "poncho-de-pvc-con-capucha-color-azul",
+   "nombre": "Poncho de Pvc Con Capucha, color azul,",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "traje-de-lluvia",
+   "codigosERP": [
+    "PONCHOAZ"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "poncho-pe-transparente-100-x-125-cm-0-0018-mm",
+   "nombre": "Poncho PE Transparente 100 x 125 Cm 0.0018 MM",
+   "marca": "De Pascale",
+   "linea": "indumentaria",
+   "subcategoria": "traje-de-lluvia",
+   "codigosERP": [
+    "PONCNUB0001"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "porta-herramienta-ts-90",
+   "nombre": "Porta Herramienta TS-90",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "PORTAH"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "pre-filtro-segurind",
+   "nombre": "Pre Filtro Segurind",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "PREFILSEG"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "pre-filtro-5n-11-3m",
+   "nombre": "Pre. Filtro 5N-11 3M",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "PREF5N11"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "prot-facial-cilindrico-arc-flash12-af",
+   "nombre": "Prot Facial Cilindrico ARC-FLASH12 AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "PROTFACILARCF12AF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "proteccion-facial-malla-tejida-c-cabezal-art-2041-fravida",
+   "nombre": "Protección facial malla tejida c/ cabezal art. 2041 Fravida",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "PROFAMALL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-auditivo-3m-510pe-p-casco",
+   "nombre": "Protector Auditivo 3M 510PE ( P/CASCO )",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "AU510PE"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-auditivo-3m-520a-vincha",
+   "nombre": "Protector Auditivo 3M 520A ( Vincha )",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "AU520A"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-auditivo-3m-h510b",
+   "nombre": "Protector Auditivo 3M H510B",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "H510B"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-auditivo-alternative-vincha",
+   "nombre": "Protector Auditivo Alternative - vincha",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "AUALTERLIB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 766,
+    "empresas": 26
+   }
+  },
+  {
+   "id": "protector-auditivo-de-copa-l-450",
+   "nombre": "Protector auditivo de COPA L-450",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "PROTAUDCO450"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-auditivo-l-320-vincha",
+   "nombre": "Protector Auditivo L-320 Vincha",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "AUVIN320"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 27,
+    "empresas": 4
+   }
+  },
+  {
+   "id": "protector-auditivo-l-340-p-casco",
+   "nombre": "Protector Auditivo L-340 P/Casco",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "PROTAUDCA340"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 100,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "protector-auditivo-l-340-vincha",
+   "nombre": "Protector Auditivo L-340 Vincha",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "PROTAUD340"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 38,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "protector-auditivo-l-360-vincha",
+   "nombre": "Protector auditivo L-360 vincha",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "PROAUD360COP"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-auditivo-l-450-p-casco",
+   "nombre": "Protector Auditivo L-450 p/Casco",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "PROTAUDCA450"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-auditivo-p-casco-l-320",
+   "nombre": "Protector Auditivo P/Casco L-320",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "AUCAS320"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 140,
+    "empresas": 10
+   }
+  },
+  {
+   "id": "protector-auditivo-p-casco-l-360",
+   "nombre": "Protector Auditivo P/Casco L-360",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "AUCOP360"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 24,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "protector-auditivo-quantum",
+   "nombre": "Protector auditivo Quantum",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "PROTAUQUA"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 12155,
+    "empresas": 27
+   }
+  },
+  {
+   "id": "protector-auditivo-quantum-detec",
+   "nombre": "Protector auditivo Quantum DETEC",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "PROTAUQUADET"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 250,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "protector-auditivo-quantum-foam-rd-s-cordel",
+   "nombre": "Protector Auditivo Quantum Foam RD S/Cordel",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "PROTAUQFO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-auditivo-quantum-plast-cint",
+   "nombre": "Protector auditivo Quantum Plast Cint",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "PROTAUQCJ"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-auditivo-quantum-smart",
+   "nombre": "Protector auditivo Quantum smart",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-auditiva",
+   "codigosERP": [
+    "PROTAUQUASMR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-facial-burbuja-dark-green-w3",
+   "nombre": "Protector Facial Burbuja Dark Green W3",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "FACLIB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-facial-burbuja-gris",
+   "nombre": "Protector Facial Burbuja Gris",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "FACBURLIBGR"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-facial-cilindrico-arc-flash10-af",
+   "nombre": "Protector Facial Cilindrico ARC-FLASH10 AF",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "PROTFACILARFLASH10 AF"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-facial-cronos-libus-c-masc-quir",
+   "nombre": "Protector Facial Cronos Libus C/Masc Quir",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "FACRLI"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-facial-fravida-art-2020",
+   "nombre": "Protector facial fravida art. 2020",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "PROTFA"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "protector-facial-transparente-burbuja",
+   "nombre": "Protector facial transparente burbuja",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "FACBURBLIB"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 63,
+    "empresas": 10
+   }
+  },
+  {
+   "id": "protector-facial-verde-burbuja",
+   "nombre": "Protector Facial Verde Burbuja",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "FACIAVERD"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "puntera-plastica-de-visita",
+   "nombre": "Puntera Plastica de Visita",
+   "marca": "Diforza",
+   "linea": "calzado",
+   "subcategoria": null,
+   "codigosERP": [
+    "PUNPLASVIS"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": false,
+   "nota": "Accesorio de calzado: en el JSON, no visible",
+   "ventasEneJun2026": {
+    "unidades": 35,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "remera-eco",
+   "nombre": "Remera ECO",
+   "marca": "Beato",
+   "linea": "indumentaria",
+   "subcategoria": "remera",
+   "codigosERP": [
+    "REMCLAECO"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Línea económica (Beato)"
+  },
+  {
+   "id": "remera",
+   "nombre": "Remera",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "remera",
+   "codigosERP": [
+    "REMDIAZ"
+   ],
+   "colores": [
+    "rojo",
+    "azul-marino",
+    "beige",
+    "blanco",
+    "gris-melange",
+    "gris-topo",
+    "gris",
+    "naranja",
+    "negro",
+    "verde-benetton",
+    "verde-ingles",
+    "verde-oliva"
+   ],
+   "talles": "XS al 6XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 3424,
+    "empresas": 36
+   }
+  },
+  {
+   "id": "remera-manga-larga",
+   "nombre": "Remera manga larga",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "remera",
+   "codigosERP": [
+    "REMMANGLAR"
+   ],
+   "colores": [
+    "amarillo",
+    "azul-marino",
+    "azul",
+    "azulino",
+    "beige",
+    "blanco",
+    "celeste",
+    "gris",
+    "gris-melange",
+    "gris-topo",
+    "jean",
+    "verde"
+   ],
+   "talles": "35 al 46 · S al 4XL",
+   "visible": true
+  },
+  {
+   "id": "remera-termica-t-1",
+   "nombre": "Remera Termica T 1",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "ropa-primera-piel",
+   "codigosERP": [
+    "REMTERMT1"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "remera-termica-t-2",
+   "nombre": "Remera Termica T 2",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "ropa-primera-piel",
+   "codigosERP": [
+    "REMTERMT2"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "remera-termica-t-3",
+   "nombre": "Remera Termica T 3",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "ropa-primera-piel",
+   "codigosERP": [
+    "REMTERMT3"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "repuesto-facial-color-verde",
+   "nombre": "Repuesto facial color verde",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "REPFACVER"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "repuesto-facial-plano-libus",
+   "nombre": "Repuesto Facial plano Libus",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "REFCPLLIBUS"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 301,
+    "empresas": 12
+   }
+  },
+  {
+   "id": "respirador-de-copa-bls-129bw",
+   "nombre": "Respirador de Copa BLS 129BW",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "RESPCOPBLS"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 375,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "respirador-de-part-desc-c-val-1940",
+   "nombre": "Respirador de Part Desc C/Val 1940",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "RESPCV1940"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "respirador-des-zer0-32c-fr-ffp3rd",
+   "nombre": "Respirador des Zer0 32C FR [FFP3RD]",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "RESPDESECZ32C"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "respirador-descart-particulas-pleg-3230-n95-904522",
+   "nombre": "Respirador descart particulas pleg 3230+N95 ( 904522)",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "RESPDESPART"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "respirador-desech-zer0-30-ffp3rd",
+   "nombre": "Respirador desech Zer0 30 [FFP3RD]",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "RESPDESECZ30"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 110,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "respirador-desech-zer0-31-ffp3rd",
+   "nombre": "Respirador desech Zer0 31[FFP3RD]",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "RESPDESC031"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "respirador-desechable-128bw-ffp2rd",
+   "nombre": "Respirador desechable 128BW [FFP2RD]",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "RESPDESEC128"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 220,
+    "empresas": 6
+   }
+  },
+  {
+   "id": "respirador-522",
+   "nombre": "Respirador desechable Libus 522 FFP2 NR D",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "RESPDESEC522"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 2680,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "respirador-desechable-bls-225b",
+   "nombre": "Respirador desechable BLS 225B",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "RESPDESEC225B"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "respirador-desechable-bls-226b",
+   "nombre": "Respirador desechable BLS 226B",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "RESPDESC226B"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 360,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "respirador-desechable-zer0-32c-ffp3rd",
+   "nombre": "Respirador desechable Zer0 32C [FFP3RD]",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "RESPDESEC32C"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "respirador-para-particulas-zer0-31-c",
+   "nombre": "Respirador para Particulas Zer0 31 C",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "RESPART31C"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "retenedor-501-3m",
+   "nombre": "Retenedor 501 3M",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "RETEPREFIL"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "rodillera",
+   "nombre": "Rodillera",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "ergonomia",
+   "codigosERP": [
+    "RODI"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 33,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "salvacaidas-para-soga-diam-13-16-mm-c-mosq-oval",
+   "nombre": "Salvacaidas para soga,diam 13/16 mm. c/mosq oval",
+   "marca": "Sky",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKY8206A"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 12,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "salvacaidas-para-soga-diam-8-mm-c-amort-y-mosq-oval",
+   "nombre": "Salvacaidas para soga,diam 8 mm c/amort y mosq oval.",
+   "marca": "Topsafe",
+   "linea": "epp",
+   "subcategoria": "altura",
+   "codigosERP": [
+    "SKYH8208"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "semi-mascara-6200-3m",
+   "nombre": "Semi Mascara 6200 3M",
+   "marca": "3M",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "SEM6200"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "semi-mascara-libus-9000e",
+   "nombre": "Semi- Mascara Libus 9000E",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "MASLIB900E"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 29,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "semimascara-4000-next-r-m-l",
+   "nombre": "Semimascara 4000 next R-M/L",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "SEM4000NE"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 53,
+    "empresas": 5
+   }
+  },
+  {
+   "id": "semimascara-4000-next-s-m-l-sil",
+   "nombre": "Semimascara 4000 next S-M/L SIL",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "SEM4000NES"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 62,
+    "empresas": 7
+   }
+  },
+  {
+   "id": "semi-mascara-fravida-5330",
+   "nombre": "Semi-Mascara Fravida ( 5330 )",
+   "marca": "Fravida",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "MASFRAV5330"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "set-de-reflectivos-para-casco-milenium-class",
+   "nombre": "Set de Reflectivos para Casco Milenium Class",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-craneal",
+   "codigosERP": [
+    "SETREFKECPCASC"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "soporte-extintor",
+   "nombre": "Soporte Extintor",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "SOPORTEXT"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "soporte-p-protector-facial-arnes-simple",
+   "nombre": "Soporte P/Protector Facial Arnés Simple",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "SOPFACARSIM"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 163,
+    "empresas": 12
+   }
+  },
+  {
+   "id": "soporte-p-protector-facial-arnes-cremallera",
+   "nombre": "Soporte P/Protector Facial Arnés Cremallera",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-facial",
+   "codigosERP": [
+    "SOPFACARCRE"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 12,
+    "empresas": 3
+   }
+  },
+  {
+   "id": "soporte-prefiltro-retenedor-de-libus",
+   "nombre": "Soporte Prefiltro retenedor de Libus",
+   "marca": "Libus",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "SOPREFRES"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "tabla-inmovilizadora-tipo-same",
+   "nombre": "Tabla Inmovilizadora Tipo Same",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "emergencias",
+   "codigosERP": [
+    "TABLA"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true
+  },
+  {
+   "id": "traje-de-lluvia-con-reflectivo",
+   "nombre": "Traje de lluvia con reflectivo",
+   "marca": "Diforza",
+   "linea": "indumentaria",
+   "subcategoria": "traje-de-lluvia",
+   "codigosERP": [
+    "TRAJLLUV"
+   ],
+   "colores": [
+    "amarillo",
+    "azul"
+   ],
+   "talles": "S al 3XL",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 705,
+    "empresas": 11
+   }
+  },
+  {
+   "id": "traje-de-lluvia-ombu",
+   "nombre": "Traje de lluvia OMBU",
+   "marca": "Ombú",
+   "linea": "indumentaria",
+   "subcategoria": "traje-de-lluvia",
+   "codigosERP": [
+    "TRAJLLUVOM"
+   ],
+   "colores": [
+    "amarillo",
+    "azul-marino"
+   ],
+   "talles": "M al 2XL",
+   "visible": true
+  },
+  {
+   "id": "traje-ejecutivo-ombu",
+   "nombre": "Traje ejecutivo OMBU",
+   "marca": "Ombú",
+   "linea": "indumentaria",
+   "subcategoria": "campera",
+   "codigosERP": [
+    "TRAJEJECOM"
+   ],
+   "colores": [
+    "azul-marino",
+    "negro"
+   ],
+   "talles": "M al 2XL",
+   "visible": true
+  },
+  {
+   "id": "zapatilla-conwork-655za",
+   "nombre": "Zapatilla Conwork 655ZA",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "zapatillas",
+   "codigosERP": [
+    "ZAPCONW655ZA"
+   ],
+   "colores": [
+    "gris",
+    "marron",
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 216,
+    "empresas": 15
+   }
+  },
+  {
+   "id": "zapatilla-funcional-lander",
+   "nombre": "Zapatilla Funcional Lander",
+   "marca": "Funcional",
+   "linea": "calzado",
+   "subcategoria": "zapatillas",
+   "codigosERP": [
+    "ZAPFUNCLAND"
+   ],
+   "colores": [
+    "beige",
+    "gris",
+    "marron",
+    "negro"
+   ],
+   "talles": "36 al 46",
+   "visible": false,
+   "nota": "Marca FUNCIONAL: no se comunica"
+  },
+  {
+   "id": "zapatilla-funcional-mujer-bali",
+   "nombre": "Zapatilla Funcional Mujer Bali",
+   "marca": "Funcional",
+   "linea": "calzado",
+   "subcategoria": "zapatillas",
+   "codigosERP": [
+    "ZAPFUNCMBAL"
+   ],
+   "colores": [
+    "beige",
+    "gris",
+    "negro"
+   ],
+   "talles": "34 al 42",
+   "visible": false,
+   "nota": "Marca FUNCIONAL: no se comunica"
+  },
+  {
+   "id": "zapatilla-funcional-soul",
+   "nombre": "Zapatilla Funcional Soul",
+   "marca": "Funcional",
+   "linea": "calzado",
+   "subcategoria": "zapatillas",
+   "codigosERP": [
+    "ZAPFUNCSOUL"
+   ],
+   "colores": [
+    "azul",
+    "gris",
+    "negro"
+   ],
+   "talles": "36 al 47",
+   "visible": false,
+   "nota": "Marca FUNCIONAL: no se comunica"
+  },
+  {
+   "id": "zapatilla-nexus-900za",
+   "nombre": "Zapatilla Nexus 900ZA",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "zapatillas",
+   "codigosERP": [
+    "ZAPNEXUS900ZA"
+   ],
+   "colores": [
+    "azul",
+    "bordo",
+    "gris",
+    "marron",
+    "negro"
+   ],
+   "talles": "38 al 46",
+   "visible": true
+  },
+  {
+   "id": "zapatilla-ombu-krypton-c-p",
+   "nombre": "Zapatilla Ombu Krypton C/P",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "zapatillas",
+   "codigosERP": [
+    "ZAPOMKRYPCP"
+   ],
+   "colores": [
+    "gris",
+    "negro"
+   ],
+   "talles": "36 al 46",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 4,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "zapatilla-ombu-sneaker-c-p-composite",
+   "nombre": "Zapatilla Ombu Sneaker C/P Composite",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "zapatillas",
+   "codigosERP": [
+    "ZAPOMBSNEAKCP"
+   ],
+   "colores": [
+    "gris",
+    "negro"
+   ],
+   "talles": "36 al 47",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "zapato-conwork",
+   "nombre": "Zapato Conwork",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "ZAPCONW",
+    "9ZAPCONW",
+    "9 ZAPCONW"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 791,
+    "empresas": 28
+   }
+  },
+  {
+   "id": "zapato-conwork-41za-antiperforante",
+   "nombre": "Zapato Conwork 41ZA ANTIPERFORANTE",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "ZAPCONW41ZAANTPER"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "35 al 47",
+   "visible": true
+  },
+  {
+   "id": "zapato-conwork-41za",
+   "nombre": "Zapato Conwork 41ZA",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "ZAPCONW41ZA"
+   ],
+   "colores": [
+    "blanco",
+    "marron",
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 557,
+    "empresas": 17
+   }
+  },
+  {
+   "id": "zapato-conwork-555za-marron",
+   "nombre": "Zapato Conwork 555ZA Marron",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "ZAPCONW555ZA"
+   ],
+   "colores": [
+    "marron",
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 64,
+    "empresas": 1
+   }
+  },
+  {
+   "id": "zapato-de-vestir",
+   "nombre": "Zapato De Vestir",
+   "marca": "Diforza",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "zapvest"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "38 al 45",
+   "visible": false,
+   "nota": "Marca DI FORZA: no se comunica"
+  },
+  {
+   "id": "zapato-febo",
+   "nombre": "Zapato Febo",
+   "marca": "Diforza",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "ZAPFEBPROC"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": false,
+   "nota": "Marca DI FORZA: no se comunica"
+  },
+  {
+   "id": "zapato-funcional-city",
+   "nombre": "Zapato Funcional City",
+   "marca": "Funcional",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "ZAPFUNCCIT"
+   ],
+   "colores": [
+    "camel",
+    "marron",
+    "negro",
+    "vison"
+   ],
+   "talles": "36 al 47",
+   "visible": false,
+   "nota": "Marca FUNCIONAL: no se comunica"
+  },
+  {
+   "id": "zapato-funcional-horizon-marron",
+   "nombre": "Zapato Funcional Horizon Marron",
+   "marca": "Funcional",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "ZAPFUNCHOR"
+   ],
+   "colores": [
+    "marron"
+   ],
+   "talles": "36 al 47",
+   "visible": false,
+   "nota": "Marca FUNCIONAL: no se comunica"
+  },
+  {
+   "id": "zapato-ombu-gema-mujer-c-p-composite",
+   "nombre": "Zapato Ombu Gema Mujer C/P Composite",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "ZAPOMGEMCP"
+   ],
+   "colores": [
+    "gris",
+    "negro"
+   ],
+   "talles": "35 al 41",
+   "visible": true
+  },
+  {
+   "id": "zapato-ozono-plus",
+   "nombre": "Zapato Ozono plus",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "ZAPOZOM"
+   ],
+   "colores": [
+    "blanco",
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 201,
+    "empresas": 4
+   }
+  },
+  {
+   "id": "zapato-prusiano-con-puntera-plastica",
+   "nombre": "Zapato Prusiano con Puntera Plastica",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "ZAPRUPPLASOM"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": true
+  },
+  {
+   "id": "zapato-prusiano",
+   "nombre": "Zapato Prusiano",
+   "marca": "Ombú",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "ZAPRUOM"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "35 al 48",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 26,
+    "empresas": 2
+   }
+  },
+  {
+   "id": "zapato-voran-jano",
+   "nombre": "Zapato Voran Jano",
+   "marca": "Voran",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "ZAPVORANJANO"
+   ],
+   "colores": [
+    "negro"
+   ],
+   "talles": "36 al 47",
+   "visible": false,
+   "nota": "Marca VORAN: no se comunica"
+  },
+  {
+   "id": "zapato-voran-tauro-marron",
+   "nombre": "Zapato Voran Tauro Marron",
+   "marca": "Voran",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "ZAPVORANTAU"
+   ],
+   "colores": [
+    "marron",
+    "negro"
+   ],
+   "talles": "35 al 47",
+   "visible": false,
+   "nota": "Marca VORAN: no se comunica"
+  },
+  {
+   "id": "zapato-voran-teucro-marron",
+   "nombre": "Zapato Voran Teucro Marron",
+   "marca": "Voran",
+   "linea": "calzado",
+   "subcategoria": "zapatos",
+   "codigosERP": [
+    "ZAPVORANTEUC"
+   ],
+   "colores": [
+    "marron",
+    "negro"
+   ],
+   "talles": "36 al 47",
+   "visible": false,
+   "nota": "Marca VORAN: no se comunica"
+  },
+  {
+   "id": "zapatilla-conwork",
+   "nombre": "Zapatilla Conwork",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "zapatillas",
+   "codigosERP": [
+    "9ZAPCNW"
+   ],
+   "colores": [
+    "marron",
+    "negro"
+   ],
+   "talles": "36 al 46",
+   "visible": true,
+   "nota": "Código no figura en el export del ERP (solo en ventas)",
+   "ventasEneJun2026": {
+    "unidades": 174,
+    "empresas": 16
+   }
+  },
+  {
+   "id": "barbijo-descartable-con-elastico",
+   "nombre": "Barbijo descartable con elástico",
+   "marca": "Diforza",
+   "linea": "epp",
+   "subcategoria": "proteccion-respiratoria",
+   "codigosERP": [
+    "9BARDESELAS"
+   ],
+   "colores": [],
+   "talles": null,
+   "visible": true,
+   "nota": "Código no figura en el export del ERP (solo en ventas)",
+   "ventasEneJun2026": {
+    "unidades": 500,
+    "empresas": 1
+   }
+  }
+ ]
+}
