@@ -35,8 +35,8 @@
         }
       ],
       "foto": {
-        "src": "/img/dest-pantalon-cargo.webp",
-        "estado": "provisoria"
+        "src": "/img/productos/pantalon-cargo.webp",
+        "estado": "producto"
       },
       "masVendido": true,
       "empresas": 86,
@@ -65,8 +65,8 @@
         }
       ],
       "foto": {
-        "src": "/img/dest-pantalon-clasico.webp",
-        "estado": "provisoria"
+        "src": "/img/productos/pantalon-clasico.webp",
+        "estado": "producto"
       },
       "empresas": 71,
       "catalogoId": "pantalon-clasico-diforza"
@@ -95,8 +95,8 @@
         }
       ],
       "foto": {
-        "src": null,
-        "estado": "falta"
+        "src": "/img/productos/pantalon-elastizado.webp",
+        "estado": "producto"
       },
       "empresas": null,
       "nota": "En el catálogo figura como 'Modelo AGIO'.",
@@ -156,8 +156,8 @@
         }
       ],
       "foto": {
-        "src": null,
-        "estado": "falta"
+        "src": "/img/productos/remera.webp",
+        "estado": "producto"
       },
       "empresas": 50,
       "pendiente": "Confirmar composición ('24.1 peinado' figura en el catálogo)",
@@ -185,7 +185,7 @@
         }
       ],
       "foto": {
-        "src": "/indumentaria-de-trabajo/img/prod-buzo-polar-medio-cierre-diforza.webp",
+        "src": "/img/productos/buzo-polar.webp",
         "estado": "producto"
       },
       "empresas": 46,
@@ -216,7 +216,7 @@
         }
       ],
       "foto": {
-        "src": "/indumentaria-de-trabajo/img/prod-campera-trucker-diforza.webp",
+        "src": "/img/productos/campera-trucker.webp",
         "estado": "producto"
       },
       "empresas": 40,
@@ -645,8 +645,8 @@
         }
       ],
       "foto": {
-        "src": null,
-        "estado": "falta"
+        "src": "/img/productos/faja-lumbar.webp",
+        "estado": "producto"
       },
       "empresas": 44,
       "catalogoId": "faja-lumbar-diforza"
@@ -666,8 +666,8 @@
         }
       ],
       "foto": {
-        "src": "/img/dest-guante-moteado.webp",
-        "estado": "provisoria"
+        "src": "/img/productos/guante-moteado.webp",
+        "estado": "producto"
       },
       "empresas": 41,
       "pendiente": "Talle",
@@ -777,8 +777,8 @@
         }
       ],
       "foto": {
-        "src": null,
-        "estado": "falta"
+        "src": "/img/productos/guante-nitrilo.webp",
+        "estado": "producto"
       },
       "empresas": 25,
       "catalogoId": "guante-acrilo-nitrilo-ws-15mil"
@@ -798,8 +798,8 @@
         }
       ],
       "foto": {
-        "src": null,
-        "estado": "falta"
+        "src": "/img/productos/guante-anticorte.webp",
+        "estado": "producto"
       },
       "empresas": 19,
       "pendiente": "Nivel de corte EN 388: no se encontró ficha pública de WorkSafe",
@@ -904,8 +904,8 @@
         }
       ],
       "foto": {
-        "src": null,
-        "estado": "falta"
+        "src": "/img/productos/mameluco-gabardina.webp",
+        "estado": "producto"
       },
       "impulsar": true,
       "catalogoId": "mameluco-gabardina-diforza"
@@ -925,8 +925,8 @@
         }
       ],
       "foto": {
-        "src": "/epp-proteccion-industrial/img/prod-respirador.webp",
-        "estado": "provisoria"
+        "src": "/img/productos/respirador-522.webp",
+        "estado": "producto"
       },
       "impulsar": true,
       "catalogoId": "respirador-522"
@@ -946,8 +946,8 @@
         }
       ],
       "foto": {
-        "src": null,
-        "estado": "falta"
+        "src": "/img/productos/mascarilla-502.webp",
+        "estado": "producto"
       },
       "impulsar": true,
       "catalogoId": "mascarilla-502-n95"

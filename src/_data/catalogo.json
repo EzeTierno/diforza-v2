@@ -1272,7 +1272,8 @@
    "ventasEneJun2026": {
     "unidades": 21,
     "empresas": 3
-   }
+   },
+   "foto": "/img/catalogo/bermuda-cargo.webp"
   },
   {
    "id": "bermuda-clasico-eco",
@@ -1335,7 +1336,8 @@
     "negro"
    ],
    "talles": "37 al 48",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/borcegui-ozono-plus-con-puntera.webp"
   },
   {
    "id": "borcegui-tactico-c-punt-de-acero-base-goma-febo",
@@ -1649,7 +1651,8 @@
    ],
    "colores": [],
    "talles": "35 al 48",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/botin-frances-con-plantilla-de-acero.webp"
   },
   {
    "id": "botin-funcional-frontier-marron",
@@ -1668,7 +1671,8 @@
    "ventasEneJun2026": {
     "unidades": 1,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/botin-funcional-frontier-marron.webp"
   },
   {
    "id": "botin-funcional-mujer-capri",
@@ -1685,7 +1689,8 @@
     "negro"
    ],
    "talles": "34 al 42",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/botin-funcional-mujer-capri.webp"
   },
   {
    "id": "botin-funcional-street",
@@ -1703,7 +1708,8 @@
     "vison"
    ],
    "talles": "36 al 47",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/botin-funcional-street.webp"
   },
   {
    "id": "botin-grafa-70-con-puntera",
@@ -1834,7 +1840,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/botin-prusiano.webp"
   },
   {
    "id": "botin-skiway-art-3252",
@@ -1866,7 +1873,8 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/botin-voran-apolo-marron.webp"
   },
   {
    "id": "botin-voran-aquiles",
@@ -1882,7 +1890,8 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/botin-voran-aquiles.webp"
   },
   {
    "id": "botin-voran-argos-marron",
@@ -1898,7 +1907,8 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/botin-voran-argos-marron.webp"
   },
   {
    "id": "botin-voran-cronos",
@@ -1913,7 +1923,8 @@
     "negro"
    ],
    "talles": "36 al 46",
-   "visible": true
+   "visible": false,
+   "nota": " Oculto 9 oct: no figura en el último catálogo de Diforza."
   },
   {
    "id": "botin-voran-neptuno",
@@ -1928,7 +1939,8 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/botin-voran-neptuno.webp"
   },
   {
    "id": "botiquin",
@@ -2051,7 +2063,8 @@
    "ventasEneJun2026": {
     "unidades": 643,
     "empresas": 26
-   }
+   },
+   "foto": "/img/catalogo/buzo-friza.webp"
   },
   {
    "id": "buzo-friza-azul",
@@ -2064,7 +2077,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/buzo-friza-azul.webp"
   },
   {
    "id": "buzo-friza-bordo",
@@ -2155,7 +2169,7 @@
     "unidades": 1515,
     "empresas": 18
    },
-   "foto": "/indumentaria-de-trabajo/img/prod-buzo-polar-medio-cierre-diforza.webp"
+   "foto": "/img/catalogo/buzo-polar-1-2-cierre-diforza.webp"
   },
   {
    "id": "buzo-polar-combinado",
@@ -2369,7 +2383,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "campera-congelados",
@@ -2382,11 +2397,12 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 6,
     "empresas": 1
-   }
+   },
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "campera-descarne-soldador",
@@ -2406,7 +2422,10 @@
     "unidades": 26,
     "empresas": 3
    },
-   "foto": "/img/catalogo/campera-descarne-soldador.webp"
+   "foto": "/img/catalogo/campera-descarne-soldador.webp",
+   "tambienEn": [
+    "campera"
+   ]
   },
   {
    "id": "campera-friza-diforza",
@@ -2421,7 +2440,8 @@
     "gris-topo"
    ],
    "talles": "XS al 6XL",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "campera-ignifuga-nomex-c-reflectivo",
@@ -2434,8 +2454,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "nota": "Ignífugo"
+   "visible": false,
+   "nota": "Ignífugo Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "campera-ignifugo-nomex-c-reflec-5-cm",
@@ -2450,8 +2470,8 @@
     "azulino"
    ],
    "talles": "S al 4XL",
-   "visible": true,
-   "nota": "Ignífugo"
+   "visible": false,
+   "nota": "Ignífugo Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "campera-polar-diforza",
@@ -2472,7 +2492,8 @@
    "ventasEneJun2026": {
     "unidades": 284,
     "empresas": 3
-   }
+   },
+   "foto": "/img/catalogo/campera-polar-diforza.webp"
   },
   {
    "id": "campera-rompeviento-con-polar",
@@ -2487,11 +2508,12 @@
     "azul-marino"
    ],
    "talles": "S al 4XL",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "campera-silver-diforza-verde-ingles",
-   "nombre": "Campera Silver Diforza Verde Ingles",
+   "nombre": "Campera rompeviento Silver con capucha",
    "marca": "Diforza",
    "linea": "indumentaria",
    "subcategoria": "campera",
@@ -2502,7 +2524,9 @@
     "verde-ingles"
    ],
    "talles": "XS al 6XL",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/campera-silver-diforza-verde-ingles.webp",
+   "nota": "Nombre según catálogo Diforza oct 2026 (código ERP CAMPSILV). Foto del catálogo PDF en azul marino."
   },
   {
    "id": "campera-soft-diforza",
@@ -2515,7 +2539,8 @@
    ],
    "colores": [],
    "talles": "XS al 6XL",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "campera-softshell-negra",
@@ -2530,11 +2555,12 @@
     "negro"
    ],
    "talles": "S al 4XL",
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 3,
     "empresas": 1
-   }
+   },
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "campera-trucker",
@@ -2575,8 +2601,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "nota": "Línea económica (Beato)"
+   "visible": false,
+   "nota": "Línea económica (Beato) Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "capa-de-lluvia",
@@ -2855,7 +2881,8 @@
    "ventasEneJun2026": {
     "unidades": 152,
     "empresas": 6
-   }
+   },
+   "foto": "/img/catalogo/chaleco-geologo.webp"
   },
   {
    "id": "chaleco-polar-diforza",
@@ -2874,7 +2901,8 @@
    "ventasEneJun2026": {
     "unidades": 429,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/chaleco-polar-diforza.webp"
   },
   {
    "id": "chaleco-reflectivo",
@@ -2941,7 +2969,8 @@
    "ventasEneJun2026": {
     "unidades": 370,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/chaleco-trucker.webp"
   },
   {
    "id": "chaqueta-de-ambo",
@@ -2972,7 +3001,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "chomba-eco",
@@ -2999,7 +3029,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/chomba-azul.webp"
   },
   {
    "id": "chomba-bordo",
@@ -3139,7 +3170,8 @@
     "gris-melange"
    ],
    "talles": "XS al 6XL",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/chomba-pique-diforza-m-l.webp"
   },
   {
    "id": "cinta-de-precaucion-amarilla-y-negra-x-200mts",
@@ -3355,7 +3387,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/cola-2mts-regulable-1-mosqueton-18mm-y-55mm.webp"
   },
   {
    "id": "cola-1-5-mm-con-amort-y-mosq18mm-y-55mm",
@@ -3423,7 +3456,8 @@
    "ventasEneJun2026": {
     "unidades": 7,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/cola-de-amarre-anticaida-doble-c-mosq-de-18-y-dos-de-55.webp"
   },
   {
    "id": "cola-elastizada-1-5-amortiguador-mosqueton-18mm-y-55mm",
@@ -3436,7 +3470,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/cola-elastizada-1-5-amortiguador-mosqueton-18mm-y-55mm.webp"
   },
   {
    "id": "cola-en-1-5mts-elast-y-amorti-18mm-55cm",
@@ -3503,7 +3538,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/conector-anclaje-1mts.webp"
   },
   {
    "id": "conector-anclaje-2mts",
@@ -4010,7 +4046,8 @@
    "ventasEneJun2026": {
     "unidades": 149,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/equipo-primera-piel.webp"
   },
   {
    "id": "equipo-retractil-xr-10-en-cable-de-acero-x-10-mts",
@@ -4084,7 +4121,8 @@
    "ventasEneJun2026": {
     "unidades": 676,
     "empresas": 35
-   }
+   },
+   "foto": "/img/catalogo/faja-lumbar-diforza.webp"
   },
   {
    "id": "filtro-2091-p100-3m",
@@ -4247,7 +4285,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Unificada en gorra-de-5-gajos (\"Gorra Diforza\") el 9 oct."
   },
   {
    "id": "gorra-con-casquete-plastico-azul",
@@ -4276,22 +4315,28 @@
   },
   {
    "id": "gorra-de-5-gajos",
-   "nombre": "Gorra de 5 gajos",
+   "nombre": "Gorra Diforza",
    "marca": "Diforza",
    "linea": "indumentaria",
    "subcategoria": "gorras",
    "codigosERP": [
-    "GORRA"
+    "GOR6GAJ",
+    "GORRA",
+    "gorra ver"
    ],
    "colores": [
-    "blanco"
+    "azul",
+    "blanco",
+    "verde-ingles"
    ],
    "talles": null,
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 414,
     "empresas": 9
-   }
+   },
+   "foto": "/img/catalogo/gorra-de-5-gajos.webp",
+   "nota": "Unifica gorra de 5 y 6 gajos (decisión del usuario 9 oct)."
   },
   {
    "id": "gorra-de-5-gajos-verde-ingles",
@@ -4304,7 +4349,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Unificada en gorra-de-5-gajos (\"Gorra Diforza\") el 9 oct."
   },
   {
    "id": "gorra-tapa-nuca",
@@ -4416,7 +4462,8 @@
    "ventasEneJun2026": {
     "unidades": 1218,
     "empresas": 10
-   }
+   },
+   "foto": "/img/catalogo/guante-acrilo-nitrilo-ws-15mil.webp"
   },
   {
    "id": "guante-anti-impacto",
@@ -4498,7 +4545,8 @@
    "ventasEneJun2026": {
     "unidades": 1309,
     "empresas": 6
-   }
+   },
+   "foto": "/img/catalogo/guante-anticorte-ws-h2101.webp"
   },
   {
    "id": "guante-anticorte-ws-h5101",
@@ -4953,7 +5001,8 @@
    "ventasEneJun2026": {
     "unidades": 22511,
     "empresas": 40
-   }
+   },
+   "foto": "/img/catalogo/guante-moteado-blanco-1100fer-gamisol.webp"
   },
   {
    "id": "guante-nit-b-comp-azul-p-lona-antishock-dps11255x",
@@ -5573,7 +5622,8 @@
    "ventasEneJun2026": {
     "unidades": 3,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/kit-filtro-com-222-abek1p3r.webp"
   },
   {
    "id": "kit-filtro-comb-221-a2p3r",
@@ -5586,11 +5636,12 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 8,
     "empresas": 1
-   }
+   },
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "kit-filtro-comb-226-ab1p3r",
@@ -5607,7 +5658,8 @@
    "ventasEneJun2026": {
     "unidades": 17,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/kit-filtro-comb-226-ab1p3r.webp"
   },
   {
    "id": "kit-filtro-g08-multi-gas",
@@ -5638,7 +5690,8 @@
    "ventasEneJun2026": {
     "unidades": 44,
     "empresas": 9
-   }
+   },
+   "foto": "/img/catalogo/kit-filtro-gas-211-a2.webp"
   },
   {
    "id": "kit-filtro-gas-213-abek1",
@@ -5655,7 +5708,8 @@
    "ventasEneJun2026": {
     "unidades": 39,
     "empresas": 3
-   }
+   },
+   "foto": "/img/catalogo/kit-filtro-gas-213-abek1.webp"
   },
   {
    "id": "kit-filtro-gas-214-abek1",
@@ -5672,7 +5726,8 @@
    "ventasEneJun2026": {
     "unidades": 23,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/kit-filtro-gas-214-abek1.webp"
   },
   {
    "id": "kit-filtro-gas-244-k2",
@@ -5685,7 +5740,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/kit-filtro-gas-244-k2.webp"
   },
   {
    "id": "kit-filtro-part-201-3c-p3r-part-olor-mo",
@@ -5702,7 +5758,8 @@
    "ventasEneJun2026": {
     "unidades": 12,
     "empresas": 3
-   }
+   },
+   "foto": "/img/catalogo/kit-filtro-part-201-3c-p3r-part-olor-mo.webp"
   },
   {
    "id": "kit-filtro-partic-202-p3r",
@@ -5715,7 +5772,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/kit-filtro-partic-202-p3r.webp"
   },
   {
    "id": "kit-filtro-particulas-201-3",
@@ -5732,7 +5790,8 @@
    "ventasEneJun2026": {
     "unidades": 41,
     "empresas": 4
-   }
+   },
+   "foto": "/img/catalogo/kit-filtro-particulas-201-3.webp"
   },
   {
    "id": "kit-forestal",
@@ -5763,7 +5822,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "kit-g03-901793-901794-901911-901913",
@@ -5776,7 +5836,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "kit-pintura-serie-9000-9211",
@@ -5807,7 +5868,8 @@
    "ventasEneJun2026": {
     "unidades": 149,
     "empresas": 5
-   }
+   },
+   "foto": "/img/catalogo/kit-prefiltro-301-p2-p2r.webp"
   },
   {
    "id": "kit-punto-de-enganche-anticaida",
@@ -5904,7 +5966,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "linea-de-anclaje-x-20-metros-conector-ojal",
@@ -5997,7 +6060,8 @@
    "ventasEneJun2026": {
     "unidades": 39,
     "empresas": 4
-   }
+   },
+   "foto": "/img/catalogo/mameluco-gabardina-diforza.webp"
   },
   {
    "id": "mameluco-alaska",
@@ -6012,7 +6076,9 @@
     "azul-marino"
    ],
    "talles": "XS al 6XL",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/mameluco-alaska.webp",
+   "nota": "Foto: mameluco con tiras reflectivas (DIFORZA 35), el usuario confirma que es este producto."
   },
   {
    "id": "mameluco-diforza-naranja",
@@ -6275,7 +6341,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "mascara-completa-5600-cl2-tpe",
@@ -6292,7 +6359,8 @@
    "ventasEneJun2026": {
     "unidades": 6,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/mascara-completa-5600-cl2-tpe.webp"
   },
   {
    "id": "mascara-completa-5700-cl2-l-sil",
@@ -6309,7 +6377,8 @@
    "ventasEneJun2026": {
     "unidades": 11,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/mascara-completa-5700-cl2-l-sil.webp"
   },
   {
    "id": "mascara-completa-5700-cl2-m-sil",
@@ -6326,7 +6395,8 @@
    "ventasEneJun2026": {
     "unidades": 2,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/mascara-completa-5700-cl2-m-sil.webp"
   },
   {
    "id": "mascara-completa-5700-cl2-s-sil",
@@ -6339,7 +6409,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/mascara-completa-5700-cl2-s-sil.webp"
   },
   {
    "id": "mascara-soldador-strong-welder-1000",
@@ -6418,7 +6489,8 @@
    "ventasEneJun2026": {
     "unidades": 2050,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/mascarilla-502-n95.webp"
   },
   {
    "id": "mascarilla-n95-plegable-2130c-901801",
@@ -6612,7 +6684,8 @@
    "ventasEneJun2026": {
     "unidades": 4147,
     "empresas": 78
-   }
+   },
+   "foto": "/img/catalogo/pantalon-cargo-diforza.webp"
   },
   {
    "id": "pantalon-cargo-eco",
@@ -6650,7 +6723,8 @@
    "ventasEneJun2026": {
     "unidades": 360,
     "empresas": 1
-   }
+   },
+   "foto": "/img/catalogo/pantalon-cargo-elastizado-diforza.webp"
   },
   {
    "id": "pantalon-cargo-ombu",
@@ -6714,7 +6788,8 @@
    "ventasEneJun2026": {
     "unidades": 3125,
     "empresas": 59
-   }
+   },
+   "foto": "/img/catalogo/pantalon-clasico-diforza.webp"
   },
   {
    "id": "pantalon-clasico-eco",
@@ -6801,7 +6876,8 @@
     "negro"
    ],
    "talles": "S al 3XL",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/pantalon-de-ambo.webp"
   },
   {
    "id": "pantalon-de-trabajo-pampero",
@@ -7130,7 +7206,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/protector-auditivo-de-copa-l-450.webp"
   },
   {
    "id": "protector-auditivo-l-320-vincha",
@@ -7211,7 +7288,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/protector-auditivo-l-450-p-casco.webp"
   },
   {
    "id": "protector-auditivo-p-casco-l-320",
@@ -7308,7 +7386,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/protector-auditivo-quantum-plast-cint.webp"
   },
   {
    "id": "protector-auditivo-quantum-smart",
@@ -7484,7 +7563,8 @@
    "ventasEneJun2026": {
     "unidades": 3424,
     "empresas": 36
-   }
+   },
+   "foto": "/img/catalogo/remera.webp"
   },
   {
    "id": "remera-manga-larga",
@@ -7510,7 +7590,8 @@
     "verde"
    ],
    "talles": "35 al 46 · S al 4XL",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/remera-manga-larga.webp"
   },
   {
    "id": "remera-termica-t-1",
@@ -7597,7 +7678,8 @@
    "ventasEneJun2026": {
     "unidades": 375,
     "empresas": 3
-   }
+   },
+   "foto": "/img/catalogo/respirador-de-copa-bls-129bw.webp"
   },
   {
    "id": "respirador-de-part-desc-c-val-1940",
@@ -7610,7 +7692,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "respirador-des-zer0-32c-fr-ffp3rd",
@@ -7623,7 +7706,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/respirador-des-zer0-32c-fr-ffp3rd.webp"
   },
   {
    "id": "respirador-descart-particulas-pleg-3230-n95-904522",
@@ -7654,7 +7738,8 @@
    "ventasEneJun2026": {
     "unidades": 110,
     "empresas": 2
-   }
+   },
+   "foto": "/img/catalogo/respirador-desech-zer0-30-ffp3rd.webp"
   },
   {
    "id": "respirador-desech-zer0-31-ffp3rd",
@@ -7667,7 +7752,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/respirador-desech-zer0-31-ffp3rd.webp"
   },
   {
    "id": "respirador-desechable-128bw-ffp2rd",
@@ -7684,7 +7770,8 @@
    "ventasEneJun2026": {
     "unidades": 220,
     "empresas": 6
-   }
+   },
+   "foto": "/img/catalogo/respirador-desechable-128bw-ffp2rd.webp"
   },
   {
    "id": "respirador-522",
@@ -7701,7 +7788,8 @@
    "ventasEneJun2026": {
     "unidades": 2680,
     "empresas": 3
-   }
+   },
+   "foto": "/img/catalogo/respirador-522.webp"
   },
   {
    "id": "respirador-desechable-bls-225b",
@@ -7714,7 +7802,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "respirador-desechable-bls-226b",
@@ -7731,7 +7820,8 @@
    "ventasEneJun2026": {
     "unidades": 360,
     "empresas": 3
-   }
+   },
+   "foto": "/img/catalogo/respirador-desechable-bls-226b.webp"
   },
   {
    "id": "respirador-desechable-zer0-32c-ffp3rd",
@@ -7744,7 +7834,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/respirador-desechable-zer0-32c-ffp3rd.webp"
   },
   {
    "id": "respirador-para-particulas-zer0-31-c",
@@ -7757,7 +7848,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/respirador-para-particulas-zer0-31-c.webp"
   },
   {
    "id": "retenedor-501-3m",
@@ -7845,11 +7937,12 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 29,
     "empresas": 2
-   }
+   },
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "semimascara-4000-next-r-m-l",
@@ -7973,7 +8066,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
    "id": "tabla-inmovilizadora-tipo-same",
@@ -8081,7 +8175,8 @@
     "negro"
    ],
    "talles": "36 al 46",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/zapatilla-funcional-lander.webp"
   },
   {
    "id": "zapatilla-funcional-mujer-bali",
@@ -8098,7 +8193,8 @@
     "negro"
    ],
    "talles": "34 al 42",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/zapatilla-funcional-mujer-bali.webp"
   },
   {
    "id": "zapatilla-funcional-soul",
@@ -8115,7 +8211,8 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/zapatilla-funcional-soul.webp"
   },
   {
    "id": "zapatilla-nexus-900za",
@@ -8305,7 +8402,8 @@
     "vison"
    ],
    "talles": "36 al 47",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/zapato-funcional-city.webp"
   },
   {
    "id": "zapato-funcional-horizon-marron",
@@ -8320,7 +8418,8 @@
     "marron"
    ],
    "talles": "36 al 47",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/zapato-funcional-horizon-marron.webp"
   },
   {
    "id": "zapato-ombu-gema-mujer-c-p-composite",
@@ -8409,7 +8508,8 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/zapato-voran-jano.webp"
   },
   {
    "id": "zapato-voran-tauro-marron",
@@ -8425,7 +8525,8 @@
     "negro"
    ],
    "talles": "35 al 47",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/zapato-voran-tauro-marron.webp"
   },
   {
    "id": "zapato-voran-teucro-marron",
@@ -8441,7 +8542,8 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": true
+   "visible": true,
+   "foto": "/img/catalogo/zapato-voran-teucro-marron.webp"
   },
   {
    "id": "barbijo-descartable-con-elastico",
@@ -8603,7 +8705,8 @@
    "talles": null,
    "visible": true,
    "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
-   "codigoFabricante": "J61"
+   "codigoFabricante": "J61",
+   "foto": "/img/catalogo/casco-de-altura-libus.webp"
   },
   {
    "id": "msa-kit-visor",
@@ -8616,7 +8719,8 @@
    "talles": null,
    "visible": true,
    "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
-   "codigoFabricante": "10190769"
+   "codigoFabricante": "10190769",
+   "foto": "/img/catalogo/msa-kit-visor.webp"
   },
   {
    "id": "protector-auditivo-l360-high-visibility",
@@ -8629,7 +8733,8 @@
    "talles": null,
    "visible": true,
    "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
-   "codigoFabricante": "902926"
+   "codigoFabricante": "902926",
+   "foto": "/img/catalogo/protector-auditivo-l360-high-visibility.webp"
   },
   {
    "id": "protector-copa-l360-casco-high-visibility",
@@ -8642,7 +8747,8 @@
    "talles": null,
    "visible": true,
    "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
-   "codigoFabricante": "902927"
+   "codigoFabricante": "902927",
+   "foto": "/img/catalogo/protector-copa-l360-casco-high-visibility.webp"
   },
   {
    "id": "protector-auditivo-libus-b300",
@@ -8654,7 +8760,8 @@
    "colores": [],
    "talles": null,
    "visible": true,
-   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "foto": "/img/catalogo/protector-auditivo-libus-b300.webp"
   },
   {
    "id": "kit-mecanizado-liviano",
@@ -8694,7 +8801,8 @@
    "colores": [],
    "talles": null,
    "visible": true,
-   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "foto": "/img/catalogo/anteojo-3m-securefit-3700.webp"
   },
   {
    "id": "bota-frigorifica-media-cana-sin-puntera",
@@ -8736,7 +8844,8 @@
    "colores": [],
    "talles": "10",
    "visible": true,
-   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "foto": "/img/catalogo/guante-aramida-g7.webp"
   },
   {
    "id": "guante-latex-neoprene",
@@ -8814,7 +8923,8 @@
    "colores": [],
    "talles": null,
    "visible": true,
-   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP"
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "foto": "/img/catalogo/conector-anclaje-mosqueton-18.webp"
   },
   {
    "id": "campera-menos-20-grados",
@@ -8825,8 +8935,8 @@
    "codigosERP": [],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "nota": "Línea impermeable (cuestionario, preg. 9). Modelo a definir con Diforza"
+   "visible": false,
+   "nota": "Línea impermeable (cuestionario, preg. 9). Modelo a definir con Diforza Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   }
  ]
 }
