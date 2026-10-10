@@ -1,6 +1,6 @@
 {
  "_nota": "Catálogo maestro completo de Diforza. Fuente: export ERP GBP 8 oct 2026 (SKU agrupados por código base) + ventas ene–jun 2026 + decisiones del usuario. Regenerar con 02_sitio-web/catalogo/catalogo_build.py. visible=false → no se muestra en el sitio. Categorías: categorias.json · colores: colores.json · fichas curadas (descripción, foto, destacados): productos.json. Incluye productos del catálogo PDF de Diforza (oct 2026) sin código ERP (catalogo_pdf_extra.py).",
- "actualizado": "2026-10-08",
+ "actualizado": "2026-10-09",
  "productos": [
   {
    "id": "adaptador-casco-facial-audit-l-400",
@@ -58,7 +58,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (sanidad): sin ventas o unificado en ambo / cofia de tela / barbijo tricapa."
   },
   {
    "id": "ambo-descartable",
@@ -71,7 +72,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (sanidad): sin ventas o unificado en ambo / cofia de tela / barbijo tricapa."
   },
   {
    "id": "ambo-ezca",
@@ -86,27 +88,103 @@
     "gris"
    ],
    "talles": "XS al 6XL",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (sanidad): sin ventas o unificado en ambo / cofia de tela / barbijo tricapa."
   },
   {
    "id": "ambo-sanidad",
-   "nombre": "Ambo sanidad",
+   "nombre": "Ambo de trabajo Diforza",
    "marca": "Diforza",
    "linea": "indumentaria",
    "subcategoria": "sanidad-y-gastronomia",
    "codigosERP": [
-    "AMBSAN"
+    "AMBSAN",
+    "CHAQAMBO",
+    "AMBCOM"
    ],
    "colores": [
     "azul-marino",
-    "blanco"
+    "blanco",
+    "verde",
+    "negro"
    ],
    "talles": "XS al 6XL",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 87,
     "empresas": 1
-   }
+   },
+   "nombreWeb": "Ambo de trabajo Diforza",
+   "descripcion": "Chaqueta escote en V + pantalón con cintura elastizada.",
+   "descripcionLarga": "El ambo Diforza es el uniforme de trabajo para sanidad, laboratorios, gastronomía y estética. Chaqueta con escote en V, manga corta y bolsillos, y pantalón con cintura elastizada para un calce cómodo durante todo el turno. La tela es liviana, fresca y resiste los lavados frecuentes. Se vende como conjunto o por pieza, en varios colores, y se personaliza con el logo de la institución o la empresa.",
+   "specs": {
+    "piezas": "Chaqueta + pantalón (también por pieza)",
+    "chaqueta": "Escote en V, manga corta, bolsillos",
+    "pantalón": "Cintura elastizada",
+    "talles": "XS al 6XL"
+   },
+   "beneficios": [
+    {
+     "titulo": "Conjunto completo",
+     "texto": "Chaqueta y pantalón; también se venden por separado."
+    },
+    {
+     "titulo": "Escote en V y manga corta",
+     "texto": "Cómodo y fresco para turnos largos."
+    },
+    {
+     "titulo": "Cintura elastizada",
+     "texto": "Pantalón que se ajusta sin cinturón."
+    },
+    {
+     "titulo": "Bolsillos",
+     "texto": "Para elementos de uso diario."
+    },
+    {
+     "titulo": "Resiste lavados frecuentes",
+     "texto": "Mantiene el color y la forma."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Logo bordado o estampado a pedido."
+    }
+   ],
+   "usos": [
+    "Clínicas y hospitales",
+    "Laboratorios",
+    "Gastronomía",
+    "Industria alimenticia",
+    "Estética y consultorios",
+    "Geriátricos"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/ambo-sanidad--azul-marino.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/ambo-sanidad--blanco.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "verde",
+     "colorFabricante": "Verde",
+     "foto": "/img/catalogo/ambo-sanidad--verde.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/ambo-sanidad--negro.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "foto": "/img/catalogo/ambo-sanidad--azul-marino.webp",
+   "nota": "Ventas ene–jun: 87 u / 1 empresa (AMBSAN). Unifica chaqueta de ambo (CHAQAMBO) y ambo combinado. Base: foto de ambo genérico (Openverse/Flickr CC0, tiene etiquetitas de la marca original Dagacci). FOTOS PROVISORIAS (genéricas CC0 de internet + recoloreos, ver _creditos_licencias.txt) → reemplazar por fotos reales de Diforza. Specs con IA → validar."
   },
   {
    "id": "andes-s-v-blanco-textil-cremallera",
@@ -1091,7 +1169,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (gorras): el usuario define un solo producto, la gorra Diforza."
   },
   {
    "id": "bandera-peligro-50-x70",
@@ -1240,20 +1319,79 @@
    "nombre": "Barbijo Tricapa Con Certificado ANMAT",
    "marca": "Diforza",
    "linea": "epp",
-   "subcategoria": "proteccion-respiratoria",
+   "subcategoria": "sanidad-y-gastronomia",
    "codigosERP": [
-    "BATRAN"
+    "BATRAN",
+    "9BARDESELAS"
    ],
-   "colores": [],
-   "talles": null,
+   "colores": [
+    "celeste"
+   ],
+   "talles": "Único",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 1701,
-    "empresas": 4
-   }
+    "unidades": 2201,
+    "empresas": 5
+   },
+   "nombreWeb": "Barbijo tricapa descartable con certificado ANMAT",
+   "descripcion": "Barbijo descartable de 3 capas con elásticos. Certificado ANMAT.",
+   "descripcionLarga": "El barbijo tricapa descartable, con certificado ANMAT, para sanidad, gastronomía, industria alimenticia y atención al público. Tres capas de tela no tejida, elásticos para las orejas y pliegues que se adaptan a la cara. Se usa y se descarta. Stock permanente en cajas para entregas en volumen.",
+   "specs": {
+    "capas": "3",
+    "ajuste": "Elásticos para las orejas",
+    "certificación": "ANMAT",
+    "uso": "Descartable"
+   },
+   "beneficios": [
+    {
+     "titulo": "Certificado ANMAT",
+     "texto": "Producto médico aprobado."
+    },
+    {
+     "titulo": "Tres capas",
+     "texto": "Tela no tejida de tres capas."
+    },
+    {
+     "titulo": "Elásticos para las orejas",
+     "texto": "Se pone y se saca en segundos."
+    },
+    {
+     "titulo": "Pliegues",
+     "texto": "Se adapta a la forma de la cara."
+    },
+    {
+     "titulo": "Descartable",
+     "texto": "Un solo uso, máxima higiene."
+    },
+    {
+     "titulo": "Stock en volumen",
+     "texto": "Cajas para todo el personal."
+    }
+   ],
+   "usos": [
+    "Sanidad",
+    "Gastronomía",
+    "Industria alimenticia",
+    "Laboratorios",
+    "Atención al público",
+    "Limpieza"
+   ],
+   "variantes": [
+    {
+     "color": "celeste",
+     "colorFabricante": "Celeste",
+     "foto": "/img/catalogo/barbijo-tricapa-con-certificado-anmat--celeste.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "foto": "/img/catalogo/barbijo-tricapa-con-certificado-anmat--celeste.webp",
+   "nota": "Ventas ene–jun: 1.701 u / 4 (BATRAN) + 500 u / 1 barbijo descartable con elástico (unificado). Stock 1.600. Foto de la TiendaNube vieja de Diforza (barbijo SMS celeste). FOTOS PROVISORIAS (genéricas CC0 de internet + recoloreos, ver _creditos_licencias.txt) → reemplazar por fotos reales de Diforza. Specs con IA → validar.",
+   "tambienEn": [
+    "proteccion-respiratoria"
+   ]
   },
   {
-   "id": "bermuda-cargo",
+   "id": "bermuda-cargo-diforza",
    "nombre": "Bermuda cargo",
    "marca": "Diforza",
    "linea": "indumentaria",
@@ -1264,16 +1402,77 @@
    "colores": [
     "azul-marino",
     "beige",
-    "gris-topo",
     "negro"
    ],
-   "talles": "36 al 68",
+   "talles": "38 al 60",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 21,
-    "empresas": 3
+    "unidades": 29,
+    "empresas": 7
    },
-   "foto": "/img/catalogo/bermuda-cargo.webp"
+   "foto": "/img/catalogo/bermuda-cargo-diforza--azul-marino.webp",
+   "nombreWeb": "Bermuda de trabajo cargo Diforza",
+   "descripcion": "Versión bermuda del cargo: gabardina 8 oz y bolsillos con tapa.",
+   "descripcionLarga": "La versión bermuda de nuestro pantalón cargo, para trabajar con calor sin resignar resistencia ni bolsillos. Confeccionada en nuestro taller en gabardina 8 oz sanforizada, con bolsillos laterales tipo cargo con tapa y velcro y triple costura de refuerzo. Ideal para tareas al aire libre, mantenimiento y logística en temporada de calor. Fabricación propia de Diforza: se puede personalizar con el logo de tu empresa (bordado o estampado).",
+   "specs": {
+    "tela": "Gabardina 8 oz sanforizada",
+    "bolsillos": "Cargo con tapa y velcro",
+    "costuras": "Triple costura de refuerzo"
+   },
+   "beneficios": [
+    {
+     "titulo": "Bolsillos con tapa y velcro",
+     "texto": "Delanteros, traseros y laterales tipo cargo: lo que llevás no se cae."
+    },
+    {
+     "titulo": "Triple costura de refuerzo",
+     "texto": "La misma resistencia que el pantalón cargo."
+    },
+    {
+     "titulo": "Gabardina 8 oz sanforizada",
+     "texto": "No encoge ni pierde la forma después del lavado."
+    },
+    {
+     "titulo": "Fresca para el verano",
+     "texto": "Largo bermuda para jornadas de calor."
+    },
+    {
+     "titulo": "3 colores",
+     "texto": "Azul marino, beige y negro."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Bordado o estampado con el logo de tu empresa."
+    }
+   ],
+   "usos": [
+    "Mantenimiento",
+    "Logística",
+    "Jardinería y espacios verdes",
+    "Construcción",
+    "Trabajo al aire libre"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/bermuda-cargo-diforza--azul-marino.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "beige",
+     "colorFabricante": "Beige",
+     "foto": "/img/catalogo/bermuda-cargo-diforza--beige.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/bermuda-cargo-diforza--negro.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "nota": "Ventas ene–jun corregidas 10 oct: 21 u con código BERCARGAB + 8 u manuales (\"Bermuda negra … (Manual)\", \"Bermuda Cargo Diforza Negra\"). Fotos: recoloreo de 21.png (único material). Talles a confirmar (ERP 36–68; vendidos 42–54)."
   },
   {
    "id": "bermuda-clasico-eco",
@@ -1286,8 +1485,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "nota": "Línea económica (Beato)"
+   "visible": false,
+   "nota": "Línea económica (Beato) Oculta 10 oct: solo se comunica la bermuda cargo Diforza."
   },
   {
    "id": "bombacha-de-campo-pampero",
@@ -1305,7 +1504,8 @@
     "verde"
    ],
    "talles": "36 al 64",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct: en pantalones solo se comunican los 3 Diforza y los 2 Ombú clásicos."
   },
   {
    "id": "borcegui-conwork-33bra",
@@ -1320,11 +1520,12 @@
     "negro"
    ],
    "talles": "35 al 47",
-   "visible": true,
-   "foto": "/img/catalogo/borcegui-conwork-33bra.webp"
+   "visible": false,
+   "foto": "/img/catalogo/borcegui-conwork-33bra.webp",
+   "nota": "Oculto 9 oct: Conwork solo se comunican 25BAF, 655ZA, 653BAF y 41ZA (decisión del usuario)."
   },
   {
-   "id": "borcegui-ozono-plus-con-puntera",
+   "id": "borcegui-ombu-ozono-plus",
    "nombre": "Borcegui Ozono plus con puntera",
    "marca": "Ombú",
    "linea": "calzado",
@@ -1333,11 +1534,35 @@
     "BOROZOMCP"
    ],
    "colores": [
-    "negro"
+    "negro",
+    "marron"
    ],
-   "talles": "37 al 48",
+   "talles": "36 al 47",
    "visible": true,
-   "foto": "/img/catalogo/borcegui-ozono-plus-con-puntera.webp"
+   "foto": "/img/catalogo/borcegui-ombu-ozono-plus--negro.webp",
+   "nombreWeb": "Borceguí de seguridad Ombú Ozono Plus",
+   "descripcion": "Caña alta para trabajos exigentes: Cordura, puntera de acero y reflectivos.",
+   "descripcionLarga": "Borceguí de caña alta para máxima protección en trabajos exigentes. Cuero flor con refuerzos de Cordura que resisten el desgaste, puntera de acero bajo normas, plantilla confort de PU bidensidad inyectada y detalles reflectivos para jornadas con baja visibilidad. Suela de poliuretano bidensidad inyectado y dieléctrica: entresuela expandida para más confort y planta compacta para más durabilidad.",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "IRAM (cód. 33470)"
+   },
+   "variantes": [
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/borcegui-ombu-ozono-plus--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/borcegui-ombu-ozono-plus--negro.pdf"
+    },
+    {
+     "color": "marron",
+     "colorFabricante": "Marrón",
+     "foto": "/img/catalogo/borcegui-ombu-ozono-plus--marron.webp",
+     "fichaTecnica": "/assets/docs/fichas/borcegui-ombu-ozono-plus--marron.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/borcegui-ombu-ozono-plus--negro.pdf"
   },
   {
    "id": "borcegui-tactico-c-punt-de-acero-base-goma-febo",
@@ -1372,7 +1597,7 @@
    "nota": "Marca ARSEG: no se comunica"
   },
   {
-   "id": "bota-cana-larga-con-puntera",
+   "id": "bota-ombu-pvc-cana-larga-con-puntera",
    "nombre": "Bota caña larga con puntera",
    "marca": "Ombú",
    "linea": "calzado",
@@ -1381,19 +1606,38 @@
     "BOOMCP"
    ],
    "colores": [
-    "blanco",
-    "negro"
+    "negro",
+    "blanco"
    ],
-   "talles": "35 al 48",
+   "talles": "36 al 46",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 468,
     "empresas": 25
    },
-   "foto": "/img/catalogo/bota-cana-larga-con-puntera.webp"
+   "foto": "/img/catalogo/bota-ombu-pvc-cana-larga-con-puntera--negra.webp",
+   "nombreWeb": "Bota de PVC Ombú caña larga con puntera de acero",
+   "descripcion": "Bota de PVC caña larga con puntera de acero, para agua, barro y frío.",
+   "descripcionLarga": "Bota industrial de caña larga con puntera de acero, para tareas que requieren máxima protección y resistencia. PVC de distintos espesores según la zona del pie para mayor resistencia estructural, diseño ergonómico para jornadas largas y forro interior de poliéster que evita el contacto directo con el PVC. Para frigoríficos, industria alimenticia, limpieza, agro y trabajos con agua o barro.",
+   "specs": {
+    "puntera": "Acero",
+    "material": "PVC"
+   },
+   "variantes": [
+    {
+     "color": "negro",
+     "colorFabricante": "Negra",
+     "foto": "/img/catalogo/bota-ombu-pvc-cana-larga-con-puntera--negra.webp"
+    },
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanca",
+     "foto": "/img/catalogo/bota-ombu-pvc-cana-larga-con-puntera--blanca.webp"
+    }
+   ]
   },
   {
-   "id": "bota-cana-larga-sin-puntera",
+   "id": "bota-ombu-pvc-cana-larga-sin-puntera",
    "nombre": "Bota caña larga sin puntera",
    "marca": "Ombú",
    "linea": "calzado",
@@ -1402,16 +1646,35 @@
     "BOOMSP"
    ],
    "colores": [
-    "blanco",
-    "negro"
+    "negro",
+    "blanco"
    ],
-   "talles": "35 al 48",
+   "talles": "36 al 46",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 1267,
     "empresas": 15
    },
-   "foto": "/img/catalogo/bota-cana-larga-sin-puntera.webp"
+   "foto": "/img/catalogo/bota-ombu-pvc-cana-larga-sin-puntera--negra.webp",
+   "nombreWeb": "Bota de PVC Ombú caña larga sin puntera",
+   "descripcion": "Bota de PVC caña larga sin puntera, liviana, para agua, barro y frío.",
+   "descripcionLarga": "Bota industrial de caña larga sin puntera de acero, más liviana, para tareas que requieren protección contra agua, barro y frío. PVC de distintos espesores según la zona del pie para mayor resistencia estructural, diseño ergonómico para jornadas largas y forro interior de poliéster que evita el contacto directo con el PVC. Para frigoríficos, industria alimenticia, limpieza, agro y trabajos con agua o barro.",
+   "specs": {
+    "puntera": "Sin puntera",
+    "material": "PVC"
+   },
+   "variantes": [
+    {
+     "color": "negro",
+     "colorFabricante": "Negra",
+     "foto": "/img/catalogo/bota-ombu-pvc-cana-larga-sin-puntera--negra.webp"
+    },
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanca",
+     "foto": "/img/catalogo/bota-ombu-pvc-cana-larga-sin-puntera--blanca.webp"
+    }
+   ]
   },
   {
    "id": "bota-ombu-nautica",
@@ -1426,8 +1689,9 @@
     "azul"
    ],
    "talles": "38 al 45",
-   "visible": true,
-   "foto": "/img/catalogo/bota-ombu-nautica.webp"
+   "visible": false,
+   "foto": "/img/catalogo/bota-ombu-nautica.webp",
+   "nota": "Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario)."
   },
   {
    "id": "bota-ombu-urbana-blanca",
@@ -1443,8 +1707,9 @@
     "negro"
    ],
    "talles": "37 al 45",
-   "visible": true,
-   "foto": "/img/catalogo/bota-ombu-urbana-blanca.webp"
+   "visible": false,
+   "foto": "/img/catalogo/bota-ombu-urbana-blanca.webp",
+   "nota": "Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario)."
   },
   {
    "id": "bota-petrombu-marron",
@@ -1459,8 +1724,9 @@
     "marron"
    ],
    "talles": "37 al 47",
-   "visible": true,
-   "foto": "/img/catalogo/bota-petrombu-marron.webp"
+   "visible": false,
+   "foto": "/img/catalogo/bota-petrombu-marron.webp",
+   "nota": "Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario)."
   },
   {
    "id": "bota-wader-de-pvc",
@@ -1506,8 +1772,9 @@
     "negro"
    ],
    "talles": "35 al 48",
-   "visible": true,
-   "foto": "/img/catalogo/botin-boro-con-puntera-de-acero-cas.webp"
+   "visible": false,
+   "foto": "/img/catalogo/botin-boro-con-puntera-de-acero-cas.webp",
+   "nota": "Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario)."
   },
   {
    "id": "botin-conwork-25baf",
@@ -1521,17 +1788,39 @@
     "9BOTCONW"
    ],
    "colores": [
-    "blanco",
-    "negro"
+    "negro",
+    "marron"
    ],
-   "talles": "35 al 48",
+   "talles": "35 al 47",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 9048,
     "empresas": 78
    },
    "nota": "Incluye el \"Botín Conwork negro\" del ERP (BOTCONW/9BOTCONW) = modelo 25BAF (confirmado por el usuario, 8 oct 2026)",
-   "foto": "/img/productos/botin-conwork-negro.webp"
+   "foto": "/img/catalogo/botin-conwork-25baf--negro.webp",
+   "nombreWeb": "Botín de seguridad Conwork 25BAF",
+   "lineaMarca": "Industrial",
+   "descripcion": "El clásico de la industria: cuero, puntera de acero y suela dieléctrica.",
+   "descripcionLarga": "El botín de seguridad más pedido por las empresas. Capellada 100 % cuero flor con doble frontura, cuello y lengüeta acolchados y puntera de acero. Pensado para el trabajo diario en industrias como la petrolera, metalúrgica, agropecuaria y de la construcción. Suela de poliuretano bidensidad dieléctrica, antideslizante y resistente a hidrocarburos. Sello IRAM 3610:2015. Opcional: plantilla antiperforación.",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "IRAM 3610:2015"
+   },
+   "variantes": [
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/botin-conwork-25baf--negro.webp"
+    },
+    {
+     "color": "marron",
+     "colorFabricante": "Cedro",
+     "foto": "/img/catalogo/botin-conwork-25baf--cedro.webp"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/conwork-25baf.pdf"
   },
   {
    "id": "botin-conwork-401baf-allworks",
@@ -1546,8 +1835,9 @@
     "negro"
    ],
    "talles": "35 al 47",
-   "visible": true,
-   "foto": "/img/catalogo/botin-conwork-401baf-allworks.webp"
+   "visible": false,
+   "foto": "/img/catalogo/botin-conwork-401baf-allworks.webp",
+   "nota": "Oculto 9 oct: Conwork solo se comunican 25BAF, 655ZA, 653BAF y 41ZA (decisión del usuario)."
   },
   {
    "id": "botin-conwork-525baf-marron",
@@ -1563,11 +1853,53 @@
     "negro"
    ],
    "talles": "35 al 48",
-   "visible": true,
-   "foto": "/img/catalogo/botin-conwork-525baf-marron.webp"
+   "visible": false,
+   "foto": "/img/catalogo/botin-conwork-525baf-marron.webp",
+   "nota": "Oculto 9 oct: Conwork solo se comunican 25BAF, 655ZA, 653BAF y 41ZA (decisión del usuario)."
   },
   {
-   "id": "botin-conwork-art-653-marron",
+   "id": "botin-conwork-53baf",
+   "nombre": "Botín Conwork Fly 53BAF",
+   "marca": "Conwork",
+   "linea": "calzado",
+   "subcategoria": "botines",
+   "codigosERP": [
+    "BOTCONW53BAF"
+   ],
+   "colores": [
+    "marron",
+    "negro"
+   ],
+   "talles": "35 al 47",
+   "visible": true,
+   "ventasEneJun2026": null,
+   "nota": "Alta 9 oct 2026 (Fly 53BAF). No está cargado en el ERP: código BOTCONW53BAF inventado siguiendo el patrón Conwork (provisorio, avisar a Diforza para darlo de alta igual).",
+   "nombreWeb": "Botín de seguridad Conwork Fly 53BAF",
+   "lineaMarca": "Fly",
+   "descripcion": "100 % cuero, sin partes textiles: más resistente y liviano.",
+   "descripcionLarga": "Botín de seguridad 100 % cuero flor, sin materiales textiles: duro por fuera, flexible por dentro y liviano. Cuello y lengüeta acolchados, plantilla moldeada y puntera de acero. Suela de poliuretano bidensidad dieléctrica, antideslizante y resistente a hidrocarburos. Sello IRAM 3610:2015. Opcional: plantilla antiperforación.",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "IRAM 3610:2015"
+   },
+   "variantes": [
+    {
+     "color": "marron",
+     "colorFabricante": "Cedro",
+     "foto": "/img/catalogo/botin-conwork-53baf--cedro.webp"
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/botin-conwork-53baf--negro.webp"
+    }
+   ],
+   "foto": "/img/catalogo/botin-conwork-53baf--cedro.webp",
+   "fichaTecnica": "/assets/docs/fichas/conwork-53baf.pdf"
+  },
+  {
+   "id": "botin-conwork-653baf",
    "nombre": "Botin Conwork Art 653 Marron",
    "marca": "Conwork",
    "linea": "calzado",
@@ -1577,15 +1909,49 @@
    ],
    "colores": [
     "marron",
+    "azul",
+    "gris",
     "negro"
    ],
-   "talles": "35 al 47",
+   "talles": "35 al 46",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 417,
     "empresas": 13
    },
-   "foto": "/img/productos/botin-conwork-653.webp"
+   "foto": "/img/catalogo/botin-conwork-653baf--chocolate.webp",
+   "nombreWeb": "Botín de seguridad Conwork Origen 653BAF",
+   "lineaMarca": "Origen",
+   "descripcion": "Diseño deportivo y puntera de aluminio, más liviana que la de acero.",
+   "descripcionLarga": "Botín de seguridad de la línea de alta gama de Conwork, con diseño deportivo y puntera de aluminio: más liviano que uno con puntera de acero, con los mismos estándares de seguridad. Cuero flor 100 %, forro textil antimicrobiano, plantilla moldeada, cuello y lengüeta acolchados. Suela de poliuretano bidensidad dieléctrica, antideslizante y resistente a hidrocarburos. Sello IRAM 3610:2015. Opcional: plantilla antiperforación.",
+   "specs": {
+    "puntera": "Aluminio",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "IRAM 3610:2015"
+   },
+   "variantes": [
+    {
+     "color": "marron",
+     "colorFabricante": "Chocolate",
+     "foto": "/img/catalogo/botin-conwork-653baf--chocolate.webp"
+    },
+    {
+     "color": "azul",
+     "colorFabricante": "Azul",
+     "foto": "/img/catalogo/botin-conwork-653baf--azul.webp"
+    },
+    {
+     "color": "gris",
+     "colorFabricante": "Gris",
+     "foto": "/img/catalogo/botin-conwork-653baf--gris.webp"
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/botin-conwork-653baf--negro.webp"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/conwork-653baf.pdf"
   },
   {
    "id": "botin-eco-pvc",
@@ -1620,7 +1986,7 @@
    "nota": "Marca DI FORZA: no se comunica"
   },
   {
-   "id": "botin-frances",
+   "id": "botin-ombu-frances",
    "nombre": "Botín Frances",
    "marca": "Ombú",
    "linea": "calzado",
@@ -1629,16 +1995,38 @@
     "BOTFRAOM"
    ],
    "colores": [
-    "blanco",
-    "negro"
+    "negro",
+    "marron"
    ],
-   "talles": "35 al 48",
+   "talles": "34 al 49",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 112,
     "empresas": 2
    },
-   "foto": "/img/catalogo/botin-frances.webp"
+   "foto": "/img/catalogo/botin-ombu-frances--negro.webp",
+   "nombreWeb": "Botín de seguridad Ombú Francés",
+   "descripcion": "Clásico de cuero con cuello de napa, puntera de acero y reflectivo.",
+   "descripcionLarga": "Botín de seguridad de diseño clásico que combina protección, confort y visibilidad. Exterior de cuero flor con cuello de napa para más flexibilidad, interior textil con refuerzo de cuero en el talón y puntera de acero bajo normas. Cinta reflectiva lateral para ambientes con poca luz. Suela de poliuretano bidensidad inyectado y dieléctrica: entresuela expandida para más confort y planta compacta para más durabilidad.",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "IRAM (cód. 20140)"
+   },
+   "variantes": [
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/botin-ombu-frances--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-ombu-frances.pdf"
+    },
+    {
+     "color": "marron",
+     "colorFabricante": "Marrón",
+     "foto": "/img/catalogo/botin-ombu-frances--marron.webp"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/botin-ombu-frances.pdf"
   },
   {
    "id": "botin-frances-con-plantilla-de-acero",
@@ -1651,11 +2039,12 @@
    ],
    "colores": [],
    "talles": "35 al 48",
-   "visible": true,
-   "foto": "/img/catalogo/botin-frances-con-plantilla-de-acero.webp"
+   "visible": false,
+   "foto": "/img/catalogo/botin-frances-con-plantilla-de-acero.webp",
+   "nota": "Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario)."
   },
   {
-   "id": "botin-funcional-frontier-marron",
+   "id": "botin-funcional-frontier",
    "nombre": "Botin Funcional Frontier Marron",
    "marca": "Funcional",
    "linea": "calzado",
@@ -1666,16 +2055,35 @@
    "colores": [
     "marron"
    ],
-   "talles": "36 al 47",
+   "talles": "34 al 47",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 1,
     "empresas": 1
    },
-   "foto": "/img/catalogo/botin-funcional-frontier-marron.webp"
+   "foto": "/img/catalogo/botin-funcional-frontier--marron.webp",
+   "nombreWeb": "Botín de seguridad Funcional Frontier",
+   "descripcion": "Botín ultraliviano de nobuck y textil, con detalles reflectivos.",
+   "descripcionLarga": "Botín de seguridad urbano y ultraliviano. Cuero nobuck combinado con textil Duratex de alta resistencia, detalles reflectivos Reflemax, forro tricapa antimicrobiano y puntera de aluminio, 40 % más liviana que una de acero. Riesgos cubiertos: dieléctrico (D), aislamiento al calor y al frío del suelo (HI, CI) y absorción de energía en el talón (E). Suela de poliuretano multidensidad dieléctrica, antideslizante, autolimpiante y resistente a hidrocarburos, con amortiguación en el talón (IPD Technology y Shock Absorber) e insertos de TPU que suman agarre y resistencia a la abrasión. Cordones reflectivos Reflemax y plantilla ergonómica. Sello IRAM. Opcional: plantilla antiperforación.",
+   "specs": {
+    "puntera": "Aluminio",
+    "suela": "PU multidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D · HI · CI · E"
+   },
+   "lineaMarca": "Ultralivianos",
+   "variantes": [
+    {
+     "color": "marron",
+     "colorFabricante": "Marrón",
+     "foto": "/img/catalogo/botin-funcional-frontier--marron.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-funcional-frontier--marron.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/botin-funcional-frontier--marron.pdf"
   },
   {
-   "id": "botin-funcional-mujer-capri",
+   "id": "botin-funcional-capri-mujer",
    "nombre": "Botin Funcional Mujer Capri",
    "marca": "Funcional",
    "linea": "calzado",
@@ -1685,12 +2093,43 @@
    ],
    "colores": [
     "beige",
-    "gris",
-    "negro"
+    "negro",
+    "gris"
    ],
    "talles": "34 al 42",
    "visible": true,
-   "foto": "/img/catalogo/botin-funcional-mujer-capri.webp"
+   "foto": "/img/catalogo/botin-funcional-capri-mujer--beige.webp",
+   "nombreWeb": "Botín de seguridad para mujer Funcional Capri",
+   "descripcion": "Botita urbana para mujer, ultraliviana, con puntera de aluminio.",
+   "descripcionLarga": "Botita urbana de seguridad ultraliviana, diseñada por y para mujeres. Cuero nobuck combinado con textiles livianos y ventilados, cuello acolchado para proteger el tobillo, forro con tratamiento antimicrobiano y puntera de aluminio, 40 % más liviana que una de acero. Riesgos cubiertos: dieléctrico (D), aislamiento al calor y al frío del suelo (HI, CI) y absorción de energía en el talón (E). Suela de poliuretano multidensidad dieléctrica, antideslizante, autolimpiante y resistente a hidrocarburos, con amortiguación en el talón (IPD Technology y Shock Absorber) e insertos de TPU que suman agarre y resistencia a la abrasión. Cordones reflectivos Reflemax y plantilla ergonómica. Sello IRAM. Opcional: plantilla antiperforación.",
+   "specs": {
+    "puntera": "Aluminio",
+    "suela": "PU multidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D · HI · CI · E"
+   },
+   "lineaMarca": "Mujer",
+   "variantes": [
+    {
+     "color": "beige",
+     "colorFabricante": "Beige",
+     "foto": "/img/catalogo/botin-funcional-capri-mujer--beige.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-funcional-capri-mujer--beige.pdf"
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/botin-funcional-capri-mujer--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-funcional-capri-mujer--negro.pdf"
+    },
+    {
+     "color": "gris",
+     "colorFabricante": "Gris",
+     "foto": "/img/catalogo/botin-funcional-capri-mujer--gris.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-funcional-capri-mujer--gris.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/botin-funcional-capri-mujer--beige.pdf"
   },
   {
    "id": "botin-funcional-street",
@@ -1703,13 +2142,50 @@
    ],
    "colores": [
     "camel",
+    "vison",
     "marron",
-    "negro",
-    "vison"
+    "negro"
    ],
-   "talles": "36 al 47",
+   "talles": "34 al 47",
    "visible": true,
-   "foto": "/img/catalogo/botin-funcional-street.webp"
+   "foto": "/img/catalogo/botin-funcional-street--camel.webp",
+   "nombreWeb": "Botín de seguridad Funcional Street",
+   "descripcion": "Botín urbano de cuero, ultraliviano, con puntera de aluminio.",
+   "descripcionLarga": "Botín de seguridad de estética urbana, ultraliviano. Cuero 100 % natural con refuerzos textiles Duratex, forro tricapa antimicrobiano, cuello y lengüeta acolchados y puntera de aluminio, 40 % más liviana que una de acero. Riesgos cubiertos: dieléctrico (D), aislamiento al calor y al frío del suelo (HI, CI) y absorción de energía en el talón (E). Suela de poliuretano multidensidad dieléctrica, antideslizante, autolimpiante y resistente a hidrocarburos, con amortiguación en el talón (IPD Technology y Shock Absorber) e insertos de TPU que suman agarre y resistencia a la abrasión. Cordones reflectivos Reflemax y plantilla ergonómica. Sello IRAM. Opcional: plantilla antiperforación.",
+   "specs": {
+    "puntera": "Aluminio",
+    "suela": "PU multidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D · HI · CI · E"
+   },
+   "lineaMarca": "Ultralivianos",
+   "variantes": [
+    {
+     "color": "camel",
+     "colorFabricante": "Camel",
+     "foto": "/img/catalogo/botin-funcional-street--camel.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-funcional-street--camel.pdf"
+    },
+    {
+     "color": "vison",
+     "colorFabricante": "Visón",
+     "foto": "/img/catalogo/botin-funcional-street--vison.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-funcional-street--vison.pdf"
+    },
+    {
+     "color": "marron",
+     "colorFabricante": "Marrón",
+     "foto": "/img/catalogo/botin-funcional-street--marron.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-funcional-street--marron.pdf"
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/botin-funcional-street--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-funcional-street--negro.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/botin-funcional-street--camel.pdf"
   },
   {
    "id": "botin-grafa-70-con-puntera",
@@ -1761,12 +2237,13 @@
     "negro"
    ],
    "talles": "35 al 41",
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 1,
     "empresas": 1
    },
-   "foto": "/img/catalogo/botin-ombu-gema-mujer-c-p-composite.webp"
+   "foto": "/img/catalogo/botin-ombu-gema-mujer-c-p-composite.webp",
+   "nota": "Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario)."
   },
   {
    "id": "botin-ombu-krypton",
@@ -1781,14 +2258,15 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 2,
     "empresas": 1
-   }
+   },
+   "nota": "Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario)."
   },
   {
-   "id": "botin-ombu-ozono",
+   "id": "botin-ombu-ozono-plus",
    "nombre": "Botin Ombu Ozono",
    "marca": "Ombú",
    "linea": "calzado",
@@ -1797,16 +2275,46 @@
     "BOTOMOZ"
    ],
    "colores": [
-    "blanco",
-    "negro"
+    "negro",
+    "marron",
+    "blanco"
    ],
-   "talles": "35 al 48",
+   "talles": "36 al 47",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 107,
     "empresas": 8
    },
-   "foto": "/img/catalogo/botin-ombu-ozono.webp"
+   "foto": "/img/catalogo/botin-ombu-ozono-plus--negro.webp",
+   "nombreWeb": "Botín de seguridad Ombú Ozono Plus",
+   "descripcion": "Botín de cuero con Cordura, puntera de acero y plantilla confort.",
+   "descripcionLarga": "Botín de seguridad resistente, pensado para dar protección y confort. Cuero flor con refuerzos de Cordura de alta tenacidad, forro textil con refuerzo de cuero en la talonera, puntera de acero certificada y plantilla confort de PU bidensidad inyectada. Cinta reflectiva en lateral y cordones. Suela de poliuretano bidensidad inyectado y dieléctrica: entresuela expandida para más confort y planta compacta para más durabilidad.",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "IRAM (cód. 33470)"
+   },
+   "variantes": [
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/botin-ombu-ozono-plus--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-ombu-ozono-plus--negro.pdf"
+    },
+    {
+     "color": "marron",
+     "colorFabricante": "Marrón",
+     "foto": "/img/catalogo/botin-ombu-ozono-plus--marron.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-ombu-ozono-plus--marron.pdf"
+    },
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/botin-ombu-ozono-plus--blanco.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-ombu-ozono-plus--blanco.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/botin-ombu-ozono-plus--negro.pdf"
   },
   {
    "id": "botin-ombu-sneaker-c-p-composite",
@@ -1822,12 +2330,13 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 1,
     "empresas": 1
    },
-   "foto": "/img/catalogo/botin-ombu-sneaker-c-p-composite.webp"
+   "foto": "/img/catalogo/botin-ombu-sneaker-c-p-composite.webp",
+   "nota": "Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario)."
   },
   {
    "id": "botin-prusiano",
@@ -1840,8 +2349,9 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "foto": "/img/catalogo/botin-prusiano.webp"
+   "visible": false,
+   "foto": "/img/catalogo/botin-prusiano.webp",
+   "nota": "Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario)."
   },
   {
    "id": "botin-skiway-art-3252",
@@ -1860,7 +2370,7 @@
    "nota": "Marca SKIWAY: no se comunica"
   },
   {
-   "id": "botin-voran-apolo-marron",
+   "id": "botin-voran-apolo",
    "nombre": "Botin Voran Apolo Marron",
    "marca": "Voran",
    "linea": "calzado",
@@ -1872,9 +2382,34 @@
     "marron",
     "negro"
    ],
-   "talles": "36 al 47",
+   "talles": "34 al 47",
    "visible": true,
-   "foto": "/img/catalogo/botin-voran-apolo-marron.webp"
+   "foto": "/img/catalogo/botin-voran-apolo--marron.webp",
+   "nombreWeb": "Botín de seguridad Voran Apolo",
+   "descripcion": "Botín de cuero y textil, con plantilla ergonómica y amortiguación.",
+   "descripcionLarga": "Botín de seguridad que combina cueros y materiales textiles, con plantilla ultra confort ergonómica y sistema Shock Absorber que distribuye la carga en el taco. Lengüeta de semi-fuelle forrada y acolchada, ojalillos metálicos. Puntera de acero, cuello acolchado y suela de poliuretano bidensidad por inyección directa: dieléctrica, antideslizante, autolimpiante, resistente a hidrocarburos, con estrías para escaleras y pisada ancha. Sello IRAM. Riesgos cubiertos: dieléctrico (D), aislamiento al frío y al calor del piso (CI, HI), absorción de energía en el talón (E) y resistencia al agua (WR).",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D · CI · HI · E · WR"
+   },
+   "lineaMarca": "Industrial Flex",
+   "variantes": [
+    {
+     "color": "marron",
+     "colorFabricante": "Marrón",
+     "foto": "/img/catalogo/botin-voran-apolo--marron.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-voran-apolo--marron.pdf"
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/botin-voran-apolo--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-voran-apolo--negro.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/botin-voran-apolo--marron.pdf"
   },
   {
    "id": "botin-voran-aquiles",
@@ -1889,12 +2424,37 @@
     "blanco",
     "negro"
    ],
-   "talles": "36 al 47",
+   "talles": "34 al 47",
    "visible": true,
-   "foto": "/img/catalogo/botin-voran-aquiles.webp"
+   "foto": "/img/catalogo/botin-voran-aquiles--blanco.webp",
+   "nombreWeb": "Botín de seguridad Voran Aquiles",
+   "descripcion": "Botín de cuero flor liso, en blanco (industria alimenticia) o negro.",
+   "descripcionLarga": "Botín de seguridad en cuero flor liso, disponible en blanco —ideal para industria alimenticia, frigoríficos y laboratorios— y en negro. Lengüeta forrada y acolchada, ojalillos metálicos, plantilla confort de caucho y sistema Shock Absorber. Puntera de acero, cuello acolchado y suela de poliuretano bidensidad por inyección directa: dieléctrica, antideslizante, autolimpiante, resistente a hidrocarburos, con estrías para escaleras y pisada ancha. Sello IRAM. Riesgos cubiertos: dieléctrico (D), aislamiento al frío y al calor del piso (CI, HI), absorción de energía en el talón (E) y resistencia al agua (WR).",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D · CI · HI · E · WR"
+   },
+   "lineaMarca": "Industrial Flex",
+   "variantes": [
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/botin-voran-aquiles--blanco.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-voran-aquiles--blanco.pdf"
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/botin-voran-aquiles--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-voran-aquiles--negro.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/botin-voran-aquiles--blanco.pdf"
   },
   {
-   "id": "botin-voran-argos-marron",
+   "id": "botin-voran-argos",
    "nombre": "Botin Voran Argos Marron",
    "marca": "Voran",
    "linea": "calzado",
@@ -1906,9 +2466,34 @@
     "marron",
     "negro"
    ],
-   "talles": "36 al 47",
+   "talles": "34 al 47",
    "visible": true,
-   "foto": "/img/catalogo/botin-voran-argos-marron.webp"
+   "foto": "/img/catalogo/botin-voran-argos--marron.webp",
+   "nombreWeb": "Botín de seguridad Voran Argos",
+   "descripcion": "Botín de cuero flor liso, antiestático y resistente al agua.",
+   "descripcionLarga": "Botín de seguridad en cuero flor liso con propiedad antiestática, lengüeta de semi-fuelle forrada y acolchada, ojalillos metálicos, plantilla confort de caucho y sistema Shock Absorber. Puntera de acero, cuello acolchado y suela de poliuretano bidensidad por inyección directa: dieléctrica, antideslizante, autolimpiante, resistente a hidrocarburos, con estrías para escaleras y pisada ancha. Sello IRAM. Riesgos cubiertos: dieléctrico (D), aislamiento al frío y al calor del piso (CI, HI), absorción de energía en el talón (E) y resistencia al agua (WR).",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D · CI · HI · E · WR · Antiestático"
+   },
+   "lineaMarca": "Industrial Flex",
+   "variantes": [
+    {
+     "color": "marron",
+     "colorFabricante": "Marrón",
+     "foto": "/img/catalogo/botin-voran-argos--marron.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-voran-argos--marron.pdf"
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/botin-voran-argos--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-voran-argos--negro.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/botin-voran-argos--marron.pdf"
   },
   {
    "id": "botin-voran-cronos",
@@ -1938,9 +2523,28 @@
    "colores": [
     "negro"
    ],
-   "talles": "36 al 47",
+   "talles": "34 al 47",
    "visible": true,
-   "foto": "/img/catalogo/botin-voran-neptuno.webp"
+   "foto": "/img/catalogo/botin-voran-neptuno--negro.webp",
+   "nombreWeb": "Botín de seguridad Voran Neptuno",
+   "descripcion": "Botín francés de cuero box liso, resistente al agua.",
+   "descripcionLarga": "Botín de seguridad tipo francés en cuero box liso, con lengüeta de semi-fuelle, ojalillos reforzados y plantilla confort de caucho de baja densidad. Puntera de acero, cuello acolchado y suela de poliuretano bidensidad por inyección directa: dieléctrica, antideslizante, autolimpiante, resistente a hidrocarburos, con estrías para escaleras y pisada ancha. Sello IRAM. Riesgos cubiertos: dieléctrico (D), aislamiento al frío y al calor del piso (CI, HI), absorción de energía en el talón (E) y resistencia al agua (WR).",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D · CI · HI · E · WR"
+   },
+   "lineaMarca": "Industrial Flex",
+   "variantes": [
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/botin-voran-neptuno--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/botin-voran-neptuno.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/botin-voran-neptuno.pdf"
   },
   {
    "id": "botiquin",
@@ -2034,7 +2638,7 @@
    "visible": true
   },
   {
-   "id": "buzo-friza",
+   "id": "buzo-friza-diforza",
    "nombre": "Buzo friza",
    "marca": "Diforza",
    "linea": "indumentaria",
@@ -2043,28 +2647,73 @@
     "BUFRDIF"
    ],
    "colores": [
-    "gris",
-    "verde",
     "azul-marino",
-    "beige",
-    "blanco",
-    "bordo",
-    "celeste",
-    "gris-melange",
-    "gris-topo",
-    "naranja",
-    "negro",
-    "verde-benetton",
-    "verde-ingles",
-    "verde-oliva"
+    "negro"
    ],
-   "talles": "XS al 6XL",
+   "talles": "S al XXXL",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 643,
-    "empresas": 26
+    "unidades": 1500,
+    "empresas": 30
    },
-   "foto": "/img/catalogo/buzo-friza.webp"
+   "foto": "/img/catalogo/buzo-friza-diforza--azul-marino.webp",
+   "nombreWeb": "Buzo de trabajo friza cuello redondo Diforza",
+   "descripcion": "Friza de algodón, cuello redondo, cintura y puños en ribb.",
+   "descripcionLarga": "El buzo de trabajo clásico para los meses de frío. Confeccionado en friza de algodón, abrigada y cómoda, con cuello redondo, cintura y puños en ribb que mantienen el calor, y costuras reforzadas para el uso diario. Combina con camisas y chombas Diforza y se personaliza con el logo de la empresa.",
+   "specs": {
+    "tela": "Friza de algodón",
+    "cuello": "Redondo",
+    "cintura y puños": "Ribb",
+    "costuras": "Reforzadas"
+   },
+   "beneficios": [
+    {
+     "titulo": "Friza de algodón",
+     "texto": "Abriga y es cómoda para toda la jornada."
+    },
+    {
+     "titulo": "Cuello redondo",
+     "texto": "Clásico y fácil de combinar con camisa o chomba debajo."
+    },
+    {
+     "titulo": "Cintura y puños en ribb",
+     "texto": "Ajustan sin apretar y retienen el calor."
+    },
+    {
+     "titulo": "Costuras reforzadas",
+     "texto": "Más durabilidad en el uso diario."
+    },
+    {
+     "titulo": "2 colores",
+     "texto": "Azul marino y negro."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Bordado o estampado con el logo de tu empresa; cinta reflectiva a pedido."
+    }
+   ],
+   "usos": [
+    "Industria",
+    "Logística",
+    "Mantenimiento",
+    "Depósitos",
+    "Servicios"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/buzo-friza-diforza--azul-marino.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/buzo-friza-diforza--negro.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "nota": "Ventas ene–jun 10 oct: 643 u con código BUFRDIF + ~850 u manuales. Specs: placa del catálogo (buzos/5.png)."
   },
   {
    "id": "buzo-friza-azul",
@@ -2077,8 +2726,9 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "foto": "/img/catalogo/buzo-friza-azul.webp"
+   "visible": false,
+   "foto": "/img/catalogo/buzo-friza-azul.webp",
+   "nota": "Oculto 10 oct: en buzos solo se comunican friza cuello redondo y polar medio cierre Diforza."
   },
   {
    "id": "buzo-friza-bordo",
@@ -2091,7 +2741,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct: en buzos solo se comunican friza cuello redondo y polar medio cierre Diforza."
   },
   {
    "id": "buzo-friza-celeste",
@@ -2104,7 +2755,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct: en buzos solo se comunican friza cuello redondo y polar medio cierre Diforza."
   },
   {
    "id": "buzo-friza-eco",
@@ -2117,8 +2769,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "nota": "Línea económica (Beato)"
+   "visible": false,
+   "nota": "Línea económica (Beato) Oculto 10 oct: en buzos solo se comunican friza cuello redondo y polar medio cierre Diforza."
   },
   {
    "id": "buzo-friza-gris-topo",
@@ -2131,7 +2783,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct: en buzos solo se comunican friza cuello redondo y polar medio cierre Diforza."
   },
   {
    "id": "buzo-friza-negro",
@@ -2144,10 +2797,11 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct: en buzos solo se comunican friza cuello redondo y polar medio cierre Diforza."
   },
   {
-   "id": "buzo-polar-1-2-cierre-diforza",
+   "id": "buzo-polar-medio-cierre-diforza",
    "nombre": "Buzo polar 1/2 cierre Diforza",
    "marca": "Diforza",
    "linea": "indumentaria",
@@ -2157,19 +2811,74 @@
    ],
    "colores": [
     "azul-marino",
-    "negro",
-    "verde-benetton",
-    "verde-ingles",
-    "verde-oliva",
-    "naranja"
+    "negro"
    ],
-   "talles": "XS al 6XL",
+   "talles": "S al XXXL",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 1515,
-    "empresas": 18
+    "unidades": 2600,
+    "empresas": 20
    },
-   "foto": "/img/catalogo/buzo-polar-1-2-cierre-diforza.webp"
+   "foto": "/img/catalogo/buzo-polar-medio-cierre-diforza--azul-marino.webp",
+   "nombreWeb": "Buzo de trabajo polar medio cierre Diforza",
+   "descripcion": "Polar antipeeling, cuello alto y cierre diente de perro reforzado.",
+   "descripcionLarga": "El buzo polar que más vendemos, pensado para trabajar con frío. Tela polar antipeeling que no hace bolitas con el uso, cuello alto que protege del viento, medio cierre con dientes de perro reforzado y puños elastizados. Costuras reforzadas para el uso diario y personalizable con el logo de la empresa.",
+   "specs": {
+    "tela": "Polar antipeeling",
+    "cuello": "Alto con medio cierre",
+    "cierre": "Diente de perro reforzado",
+    "puños": "Elastizados",
+    "costuras": "Reforzadas"
+   },
+   "beneficios": [
+    {
+     "titulo": "Polar antipeeling",
+     "texto": "Abriga, es liviano y no hace bolitas con el uso y los lavados."
+    },
+    {
+     "titulo": "Cuello alto con medio cierre",
+     "texto": "Protege del viento y se regula según la temperatura."
+    },
+    {
+     "titulo": "Cierre diente de perro reforzado",
+     "texto": "Más resistente que un cierre común."
+    },
+    {
+     "titulo": "Puños elastizados",
+     "texto": "Ajustan y retienen el calor."
+    },
+    {
+     "titulo": "2 colores",
+     "texto": "Azul marino y negro."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Bordado o estampado con el logo de tu empresa; cinta reflectiva a pedido."
+    }
+   ],
+   "usos": [
+    "Industria",
+    "Logística",
+    "Trabajo al aire libre",
+    "Cámaras y depósitos",
+    "Seguridad",
+    "Servicios"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/buzo-polar-medio-cierre-diforza--azul-marino.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/buzo-polar-medio-cierre-diforza--negro.webp",
+     "fotoGenerada": false
+    }
+   ],
+   "nota": "Ventas ene–jun 10 oct: 1.515 u con código BUPOLDIF + ~1.100 u manuales (bordados, estampados, OC443 polar negro). Specs: placa del catálogo (buzos/7.png)."
   },
   {
    "id": "buzo-polar-combinado",
@@ -2182,7 +2891,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct: en buzos solo se comunican friza cuello redondo y polar medio cierre Diforza."
   },
   {
    "id": "buzo-polar-eco",
@@ -2195,8 +2905,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "nota": "Línea económica (Beato)"
+   "visible": false,
+   "nota": "Línea económica (Beato) Oculto 10 oct: en buzos solo se comunican friza cuello redondo y polar medio cierre Diforza."
   },
   {
    "id": "cadena-de-25mts",
@@ -2253,25 +2963,119 @@
     "azul-marino",
     "azulino",
     "beige",
-    "blanco",
-    "celeste",
     "gris",
     "gris-topo",
-    "jean",
     "naranja",
-    "negro",
-    "verde-benetton",
     "verde-ingles",
-    "verde-oliva",
-    "verde"
+    "negro",
+    "blanco"
    ],
-   "talles": "36 al 68",
+   "talles": "36 al 64",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 3278,
+    "unidades": 5200,
     "empresas": 53
    },
-   "foto": "/indumentaria-de-trabajo/img/prod-camisa-clasica-diforza.webp"
+   "foto": "/img/catalogo/camisa-clasica-diforza--azul-marino.webp",
+   "nombreWeb": "Camisa de trabajo clásica Diforza",
+   "descripcion": "Gabardina 8 oz sanforizada, manga larga y 2 bolsillos con tapa.",
+   "descripcionLarga": "La camisa de trabajo que más vendemos, confeccionada en nuestro taller con la misma gabardina 8 oz sanforizada que nuestros pantalones, para armar el uniforme completo en el mismo tono. Manga larga, dos bolsillos en el pecho con tapa y botón, y costuras reforzadas para el uso diario. Se puede personalizar con el logo de tu empresa y sumarle cinta reflectiva de alta visibilidad.",
+   "specs": {
+    "tela": "Gabardina 8 oz sanforizada",
+    "manga": "Larga",
+    "bolsillos": "2 en el pecho con tapa y botón",
+    "opcionales": "Logo bordado o estampado · cinta reflectiva"
+   },
+   "beneficios": [
+    {
+     "titulo": "Gabardina 8 oz sanforizada",
+     "texto": "No encoge ni pierde la forma después del lavado."
+    },
+    {
+     "titulo": "Combina con nuestros pantalones",
+     "texto": "Misma tela y colores para armar el uniforme completo."
+    },
+    {
+     "titulo": "2 bolsillos con tapa y botón",
+     "texto": "En el pecho, para lapiceras, anotadores o el celular."
+    },
+    {
+     "titulo": "Manga larga con puño",
+     "texto": "Protege los brazos en el trabajo diario."
+    },
+    {
+     "titulo": "9 colores",
+     "texto": "Del azul marino clásico al naranja de alta visibilidad."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Bordado o estampado del logo y cinta reflectiva a pedido."
+    }
+   ],
+   "usos": [
+    "Industria",
+    "Logística",
+    "Mantenimiento",
+    "Construcción",
+    "Servicios",
+    "Vía pública (con cinta reflectiva)"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/camisa-clasica-diforza--azul-marino.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "azulino",
+     "colorFabricante": "Azulino",
+     "foto": "/img/catalogo/camisa-clasica-diforza--azulino.webp"
+    },
+    {
+     "color": "beige",
+     "colorFabricante": "Beige",
+     "foto": "/img/catalogo/camisa-clasica-diforza--beige.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "gris",
+     "colorFabricante": "Gris",
+     "foto": "/img/catalogo/camisa-clasica-diforza--gris.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "gris-topo",
+     "colorFabricante": "Gris topo",
+     "foto": "/img/catalogo/camisa-clasica-diforza--gris-topo.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "naranja",
+     "colorFabricante": "Naranja",
+     "foto": "/img/catalogo/camisa-clasica-diforza--naranja.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "verde-ingles",
+     "colorFabricante": "Verde inglés",
+     "foto": "/img/catalogo/camisa-clasica-diforza--verde-ingles.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/camisa-clasica-diforza--negro.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/camisa-clasica-diforza--blanco.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "nota": "Ventas ene–jun 10 oct: 3.278 u con código CAMCLDIAZ (53 empresas) + ~1.900 u en líneas manuales (camisa azul/beige/gris topo/naranja/verde, varias con cinta reflectiva y logo). Colores por ERP + ventas (azulino = foto real). Talles 36–64 (curva del ERP; algunos colores llegan a 68)."
   },
   {
    "id": "camisa-clasica-eco",
@@ -2284,8 +3088,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "nota": "Línea económica (Beato)"
+   "visible": false,
+   "nota": "Línea económica (Beato) Oculta 10 oct: en camisas solo se comunican la clásica Diforza y la clásica Ombú."
   },
   {
    "id": "camisa-clasica-ombu",
@@ -2297,19 +3101,79 @@
     "CAMCLOM"
    ],
    "colores": [
-    "azul-marino",
-    "azulino",
     "beige",
-    "blanco",
-    "verde"
+    "azul-marino",
+    "azulino"
    ],
-   "talles": "36 al 64",
+   "talles": "38 al 60",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 58,
-    "empresas": 5
+    "unidades": 500,
+    "empresas": 8
    },
-   "foto": "/img/catalogo/camisa-clasica-ombu.webp"
+   "foto": "/img/catalogo/camisa-clasica-ombu--beige.webp",
+   "nombreWeb": "Camisa de trabajo clásica Ombú",
+   "descripcion": "Grafa Ombú 100 % algodón, pre-encogida, anti-olor y con certificación ARA.",
+   "descripcionLarga": "La camisa de trabajo de Ombú, confeccionada en Grafa Ombú 100 % algodón de primera calidad: resistente y cómoda para el uso diario en condiciones exigentes. Mantiene la forma y los colores lavado tras lavado, y su algodón cuenta con certificación ARA (Algodón Responsable Argentino). Combina con el pantalón clásico Ombú. Somos distribuidores oficiales de Ombú.",
+   "specs": {
+    "tela": "Grafa Ombú 100 % algodón, sarga 2/1",
+    "tratamiento": "Pre-encogido · anti-olor",
+    "costuras": "Doble refuerzo",
+    "certificación": "ARA (Algodón Responsable Argentino)",
+    "manga": "Larga"
+   },
+   "beneficios": [
+    {
+     "titulo": "Grafa Ombú 100 % algodón",
+     "texto": "Tejido sarga 2/1: textura resistente y confortable."
+    },
+    {
+     "titulo": "Pre-encogida y colores firmes",
+     "texto": "Conserva la forma y el color, con resistencia garantizada para 50 lavados."
+    },
+    {
+     "titulo": "Terminación anti-olor",
+     "texto": "Evita hongos y bacterias, y mantiene la prenda fresca."
+    },
+    {
+     "titulo": "Doble costura de refuerzo",
+     "texto": "Más durabilidad en las zonas de mayor tensión."
+    },
+    {
+     "titulo": "Algodón certificado ARA",
+     "texto": "Algodón Responsable Argentino, cultivado y procesado con prácticas responsables."
+    },
+    {
+     "titulo": "3 colores",
+     "texto": "Beige, azul marino y azulino."
+    }
+   ],
+   "usos": [
+    "Industria",
+    "Mantenimiento",
+    "Logística",
+    "Construcción",
+    "Servicios generales"
+   ],
+   "variantes": [
+    {
+     "color": "beige",
+     "colorFabricante": "Beige",
+     "foto": "/img/catalogo/camisa-clasica-ombu--beige.webp"
+    },
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/camisa-clasica-ombu--azul-marino.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "azulino",
+     "colorFabricante": "Azulino",
+     "foto": "/img/catalogo/camisa-clasica-ombu--azulino.webp"
+    }
+   ],
+   "nota": "Ventas ene–jun 10 oct: 58 u con código CAMCLOM (5 empresas) + ~450 u manuales (Ombú azulino, azul c/logo y reflectivo, etc.). Art. Ombú 55500-08 (beige), 55500-10 (azul marino), 55500-04 (azulino). Talles 38–60 (tabla de tiendaombu)."
   },
   {
    "id": "camisa-clasica-ombu-grafil",
@@ -2322,7 +3186,8 @@
    ],
    "colores": [],
    "talles": "36 al 60",
-   "visible": true
+   "visible": false,
+   "nota": "Oculta 10 oct: en camisas solo se comunican la clásica Diforza y la clásica Ombú."
   },
   {
    "id": "camisa-de-trabajo-pampero",
@@ -2340,8 +3205,9 @@
     "verde"
    ],
    "talles": "36 al 66",
-   "visible": true,
-   "foto": "/img/catalogo/camisa-de-trabajo-pampero.webp"
+   "visible": false,
+   "foto": "/img/catalogo/camisa-de-trabajo-pampero.webp",
+   "nota": "Oculta 10 oct: en camisas solo se comunican la clásica Diforza y la clásica Ombú."
   },
   {
    "id": "camisa-ignifuga-nomex-6-oz",
@@ -2357,7 +3223,8 @@
     "azul"
    ],
    "talles": "36 al 60",
-   "visible": true
+   "visible": false,
+   "nota": "Oculta 10 oct: en camisas solo se comunican la clásica Diforza y la clásica Ombú."
   },
   {
    "id": "camisolin-descartable",
@@ -2370,7 +3237,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (sanidad): sin ventas o unificado en ambo / cofia de tela / barbijo tricapa."
   },
   {
    "id": "campera-aviador",
@@ -2483,17 +3351,80 @@
     "CAMPOLDIF"
    ],
    "colores": [
-    "azul",
+    "azul-marino",
     "negro",
     "verde-ingles"
    ],
-   "talles": "XS al 6XL",
+   "talles": "S al 4XL",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 284,
     "empresas": 3
    },
-   "foto": "/img/catalogo/campera-polar-diforza.webp"
+   "foto": "/img/catalogo/campera-polar-diforza--azul-marino.webp",
+   "nombreWeb": "Campera polar Diforza",
+   "descripcion": "Polar antipeeling con cierre completo, cuello alto y bolsillos.",
+   "descripcionLarga": "Una campera abrigada y liviana para el día a día en temporada fresca, o como capa intermedia debajo de una campera de abrigo. Confeccionada en polar antipeeling, que no hace bolitas con el uso, con cuello alto, cierre completo y bolsillos laterales. Combina con el buzo y el chaleco polar Diforza y se personaliza con el logo de la empresa.",
+   "specs": {
+    "tela": "Polar antipeeling",
+    "cuello": "Alto",
+    "cierre": "Completo",
+    "bolsillos": "Laterales"
+   },
+   "beneficios": [
+    {
+     "titulo": "Polar antipeeling",
+     "texto": "Abriga, es liviana y no hace bolitas con el uso."
+    },
+    {
+     "titulo": "Cierre completo y cuello alto",
+     "texto": "Fácil de poner y sacar; protege del viento."
+    },
+    {
+     "titulo": "Bolsillos laterales",
+     "texto": "Para las manos o elementos chicos."
+    },
+    {
+     "titulo": "Capa intermedia",
+     "texto": "Se usa sola o debajo de una campera de abrigo."
+    },
+    {
+     "titulo": "Combina con buzo y chaleco polar",
+     "texto": "Mismo tono para el uniforme de invierno."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Logo bordado o estampado y cinta reflectiva a pedido."
+    }
+   ],
+   "usos": [
+    "Industria",
+    "Logística",
+    "Mantenimiento",
+    "Atención al público",
+    "Trabajo al aire libre"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/campera-polar-diforza--azul-marino.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/campera-polar-diforza--negro.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "verde-ingles",
+     "colorFabricante": "Verde inglés",
+     "foto": "/img/catalogo/campera-polar-diforza--verde-ingles.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "nota": "Specs, colores y talles armados con IA (sin info de Diforza, aprobado por el usuario 10 oct) — validar."
   },
   {
    "id": "campera-rompeviento-con-polar",
@@ -2512,7 +3443,7 @@
    "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
-   "id": "campera-silver-diforza-verde-ingles",
+   "id": "campera-rompeviento-silver-diforza",
    "nombre": "Campera rompeviento Silver con capucha",
    "marca": "Diforza",
    "linea": "indumentaria",
@@ -2521,12 +3452,69 @@
     "CAMPSILV"
    ],
    "colores": [
+    "azul-marino",
     "verde-ingles"
    ],
-   "talles": "XS al 6XL",
+   "talles": "S al 4XL",
    "visible": true,
-   "foto": "/img/catalogo/campera-silver-diforza-verde-ingles.webp",
-   "nota": "Nombre según catálogo Diforza oct 2026 (código ERP CAMPSILV). Foto del catálogo PDF en azul marino."
+   "foto": "/img/catalogo/campera-rompeviento-silver-diforza--azul-marino.webp",
+   "nota": "Nombre según catálogo Diforza oct 2026 (código ERP CAMPSILV). Foto del catálogo PDF en azul marino. Specs, colores y talles armados con IA (sin info de Diforza, aprobado por el usuario 10 oct) — validar.",
+   "nombreWeb": "Campera rompeviento Silver con capucha Diforza",
+   "descripcion": "Rompeviento abrigada con capucha, cierre completo y bolsillos.",
+   "descripcionLarga": "Una campera rompeviento para trabajar al aire libre con viento y frío. Tela exterior cortaviento, interior abrigado, capucha, cierre frontal completo y bolsillos. Pensada para jornadas a la intemperie en obra, logística o vía pública, y personalizable con el logo de la empresa.",
+   "specs": {
+    "tela": "Exterior rompeviento",
+    "abrigo": "Interior abrigado",
+    "capucha": "Sí",
+    "cierre": "Completo"
+   },
+   "beneficios": [
+    {
+     "titulo": "Rompeviento",
+     "texto": "Tela exterior que corta el viento."
+    },
+    {
+     "titulo": "Interior abrigado",
+     "texto": "Retiene el calor en jornadas frías."
+    },
+    {
+     "titulo": "Capucha",
+     "texto": "Protege la cabeza del viento y la llovizna."
+    },
+    {
+     "titulo": "Cierre frontal completo",
+     "texto": "Fácil de poner y sacar."
+    },
+    {
+     "titulo": "Bolsillos",
+     "texto": "Para las manos y elementos chicos."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Logo bordado o estampado y cinta reflectiva a pedido."
+    }
+   ],
+   "usos": [
+    "Trabajo al aire libre",
+    "Construcción",
+    "Logística",
+    "Vía pública",
+    "Seguridad"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/campera-rompeviento-silver-diforza--azul-marino.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "verde-ingles",
+     "colorFabricante": "Verde inglés",
+     "foto": "/img/catalogo/campera-rompeviento-silver-diforza--verde-ingles.webp",
+     "fotoGenerada": true
+    }
+   ]
   },
   {
    "id": "campera-soft-diforza",
@@ -2563,7 +3551,7 @@
    "nota": "Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
-   "id": "campera-trucker",
+   "id": "campera-trucker-diforza",
    "nombre": "Campera trucker",
    "marca": "Diforza",
    "linea": "indumentaria",
@@ -2572,23 +3560,90 @@
     "CAMTRUDIF"
    ],
    "colores": [
-    "gris",
-    "verde",
-    "azul-marino",
-    "blanco",
-    "naranja",
+    "azul-francia",
     "negro",
-    "verde-benetton",
-    "verde-ingles",
-    "verde-manzana"
+    "gris",
+    "blanco"
    ],
-   "talles": "XS al 6XL",
+   "talles": "S al 4XL",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 2484,
+    "unidades": 3000,
     "empresas": 34
    },
-   "foto": "/img/catalogo/campera-trucker.webp"
+   "foto": "/img/catalogo/campera-trucker-diforza--azul-francia.webp",
+   "nombreWeb": "Campera de trabajo trucker Diforza",
+   "descripcion": "Tela trucker con guata de 150 g, capucha y cuello de polar.",
+   "descripcionLarga": "La campera de trabajo que más vendemos para el invierno. Confeccionada en tela trucker, forrada en matelaseado y con relleno de guata de 150 g, abriga en las jornadas más frías sin perder movilidad. Tiene capucha, cuello forrado en polar, cierre frontal con cremallera oculto por solapa, dos bolsillos frontales y un bolsillo interno. Se personaliza con el logo de la empresa y se le puede sumar cinta reflectiva.",
+   "specs": {
+    "tela": "Trucker",
+    "abrigo": "Guata 150 g · forro matelaseado",
+    "cuello": "Forrado en polar",
+    "capucha": "Sí",
+    "cierre": "Cremallera con solapa",
+    "bolsillos": "2 frontales + 1 interno"
+   },
+   "beneficios": [
+    {
+     "titulo": "Tela trucker",
+     "texto": "Resistente al viento y al uso diario."
+    },
+    {
+     "titulo": "Relleno de guata de 150 g",
+     "texto": "Forro matelaseado que retiene el calor."
+    },
+    {
+     "titulo": "Capucha y cuello de polar",
+     "texto": "Protección extra para la cabeza y el cuello."
+    },
+    {
+     "titulo": "Cierre con solapa",
+     "texto": "Cremallera frontal oculta por solapa: no entra el viento."
+    },
+    {
+     "titulo": "3 bolsillos",
+     "texto": "Dos frontales y uno interno para el celular o documentos."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Logo bordado o estampado y cinta reflectiva a pedido."
+    }
+   ],
+   "usos": [
+    "Logística y depósitos",
+    "Construcción",
+    "Trabajo al aire libre",
+    "Seguridad",
+    "Industria",
+    "Cámaras de frío"
+   ],
+   "variantes": [
+    {
+     "color": "azul-francia",
+     "colorFabricante": "Azul francia",
+     "foto": "/img/catalogo/campera-trucker-diforza--azul-francia.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/campera-trucker-diforza--negro.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "gris",
+     "colorFabricante": "Gris",
+     "foto": "/img/catalogo/campera-trucker-diforza--gris.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/campera-trucker-diforza--blanco.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "nota": "Ventas ene–jun 10 oct: 2.484 u con código CAMTRUDIF + ~500 u manuales. Specs dadas por el usuario 10 oct (+ placa \"Campera térmica\"). Colores definidos por el usuario (azul francia, negro, gris, blanco). Ficha/flyer del proveedor en camperas/campera-truckerdiforza-2-*.webp."
   },
   {
    "id": "campera-trucker-eco",
@@ -2605,8 +3660,8 @@
    "nota": "Línea económica (Beato) Oculto 9 oct: no figura en el catálogo actualizado de Diforza."
   },
   {
-   "id": "capa-de-lluvia",
-   "nombre": "Capa de lluvia",
+   "id": "capa-de-lluvia-diforza",
+   "nombre": "Capa de lluvia Diforza",
    "marca": "Diforza",
    "linea": "indumentaria",
    "subcategoria": "traje-de-lluvia",
@@ -2620,10 +3675,70 @@
    "talles": "S al 5XL",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 3422,
-    "empresas": 34
+    "unidades": 3449,
+    "empresas": 35
    },
-   "foto": "/img/catalogo/capa-de-lluvia.webp"
+   "foto": "/img/catalogo/capa-de-lluvia-diforza--amarillo.webp",
+   "nombreWeb": "Capa de lluvia Diforza",
+   "descripcion": "Impermeable larga con capucha y broches. Amarilla o azul.",
+   "descripcionLarga": "La capa de lluvia Diforza es la más vendida de nuestro catálogo para trabajar bajo la lluvia. Larga, por debajo de la rodilla, cubre el cuerpo y protege la ropa de trabajo. Tiene capucha con cordón de ajuste, cierre frontal con broches a presión y puños elastizados que frenan la entrada de agua. Se ofrece en amarillo, para más visibilidad, y en azul marino, y se puede pedir con cinta reflectiva. Stock permanente para entregas en volumen.",
+   "specs": {
+    "material": "Tela impermeable",
+    "largo": "Por debajo de la rodilla",
+    "capucha": "Con cordón de ajuste",
+    "cierre": "Broches a presión",
+    "puños": "Elastizados",
+    "reflectivo": "Opcional, a pedido"
+   },
+   "beneficios": [
+    {
+     "titulo": "Impermeable",
+     "texto": "Tela impermeable que mantiene seca la ropa de trabajo."
+    },
+    {
+     "titulo": "Largo completo",
+     "texto": "Cubre por debajo de la rodilla."
+    },
+    {
+     "titulo": "Capucha con cordón",
+     "texto": "Se ajusta a la cabeza y protege del viento y la lluvia."
+    },
+    {
+     "titulo": "Broches a presión",
+     "texto": "Cierre frontal rápido de abrir y cerrar, incluso con guantes."
+    },
+    {
+     "titulo": "Puños elastizados",
+     "texto": "Frenan la entrada de agua por las mangas."
+    },
+    {
+     "titulo": "Reflectivo opcional",
+     "texto": "Se puede pedir con cinta reflectiva para trabajar con poca luz o en vía pública."
+    }
+   ],
+   "usos": [
+    "Construcción y obra",
+    "Vía pública y tránsito",
+    "Logística y playas de carga",
+    "Seguridad y vigilancia",
+    "Agro",
+    "Mantenimiento exterior"
+   ],
+   "variantes": [
+    {
+     "color": "amarillo",
+     "colorFabricante": "Amarillo",
+     "foto": "/img/catalogo/capa-de-lluvia-diforza--amarillo.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/capa-de-lluvia-diforza--azul-marino.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "nota": "Ventas ene–jun: 3.422 u CALLU (34 empresas) + ~27 u manuales (capas verdes y amarillas sin reflectivo). Stock 34.060. Reflectivo = opcional (usuario 10 oct). Azul = recoloreo de DIFORZA 135 (las fotos azules que pasó el usuario son de una capa Pampero → descartadas). Pedir foto real de la capa azul. Material/specs según foto y portada del catálogo → validar."
   },
   {
    "id": "capa-de-lluvia-ombu",
@@ -2639,8 +3754,9 @@
     "amarillo"
    ],
    "talles": "L al 2XL",
-   "visible": true,
-   "foto": "/img/catalogo/capa-de-lluvia-ombu.webp"
+   "visible": false,
+   "foto": "/img/catalogo/capa-de-lluvia-ombu.webp",
+   "nota": "Oculto 10 oct (lluvia): sin ventas ene–jun y fuera del catálogo actualizado."
   },
   {
    "id": "careta-soldador-fravida-2550",
@@ -2865,7 +3981,7 @@
    "foto": "/img/catalogo/casquete-c-foam-p-gorra.webp"
   },
   {
-   "id": "chaleco-geologo",
+   "id": "chaleco-geologo-diforza",
    "nombre": "Chaleco geologo",
    "marca": "Diforza",
    "linea": "indumentaria",
@@ -2876,13 +3992,64 @@
    "colores": [
     "naranja"
    ],
-   "talles": "S al 3XL",
+   "talles": "S al XXL",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 152,
-    "empresas": 6
+    "unidades": 164,
+    "empresas": 7
    },
-   "foto": "/img/catalogo/chaleco-geologo.webp"
+   "foto": "/img/catalogo/chaleco-geologo-diforza--naranja.webp",
+   "nombreWeb": "Chaleco geólogo Diforza",
+   "descripcion": "Gabardina 9 oz, 6 bolsillos y cinta reflectiva 3M adelante y atrás.",
+   "descripcionLarga": "El chaleco de trabajo con más bolsillos, pensado para tareas de campo, relevamiento, supervisión de obra y mantenimiento. Confeccionado en gabardina 9 oz con tela metaforizada en pigmento, cierre con botones metálicos y costuras de refuerzo. Tiene 4 bolsillos frontales porta lapicera y celular, 2 bolsillos inferiores para carga pesada y cinta reflectiva 3M adelante y atrás para ser visto con poca luz.",
+   "specs": {
+    "tela": "Gabardina 9 oz metaforizada en pigmento",
+    "bolsillos": "4 frontales + 2 inferiores de carga",
+    "cierre": "Botones metálicos",
+    "reflectivos": "Cinta 3M adelante y atrás",
+    "costuras": "De refuerzo"
+   },
+   "beneficios": [
+    {
+     "titulo": "6 bolsillos",
+     "texto": "4 frontales porta lapicera y celular, y 2 inferiores para carga pesada."
+    },
+    {
+     "titulo": "Cinta reflectiva 3M",
+     "texto": "Adelante y atrás, para ser visto con poca luz."
+    },
+    {
+     "titulo": "Gabardina 9 oz",
+     "texto": "Tela resistente, metaforizada en pigmento."
+    },
+    {
+     "titulo": "Cierre con botones metálicos",
+     "texto": "Resistente al uso diario en campo."
+    },
+    {
+     "titulo": "Costuras de refuerzo",
+     "texto": "Aguanta el peso de herramientas y elementos."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Bordado o estampado con el logo de tu empresa."
+    }
+   ],
+   "usos": [
+    "Geología y minería",
+    "Relevamiento y topografía",
+    "Supervisión de obra",
+    "Petroleras",
+    "Mantenimiento",
+    "Trabajo de campo"
+   ],
+   "variantes": [
+    {
+     "color": "naranja",
+     "colorFabricante": "Naranja",
+     "foto": "/img/catalogo/chaleco-geologo-diforza--naranja.webp"
+    }
+   ]
   },
   {
    "id": "chaleco-polar-diforza",
@@ -2896,16 +4063,66 @@
    "colores": [
     "azul-marino"
    ],
-   "talles": "S al 3XL",
+   "talles": "S al XXXL",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 429,
     "empresas": 2
    },
-   "foto": "/img/catalogo/chaleco-polar-diforza.webp"
+   "foto": "/img/catalogo/chaleco-polar-diforza--azul-marino.webp",
+   "nombreWeb": "Chaleco polar Diforza",
+   "descripcion": "Polar antipeeling con cuello alto, cierre completo y bolsillos.",
+   "descripcionLarga": "Un chaleco abrigado y liviano para sumar una capa de calor sin perder movilidad en los brazos. Confeccionado en polar antipeeling, que no hace bolitas con el uso, con cuello alto, cierre completo y dos bolsillos laterales. Combina con el buzo polar Diforza y se personaliza con el logo de la empresa.",
+   "specs": {
+    "tela": "Polar antipeeling",
+    "cuello": "Alto",
+    "cierre": "Completo",
+    "bolsillos": "2 laterales"
+   },
+   "beneficios": [
+    {
+     "titulo": "Polar antipeeling",
+     "texto": "Abriga, es liviano y no hace bolitas con el uso."
+    },
+    {
+     "titulo": "Sin mangas",
+     "texto": "Calor en el torso con total libertad de movimiento en los brazos."
+    },
+    {
+     "titulo": "Cuello alto y cierre completo",
+     "texto": "Protege del viento y es fácil de poner y sacar."
+    },
+    {
+     "titulo": "2 bolsillos laterales",
+     "texto": "Para las manos o elementos chicos."
+    },
+    {
+     "titulo": "Combina con el buzo polar",
+     "texto": "Mismo tono para armar el uniforme de invierno."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Bordado o estampado con el logo de tu empresa."
+    }
+   ],
+   "usos": [
+    "Industria",
+    "Logística y depósitos",
+    "Mantenimiento",
+    "Atención al público",
+    "Trabajo al aire libre"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/chaleco-polar-diforza--azul-marino.webp"
+    }
+   ],
+   "nota": "Specs armadas a partir de la foto (sin placa del catálogo), aprobadas por el usuario 10 oct — validar con Diforza."
   },
   {
-   "id": "chaleco-reflectivo",
+   "id": "chaleco-reflectivo-diforza",
    "nombre": "Chaleco reflectivo",
    "marca": "Diforza",
    "linea": "indumentaria",
@@ -2917,7 +4134,7 @@
     "amarillo",
     "naranja"
    ],
-   "talles": null,
+   "talles": "Talle único",
    "visible": true,
    "tambienEn": [
     "senalizacion"
@@ -2926,7 +4143,62 @@
     "unidades": 6379,
     "empresas": 33
    },
-   "foto": "/img/catalogo/chaleco-reflectivo.webp"
+   "foto": "/img/catalogo/chaleco-reflectivo-diforza--amarillo-fluo.webp",
+   "nombreWeb": "Chaleco reflectivo de alta visibilidad Diforza",
+   "descripcion": "Alta visibilidad con dos bandas reflectivas. Amarillo o naranja flúo.",
+   "descripcionLarga": "El chaleco reflectivo que más vendemos, para que tu personal se vea en la vía pública, en obra, en playas de carga o en cualquier lugar con tránsito de vehículos o poca luz. Tela liviana en color flúo de alta visibilidad con dos bandas reflectivas horizontales que rodean el cuerpo, adelante y atrás. Talle único, se usa sobre la ropa de trabajo. Se puede personalizar con el logo o la leyenda de la empresa en la espalda.",
+   "specs": {
+    "tela": "Liviana color flúo",
+    "reflectivos": "2 bandas horizontales adelante y atrás",
+    "talle": "Único"
+   },
+   "beneficios": [
+    {
+     "titulo": "Color flúo de alta visibilidad",
+     "texto": "Amarillo o naranja, para destacarse de día."
+    },
+    {
+     "titulo": "Dos bandas reflectivas",
+     "texto": "Reflejan la luz de los vehículos de noche o con poca luz."
+    },
+    {
+     "titulo": "Liviano y fresco",
+     "texto": "Se usa sobre la ropa de trabajo sin dar calor."
+    },
+    {
+     "titulo": "Talle único",
+     "texto": "Fácil de reponer y de repartir entre el personal."
+    },
+    {
+     "titulo": "Ideal para compras por volumen",
+     "texto": "El chaleco que más piden las empresas."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Logo o leyenda estampada o bordada en la espalda."
+    }
+   ],
+   "usos": [
+    "Vía pública y tránsito",
+    "Obras y construcción",
+    "Logística y playas de carga",
+    "Estacionamientos",
+    "Eventos",
+    "Señalización"
+   ],
+   "variantes": [
+    {
+     "color": "amarillo",
+     "colorFabricante": "Amarillo flúo",
+     "foto": "/img/catalogo/chaleco-reflectivo-diforza--amarillo-fluo.webp"
+    },
+    {
+     "color": "naranja",
+     "colorFabricante": "Naranja flúo",
+     "foto": "/img/catalogo/chaleco-reflectivo-diforza--naranja-fluo.webp"
+    }
+   ],
+   "nota": "Specs armadas a partir de la foto (sin placa del catálogo), aprobadas por el usuario 10 oct — validar con Diforza."
   },
   {
    "id": "chaleco-reflectivo-especial-con-cierre-y-bolsillo",
@@ -2942,17 +4214,18 @@
     "amarillo"
    ],
    "talles": null,
-   "visible": true,
+   "visible": false,
    "tambienEn": [
     "senalizacion"
    ],
    "ventasEneJun2026": {
     "unidades": 10,
     "empresas": 1
-   }
+   },
+   "nota": "Oculto 10 oct: en chalecos se comunican reflectivo, geólogo, polar y trucker."
   },
   {
-   "id": "chaleco-trucker",
+   "id": "chaleco-trucker-diforza",
    "nombre": "Chaleco trucker",
    "marca": "Diforza",
    "linea": "indumentaria",
@@ -2961,16 +4234,65 @@
     "CHATRUDIF"
    ],
    "colores": [
-    "blanco",
     "azul-marino"
    ],
    "talles": "XS al 6XL",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 370,
-    "empresas": 2
+    "unidades": 438,
+    "empresas": 3
    },
-   "foto": "/img/catalogo/chaleco-trucker.webp"
+   "foto": "/img/catalogo/chaleco-trucker-diforza--azul-marino.webp",
+   "nombreWeb": "Chaleco trucker Diforza",
+   "descripcion": "Abrigado, con cuello alto, cierre completo y bolsillos.",
+   "descripcionLarga": "El chaleco abrigado para el frío intenso: tela exterior resistente al viento y forro interior abrigado, con cuello alto, cierre completo y bolsillos laterales. Sin mangas para trabajar con libertad de movimiento. Combina con la campera trucker Diforza y se personaliza con el logo de la empresa; también se le puede agregar cinta reflectiva.",
+   "specs": {
+    "abrigo": "Exterior cortaviento + forro interior",
+    "cuello": "Alto",
+    "cierre": "Completo",
+    "bolsillos": "Laterales"
+   },
+   "beneficios": [
+    {
+     "titulo": "Abrigado",
+     "texto": "Tela exterior resistente al viento y forro interior que retiene el calor."
+    },
+    {
+     "titulo": "Sin mangas",
+     "texto": "Libertad de movimiento para trabajar."
+    },
+    {
+     "titulo": "Cuello alto y cierre completo",
+     "texto": "Protege del frío y el viento."
+    },
+    {
+     "titulo": "Bolsillos laterales",
+     "texto": "Para las manos o elementos chicos."
+    },
+    {
+     "titulo": "Talles del XS al 6XL",
+     "texto": "Curva amplia para todo el personal."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Logo bordado o estampado y cinta reflectiva a pedido."
+    }
+   ],
+   "usos": [
+    "Logística y depósitos",
+    "Cámaras de frío",
+    "Trabajo al aire libre",
+    "Seguridad",
+    "Mantenimiento"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/chaleco-trucker-diforza--azul-marino.webp"
+    }
+   ],
+   "nota": "Specs armadas a partir de la foto (sin placa del catálogo), aprobadas por el usuario 10 oct — validar con Diforza."
   },
   {
    "id": "chaqueta-de-ambo",
@@ -2988,7 +4310,8 @@
     "verde"
    ],
    "talles": "XS al 6XL",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (sanidad): sin ventas o unificado en ambo / cofia de tela / barbijo tricapa."
   },
   {
    "id": "chaqueta-diforza",
@@ -3015,8 +4338,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "nota": "Línea económica (Beato)"
+   "visible": false,
+   "nota": "Línea económica (Beato) Oculta 10 oct: en chombas solo se comunican la clásica Diforza manga corta y manga larga."
   },
   {
    "id": "chomba-azul",
@@ -3029,8 +4352,9 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "foto": "/img/catalogo/chomba-azul.webp"
+   "visible": false,
+   "foto": "/img/catalogo/chomba-azul.webp",
+   "nota": "Oculta 10 oct: en chombas solo se comunican la clásica Diforza manga corta y manga larga."
   },
   {
    "id": "chomba-bordo",
@@ -3043,7 +4367,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculta 10 oct: en chombas solo se comunican la clásica Diforza manga corta y manga larga."
   },
   {
    "id": "chomba-celeste",
@@ -3056,7 +4381,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculta 10 oct: en chombas solo se comunican la clásica Diforza manga corta y manga larga."
   },
   {
    "id": "chomba-frigorifica-beige",
@@ -3069,7 +4395,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculta 10 oct: en chombas solo se comunican la clásica Diforza manga corta y manga larga."
   },
   {
    "id": "chomba-gris-melange",
@@ -3082,7 +4409,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculta 10 oct: en chombas solo se comunican la clásica Diforza manga corta y manga larga."
   },
   {
    "id": "chomba-gris-topo",
@@ -3095,7 +4423,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculta 10 oct: en chombas solo se comunican la clásica Diforza manga corta y manga larga."
   },
   {
    "id": "chomba-negra",
@@ -3108,10 +4437,11 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculta 10 oct: en chombas solo se comunican la clásica Diforza manga corta y manga larga."
   },
   {
-   "id": "chomba-pique",
+   "id": "chomba-clasica-diforza-mc",
    "nombre": "Chomba pique",
    "marca": "Diforza",
    "linea": "indumentaria",
@@ -3121,27 +4451,96 @@
     "9CHDIAZ"
    ],
    "colores": [
-    "naranja",
-    "verde",
     "azul-marino",
-    "beige",
-    "blanco",
-    "bordo",
-    "celeste",
-    "gris-melange",
-    "gris-topo",
+    "azul-francia",
     "negro",
-    "verde-benetton",
-    "verde-ingles",
-    "verde-oliva"
+    "blanco",
+    "verde"
    ],
    "talles": "XS al 6XL",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 2702,
-    "empresas": 23
+    "unidades": 4100,
+    "empresas": 34
    },
-   "foto": "/indumentaria-de-trabajo/img/prod-chomba-pique-diforza.webp"
+   "foto": "/img/catalogo/chomba-clasica-diforza-mc--azul-marino.webp",
+   "nombreWeb": "Chomba clásica manga corta Diforza",
+   "descripcion": "Piqué con cuello y puños tejidos y cartera de 2 botones.",
+   "descripcionLarga": "La chomba de trabajo para equipos que necesitan verse prolijos todos los días. Confeccionada en tela piqué, con cuello y puños tejidos, cartera con 2 botones y costuras de refuerzo. Es la prenda más pedida para personalizar con el logo de la empresa: bordado, estampado o sublimado. Disponible en 5 colores y talles del XS al 6XL.",
+   "specs": {
+    "tela": "Piqué",
+    "cuello": "Tejido",
+    "puños": "Tejidos",
+    "cartera": "2 botones",
+    "manga": "Corta"
+   },
+   "beneficios": [
+    {
+     "titulo": "Tela piqué",
+     "texto": "Fresca, cómoda y resistente al uso y lavado diario."
+    },
+    {
+     "titulo": "Cuello y puños tejidos",
+     "texto": "Mantienen la forma y le dan una terminación prolija."
+    },
+    {
+     "titulo": "Cartera con 2 botones",
+     "texto": "El clásico de la chomba de trabajo."
+    },
+    {
+     "titulo": "Costuras de refuerzo",
+     "texto": "Más durabilidad en las zonas de mayor uso."
+    },
+    {
+     "titulo": "Talles del XS al 6XL",
+     "texto": "Curva amplia para equipar a todo el personal."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Bordado, estampado o sublimado con el logo de tu empresa."
+    }
+   ],
+   "usos": [
+    "Industria",
+    "Logística",
+    "Atención al público",
+    "Supervisión y mandos medios",
+    "Eventos y promociones",
+    "Servicios"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/chomba-clasica-diforza-mc--azul-marino.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "azul-francia",
+     "colorFabricante": "Azul francia",
+     "foto": "/img/catalogo/chomba-clasica-diforza-mc--azul-francia.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/chomba-clasica-diforza-mc--negro.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/chomba-clasica-diforza-mc--blanco.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "verde",
+     "colorFabricante": "Verde",
+     "foto": "/img/catalogo/chomba-clasica-diforza-mc--verde.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "nota": "Ventas ene–jun 10 oct: ~2.700 u con código CHDIAZ + ~1.400 u manuales (muchas personalizadas). Colores y talles definidos por el usuario (XS–6XL). Specs: placa del catálogo."
   },
   {
    "id": "chomba-pique-diforza-azul-francia",
@@ -3154,10 +4553,11 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculta 10 oct: en chombas solo se comunican la clásica Diforza manga corta y manga larga."
   },
   {
-   "id": "chomba-pique-diforza-m-l",
+   "id": "chomba-clasica-diforza-ml",
    "nombre": "Chomba Pique Diforza M/L",
    "marca": "Diforza",
    "linea": "indumentaria",
@@ -3167,11 +4567,90 @@
    ],
    "colores": [
     "azul-marino",
-    "gris-melange"
+    "azul-francia",
+    "negro",
+    "blanco",
+    "verde"
    ],
    "talles": "XS al 6XL",
    "visible": true,
-   "foto": "/img/catalogo/chomba-pique-diforza-m-l.webp"
+   "foto": "/img/catalogo/chomba-clasica-diforza-ml--azul-marino.webp",
+   "nombreWeb": "Chomba clásica manga larga Diforza",
+   "descripcion": "Piqué de manga larga con cuello tejido y cartera de 2 botones.",
+   "descripcionLarga": "La versión de manga larga de nuestra chomba clásica, para los meses más frescos o para tareas que requieren cubrir los brazos. Confeccionada en tela piqué, con cuello y puños tejidos, cartera con 2 botones y costuras de refuerzo. Se personaliza con el logo de la empresa en bordado, estampado o sublimado. Disponible en 5 colores y talles del XS al 6XL.",
+   "specs": {
+    "tela": "Piqué",
+    "cuello": "Tejido",
+    "puños": "Tejidos",
+    "cartera": "2 botones",
+    "manga": "Larga"
+   },
+   "beneficios": [
+    {
+     "titulo": "Manga larga",
+     "texto": "Cubre los brazos en temporada fresca o en tareas que lo requieren."
+    },
+    {
+     "titulo": "Tela piqué",
+     "texto": "Cómoda y resistente al uso y lavado diario."
+    },
+    {
+     "titulo": "Cuello y puños tejidos",
+     "texto": "Mantienen la forma y le dan una terminación prolija."
+    },
+    {
+     "titulo": "Cartera con 2 botones",
+     "texto": "El clásico de la chomba de trabajo."
+    },
+    {
+     "titulo": "Talles del XS al 6XL",
+     "texto": "Curva amplia para equipar a todo el personal."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Bordado, estampado o sublimado con el logo de tu empresa."
+    }
+   ],
+   "usos": [
+    "Industria",
+    "Logística",
+    "Atención al público",
+    "Supervisión y mandos medios",
+    "Eventos y promociones",
+    "Servicios"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/chomba-clasica-diforza-ml--azul-marino.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "azul-francia",
+     "colorFabricante": "Azul francia",
+     "foto": "/img/catalogo/chomba-clasica-diforza-ml--azul-francia.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/chomba-clasica-diforza-ml--negro.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/chomba-clasica-diforza-ml--blanco.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "verde",
+     "colorFabricante": "Verde",
+     "foto": "/img/catalogo/chomba-clasica-diforza-ml--verde.webp",
+     "fotoGenerada": true
+    }
+   ]
   },
   {
    "id": "cinta-de-precaucion-amarilla-y-negra-x-200mts",
@@ -3284,20 +4763,90 @@
   },
   {
    "id": "cofia-de-tela-azul",
-   "nombre": "Cofia De Tela Azul",
+   "nombre": "Cofia de tela Diforza",
    "marca": "Diforza",
    "linea": "indumentaria",
    "subcategoria": "sanidad-y-gastronomia",
    "codigosERP": [
-    "COFiATELA."
+    "COFiATELA.",
+    "COFIATELAGR.",
+    "COFIATELABL."
    ],
-   "colores": [],
-   "talles": null,
+   "colores": [
+    "azul",
+    "gris",
+    "blanco"
+   ],
+   "talles": "Único",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 1976,
+    "unidades": 3968,
     "empresas": 1
-   }
+   },
+   "nombreWeb": "Cofia de tela Diforza",
+   "descripcion": "Cofia de tela con tiras para atar. Azul, gris o blanca.",
+   "descripcionLarga": "La cofia de tela Diforza recoge y cubre el cabello para trabajar con higiene en cocinas, plantas de alimentos, laboratorios y quirófanos. Es reutilizable, con tiras para atar atrás y ajustar a cada persona. Viene en azul, gris y blanco para diferenciar sectores o turnos.",
+   "specs": {
+    "material": "Tela",
+    "ajuste": "Tiras para atar",
+    "uso": "Reutilizable",
+    "talle": "Único"
+   },
+   "beneficios": [
+    {
+     "titulo": "Reutilizable",
+     "texto": "Se lava y se vuelve a usar."
+    },
+    {
+     "titulo": "Tiras para atar",
+     "texto": "Se ajusta a cualquier cabeza."
+    },
+    {
+     "titulo": "Cubre todo el cabello",
+     "texto": "Cumple con las normas de higiene del sector."
+    },
+    {
+     "titulo": "Tres colores",
+     "texto": "Azul, gris y blanco para diferenciar sectores."
+    },
+    {
+     "titulo": "Liviana y fresca",
+     "texto": "Cómoda durante todo el turno."
+    },
+    {
+     "titulo": "Pedidos en volumen",
+     "texto": "Para equipar a todo el personal."
+    }
+   ],
+   "usos": [
+    "Gastronomía y cocinas industriales",
+    "Industria alimenticia",
+    "Laboratorios",
+    "Sanidad",
+    "Frigoríficos"
+   ],
+   "variantes": [
+    {
+     "color": "azul",
+     "colorFabricante": "Azul",
+     "foto": "/img/catalogo/cofia-de-tela-azul--azul.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "gris",
+     "colorFabricante": "Gris",
+     "foto": "/img/catalogo/cofia-de-tela-azul--gris.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/cofia-de-tela-azul--blanco.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "foto": "/img/catalogo/cofia-de-tela-azul--azul.webp",
+   "nota": "Ventas ene–jun: azul 1.976 + gris 997 + blanca 995 u (1 cliente). Stock ~3.900. FOTOS PROVISORIAS (genéricas CC0 de internet + recoloreos, ver _creditos_licencias.txt) → reemplazar por fotos reales de Diforza. Specs con IA → validar."
   },
   {
    "id": "cofia-de-tela-blanca",
@@ -3310,11 +4859,12 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 995,
     "empresas": 1
-   }
+   },
+   "nota": "Oculto 10 oct (sanidad): sin ventas o unificado en ambo / cofia de tela / barbijo tricapa."
   },
   {
    "id": "cofia-de-tela-gris",
@@ -3327,11 +4877,12 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 997,
     "empresas": 1
-   }
+   },
+   "nota": "Oculto 10 oct (sanidad): sin ventas o unificado en ambo / cofia de tela / barbijo tricapa."
   },
   {
    "id": "cofia-descartable",
@@ -3342,13 +4893,67 @@
    "codigosERP": [
     "COFIA"
    ],
-   "colores": [],
-   "talles": null,
+   "colores": [
+    "blanco"
+   ],
+   "talles": "Único",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 300,
     "empresas": 1
-   }
+   },
+   "nombreWeb": "Cofia descartable Diforza",
+   "descripcion": "Cofia descartable con elástico, de un solo uso.",
+   "descripcionLarga": "La cofia descartable Diforza, con elástico perimetral, cubre todo el cabello y se descarta después de cada uso. Ideal para visitas a planta, áreas limpias, industria alimenticia y sanidad.",
+   "specs": {
+    "tipo": "Descartable",
+    "ajuste": "Elástico perimetral",
+    "color": "Blanco",
+    "talle": "Único"
+   },
+   "beneficios": [
+    {
+     "titulo": "Un solo uso",
+     "texto": "Máxima higiene: se usa y se descarta."
+    },
+    {
+     "titulo": "Elástico perimetral",
+     "texto": "Se ajusta sola a la cabeza."
+    },
+    {
+     "titulo": "Cubre todo el cabello",
+     "texto": "Para áreas con exigencias de higiene."
+    },
+    {
+     "titulo": "Liviana",
+     "texto": "Casi no se siente puesta."
+    },
+    {
+     "titulo": "Para visitas",
+     "texto": "Práctica para entregar a visitantes y proveedores."
+    },
+    {
+     "titulo": "Stock en volumen",
+     "texto": "Cajas para todo el personal."
+    }
+   ],
+   "usos": [
+    "Industria alimenticia",
+    "Visitas a planta",
+    "Laboratorios",
+    "Sanidad",
+    "Gastronomía"
+   ],
+   "variantes": [
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": null,
+     "fotoGenerada": true
+    }
+   ],
+   "foto": null,
+   "nota": "Ventas ene–jun: 300 u / 1 empresa. Stock 1.000. Sin foto (no se encontró genérica CC0 usable). FOTOS PROVISORIAS (genéricas CC0 de internet + recoloreos, ver _creditos_licencias.txt) → reemplazar por fotos reales de Diforza. Specs con IA → validar."
   },
   {
    "id": "cofia-hongo-de-tela",
@@ -3361,7 +4966,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (sanidad): sin ventas o unificado en ambo / cofia de tela / barbijo tricapa."
   },
   {
    "id": "cofia-tablita-blanca",
@@ -3374,7 +4980,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (sanidad): sin ventas o unificado en ambo / cofia de tela / barbijo tricapa."
   },
   {
    "id": "cola-2mts-regulable-1-mosqueton-18mm-y-55mm",
@@ -3803,7 +5410,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (sanidad): sin ventas o unificado en ambo / cofia de tela / barbijo tricapa."
   },
   {
    "id": "cubre-calzado-descartable",
@@ -3814,9 +5422,62 @@
    "codigosERP": [
     "CUBCALDES"
    ],
-   "colores": [],
-   "talles": null,
-   "visible": true
+   "colores": [
+    "celeste"
+   ],
+   "talles": "Único",
+   "visible": true,
+   "nombreWeb": "Cubre calzado descartable Diforza",
+   "descripcion": "Cubre calzado descartable con elástico. Se pone sobre el zapato.",
+   "descripcionLarga": "El cubre calzado descartable Diforza se coloca sobre el zapato para no ingresar suciedad a áreas limpias. Con elástico en la boca para que quede firme. Ideal para visitas a planta, laboratorios, quirófanos e industria alimenticia.",
+   "specs": {
+    "tipo": "Descartable",
+    "ajuste": "Elástico",
+    "talle": "Único"
+   },
+   "beneficios": [
+    {
+     "titulo": "Protege áreas limpias",
+     "texto": "Evita ingresar suciedad desde afuera."
+    },
+    {
+     "titulo": "Elástico",
+     "texto": "Queda firme sobre cualquier calzado."
+    },
+    {
+     "titulo": "Talle único",
+     "texto": "Para todo tipo de zapato."
+    },
+    {
+     "titulo": "Descartable",
+     "texto": "Un solo uso, máxima higiene."
+    },
+    {
+     "titulo": "Para visitas",
+     "texto": "Práctico para entregar a visitantes y proveedores."
+    },
+    {
+     "titulo": "Stock en volumen",
+     "texto": "Paquetes para todo el personal."
+    }
+   ],
+   "usos": [
+    "Industria alimenticia",
+    "Laboratorios",
+    "Sanidad",
+    "Visitas a planta",
+    "Instalaciones y obras en interiores"
+   ],
+   "variantes": [
+    {
+     "color": "celeste",
+     "colorFabricante": "Celeste",
+     "foto": "/img/catalogo/cubre-calzado-descartable--celeste.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "foto": "/img/catalogo/cubre-calzado-descartable--celeste.webp",
+   "nota": "Sin ventas ene–jun; stock 200. Foto genérica Wikimedia CC0, baja resolución. FOTOS PROVISORIAS (genéricas CC0 de internet + recoloreos, ver _creditos_licencias.txt) → reemplazar por fotos reales de Diforza. Specs con IA → validar."
   },
   {
    "id": "cuello-polar",
@@ -3829,7 +5490,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (primera piel): el usuario define un solo producto (equipo primera piel). Remeras T1–T3 sumadas como códigos del equipo."
   },
   {
    "id": "delantal-descarne-reforzado-60-x-90",
@@ -3860,7 +5522,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (delantales): el usuario define un solo producto, PVC blanco."
   },
   {
    "id": "delantal-aluminizado-kevlar-0-60-x-0-90",
@@ -3873,7 +5536,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (delantales): el usuario define un solo producto, PVC blanco."
   },
   {
    "id": "delantal-de-jean",
@@ -3886,24 +5550,85 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (delantales): el usuario define un solo producto, PVC blanco."
   },
   {
-   "id": "delantal-de-pvc-blanco-c-refuerzo-0-90-x-1-20",
-   "nombre": "Delantal de Pvc Blanco c/Refuerzo 0.90 x 1.20",
+   "id": "delantal-pvc-diforza",
+   "nombre": "Delantal de PVC Diforza",
    "marca": "Diforza",
    "linea": "indumentaria",
    "subcategoria": "delantales",
    "codigosERP": [
     "DELPVCBL"
    ],
-   "colores": [],
-   "talles": null,
+   "colores": [
+    "blanco"
+   ],
+   "talles": "Único · 0,90 × 1,20 m",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 119,
     "empresas": 7
-   }
+   },
+   "nombreWeb": "Delantal de PVC Diforza",
+   "descripcion": "PVC blanco con refuerzo, 0,90 × 1,20 m. Impermeable y lavable.",
+   "descripcionLarga": "El delantal de PVC Diforza protege la ropa de trabajo del agua, la grasa, la sangre y los productos de limpieza. Es de PVC blanco impermeable con refuerzo, de 0,90 × 1,20 m para cubrir desde el pecho hasta debajo de las rodillas, con tiras de ajuste al cuello y a la cintura. Se limpia con agua y detergente y queda listo para el próximo turno. Es el delantal que más eligen frigoríficos, plantas de alimentos, catering y empresas de limpieza, con stock permanente para entregas en volumen.",
+   "specs": {
+    "material": "PVC",
+    "medida": "0,90 × 1,20 m",
+    "color": "Blanco",
+    "refuerzo": "Sí",
+    "ajuste": "Tiras al cuello y a la cintura",
+    "talle": "Único"
+   },
+   "beneficios": [
+    {
+     "titulo": "PVC impermeable",
+     "texto": "No deja pasar agua, grasa ni líquidos de limpieza."
+    },
+    {
+     "titulo": "Con refuerzo",
+     "texto": "Más resistencia al uso intensivo y a los lavados."
+    },
+    {
+     "titulo": "0,90 × 1,20 m",
+     "texto": "Cubre del pecho hasta debajo de las rodillas."
+    },
+    {
+     "titulo": "Blanco",
+     "texto": "Color higiénico: la suciedad se ve y se limpia enseguida."
+    },
+    {
+     "titulo": "Fácil de lavar",
+     "texto": "Se limpia con agua y detergente."
+    },
+    {
+     "titulo": "Stock permanente",
+     "texto": "Entregas en volumen para equipar a todo el personal."
+    }
+   ],
+   "usos": [
+    "Frigoríficos y carnicerías",
+    "Industria alimenticia",
+    "Catering y cocinas industriales",
+    "Limpieza y facility",
+    "Lavaderos",
+    "Pesca y procesamiento de pescado"
+   ],
+   "variantes": [
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/delantal-pvc-diforza--blanco.webp",
+     "fotoGenerada": false
+    }
+   ],
+   "foto": "/img/catalogo/delantal-pvc-diforza--blanco.webp",
+   "nota": "Ventas ene–jun: 119 u / 7 empresas (DELPVCBL). Stock 4.691. Además se vendieron PVC verde (70 u / 2) y transparente manual (108 u / 1, catering) → ocultos por decisión del usuario, se cotizan igual. Foto real = placa 93 del catálogo (PNG con transparencia). Tiras de ajuste y usos: con IA → validar. Delantales de descarne siguen en EPP › Soldadura.",
+   "tambienEn": [
+    "sanidad-y-gastronomia"
+   ]
   },
   {
    "id": "delantal-de-pvc-verde",
@@ -3916,11 +5641,12 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 70,
     "empresas": 2
-   }
+   },
+   "nota": "Oculto 10 oct (delantales): el usuario define un solo producto, PVC blanco."
   },
   {
    "id": "delantal-descarne-simple-60-x-90",
@@ -3960,16 +5686,71 @@
   },
   {
    "id": "delantal-grafa-cocinero-blanco",
-   "nombre": "Delantal Grafa Cocinero Blanco",
+   "nombre": "Delantal de cocinero de grafa Diforza",
    "marca": "Diforza",
    "linea": "indumentaria",
    "subcategoria": "sanidad-y-gastronomia",
    "codigosERP": [
     "DELGRAFBL"
    ],
-   "colores": [],
-   "talles": null,
-   "visible": true
+   "colores": [
+    "blanco"
+   ],
+   "talles": "Único",
+   "visible": true,
+   "nota": "Reactivado 10 oct por el usuario (gastronomía). Sin ventas ni stock ene–jun → confirmar con Diego que lo sigue vendiendo. FOTO PROVISORIA = la del delantal de PVC blanco (placa 93; no se encontró genérica CC0 de delantal de grafa). Specs con IA → validar.",
+   "nombreWeb": "Delantal de cocinero de grafa Diforza",
+   "descripcion": "Delantal pechera de grafa blanca, con tiras para atar. Para cocina.",
+   "descripcionLarga": "El delantal de cocinero Diforza, de grafa blanca, es el clásico de las cocinas profesionales: pechera completa con tira al cuello y tiras largas para atar en la cintura. La grafa es una tela de algodón resistente, que aguanta el uso diario y los lavados a alta temperatura. Ideal para restaurantes, comedores, catering y plantas de alimentos, y se personaliza con el logo del local o la empresa.",
+   "specs": {
+    "tela": "Grafa (algodón)",
+    "tipo": "Pechera",
+    "ajuste": "Tira al cuello y tiras a la cintura",
+    "color": "Blanco",
+    "talle": "Único"
+   },
+   "beneficios": [
+    {
+     "titulo": "Grafa de algodón",
+     "texto": "Tela resistente y fresca para la cocina."
+    },
+    {
+     "titulo": "Pechera completa",
+     "texto": "Cubre del pecho a las rodillas."
+    },
+    {
+     "titulo": "Tiras para atar",
+     "texto": "Al cuello y a la cintura, se ajusta a cada persona."
+    },
+    {
+     "titulo": "Blanco",
+     "texto": "Color clásico e higiénico de las cocinas."
+    },
+    {
+     "titulo": "Lavable",
+     "texto": "Aguanta lavados frecuentes."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Logo bordado o estampado a pedido."
+    }
+   ],
+   "usos": [
+    "Restaurantes y cocinas profesionales",
+    "Comedores y catering",
+    "Panaderías y confiterías",
+    "Industria alimenticia",
+    "Carnicerías"
+   ],
+   "variantes": [
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/delantal-grafa-cocinero-blanco--blanco.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "foto": "/img/catalogo/delantal-grafa-cocinero-blanco--blanco.webp"
   },
   {
    "id": "delineador-desmontable-75-cm",
@@ -4033,21 +5814,79 @@
   },
   {
    "id": "equipo-primera-piel",
-   "nombre": "Equipo Primera Piel",
+   "nombre": "Equipo térmico primera piel Diforza",
    "marca": "Diforza",
    "linea": "indumentaria",
    "subcategoria": "ropa-primera-piel",
    "codigosERP": [
-    "EQUIPRPIEL"
+    "EQUIPRPIEL",
+    "REMTERMT1",
+    "REMTERMT2",
+    "REMTERMT3"
    ],
-   "colores": [],
+   "colores": [
+    "negro"
+   ],
    "talles": "1 al 3",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 149,
     "empresas": 2
    },
-   "foto": "/img/catalogo/equipo-primera-piel.webp"
+   "foto": "/img/catalogo/equipo-primera-piel--negro.webp",
+   "nombreWeb": "Equipo térmico primera piel Diforza",
+   "descripcion": "Remera manga larga + calza térmica, para usar debajo del uniforme.",
+   "descripcionLarga": "El equipo de primera piel Diforza es la base para trabajar con frío: una remera térmica de manga larga y una calza larga que se usan pegadas al cuerpo, debajo de la ropa de trabajo. Retienen el calor corporal, acompañan el movimiento y no abultan, así el uniforme y la campera siguen calzando bien. Ideal para cámaras de frío, trabajo al aire libre en invierno y turnos de madrugada.",
+   "specs": {
+    "composición del equipo": "Remera manga larga + calza larga",
+    "tela": "Térmica, elástica",
+    "calce": "Ajustado (segunda piel)",
+    "color": "Negro",
+    "talles": "1, 2 y 3"
+   },
+   "beneficios": [
+    {
+     "titulo": "Equipo completo",
+     "texto": "Remera de manga larga y calza larga en un solo pedido."
+    },
+    {
+     "titulo": "Retiene el calor",
+     "texto": "Tela térmica que conserva la temperatura del cuerpo."
+    },
+    {
+     "titulo": "Pegado al cuerpo",
+     "texto": "Calce de segunda piel que no abulta debajo del uniforme."
+    },
+    {
+     "titulo": "Libertad de movimiento",
+     "texto": "Tela elástica que acompaña cada movimiento."
+    },
+    {
+     "titulo": "Combina con todo",
+     "texto": "Se usa debajo de mamelucos, pantalones, camperas y trajes de lluvia."
+    },
+    {
+     "titulo": "Talles 1, 2 y 3",
+     "texto": "Curva simple para equipar a todo el personal."
+    }
+   ],
+   "usos": [
+    "Cámaras frigoríficas",
+    "Trabajo al aire libre en invierno",
+    "Construcción",
+    "Logística y depósitos",
+    "Seguridad y vigilancia",
+    "Turnos nocturnos"
+   ],
+   "variantes": [
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/equipo-primera-piel--negro.webp",
+     "fotoGenerada": false
+    }
+   ],
+   "nota": "Ventas ene–jun: 149 u / 2 empresas (todo talle 3). Stock 106. Talles 1–3 del ERP (EQUIPRPIEL). Foto = la que ya usaba el sitio (catálogo PDF, no es foto propia). Tela, composición y equivalencia de talles 1–3 armadas con IA → validar con Diego. Ocultos: medias térmicas Ombú (81 u / 2 empresas), pantalón térmico, cuello polar, medias, remeras T1–T3."
   },
   {
    "id": "equipo-retractil-xr-10-en-cable-de-acero-x-10-mts",
@@ -4314,8 +6153,8 @@
    "foto": "/img/catalogo/gorra-con-casquete-plastico-azul.webp"
   },
   {
-   "id": "gorra-de-5-gajos",
-   "nombre": "Gorra Diforza",
+   "id": "gorra-diforza",
+   "nombre": "Gorra de trabajo Diforza",
    "marca": "Diforza",
    "linea": "indumentaria",
    "subcategoria": "gorras",
@@ -4325,18 +6164,96 @@
     "gorra ver"
    ],
    "colores": [
-    "azul",
+    "azul-francia",
+    "azul-marino",
+    "negro",
     "blanco",
     "verde-ingles"
    ],
-   "talles": null,
+   "talles": "Único (regulable)",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 414,
-    "empresas": 9
+    "unidades": 6474,
+    "empresas": 13
    },
-   "foto": "/img/catalogo/gorra-de-5-gajos.webp",
-   "nota": "Unifica gorra de 5 y 6 gajos (decisión del usuario 9 oct)."
+   "foto": "/img/catalogo/gorra-diforza--azul.webp",
+   "nota": "Ventas ene–jun: 414 u con código (GORRA azul, 9 empresas) + ~6.060 u manuales con logo (6.000 negras c/logo de 1 cliente, azules c/logo, etc.). Unifica 5 y 6 gajos (9 oct). Colores: azul (foto real DIFORZA 140), azul marino, negro (vendida con logo), blanco y verde inglés del ERP → recoloreos. Tela algodón/poliéster del ERP (GOR6GAJ); resto con IA → validar.",
+   "nombreWeb": "Gorra de trabajo Diforza",
+   "descripcion": "Gorra con visera, regulable. Ideal para bordar o estampar el logo.",
+   "descripcionLarga": "La gorra de trabajo Diforza protege del sol en las tareas al aire libre y completa el uniforme con la imagen de la empresa. Tiene visera, cierre regulable atrás para un talle único que se adapta a todos, y una tela de algodón y poliéster cómoda y resistente a los lavados. Es la gorra que más personalizan nuestros clientes: se borda o se estampa con el logo de la empresa en el frente. Disponible en varios colores para combinar con el resto de la ropa de trabajo.",
+   "specs": {
+    "tela": "Algodón / poliéster",
+    "visera": "Sí",
+    "cierre": "Regulable",
+    "talle": "Único",
+    "personalización": "Bordado o estampado"
+   },
+   "beneficios": [
+    {
+     "titulo": "Protección del sol",
+     "texto": "Visera para trabajar al aire libre con menos encandilamiento."
+    },
+    {
+     "titulo": "Talle único regulable",
+     "texto": "Se ajusta atrás y le queda bien a todo el equipo."
+    },
+    {
+     "titulo": "Algodón y poliéster",
+     "texto": "Cómoda, liviana y resistente a los lavados."
+    },
+    {
+     "titulo": "Lista para personalizar",
+     "texto": "Logo bordado o estampado en el frente."
+    },
+    {
+     "titulo": "Varios colores",
+     "texto": "Combina con chombas, remeras y camisas Diforza."
+    },
+    {
+     "titulo": "Ideal para eventos y promociones",
+     "texto": "Pedidos en volumen con el logo de la empresa."
+    }
+   ],
+   "usos": [
+    "Trabajo al aire libre",
+    "Logística y reparto",
+    "Construcción",
+    "Uniformes de empresa",
+    "Eventos y promociones",
+    "Agro"
+   ],
+   "variantes": [
+    {
+     "color": "azul-francia",
+     "colorFabricante": "Azul",
+     "foto": "/img/catalogo/gorra-diforza--azul.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/gorra-diforza--azul-marino.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/gorra-diforza--negro.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/gorra-diforza--blanco.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "verde-ingles",
+     "colorFabricante": "Verde inglés",
+     "foto": "/img/catalogo/gorra-diforza--verde-ingles.webp",
+     "fotoGenerada": true
+    }
+   ]
   },
   {
    "id": "gorra-de-5-gajos-verde-ingles",
@@ -4363,7 +6280,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (gorras): el usuario define un solo producto, la gorra Diforza."
   },
   {
    "id": "gorro-tipo-rocky",
@@ -4376,11 +6294,12 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 103,
     "empresas": 1
-   }
+   },
+   "nota": "Oculto 10 oct (gorras): el usuario define un solo producto, la gorra Diforza."
   },
   {
    "id": "guante-descarne",
@@ -5472,7 +7391,8 @@
     "blanco"
    ],
    "talles": "XS al 6XL",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (sanidad): sin ventas o unificado en ambo / cofia de tela / barbijo tricapa."
   },
   {
    "id": "kit-antiderrame-sorbex-ii",
@@ -6052,20 +7972,149 @@
     "MAMGABDIF"
    ],
    "colores": [
-    "azul-marino",
-    "naranja"
+    "azul-marino"
    ],
-   "talles": "36 al 68 · XS al 6XL",
+   "talles": "S al 4XL",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 39,
     "empresas": 4
    },
-   "foto": "/img/catalogo/mameluco-gabardina-diforza.webp"
+   "foto": "/img/catalogo/mameluco-gabardina-diforza--azul-marino.webp",
+   "nombreWeb": "Mameluco de trabajo de gabardina Diforza",
+   "descripcion": "Gabardina de algodón, cuello camisero y cierre frontal.",
+   "descripcionLarga": "El mameluco de trabajo de fabricación propia Diforza, pensado para el uso industrial diario. Confeccionado en gabardina de algodón resistente y cómoda, con cuello camisero, cierre frontal, bolsillos con tapa en el pecho, bolsillos traseros y cintura trasera elastizada que acompaña el movimiento. Una prenda única que protege la ropa de calle de grasa, polvo y suciedad durante toda la jornada, y que se personaliza con el logo de la empresa.",
+   "specs": {
+    "tela": "Gabardina de algodón",
+    "cuello": "Camisero",
+    "cierre": "Frontal",
+    "cintura": "Elastizada en la espalda",
+    "bolsillos": "2 en pecho con tapa + traseros",
+    "mangas": "Largas"
+   },
+   "beneficios": [
+    {
+     "titulo": "Gabardina de algodón",
+     "texto": "Tela resistente al uso intensivo y fresca para la jornada."
+    },
+    {
+     "titulo": "Cuello camisero",
+     "texto": "Terminación prolija para una imagen de equipo uniforme."
+    },
+    {
+     "titulo": "Cierre frontal",
+     "texto": "Se pone y se saca rápido, sin pasar por la cabeza."
+    },
+    {
+     "titulo": "Cintura trasera elastizada",
+     "texto": "Se ajusta al cuerpo y da libertad de movimiento."
+    },
+    {
+     "titulo": "Bolsillos con tapa",
+     "texto": "Dos en el pecho y bolsillos traseros para herramientas y elementos chicos."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Logo bordado o estampado y cinta reflectiva a pedido."
+    }
+   ],
+   "usos": [
+    "Industria y planta",
+    "Mantenimiento",
+    "Talleres mecánicos",
+    "Logística y depósitos",
+    "Construcción",
+    "Petróleo y energía"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/mameluco-gabardina-diforza--azul-marino.webp"
+    }
+   ],
+   "nota": "Ventas ene–jun: 39 u / 4 empresas (azul marino). Stock 968. El naranja del ERP (MAMGABDIF-NJ) es el de alta visibilidad (producto aparte). Talles S al 4XL por el usuario (ERP también tiene 36–68). Specs del flyer del usuario."
   },
   {
-   "id": "mameluco-alaska",
-   "nombre": "Mameluco Alaska",
+   "id": "mameluco-ignifugo-premium-geotex",
+   "nombre": "Mameluco ignífugo premium Geotex",
+   "marca": "Geotex",
+   "linea": "indumentaria",
+   "subcategoria": "mameluco",
+   "codigosERP": [],
+   "colores": [
+    "azul-marino",
+    "gris"
+   ],
+   "talles": "XS al 5XL",
+   "visible": true,
+   "foto": "/img/catalogo/mameluco-ignifugo-premium-geotex--azul-marino.webp",
+   "nombreWeb": "Mameluco ignífugo premium Geotex",
+   "descripcion": "Ignífugo 88 % algodón / 12 % poliamida, con reflectivos ignífugos.",
+   "descripcionLarga": "El mameluco ignífugo premium de Geotex, para trabajos con riesgo de arco eléctrico, fuego repentino o salpicadura de metal fundido. Confeccionado en tela ignífuga 88 % algodón / 12 % poliamida, con cierre frontal reforzado doble camino, cuello de dos piezas, cintura trasera elastizada, puños regulables con broches a presión y bolsillos plaqué que evitan la entrada de llama. Lleva reflectivos ignífugos de 25 mm para alta visibilidad. Somos distribuidores de Geotex.",
+   "specs": {
+    "tela": "88 % algodón / 12 % poliamida (ignífuga)",
+    "normas": "NFPA 70E (niv. 1–3) · NFPA 2112 · NFPA 2113 · ISO 11612 · IEC 61482 · ANSI 107 · IRAM 3859",
+    "reflectivo": "Ignífugo de 25 mm",
+    "cierre": "Frontal reforzado doble camino",
+    "cuello": "Dos piezas",
+    "cintura": "Elastizada en la espalda",
+    "puños": "Regulables con broches a presión",
+    "bolsillos": "Plaqué: 2 superiores, 2 inferiores, 1 trasero"
+   },
+   "beneficios": [
+    {
+     "titulo": "Tela ignífuga",
+     "texto": "88 % algodón / 12 % poliamida: protección térmica con el confort del algodón."
+    },
+    {
+     "titulo": "Normas internacionales",
+     "texto": "NFPA 70E niveles 1 a 3 (arco eléctrico), NFPA 2112 (fuego repentino), NFPA 2113, ISO 11612 e IEC 61482."
+    },
+    {
+     "titulo": "Reflectivos ignífugos de 25 mm",
+     "texto": "Alta visibilidad según ANSI 107 e IRAM 3859."
+    },
+    {
+     "titulo": "Bolsillos plaqué",
+     "texto": "Dos superiores, dos inferiores y uno trasero, diseñados para evitar la entrada de llama."
+    },
+    {
+     "titulo": "Cierre doble camino reforzado",
+     "texto": "Se abre desde arriba o desde abajo."
+    },
+    {
+     "titulo": "Ajuste cómodo",
+     "texto": "Cintura trasera elastizada y puños regulables con broches a presión."
+    }
+   ],
+   "usos": [
+    "Electricidad y trabajos con riesgo de arco",
+    "Petróleo y gas",
+    "Soldadura y metalurgia",
+    "Industria química y petroquímica",
+    "Mantenimiento industrial",
+    "Energía y servicios públicos"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/mameluco-ignifugo-premium-geotex--azul-marino.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "gris",
+     "colorFabricante": "Gris",
+     "foto": "/img/catalogo/mameluco-ignifugo-premium-geotex--gris.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "nota": "Producto nuevo 10 oct. Info y fotos de geotex.com.ar/productos/mamelucos-ignifugos/mameluco-ignifugo-premium (Geotex ofrece también 100 % algodón; se cargó 88/12 por indicación del usuario). Sitio actual de Diforza: \"MAMELUCO Azul c refl\", marca GEOTEX, XS–5XL. Gris = recoloreo. Sin código ERP → validar con Diego."
+  },
+  {
+   "id": "mameluco-termico-diforza",
+   "nombre": "Mameluco térmico Diforza",
    "marca": "Diforza",
    "linea": "indumentaria",
    "subcategoria": "mameluco",
@@ -6075,23 +8124,133 @@
    "colores": [
     "azul-marino"
    ],
-   "talles": "XS al 6XL",
+   "talles": "S al 4XL",
    "visible": true,
-   "foto": "/img/catalogo/mameluco-alaska.webp",
-   "nota": "Foto: mameluco con tiras reflectivas (DIFORZA 35), el usuario confirma que es este producto."
+   "foto": "/img/catalogo/mameluco-termico-diforza--azul-marino.webp",
+   "nota": "Ex \"Mameluco Alaska\" (ERP MAMELALASKA, XS–6XL, sin ventas ni stock). Foto real DIFORZA 35. Specs armadas con IA desde la foto; talles copiados de la gabardina (S al 4XL) por indicación del usuario 10 oct → validar con Diego.",
+   "nombreWeb": "Mameluco térmico Diforza",
+   "descripcion": "Acolchado con capucha y cintas reflectivas, para frío intenso.",
+   "descripcionLarga": "El mameluco térmico Diforza para trabajar con frío intenso: cámaras frigoríficas, depósitos refrigerados o trabajos al aire libre en invierno. Acolchado de cuerpo entero con capucha, cierre frontal con solapa, cintura y puños ajustables, y cintas reflectivas en pecho, brazos y piernas para ser visto con poca luz. Se personaliza con el logo de la empresa.",
+   "specs": {
+    "abrigo": "Acolchado",
+    "capucha": "Sí",
+    "cierre": "Frontal con solapa",
+    "reflectivo": "Cintas en pecho, brazos y piernas",
+    "ajustes": "Cintura y puños"
+   },
+   "beneficios": [
+    {
+     "titulo": "Acolchado de cuerpo entero",
+     "texto": "Abrigo continuo de la cabeza a los tobillos."
+    },
+    {
+     "titulo": "Capucha",
+     "texto": "Protección extra para la cabeza y el cuello."
+    },
+    {
+     "titulo": "Cierre con solapa",
+     "texto": "Frena la entrada de aire frío."
+    },
+    {
+     "titulo": "Cintas reflectivas",
+     "texto": "En pecho, brazos y piernas, para trabajar con poca luz."
+    },
+    {
+     "titulo": "Ajuste en cintura y puños",
+     "texto": "Retiene el calor y da libertad de movimiento."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Logo bordado o estampado a pedido."
+    }
+   ],
+   "usos": [
+    "Cámaras frigoríficas",
+    "Depósitos refrigerados",
+    "Industria alimenticia",
+    "Trabajo al aire libre en invierno",
+    "Logística de frío"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/mameluco-termico-diforza--azul-marino.webp",
+     "fotoGenerada": false
+    }
+   ]
   },
   {
-   "id": "mameluco-diforza-naranja",
-   "nombre": "Mameluco Diforza Naranja",
+   "id": "mameluco-alta-visibilidad-diforza",
+   "nombre": "Mameluco alta visibilidad Diforza",
    "marca": "Diforza",
    "linea": "indumentaria",
    "subcategoria": "mameluco",
    "codigosERP": [
-    "MANARdif"
+    "MANARdif",
+    "MAMGABDIF-NJ"
    ],
-   "colores": [],
-   "talles": null,
-   "visible": true
+   "colores": [
+    "naranja"
+   ],
+   "talles": "44 al 60",
+   "visible": true,
+   "nombreWeb": "Mameluco de trabajo alta visibilidad Diforza",
+   "descripcion": "Gabardina 8 oz 100 % algodón, naranja con cintas 3M de 5 cm.",
+   "descripcionLarga": "El mameluco Diforza para trabajar donde hay que ser visto: color naranja con tiras reflectivas 3M gris plata de 5 cm en pecho y piernas, que devuelven la luz de los faros y linternas. Confeccionado en gabardina de 8 oz 100 % algodón, con cuello camisero, costuras dobles reforzadas, bolsillos plaqué y cierre doble camino en el frente. Ideal para vía pública, obra, logística y cualquier tarea cerca de vehículos o maquinaria en movimiento.",
+   "specs": {
+    "tela": "Gabardina 8 oz 100 % algodón",
+    "reflectivo": "Cinta 3M gris plata de 5 cm en pecho y piernas",
+    "cuello": "Camisero",
+    "cierre": "Doble camino",
+    "costuras": "Dobles reforzadas",
+    "bolsillos": "Plaqué: pecho con tapa, frente y trasero",
+    "puños": "Con botones plásticos"
+   },
+   "beneficios": [
+    {
+     "titulo": "Naranja con cintas 3M",
+     "texto": "Tiras reflectivas gris plata de 5 cm en pecho y piernas, visibles de día y de noche."
+    },
+    {
+     "titulo": "Gabardina 8 oz 100 % algodón",
+     "texto": "Tela resistente, fresca y cómoda para toda la jornada."
+    },
+    {
+     "titulo": "Costuras dobles reforzadas",
+     "texto": "Más durabilidad en las zonas de mayor esfuerzo."
+    },
+    {
+     "titulo": "Cierre doble camino",
+     "texto": "Se abre desde arriba o desde abajo, más práctico en el trabajo."
+    },
+    {
+     "titulo": "Bolsillos plaqué",
+     "texto": "Con tapa en el pecho, en el frente y trasero."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Logo bordado o estampado y cinta reflectiva a pedido."
+    }
+   ],
+   "usos": [
+    "Vía pública y tránsito",
+    "Construcción y obra",
+    "Logística y playas de carga",
+    "Petróleo y minería",
+    "Puertos y aeropuertos",
+    "Servicios públicos"
+   ],
+   "variantes": [
+    {
+     "color": "naranja",
+     "colorFabricante": "Naranja",
+     "foto": "/img/catalogo/mameluco-alta-visibilidad-diforza--naranja.webp"
+    }
+   ],
+   "foto": "/img/catalogo/mameluco-alta-visibilidad-diforza--naranja.webp",
+   "ventasEneJun2026": null,
+   "nota": "Specs, color y talles de la placa 19 del catálogo PDF. Foto recortada y ampliada de la placa (baja resolución) → pedir foto real. Sin ventas con código ene–jun."
   },
   {
    "id": "mameluco-eco",
@@ -6104,8 +8263,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "nota": "Línea económica (Beato)"
+   "visible": false,
+   "nota": "Línea económica (Beato) Oculto 10 oct (mamelucos): fuera del catálogo actualizado / sin ventas; laminados genéricos sumados al ZIAO."
   },
   {
    "id": "mameluco-ignifugo-nomex-4-5-oz-c-reflec-5-cm",
@@ -6121,8 +8280,8 @@
     "gris"
    ],
    "talles": "36 al 64",
-   "visible": true,
-   "nota": "Ignífugo"
+   "visible": false,
+   "nota": "Ignífugo Oculto 10 oct (mamelucos): fuera del catálogo actualizado / sin ventas; laminados genéricos sumados al ZIAO."
   },
   {
    "id": "mameluco-ignifugo-nomex-6-oz-c-reflec-5-cm",
@@ -6138,8 +8297,8 @@
     "gris"
    ],
    "talles": "36 al 64",
-   "visible": true,
-   "nota": "Ignífugo"
+   "visible": false,
+   "nota": "Ignífugo Oculto 10 oct (mamelucos): fuera del catálogo actualizado / sin ventas; laminados genéricos sumados al ZIAO."
   },
   {
    "id": "mameluco-laminado",
@@ -6152,11 +8311,12 @@
    ],
    "colores": [],
    "talles": "S al 3XL",
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 1426,
     "empresas": 5
-   }
+   },
+   "nota": "Oculto 10 oct (mamelucos): fuera del catálogo actualizado / sin ventas; laminados genéricos sumados al ZIAO."
   },
   {
    "id": "mameluco-laminado-de-60-grm",
@@ -6169,7 +8329,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (mamelucos): fuera del catálogo actualizado / sin ventas; laminados genéricos sumados al ZIAO."
   },
   {
    "id": "mameluco-laminado-mgn",
@@ -6184,7 +8345,8 @@
     "blanco"
    ],
    "talles": "M al 3XL",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (mamelucos): fuera del catálogo actualizado / sin ventas; laminados genéricos sumados al ZIAO."
   },
   {
    "id": "mameluco-laminado-ziao",
@@ -6193,19 +8355,86 @@
    "linea": "indumentaria",
    "subcategoria": "mameluco",
    "codigosERP": [
-    "MAMLAMZIAO"
+    "MAMLAMZIAO",
+    "MAMELAM",
+    "MAMELAM60GRM",
+    "MALAMGN"
    ],
    "colores": [
     "blanco"
    ],
-   "talles": "XS al 3XL",
+   "talles": "S al 5XL",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 2894,
-    "empresas": 16
+    "unidades": 4320,
+    "empresas": 20
    },
-   "nota": "Descartable, 55 y 63 g",
-   "foto": "/img/catalogo/mameluco-laminado-ziao.webp"
+   "nota": "Ventas ene–jun: 2.894 u ZIAO (MAMLAMZIAO, todo 63 g) + 1.426 u laminado genérico (MAMELAM), 20 empresas. Stock ZIAO 30.006. Variantes 63 g / 55 g = densidad (mismo color, campo \"etiqueta\"); misma foto. Talles S al 5XL según sitio actual de Diforza (ERP: XS–3XL; ficha: S–3XL) → validar.",
+   "foto": "/img/catalogo/mameluco-laminado-ziao--blanco-63-g.webp",
+   "nombreWeb": "Mameluco descartable laminado ZIAO",
+   "descripcion": "Laminado SFL respirable con capucha. En 63 g y 55 g.",
+   "descripcionLarga": "El mameluco descartable de ZIAO, la marca propia de Diforza, y uno de los productos más pedidos por empresas de limpieza, alimenticias e industrias. Fabricado con tecnología SFL (Spunbond Film Laminated): una tela no tejida de polipropileno laminada con film de polietileno, que hace de barrera contra polvo, suciedad y salpicaduras leves de líquidos no peligrosos, y a la vez deja respirar. Tiene capucha, cierre frontal y elásticos en capucha, puños, cintura y tobillos. Se ofrece en dos densidades: 63 g, más resistente, y 55 g, más liviano. Stock permanente para entregas en volumen.",
+   "specs": {
+    "tecnología": "SFL (Spunbond Film Laminated)",
+    "composición": "Polipropileno 60 % · polietileno 40 %",
+    "densidad": "63 g o 55 g",
+    "color": "Blanco",
+    "capucha": "Sí",
+    "ajustes": "Elásticos en capucha, puños, cintura y tobillos",
+    "uso": "Descartable"
+   },
+   "beneficios": [
+    {
+     "titulo": "Laminado SFL",
+     "texto": "Polipropileno + film de polietileno: barrera contra polvo, suciedad y salpicaduras leves."
+    },
+    {
+     "titulo": "Respirable",
+     "texto": "Más confort en jornadas largas que un mameluco de film común."
+    },
+    {
+     "titulo": "Cuerpo completo con capucha",
+     "texto": "Cubre de la cabeza a los tobillos y protege la ropa y el producto."
+    },
+    {
+     "titulo": "Elásticos de ajuste",
+     "texto": "En capucha, puños, cintura y tobillos."
+    },
+    {
+     "titulo": "Dos densidades",
+     "texto": "63 g para tareas más exigentes; 55 g, más liviano y económico."
+    },
+    {
+     "titulo": "Stock permanente",
+     "texto": "Marca propia de Diforza, con stock para entregas en volumen."
+    }
+   ],
+   "usos": [
+    "Limpieza industrial y facility",
+    "Industria alimenticia y frigoríficos",
+    "Laboratorios e industria farmacéutica",
+    "Pintura y mantenimiento",
+    "Visitas a planta",
+    "Tareas con polvo y suciedad"
+   ],
+   "variantes": [
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco 63 g",
+     "foto": "/img/catalogo/mameluco-laminado-ziao--blanco-63-g.webp",
+     "fichaTecnica": "/assets/docs/fichas/mameluco-laminado-ziao.pdf",
+     "etiqueta": "63 g",
+     "fotoGenerada": false
+    },
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco 55 g",
+     "foto": "/img/catalogo/mameluco-laminado-ziao--blanco-55-g.webp",
+     "etiqueta": "55 g",
+     "fotoGenerada": false
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/mameluco-laminado-ziao.pdf"
   },
   {
    "id": "mameluco-trucker",
@@ -6221,11 +8450,12 @@
     "negro"
    ],
    "talles": "36 al 68 · S al 4XL",
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 2,
     "empresas": 1
-   }
+   },
+   "nota": "Oculto 10 oct (mamelucos): fuera del catálogo actualizado / sin ventas; laminados genéricos sumados al ZIAO."
   },
   {
    "id": "mameluco-tyvek-con-capucha",
@@ -6238,7 +8468,8 @@
    ],
    "colores": [],
    "talles": "M al 3XL",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (mamelucos): fuera del catálogo actualizado / sin ventas; laminados genéricos sumados al ZIAO."
   },
   {
    "id": "manga-anticorte-hppe-35-cm-dps1008106",
@@ -6557,7 +8788,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (primera piel): el usuario define un solo producto (equipo primera piel). Remeras T1–T3 sumadas como códigos del equipo."
   },
   {
    "id": "medias-termicas",
@@ -6570,12 +8802,13 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 81,
     "empresas": 2
    },
-   "foto": "/img/catalogo/medias-termicas.webp"
+   "foto": "/img/catalogo/medias-termicas.webp",
+   "nota": "Oculto 10 oct (primera piel): el usuario define un solo producto (equipo primera piel). Remeras T1–T3 sumadas como códigos del equipo."
   },
   {
    "id": "mentonera-15mm",
@@ -6675,17 +8908,89 @@
    "colores": [
     "azul-marino",
     "beige",
-    "gris",
     "negro",
-    "verde-ingles"
+    "gris",
+    "azulino"
    ],
-   "talles": "36 al 68",
+   "talles": "38 al 60",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 4147,
     "empresas": 78
    },
-   "foto": "/img/catalogo/pantalon-cargo-diforza.webp"
+   "foto": "/img/catalogo/pantalon-cargo-diforza--azul-marino.webp",
+   "nombreWeb": "Pantalón de trabajo cargo Diforza",
+   "descripcion": "Gabardina 8 oz, 6 bolsillos con tapa y velcro, triple costura.",
+   "descripcionLarga": "El pantalón de trabajo más elegido por nuestros clientes. Confeccionado en nuestro taller en gabardina 8 oz sanforizada, con seis bolsillos con tapa, está pensado para quien necesita tener herramientas y elementos a mano durante toda la jornada. Ideal para empresas que buscan una prenda resistente, práctica y que dure.",
+   "specs": {
+    "tela": "Gabardina 8 oz sanforizada",
+    "bolsillos": "6 con tapa y velcro (2 delanteros · 2 traseros · 2 laterales)",
+    "costuras": "Triple costura de refuerzo"
+   },
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/pantalon-cargo-diforza--azul-marino.webp"
+    },
+    {
+     "color": "beige",
+     "colorFabricante": "Beige",
+     "foto": "/img/catalogo/pantalon-cargo-diforza--beige.webp"
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/pantalon-cargo-diforza--negro.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "gris",
+     "colorFabricante": "Gris",
+     "foto": "/img/catalogo/pantalon-cargo-diforza--gris.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "azulino",
+     "colorFabricante": "Azulino",
+     "foto": "/img/catalogo/pantalon-cargo-diforza--azulino.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "beneficios": [
+    {
+     "titulo": "6 bolsillos con tapa y velcro",
+     "texto": "2 delanteros, 2 traseros y 2 laterales tipo cargo: lo que llevás no se cae."
+    },
+    {
+     "titulo": "Triple costura de refuerzo",
+     "texto": "Más resistencia en las costuras que más trabajan."
+    },
+    {
+     "titulo": "Gabardina 8 oz sanforizada",
+     "texto": "No encoge ni pierde la forma después del lavado."
+    },
+    {
+     "titulo": "Refuerzo en la entrepierna",
+     "texto": "Aguanta el movimiento constante de la jornada."
+    },
+    {
+     "titulo": "5 colores",
+     "texto": "Azul marino, beige, negro, gris y azulino."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Bordado o estampado con el logo de tu empresa."
+    }
+   ],
+   "usos": [
+    "Construcción",
+    "Industria",
+    "Logística",
+    "Mantenimiento",
+    "Electricidad",
+    "Agro"
+   ]
   },
   {
    "id": "pantalon-cargo-eco",
@@ -6698,8 +9003,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "nota": "Línea económica (Beato)"
+   "visible": false,
+   "nota": "Línea económica (Beato) Oculto 10 oct: en pantalones solo se comunican los 3 Diforza y los 2 Ombú clásicos."
   },
   {
    "id": "pantalon-cargo-elastizado-diforza",
@@ -6712,19 +9017,84 @@
     "PANTCARGELAST"
    ],
    "colores": [
-    "azul-marino",
     "azul",
-    "beige",
     "gris",
-    "verde"
+    "beige",
+    "verde-oliva"
    ],
-   "talles": "56",
+   "talles": "46 al 52",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 360,
     "empresas": 1
    },
-   "foto": "/img/catalogo/pantalon-cargo-elastizado-diforza.webp"
+   "foto": "/img/catalogo/pantalon-cargo-elastizado-diforza--azul.webp",
+   "nombreWeb": "Pantalón de trabajo cargo elastizado Diforza",
+   "descripcion": "Cargo con tela elastizada: más movilidad para trabajar.",
+   "descripcionLarga": "El cargo con libertad de movimiento. Suma tela elastizada al diseño cargo para tareas en las que hay que agacharse, subir escaleras o cargar peso todo el día. Confeccionado en nuestro taller, combina la practicidad de los bolsillos laterales con la comodidad de una prenda que acompaña cada movimiento.",
+   "specs": {
+    "tela": "Gabardina sanforizada elastizada",
+    "bolsillos": "Cargo con tapa",
+    "costuras": "Reforzadas"
+   },
+   "variantes": [
+    {
+     "color": "azul",
+     "colorFabricante": "Azul",
+     "foto": "/img/catalogo/pantalon-cargo-elastizado-diforza--azul.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "gris",
+     "colorFabricante": "Gris",
+     "foto": "/img/catalogo/pantalon-cargo-elastizado-diforza--gris.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "beige",
+     "colorFabricante": "Beige",
+     "foto": "/img/catalogo/pantalon-cargo-elastizado-diforza--beige.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "verde-oliva",
+     "colorFabricante": "Verde",
+     "foto": "/img/catalogo/pantalon-cargo-elastizado-diforza--verde.webp"
+    }
+   ],
+   "beneficios": [
+    {
+     "titulo": "Tela elastizada",
+     "texto": "Acompaña el movimiento sin tirar ni restringir."
+    },
+    {
+     "titulo": "Bolsillos cargo con tapa",
+     "texto": "Herramientas y elementos a mano y seguros."
+    },
+    {
+     "titulo": "Costuras reforzadas",
+     "texto": "Pensado para el uso intensivo diario."
+    },
+    {
+     "titulo": "Gabardina sanforizada",
+     "texto": "No encoge ni pierde la forma después del lavado."
+    },
+    {
+     "titulo": "4 colores",
+     "texto": "Azul, gris, beige y verde."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Bordado o estampado con el logo de tu empresa."
+    }
+   ],
+   "usos": [
+    "Mantenimiento",
+    "Logística",
+    "Instalaciones",
+    "Construcción",
+    "Técnicos en campo"
+   ]
   },
   {
    "id": "pantalon-cargo-ombu",
@@ -6741,8 +9111,9 @@
     "negro"
    ],
    "talles": "36 al 64",
-   "visible": true,
-   "foto": "/img/catalogo/pantalon-cargo-ombu.webp"
+   "visible": false,
+   "foto": "/img/catalogo/pantalon-cargo-ombu.webp",
+   "nota": "Oculto 10 oct: en pantalones solo se comunican los 3 Diforza y los 2 Ombú clásicos."
   },
   {
    "id": "pantalon-cargo-pampero",
@@ -6758,7 +9129,8 @@
     "beige"
    ],
    "talles": "36 al 68",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct: en pantalones solo se comunican los 3 Diforza y los 2 Ombú clásicos."
   },
   {
    "id": "pantalon-clasico-diforza",
@@ -6771,17 +9143,12 @@
    ],
    "colores": [
     "azul-marino",
-    "azulino",
     "beige",
-    "blanco",
     "gris",
-    "gris-topo",
-    "naranja",
-    "negro",
+    "verde-oliva",
     "verde-benetton",
     "verde-ingles",
-    "verde-oliva",
-    "verde"
+    "blanco"
    ],
    "talles": "36 al 68",
    "visible": true,
@@ -6789,7 +9156,92 @@
     "unidades": 3125,
     "empresas": 59
    },
-   "foto": "/img/catalogo/pantalon-clasico-diforza.webp"
+   "foto": "/img/catalogo/pantalon-clasico-diforza--azul-marino.webp",
+   "nombreWeb": "Pantalón de trabajo clásico Diforza",
+   "descripcion": "Gabardina 8 oz sanforizada, 4 bolsillos y costuras reforzadas.",
+   "descripcionLarga": "El pantalón de trabajo de toda la vida, confeccionado en nuestro taller. Hecho en gabardina 8 oz sanforizada, es la opción simple y resistente para equipar a todo el personal con una prenda prolija que aguanta el uso diario y los lavados. La mejor opción para uniformar equipos grandes con una prenda duradera y fácil de reponer.",
+   "specs": {
+    "tela": "Gabardina 8 oz sanforizada",
+    "bolsillos": "2 delanteros · 2 traseros",
+    "costuras": "Refuerzo en entrepierna"
+   },
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/pantalon-clasico-diforza--azul-marino.webp"
+    },
+    {
+     "color": "beige",
+     "colorFabricante": "Beige",
+     "foto": "/img/catalogo/pantalon-clasico-diforza--beige.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "gris",
+     "colorFabricante": "Gris",
+     "foto": "/img/catalogo/pantalon-clasico-diforza--gris.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "verde-oliva",
+     "colorFabricante": "Verde oliva",
+     "foto": "/img/catalogo/pantalon-clasico-diforza--verde-oliva.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "verde-benetton",
+     "colorFabricante": "Verde Benetton",
+     "foto": "/img/catalogo/pantalon-clasico-diforza--verde-benetton.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "verde-ingles",
+     "colorFabricante": "Verde inglés",
+     "foto": "/img/catalogo/pantalon-clasico-diforza--verde-ingles.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/pantalon-clasico-diforza--blanco.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "beneficios": [
+    {
+     "titulo": "Gabardina 8 oz sanforizada",
+     "texto": "No encoge ni pierde la forma después del lavado."
+    },
+    {
+     "titulo": "Costuras de refuerzo en la entrepierna",
+     "texto": "Más durabilidad en la zona que más se exige al agacharse y moverse."
+    },
+    {
+     "titulo": "4 bolsillos",
+     "texto": "2 delanteros y 2 traseros: lo justo y necesario, sin volumen de más."
+    },
+    {
+     "titulo": "7 colores",
+     "texto": "Para diferenciar sectores o mantener el color de la empresa."
+    },
+    {
+     "titulo": "Talles del 36 al 68",
+     "texto": "Curva amplia, de 2 en 2, para equipar a todo el personal."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Bordado o estampado con el logo de tu empresa."
+    }
+   ],
+   "usos": [
+    "Industria",
+    "Logística",
+    "Mantenimiento",
+    "Construcción",
+    "Servicios generales",
+    "Industria alimenticia (en blanco)"
+   ]
   },
   {
    "id": "pantalon-clasico-eco",
@@ -6802,8 +9254,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "nota": "Línea económica (Beato)"
+   "visible": false,
+   "nota": "Línea económica (Beato) Oculto 10 oct: en pantalones solo se comunican los 3 Diforza y los 2 Ombú clásicos."
   },
   {
    "id": "pantalon-clasico-ignifugo-nomex-6-oz",
@@ -6818,8 +9270,8 @@
     "azul-marino"
    ],
    "talles": "36 al 64",
-   "visible": true,
-   "nota": "Ignífugo"
+   "visible": false,
+   "nota": "Ignífugo Oculto 10 oct: en pantalones solo se comunican los 3 Diforza y los 2 Ombú clásicos."
   },
   {
    "id": "pantalon-clasico-ombu",
@@ -6832,19 +9284,141 @@
    ],
    "colores": [
     "azul-marino",
-    "azulino",
-    "beige",
-    "jean",
-    "negro",
-    "verde"
+    "azulino"
    ],
-   "talles": "36 al 68",
+   "talles": "38 al 60",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 99,
-    "empresas": 5
+    "unidades": 169,
+    "empresas": 6
    },
-   "foto": "/img/catalogo/pantalon-clasico-ombu.webp"
+   "foto": "/img/catalogo/pantalon-clasico-ombu--azul-marino.webp",
+   "nota": "Ventas ene–jun corregidas 10 oct 2026: 99 u con código PACLOM (5 empresas) + 70 u manuales \"Pantalon Clasico Ombu Azulino (Manual)\" (Fabritam). Art. Ombú 55000-10 (azul marino) y 55000-04 (azulino).",
+   "nombreWeb": "Pantalón de trabajo clásico Ombú",
+   "descripcion": "Grafa Ombú 100 % algodón, pre-encogida y anti-olor. 5 bolsillos.",
+   "descripcionLarga": "El pantalón de trabajo de Ombú, pensado para resistir las demandas de cualquier jornada sin resignar comodidad. Confeccionado en Grafa Ombú 100 % algodón de primera calidad, con colores firmes que se mantienen lavado tras lavado. Somos distribuidores oficiales de Ombú.",
+   "specs": {
+    "tela": "Grafa Ombú 100 % algodón, sarga 2/1",
+    "tratamiento": "Pre-encogido · anti-olor",
+    "costuras": "Triple refuerzo",
+    "bolsillos": "5"
+   },
+   "beneficios": [
+    {
+     "titulo": "Grafa Ombú 100 % algodón",
+     "texto": "Tejido sarga 2/1: resistente y cómodo para todo el día."
+    },
+    {
+     "titulo": "Pre-encogido y colores firmes",
+     "texto": "Mantiene la forma y el color, con resistencia comprobada de hasta 50 lavados."
+    },
+    {
+     "titulo": "Terminación anti-olor",
+     "texto": "Previene hongos y bacterias, y mantiene la prenda fresca."
+    },
+    {
+     "titulo": "Triple costura de refuerzo",
+     "texto": "Más durabilidad para trabajos con movimiento constante."
+    },
+    {
+     "titulo": "5 bolsillos",
+     "texto": "De gabardina resistente, para herramientas y objetos personales."
+    },
+    {
+     "titulo": "2 colores",
+     "texto": "Azul marino y azulino."
+    }
+   ],
+   "usos": [
+    "Industria",
+    "Mantenimiento",
+    "Logística",
+    "Construcción",
+    "Servicios generales"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/pantalon-clasico-ombu--azul-marino.webp"
+    },
+    {
+     "color": "azulino",
+     "colorFabricante": "Azulino",
+     "foto": "/img/catalogo/pantalon-clasico-ombu--azulino.webp"
+    }
+   ]
+  },
+  {
+   "id": "pantalon-clasico-ombu-reflectivo",
+   "nombre": "Pantalón clásico Ombú azul c/reflectivo",
+   "marca": "Ombú",
+   "linea": "indumentaria",
+   "subcategoria": "pantalones",
+   "codigosERP": [],
+   "colores": [
+    "azul-marino"
+   ],
+   "talles": "38 al 60",
+   "visible": true,
+   "ventasEneJun2026": {
+    "unidades": 1708,
+    "empresas": 1
+   },
+   "nota": "Alta 10 oct 2026. En el ERP se factura como artículo manual (\"Pantalon Clasico Ombu Azul C/Reflectivo (Manual)\"), sin código. Ventas ene–jun: 1.708 u, todas de Facility Service S.A. Art. Ombú 55908-10.",
+   "nombreWeb": "Pantalón de trabajo clásico Ombú con reflectivos",
+   "descripcion": "Grafa Ombú 100 % algodón con cintas reflectivas de alta visibilidad.",
+   "descripcionLarga": "El pantalón clásico de Ombú con cintas reflectivas de alta visibilidad, para trabajar con más seguridad en lugares con poca luz o cerca del tránsito vehicular. Confeccionado en Grafa Ombú 100 % algodón de primera calidad. Somos distribuidores oficiales de Ombú.",
+   "specs": {
+    "tela": "Grafa Ombú 100 % algodón, sarga 2/1",
+    "reflectivos": "Cintas de alta visibilidad",
+    "tratamiento": "Pre-encogido · anti-olor",
+    "costuras": "Triple refuerzo",
+    "bolsillos": "6"
+   },
+   "beneficios": [
+    {
+     "titulo": "Cintas reflectivas",
+     "texto": "Alta visibilidad para trabajos nocturnos o en la vía pública."
+    },
+    {
+     "titulo": "Grafa Ombú 100 % algodón",
+     "texto": "Tejido sarga 2/1: resistente y cómodo."
+    },
+    {
+     "titulo": "Pre-encogido",
+     "texto": "Mantiene la forma y el talle después del lavado."
+    },
+    {
+     "titulo": "Anti-olor",
+     "texto": "Tratamiento que previene hongos y bacterias."
+    },
+    {
+     "titulo": "Triple costura",
+     "texto": "Refuerzo para máxima durabilidad."
+    },
+    {
+     "titulo": "6 bolsillos",
+     "texto": "De gabardina resistente, para herramientas y objetos personales."
+    }
+   ],
+   "usos": [
+    "Construcción vial",
+    "Trabajo nocturno",
+    "Señalización",
+    "Logística",
+    "Aeropuertos",
+    "Estacionamientos",
+    "Seguridad vial"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/pantalon-clasico-ombu-reflectivo--azul-marino.webp"
+    }
+   ],
+   "foto": "/img/catalogo/pantalon-clasico-ombu-reflectivo--azul-marino.webp"
   },
   {
    "id": "pantalon-clasico-ombu-grafil",
@@ -6859,7 +9433,8 @@
     "azul-marino"
    ],
    "talles": "36 al 68",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct: en pantalones solo se comunican los 3 Diforza y los 2 Ombú clásicos."
   },
   {
    "id": "pantalon-de-ambo",
@@ -6871,13 +9446,74 @@
     "PANAMB"
    ],
    "colores": [
-    "azul-marino",
     "blanco",
+    "azul-marino",
     "negro"
    ],
    "talles": "S al 3XL",
    "visible": true,
-   "foto": "/img/catalogo/pantalon-de-ambo.webp"
+   "foto": "/img/catalogo/pantalon-de-ambo--blanco.webp",
+   "nombreWeb": "Pantalón de ambo Diforza",
+   "descripcion": "Pantalón de ambo con cintura elastizada. Blanco, azul o negro.",
+   "descripcionLarga": "El pantalón de ambo Diforza, para completar el uniforme de sanidad o gastronomía o reponer solo la parte de abajo. Recto, con cintura elastizada para un calce cómodo, en tela liviana que resiste los lavados frecuentes.",
+   "specs": {
+    "cintura": "Elastizada",
+    "corte": "Recto",
+    "talles": "S al 3XL"
+   },
+   "beneficios": [
+    {
+     "titulo": "Cintura elastizada",
+     "texto": "Calce cómodo sin cinturón."
+    },
+    {
+     "titulo": "Corte recto",
+     "texto": "Cómodo para estar de pie todo el turno."
+    },
+    {
+     "titulo": "Tela liviana",
+     "texto": "Fresca para ambientes cálidos."
+    },
+    {
+     "titulo": "Resiste lavados frecuentes",
+     "texto": "Mantiene el color y la forma."
+    },
+    {
+     "titulo": "Combina con la chaqueta de ambo",
+     "texto": "Mismos colores que el ambo Diforza."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Logo bordado o estampado a pedido."
+    }
+   ],
+   "usos": [
+    "Clínicas y hospitales",
+    "Laboratorios",
+    "Gastronomía",
+    "Industria alimenticia"
+   ],
+   "variantes": [
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/pantalon-de-ambo--blanco.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/pantalon-de-ambo--azul-marino.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/pantalon-de-ambo--negro.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "nota": " FOTOS PROVISORIAS (genéricas CC0 de internet + recoloreos, ver _creditos_licencias.txt) → reemplazar por fotos reales de Diforza. Specs con IA → validar."
   },
   {
    "id": "pantalon-de-trabajo-pampero",
@@ -6895,8 +9531,9 @@
     "verde"
    ],
    "talles": "36 al 64",
-   "visible": true,
-   "foto": "/img/catalogo/pantalon-de-trabajo-pampero.webp"
+   "visible": false,
+   "foto": "/img/catalogo/pantalon-de-trabajo-pampero.webp",
+   "nota": "Oculto 10 oct: en pantalones solo se comunican los 3 Diforza y los 2 Ombú clásicos."
   },
   {
    "id": "pantalon-nautico-gabardina-diforza",
@@ -6911,7 +9548,8 @@
     "blanco"
    ],
    "talles": "36 al 60",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct: en pantalones solo se comunican los 3 Diforza y los 2 Ombú clásicos."
   },
   {
    "id": "pantalon-nautico-tela-grafil",
@@ -6926,7 +9564,8 @@
     "azul-marino"
    ],
    "talles": "S al 4XL",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct: en pantalones solo se comunican los 3 Diforza y los 2 Ombú clásicos."
   },
   {
    "id": "pantalon-nautico-tela-polyester",
@@ -6944,11 +9583,12 @@
     "verde"
    ],
    "talles": "36 al 60 · XS al 6XL",
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 281,
     "empresas": 2
-   }
+   },
+   "nota": "Oculto 10 oct: en pantalones solo se comunican los 3 Diforza y los 2 Ombú clásicos."
   },
   {
    "id": "pantalon-termico",
@@ -6963,7 +9603,8 @@
     "azul-marino"
    ],
    "talles": "S al 4XL",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (primera piel): el usuario define un solo producto (equipo primera piel). Remeras T1–T3 sumadas como códigos del equipo."
   },
   {
    "id": "pantalon-trucker-eco",
@@ -6976,8 +9617,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "nota": "Línea económica (Beato)"
+   "visible": false,
+   "nota": "Línea económica (Beato) Oculto 10 oct: en pantalones solo se comunican los 3 Diforza y los 2 Ombú clásicos."
   },
   {
    "id": "plantilla-confort",
@@ -7039,8 +9680,9 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "foto": "/img/catalogo/poncho-de-pvc-con-capucha-color-amarillo.webp"
+   "visible": false,
+   "foto": "/img/catalogo/poncho-de-pvc-con-capucha-color-amarillo.webp",
+   "nota": "Oculto 10 oct (lluvia): sin ventas ene–jun y fuera del catálogo actualizado."
   },
   {
    "id": "poncho-de-pvc-con-capucha-color-azul",
@@ -7053,7 +9695,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (lluvia): sin ventas ene–jun y fuera del catálogo actualizado."
   },
   {
    "id": "poncho-pe-transparente-100-x-125-cm-0-0018-mm",
@@ -7066,8 +9709,9 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "foto": "/img/catalogo/poncho-pe-transparente-100-x-125-cm-0-0018-mm.webp"
+   "visible": false,
+   "foto": "/img/catalogo/poncho-pe-transparente-100-x-125-cm-0-0018-mm.webp",
+   "nota": "Oculto 10 oct (lluvia): sin ventas ene–jun y fuera del catálogo actualizado."
   },
   {
    "id": "porta-herramienta-ts-90",
@@ -7532,11 +10176,11 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "nota": "Línea económica (Beato)"
+   "visible": false,
+   "nota": "Línea económica (Beato) Oculta 10 oct: en remeras solo se comunican manga corta y manga larga Diforza."
   },
   {
-   "id": "remera",
+   "id": "remera-diforza-mc",
    "nombre": "Remera",
    "marca": "Diforza",
    "linea": "indumentaria",
@@ -7545,29 +10189,106 @@
     "REMDIAZ"
    ],
    "colores": [
-    "rojo",
     "azul-marino",
-    "beige",
-    "blanco",
-    "gris-melange",
-    "gris-topo",
-    "gris",
-    "naranja",
     "negro",
-    "verde-benetton",
-    "verde-ingles",
-    "verde-oliva"
+    "gris-melange",
+    "blanco",
+    "rojo",
+    "verde-ingles"
    ],
    "talles": "XS al 6XL",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 3424,
-    "empresas": 36
+    "unidades": 6500,
+    "empresas": 50
    },
-   "foto": "/img/catalogo/remera.webp"
+   "foto": "/img/catalogo/remera-diforza-mc--azul-marino.webp",
+   "nombreWeb": "Remera de trabajo manga corta Diforza",
+   "descripcion": "Jersey con cuello y puños tejidos y costuras de refuerzo.",
+   "descripcionLarga": "La remera de trabajo más pedida por nuestros clientes, ideal para el uniforme de verano o para usar debajo de la ropa de trabajo. Confeccionada en tela jersey, con cuello y puños tejidos y costuras de refuerzo para el uso y lavado diario. Es la base perfecta para personalizar con el logo de la empresa: estampado, bordado o sublimado, y cinta reflectiva a pedido.",
+   "specs": {
+    "tela": "Jersey",
+    "cuello": "Tejido",
+    "puños": "Tejidos",
+    "costuras": "De refuerzo",
+    "manga": "Corta"
+   },
+   "beneficios": [
+    {
+     "titulo": "Tela jersey",
+     "texto": "Fresca y cómoda para toda la jornada."
+    },
+    {
+     "titulo": "Cuello y puños tejidos",
+     "texto": "Mantienen la forma lavado tras lavado."
+    },
+    {
+     "titulo": "Costuras de refuerzo",
+     "texto": "Más durabilidad en el uso diario."
+    },
+    {
+     "titulo": "6 colores",
+     "texto": "Azul marino, negro, gris melange, blanco, rojo y verde inglés."
+    },
+    {
+     "titulo": "Talles del XS al 6XL",
+     "texto": "Curva amplia para equipar a todo el personal."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Estampado, bordado o sublimado con el logo; cinta reflectiva a pedido."
+    }
+   ],
+   "usos": [
+    "Industria",
+    "Logística",
+    "Construcción",
+    "Eventos y promociones",
+    "Servicios",
+    "Uniforme de verano"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/remera-diforza-mc--azul-marino.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/remera-diforza-mc--negro.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "gris-melange",
+     "colorFabricante": "Gris melange",
+     "foto": "/img/catalogo/remera-diforza-mc--gris-melange.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/remera-diforza-mc--blanco.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "rojo",
+     "colorFabricante": "Rojo",
+     "foto": "/img/catalogo/remera-diforza-mc--rojo.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "verde-ingles",
+     "colorFabricante": "Verde inglés",
+     "foto": "/img/catalogo/remera-diforza-mc--verde-ingles.webp",
+     "fotoGenerada": true
+    }
+   ],
+   "nota": "Ventas ene–jun 10 oct: 3.424 u con código REMDIAZ (36 empresas) + ~3.100 u manuales (muchas personalizadas). Colores = vendidos; talles XS–6XL (propuesta aceptada). Specs: placa del catálogo."
   },
   {
-   "id": "remera-manga-larga",
+   "id": "remera-diforza-ml",
    "nombre": "Remera manga larga",
    "marca": "Diforza",
    "linea": "indumentaria",
@@ -7576,22 +10297,97 @@
     "REMMANGLAR"
    ],
    "colores": [
-    "amarillo",
     "azul-marino",
-    "azul",
-    "azulino",
-    "beige",
-    "blanco",
-    "celeste",
-    "gris",
+    "negro",
     "gris-melange",
-    "gris-topo",
-    "jean",
-    "verde"
+    "blanco",
+    "rojo",
+    "verde-ingles"
    ],
-   "talles": "35 al 46 · S al 4XL",
+   "talles": "XS al 6XL",
    "visible": true,
-   "foto": "/img/catalogo/remera-manga-larga.webp"
+   "foto": "/img/catalogo/remera-diforza-ml--azul-marino.webp",
+   "nombreWeb": "Remera de trabajo manga larga Diforza",
+   "descripcion": "Jersey de manga larga con cuello tejido y costuras de refuerzo.",
+   "descripcionLarga": "La versión de manga larga de nuestra remera de trabajo, para los días más frescos o para tareas al sol que requieren cubrir los brazos. Confeccionada en tela jersey, con cuello tejido y costuras de refuerzo. Se personaliza con el logo de la empresa en estampado, bordado o sublimado.",
+   "specs": {
+    "tela": "Jersey",
+    "cuello": "Tejido",
+    "costuras": "De refuerzo",
+    "manga": "Larga"
+   },
+   "beneficios": [
+    {
+     "titulo": "Manga larga",
+     "texto": "Cubre los brazos del sol y del fresco."
+    },
+    {
+     "titulo": "Tela jersey",
+     "texto": "Liviana y cómoda para toda la jornada."
+    },
+    {
+     "titulo": "Cuello tejido",
+     "texto": "Mantiene la forma lavado tras lavado."
+    },
+    {
+     "titulo": "Costuras de refuerzo",
+     "texto": "Más durabilidad en el uso diario."
+    },
+    {
+     "titulo": "6 colores",
+     "texto": "Azul marino, negro, gris melange, blanco, rojo y verde inglés."
+    },
+    {
+     "titulo": "Personalizable",
+     "texto": "Estampado, bordado o sublimado con el logo de tu empresa."
+    }
+   ],
+   "usos": [
+    "Industria",
+    "Logística",
+    "Construcción",
+    "Eventos y promociones",
+    "Servicios",
+    "Uniforme de verano"
+   ],
+   "variantes": [
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/remera-diforza-ml--azul-marino.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/remera-diforza-ml--negro.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "gris-melange",
+     "colorFabricante": "Gris melange",
+     "foto": "/img/catalogo/remera-diforza-ml--gris-melange.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "blanco",
+     "colorFabricante": "Blanco",
+     "foto": "/img/catalogo/remera-diforza-ml--blanco.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "rojo",
+     "colorFabricante": "Rojo",
+     "foto": "/img/catalogo/remera-diforza-ml--rojo.webp",
+     "fotoGenerada": true
+    },
+    {
+     "color": "verde-ingles",
+     "colorFabricante": "Verde inglés",
+     "foto": "/img/catalogo/remera-diforza-ml--verde-ingles.webp",
+     "fotoGenerada": true
+    }
+   ]
   },
   {
    "id": "remera-termica-t-1",
@@ -7604,7 +10400,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (primera piel): el usuario define un solo producto (equipo primera piel). Remeras T1–T3 sumadas como códigos del equipo."
   },
   {
    "id": "remera-termica-t-2",
@@ -7617,7 +10414,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (primera piel): el usuario define un solo producto (equipo primera piel). Remeras T1–T3 sumadas como códigos del equipo."
   },
   {
    "id": "remera-termica-t-3",
@@ -7630,7 +10428,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (primera piel): el usuario define un solo producto (equipo primera piel). Remeras T1–T3 sumadas como códigos del equipo."
   },
   {
    "id": "repuesto-facial-color-verde",
@@ -8083,8 +10882,8 @@
    "visible": true
   },
   {
-   "id": "traje-de-lluvia-con-reflectivo",
-   "nombre": "Traje de lluvia con reflectivo",
+   "id": "traje-de-lluvia-diforza",
+   "nombre": "Traje de lluvia Diforza",
    "marca": "Diforza",
    "linea": "indumentaria",
    "subcategoria": "traje-de-lluvia",
@@ -8093,15 +10892,76 @@
    ],
    "colores": [
     "amarillo",
-    "azul"
+    "azul-marino"
    ],
    "talles": "S al 3XL",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 705,
-    "empresas": 11
+    "unidades": 855,
+    "empresas": 12
    },
-   "foto": "/img/catalogo/traje-de-lluvia-con-reflectivo.webp"
+   "foto": "/img/catalogo/traje-de-lluvia-diforza--amarillo.webp",
+   "nombreWeb": "Traje de lluvia Diforza",
+   "descripcion": "Campera con capucha y pantalón impermeables. Amarillo o azul.",
+   "descripcionLarga": "El traje de lluvia Diforza, de dos piezas, para trabajar con libertad de movimiento bajo la lluvia. La campera tiene capucha con cordón, cierre frontal con broches a presión y dos bolsillos con tapa; el pantalón tiene cintura elastizada para un calce cómodo. Se ofrece en amarillo, para más visibilidad, y en azul marino, y se puede pedir con cinta reflectiva. Stock permanente para entregas en volumen.",
+   "specs": {
+    "piezas": "Campera + pantalón",
+    "material": "Tela impermeable",
+    "capucha": "Con cordón de ajuste",
+    "cierre": "Broches a presión",
+    "bolsillos": "2 con tapa",
+    "pantalón": "Cintura elastizada",
+    "reflectivo": "Opcional, a pedido"
+   },
+   "beneficios": [
+    {
+     "titulo": "Dos piezas",
+     "texto": "Campera y pantalón: más movilidad que una capa para tareas activas."
+    },
+    {
+     "titulo": "Impermeable",
+     "texto": "Tela impermeable de pies a cabeza."
+    },
+    {
+     "titulo": "Capucha con cordón",
+     "texto": "Se ajusta a la cabeza y protege del viento y la lluvia."
+    },
+    {
+     "titulo": "Broches a presión",
+     "texto": "Cierre frontal rápido de abrir y cerrar."
+    },
+    {
+     "titulo": "Bolsillos con tapa",
+     "texto": "Dos bolsillos frontales que no dejan pasar el agua."
+    },
+    {
+     "titulo": "Reflectivo opcional",
+     "texto": "Se puede pedir con cinta reflectiva para trabajar con poca luz o en vía pública."
+    }
+   ],
+   "usos": [
+    "Construcción y obra",
+    "Vía pública y tránsito",
+    "Logística y playas de carga",
+    "Agro",
+    "Puertos",
+    "Mantenimiento exterior"
+   ],
+   "variantes": [
+    {
+     "color": "amarillo",
+     "colorFabricante": "Amarillo",
+     "foto": "/img/catalogo/traje-de-lluvia-diforza--amarillo.webp",
+     "fotoGenerada": false
+    },
+    {
+     "color": "azul-marino",
+     "colorFabricante": "Azul marino",
+     "foto": "/img/catalogo/traje-de-lluvia-diforza--azul-marino.webp",
+     "fotoGenerada": false
+    }
+   ],
+   "nota": "Ventas ene–jun: 705 u TRAJLLUV (11 empresas) + 150 u manual \"Traje lluvia DPS azul marino\". Stock 9.872. ERP: amarillo y \"azul\" (AZL) → cargado azul marino como la portada del catálogo. Reflectivo = opcional. Azul = fotos reales frente + espalda que pasó el usuario 10 oct (usuario_traje-azul-*). Specs según foto y portada → validar."
   },
   {
    "id": "traje-de-lluvia-ombu",
@@ -8117,7 +10977,8 @@
     "azul-marino"
    ],
    "talles": "M al 2XL",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 10 oct (lluvia): sin ventas ene–jun y fuera del catálogo actualizado."
   },
   {
    "id": "traje-ejecutivo-ombu",
@@ -8133,8 +10994,9 @@
     "negro"
    ],
    "talles": "M al 2XL",
-   "visible": true,
-   "foto": "/img/catalogo/traje-ejecutivo-ombu.webp"
+   "visible": false,
+   "foto": "/img/catalogo/traje-ejecutivo-ombu.webp",
+   "nota": "Oculto 10 oct (lluvia): sin ventas ene–jun y fuera del catálogo actualizado."
   },
   {
    "id": "zapatilla-conwork-655za",
@@ -8147,17 +11009,50 @@
     "9ZAPCNW"
    ],
    "colores": [
-    "gris",
     "marron",
+    "azul",
+    "gris",
     "negro"
    ],
-   "talles": "35 al 48",
+   "talles": "35 al 46",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 390,
     "empresas": 16
    },
-   "foto": "/img/productos/zapatilla-conwork.webp"
+   "foto": "/img/catalogo/zapatilla-conwork-655za--chocolate.webp",
+   "nombreWeb": "Zapatilla de seguridad Conwork Origen 655ZA",
+   "lineaMarca": "Origen",
+   "descripcion": "Zapatilla con puntera de aluminio: liviana, cómoda y en 4 colores.",
+   "descripcionLarga": "Zapatilla de seguridad de la línea de alta gama de Conwork: estética deportiva, liviana y cómoda para jornadas largas, con puntera de aluminio. Cuero flor 100 %, forro textil antimicrobiano, plantilla moldeada, cuello y lengüeta acolchados. Suela de poliuretano bidensidad dieléctrica, antideslizante y resistente a hidrocarburos. Sello IRAM 3610:2015. Opcional: plantilla antiperforación.",
+   "specs": {
+    "puntera": "Aluminio",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "IRAM 3610:2015"
+   },
+   "variantes": [
+    {
+     "color": "marron",
+     "colorFabricante": "Chocolate",
+     "foto": "/img/catalogo/zapatilla-conwork-655za--chocolate.webp"
+    },
+    {
+     "color": "azul",
+     "colorFabricante": "Azul",
+     "foto": "/img/catalogo/zapatilla-conwork-655za--azul.webp"
+    },
+    {
+     "color": "gris",
+     "colorFabricante": "Gris",
+     "foto": "/img/catalogo/zapatilla-conwork-655za--gris.webp"
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/zapatilla-conwork-655za--negro.webp"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/conwork-655za.pdf"
   },
   {
    "id": "zapatilla-funcional-lander",
@@ -8169,17 +11064,54 @@
     "ZAPFUNCLAND"
    ],
    "colores": [
+    "marron",
     "beige",
     "gris",
-    "marron",
     "negro"
    ],
-   "talles": "36 al 46",
+   "talles": "34 al 47",
    "visible": true,
-   "foto": "/img/catalogo/zapatilla-funcional-lander.webp"
+   "foto": "/img/catalogo/zapatilla-funcional-lander--marron.webp",
+   "nombreWeb": "Zapatilla de seguridad Funcional Lander",
+   "descripcion": "Zapatilla de alta gama, ultra ventilada, con puntera de acero.",
+   "descripcionLarga": "Zapatilla de seguridad de muy alta gama, ultra ventilada. Cuero flor HQ y cuero engrasado combinados con textil Aerocell tipo panal de abeja, inserto antitorsión que protege el arco del pie, pisada ancha, estrías para escaleras, pasacordones no metálicos y puntera de acero. Riesgo cubierto: dieléctrico (D). Suela de poliuretano multidensidad dieléctrica, antideslizante, autolimpiante y resistente a hidrocarburos, con amortiguación en el talón (IPD Technology y Shock Absorber) e insertos de TPU que suman agarre y resistencia a la abrasión. Cordones reflectivos Reflemax y plantilla ergonómica. Sello IRAM. Opcional: plantilla antiperforación.",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU multidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D"
+   },
+   "lineaMarca": "PU/TPU",
+   "variantes": [
+    {
+     "color": "marron",
+     "colorFabricante": "Marrón",
+     "foto": "/img/catalogo/zapatilla-funcional-lander--marron.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapatilla-funcional-lander--marron.pdf"
+    },
+    {
+     "color": "beige",
+     "colorFabricante": "Beige",
+     "foto": "/img/catalogo/zapatilla-funcional-lander--beige.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapatilla-funcional-lander--beige.pdf"
+    },
+    {
+     "color": "gris",
+     "colorFabricante": "Gris",
+     "foto": "/img/catalogo/zapatilla-funcional-lander--gris.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapatilla-funcional-lander--gris.pdf"
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/zapatilla-funcional-lander--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapatilla-funcional-lander--negro.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/zapatilla-funcional-lander--marron.pdf"
   },
   {
-   "id": "zapatilla-funcional-mujer-bali",
+   "id": "zapatilla-funcional-bali-mujer",
    "nombre": "Zapatilla Funcional Mujer Bali",
    "marca": "Funcional",
    "linea": "calzado",
@@ -8188,13 +11120,44 @@
     "ZAPFUNCMBAL"
    ],
    "colores": [
-    "beige",
     "gris",
+    "beige",
     "negro"
    ],
    "talles": "34 al 42",
    "visible": true,
-   "foto": "/img/catalogo/zapatilla-funcional-mujer-bali.webp"
+   "foto": "/img/catalogo/zapatilla-funcional-bali-mujer--gris.webp",
+   "nombreWeb": "Zapatilla de seguridad para mujer Funcional Bali",
+   "descripcion": "Zapatilla para mujer, ultraliviana, con puntera de aluminio.",
+   "descripcionLarga": "Zapatilla de seguridad ultraliviana diseñada por y para mujeres. Cuero nobuck combinado con textiles livianos y ventilados (Microcell y Duratex), forro tricapa con tratamiento antimicrobiano y puntera de aluminio, 40 % más liviana que una de acero. Riesgos cubiertos: dieléctrico (D), aislamiento al calor y al frío del suelo (HI, CI) y absorción de energía en el talón (E). Suela de poliuretano multidensidad dieléctrica, antideslizante, autolimpiante y resistente a hidrocarburos, con amortiguación en el talón (IPD Technology y Shock Absorber) e insertos de TPU que suman agarre y resistencia a la abrasión. Cordones reflectivos Reflemax y plantilla ergonómica. Sello IRAM. Opcional: plantilla antiperforación.",
+   "specs": {
+    "puntera": "Aluminio",
+    "suela": "PU multidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D · HI · CI · E"
+   },
+   "lineaMarca": "Mujer",
+   "variantes": [
+    {
+     "color": "gris",
+     "colorFabricante": "Gris",
+     "foto": "/img/catalogo/zapatilla-funcional-bali-mujer--gris.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapatilla-funcional-bali-mujer--gris.pdf"
+    },
+    {
+     "color": "beige",
+     "colorFabricante": "Beige",
+     "foto": "/img/catalogo/zapatilla-funcional-bali-mujer--beige.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapatilla-funcional-bali-mujer--beige.pdf"
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/zapatilla-funcional-bali-mujer--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapatilla-funcional-bali-mujer--negro.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/zapatilla-funcional-bali-mujer--gris.pdf"
   },
   {
    "id": "zapatilla-funcional-soul",
@@ -8206,13 +11169,44 @@
     "ZAPFUNCSOUL"
    ],
    "colores": [
-    "azul",
     "gris",
+    "azul",
     "negro"
    ],
-   "talles": "36 al 47",
+   "talles": "34 al 47",
    "visible": true,
-   "foto": "/img/catalogo/zapatilla-funcional-soul.webp"
+   "foto": "/img/catalogo/zapatilla-funcional-soul--gris.webp",
+   "nombreWeb": "Zapatilla de seguridad Funcional Soul",
+   "descripcion": "Zapatilla ultraliviana y ventilada, con puntera de aluminio.",
+   "descripcionLarga": "Zapatilla de seguridad ultraliviana. Cuero combinado con textil Microcell, liviano y muy ventilado, detalles reflectivos Reflemax, forro tricapa antimicrobiano y puntera de aluminio, 40 % más liviana que una de acero. Riesgos cubiertos: dieléctrico (D), aislamiento al calor y al frío del suelo (HI, CI) y absorción de energía en el talón (E). Suela de poliuretano multidensidad dieléctrica, antideslizante, autolimpiante y resistente a hidrocarburos, con amortiguación en el talón (IPD Technology y Shock Absorber) e insertos de TPU que suman agarre y resistencia a la abrasión. Cordones reflectivos Reflemax y plantilla ergonómica. Sello IRAM. Opcional: plantilla antiperforación.",
+   "specs": {
+    "puntera": "Aluminio",
+    "suela": "PU multidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D · HI · CI · E"
+   },
+   "lineaMarca": "Ultralivianos",
+   "variantes": [
+    {
+     "color": "gris",
+     "colorFabricante": "Gris",
+     "foto": "/img/catalogo/zapatilla-funcional-soul--gris.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapatilla-funcional-soul--gris.pdf"
+    },
+    {
+     "color": "azul",
+     "colorFabricante": "Azul",
+     "foto": "/img/catalogo/zapatilla-funcional-soul--azul.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapatilla-funcional-soul--azul.pdf"
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/zapatilla-funcional-soul--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapatilla-funcional-soul--negro.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/zapatilla-funcional-soul--gris.pdf"
   },
   {
    "id": "zapatilla-nexus-900za",
@@ -8249,12 +11243,13 @@
     "negro"
    ],
    "talles": "36 al 46",
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 4,
     "empresas": 2
    },
-   "foto": "/img/catalogo/zapatilla-ombu-krypton-c-p.webp"
+   "foto": "/img/catalogo/zapatilla-ombu-krypton-c-p.webp",
+   "nota": "Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario)."
   },
   {
    "id": "zapatilla-ombu-sneaker-c-p-composite",
@@ -8270,12 +11265,13 @@
     "negro"
    ],
    "talles": "36 al 47",
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 1,
     "empresas": 1
    },
-   "foto": "/img/catalogo/zapatilla-ombu-sneaker-c-p-composite.webp"
+   "foto": "/img/catalogo/zapatilla-ombu-sneaker-c-p-composite.webp",
+   "nota": "Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario)."
   },
   {
    "id": "zapato-conwork",
@@ -8290,11 +11286,12 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 791,
     "empresas": 28
-   }
+   },
+   "nota": "Unificado con zapato-conwork-41za (9 oct 2026)."
   },
   {
    "id": "zapato-conwork-41za-antiperforante",
@@ -8309,7 +11306,8 @@
     "negro"
    ],
    "talles": "35 al 47",
-   "visible": true
+   "visible": false,
+   "nota": "Oculto 9 oct: Conwork solo se comunican 25BAF, 655ZA, 653BAF y 41ZA (decisión del usuario)."
   },
   {
    "id": "zapato-conwork-41za",
@@ -8318,20 +11316,45 @@
    "linea": "calzado",
    "subcategoria": "zapatos",
    "codigosERP": [
-    "ZAPCONW41ZA"
+    "ZAPCONW41ZA",
+    "ZAPCONW",
+    "9ZAPCONW",
+    "9 ZAPCONW"
    ],
    "colores": [
-    "blanco",
-    "marron",
-    "negro"
+    "negro",
+    "marron"
    ],
-   "talles": "35 al 48",
+   "talles": "35 al 47",
    "visible": true,
    "ventasEneJun2026": {
-    "unidades": 557,
-    "empresas": 17
+    "unidades": 1348,
+    "empresas": 45
    },
-   "foto": "/img/productos/zapato-conwork.webp"
+   "foto": "/img/catalogo/zapato-conwork-41za--negro.webp",
+   "nota": "Incluye el \"Zapato Conwork\" genérico del ERP (ZAPCONW/9ZAPCONW), confirmado por el usuario 9 oct 2026. Empresas = suma (puede haber superposición).",
+   "nombreWeb": "Zapato de seguridad Conwork 41ZA",
+   "lineaMarca": "Industrial",
+   "descripcion": "Zapato de seguridad bajo, de cuero, con puntera de acero.",
+   "descripcionLarga": "Zapato de seguridad de caña baja para quien necesita protección sin botín: tareas en planta, depósito, logística o mantenimiento. Cuero flor 100 %, forro textil antimicrobiano, cuello acolchado y puntera de acero. Suela de poliuretano bidensidad dieléctrica, antideslizante y resistente a hidrocarburos. Sello IRAM 3610:2015. Opcional: plantilla antiperforación.",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "IRAM 3610:2015"
+   },
+   "variantes": [
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/zapato-conwork-41za--negro.webp"
+    },
+    {
+     "color": "marron",
+     "colorFabricante": "Cedro",
+     "foto": "/img/catalogo/zapato-conwork-41za--cedro.webp"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/conwork-41za.pdf"
   },
   {
    "id": "zapato-conwork-555za-marron",
@@ -8347,12 +11370,13 @@
     "negro"
    ],
    "talles": "35 al 48",
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 64,
     "empresas": 1
    },
-   "foto": "/img/catalogo/zapato-conwork-555za-marron.webp"
+   "foto": "/img/catalogo/zapato-conwork-555za-marron.webp",
+   "nota": "Oculto 9 oct: Conwork solo se comunican 25BAF, 655ZA, 653BAF y 41ZA (decisión del usuario)."
   },
   {
    "id": "zapato-de-vestir",
@@ -8396,17 +11420,54 @@
     "ZAPFUNCCIT"
    ],
    "colores": [
-    "camel",
-    "marron",
     "negro",
-    "vison"
+    "camel",
+    "vison",
+    "marron"
    ],
-   "talles": "36 al 47",
+   "talles": "34 al 47",
    "visible": true,
-   "foto": "/img/catalogo/zapato-funcional-city.webp"
+   "foto": "/img/catalogo/zapato-funcional-city--negro.webp",
+   "nombreWeb": "Zapato de seguridad Funcional City",
+   "descripcion": "Zapato urbano de cuero, ultraliviano, con puntera de aluminio.",
+   "descripcionLarga": "Zapato de seguridad de estética urbana, ultraliviano. Cuero 100 % natural, forro tricapa con tratamiento antimicrobiano, cuello y lengüeta acolchados y puntera de aluminio, 40 % más liviana que una de acero. Riesgos cubiertos: dieléctrico (D), aislamiento al calor y al frío del suelo (HI, CI) y absorción de energía en el talón (E). Suela de poliuretano multidensidad dieléctrica, antideslizante, autolimpiante y resistente a hidrocarburos, con amortiguación en el talón (IPD Technology y Shock Absorber) e insertos de TPU que suman agarre y resistencia a la abrasión. Cordones reflectivos Reflemax y plantilla ergonómica. Sello IRAM. Opcional: plantilla antiperforación.",
+   "specs": {
+    "puntera": "Aluminio",
+    "suela": "PU multidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D · HI · CI · E"
+   },
+   "lineaMarca": "Ultralivianos",
+   "variantes": [
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/zapato-funcional-city--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapato-funcional-city--negro.pdf"
+    },
+    {
+     "color": "camel",
+     "colorFabricante": "Camel",
+     "foto": "/img/catalogo/zapato-funcional-city--camel.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapato-funcional-city--camel.pdf"
+    },
+    {
+     "color": "vison",
+     "colorFabricante": "Visón",
+     "foto": "/img/catalogo/zapato-funcional-city--vison.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapato-funcional-city--vison.pdf"
+    },
+    {
+     "color": "marron",
+     "colorFabricante": "Marrón",
+     "foto": "/img/catalogo/zapato-funcional-city--marron.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapato-funcional-city--marron.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/zapato-funcional-city--negro.pdf"
   },
   {
-   "id": "zapato-funcional-horizon-marron",
+   "id": "zapato-funcional-horizon",
    "nombre": "Zapato Funcional Horizon Marron",
    "marca": "Funcional",
    "linea": "calzado",
@@ -8417,9 +11478,28 @@
    "colores": [
     "marron"
    ],
-   "talles": "36 al 47",
+   "talles": "34 al 47",
    "visible": true,
-   "foto": "/img/catalogo/zapato-funcional-horizon-marron.webp"
+   "foto": "/img/catalogo/zapato-funcional-horizon--marron.webp",
+   "nombreWeb": "Zapato de seguridad Funcional Horizon",
+   "descripcion": "Zapato ultraliviano de nobuck y textil, con detalles reflectivos.",
+   "descripcionLarga": "Zapato de seguridad urbano y ultraliviano. Cuero nobuck combinado con textiles, detalles reflectivos Reflemax para ambientes con poca luz, forro tricapa antimicrobiano y puntera de aluminio, 40 % más liviana que una de acero. Riesgos cubiertos: dieléctrico (D), aislamiento al calor y al frío del suelo (HI, CI) y absorción de energía en el talón (E). Suela de poliuretano multidensidad dieléctrica, antideslizante, autolimpiante y resistente a hidrocarburos, con amortiguación en el talón (IPD Technology y Shock Absorber) e insertos de TPU que suman agarre y resistencia a la abrasión. Cordones reflectivos Reflemax y plantilla ergonómica. Sello IRAM. Opcional: plantilla antiperforación.",
+   "specs": {
+    "puntera": "Aluminio",
+    "suela": "PU multidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D · HI · CI · E"
+   },
+   "lineaMarca": "Ultralivianos",
+   "variantes": [
+    {
+     "color": "marron",
+     "colorFabricante": "Marrón",
+     "foto": "/img/catalogo/zapato-funcional-horizon--marron.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapato-funcional-horizon--marron.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/zapato-funcional-horizon--marron.pdf"
   },
   {
    "id": "zapato-ombu-gema-mujer-c-p-composite",
@@ -8435,11 +11515,12 @@
     "negro"
    ],
    "talles": "35 al 41",
-   "visible": true,
-   "foto": "/img/catalogo/zapato-ombu-gema-mujer-c-p-composite.webp"
+   "visible": false,
+   "foto": "/img/catalogo/zapato-ombu-gema-mujer-c-p-composite.webp",
+   "nota": "Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario)."
   },
   {
-   "id": "zapato-ozono-plus",
+   "id": "zapato-ombu-ozono-plus",
    "nombre": "Zapato Ozono plus",
    "marca": "Ombú",
    "linea": "calzado",
@@ -8448,19 +11529,35 @@
     "ZAPOZOM"
    ],
    "colores": [
-    "blanco",
     "negro"
    ],
-   "talles": "35 al 48",
+   "talles": "36 al 47",
    "visible": true,
    "ventasEneJun2026": {
     "unidades": 201,
     "empresas": 4
    },
-   "foto": "/img/catalogo/zapato-ozono-plus.webp"
+   "foto": "/img/catalogo/zapato-ombu-ozono-plus--negro.webp",
+   "nombreWeb": "Zapato de seguridad Ombú Ozono Plus",
+   "descripcion": "Cuero con refuerzos de Cordura, puntera de acero y plantilla confort.",
+   "descripcionLarga": "Zapato de seguridad que combina resistencia y confort para turnos largos. Cuero flor con apliques de Cordura (tela de alta tenacidad), forro textil con refuerzo de cuero en la talonera, puntera de acero bajo normas y plantilla confort de PU bidensidad inyectada. Cinta reflectiva en lateral y cordones. Suela de poliuretano bidensidad inyectado y dieléctrica: entresuela expandida para más confort y planta compacta para más durabilidad.",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "IRAM (cód. 33461)"
+   },
+   "variantes": [
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/zapato-ombu-ozono-plus--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapato-ombu-ozono-plus.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/zapato-ombu-ozono-plus.pdf"
   },
   {
-   "id": "zapato-prusiano-con-puntera-plastica",
+   "id": "zapato-ombu-prusiano-puntera-plastica",
    "nombre": "Zapato Prusiano con Puntera Plastica",
    "marca": "Ombú",
    "linea": "calzado",
@@ -8471,9 +11568,23 @@
    "colores": [
     "negro"
    ],
-   "talles": "35 al 48",
+   "talles": "35 al 46",
    "visible": true,
-   "foto": "/img/catalogo/zapato-prusiano-con-puntera-plastica.webp"
+   "foto": "/img/catalogo/zapato-ombu-prusiano-puntera-plastica--negro.webp",
+   "nombreWeb": "Zapato de seguridad Ombú Prusiano con puntera plástica",
+   "descripcion": "Puntera plástica liviana, cuello de napa y cinta reflectiva.",
+   "descripcionLarga": "Zapato de seguridad pensado para largas jornadas de trabajo exigente, con puntera plástica. Capellada de cuero flor con cuello de napa, interior textil con refuerzo en la talonera y cinta reflectiva lateral para mejorar la visibilidad con poca luz. Suela de poliuretano bidensidad inyectado: confort y alta resistencia al desgaste.",
+   "specs": {
+    "puntera": "Plástica",
+    "suela": "PU bidensidad"
+   },
+   "variantes": [
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/zapato-ombu-prusiano-puntera-plastica--negro.webp"
+    }
+   ]
   },
   {
    "id": "zapato-prusiano",
@@ -8488,12 +11599,13 @@
     "negro"
    ],
    "talles": "35 al 48",
-   "visible": true,
+   "visible": false,
    "ventasEneJun2026": {
     "unidades": 26,
     "empresas": 2
    },
-   "foto": "/img/catalogo/zapato-prusiano.webp"
+   "foto": "/img/catalogo/zapato-prusiano.webp",
+   "nota": "Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario)."
   },
   {
    "id": "zapato-voran-jano",
@@ -8507,12 +11619,31 @@
    "colores": [
     "negro"
    ],
-   "talles": "36 al 47",
+   "talles": "34 al 47",
    "visible": true,
-   "foto": "/img/catalogo/zapato-voran-jano.webp"
+   "foto": "/img/catalogo/zapato-voran-jano--negro.webp",
+   "nombreWeb": "Zapato de seguridad Voran Jano",
+   "descripcion": "Zapato francés de cuero box liso, simple y resistente.",
+   "descripcionLarga": "Zapato de seguridad tipo francés en cuero box liso, con lengüeta de semi-fuelle, ojalillos reforzados y plantilla confort de caucho de baja densidad. Puntera de acero, cuello acolchado y suela de poliuretano bidensidad por inyección directa: dieléctrica, antideslizante, autolimpiante, resistente a hidrocarburos, con estrías para escaleras y pisada ancha. Sello IRAM. Riesgos cubiertos: dieléctrico (D), aislamiento al frío y al calor del piso (CI, HI) y absorción de energía en el talón (E).",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D · CI · HI · E"
+   },
+   "lineaMarca": "Industrial Flex",
+   "variantes": [
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/zapato-voran-jano--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapato-voran-jano.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/zapato-voran-jano.pdf"
   },
   {
-   "id": "zapato-voran-tauro-marron",
+   "id": "zapato-voran-tauro",
    "nombre": "Zapato Voran Tauro Marron",
    "marca": "Voran",
    "linea": "calzado",
@@ -8524,12 +11655,37 @@
     "marron",
     "negro"
    ],
-   "talles": "35 al 47",
+   "talles": "34 al 47",
    "visible": true,
-   "foto": "/img/catalogo/zapato-voran-tauro-marron.webp"
+   "foto": "/img/catalogo/zapato-voran-tauro--marron.webp",
+   "nombreWeb": "Zapato de seguridad Voran Tauro",
+   "descripcion": "Zapato francés de cuero flor liso, resistente al agua.",
+   "descripcionLarga": "Zapato de seguridad tipo francés en cuero flor liso, con lengüeta de semi-fuelle forrada y acolchada, ojalillos metálicos y plantilla confort de caucho de baja densidad. Puntera de acero, cuello acolchado y suela de poliuretano bidensidad por inyección directa: dieléctrica, antideslizante, autolimpiante, resistente a hidrocarburos, con estrías para escaleras y pisada ancha. Sello IRAM. Riesgos cubiertos: dieléctrico (D), aislamiento al frío y al calor del piso (CI, HI), absorción de energía en el talón (E) y resistencia al agua (WR). Opcional: versión antiestática.",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D · CI · HI · E · WR"
+   },
+   "lineaMarca": "Industrial Flex",
+   "variantes": [
+    {
+     "color": "marron",
+     "colorFabricante": "Marrón",
+     "foto": "/img/catalogo/zapato-voran-tauro--marron.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapato-voran-tauro--marron.pdf"
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/zapato-voran-tauro--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapato-voran-tauro--negro.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/zapato-voran-tauro--marron.pdf"
   },
   {
-   "id": "zapato-voran-teucro-marron",
+   "id": "zapato-voran-teucro",
    "nombre": "Zapato Voran Teucro Marron",
    "marca": "Voran",
    "linea": "calzado",
@@ -8541,9 +11697,34 @@
     "marron",
     "negro"
    ],
-   "talles": "36 al 47",
+   "talles": "34 al 47",
    "visible": true,
-   "foto": "/img/catalogo/zapato-voran-teucro-marron.webp"
+   "foto": "/img/catalogo/zapato-voran-teucro--marron.webp",
+   "nombreWeb": "Zapato de seguridad Voran Teucro",
+   "descripcion": "Zapato de cuero y textil, con plantilla ergonómica y amortiguación.",
+   "descripcionLarga": "Zapato de seguridad tipo francés que combina cueros y materiales textiles, con plantilla ultra confort ergonómica y sistema Shock Absorber que distribuye la carga en el taco. Lengüeta de semi-fuelle forrada y acolchada. Puntera de acero, cuello acolchado y suela de poliuretano bidensidad por inyección directa: dieléctrica, antideslizante, autolimpiante, resistente a hidrocarburos, con estrías para escaleras y pisada ancha. Sello IRAM. Riesgos cubiertos: dieléctrico (D), aislamiento al frío y al calor del piso (CI, HI), absorción de energía en el talón (E) y resistencia al agua (WR).",
+   "specs": {
+    "puntera": "Acero",
+    "suela": "PU bidensidad dieléctrica",
+    "norma": "Sello IRAM",
+    "riesgos": "D · CI · HI · E · WR"
+   },
+   "lineaMarca": "Industrial Flex",
+   "variantes": [
+    {
+     "color": "marron",
+     "colorFabricante": "Marrón",
+     "foto": "/img/catalogo/zapato-voran-teucro--marron.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapato-voran-teucro--marron.pdf"
+    },
+    {
+     "color": "negro",
+     "colorFabricante": "Negro",
+     "foto": "/img/catalogo/zapato-voran-teucro--negro.webp",
+     "fichaTecnica": "/assets/docs/fichas/zapato-voran-teucro--negro.pdf"
+    }
+   ],
+   "fichaTecnica": "/assets/docs/fichas/zapato-voran-teucro--marron.pdf"
   },
   {
    "id": "barbijo-descartable-con-elastico",
@@ -8556,8 +11737,8 @@
    ],
    "colores": [],
    "talles": null,
-   "visible": true,
-   "nota": "Código no figura en el export del ERP (solo en ventas)",
+   "visible": false,
+   "nota": "Código no figura en el export del ERP (solo en ventas) Oculto 10 oct (sanidad): sin ventas o unificado en ambo / cofia de tela / barbijo tricapa.",
    "ventasEneJun2026": {
     "unidades": 500,
     "empresas": 1
@@ -8815,8 +11996,8 @@
     "blanco"
    ],
    "talles": null,
-   "visible": true,
-   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "visible": false,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario).",
    "foto": "/img/catalogo/bota-frigorifica-media-cana-sin-puntera.webp"
   },
   {
@@ -8830,8 +12011,8 @@
     "blanco"
    ],
    "talles": null,
-   "visible": true,
-   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP",
+   "visible": false,
+   "nota": "Del catálogo PDF de Diforza (oct 2026); sin código ERP Oculto 9 oct: de Ombú solo se comunican 7 modelos (decisión del usuario).",
    "foto": "/img/catalogo/bota-frigorifica-media-cana-con-puntera.webp"
   },
   {

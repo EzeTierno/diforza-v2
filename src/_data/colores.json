@@ -92,6 +92,10 @@
     "verde-manzana": {
       "nombre": "Verde manzana",
       "hex": "#7CB342"
+    },
+    "azul-francia": {
+      "nombre": "Azul francia",
+      "hex": "#2B55A6"
     }
   }
 }

@@ -14,10 +14,10 @@
       "id": "pantalon-cargo",
       "linea": "indumentaria",
       "subcategoria": "pantalones",
-      "nombre": "Pantalón cargo Diforza",
+      "nombre": "Pantalón de trabajo cargo Diforza",
       "marca": "Diforza",
       "codigo": "PANCADIF",
-      "descripcion": "Gabardina, modelo cargo con refuerzo entre piernas y triple costura.",
+      "descripcion": "Gabardina 8 oz, 6 bolsillos con tapa y velcro, triple costura.",
       "atributos": [
         {
           "tipo": "colores",
@@ -26,16 +26,16 @@
             "beige",
             "negro",
             "gris",
-            "verde-ingles"
+            "azulino"
           ]
         },
         {
           "tipo": "talles",
-          "valor": "36 al 64"
+          "valor": "38 al 60"
         }
       ],
       "foto": {
-        "src": "/img/productos/pantalon-cargo.webp",
+        "src": "/img/catalogo/pantalon-cargo-diforza--azul-marino.webp",
         "estado": "producto"
       },
       "masVendido": true,
@@ -46,26 +46,30 @@
       "id": "pantalon-clasico",
       "linea": "indumentaria",
       "subcategoria": "pantalones",
-      "nombre": "Pantalón clásico Diforza",
+      "nombre": "Pantalón de trabajo clásico Diforza",
       "marca": "Diforza / Ombú",
       "codigo": "PANCLDZ",
-      "descripcion": "Gabardina, modelo clásico. Marca Diforza u Ombú.",
+      "descripcion": "Gabardina 8 oz sanforizada, 4 bolsillos y costuras reforzadas.",
       "atributos": [
         {
           "tipo": "colores",
           "valores": [
             "azul-marino",
-            "azulino",
-            "beige"
+            "beige",
+            "gris",
+            "verde-oliva",
+            "verde-benetton",
+            "verde-ingles",
+            "blanco"
           ]
         },
         {
           "tipo": "talles",
-          "valor": "36 al 60"
+          "valor": "36 al 68"
         }
       ],
       "foto": {
-        "src": "/img/productos/pantalon-clasico.webp",
+        "src": "/img/catalogo/pantalon-clasico-diforza--azul-marino.webp",
         "estado": "producto"
       },
       "empresas": 71,
@@ -75,18 +79,18 @@
       "id": "pantalon-elastizado",
       "linea": "indumentaria",
       "subcategoria": "pantalones",
-      "nombre": "Pantalón cargo elastizado Diforza",
+      "nombre": "Pantalón de trabajo cargo elastizado Diforza",
       "marca": "Diforza",
       "codigo": "PANTCARGELAST",
-      "descripcion": "Gabardina elastizada, modelo cargo. Más libertad de movimiento.",
+      "descripcion": "Cargo con tela elastizada: más movilidad para trabajar.",
       "atributos": [
         {
           "tipo": "colores",
           "valores": [
-            "azul-marino",
+            "azul",
             "gris",
-            "verde-ingles",
-            "beige"
+            "beige",
+            "verde-oliva"
           ]
         },
         {
@@ -95,7 +99,7 @@
         }
       ],
       "foto": {
-        "src": "/img/productos/pantalon-elastizado.webp",
+        "src": "/img/catalogo/pantalon-cargo-elastizado-diforza--azul.webp",
         "estado": "producto"
       },
       "empresas": null,
@@ -106,17 +110,22 @@
       "id": "camisa-clasica",
       "linea": "indumentaria",
       "subcategoria": "camisa",
-      "nombre": "Camisa clásica Diforza",
+      "nombre": "Camisa de trabajo clásica Diforza",
       "marca": "Diforza",
       "codigo": "CAMCLDIAZ",
-      "descripcion": "Camisa de trabajo de gabardina, modelo clásico.",
+      "descripcion": "Gabardina 8 oz sanforizada, manga larga y 2 bolsillos con tapa.",
       "atributos": [
         {
           "tipo": "colores",
           "valores": [
             "azul-marino",
+            "azulino",
             "beige",
             "gris",
+            "gris-topo",
+            "naranja",
+            "verde-ingles",
+            "negro",
             "blanco"
           ]
         },
@@ -126,7 +135,7 @@
         }
       ],
       "foto": {
-        "src": "/indumentaria-de-trabajo/img/prod-camisa-clasica-diforza.webp",
+        "src": "/img/catalogo/camisa-clasica-diforza--azul-marino.webp",
         "estado": "producto"
       },
       "empresas": 61,
@@ -136,41 +145,43 @@
       "id": "remera",
       "linea": "indumentaria",
       "subcategoria": "remera",
-      "nombre": "Remera Diforza",
+      "nombre": "Remera de trabajo manga corta Diforza",
       "marca": "Diforza",
       "codigo": "REMDIAZ",
-      "descripcion": "Cuello redondo, manga corta. Algodón 24.1 peinado.",
+      "descripcion": "Jersey con cuello y puños tejidos y costuras de refuerzo.",
       "atributos": [
         {
           "tipo": "colores",
           "valores": [
             "azul-marino",
-            "gris-melange",
             "negro",
-            "blanco"
+            "gris-melange",
+            "blanco",
+            "rojo",
+            "verde-ingles"
           ]
         },
         {
           "tipo": "talles",
-          "valor": "S al 5XL"
+          "valor": "XS al 6XL"
         }
       ],
       "foto": {
-        "src": "/img/productos/remera.webp",
+        "src": "/img/catalogo/remera-diforza-mc--azul-marino.webp",
         "estado": "producto"
       },
       "empresas": 50,
       "pendiente": "Confirmar composición ('24.1 peinado' figura en el catálogo)",
-      "catalogoId": "remera"
+      "catalogoId": "remera-diforza-mc"
     },
     {
       "id": "buzo-polar",
       "linea": "indumentaria",
       "subcategoria": "buzo",
-      "nombre": "Buzo polar ½ cierre Diforza",
+      "nombre": "Buzo de trabajo polar medio cierre Diforza",
       "marca": "Diforza",
       "codigo": "BUPOLDIF",
-      "descripcion": "Polar con medio cierre, abrigo liviano para el día a día.",
+      "descripcion": "Polar antipeeling, cuello alto y cierre diente de perro reforzado.",
       "atributos": [
         {
           "tipo": "colores",
@@ -181,65 +192,33 @@
         },
         {
           "tipo": "talles",
-          "valor": "S al 4XL"
+          "valor": "S al XXXL"
         }
       ],
       "foto": {
-        "src": "/img/productos/buzo-polar.webp",
+        "src": "/img/catalogo/buzo-polar-medio-cierre-diforza--azul-marino.webp",
         "estado": "producto"
       },
       "empresas": 46,
       "nota": "Las 46 empresas suman buzo polar + buzo friza (BUFRDIF).",
-      "catalogoId": "buzo-polar-1-2-cierre-diforza"
+      "catalogoId": "buzo-polar-medio-cierre-diforza"
     },
     {
       "id": "campera-trucker",
       "linea": "indumentaria",
       "subcategoria": "campera",
-      "nombre": "Campera trucker Diforza",
+      "nombre": "Campera de trabajo trucker Diforza",
       "marca": "Diforza",
       "codigo": "CAMTRUDIF",
-      "descripcion": "Campera de abrigo para trabajo exterior y bajas temperaturas.",
+      "descripcion": "Tela trucker con guata de 150 g, capucha y cuello de polar.",
       "atributos": [
         {
           "tipo": "colores",
           "valores": [
-            "azul-marino",
+            "azul-francia",
             "negro",
-            "naranja",
-            "verde-ingles"
-          ]
-        },
-        {
-          "tipo": "talles",
-          "valor": "S al 5XL"
-        }
-      ],
-      "foto": {
-        "src": "/img/productos/campera-trucker.webp",
-        "estado": "producto"
-      },
-      "empresas": 40,
-      "pendiente": "Validar descripción (tipo de abrigo/forro)",
-      "catalogoId": "campera-trucker"
-    },
-    {
-      "id": "chomba-pique",
-      "linea": "indumentaria",
-      "subcategoria": "chomba",
-      "nombre": "Chomba piqué Diforza",
-      "marca": "Diforza",
-      "codigo": "CHDIAZ",
-      "descripcion": "Tela piqué con dos botones. Ideal para bordar el logo.",
-      "atributos": [
-        {
-          "tipo": "colores",
-          "valores": [
-            "azul-marino",
-            "blanco",
-            "negro",
-            "gris-melange",
-            "gris-topo"
+            "gris",
+            "blanco"
           ]
         },
         {
@@ -248,20 +227,52 @@
         }
       ],
       "foto": {
-        "src": "/indumentaria-de-trabajo/img/prod-chomba-pique-diforza.webp",
+        "src": "/img/catalogo/campera-trucker-diforza--azul-francia.webp",
+        "estado": "producto"
+      },
+      "empresas": 40,
+      "pendiente": "Validar descripción (tipo de abrigo/forro)",
+      "catalogoId": "campera-trucker-diforza"
+    },
+    {
+      "id": "chomba-pique",
+      "linea": "indumentaria",
+      "subcategoria": "chomba",
+      "nombre": "Chomba clásica manga corta Diforza",
+      "marca": "Diforza",
+      "codigo": "CHDIAZ",
+      "descripcion": "Piqué con cuello y puños tejidos y cartera de 2 botones.",
+      "atributos": [
+        {
+          "tipo": "colores",
+          "valores": [
+            "azul-marino",
+            "azul-francia",
+            "negro",
+            "blanco",
+            "verde"
+          ]
+        },
+        {
+          "tipo": "talles",
+          "valor": "XS al 6XL"
+        }
+      ],
+      "foto": {
+        "src": "/img/catalogo/chomba-clasica-diforza-mc--azul-marino.webp",
         "estado": "producto"
       },
       "empresas": 34,
-      "catalogoId": "chomba-pique"
+      "catalogoId": "chomba-clasica-diforza-mc"
     },
     {
       "id": "capa-lluvia",
       "linea": "indumentaria",
       "subcategoria": "traje-de-lluvia",
-      "nombre": "Capa de lluvia",
+      "nombre": "Capa de lluvia Diforza",
       "marca": "Diforza",
       "codigo": "CALLU",
-      "descripcion": "Capa impermeable. Bulto por 20 unidades.",
+      "descripcion": "Impermeable larga con capucha y broches. Amarilla o azul.",
       "atributos": [
         {
           "tipo": "colores",
@@ -276,21 +287,21 @@
         }
       ],
       "foto": {
-        "src": "/img/productos/capa-lluvia.webp",
+        "src": "/img/catalogo/capa-de-lluvia-diforza--amarillo.webp",
         "estado": "producto"
       },
       "empresas": 34,
-      "catalogoId": "capa-de-lluvia",
+      "catalogoId": "capa-de-lluvia-diforza",
       "impulsar": true
     },
     {
       "id": "chaleco-reflectivo",
       "linea": "indumentaria",
       "subcategoria": "chaleco",
-      "nombre": "Chaleco reflectivo",
+      "nombre": "Chaleco reflectivo de alta visibilidad Diforza",
       "marca": "Diforza",
       "codigo": "CHALREF",
-      "descripcion": "Dos bandas reflectivas de 5 cm. Liviano, 60 g.",
+      "descripcion": "Alta visibilidad con dos bandas reflectivas. Amarillo o naranja flúo.",
       "atributos": [
         {
           "tipo": "colores",
@@ -305,14 +316,14 @@
         }
       ],
       "foto": {
-        "src": "/img/productos/chaleco-reflectivo.webp",
+        "src": "/img/catalogo/chaleco-reflectivo-diforza--amarillo-fluo.webp",
         "estado": "producto"
       },
       "empresas": 34,
       "tambienEn": [
         "senalizacion"
       ],
-      "catalogoId": "chaleco-reflectivo"
+      "catalogoId": "chaleco-reflectivo-diforza"
     },
     {
       "id": "traje-lluvia",
@@ -321,13 +332,13 @@
       "nombre": "Traje de lluvia Diforza",
       "marca": "Diforza",
       "codigo": "TRAJLLUV",
-      "descripcion": "Chaqueta y pantalón impermeables con reflectivo.",
+      "descripcion": "Campera con capucha y pantalón impermeables. Amarillo o azul.",
       "atributos": [
         {
           "tipo": "colores",
           "valores": [
             "amarillo",
-            "azul"
+            "azul-marino"
           ]
         },
         {
@@ -336,11 +347,11 @@
         }
       ],
       "foto": {
-        "src": "/img/productos/traje-lluvia.webp",
+        "src": "/img/catalogo/traje-de-lluvia-diforza--amarillo.webp",
         "estado": "producto"
       },
       "empresas": 11,
-      "catalogoId": "traje-de-lluvia-con-reflectivo",
+      "catalogoId": "traje-de-lluvia-diforza",
       "impulsar": true
     },
     {
@@ -350,22 +361,22 @@
       "nombre": "Botín de seguridad Conwork 25BAF",
       "marca": "Conwork",
       "codigo": "25BAF",
-      "descripcion": "Línea industrial. El botín de seguridad más pedido por las empresas.",
+      "descripcion": "El clásico de la industria: cuero, puntera de acero y suela dieléctrica.",
       "atributos": [
         {
           "tipo": "colores",
           "valores": [
             "negro",
-            "blanco"
+            "marron"
           ]
         },
         {
           "tipo": "talles",
-          "valor": "35 al 48"
+          "valor": "35 al 47"
         }
       ],
       "foto": {
-        "src": "/img/productos/botin-conwork-negro.webp",
+        "src": "/img/catalogo/botin-conwork-25baf--negro.webp",
         "estado": "producto"
       },
       "masVendido": true,
@@ -379,13 +390,13 @@
       "nombre": "Zapato de seguridad Conwork 41ZA",
       "marca": "Conwork",
       "codigo": "41ZA",
-      "descripcion": "Zapato de seguridad, línea industrial.",
+      "descripcion": "Zapato de seguridad bajo, de cuero, con puntera de acero.",
       "atributos": [
         {
           "tipo": "colores",
           "valores": [
             "negro",
-            "blanco"
+            "marron"
           ]
         },
         {
@@ -394,7 +405,7 @@
         }
       ],
       "foto": {
-        "src": "/img/productos/zapato-conwork.webp",
+        "src": "/img/catalogo/zapato-conwork-41za--negro.webp",
         "estado": "producto"
       },
       "empresas": 39,
@@ -404,10 +415,10 @@
       "id": "bota-cana-larga",
       "linea": "calzado",
       "subcategoria": "botas",
-      "nombre": "Bota industrial Ombú",
+      "nombre": "Bota de PVC Ombú caña larga con puntera de acero",
       "marca": "Ombú",
       "codigo": "BOOMCP",
-      "descripcion": "Bota de PVC para agua, barro e industria alimenticia.",
+      "descripcion": "Bota de PVC caña larga con puntera de acero, para agua, barro y frío.",
       "atributos": [
         {
           "tipo": "colores",
@@ -417,32 +428,34 @@
           ]
         },
         {
-          "tipo": "texto",
-          "valor": "Con o sin puntera de acero"
+          "tipo": "talles",
+          "valor": "36 al 46"
         }
       ],
       "foto": {
-        "src": "/img/productos/bota-cana-larga.webp",
+        "src": "/img/catalogo/bota-ombu-pvc-cana-larga-con-puntera--negra.webp",
         "estado": "producto"
       },
       "empresas": 33,
       "nota": "Agrupa BOOMSP, BOOMCP, BOOMSP-BL y BOOMCP-BL (negra/blanca, con/sin puntera). Talles 35 al 48.",
       "pendiente": "Validar material (PVC)",
-      "catalogoId": "bota-cana-larga-con-puntera"
+      "catalogoId": "bota-ombu-pvc-cana-larga-con-puntera"
     },
     {
       "id": "zapatilla-conwork",
       "linea": "calzado",
       "subcategoria": "zapatillas",
-      "nombre": "Zapatilla Conwork Origen 655ZA",
+      "nombre": "Zapatilla de seguridad Conwork Origen 655ZA",
       "marca": "Conwork",
       "codigo": "655ZA",
-      "descripcion": "Alta gama por diseño y confort.",
+      "descripcion": "Zapatilla con puntera de aluminio: liviana, cómoda y en 4 colores.",
       "atributos": [
         {
           "tipo": "colores",
           "valores": [
             "marron",
+            "azul",
+            "gris",
             "negro"
           ]
         },
@@ -452,7 +465,7 @@
         }
       ],
       "foto": {
-        "src": "/img/productos/zapatilla-conwork.webp",
+        "src": "/img/catalogo/zapatilla-conwork-655za--chocolate.webp",
         "estado": "producto"
       },
       "empresas": 32,
@@ -462,15 +475,17 @@
       "id": "botin-conwork-653",
       "linea": "calzado",
       "subcategoria": "botines",
-      "nombre": "Botín Conwork Origen 653BAF",
+      "nombre": "Botín de seguridad Conwork Origen 653BAF",
       "marca": "Conwork",
       "codigo": "653BAF",
-      "descripcion": "Cuero flor, puntera de aluminio y planta dieléctrica PU bidensidad.",
+      "descripcion": "Diseño deportivo y puntera de aluminio, más liviana que la de acero.",
       "atributos": [
         {
           "tipo": "colores",
           "valores": [
             "marron",
+            "azul",
+            "gris",
             "negro"
           ]
         },
@@ -480,47 +495,49 @@
         }
       ],
       "foto": {
-        "src": "/img/productos/botin-conwork-653.webp",
+        "src": "/img/catalogo/botin-conwork-653baf--chocolate.webp",
         "estado": "producto"
       },
       "empresas": 14,
-      "catalogoId": "botin-conwork-art-653-marron"
+      "catalogoId": "botin-conwork-653baf"
     },
     {
       "id": "botin-ombu-ozono",
       "linea": "calzado",
       "subcategoria": "botines",
-      "nombre": "Botín Ombú Ozono Plus",
+      "nombre": "Botín de seguridad Ombú Ozono Plus",
       "marca": "Ombú",
       "codigo": "BOTOMOZ",
-      "descripcion": "Con puntera de acero.",
+      "descripcion": "Botín de cuero con Cordura, puntera de acero y plantilla confort.",
       "atributos": [
         {
           "tipo": "colores",
           "valores": [
-            "negro"
+            "negro",
+            "marron",
+            "blanco"
           ]
         },
         {
           "tipo": "talles",
-          "valor": "35 al 46"
+          "valor": "36 al 47"
         }
       ],
       "foto": {
-        "src": "/img/productos/botin-ombu-ozono.webp",
+        "src": "/img/catalogo/botin-ombu-ozono-plus--negro.webp",
         "estado": "producto"
       },
       "empresas": 11,
-      "catalogoId": "botin-ombu-ozono"
+      "catalogoId": "botin-ombu-ozono-plus"
     },
     {
       "id": "zapato-ombu-ozono",
       "linea": "calzado",
       "subcategoria": "zapatos",
-      "nombre": "Zapato Ombú Ozono Plus",
+      "nombre": "Zapato de seguridad Ombú Ozono Plus",
       "marca": "Ombú",
       "codigo": "ZAPOZOM",
-      "descripcion": "Con puntera de acero y suela inyectada de PU bidensidad.",
+      "descripcion": "Cuero con refuerzos de Cordura, puntera de acero y plantilla confort.",
       "atributos": [
         {
           "tipo": "colores",
@@ -530,15 +547,15 @@
         },
         {
           "tipo": "talles",
-          "valor": "35 al 46"
+          "valor": "36 al 47"
         }
       ],
       "foto": {
-        "src": "/img/productos/zapato-ombu-ozono.webp",
+        "src": "/img/catalogo/zapato-ombu-ozono-plus--negro.webp",
         "estado": "producto"
       },
       "empresas": null,
-      "catalogoId": "zapato-ozono-plus"
+      "catalogoId": "zapato-ombu-ozono-plus"
     },
     {
       "id": "anteojo-argon",
@@ -859,24 +876,25 @@
       "id": "mameluco-ziao",
       "linea": "indumentaria",
       "subcategoria": "mameluco",
-      "nombre": "Mameluco descartable ZIAO",
+      "nombre": "Mameluco descartable laminado ZIAO",
       "marca": "ZIAO",
       "codigo": "MAMLAMZIAO",
-      "descripcion": "Laminado respirable, para pintura, limpieza y polvo. Bulto por 50.",
+      "descripcion": "Laminado SFL respirable con capucha. En 63 g y 55 g.",
       "atributos": [
         {
           "tipo": "colores",
           "valores": [
+            "blanco",
             "blanco"
           ]
         },
         {
           "tipo": "talles",
-          "valor": "S al 3XL"
+          "valor": "S al 5XL"
         }
       ],
       "foto": {
-        "src": "/img/productos/mameluco-ziao.webp",
+        "src": "/img/catalogo/mameluco-laminado-ziao--blanco-63-g.webp",
         "estado": "producto"
       },
       "impulsar": true,
@@ -886,16 +904,15 @@
       "id": "mameluco-gabardina",
       "linea": "indumentaria",
       "subcategoria": "mameluco",
-      "nombre": "Mameluco de gabardina Diforza",
+      "nombre": "Mameluco de trabajo de gabardina Diforza",
       "marca": "Diforza",
       "codigo": "MAMGABDIF",
-      "descripcion": "Gabardina, cuello camisero. Fabricación propia, se personaliza con tu logo.",
+      "descripcion": "Gabardina de algodón, cuello camisero y cierre frontal.",
       "atributos": [
         {
           "tipo": "colores",
           "valores": [
-            "azul-marino",
-            "naranja"
+            "azul-marino"
           ]
         },
         {
@@ -904,7 +921,7 @@
         }
       ],
       "foto": {
-        "src": "/img/productos/mameluco-gabardina.webp",
+        "src": "/img/catalogo/mameluco-gabardina-diforza--azul-marino.webp",
         "estado": "producto"
       },
       "impulsar": true,
@@ -956,28 +973,28 @@
       "id": "botin-ombu-frances",
       "linea": "calzado",
       "subcategoria": "botines",
-      "nombre": "Botín Francés Ombú",
+      "nombre": "Botín de seguridad Ombú Francés",
       "marca": "Ombú",
       "codigo": "BOTFRAOM",
-      "descripcion": "Con puntera de acero y reflectivo.",
+      "descripcion": "Clásico de cuero con cuello de napa, puntera de acero y reflectivo.",
       "atributos": [
         {
           "tipo": "colores",
           "valores": [
             "negro",
-            "blanco"
+            "marron"
           ]
         },
         {
           "tipo": "talles",
-          "valor": "35 al 48"
+          "valor": "34 al 49"
         }
       ],
       "foto": {
-        "src": "/img/productos/botin-ombu-frances.webp",
+        "src": "/img/catalogo/botin-ombu-frances--negro.webp",
         "estado": "producto"
       },
-      "catalogoId": "botin-frances"
+      "catalogoId": "botin-ombu-frances"
     }
   ],
   "destacados": {
